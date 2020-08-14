@@ -1,0 +1,302 @@
+---
+fontsize: 12pt
+geometry: margin=0.50in
+subparagraph: yes
+params: 
+    title: "title"
+    date:  "0000-00-00"
+title: "`r params$title`"
+date:  "`r params$date`"
+header-includes:
+   - \usepackage{pdflscape}
+   - \newcommand{\blandscape}{\begin{landscape}}
+   - \newcommand{\elandscape}{\end{landscape}}
+   - \usepackage{pdfpages}
+   - \usepackage{booktabs}
+   - \usepackage{makecell}
+   - \usepackage{float}
+output:
+  pdf_document:
+    toc: false
+    keep_tex: no
+    latex_engine: xelatex
+---
+
+The table below provides a summary of subject samples for which sequencing data is available.  
+The experiments column shows the number of sequencing experiments performed for each specimen.  
+Experiment specific analyses are shown at the end of this report.  
+
+\vspace{0.5cm}
+
+\small
+Table 1. Sample summary.
+\normalsize
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=8, fig.height=2}
+library(ggplot2)
+library(knitr)
+library(kableExtra)
+library(Biostrings)
+
+# Order data list such that composite analyses are shown first.
+dat <- dat[order(grepl('-', unlist(lapply(dat, '[[', 'seq_sample'))))]
+
+# Create a printabe reference genome name from the reference genome path.
+refGenome <- sub('data/references/', '', sub( '.fasta', '', dat[[1]]$refGenomeFasta))
+
+sampleTable <- bind_rows(lapply(dat, function(x){
+  
+  maxContigLength = tryCatch({
+    sprintf("%.2f", max(Biostrings::width(x$contigs))/1000)
+  },  error = function(e) {
+    NA
+ })
+  
+ if(length(x$inputGenomes) == 0) x$inputGenomes <- NA
+
+ tibble(exp = x$seq_sample, type = ifelse(! grepl('-', x$seq_sample), 'composite', ' single experiment'), 
+        genomes = x$inputGenomes, sampleType = x$sampleType, 
+        sampleDate = x$date, largestContig = maxContigLength,
+        percentRefReadCoverage   = ifelse(is.null(x$refGenomePercentCovered), NA, sprintf("%.1f%%", x$refGenomePercentCovered*100)), 
+        percentRefReadCoverage5 = ifelse(is.null(x$refGenomePercentCovered_5reads), NA, sprintf("%.1f%%", x$refGenomePercentCovered_5reads*100))) 
+}))
+
+# Write a copy of the sample table to a file.
+sampleTableOutput <- sampleTable
+sampleTableOutput$Subject <- dat[[1]]$subject
+sampleTableOutput <- sampleTableOutput[,c(9, 1:8)]
+write.table(sampleTableOutput, sep = '\t', col.names = TRUE, row.names = FALSE, quote = FALSE,
+            file = paste0('summaries/sampleSummaries/', dat[[1]]$subject, '.sampleSummary.tsv'))
+
+names(sampleTable) <- c('Experiment', 'Type', 'Input genomes', 'Sample type', 'Sample date', 'Largest contig (KD)', 
+                        'Reference read\ncoverage', 'Reference read\ncoverage (>= 5 reads)')
+
+kable(sampleTable, 'latex', booktabs = T, linesep = '', align = 'c') %>% 
+  column_spec(4, width = "2cm") %>% 
+  column_spec(6, width = "3cm") %>% 
+  column_spec(7, width = "3cm") %>%
+  column_spec(8, width = "5cm") %>%
+  kable_styling(latex_options="scale_down")
+```
+
+\newpage
+
+### Variants shared across samples 
+
+The heat map below shows how variants are shared across subject samples. The quality scores are PHRED scaled values 
+[Q = -10log10(error rate)] where a score of 30 represents a probabilty of 99.9% that a variant is called correctly 
+and a score of 50 represents a probabilty of 99.999% Gray tiles denote that 10 or more reads covered the variant position 
+and the reference base was observed. Tiles are ommited if there are less than 10 reads covering a variant position.  
+
+\vspace{0.5cm}
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.height=8.5, results='asis'}
+
+varHeatMap <- function(x, minPostionReadCoverage = 10){
+  
+  # Determine which samples have variant tables and bind them into a single table.
+  vt <- bind_rows(lapply(x, function(j){
+          if('variantTableMajor' %in% names(j)){
+            if(nrow(j$variantTableMajor) == 0) return(tibble())
+    
+            j$variantTableMajor$s <- paste0(j$variantTableMajor$POS, ' ', j$variantTableMajor$genes, '  ', j$variantTableMajor$type)
+            j$variantTableMajor$seq_sample <- j$seq_sample
+            dplyr::select(j$variantTableMajor, POS, s, seq_sample, QUAL, percentAlt)
+          } else {
+            return(tibble())
+          }
+        })) 
+  
+  if(nrow(vt) == 0) return(NA)
+  
+
+  # Cycle through all unique mutations found across the samples.
+  vt2 <- bind_rows(lapply(split(vt, vt$s), function(mutation){
+           # Cycle through all the samples with variant tables.
+           bind_rows(lapply(unique(vt$seq_sample), function(sample){
+             # Determine if the query variant was called for this sample at this position.
+             
+             # Does this postion in this sample have enough coverage to return a tile in the plot?
+             coverage <- subset(x[[sample]]$pileupData, V2 == mutation$POS[1])$V4
+             if(length(coverage) == 0 || coverage < minPostionReadCoverage) return(tibble())
+             
+             # Is this mutation found in this samples variant table?
+             o <- subset(vt, s == mutation$s & seq_sample == sample)
+             if(nrow(o) > 0){
+               # Yes, the mutation was found in this sample.
+               return(o)
+             } else {
+               # The mutation was not found in this sample. Either WT or another mutation was found.
+               # Return a data row with NA as a QUAL score which will create a gray tile.
+               return(tibble(POS = mutation$POS[1], s = mutation$s[1], seq_sample = sample, QUAL = NA, percentAlt = NA))
+             }
+           }))
+  })) %>% 
+  arrange(POS) %>%
+  mutate(s = factor(s, levels = rev(unique(s)))) 
+  
+  ggplot(vt2, aes(seq_sample, s, fill = percentAlt)) + 
+  theme_bw() +
+  scale_fill_gradient2(name = 'Occurrence', limits = c(0.50, 1), low = "red", mid = "gold2", high = "green4", 
+                       midpoint = 0.75, na.value = 'gray90', breaks = c(0.5, 0.75, 1), labels = c('50%', '75%', '100%')) +
+  geom_tile(color = 'black') +
+  scale_x_discrete(position = "top") +
+  labs(x = '', y = '') +
+  theme(text = element_text(size=14), axis.text.x = element_text(angle = 90, hjust = 1))
+} 
+
+
+# Remove the component experiments if composite results are available.
+seqSamples <- unname(unlist(lapply(dat, '[[', 'seq_sample')))
+base_seqSamples <- sub('\\-\\S+$', '', seqSamples)
+dat2 <- dat[!(base_seqSamples %in% seqSamples & grepl('\\-', seqSamples))]
+
+# Prepare variant table (ie. remove low level variants).
+dat3 <- lapply(dat2, function(x){
+          if(! 'variantTableMajor' %in% names(x)) x$variantTableMajor <- data.frame()
+          if(nrow(x$variantTableMajor) > 0) x$variantTableMajor <- subset(x$variantTableMajor, ALT != 'e' & percentAlt > 0.5)
+          x
+        })
+
+# lapply(dat3, function(x){
+#   max(unlist(lapply(split(x$variantTableMajor, x$variantTableMajor$POS), function(x2){
+#     if(nrow(x2)> 1) browser()
+#   })))
+# })
+
+v <- varHeatMap(dat3) 
+
+if(length(v) == 1){
+    cat('\n\n*No variants found*  \n\n')
+} else {
+    print(v)
+}
+
+```
+
+\newpage
+
+## Analyses of individual experiments and composite results.  
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE,  results='asis', fig.width=8, fig.height=2}
+sampleAnalysis <- function(dat){
+  for (i in 1:length(dat)) {
+    cat('\n### ',  paste0(dat[[i]]$seq_sample, ' | ', dat[[i]]$date, ' | ', dat[[i]]$sampleType, ' | ', dat[[i]]$sample_id, ' | ',
+            ifelse(! grepl('-', dat[[i]]$seq_sample), '', paste0(dat[[i]]$inputGenomes, ' genomes | ')),
+            ifelse(! grepl('-', dat[[i]]$seq_sample), 'composite result', 'single experiment'), '\n\n'))
+  
+    printPileUps <- FALSE
+    if('pileupData' %in% names(dat[[i]])){
+      if(nrow(dat[[i]]$pileupData) > 0){
+        printPileUps <- TRUE
+        pileup <-
+          ggplot(dat[[i]]$pileupData, aes(V2, V4)) +
+          theme_bw() +
+          labs(x = 'Genome position', y = 'Reads') +
+          geom_bar(stat = 'identity', width = 1, fill = 'gray50') +
+          scale_x_continuous(expand = c(0, 0)) +
+          geom_vline(xintercept = c(1, nchar(dat[[i]]$concensusSeq[1])), color = 'blue', linetype = 'dotted') +
+          theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+                panel.background = element_blank(), axis.line = element_line(colour = "black"),
+                text = element_text(size=14), legend.position="none") 
+     
+       variantTableMajor <- data.frame()
+       if('variantTableMajor' %in% names(dat[[i]])){  
+         if(nrow(dat[[i]]$variantTableMajor) > 0){
+           variantTableMajor <- dat[[i]]$variantTableMajor
+           variantTableMajor$class <- variantTableMajor$type
+           variantTableMajor$class <- ifelse(grepl('[A-Z]\\d+[A-Z]', variantTableMajor$class), 'missense', variantTableMajor$class)
+           variantTableMajor$class <- ifelse(grepl('[A-Z]\\d+\\*', variantTableMajor$class), 'nonsense', variantTableMajor$class)
+           variantTableMajor$class <- ifelse(grepl('ins|del', variantTableMajor$class), 'indel', variantTableMajor$class)
+           variantTableMajor$class <- factor(variantTableMajor$class, levels = c(' ', 'silent', 'missense', 'nonsense', 'indel'))
+           
+           variantTableMajor$QUAL <- round(variantTableMajor$QUAL)
+           pileup <- pileup + scale_fill_manual(name = 'variant', values =  c('gray50', 'green3', 'gold2', 'red2', 'black'), drop = FALSE) +
+                     geom_point(data = variantTableMajor, shape = 21, aes(x = POS, y = -10, fill = class), size = 2)
+         }
+       }
+      
+      # Limit scale to 50 reads
+      dat[[i]]$pileupData$V5 <- ifelse(dat[[i]]$pileupData$V4 > 50, 50, dat[[i]]$pileupData$V4)
+   
+      pileup2 <- 
+        ggplot(dat[[i]]$pileupData, aes(V2, V5, fill = V4)) +
+        theme_bw() +
+        labs(x = 'Genome position', y = 'Reads\n') +
+         geom_bar(stat = 'identity', width = 1, fill = 'gray50') +
+         scale_x_continuous(expand = c(0, 0)) +
+         geom_vline(xintercept = c(1, nchar(dat[[i]]$concensusSeq[1])), color = 'blue', linetype = 'dotted') +
+         theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+               panel.background = element_blank(), axis.line = element_line(colour = "black"),
+               text = element_text(size=14), legend.position="none")
+ 
+      if(nrow(variantTableMajor) > 0 ){
+        pileup2 <- pileup2 + scale_fill_manual(name = 'variant', values =  c('gray50', 'green3', 'gold2', 'red2', 'black'), drop = FALSE) +
+                   geom_point(data = variantTableMajor, shape = 21, aes(x = POS, y = 0, fill = class), size = 2) +
+                  theme(legend.position = "none")
+      }  
+     }
+    }
+
+    printContigs <- FALSE
+    if('contigs' %in% names(dat[[i]])){
+      if(length(dat[[i]]$contigs) > 0){
+        contigs <- tibble(x1 = dat[[i]]$contigStartPos, 
+                          x2 = width(dat[[i]]$contigs) + x1, 
+                          y = names(dat[[i]]$contigs), 
+                          w = width(dat[[i]]$contigs), 
+                          e = dat[[i]]$contigsEditDists) %>%
+                   dplyr::top_n(5, wt = w) %>% 
+                   dplyr::slice(1:5) %>% 
+                   dplyr::arrange(w) %>% 
+                   mutate(y = factor(y, levels = unique(y)), y2 = paste(' ', as.character(1:n())))
+     
+        printContigs <- TRUE
+        contigsPlot <- ggplot(contigs) +  
+                       theme_bw()+
+                       geom_segment(aes(x = x1, y = y2, xend = x2, yend = y2, color = e), size = 3) +
+                       labs(x = 'Genome position', y = 'Contigs')+
+                       scale_x_continuous(limits = c(1, max(contigs$x2)), expand = c(0, 0)) +
+                       scale_color_gradient2(name = 'Edit dist.', low = "red", mid = "gold2", high = "green4", midpoint = 5) +
+                       theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+                             panel.background = element_blank(), axis.line = element_line(colour = "black"),
+                             text = element_text(size=14),
+                             legend.position = "bottom")
+      }
+    }
+  
+    if(printPileUps){   
+      cat(paste0('The plot below shows the number of reads covering each nucleotide position in the reference genome (', refGenome, '). ', 
+                 'Variants are shown as colored dots along the bottom of the plot and are color coded according by ',
+                 'variant types: gray - transgenic, green - silent, gold - missense, red - nonsense, black - indel.',
+                 '\n\n\\vspace{0.23cm}\n\n'))
+      
+      
+   
+      print(pileup)
+      cat('\n\n\\vspace{0.35cm}\n\n')
+      cat('\n\\vspace{0.25cm}\nExcerpt from plot above focusing on reads coverage from 0 to 50 NT.\n\n\\vspace{0.25cm}\n\n')
+      print(pileup2)
+      cat('\n\n\\vspace{0.50cm}\n\n')
+    } else {
+      cat('\n## No pileup data available.\n\n\\vspace{0.50cm}\n\n')
+    }
+  
+    if(printContigs){
+      cat(paste0('\n\\vspace{0.25cm}\nThe longest five assembled contigs are shown below colored by their edit distance to the reference ', 
+                 'genome.\n\n\\vspace{0.25cm}\n\n'))
+      print(contigsPlot)
+    } else {
+      cat('\n## No contig data available.\n\n\\vspace{0.50cm}\n\n')
+    }
+   
+    cat('\\newpage\n')
+  }
+
+  cat('\\newpage\n')
+}
+
+sampleAnalysis(dat)
+```
+
+

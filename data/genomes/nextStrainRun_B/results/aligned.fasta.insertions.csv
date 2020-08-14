@@ -1,0 +1,21 @@
+strain,insertion: 86bp @ ref pos 0,insertion: 13bp @ ref pos 31,insertion: 24bp @ ref pos 1605,insertion: 6bp @ ref pos 1962,insertion: 5bp @ ref pos 7388,insertion: 1bp @ ref pos 8328,insertion: 1bp @ ref pos 8864,insertion: 2bp @ ref pos 13039,insertion: 2bp @ ref pos 14445,insertion: 2bp @ ref pos 15792,insertion: 11bp @ ref pos 16578,insertion: 155bp @ ref pos 19712,insertion: 5bp @ ref pos 20658,insertion: 1bp @ ref pos 25365,insertion: 1bp @ ref pos 25660,insertion: 178bp @ ref pos 29693,insertion: 2bp @ ref pos 29743,insertion: 1bp @ ref pos 29775,insertion: 29bp @ ref pos 29834,insertion: 115bp @ ref pos 29903
+env/USA/FL-UF11/2020,TTAAAGG,,,,,,,,,,,,,,,,,,,
+Shenzhen/SZTH-003/2020,CAGAAGA,,,,,,,,,,,,,,,,,,,
+China/WH-09/2020,AGAGTGCTTATGAAAATTTTAATCAGCACGAAGTTCTA,,,,,,,,,,,,,,,,,,,
+Hangzhou/ZJU-04/2020,CCCCCCTTTTCAAGCAGAAGACGGCATACGAGATGGAATCTCGTGACTGGAGTTCAGACGTGTGC,,,,,,,,,,,,,,,,,,,
+Hangzhou/ZJU-09/2020,CCCCCCTTTTCAAGCAGAAGACGGCATACGAGATCATAGCCGGTGACTGGAGTTCAGACGTGTGC,,,,,,,,,,,,,,,,,,,
+Hangzhou/ZJU-08/2020,CCCCCCCCCCCCCCCCCCCCCCCCCCCTTTTCAAGCAGAAGACGGCATACGAGATGCGCATTAGTGACT,,,,,,,,,,,,,,,,,,,
+Wuhan/WHUH004/2020,CGAAAG,,,,,,,,,,,,,,,,,,GTGAGATTAAAGTTAACTACATCTACTTG,
+Wuhan/WHUH008/2020,GATCGGAAAG,,,,,,,,,,,,,,,,,,GTGAGATTAAAGTTAACTACATCTACTTG,
+Wuhan/WHUH021/2020,CGAACCTGTAAAACAGGCAAACTGA,GACAAGGCTCTCC,,,,,,,,,,,,,,,,,,
+Wuhan/WH02/2019,,,,,GGC,,,,,,A,,TCTAG,,,,,,,
+USA/MDH-5622/2020,,,,,,,T,,,,,,,,,,,,,
+USA/CA-SCCPHD-UC144/2020,,,,,,,,,AC,,,,,,,,,,,
+USA/WA-UW134/2020,,,,,,,,,,,,TTACACAAAAGTTGATGGTGTTGATGTAGAATTGTTTGAAAATAAAACAACATTACCTGTTAATGTAGCATTT,,,,,,,,
+USA/CA-SCCPHD-UC135/2020,,,,,,,,,,,,,,,T,,,,,
+Spain/PV-000741/2020,,,,,,,,,,,,,,,,A,,,,
+USA/MN5-MDH5/2020,,,,,,,,,,,,,,,,,GA,A,,
+Wuhan/WHUH011/2020,,,,,,,,,,,,,,,,,,,,CCGAAAGCTTGTGTTACATTGTATGCTTTAGTGGCAGTACGTTTTTTGCCGAGGCTTCTTAGAAGCCTCAGCAGCAGATTTCTTAGTGACAGTTTGGCCTTGTTGTTGTTGGCCT
+USA/WA-UW83/2020,,,,,,,,,,,,,,,,,,,,AAAAAAA
+USA/WA-UW112/2020,,,,,,,,,,,,,,,,,,,,AAAAAAA
+USA/WA-UW45/2020,,,,,,,,,,,,,,,,,,,,GTAGHT

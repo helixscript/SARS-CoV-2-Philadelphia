@@ -1,0 +1,24 @@
+strain,insertion: 86bp @ ref pos 0,insertion: 13bp @ ref pos 31,insertion: 33bp @ ref pos 460,insertion: 24bp @ ref pos 1605,insertion: 6bp @ ref pos 1962,insertion: 5bp @ ref pos 7388,insertion: 1bp @ ref pos 8328,insertion: 1bp @ ref pos 8864,insertion: 2bp @ ref pos 13039,insertion: 2bp @ ref pos 14445,insertion: 2bp @ ref pos 15792,insertion: 11bp @ ref pos 16578,insertion: 155bp @ ref pos 19712,insertion: 5bp @ ref pos 20658,insertion: 1bp @ ref pos 25365,insertion: 1bp @ ref pos 25660,insertion: 1bp @ ref pos 26529,insertion: 1bp @ ref pos 26565,insertion: 58bp @ ref pos 29743,insertion: 1bp @ ref pos 29775,insertion: 29bp @ ref pos 29836,insertion: 1bp @ ref pos 29867,insertion: 115bp @ ref pos 29903
+Hangzhou/ZJU-04/2020,CCCCCCTTTTCAAGCAGAAGACGGCATACGAGATGGAATCTCGTGACTGGAGTTCAGACGTGTGC,,,,,,,,,,,,,,,,,,,,,,
+Hangzhou/ZJU-09/2020,CCCCCCTTTTCAAGCAGAAGACGGCATACGAGATCATAGCCGGTGACTGGAGTTCAGACGTGTGC,,,,,,,,,,,,,,,,,,,,,,
+China/WH-09/2020,AGAGTGCTTATGAAAATTTTAATCAGCACGAAGTTCTA,,,,,,,,,,,,,,,,,,,,,,
+env/USA/FL-UF11/2020,TTAAAGG,,,,,,,,,,,,,,,,,,,,,,
+Shenzhen/SZTH-003/2020,CAGAAGA,,,,,,,,,,,,,,,,,,,,,,
+Wuhan/WHUH021/2020,CGAACCTGTAAAACAGGCAAACTGA,GACAAGGCTCTCC,,,,,,,,,,,,,,,,,,,,,
+Wuhan/WHUH004/2020,CGAAAG,,,,,,,,,,,,,,,,,,,,GAGATTAAAGTTAACTACATCTACTTGTG,,
+Wuhan/WHUH008/2020,GATCGGAAAG,,,,,,,,,,,,,,,,,,,,GAGATTAAAGTTAACTACATCTACTTGTG,,
+Hangzhou/ZJU-08/2020,CCCCCCCCCCCCCCCCCCCCCCCCCCCTTTTCAAGCAGAAGACGGCATACGAGATGCGCATTAGTGACT,,,,,,,,,,,,,,,,,,,,,,
+USA/WA-UW-2235/2020,,CTCT,,,,,,,,,,,,,,,,,,,,,
+USA/CA-SCCPHD-UC35/2020,,,C,,,,,,,,,,,,,,,,,,,,
+Wuhan/WH02/2019,,,,,,GGC,,,,,,A,,TCTAG,,,,,,,,,
+USA/MDH-5622/2020,,,,,,,,T,,,,,,,,,,,,,,,
+USA/CA-SCCPHD-UC144/2020,,,,,,,,,,AC,,,,,,,,,,,,,
+USA/WA-UW134/2020,,,,,,,,,,,,,TTACACAAAAGTTGATGGTGTTGATGTAGAATTGTTTGAAAATAAAACAACATTACCTGTTAATGTAGCATTT,,,,,,,,,,
+USA/CA-SCCPHD-UC135/2020,,,,,,,,,,,,,,,,T,,,,,,,
+USA/MN5-MDH5/2020,,,,,,,,,,,,,,,,,,,GA,A,,,
+USA/MD-MDH-0026/2020,,,,,,,,,,,,,,,,,,,,,,T,
+Wuhan/WHUH011/2020,,,,,,,,,,,,,,,,,,,,,,,CCGAAAGCTTGTGTTACATTGTATGCTTTAGTGGCAGTACGTTTTTTGCCGAGGCTTCTTAGAAGCCTCAGCAGCAGATTTCTTAGTGACAGTTTGGCCTTGTTGTTGTTGGCCT
+USA/WA-UW-10128/2020,,,,,,,,,,,,,,,,,,,,,,,AAAAAAAAAAAAAAAAAA
+USA/WA-UW83/2020,,,,,,,,,,,,,,,,,,,,,,,AAAAAAA
+USA/WA-UW112/2020,,,,,,,,,,,,,,,,,,,,,,,AAAAAAA
+USA/WA-UW45/2020,,,,,,,,,,,,,,,,,,,,,,,GTAGHT

@@ -1,0 +1,44 @@
+{
+  "title": "Penn SARS-CoV-2",
+  "maintainers": [
+    {"name": "John Everett", "url": "http://bushmanlab.org"}
+  ],
+  "build_url": "https://github.com/bushmanlab",
+  "colorings": [
+    {
+      "key": "gt",
+      "title": "Genotype",
+      "type": "categorical"
+    },
+    {
+      "key": "num_date",
+      "title": "Date",
+      "type": "continuous"
+    },
+    {
+      "key": "country",
+      "title": "Country",
+      "type": "categorical"
+    },
+    {
+      "key": "division_exposure",
+      "title": "Division_exposure",
+      "type": "categorical"
+    }
+  ],
+  "geo_resolutions": [
+    "country",
+    "division_exposure"
+  ],
+  "panels": [
+     "tree",
+     "map"
+  ],
+  "display_defaults": {
+    "map_triplicate": true
+  },
+  "filters": [
+    "country",
+    "division_exposure"
+  ]
+}
