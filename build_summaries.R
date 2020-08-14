@@ -144,7 +144,7 @@ contigs <- Reduce('append', lapply(1:nrow(longContigSampleSummary), function(x){
   contig
 }))
 
-writeXStringSet(contigs, file = 'summaries/contigs_gte90percentRef.fasta')
+writeXStringSet(contigs, file = 'summaries/contigs90.fasta')
 
 
 # Visualize the percent read changes in variants for samples where 90% of 
