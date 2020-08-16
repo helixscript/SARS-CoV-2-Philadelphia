@@ -1,101 +1,101 @@
-strain	virus	date	GISAID_clade	country_exposure	division_exposure	period	source
-Guangdong/20SF840/2020	SARS-CoV-2	2020-01-29	L	China	Guangdong	A	Non-USA
-HongKong/VB20017970-2/2020	SARS-CoV-2	2020-01-21	L	Hong Kong	Hong Kong	A	Non-USA
-Shenzhen/HKU-SZ-005/2020	SARS-CoV-2	2020-01-11	S	China	Guangdong	A	Non-USA
-Wuhan/OS52/2020	SARS-CoV-2	2020-01-10	L	China	Hubei	A	Non-USA
-Guangdong/20SF117/2020	SARS-CoV-2	2020-01-21	S	China	Guangdong	A	Non-USA
-Wuhan/IPBCAMS-WH-03/2019	SARS-CoV-2	2019-12-30	L	China	Hubei	A	Non-USA
-Wuhan/WHUH011/2020	SARS-CoV-2	2020-01-22	S	China	Hubei	A	Non-USA
-Sichuan/SC-YA-087/2020	SARS-CoV-2	2020-01-30	L	China	Sichuan	A	Non-USA
-Sichuan/SC-PHCC2-039/2020	SARS-CoV-2	2020-01-27	L	China	Sichuan	A	Non-USA
-Beijing/BJ390/2020	SARS-CoV-2	2020-01-31	S	China	Beijing	A	Non-USA
-Guangdong/20SF118/2020	SARS-CoV-2	2020-01-21	S	China	Guangdong	A	Non-USA
-Guangdong/2020XN4459-P0041/2020	SARS-CoV-2	2020-01-30	S	China	Guangdong	A	Non-USA
-Singapore/3Clin/2020	SARS-CoV-2	2020-01-29	O	Singapore	Singapore	A	Non-USA
-HongKong/VB20024950-2/2020	SARS-CoV-2	2020-01-30	O	Hong Kong	Hong Kong	A	Non-USA
-Thailand/Phuket_247/2020	SARS-CoV-2	2020-01-25	L	Thailand	Phuket	A	Non-USA
-Shandong/LY003-2/2020	SARS-CoV-2	2020-01-23	S	China	Shandong	A	Non-USA
-Sweden/20-02114/2020	SARS-CoV-2	2020-01-31	O	Sweden	Jonkoping	A	Non-USA
-Wuhan/YB012602/2020	SARS-CoV-2	2020-01-26	L	China	Hubei	A	Non-USA
-HongKong/HKU-911a/2020	SARS-CoV-2	2020-01-30	L	Hong Kong	Hong Kong	A	Non-USA
-Thailand/Nonthaburi_68/2020	SARS-CoV-2	2020-01-15	L	Thailand	Nonthaburi	A	Non-USA
-Wuhan/IPBCAMS-WH-05/2020	SARS-CoV-2	2020-01-01	L	China	Hubei	A	Non-USA
-Guangdong/20SF123/2020	SARS-CoV-2	2020-01-20	S	China	Guangdong	A	Non-USA
-Sichuan/SC-PHCC2-040/2020	SARS-CoV-2	2020-01-24	S	China	Sichuan	A	Non-USA
-France/IDF0372-isl/2020	SARS-CoV-2	2020-01-23	O	France	Ile de France	A	Non-USA
-Guangdong/20SF758/2020	SARS-CoV-2	2020-01-27	L	China	Guangdong	A	Non-USA
-Wuhan/YB012611/2020	SARS-CoV-2	2020-01-26	L	China	Hubei	A	Non-USA
-Australia/NSW2153/2020	SARS-CoV-2	2020-01-25	G	Australia	New South Wales	A	Non-USA
-HongKong/HKU-907b/2020	SARS-CoV-2	2020-01-29	S	Hong Kong	Hong Kong	A	Non-USA
-Wuhan/0125-A170/2020	SARS-CoV-2	2020-01-25	L	China	Hubei	A	Non-USA
-Hangzhou/ZJU-04/2020	SARS-CoV-2	2020-01-24	L	China	Zhejiang	A	Non-USA
-Nanchang/JX174/2020	SARS-CoV-2	2020-01-29	S	China	Jiangxi	A	Non-USA
-Shaoxing/04/2020	SARS-CoV-2	2020-01-31	S	China	Zhejiang	A	Non-USA
-Nanchang/JX90/2020	SARS-CoV-2	2020-01-25	S	China	Jiangxi	A	Non-USA
-Zhejiang/CN5/2020	SARS-CoV-2	2020-01-22	S	China	Zhejiang	A	Non-USA
-USA/CA1/2020	SARS-CoV-2	2020-01-23	S	China	Hubei	A	Non-USA
-Sichuan/SC-PHCC1-030/2020	SARS-CoV-2	2020-01-27	O	China	Sichuan	A	Non-USA
-Thailand/NIH-190/2020	SARS-CoV-2	2020-01-22	O	Thailand	Nonthaburi	A	Non-USA
-Chongqing/IVDC-CQ-001/2020	SARS-CoV-2	2020-01-18	O	China	Chongqing	A	Non-USA
-Singapore/2/2020	SARS-CoV-2	2020-01-25	L	Singapore	Singapore	A	Non-USA
-HongKong/XM-PII-S4/2020	SARS-CoV-2	2020-01-22	S	Hong Kong	Hong Kong	A	Non-USA
-Thailand/SI200040-NT/2020	SARS-CoV-2	2020-01-08	L	Thailand	Thailand	A	Non-USA
-Sichuan/SC-GA-063/2020	SARS-CoV-2	2020-01-30	L	China	Sichuan	A	Non-USA
-Thailand/61/2020	SARS-CoV-2	2020-01-08	L	China	Hubei	A	Non-USA
-Shanghai/SH0003/2020	SARS-CoV-2	2020-01-25	S	China	Shanghai	A	Non-USA
-Shandong/LY002-2/2020	SARS-CoV-2	2020-01-21	S	China	Shandong	A	Non-USA
-Wuhan/WH02/2019	SARS-CoV-2	2019-12-31	O	China	Hubei	A	Non-USA
-Australia/SA02/2020	SARS-CoV-2	2020-01-30	O	Australia	South Australia	A	Non-USA
-Lishui/LS556/2020	SARS-CoV-2	2020-01-28	L	China	Zhejiang	A	Non-USA
-Singapore/15/2020	SARS-CoV-2	2020-01-27	S	Singapore	Singapore	A	Non-USA
-Zhejiang/WZ-02/2020	SARS-CoV-2	2020-01-17	L	China	Zhejiang	A	Non-USA
-Lishui/LS111/2020	SARS-CoV-2	2020-01-25	L	China	Zhejiang	A	Non-USA
-USA/AZ1/2020	SARS-CoV-2	2020-01-22	S	China	Hubei	A	Non-USA
-Italy/SPL1/2020	SARS-CoV-2	2020-01-29	V	Italy	Lazio	A	Non-USA
-Guangdong/20SF198/2020	SARS-CoV-2	2020-01-22	O	China	Guangdong	A	Non-USA
-Beijing/DT-WH04/2020	SARS-CoV-2	2020-01-31	O	China	Hubei	A	Non-USA
-Canada/ON_PHL2445/2020	SARS-CoV-2	2020-01-25	L	China	Hubei	A	Non-USA
-Guangzhou/GZMU0056/2020	SARS-CoV-2	2020-01-29	S	China	Guangdong	A	Non-USA
-Nanchang/JX177/2020	SARS-CoV-2	2020-01-30	S	China	Jiangxi	A	Non-USA
-Shenzhen/SZTH-003/2020	SARS-CoV-2	2020-01-16	L	China	Guangdong	A	Non-USA
-HongKong/HKU-904a/2020	SARS-CoV-2	2020-01-30	S	Hong Kong	Hong Kong	A	Non-USA
-Wuhan/0125-A137/2020	SARS-CoV-2	2020-01-25	L	China	Hubei	A	Non-USA
-Wuhan/WIV06/2019	SARS-CoV-2	2019-12-30	L	China	Hubei	A	Non-USA
-Japan/PG-0015/2020	SARS-CoV-2	2020-01-20	L	Japan	Hokkaido	A	Non-USA
-Hangzhou/HZ-1/2020	SARS-CoV-2	2020-01-20	L	China	Hubei	A	Non-USA
-Wuhan/WHUH008/2020	SARS-CoV-2	2020-01-22	S	China	Hubei	A	Non-USA
-Guangdong/20SF201/2020	SARS-CoV-2	2020-01-23	L	China	Guangdong	A	Non-USA
-Jian/JX169/2020	SARS-CoV-2	2020-01-27	O	China	Jiangxi	A	Non-USA
-Singapore/1/2020	SARS-CoV-2	2020-01-23	L	China	Hubei	A	Non-USA
-Beijing/Wuhan_IME-BJ02/2020	SARS-CoV-2	2020-01-25	S	China	Beijing	A	Non-USA
-Thailand/Nonthaburi_59/2020	SARS-CoV-2	2020-01-13	L	Thailand	Nonthaburi	A	Non-USA
-Wuhan/0126-C5/2020	SARS-CoV-2	2020-01-26	L	China	Hubei	A	Non-USA
-Taiwan/NTU01/2020	SARS-CoV-2	2020-01-31	S	China	Hubei	A	Non-USA
-Hangzhou/HZ62/2020	SARS-CoV-2	2020-01-22	L	China	Zhejiang	A	Non-USA
-Guangzhou/GZMU0057/2020	SARS-CoV-2	2020-01-27	L	China	Guangdong	A	Non-USA
-Japan/PG-0016/2020	SARS-CoV-2	2020-01-20	L	Japan	Hokkaido	A	Non-USA
-Zhejiang/CN2/2020	SARS-CoV-2	2020-01-22	S	China	Zhejiang	A	Non-USA
-Thailand/Bangkok_238/2020	SARS-CoV-2	2020-01-31	S	Thailand	Bangkok	A	Non-USA
-Hangzhou/ZJU-09/2020	SARS-CoV-2	2020-01-28	L	China	Zhejiang	A	Non-USA
-Sichuan/SC-WCH4-287/2020	SARS-CoV-2	2020-01-30	O	China	Sichuan	A	Non-USA
-Wuhan/0125-A142/2020	SARS-CoV-2	2020-01-25	L	China	Hubei	A	Non-USA
-HongKong/HKU-907a/2020	SARS-CoV-2	2020-01-27	S	Hong Kong	Hong Kong	A	Non-USA
-Sichuan/SC-GA-062/2020	SARS-CoV-2	2020-01-26	L	China	Sichuan	A	Non-USA
-HongKong/HKPU12_2201/2020	SARS-CoV-2	2020-01-30	O	Hong Kong	Hong Kong	A	Non-USA
-Guangzhou/20SF206/2020	SARS-CoV-2	2020-01-22	L	China	Guangdong	A	Non-USA
-Wuhan/WHUH004/2020	SARS-CoV-2	2020-01-22	S	China	Hubei	A	Non-USA
-Guangdong/2020XN4291-P0038/2020	SARS-CoV-2	2020-01-30	S	China	Guangdong	A	Non-USA
-Wuhan/HBCDC-HB-02/2019	SARS-CoV-2	2019-12-30	L	China	Hubei	A	Non-USA
-China/WH-09/2020	SARS-CoV-2	2020-01-08	L	China	Hubei	A	Non-USA
-env/Wuhan/IVDC-HBF13-20/2020	SARS-CoV-2	2020-01-01	L	China	Hubei	A	Non-USA
-Foshan/20SF210/2020	SARS-CoV-2	2020-01-22	L	China	Guangdong	A	Non-USA
-Guangdong/20SF1152/2020	SARS-CoV-2	2020-01-30	L	China	Guangdong	A	Non-USA
-Beijing/233/2020	SARS-CoV-2	2020-01-28	S	China	Beijing	A	Non-USA
-Shanghai/SH0010/2020	SARS-CoV-2	2020-01-29	S	China	Shanghai	A	Non-USA
-Taiwan/3/2020	SARS-CoV-2	2020-01-24	S	Taiwan	Taiwan	A	Non-USA
-Wuhan/IPBCAMS-WH-04/2019	SARS-CoV-2	2019-12-30	L	China	Hubei	A	Non-USA
-Sichuan/SC-WCH-310/2020	SARS-CoV-2	2020-01-24	L	China	Sichuan	A	Non-USA
-Wuhan/WHUH021/2020	SARS-CoV-2	2020-01-22	L	China	Hubei	A	Non-USA
-Hangzhou/ZJU-08/2020	SARS-CoV-2	2020-01-26	S	China	Zhejiang	A	Non-USA
-Sichuan/SC-WCH-315/2020	SARS-CoV-2	2020-01-25	L	China	Sichuan	A	Non-USA
-Shandong/IVDC-SD-001/2020	SARS-CoV-2	2020-01-19	O	China	Shandong	A	Non-USA
+strain	virus	date	pangolin_lineage	GISAID_clade	country_exposure	division_exposure	period	source
+HongKong/HKU-907a/2020	SARS-CoV-2	2020-01-27	A	S	Hong Kong	Hong Kong	A	Non-USA
+Japan/TY-WK-501/2020	SARS-CoV-2	2020-01-31	A	S	Japan	Tokyo	A	Non-USA
+Singapore/15/2020	SARS-CoV-2	2020-01-27	A	S	Singapore	Singapore	A	Non-USA
+USA/AZ1/2020	SARS-CoV-2	2020-01-22	A	S	China	Hubei	A	Non-USA
+Ganzhou/JX81/2020	SARS-CoV-2	2020-01-25	A	S	China	Jiangxi	A	Non-USA
+Taiwan/3/2020	SARS-CoV-2	2020-01-24	A	S	Taiwan	Taiwan	A	Non-USA
+Taiwan/NTU01/2020	SARS-CoV-2	2020-01-31	A	S	China	Hubei	A	Non-USA
+Wuhan/0126-C106/2020	SARS-CoV-2	2020-01-26	A	S	China	Hubei	A	Non-USA
+Sichuan/SC-WCH4-287/2020	SARS-CoV-2	2020-01-30	A	O	China	Sichuan	A	Non-USA
+Australia/NSW04/2020	SARS-CoV-2	2020-01-24	A	S	Australia	New South Wales	A	Non-USA
+England/02/2020	SARS-CoV-2	2020-01-29	A	S	China	Hubei	A	Non-USA
+England/01/2020	SARS-CoV-2	2020-01-29	A	S	China	Hubei	A	Non-USA
+Shanghai/SH0035/2020	SARS-CoV-2	2020-01-30	A	S	China	Shanghai	A	Non-USA
+Yunnan/IVDC-YN-003/2020	SARS-CoV-2	2020-01-17	A	S	China	Yunnan	A	Non-USA
+USA/CA1/2020	SARS-CoV-2	2020-01-23	A	S	China	Hubei	A	Non-USA
+India/1-31/2020	SARS-CoV-2	2020-01-31	A	S	China	China	A	Non-USA
+Malaysia/MKAK-CL-2020-5096/2020	SARS-CoV-2	2020-01-30	A	S	Malaysia	Selangor	A	Non-USA
+Singapore/20/2020	SARS-CoV-2	2020-01-29	A	S	Singapore	Singapore	A	Non-USA
+HongKong/HKU-001a/2020	SARS-CoV-2	2020-01-22	A	S	Hong Kong	Hong Kong	A	Non-USA
+Malaysia/IMR_WC119/2020	SARS-CoV-2	2020-01-30	A	S	Malaysia	Selangor	A	Non-USA
+Shanghai/SH0009/2020	SARS-CoV-2	2020-01-29	A	S	China	Shanghai	A	Non-USA
+Australia/VIC13/2020	SARS-CoV-2	2020-01-31	A	S	Australia	Victoria	A	Non-USA
+HongKong/VM20001061-2/2020	SARS-CoV-2	2020-01-22	A	S	Hong Kong	Hong Kong	A	Non-USA
+Australia/QLD01/2020	SARS-CoV-2	2020-01-28	A	S	China	Hubei	A	Non-USA
+SouthKorea/KCDC07/2020	SARS-CoV-2	2020-01-31	A	S	South Korea	Seoul	A	Non-USA
+SouthKorea/KCDC2002/2020	SARS-CoV-2	2020-01-30	A	S	South Korea	South Korea	A	Non-USA
+Australia/NSW01/2020	SARS-CoV-2	2020-01-24	A	S	China	Hubei	A	Non-USA
+Japan/TY-WK-521/2020	SARS-CoV-2	2020-01-31	A	S	Japan	Tokyo	A	Non-USA
+SouthKorea/KCDC06/2020	SARS-CoV-2	2020-01-30	A	S	South Korea	Seoul	A	Non-USA
+Australia/QLD02/2020	SARS-CoV-2	2020-01-30	A	S	Australia	Queensland	A	Non-USA
+SouthKorea/KCDC03/2020	SARS-CoV-2	2020-01-25	A	S	South Korea	Gyeonggi Province	A	Non-USA
+Wuhan/WHUH020/2020	SARS-CoV-2	2020-01-22	A	S	China	Hubei	A	Non-USA
+Singapore/466/2020	SARS-CoV-2	2020-01-31	A	S	Singapore	Singapore	A	Non-USA
+SouthKorea/KCDC2062/2020	SARS-CoV-2	2020-01-31	A	S	South Korea	South Korea	A	Non-USA
+USA/IL2/2020	SARS-CoV-2	2020-01-28	A.3	S	China	Hubei	A	Non-USA
+Thailand/Bangkok_238/2020	SARS-CoV-2	2020-01-31	A.6	S	Thailand	Bangkok	A	Non-USA
+Thailand/SI200468-NT/2020	SARS-CoV-2	2020-01-25	A.6	S	Thailand	Thailand	A	Non-USA
+Thailand/SI203285-NT/2020	SARS-CoV-2	2020-01-23	A.6	S	Thailand	Thailand	A	Non-USA
+Vietnam/19-02S/2020	SARS-CoV-2	2020-01-22	B	L	Vietnam	Ho Chi Minh City	A	Non-USA
+Thailand/NIH-162/2020	SARS-CoV-2	2020-01-22	B	L	Thailand	Samut Prakarn	A	Non-USA
+USA/IL1/2020	SARS-CoV-2	2020-01-21	B	O	China	Hubei	A	Non-USA
+Canada/ON_ON-VIDO-01-2/2020	SARS-CoV-2	2020-01-23	B	L	Canada	Ontario	A	Non-USA
+Thailand/Nonthaburi_68/2020	SARS-CoV-2	2020-01-15	B	L	Thailand	Nonthaburi	A	Non-USA
+Jiangsu/IVDC-JS-001/2020	SARS-CoV-2	2020-01-19	B	L	China	Jiangsu	A	Non-USA
+USA/CA6/2020	SARS-CoV-2	2020-01-27	B	L	China	Hubei	A	Non-USA
+Taiwan/8/2020	SARS-CoV-2	2020-01-31	B	L	Taiwan	Taiwan	A	Non-USA
+Thailand/Phuket_247/2020	SARS-CoV-2	2020-01-25	B	L	Thailand	Phuket	A	Non-USA
+Singapore/1/2020	SARS-CoV-2	2020-01-23	B	L	China	Hubei	A	Non-USA
+Nepal/61/2020	SARS-CoV-2	2020-01-13	B	L	China	Hubei	A	Non-USA
+Thailand/Nonthaburi_59/2020	SARS-CoV-2	2020-01-13	B	L	Thailand	Nonthaburi	A	Non-USA
+Australia/SA01/2020	SARS-CoV-2	2020-01-30	B	O	Australia	South Australia	A	Non-USA
+Malaysia/IMR_WC085/2020	SARS-CoV-2	2020-01-28	B	L	Malaysia	Malaysia	A	Non-USA
+Thailand/61/2020	SARS-CoV-2	2020-01-08	B	L	China	Hubei	A	Non-USA
+Taiwan/4/2020	SARS-CoV-2	2020-01-28	B	L	Taiwan	Taiwan	A	Non-USA
+Wuhan/WIV02/2019	SARS-CoV-2	2019-12-30	B	L	China	Hubei	A	Non-USA
+Wuhan/WIV05/2019	SARS-CoV-2	2019-12-30	B	L	China	Hubei	A	Non-USA
+Japan/NA-20-05-1/2020	SARS-CoV-2	2020-01-25	B	L	Japan	Nara	A	Non-USA
+Germany/BavPat1-ChVir929/2020	SARS-CoV-2	2020-01-28	B	G	Germany	Bavaria	A	Non-USA
+Australia/SA04/2020	SARS-CoV-2	2020-01-30	B	O	Australia	South Australia	A	Non-USA
+Australia/SAP305/2020	SARS-CoV-2	2020-01-30	B	O	Australia	South Australia	A	Non-USA
+Guangdong/20SF629/2020	SARS-CoV-2	2020-01-26	B	O	China	Guangdong	A	Non-USA
+Vietnam/19-01S/2020	SARS-CoV-2	2020-01-22	B	L	Vietnam	Ho Chi Minh City	A	Non-USA
+Sichuan/SC-GA-062/2020	SARS-CoV-2	2020-01-26	B	L	China	Sichuan	A	Non-USA
+HongKong/HKU-911a/2020	SARS-CoV-2	2020-01-30	B	L	Hong Kong	Hong Kong	A	Non-USA
+Thailand/Bangkok_323/2020	SARS-CoV-2	2020-01-29	B	L	Thailand	Bangkok	A	Non-USA
+Germany/BavPat2-ChVir984-ChVir1017/2020	SARS-CoV-2	2020-01-30	B	G	Germany	Bavaria	A	Non-USA
+India/1-27/2020	SARS-CoV-2	2020-01-27	B	L	China	Hubei	A	Non-USA
+Germany/BavPat4-ChVir1019/2020	SARS-CoV-2	2020-01-29	B	G	Germany	Bavaria	A	Non-USA
+Malaysia/MKAK-CL-2020-5047/2020	SARS-CoV-2	2020-01-24	B	L	Malaysia	Selangor	A	Non-USA
+France/IDF0515/2020	SARS-CoV-2	2020-01-29	B	O	China	Hubei	A	Non-USA
+HongKong/HKU-913a/2020	SARS-CoV-2	2020-01-31	B	L	Hong Kong	Hong Kong	A	Non-USA
+Thailand/SI200040-NT/2020	SARS-CoV-2	2020-01-08	B	L	Thailand	Thailand	A	Non-USA
+Australia/NSW2153/2020	SARS-CoV-2	2020-01-25	B.1.5	G	Australia	New South Wales	A	Non-USA
+Australia/NSW03/2020	SARS-CoV-2	2020-01-25	B.2	O	China	China	A	Non-USA
+Australia/VIC01/2020	SARS-CoV-2	2020-01-25	B.2	O	China	Hubei	A	Non-USA
+Australia/VIC02/2020	SARS-CoV-2	2020-01-24	B.2	O	Australia	Victoria	A	Non-USA
+Australia/VIC03/2020	SARS-CoV-2	2020-01-25	B.2	O	Australia	Victoria	A	Non-USA
+France/IDF0372/2020	SARS-CoV-2	2020-01-23	B.2	O	China	Hubei	A	Non-USA
+France/IDF0373/2020	SARS-CoV-2	2020-01-23	B.2	O	China	Hubei	A	Non-USA
+France/IDF0386-islP1/2020	SARS-CoV-2	2020-01-28	B.2	O	France	Ile de France	A	Non-USA
+HongKong/HKPU12_2201/2020	SARS-CoV-2	2020-01-30	B.2	O	Hong Kong	Hong Kong	A	Non-USA
+HongKong/HKPU2_1801/2020	SARS-CoV-2	2020-01-23	B.2	O	Hong Kong	Hong Kong	A	Non-USA
+HongKong/HKU-200723-004/2020	SARS-CoV-2	2020-01-29	B.2	O	Hong Kong	Hong Kong	A	Non-USA
+HongKong/HKU-902a/2020	SARS-CoV-2	2020-01-23	B.2	L	Hong Kong	Hong Kong	A	Non-USA
+HongKong/HKU-902b/2020	SARS-CoV-2	2020-01-24	B.2	L	Hong Kong	Hong Kong	A	Non-USA
+HongKong/VB20017970-2/2020	SARS-CoV-2	2020-01-21	B.2	L	Hong Kong	Hong Kong	A	Non-USA
+HongKong/VB20024950-2/2020	SARS-CoV-2	2020-01-30	B.2	O	Hong Kong	Hong Kong	A	Non-USA
+Italy/INMI1-cs/2020	SARS-CoV-2	2020-01-29	B.2	V	China	Hubei	A	Non-USA
+Italy/SPL1/2020	SARS-CoV-2	2020-01-29	B.2	V	Italy	Lazio	A	Non-USA
+Singapore/7/2020	SARS-CoV-2	2020-01-27	B.2	O	Singapore	Singapore	A	Non-USA
+Sweden/20-02114/2020	SARS-CoV-2	2020-01-31	B.2	O	Sweden	Jonkoping	A	Non-USA
+Taiwan/2/2020	SARS-CoV-2	2020-01-23	B.2	O	Taiwan	Taiwan	A	Non-USA
+Thailand/Bangkok_269/2020	SARS-CoV-2	2020-01-26	B.2	O	Thailand	Bangkok	A	Non-USA
+Thailand/NIH-190/2020	SARS-CoV-2	2020-01-22	B.2	O	Thailand	Nonthaburi	A	Non-USA
+Thailand/Nonthaburi_363/2020	SARS-CoV-2	2020-01-29	B.2	O	Thailand	Nonthaburi	A	Non-USA
+Thailand/SI200383-NT/2020	SARS-CoV-2	2020-01-23	B.2	O	Thailand	Thailand	A	Non-USA
+Thailand/SI200478-NST/2020	SARS-CoV-2	2020-01-26	B.2	O	Thailand	Thailand	A	Non-USA
+USA/CA2/2020	SARS-CoV-2	2020-01-22	B.2	O	China	Hubei	A	Non-USA
+HongKong/HKU-903a/2020	SARS-CoV-2	2020-01-24	B.4	O	Hong Kong	Hong Kong	A	Non-USA
+Shanghai/SH0022/2020	SARS-CoV-2	2020-01-30	B.4	O	China	Shanghai	A	Non-USA

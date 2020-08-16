@@ -4,143 +4,142 @@ Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
 
 Host:    microb191 (AVX2, FMA3, 188 GB RAM)
 Command: iqtree -ninit 2 -n 2 -me 0.05 -nt 30 -s results/aligned-delim.fasta -m GTR
-Seed:    764483 (Using SPRNG - Scalable Parallel Random Number Generator)
-Time:    Tue Aug 11 00:07:43 2020
+Seed:    575924 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Aug 14 13:34:04 2020
 Kernel:  AVX+FMA - 30 threads (48 CPU cores detected)
 
 Reading alignment file results/aligned-delim.fasta ... Fasta format detected
 Alignment most likely contains DNA/RNA sequences
-Alignment has 101 sequences with 29903 columns, 528 distinct patterns
-75 parsimony-informative, 196 singleton sites, 29632 constant sites
-                                          Gap/Ambiguity  Composition  p-value
-   1  NC_045512.2                                 0.00%    passed     99.76%
-   2  Sichuan_X_X_SC-GA-063_X_X_2020              0.00%    passed     99.75%
-   3  Sichuan_X_X_SC-PHCC2-039_X_X_2020           0.00%    passed     99.71%
-   4  Sichuan_X_X_SC-WCH4-287_X_X_2020            0.00%    passed     99.76%
-   5  Guangdong_X_X_2020XN4459-P0041_X_X_2020     0.20%    passed     99.98%
-   6  Sichuan_X_X_SC-PHCC2-040_X_X_2020           0.00%    passed     99.74%
-   7  Sichuan_X_X_SC-GA-062_X_X_2020              0.00%    passed     99.75%
-   8  Beijing_X_X_DT-WH04_X_X_2020                0.00%    passed     99.80%
-   9  Italy_X_X_SPL1_X_X_2020                     0.00%    passed     99.74%
-  10  Sweden_X_X_20-02114_X_X_2020                0.00%    passed     99.79%
-  11  Australia_X_X_SA02_X_X_2020                 0.35%    passed     99.90%
-  12  Beijing_X_X_233_X_X_2020                    0.00%    passed     99.79%
-  13  Guangdong_X_X_2020XN4291-P0038_X_X_2020     3.12%    passed     99.70%
-  14  Chongqing_X_X_IVDC-CQ-001_X_X_2020          0.06%    passed     99.99%
-  15  Guangzhou_X_X_GZMU0056_X_X_2020             1.32%    passed     99.60%
-  16  Taiwan_X_X_3_X_X_2020                       0.04%    passed     99.98%
-  17  HongKong_X_X_HKU-907b_X_X_2020              0.04%    passed     99.97%
-  18  HongKong_X_X_HKU-911a_X_X_2020              0.04%    passed     99.97%
-  19  Thailand_X_X_Nonthaburi_59_X_X_2020         0.05%    passed     99.97%
-  20  Thailand_X_X_Nonthaburi_68_X_X_2020         0.15%    passed     99.97%
-  21  Thailand_X_X_Phuket_247_X_X_2020            0.12%    passed     99.98%
-  22  env_X_X_Wuhan_X_X_IVDC-HBF13-20_X_X_2020    0.04%    passed     99.95%
-  23  Thailand_X_X_Bangkok_238_X_X_2020           0.13%    passed     99.97%
-  24  Shenzhen_X_X_HKU-SZ-005_X_X_2020            0.04%    passed     99.97%
-  25  Wuhan_X_X_IPBCAMS-WH-04_X_X_2019            0.04%    passed     99.98%
-  26  Wuhan_X_X_WHUH011_X_X_2020                  0.00%    passed     99.76%
-  27  Guangdong_X_X_20SF118_X_X_2020              0.70%    passed     99.96%
-  28  Wuhan_X_X_IPBCAMS-WH-03_X_X_2019            0.01%    passed     99.86%
-  29  Guangdong_X_X_20SF117_X_X_2020              0.38%    passed     99.94%
-  30  Guangdong_X_X_20SF198_X_X_2020              0.71%    passed     99.82%
-  31  Guangdong_X_X_20SF758_X_X_2020              0.12%    passed     99.98%
-  32  Singapore_X_X_1_X_X_2020                    0.19%    passed     99.97%
-  33  Guangdong_X_X_20SF840_X_X_2020              0.32%    passed     99.99%
-  34  Wuhan_X_X_IPBCAMS-WH-05_X_X_2020            0.07%    passed    100.00%
-  35  France_X_X_IDF0372-isl_X_X_2020             0.10%    passed     99.99%
-  36  USA_X_X_AZ1_X_X_2020                        0.07%    passed    100.00%
-  37  Guangdong_X_X_20SF123_X_X_2020              0.76%    passed     99.98%
-  38  Shanghai_X_X_SH0003_X_X_2020                0.22%    passed     99.98%
-  39  Shanghai_X_X_SH0010_X_X_2020                0.23%    passed     99.95%
-  40  USA_X_X_CA1_X_X_2020                        0.07%    passed    100.00%
-  41  Singapore_X_X_3Clin_X_X_2020                0.17%    passed     99.98%
-  42  Guangdong_X_X_20SF1152_X_X_2020             0.17%    passed     99.96%
-  43  Wuhan_X_X_0125-A137_X_X_2020                0.80%    passed     99.72%
-  44  Wuhan_X_X_0126-C5_X_X_2020                  0.80%    passed     99.70%
-  45  Wuhan_X_X_0125-A142_X_X_2020                0.80%    passed     99.72%
-  46  Wuhan_X_X_0125-A170_X_X_2020                0.23%    passed     99.96%
-  47  Beijing_X_X_BJ390_X_X_2020                  1.03%    passed     99.97%
-  48  Beijing_X_X_Wuhan_IME-BJ02_X_X_2020         0.25%    passed     99.96%
-  49  Hangzhou_X_X_HZ-1_X_X_2020                  0.23%    passed     99.98%
-  50  Foshan_X_X_20SF210_X_X_2020                 0.21%    passed     99.97%
-  51  Guangdong_X_X_20SF201_X_X_2020              0.21%    passed     99.97%
-  52  Guangzhou_X_X_20SF206_X_X_2020              0.21%    passed     99.96%
-  53  Sichuan_X_X_SC-WCH-315_X_X_2020             0.08%    passed     99.73%
-  54  Hangzhou_X_X_ZJU-04_X_X_2020                0.00%    passed     99.85%
-  55  Sichuan_X_X_SC-WCH-310_X_X_2020             0.23%    passed     99.50%
-  56  Hangzhou_X_X_ZJU-09_X_X_2020                0.00%    passed     99.85%
-  57  Thailand_X_X_SI200040-NT_X_X_2020           0.33%    passed     99.94%
-  58  Zhejiang_X_X_WZ-02_X_X_2020                 0.15%    passed    100.00%
-  59  Hangzhou_X_X_HZ62_X_X_2020                  0.41%    passed     99.95%
-  60  Lishui_X_X_LS111_X_X_2020                   0.14%    passed     99.98%
-  61  Lishui_X_X_LS556_X_X_2020                   0.05%    passed     99.93%
-  62  Thailand_X_X_61_X_X_2020                    0.18%    passed     99.95%
-  63  Wuhan_X_X_HBCDC-HB-02_X_X_2019              0.18%    passed     99.94%
-  64  China_X_X_WH-09_X_X_2020                    0.10%    passed     99.98%
-  65  HongKong_X_X_HKU-904a_X_X_2020              0.05%    passed     99.98%
-  66  HongKong_X_X_HKU-907a_X_X_2020              0.12%    passed     99.96%
-  67  Nanchang_X_X_JX174_X_X_2020                 0.12%    passed     99.95%
-  68  Nanchang_X_X_JX177_X_X_2020                 0.12%    passed     99.96%
-  69  Jian_X_X_JX169_X_X_2020                     0.12%    passed     99.95%
-  70  HongKong_X_X_VB20017970-2_X_X_2020          0.23%    passed     99.97%
-  71  Nanchang_X_X_JX90_X_X_2020                  0.12%    passed     99.94%
-  72  Shenzhen_X_X_SZTH-003_X_X_2020              0.04%    passed     99.96%
-  73  Shaoxing_X_X_04_X_X_2020                    0.38%    passed     99.23%
-  74  Wuhan_X_X_WIV06_X_X_2019                    0.16%    passed     99.96%
-  75  Wuhan_X_X_YB012602_X_X_2020                 0.13%    passed    100.00%
-  76  Wuhan_X_X_OS52_X_X_2020                     0.12%    passed     99.99%
-  77  Australia_X_X_NSW2153_X_X_2020              0.41%    passed     99.89%
-  78  Hangzhou_X_X_ZJU-08_X_X_2020                0.01%    passed     99.90%
-  79  Taiwan_X_X_NTU01_X_X_2020                   1.44%    passed     99.82%
-  80  Zhejiang_X_X_CN2_X_X_2020                   0.27%    passed     99.87%
-  81  Zhejiang_X_X_CN5_X_X_2020                   0.27%    passed     99.91%
-  82  Singapore_X_X_2_X_X_2020                    0.20%    passed     99.97%
-  83  HongKong_X_X_VB20024950-2_X_X_2020          0.37%    passed     99.94%
-  84  Wuhan_X_X_WHUH021_X_X_2020                  0.15%    passed     99.77%
-  85  Canada_X_X_ON_PHL2445_X_X_2020              0.17%    passed     99.86%
-  86  Japan_X_X_PG-0015_X_X_2020                  0.45%    passed     99.93%
-  87  Japan_X_X_PG-0016_X_X_2020                  0.45%    passed     99.91%
-  88  HongKong_X_X_HKPU12_2201_X_X_2020           5.15%    passed     97.32%
-  89  Wuhan_X_X_YB012611_X_X_2020                 0.13%    passed     99.98%
-  90  Guangzhou_X_X_GZMU0057_X_X_2020             1.01%    passed    100.00%
-  91  Wuhan_X_X_WHUH004_X_X_2020                  0.02%    passed     99.88%
-  92  Shandong_X_X_LY003-2_X_X_2020               1.23%    passed     99.92%
-  93  Wuhan_X_X_WHUH008_X_X_2020                  0.09%    passed     99.90%
-  94  Shandong_X_X_IVDC-SD-001_X_X_2020           0.08%    passed     99.97%
-  95  Singapore_X_X_15_X_X_2020                   1.39%    passed     99.82%
-  96  Sichuan_X_X_SC-PHCC1-030_X_X_2020           0.00%    passed     99.69%
-  97  Sichuan_X_X_SC-YA-087_X_X_2020              0.11%    passed     99.49%
-  98  Thailand_X_X_NIH-190_X_X_2020               7.40%    passed     91.92%
-  99  HongKong_X_X_XM-PII-S4_X_X_2020             0.32%    passed     99.89%
- 100  Shandong_X_X_LY002-2_X_X_2020               9.46%    passed     99.62%
- 101  Wuhan_X_X_WH02_X_X_2019                    35.61%    passed     38.15%
-****  TOTAL                                       0.84%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+Alignment has 101 sequences with 29903 columns, 368 distinct patterns
+42 parsimony-informative, 106 singleton sites, 29755 constant sites
+                                                 Gap/Ambiguity  Composition  p-value
+   1  NC_045512.2                                        0.00%    passed     99.75%
+   2  Sichuan_X_X_SC-WCH4-287_X_X_2020                   0.00%    passed     99.75%
+   3  Sichuan_X_X_SC-GA-062_X_X_2020                     0.00%    passed     99.75%
+   4  Australia_X_X_SA01_X_X_2020                        0.48%    passed     99.89%
+   5  Australia_X_X_SAP305_X_X_2020                      0.08%    passed     99.79%
+   6  HongKong_X_X_HKPU12_2201_X_X_2020                  5.15%    passed     97.46%
+   7  Italy_X_X_SPL1_X_X_2020                            0.00%    passed     99.74%
+   8  Sweden_X_X_20-02114_X_X_2020                       0.00%    passed     99.79%
+   9  Australia_X_X_SA04_X_X_2020                        0.89%    passed     99.83%
+  10  Singapore_X_X_1_X_X_2020                           0.19%    passed     99.97%
+  11  Australia_X_X_VIC03_X_X_2020                       0.05%    passed     99.83%
+  12  HongKong_X_X_HKPU2_1801_X_X_2020                   3.34%    passed     99.57%
+  13  France_X_X_IDF0386-islP1_X_X_2020                  0.10%    passed     99.99%
+  14  USA_X_X_CA2_X_X_2020                               0.07%    passed    100.00%
+  15  Canada_X_X_ON_ON-VIDO-01-2_X_X_2020                0.25%    passed     99.91%
+  16  Ganzhou_X_X_JX81_X_X_2020                          0.12%    passed     99.97%
+  17  HongKong_X_X_HKU-907a_X_X_2020                     0.12%    passed     99.96%
+  18  HongKong_X_X_HKU-902a_X_X_2020                     0.05%    passed     99.97%
+  19  Taiwan_X_X_4_X_X_2020                              0.04%    passed     99.97%
+  20  HongKong_X_X_HKU-902b_X_X_2020                     0.04%    passed     99.97%
+  21  Thailand_X_X_Nonthaburi_59_X_X_2020                0.05%    passed     99.97%
+  22  Thailand_X_X_Nonthaburi_68_X_X_2020                0.15%    passed     99.97%
+  23  Thailand_X_X_Phuket_247_X_X_2020                   0.12%    passed     99.98%
+  24  HongKong_X_X_HKU-911a_X_X_2020                     0.04%    passed     99.97%
+  25  Vietnam_X_X_19-01S_X_X_2020                        0.04%    passed     99.97%
+  26  Taiwan_X_X_3_X_X_2020                              0.04%    passed     99.98%
+  27  Yunnan_X_X_IVDC-YN-003_X_X_2020                    0.06%    passed     99.99%
+  28  Thailand_X_X_Bangkok_238_X_X_2020                  0.13%    passed     99.98%
+  29  Thailand_X_X_Bangkok_323_X_X_2020                  0.16%    passed     99.96%
+  30  HongKong_X_X_HKU-913a_X_X_2020                     0.04%    passed     99.98%
+  31  Singapore_X_X_7_X_X_2020                           0.04%    passed     99.97%
+  32  Thailand_X_X_Bangkok_269_X_X_2020                  0.06%    passed     99.99%
+  33  Thailand_X_X_Nonthaburi_363_X_X_2020               0.14%    passed     99.99%
+  34  Singapore_X_X_466_X_X_2020                         0.80%    passed     99.85%
+  35  HongKong_X_X_HKU-903a_X_X_2020                     0.04%    passed     99.94%
+  36  Taiwan_X_X_8_X_X_2020                              0.05%    passed     99.98%
+  37  HongKong_X_X_VB20017970-2_X_X_2020                 0.23%    passed     99.97%
+  38  Wuhan_X_X_WIV02_X_X_2019                           0.26%    passed     99.95%
+  39  Vietnam_X_X_19-02S_X_X_2020                        0.04%    passed     99.97%
+  40  Guangdong_X_X_20SF629_X_X_2020                     0.12%    passed     99.99%
+  41  USA_X_X_AZ1_X_X_2020                               0.07%    passed    100.00%
+  42  USA_X_X_CA1_X_X_2020                               0.07%    passed    100.00%
+  43  USA_X_X_IL1_X_X_2020                               0.10%    passed     99.99%
+  44  USA_X_X_IL2_X_X_2020                               0.07%    passed    100.00%
+  45  HongKong_X_X_HKU-001a_X_X_2020                     0.04%    passed     99.96%
+  46  Singapore_X_X_15_X_X_2020                          1.39%    passed     99.82%
+  47  Malaysia_X_X_MKAK-CL-2020-5047_X_X_2020            0.16%    passed     99.97%
+  48  Shanghai_X_X_SH0009_X_X_2020                       0.22%    passed     99.97%
+  49  Shanghai_X_X_SH0022_X_X_2020                       0.22%    passed     99.97%
+  50  France_X_X_IDF0372_X_X_2020                        0.17%    passed     99.96%
+  51  Thailand_X_X_61_X_X_2020                           0.18%    passed     99.95%
+  52  Thailand_X_X_NIH-162_X_X_2020                      0.21%    passed     99.98%
+  53  France_X_X_IDF0373_X_X_2020                        0.31%    passed     99.99%
+  54  Japan_X_X_NA-20-05-1_X_X_2020                      0.08%    passed    100.00%
+  55  Japan_X_X_TY-WK-501_X_X_2020                       0.08%    passed    100.00%
+  56  Japan_X_X_TY-WK-521_X_X_2020                       0.08%    passed    100.00%
+  57  Taiwan_X_X_2_X_X_2020                              0.08%    passed    100.00%
+  58  Thailand_X_X_SI200040-NT_X_X_2020                  0.33%    passed     99.94%
+  59  Thailand_X_X_SI200383-NT_X_X_2020                  0.31%    passed     99.94%
+  60  Thailand_X_X_SI200478-NST_X_X_2020                 0.23%    passed     99.94%
+  61  Thailand_X_X_SI200468-NT_X_X_2020                  0.25%    passed     99.91%
+  62  Thailand_X_X_SI203285-NT_X_X_2020                  0.28%    passed     99.90%
+  63  France_X_X_IDF0515_X_X_2020                        0.13%    passed     99.96%
+  64  Wuhan_X_X_WIV05_X_X_2019                           0.17%    passed     99.96%
+  65  Germany_X_X_BavPat4-ChVir1019_X_X_2020             0.23%    passed     99.95%
+  66  Australia_X_X_NSW01_X_X_2020                       0.40%    passed     99.97%
+  67  Australia_X_X_NSW04_X_X_2020                       0.40%    passed     99.96%
+  68  Australia_X_X_NSW03_X_X_2020                       0.40%    passed     99.97%
+  69  HongKong_X_X_HKU-200723-004_X_X_2020               0.40%    passed     99.97%
+  70  Germany_X_X_BavPat1-ChVir929_X_X_2020              0.40%    passed     99.94%
+  71  Australia_X_X_NSW2153_X_X_2020                     0.41%    passed     99.91%
+  72  Germany_X_X_BavPat2-ChVir984-ChVir1017_X_X_2020    0.15%    passed     99.98%
+  73  Nepal_X_X_61_X_X_2020                              0.31%    passed     99.98%
+  74  Taiwan_X_X_NTU01_X_X_2020                          1.44%    passed     99.85%
+  75  Australia_X_X_QLD01_X_X_2020                       0.20%    passed     99.99%
+  76  Australia_X_X_QLD02_X_X_2020                       0.13%    passed     99.98%
+  77  SouthKorea_X_X_KCDC03_X_X_2020                     0.28%    passed     99.97%
+  78  England_X_X_01_X_X_2020                            0.22%    passed     99.93%
+  79  England_X_X_02_X_X_2020                            0.22%    passed     99.92%
+  80  Singapore_X_X_20_X_X_2020                          0.07%    passed     99.98%
+  81  Wuhan_X_X_0126-C106_X_X_2020                       0.23%    passed     99.95%
+  82  HongKong_X_X_VB20024950-2_X_X_2020                 0.37%    passed     99.95%
+  83  Italy_X_X_INMI1-cs_X_X_2020                        0.39%    passed     99.97%
+  84  India_X_X_1-31_X_X_2020                            0.17%    passed     99.97%
+  85  Australia_X_X_VIC02_X_X_2020                       1.04%    passed     99.76%
+  86  Australia_X_X_VIC13_X_X_2020                       0.25%    passed     99.91%
+  87  SouthKorea_X_X_KCDC2062_X_X_2020                   0.02%    passed     99.85%
+  88  SouthKorea_X_X_KCDC2002_X_X_2020                   0.06%    passed     99.74%
+  89  HongKong_X_X_VM20001061-2_X_X_2020                 0.18%    passed     99.96%
+  90  Malaysia_X_X_IMR_WC119_X_X_2020                    0.78%    passed     99.77%
+  91  Malaysia_X_X_IMR_WC085_X_X_2020                    0.06%    passed     99.90%
+  92  Australia_X_X_VIC01_X_X_2020                       0.03%    passed     99.69%
+  93  Jiangsu_X_X_IVDC-JS-001_X_X_2020                   0.29%    passed     99.94%
+  94  Shanghai_X_X_SH0035_X_X_2020                       2.94%    passed     94.39%
+  95  SouthKorea_X_X_KCDC06_X_X_2020                     0.38%    passed     99.97%
+  96  SouthKorea_X_X_KCDC07_X_X_2020                     0.38%    passed     99.96%
+  97  India_X_X_1-27_X_X_2020                            0.16%    passed     99.98%
+  98  Malaysia_X_X_MKAK-CL-2020-5096_X_X_2020            0.84%    passed     99.86%
+  99  USA_X_X_CA6_X_X_2020                               0.15%    passed     99.99%
+ 100  Thailand_X_X_NIH-190_X_X_2020                      7.40%    passed     91.51%
+ 101  Wuhan_X_X_WHUH020_X_X_2020                         0.75%    passed     99.52%
+****  TOTAL                                              0.41%  0 sequences failed composition chi2 test (p-value<5%; df=3)
 
-Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.005 seconds
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.004 seconds
 
 NOTE: 1 MB RAM (0 GB) is required!
 WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
 Estimate model parameters (epsilon = 0.500)
-1. Initial log-likelihood: -43839.557
-2. Current log-likelihood: -43788.178
-3. Current log-likelihood: -43786.990
-Optimal log-likelihood: -43786.912
-Rate parameters:  A-C: 0.59930  A-G: 0.95569  A-T: 0.62268  C-G: 0.83903  C-T: 2.20509  G-T: 1.00000
+1. Initial log-likelihood: -42415.417
+2. Current log-likelihood: -42348.248
+Optimal log-likelihood: -42348.163
+Rate parameters:  A-C: 0.43707  A-G: 1.52610  A-T: 0.31887  C-G: 0.32072  C-T: 2.89524  G-T: 1.00000
 Base frequencies:  A: 0.299  C: 0.184  G: 0.196  T: 0.321
-Parameters optimization took 3 rounds (0.116 sec)
-Computing ML distances based on estimated model parameters... 0.256 sec
+Parameters optimization took 2 rounds (0.164 sec)
+Computing ML distances based on estimated model parameters... 0.152 sec
 Computing BIONJ tree...
-0.009 seconds
-Log-likelihood of BIONJ tree: -43845.652
+0.005 seconds
+Log-likelihood of BIONJ tree: -42402.822
 --------------------------------------------------------------------
 |             INITIALIZING CANDIDATE TREE SET                      |
 --------------------------------------------------------------------
 
 Do NNI search on 2 best initial trees
 Estimate model parameters (epsilon = 0.500)
-BETTER TREE FOUND at iteration 1: -43771.614
+BETTER TREE FOUND at iteration 1: -42347.525
 Finish initializing candidate tree set (4)
-Current best tree score: -43771.614 / CPU time: 1.104
+Current best tree score: -42347.525 / CPU time: 0.875
 Number of iterations: 2
 TREE SEARCH COMPLETED AFTER 2 ITERATIONS / Time: 0h:0m:1s
 
@@ -149,19 +148,20 @@ TREE SEARCH COMPLETED AFTER 2 ITERATIONS / Time: 0h:0m:1s
 --------------------------------------------------------------------
 Performs final model parameters optimization
 Estimate model parameters (epsilon = 0.050)
-1. Initial log-likelihood: -43771.614
-Optimal log-likelihood: -43771.612
-Rate parameters:  A-C: 0.59561  A-G: 0.96371  A-T: 0.59578  C-G: 0.83835  C-T: 2.20049  G-T: 1.00000
+1. Initial log-likelihood: -42347.525
+2. Current log-likelihood: -42347.294
+Optimal log-likelihood: -42347.260
+Rate parameters:  A-C: 0.52131  A-G: 1.97216  A-T: 0.40927  C-G: 0.39874  C-T: 3.60039  G-T: 1.00000
 Base frequencies:  A: 0.299  C: 0.184  G: 0.196  T: 0.321
-Parameters optimization took 1 rounds (0.036 sec)
-BEST SCORE FOUND : -43771.612
-Total tree length: 0.011
+Parameters optimization took 2 rounds (0.056 sec)
+BEST SCORE FOUND : -42347.260
+Total tree length: 0.006
 
 Total number of iterations: 2
-CPU time used for tree search: 32.916 sec (0h:0m:32s)
-Wall-clock time used for tree search: 1.105 sec (0h:0m:1s)
-Total CPU time used: 39.536 sec (0h:0m:39s)
-Total wall-clock time used: 1.391 sec (0h:0m:1s)
+CPU time used for tree search: 26.208 sec (0h:0m:26s)
+Wall-clock time used for tree search: 0.876 sec (0h:0m:0s)
+Total CPU time used: 33.248 sec (0h:0m:33s)
+Total wall-clock time used: 1.185 sec (0h:0m:1s)
 
 Analysis results written to: 
   IQ-TREE report:                results/aligned-delim.fasta.iqtree
@@ -169,4 +169,4 @@ Analysis results written to:
   Likelihood distances:          results/aligned-delim.fasta.mldist
   Screen log file:               results/aligned-delim.fasta.log
 
-Date and Time: Tue Aug 11 00:07:45 2020
+Date and Time: Fri Aug 14 13:34:06 2020

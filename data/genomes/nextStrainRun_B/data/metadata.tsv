@@ -1,358 +1,363 @@
-strain	virus	date	GISAID_clade	country_exposure	division_exposure	period	source
-Guangdong/20SF840/2020	SARS-CoV-2	2020-01-29	L	China	Guangdong	B	Non-USA
-HongKong/VB20017970-2/2020	SARS-CoV-2	2020-01-21	L	Hong Kong	Hong Kong	B	Non-USA
-Shenzhen/HKU-SZ-005/2020	SARS-CoV-2	2020-01-11	S	China	Guangdong	B	Non-USA
-Wuhan/OS52/2020	SARS-CoV-2	2020-01-10	L	China	Hubei	B	Non-USA
-Guangdong/20SF117/2020	SARS-CoV-2	2020-01-21	S	China	Guangdong	B	Non-USA
-Wuhan/IPBCAMS-WH-03/2019	SARS-CoV-2	2019-12-30	L	China	Hubei	B	Non-USA
-Wuhan/WHUH011/2020	SARS-CoV-2	2020-01-22	S	China	Hubei	B	Non-USA
-Sichuan/SC-YA-087/2020	SARS-CoV-2	2020-01-30	L	China	Sichuan	B	Non-USA
-Sichuan/SC-PHCC2-039/2020	SARS-CoV-2	2020-01-27	L	China	Sichuan	B	Non-USA
-Beijing/BJ390/2020	SARS-CoV-2	2020-01-31	S	China	Beijing	B	Non-USA
-Guangdong/20SF118/2020	SARS-CoV-2	2020-01-21	S	China	Guangdong	B	Non-USA
-Guangdong/2020XN4459-P0041/2020	SARS-CoV-2	2020-01-30	S	China	Guangdong	B	Non-USA
-Singapore/3Clin/2020	SARS-CoV-2	2020-01-29	O	Singapore	Singapore	B	Non-USA
-HongKong/VB20024950-2/2020	SARS-CoV-2	2020-01-30	O	Hong Kong	Hong Kong	B	Non-USA
-Thailand/Phuket_247/2020	SARS-CoV-2	2020-01-25	L	Thailand	Phuket	B	Non-USA
-Shandong/LY003-2/2020	SARS-CoV-2	2020-01-23	S	China	Shandong	B	Non-USA
-Sweden/20-02114/2020	SARS-CoV-2	2020-01-31	O	Sweden	Jonkoping	B	Non-USA
-Wuhan/YB012602/2020	SARS-CoV-2	2020-01-26	L	China	Hubei	B	Non-USA
-HongKong/HKU-911a/2020	SARS-CoV-2	2020-01-30	L	Hong Kong	Hong Kong	B	Non-USA
-Thailand/Nonthaburi_68/2020	SARS-CoV-2	2020-01-15	L	Thailand	Nonthaburi	B	Non-USA
-Wuhan/IPBCAMS-WH-05/2020	SARS-CoV-2	2020-01-01	L	China	Hubei	B	Non-USA
-Guangdong/20SF123/2020	SARS-CoV-2	2020-01-20	S	China	Guangdong	B	Non-USA
-Sichuan/SC-PHCC2-040/2020	SARS-CoV-2	2020-01-24	S	China	Sichuan	B	Non-USA
-France/IDF0372-isl/2020	SARS-CoV-2	2020-01-23	O	France	Ile de France	B	Non-USA
-Guangdong/20SF758/2020	SARS-CoV-2	2020-01-27	L	China	Guangdong	B	Non-USA
-Wuhan/YB012611/2020	SARS-CoV-2	2020-01-26	L	China	Hubei	B	Non-USA
-Australia/NSW2153/2020	SARS-CoV-2	2020-01-25	G	Australia	New South Wales	B	Non-USA
-HongKong/HKU-907b/2020	SARS-CoV-2	2020-01-29	S	Hong Kong	Hong Kong	B	Non-USA
-Wuhan/0125-A170/2020	SARS-CoV-2	2020-01-25	L	China	Hubei	B	Non-USA
-Hangzhou/ZJU-04/2020	SARS-CoV-2	2020-01-24	L	China	Zhejiang	B	Non-USA
-Nanchang/JX174/2020	SARS-CoV-2	2020-01-29	S	China	Jiangxi	B	Non-USA
-Shaoxing/04/2020	SARS-CoV-2	2020-01-31	S	China	Zhejiang	B	Non-USA
-Nanchang/JX90/2020	SARS-CoV-2	2020-01-25	S	China	Jiangxi	B	Non-USA
-Zhejiang/CN5/2020	SARS-CoV-2	2020-01-22	S	China	Zhejiang	B	Non-USA
-USA/CA1/2020	SARS-CoV-2	2020-01-23	S	China	Hubei	B	Non-USA
-Sichuan/SC-PHCC1-030/2020	SARS-CoV-2	2020-01-27	O	China	Sichuan	B	Non-USA
-Thailand/NIH-190/2020	SARS-CoV-2	2020-01-22	O	Thailand	Nonthaburi	B	Non-USA
-Chongqing/IVDC-CQ-001/2020	SARS-CoV-2	2020-01-18	O	China	Chongqing	B	Non-USA
-Singapore/2/2020	SARS-CoV-2	2020-01-25	L	Singapore	Singapore	B	Non-USA
-HongKong/XM-PII-S4/2020	SARS-CoV-2	2020-01-22	S	Hong Kong	Hong Kong	B	Non-USA
-Thailand/SI200040-NT/2020	SARS-CoV-2	2020-01-08	L	Thailand	Thailand	B	Non-USA
-Sichuan/SC-GA-063/2020	SARS-CoV-2	2020-01-30	L	China	Sichuan	B	Non-USA
-Thailand/61/2020	SARS-CoV-2	2020-01-08	L	China	Hubei	B	Non-USA
-Shanghai/SH0003/2020	SARS-CoV-2	2020-01-25	S	China	Shanghai	B	Non-USA
-Shandong/LY002-2/2020	SARS-CoV-2	2020-01-21	S	China	Shandong	B	Non-USA
-Wuhan/WH02/2019	SARS-CoV-2	2019-12-31	O	China	Hubei	B	Non-USA
-Australia/SA02/2020	SARS-CoV-2	2020-01-30	O	Australia	South Australia	B	Non-USA
-Lishui/LS556/2020	SARS-CoV-2	2020-01-28	L	China	Zhejiang	B	Non-USA
-Singapore/15/2020	SARS-CoV-2	2020-01-27	S	Singapore	Singapore	B	Non-USA
-Zhejiang/WZ-02/2020	SARS-CoV-2	2020-01-17	L	China	Zhejiang	B	Non-USA
-Lishui/LS111/2020	SARS-CoV-2	2020-01-25	L	China	Zhejiang	B	Non-USA
-USA/AZ1/2020	SARS-CoV-2	2020-01-22	S	China	Hubei	B	Non-USA
-Italy/SPL1/2020	SARS-CoV-2	2020-01-29	V	Italy	Lazio	B	Non-USA
-Guangdong/20SF198/2020	SARS-CoV-2	2020-01-22	O	China	Guangdong	B	Non-USA
-Beijing/DT-WH04/2020	SARS-CoV-2	2020-01-31	O	China	Hubei	B	Non-USA
-Canada/ON_PHL2445/2020	SARS-CoV-2	2020-01-25	L	China	Hubei	B	Non-USA
-Guangzhou/GZMU0056/2020	SARS-CoV-2	2020-01-29	S	China	Guangdong	B	Non-USA
-Nanchang/JX177/2020	SARS-CoV-2	2020-01-30	S	China	Jiangxi	B	Non-USA
-Shenzhen/SZTH-003/2020	SARS-CoV-2	2020-01-16	L	China	Guangdong	B	Non-USA
-HongKong/HKU-904a/2020	SARS-CoV-2	2020-01-30	S	Hong Kong	Hong Kong	B	Non-USA
-Wuhan/0125-A137/2020	SARS-CoV-2	2020-01-25	L	China	Hubei	B	Non-USA
-Wuhan/WIV06/2019	SARS-CoV-2	2019-12-30	L	China	Hubei	B	Non-USA
-Japan/PG-0015/2020	SARS-CoV-2	2020-01-20	L	Japan	Hokkaido	B	Non-USA
-Hangzhou/HZ-1/2020	SARS-CoV-2	2020-01-20	L	China	Hubei	B	Non-USA
-Wuhan/WHUH008/2020	SARS-CoV-2	2020-01-22	S	China	Hubei	B	Non-USA
-Guangdong/20SF201/2020	SARS-CoV-2	2020-01-23	L	China	Guangdong	B	Non-USA
-Jian/JX169/2020	SARS-CoV-2	2020-01-27	O	China	Jiangxi	B	Non-USA
-Singapore/1/2020	SARS-CoV-2	2020-01-23	L	China	Hubei	B	Non-USA
-Beijing/Wuhan_IME-BJ02/2020	SARS-CoV-2	2020-01-25	S	China	Beijing	B	Non-USA
-Thailand/Nonthaburi_59/2020	SARS-CoV-2	2020-01-13	L	Thailand	Nonthaburi	B	Non-USA
-Wuhan/0126-C5/2020	SARS-CoV-2	2020-01-26	L	China	Hubei	B	Non-USA
-Taiwan/NTU01/2020	SARS-CoV-2	2020-01-31	S	China	Hubei	B	Non-USA
-Hangzhou/HZ62/2020	SARS-CoV-2	2020-01-22	L	China	Zhejiang	B	Non-USA
-Guangzhou/GZMU0057/2020	SARS-CoV-2	2020-01-27	L	China	Guangdong	B	Non-USA
-Japan/PG-0016/2020	SARS-CoV-2	2020-01-20	L	Japan	Hokkaido	B	Non-USA
-Zhejiang/CN2/2020	SARS-CoV-2	2020-01-22	S	China	Zhejiang	B	Non-USA
-Thailand/Bangkok_238/2020	SARS-CoV-2	2020-01-31	S	Thailand	Bangkok	B	Non-USA
-Hangzhou/ZJU-09/2020	SARS-CoV-2	2020-01-28	L	China	Zhejiang	B	Non-USA
-Sichuan/SC-WCH4-287/2020	SARS-CoV-2	2020-01-30	O	China	Sichuan	B	Non-USA
-Wuhan/0125-A142/2020	SARS-CoV-2	2020-01-25	L	China	Hubei	B	Non-USA
-HongKong/HKU-907a/2020	SARS-CoV-2	2020-01-27	S	Hong Kong	Hong Kong	B	Non-USA
-Sichuan/SC-GA-062/2020	SARS-CoV-2	2020-01-26	L	China	Sichuan	B	Non-USA
-HongKong/HKPU12_2201/2020	SARS-CoV-2	2020-01-30	O	Hong Kong	Hong Kong	B	Non-USA
-Guangzhou/20SF206/2020	SARS-CoV-2	2020-01-22	L	China	Guangdong	B	Non-USA
-Wuhan/WHUH004/2020	SARS-CoV-2	2020-01-22	S	China	Hubei	B	Non-USA
-Guangdong/2020XN4291-P0038/2020	SARS-CoV-2	2020-01-30	S	China	Guangdong	B	Non-USA
-Wuhan/HBCDC-HB-02/2019	SARS-CoV-2	2019-12-30	L	China	Hubei	B	Non-USA
-China/WH-09/2020	SARS-CoV-2	2020-01-08	L	China	Hubei	B	Non-USA
-env/Wuhan/IVDC-HBF13-20/2020	SARS-CoV-2	2020-01-01	L	China	Hubei	B	Non-USA
-Foshan/20SF210/2020	SARS-CoV-2	2020-01-22	L	China	Guangdong	B	Non-USA
-Guangdong/20SF1152/2020	SARS-CoV-2	2020-01-30	L	China	Guangdong	B	Non-USA
-Beijing/233/2020	SARS-CoV-2	2020-01-28	S	China	Beijing	B	Non-USA
-Shanghai/SH0010/2020	SARS-CoV-2	2020-01-29	S	China	Shanghai	B	Non-USA
-Taiwan/3/2020	SARS-CoV-2	2020-01-24	S	Taiwan	Taiwan	B	Non-USA
-Wuhan/IPBCAMS-WH-04/2019	SARS-CoV-2	2019-12-30	L	China	Hubei	B	Non-USA
-Sichuan/SC-WCH-310/2020	SARS-CoV-2	2020-01-24	L	China	Sichuan	B	Non-USA
-Wuhan/WHUH021/2020	SARS-CoV-2	2020-01-22	L	China	Hubei	B	Non-USA
-Hangzhou/ZJU-08/2020	SARS-CoV-2	2020-01-26	S	China	Zhejiang	B	Non-USA
-Sichuan/SC-WCH-315/2020	SARS-CoV-2	2020-01-25	L	China	Sichuan	B	Non-USA
-Shandong/IVDC-SD-001/2020	SARS-CoV-2	2020-01-19	O	China	Shandong	B	Non-USA
-Netherlands/NoordHolland_2/2020	SARS-CoV-2	2020-03-03	GR	Netherlands	North Holland	B	Non-USA
-England/20114099003/2020	SARS-CoV-2	2020-03-10	V	United Kingdom	England	B	Non-USA
-England/20109002404/2020	SARS-CoV-2	2020-03-03	GR	United Kingdom	England	B	Non-USA
-Wuhan/HB-WHCM-114/2020	SARS-CoV-2	2020-03-02	L	China	Hubei	B	Non-USA
-Netherlands/NA_43/2020	SARS-CoV-2	2020-03-07	V	Netherlands	Netherlands	B	Non-USA
-England/201040154/2020	SARS-CoV-2	2020-03-01	G	United Kingdom	England	B	Non-USA
-Denmark/ALAB-SSI169/2020	SARS-CoV-2	2020-03-09	GH	Denmark	Denmark	B	Non-USA
-Guangdong/GD2020227-P0029/2020	SARS-CoV-2	2020-02-05	L	China	Guangdong	B	Non-USA
-Switzerland/100014/2020	SARS-CoV-2	2020-03-08	G	Switzerland	Basel-Stadt	B	Non-USA
-Japan/PG-0178/2020	SARS-CoV-2	2020-03-05	L	Japan	Kanto	B	Non-USA
-Wuhan/HB-WH1-131/2020	SARS-CoV-2	2020-03-02	O	China	Hubei	B	Non-USA
-Shanghai/SH0088/2020	SARS-CoV-2	2020-02-01	L	China	Shanghai	B	Non-USA
-England/201141315/2020	SARS-CoV-2	2020-03-10	O	United Kingdom	England	B	Non-USA
-England/Sheff02/2020	SARS-CoV-2	2020-03-03	O	United Kingdom	England	B	Non-USA
-England/20078004004/2020	SARS-CoV-2	2020-02-13	V	United Kingdom	England	B	Non-USA
-Australia/NSW49/2020	SARS-CoV-2	2020-03-10	O	Australia	New South Wales	B	Non-USA
-Scotland/EDB006/2020	SARS-CoV-2	2020-03-09	GR	United Kingdom	Scotland	B	Non-USA
-Chile/Santiago_8/2020	SARS-CoV-2	2020-03-10	GR	Chile	Santiago	B	Non-USA
-France/HF1463/2020	SARS-CoV-2	2020-02-21	GH	France	Hauts de France	B	Non-USA
-Netherlands/NA_67/2020	SARS-CoV-2	2020-03-09	L	Netherlands	Netherlands	B	Non-USA
-Wuhan/HB-WH4-216/2020	SARS-CoV-2	2020-02-06	L	China	Hubei	B	Non-USA
-Guangzhou/GZMU0049/2020	SARS-CoV-2	2020-02-08	S	China	Guangdong	B	Non-USA
-Guangdong/GZ-S6-P0050/2020	SARS-CoV-2	2020-02-28	S	China	Guangdong	B	Non-USA
-England/20100001104/2020	SARS-CoV-2	2020-03-01	G	United Kingdom	England	B	Non-USA
-Singapore/12/2020	SARS-CoV-2	2020-02-17	S	Singapore	Singapore	B	Non-USA
-France/IDF0571/2020	SARS-CoV-2	2020-02-02	O	France	Ile de France	B	Non-USA
-HongKong/HKPU61-0202/2020	SARS-CoV-2	2020-02-17	O	Hong Kong	Hong Kong	B	Non-USA
-England/201040078/2020	SARS-CoV-2	2020-03-04	G	United Kingdom	England	B	Non-USA
-England/201060040/2020	SARS-CoV-2	2020-03-04	GR	United Kingdom	England	B	Non-USA
-Japan/PG-0072/2020	SARS-CoV-2	2020-02-27	L	Japan	Hokkaido	B	Non-USA
-Japan/DP0191/2020	SARS-CoV-2	2020-02-15	O	Japan	Japan	B	Non-USA
-Brazil/L13_CD23/2020	SARS-CoV-2	2020-03-09	O	Brazil	São Paulo	B	Non-USA
-Austria/CeMM0147/2020	SARS-CoV-2	2020-02-28	GR	Austria	Vienna	B	Non-USA
-Wuhan/HB-WHCM2-267/2020	SARS-CoV-2	2020-02-17	L	China	Hubei	B	Non-USA
-Switzerland/100006/2020	SARS-CoV-2	2020-03-06	G	Switzerland	Basel-Stadt	B	Non-USA
-Japan/PG-0087/2020	SARS-CoV-2	2020-03-04	S	Japan	Hokkaido	B	Non-USA
-Italy/HSacco-2/2020	SARS-CoV-2	2020-03-09	G	Italy	Lombardy	B	Non-USA
-Iceland/20/2020	SARS-CoV-2	2020-03-02	G	Italy	Italy	B	Non-USA
-Wuhan/HB-WH1-134/2020	SARS-CoV-2	2020-02-22	L	China	Hubei	B	Non-USA
-HongKong/HKPU29_0102/2020	SARS-CoV-2	2020-02-08	O	Hong Kong	Hong Kong	B	Non-USA
-Norway/1953/2020	SARS-CoV-2	2020-03-10	G	Norway	Norway	B	Non-USA
-Japan/PG-0108/2020	SARS-CoV-2	2020-03-09	L	Japan	Hokkaido	B	Non-USA
-England/20106087206/2020	SARS-CoV-2	2020-03-02	G	United Kingdom	England	B	Non-USA
-England/201080071/2020	SARS-CoV-2	2020-03-04	G	United Kingdom	England	B	Non-USA
-Shanghai/SH0033/2020	SARS-CoV-2	2020-02-04	O	China	Shanghai	B	Non-USA
-France/HF1986/2020	SARS-CoV-2	2020-03-04	GH	France	Hauts de France	B	Non-USA
-England/20100001204/2020	SARS-CoV-2	2020-03-01	O	United Kingdom	England	B	Non-USA
-Shaoxing/09/2020	SARS-CoV-2	2020-02-05	S	China	Zhejiang	B	Non-USA
-Chile/Santiago_op3d1/2020	SARS-CoV-2	2020-03-07	S	Chile	Santiago	B	Non-USA
-Spain/PV-000728/2020	SARS-CoV-2	2020-03-07	S	Spain	Basque Country	B	Non-USA
-Japan/PG-0383/2020	SARS-CoV-2	2020-03-03	S	Japan	Chubu	B	Non-USA
-Israel/51137031/2020	SARS-CoV-2	2020-03-01	GR	Israel	Tel Aviv District	B	Non-USA
-England/201100062/2020	SARS-CoV-2	2020-03-06	V	United Kingdom	England	B	Non-USA
-France/HF1870/2020	SARS-CoV-2	2020-03-03	G	France	Hauts de France	B	Non-USA
-Guangzhou/GZMU0050/2020	SARS-CoV-2	2020-02-08	S	China	Guangdong	B	Non-USA
-England/20100010304/2020	SARS-CoV-2	2020-03-01	GR	United Kingdom	England	B	Non-USA
-Iceland/25/2020	SARS-CoV-2	2020-03-02	GH	Austria	Austria	B	Non-USA
-Brazil/CV1/2020	SARS-CoV-2	2020-03-04	O	Brazil	Minas Gerais	B	Non-USA
-England/20109003504/2020	SARS-CoV-2	2020-03-06	G	United Kingdom	England	B	Non-USA
-England/20104009102/2020	SARS-CoV-2	2020-03-02	GR	United Kingdom	England	B	Non-USA
-England/20109008704/2020	SARS-CoV-2	2020-03-05	L	United Kingdom	England	B	Non-USA
-Spain/RI-005960/2020	SARS-CoV-2	2020-03-07	S	Spain	La Rioja	B	Non-USA
-France/B2343/2020	SARS-CoV-2	2020-03-06	GH	France	Bretagne	B	Non-USA
-Singapore/661/2020	SARS-CoV-2	2020-02-07	L	Singapore	Singapore	B	Non-USA
-Spain/PV-000783/2020	SARS-CoV-2	2020-03-06	S	Spain	Basque Country	B	Non-USA
-England/LIVE-A4727/2020	SARS-CoV-2	2020-03-10	V	United Kingdom	England	B	Non-USA
-Belgium/KA-03042/2020	SARS-CoV-2	2020-03-04	G	Belgium	Turnhout	B	Non-USA
-England/20110059306/2020	SARS-CoV-2	2020-03-08	L	United Kingdom	England	B	Non-USA
-Scotland/CVR72/2020	SARS-CoV-2	2020-03-04	G	United Kingdom	Scotland	B	Non-USA
-England/201101357/2020	SARS-CoV-2	2020-03-07	L	United Kingdom	England	B	Non-USA
-Mexico/CDMX-INCMNSZ_02/2020	SARS-CoV-2	2020-03-10	S	Mexico	Mexico City	B	Non-USA
-Spain/MD-004902/2020	SARS-CoV-2	2020-03-09	S	Spain	Madrid	B	Non-USA
-Spain/PV-000672/2020	SARS-CoV-2	2020-03-06	S	Spain	Basque Country	B	Non-USA
-England/BRIS-1218A6/2020	SARS-CoV-2	2020-03-08	GR	United Kingdom	England	B	Non-USA
-England/20119001804/2020	SARS-CoV-2	2020-03-10	L	United Kingdom	England	B	Non-USA
-Spain/PaisVasco201491/2020	SARS-CoV-2	2020-03-04	O	Spain	Basque Country	B	Non-USA
-Netherlands/NA_21/2020	SARS-CoV-2	2020-03-08	V	Netherlands	Netherlands	B	Non-USA
-Shanghai/SH0055/2020	SARS-CoV-2	2020-02-08	L	China	Shanghai	B	Non-USA
-Japan/PG-0082/2020	SARS-CoV-2	2020-03-02	S	Japan	Hokkaido	B	Non-USA
-Spain/RI-005973/2020	SARS-CoV-2	2020-03-10	GH	Spain	La Rioja	B	Non-USA
-England/20109040104/2020	SARS-CoV-2	2020-03-06	L	United Kingdom	England	B	Non-USA
-England/20102003604/2020	SARS-CoV-2	2020-03-01	V	United Kingdom	England	B	Non-USA
-Spain/PV-000789/2020	SARS-CoV-2	2020-03-09	S	Spain	Basque Country	B	Non-USA
-Guangzhou/GZMU0045/2020	SARS-CoV-2	2020-02-08	S	China	Guangdong	B	Non-USA
-Spain/PV-000741/2020	SARS-CoV-2	2020-03-07	S	Spain	Basque Country	B	Non-USA
-England/20102001304/2020	SARS-CoV-2	2020-03-02	V	United Kingdom	England	B	Non-USA
-Sichuan/SC-NC-068/2020	SARS-CoV-2	2020-02-02	L	China	Sichuan	B	Non-USA
-Scotland/CVR07/2020	SARS-CoV-2	2020-03-09	V	United Kingdom	Scotland	B	Non-USA
-Switzerland/100007/2020	SARS-CoV-2	2020-03-05	V	Switzerland	Graubünden	B	Non-USA
-Iceland/74/2020	SARS-CoV-2	2020-03-09	GH	Austria	Austria	B	Non-USA
-Philippines/PH-RITM-0018/2020	SARS-CoV-2	2020-03-06	O	Philippines	National Capital Region	B	Non-USA
-England/BRIS-1217A9/2020	SARS-CoV-2	2020-03-02	GR	United Kingdom	England	B	Non-USA
-Canada/ON_PHL8751/2020	SARS-CoV-2	2020-02-29	GH	Canada	Ontario	B	Non-USA
-Sweden/20-08111/2020	SARS-CoV-2	2020-03-09	GR	Sweden	Stockholm	B	Non-USA
-England/20109006104/2020	SARS-CoV-2	2020-03-04	L	United Kingdom	England	B	Non-USA
-Japan/DP0361/2020	SARS-CoV-2	2020-02-16	O	Japan	Japan	B	Non-USA
-Croatia/ZG-297-20/2020	SARS-CoV-2	2020-03-05	GR	Croatia	Varaždin County	B	Non-USA
-Spain/Donostia-San_Sebastian_COV003194/2020	SARS-CoV-2	2020-03-09	S	Spain	Basque Country	B	Non-USA
-England/201090928/2020	SARS-CoV-2	2020-03-06	V	United Kingdom	England	B	Non-USA
-Singapore/43/2020	SARS-CoV-2	2020-02-16	S	Singapore	Singapore	B	Non-USA
-USA/IA-CDC-8200/2020	SARS-CoV-2	2020-03-07	G	USA	Iowa	B	USA-other
-USA/FL-CDC-2718/2020	SARS-CoV-2	2020-03-09	O	USA	Florida	B	USA-other
-USA/VA-DCLS-0020/2020	SARS-CoV-2	2020-03-10	GH	USA	Virginia	B	USA-other
-env/USA/FL-UF11/2020	SARS-CoV-2	2020-02-21	S	USA	Florida	B	USA-other
-USA/CA_2602/2020	SARS-CoV-2	2020-02-26	L	USA	California	B	USA-other
-USA/WA_5030/2020	SARS-CoV-2	2020-02-27	V	USA	Washington	B	USA-other
-USA/WA-S113/2020	SARS-CoV-2	2020-02-29	S	USA	Washington	B	USA-other
-USA/CA-SCCPHD-UC144/2020	SARS-CoV-2	2020-03-06	O	USA	California	B	USA-other
-USA/GA_1299/2020	SARS-CoV-2	2020-03-03	GR	USA	Georgia	B	USA-other
-USA/WA-S42/2020	SARS-CoV-2	2020-02-28	S	USA	Washington	B	USA-other
-USA/WA-UW83/2020	SARS-CoV-2	2020-03-10	S	USA	Washington	B	USA-other
-USA/CA-SCCPHD-UC131/2020	SARS-CoV-2	2020-03-05	O	USA	California	B	USA-other
-USA/WA-S7/2020	SARS-CoV-2	2020-02-24	S	USA	Washington	B	USA-other
-USA/WA-UW74/2020	SARS-CoV-2	2020-03-10	S	USA	Washington	B	USA-other
-USA/WA-UW134/2020	SARS-CoV-2	2020-03-10	GH	USA	Washington	B	USA-other
-USA/LA-CDC-0757/2020	SARS-CoV-2	2020-03-10	GH	USA	Louisiana	B	USA-other
-USA/WA-S252/2020	SARS-CoV-2	2020-03-02	S	USA	Washington	B	USA-other
-USA/WA-UW72/2020	SARS-CoV-2	2020-03-09	S	USA	Washington	B	USA-other
-USA/WA-UW71/2020	SARS-CoV-2	2020-03-09	S	USA	Washington	B	USA-other
-USA/MA-MGH-00426/2020	SARS-CoV-2	2020-03-07	GH	USA	Massachusetts	B	USA-other
-USA/WA2/2020	SARS-CoV-2	2020-02-24	S	USA	Washington	B	USA-other
-USA/CA-SCCPHD-UC35/2020	SARS-CoV-2	2020-03-08	L	USA	California	B	USA-other
-USA/MA-MGH-00416/2020	SARS-CoV-2	2020-03-07	GH	USA	Massachusetts	B	USA-other
-USA/TX-HMH044/2020	SARS-CoV-2	2020-03-09	GH	USA	Texas	B	USA-other
-USA/WA-UW52/2020	SARS-CoV-2	2020-03-09	S	USA	Washington	B	USA-other
-USA/TX-HMH043/2020	SARS-CoV-2	2020-03-09	GH	USA	Texas	B	USA-other
-USA/GA-EHC-069Q/2020	SARS-CoV-2	2020-03-04	GR	USA	Georgia	B	USA-other
-USA/CA-SCCPHD-UC106/2020	SARS-CoV-2	2020-02-29	L	USA	California	B	USA-other
-USA/MI-MDHHS-SC20359/2020	SARS-CoV-2	2020-03-10	GR	USA	Michigan	B	USA-other
-USA/WA-UW17/2020	SARS-CoV-2	2020-03-06	O	USA	Washington	B	USA-other
-USA/MA-MGH-00425/2020	SARS-CoV-2	2020-03-07	GH	USA	Massachusetts	B	USA-other
-USA/CA-SCCPHD-UC141/2020	SARS-CoV-2	2020-03-09	O	USA	California	B	USA-other
-USA/MA-MGH-00439/2020	SARS-CoV-2	2020-03-07	GH	USA	Massachusetts	B	USA-other
-USA/WA-S18/2020	SARS-CoV-2	2020-03-03	S	USA	Washington	B	USA-other
-USA/MA_1355/2020	SARS-CoV-2	2020-03-05	O	USA	Massachusetts	B	USA-other
-USA/WA-S257/2020	SARS-CoV-2	2020-02-25	S	USA	Washington	B	USA-other
-USA/WA-S256/2020	SARS-CoV-2	2020-03-02	S	USA	Washington	B	USA-other
-USA/VA-DCLS-0012/2020	SARS-CoV-2	2020-03-10	GH	USA	Virginia	B	USA-other
-USA/MI-MDHHS-SC20437/2020	SARS-CoV-2	2020-03-09	GH	USA	Michigan	B	USA-other
-USA/MN5-MDH5/2020	SARS-CoV-2	2020-03-10	GR	USA	Minnesota	B	USA-other
-USA/IL_1293/2020	SARS-CoV-2	2020-03-01	L	USA	Illinois	B	USA-other
-USA/WA-S100/2020	SARS-CoV-2	2020-02-29	S	USA	Washington	B	USA-other
-USA/WA-UW30/2020	SARS-CoV-2	2020-03-08	S	USA	Washington	B	USA-other
-USA/CA-SCCPHD-UC145/2020	SARS-CoV-2	2020-03-10	O	USA	California	B	USA-other
-USA/MI-MDHHS-SC20002/2020	SARS-CoV-2	2020-03-10	GR	USA	Michigan	B	USA-other
-USA/CT-Yale-002/2020	SARS-CoV-2	2020-03-10	S	USA	Connecticut	B	USA-other
-USA/MI-MDHHS-SC20122/2020	SARS-CoV-2	2020-03-10	GH	USA	Michigan	B	USA-other
-USA/CA-SCCPHD-UC140/2020	SARS-CoV-2	2020-03-10	S	USA	California	B	USA-other
-USA/MN4-MDH4/2020	SARS-CoV-2	2020-03-09	O	USA	Minnesota	B	USA-other
-USA/WA-UW37/2020	SARS-CoV-2	2020-03-06	S	USA	Washington	B	USA-other
-USA/WA-S302/2020	SARS-CoV-2	2020-03-04	S	USA	Washington	B	USA-other
-USA/WA-UW31/2020	SARS-CoV-2	2020-03-08	S	USA	Washington	B	USA-other
-USA/MN_0100/2020	SARS-CoV-2	2020-03-05	S	USA	Minnesota	B	USA-other
-USA/WA-S104/2020	SARS-CoV-2	2020-03-05	S	USA	Washington	B	USA-other
-USA/NC_0025/2020	SARS-CoV-2	2020-03-08	GH	USA	North Carolina	B	USA-other
-USA/CA-SCCPHD-UC130/2020	SARS-CoV-2	2020-03-06	L	USA	California	B	USA-other
-USA/FL-CDC-6318/2020	SARS-CoV-2	2020-03-09	GR	USA	Florida	B	USA-other
-USA/NV_0016/2020	SARS-CoV-2	2020-03-07	L	USA	Nevada	B	USA-other
-USA/WA-UW91/2020	SARS-CoV-2	2020-03-10	S	USA	Washington	B	USA-other
-USA/WA-UW25/2020	SARS-CoV-2	2020-03-05	G	USA	Washington	B	USA-other
-USA/SC_3571/2020	SARS-CoV-2	2020-03-07	S	USA	South Carolina	B	USA-other
-USA/IL_0087/2020	SARS-CoV-2	2020-03-07	GH	USA	Illinois	B	USA-other
-USA/GA-CDC-2059/2020	SARS-CoV-2	2020-03-07	O	USA	Georgia	B	USA-other
-USA/WA-S31/2020	SARS-CoV-2	2020-03-02	S	USA	Washington	B	USA-other
-USA/WA-S239/2020	SARS-CoV-2	2020-03-07	S	USA	Washington	B	USA-other
-USA/CA-SCCPHD-UC151/2020	SARS-CoV-2	2020-03-10	L	USA	California	B	USA-other
-USA/CA-SCCPHD-UC112/2020	SARS-CoV-2	2020-03-02	L	USA	California	B	USA-other
-USA/WA-S265/2020	SARS-CoV-2	2020-03-05	S	USA	Washington	B	USA-other
-USA/WA-S101/2020	SARS-CoV-2	2020-02-28	S	USA	Washington	B	USA-other
-USA/CA-SCCPHD-UC155/2020	SARS-CoV-2	2020-03-10	L	USA	California	B	USA-other
-USA/CA-SCCPHD-UC111/2020	SARS-CoV-2	2020-03-02	O	USA	California	B	USA-other
-USA/CA-SCCPHD-UC129/2020	SARS-CoV-2	2020-03-06	L	USA	California	B	USA-other
-USA/MA-MGH-00424/2020	SARS-CoV-2	2020-03-07	GH	USA	Massachusetts	B	USA-other
-USA/WA-UW45/2020	SARS-CoV-2	2020-03-08	O	USA	Washington	B	USA-other
-USA/WA-UW90/2020	SARS-CoV-2	2020-03-10	S	USA	Washington	B	USA-other
-USA/CA-SR0416/2020	SARS-CoV-2	2020-03-10	S	USA	California	B	USA-other
-USA/FL-CDC-2316/2020	SARS-CoV-2	2020-03-09	GH	USA	Florida	B	USA-other
-USA/CA-SCCPHD-UC17/2020	SARS-CoV-2	2020-03-08	O	USA	California	B	USA-other
-USA/MN-CDC-0103/2020	SARS-CoV-2	2020-03-10	GR	USA	Minnesota	B	USA-other
-USA/WA-S258/2020	SARS-CoV-2	2020-03-06	S	USA	Washington	B	USA-other
-USA/CA-CDPH-UC23/2020	SARS-CoV-2	2020-03-09	S	USA	California	B	USA-other
-USA/WA-UW53/2020	SARS-CoV-2	2020-03-09	S	USA	Washington	B	USA-other
-USA/WA-S58/2020	SARS-CoV-2	2020-03-05	S	USA	Washington	B	USA-other
-USA/MA-MGH-00417/2020	SARS-CoV-2	2020-03-07	GH	USA	Massachusetts	B	USA-other
-USA/CA-SCCPHD-UC104/2020	SARS-CoV-2	2020-02-29	GH	USA	California	B	USA-other
-USA/CA-SCCPHD-UC138/2020	SARS-CoV-2	2020-03-09	O	USA	California	B	USA-other
-USA/HI_4970/2020	SARS-CoV-2	2020-03-05	G	USA	Hawaii	B	USA-other
-USA/CA-SCCPHD-UC143/2020	SARS-CoV-2	2020-03-09	O	USA	California	B	USA-other
-USA/CA-SCCPHD-UC135/2020	SARS-CoV-2	2020-03-07	O	USA	California	B	USA-other
-USA/WA8-UW5/2020	SARS-CoV-2	2020-03-01	S	USA	Washington	B	USA-other
-USA/CO-CDC-5610/2020	SARS-CoV-2	2020-03-07	O	USA	Colorado	B	USA-other
-USA/WA-UW22/2020	SARS-CoV-2	2020-03-06	O	USA	Washington	B	USA-other
-USA/WA-UW112/2020	SARS-CoV-2	2020-03-10	S	USA	Washington	B	USA-other
-USA/GA_2741/2020	SARS-CoV-2	2020-02-29	GR	USA	Georgia	B	USA-other
-USA/MN-MDH-1267/2020	SARS-CoV-2	2020-03-09	S	USA	Minnesota	B	USA-other
-USA/WA-S108/2020	SARS-CoV-2	2020-02-29	S	USA	Washington	B	USA-other
-USA/CA-SCCPHD-UC123/2020	SARS-CoV-2	2020-03-04	O	USA	California	B	USA-other
-USA/CA-SCCPHD-UC13/2020	SARS-CoV-2	2020-03-02	L	USA	California	B	USA-other
-USA/WA-UW26/2020	SARS-CoV-2	2020-03-05	S	USA	Washington	B	USA-other
-USA/WA-S63/2020	SARS-CoV-2	2020-03-04	S	USA	Washington	B	USA-other
-USA/NY-NYU-VC-002/2020	SARS-CoV-2	2020-03-06	V	USA	New York	B	NY
-USA/NY-NYUMC1/2020	SARS-CoV-2	2020-03-04	V	USA	New York	B	NY
-USA/NY-PV09407/2020	SARS-CoV-2	2020-03-10	GH	USA	New York	B	NY
-USA/NY-PV09413/2020	SARS-CoV-2	2020-03-09	GH	USA	New York	B	NY
-USA/NY-PV09438/2020	SARS-CoV-2	2020-03-10	S	USA	New York	B	NY
-USA/NY-PV09442/2020	SARS-CoV-2	2020-03-08	GH	USA	New York	B	NY
-USA/NY-PV09444/2020	SARS-CoV-2	2020-03-04	GH	USA	New York	B	NY
-USA/NY-PV09448/2020	SARS-CoV-2	2020-03-09	O	USA	New York	B	NY
-USA/NY-SURV0144/2020	SARS-CoV-2	2020-03-02	L	USA	New York	B	NY
-USA/NY-SURV0162/2020	SARS-CoV-2	2020-03-09	O	USA	New York	B	NY
-USA/NY-SURV0165/2020	SARS-CoV-2	2020-03-09	V	USA	New York	B	NY
-USA/NY-SURV0166/2020	SARS-CoV-2	2020-03-09	V	USA	New York	B	NY
-USA/NY-SURV0171/2020	SARS-CoV-2	2020-03-09	O	USA	New York	B	NY
-USA/NY-SURV0175/2020	SARS-CoV-2	2020-03-09	O	USA	New York	B	NY
-USA/NY-SURV0302/2020	SARS-CoV-2	2020-03-09	O	USA	New York	B	NY
-USA/NY-SURV0444/2020	SARS-CoV-2	2020-03-09	O	USA	New York	B	NY
-USA/NY-SURV052/2020	SARS-CoV-2	2020-03-04	S	USA	New York	B	NY
-USA/NY-SURV0592/2020	SARS-CoV-2	2020-03-08	O	USA	New York	B	NY
-USA/NY-SURV076/2020	SARS-CoV-2	2020-03-05	GH	USA	New York	B	NY
-USA/NY-SURV0874/2020	SARS-CoV-2	2020-03-09	O	USA	New York	B	NY
-USA/NY-SURV097/2020	SARS-CoV-2	2020-03-09	O	USA	New York	B	NY
-USA/NY-Wadsworth-10495-01/2020	SARS-CoV-2	2020-03-03	GH	USA	New York	B	NY
-USA/NY-Wadsworth-10496-01/2020	SARS-CoV-2	2020-03-03	GH	USA	New York	B	NY
-USA/NY-Wadsworth-10528-01/2020	SARS-CoV-2	2020-03-03	GH	USA	New York	B	NY
-USA/NY-Wadsworth-10683-01/2020	SARS-CoV-2	2020-03-04	V	USA	New York	B	NY
-USA/NY-Wadsworth-10690-01/2020	SARS-CoV-2	2020-03-04	GH	USA	New York	B	NY
-USA/NY-Wadsworth-10707-01/2020	SARS-CoV-2	2020-03-04	GH	USA	New York	B	NY
-USA/NY-Wadsworth-11000-01/2020	SARS-CoV-2	2020-03-05	V	USA	New York	B	NY
-USA/NY-Wadsworth-11190-01/2020	SARS-CoV-2	2020-03-06	GH	USA	New York	B	NY
-USA/NY-Wadsworth-11191-01/2020	SARS-CoV-2	2020-03-06	GH	USA	New York	B	NY
-USA/NY-Wadsworth-11202-01/2020	SARS-CoV-2	2020-03-06	GH	USA	New York	B	NY
-USA/NY-Wadsworth-11207-01/2020	SARS-CoV-2	2020-03-06	GH	USA	New York	B	NY
-USA/NY-Wadsworth-11245-01/2020	SARS-CoV-2	2020-03-06	GH	USA	New York	B	NY
-USA/NY-Wadsworth-11249-01/2020	SARS-CoV-2	2020-03-06	GH	USA	New York	B	NY
-USA/NY-Wadsworth-11291-01/2020	SARS-CoV-2	2020-03-06	GH	USA	New York	B	NY
-USA/NY-Wadsworth-11330-01/2020	SARS-CoV-2	2020-03-07	GH	USA	New York	B	NY
-USA/NY-Wadsworth-11380-01/2020	SARS-CoV-2	2020-03-06	GH	USA	New York	B	NY
-USA/NY-Wadsworth-11717-01/2020	SARS-CoV-2	2020-03-08	GH	USA	New York	B	NY
-USA/NY-Wadsworth-11735-01/2020	SARS-CoV-2	2020-03-08	GH	USA	New York	B	NY
-USA/NY-Wadsworth-12883-02/2020	SARS-CoV-2	2020-03-10	GH	USA	New York	B	NY
-USA/NY2-PV08100/2020	SARS-CoV-2	2020-03-04	S	USA	New York	B	NY
-USA/NJ-CDC-7300/2020	SARS-CoV-2	2020-03-10	GH	USA	New Jersey	B	NJ
-USA/NJ_3201/2020	SARS-CoV-2	2020-03-04	GH	USA	New Jersey	B	NJ
-USA/NJ_3592/2020	SARS-CoV-2	2020-03-04	GH	USA	New Jersey	B	NJ
-USA/MD-CDC-0025/2020	SARS-CoV-2	2020-03-04	GH	USA	Maryland	B	MD
-USA/MD-HP00060/2020	SARS-CoV-2	2020-03-10	GH	USA	Maryland	B	MD
-USA/MD-HP00075/2020	SARS-CoV-2	2020-03-08	GH	USA	Maryland	B	MD
-USA/MD-HP00082/2020	SARS-CoV-2	2020-03-08	GH	USA	Maryland	B	MD
-USA/MDH-5622/2020	SARS-CoV-2	2020-03-08	GH	USA	Maryland	B	MD
-USA/MDH-5653/2020	SARS-CoV-2	2020-03-07	GH	USA	Maryland	B	MD
-USA/MDH-5875/2020	SARS-CoV-2	2020-03-08	GH	USA	Maryland	B	MD
-USA/MDH-6339/2020	SARS-CoV-2	2020-03-09	GH	USA	Maryland	B	MD
-USA/MDH-6572/2020	SARS-CoV-2	2020-03-08	G	USA	Maryland	B	MD
-USA/MDH-6612/2020	SARS-CoV-2	2020-03-09	GH	USA	Maryland	B	MD
-USA/MDH-7590/2020	SARS-CoV-2	2020-03-09	GH	USA	Maryland	B	MD
-USA/MD_0026/2020	SARS-CoV-2	2020-03-04	GH	USA	Maryland	B	MD
-USA/MD_0027/2020	SARS-CoV-2	2020-03-04	GH	USA	Maryland	B	MD
+strain	virus	date	pangolin_lineage	GISAID_clade	country_exposure	division_exposure	period	source
+HongKong/HKU-907a/2020	SARS-CoV-2	2020-01-27	A	S	Hong Kong	Hong Kong	B	Non-USA
+Japan/TY-WK-501/2020	SARS-CoV-2	2020-01-31	A	S	Japan	Tokyo	B	Non-USA
+Singapore/15/2020	SARS-CoV-2	2020-01-27	A	S	Singapore	Singapore	B	Non-USA
+USA/AZ1/2020	SARS-CoV-2	2020-01-22	A	S	China	Hubei	B	Non-USA
+Ganzhou/JX81/2020	SARS-CoV-2	2020-01-25	A	S	China	Jiangxi	B	Non-USA
+Taiwan/3/2020	SARS-CoV-2	2020-01-24	A	S	Taiwan	Taiwan	B	Non-USA
+Taiwan/NTU01/2020	SARS-CoV-2	2020-01-31	A	S	China	Hubei	B	Non-USA
+Wuhan/0126-C106/2020	SARS-CoV-2	2020-01-26	A	S	China	Hubei	B	Non-USA
+Sichuan/SC-WCH4-287/2020	SARS-CoV-2	2020-01-30	A	O	China	Sichuan	B	Non-USA
+Australia/NSW04/2020	SARS-CoV-2	2020-01-24	A	S	Australia	New South Wales	B	Non-USA
+England/02/2020	SARS-CoV-2	2020-01-29	A	S	China	Hubei	B	Non-USA
+England/01/2020	SARS-CoV-2	2020-01-29	A	S	China	Hubei	B	Non-USA
+Shanghai/SH0035/2020	SARS-CoV-2	2020-01-30	A	S	China	Shanghai	B	Non-USA
+Yunnan/IVDC-YN-003/2020	SARS-CoV-2	2020-01-17	A	S	China	Yunnan	B	Non-USA
+USA/CA1/2020	SARS-CoV-2	2020-01-23	A	S	China	Hubei	B	Non-USA
+India/1-31/2020	SARS-CoV-2	2020-01-31	A	S	China	China	B	Non-USA
+Malaysia/MKAK-CL-2020-5096/2020	SARS-CoV-2	2020-01-30	A	S	Malaysia	Selangor	B	Non-USA
+Singapore/20/2020	SARS-CoV-2	2020-01-29	A	S	Singapore	Singapore	B	Non-USA
+HongKong/HKU-001a/2020	SARS-CoV-2	2020-01-22	A	S	Hong Kong	Hong Kong	B	Non-USA
+Malaysia/IMR_WC119/2020	SARS-CoV-2	2020-01-30	A	S	Malaysia	Selangor	B	Non-USA
+Shanghai/SH0009/2020	SARS-CoV-2	2020-01-29	A	S	China	Shanghai	B	Non-USA
+Australia/VIC13/2020	SARS-CoV-2	2020-01-31	A	S	Australia	Victoria	B	Non-USA
+HongKong/VM20001061-2/2020	SARS-CoV-2	2020-01-22	A	S	Hong Kong	Hong Kong	B	Non-USA
+Australia/QLD01/2020	SARS-CoV-2	2020-01-28	A	S	China	Hubei	B	Non-USA
+SouthKorea/KCDC07/2020	SARS-CoV-2	2020-01-31	A	S	South Korea	Seoul	B	Non-USA
+SouthKorea/KCDC2002/2020	SARS-CoV-2	2020-01-30	A	S	South Korea	South Korea	B	Non-USA
+Australia/NSW01/2020	SARS-CoV-2	2020-01-24	A	S	China	Hubei	B	Non-USA
+Japan/TY-WK-521/2020	SARS-CoV-2	2020-01-31	A	S	Japan	Tokyo	B	Non-USA
+SouthKorea/KCDC06/2020	SARS-CoV-2	2020-01-30	A	S	South Korea	Seoul	B	Non-USA
+Australia/QLD02/2020	SARS-CoV-2	2020-01-30	A	S	Australia	Queensland	B	Non-USA
+SouthKorea/KCDC03/2020	SARS-CoV-2	2020-01-25	A	S	South Korea	Gyeonggi Province	B	Non-USA
+Wuhan/WHUH020/2020	SARS-CoV-2	2020-01-22	A	S	China	Hubei	B	Non-USA
+Singapore/466/2020	SARS-CoV-2	2020-01-31	A	S	Singapore	Singapore	B	Non-USA
+SouthKorea/KCDC2062/2020	SARS-CoV-2	2020-01-31	A	S	South Korea	South Korea	B	Non-USA
+USA/IL2/2020	SARS-CoV-2	2020-01-28	A.3	S	China	Hubei	B	Non-USA
+Thailand/Bangkok_238/2020	SARS-CoV-2	2020-01-31	A.6	S	Thailand	Bangkok	B	Non-USA
+Thailand/SI200468-NT/2020	SARS-CoV-2	2020-01-25	A.6	S	Thailand	Thailand	B	Non-USA
+Thailand/SI203285-NT/2020	SARS-CoV-2	2020-01-23	A.6	S	Thailand	Thailand	B	Non-USA
+Vietnam/19-02S/2020	SARS-CoV-2	2020-01-22	B	L	Vietnam	Ho Chi Minh City	B	Non-USA
+Thailand/NIH-162/2020	SARS-CoV-2	2020-01-22	B	L	Thailand	Samut Prakarn	B	Non-USA
+USA/IL1/2020	SARS-CoV-2	2020-01-21	B	O	China	Hubei	B	Non-USA
+Canada/ON_ON-VIDO-01-2/2020	SARS-CoV-2	2020-01-23	B	L	Canada	Ontario	B	Non-USA
+Thailand/Nonthaburi_68/2020	SARS-CoV-2	2020-01-15	B	L	Thailand	Nonthaburi	B	Non-USA
+Jiangsu/IVDC-JS-001/2020	SARS-CoV-2	2020-01-19	B	L	China	Jiangsu	B	Non-USA
+USA/CA6/2020	SARS-CoV-2	2020-01-27	B	L	China	Hubei	B	Non-USA
+Taiwan/8/2020	SARS-CoV-2	2020-01-31	B	L	Taiwan	Taiwan	B	Non-USA
+Thailand/Phuket_247/2020	SARS-CoV-2	2020-01-25	B	L	Thailand	Phuket	B	Non-USA
+Singapore/1/2020	SARS-CoV-2	2020-01-23	B	L	China	Hubei	B	Non-USA
+Nepal/61/2020	SARS-CoV-2	2020-01-13	B	L	China	Hubei	B	Non-USA
+Thailand/Nonthaburi_59/2020	SARS-CoV-2	2020-01-13	B	L	Thailand	Nonthaburi	B	Non-USA
+Australia/SA01/2020	SARS-CoV-2	2020-01-30	B	O	Australia	South Australia	B	Non-USA
+Malaysia/IMR_WC085/2020	SARS-CoV-2	2020-01-28	B	L	Malaysia	Malaysia	B	Non-USA
+Thailand/61/2020	SARS-CoV-2	2020-01-08	B	L	China	Hubei	B	Non-USA
+Taiwan/4/2020	SARS-CoV-2	2020-01-28	B	L	Taiwan	Taiwan	B	Non-USA
+Wuhan/WIV02/2019	SARS-CoV-2	2019-12-30	B	L	China	Hubei	B	Non-USA
+Wuhan/WIV05/2019	SARS-CoV-2	2019-12-30	B	L	China	Hubei	B	Non-USA
+Japan/NA-20-05-1/2020	SARS-CoV-2	2020-01-25	B	L	Japan	Nara	B	Non-USA
+Germany/BavPat1-ChVir929/2020	SARS-CoV-2	2020-01-28	B	G	Germany	Bavaria	B	Non-USA
+Australia/SA04/2020	SARS-CoV-2	2020-01-30	B	O	Australia	South Australia	B	Non-USA
+Australia/SAP305/2020	SARS-CoV-2	2020-01-30	B	O	Australia	South Australia	B	Non-USA
+Guangdong/20SF629/2020	SARS-CoV-2	2020-01-26	B	O	China	Guangdong	B	Non-USA
+Vietnam/19-01S/2020	SARS-CoV-2	2020-01-22	B	L	Vietnam	Ho Chi Minh City	B	Non-USA
+Sichuan/SC-GA-062/2020	SARS-CoV-2	2020-01-26	B	L	China	Sichuan	B	Non-USA
+HongKong/HKU-911a/2020	SARS-CoV-2	2020-01-30	B	L	Hong Kong	Hong Kong	B	Non-USA
+Thailand/Bangkok_323/2020	SARS-CoV-2	2020-01-29	B	L	Thailand	Bangkok	B	Non-USA
+Germany/BavPat2-ChVir984-ChVir1017/2020	SARS-CoV-2	2020-01-30	B	G	Germany	Bavaria	B	Non-USA
+India/1-27/2020	SARS-CoV-2	2020-01-27	B	L	China	Hubei	B	Non-USA
+Germany/BavPat4-ChVir1019/2020	SARS-CoV-2	2020-01-29	B	G	Germany	Bavaria	B	Non-USA
+Malaysia/MKAK-CL-2020-5047/2020	SARS-CoV-2	2020-01-24	B	L	Malaysia	Selangor	B	Non-USA
+France/IDF0515/2020	SARS-CoV-2	2020-01-29	B	O	China	Hubei	B	Non-USA
+HongKong/HKU-913a/2020	SARS-CoV-2	2020-01-31	B	L	Hong Kong	Hong Kong	B	Non-USA
+Thailand/SI200040-NT/2020	SARS-CoV-2	2020-01-08	B	L	Thailand	Thailand	B	Non-USA
+Australia/NSW2153/2020	SARS-CoV-2	2020-01-25	B.1.5	G	Australia	New South Wales	B	Non-USA
+Australia/NSW03/2020	SARS-CoV-2	2020-01-25	B.2	O	China	China	B	Non-USA
+Australia/VIC01/2020	SARS-CoV-2	2020-01-25	B.2	O	China	Hubei	B	Non-USA
+Australia/VIC02/2020	SARS-CoV-2	2020-01-24	B.2	O	Australia	Victoria	B	Non-USA
+Australia/VIC03/2020	SARS-CoV-2	2020-01-25	B.2	O	Australia	Victoria	B	Non-USA
+France/IDF0372/2020	SARS-CoV-2	2020-01-23	B.2	O	China	Hubei	B	Non-USA
+France/IDF0373/2020	SARS-CoV-2	2020-01-23	B.2	O	China	Hubei	B	Non-USA
+France/IDF0386-islP1/2020	SARS-CoV-2	2020-01-28	B.2	O	France	Ile de France	B	Non-USA
+HongKong/HKPU12_2201/2020	SARS-CoV-2	2020-01-30	B.2	O	Hong Kong	Hong Kong	B	Non-USA
+HongKong/HKPU2_1801/2020	SARS-CoV-2	2020-01-23	B.2	O	Hong Kong	Hong Kong	B	Non-USA
+HongKong/HKU-200723-004/2020	SARS-CoV-2	2020-01-29	B.2	O	Hong Kong	Hong Kong	B	Non-USA
+HongKong/HKU-902a/2020	SARS-CoV-2	2020-01-23	B.2	L	Hong Kong	Hong Kong	B	Non-USA
+HongKong/HKU-902b/2020	SARS-CoV-2	2020-01-24	B.2	L	Hong Kong	Hong Kong	B	Non-USA
+HongKong/VB20017970-2/2020	SARS-CoV-2	2020-01-21	B.2	L	Hong Kong	Hong Kong	B	Non-USA
+HongKong/VB20024950-2/2020	SARS-CoV-2	2020-01-30	B.2	O	Hong Kong	Hong Kong	B	Non-USA
+Italy/INMI1-cs/2020	SARS-CoV-2	2020-01-29	B.2	V	China	Hubei	B	Non-USA
+Italy/SPL1/2020	SARS-CoV-2	2020-01-29	B.2	V	Italy	Lazio	B	Non-USA
+Singapore/7/2020	SARS-CoV-2	2020-01-27	B.2	O	Singapore	Singapore	B	Non-USA
+Sweden/20-02114/2020	SARS-CoV-2	2020-01-31	B.2	O	Sweden	Jonkoping	B	Non-USA
+Taiwan/2/2020	SARS-CoV-2	2020-01-23	B.2	O	Taiwan	Taiwan	B	Non-USA
+Thailand/Bangkok_269/2020	SARS-CoV-2	2020-01-26	B.2	O	Thailand	Bangkok	B	Non-USA
+Thailand/NIH-190/2020	SARS-CoV-2	2020-01-22	B.2	O	Thailand	Nonthaburi	B	Non-USA
+Thailand/Nonthaburi_363/2020	SARS-CoV-2	2020-01-29	B.2	O	Thailand	Nonthaburi	B	Non-USA
+Thailand/SI200383-NT/2020	SARS-CoV-2	2020-01-23	B.2	O	Thailand	Thailand	B	Non-USA
+Thailand/SI200478-NST/2020	SARS-CoV-2	2020-01-26	B.2	O	Thailand	Thailand	B	Non-USA
+USA/CA2/2020	SARS-CoV-2	2020-01-22	B.2	O	China	Hubei	B	Non-USA
+HongKong/HKU-903a/2020	SARS-CoV-2	2020-01-24	B.4	O	Hong Kong	Hong Kong	B	Non-USA
+Shanghai/SH0022/2020	SARS-CoV-2	2020-01-30	B.4	O	China	Shanghai	B	Non-USA
+Belgium/GHB-03021/2020	SARS-CoV-2	2020-02-03	A	S	China	Hubei	B	Non-USA
+Thailand/Bangkok_580/2020	SARS-CoV-2	2020-02-01	A	S	Thailand	Bangkok	B	Non-USA
+Shanghai/SH0032/2020	SARS-CoV-2	2020-02-01	A	S	China	Shanghai	B	Non-USA
+SouthKorea/KCDC2169/2020	SARS-CoV-2	2020-03-09	A	S	South Korea	South Korea	B	Non-USA
+Wuhan/HB-WH1-129/2020	SARS-CoV-2	2020-03-02	A	O	China	Hubei	B	Non-USA
+Malaysia/MKAK-CL-2020-6430/2020	SARS-CoV-2	2020-02-04	A	S	Malaysia	Selangor	B	Non-USA
+Panama/328941/2020	SARS-CoV-2	2020-02-27	A.1	S	USA	USA	B	Non-USA
+Panama/329547/2020	SARS-CoV-2	2020-03-09	A.1	S	Panama	Santiago de Veraguas	B	Non-USA
+Panama/333271/2020	SARS-CoV-2	2020-02-23	A.2	S	Panama	Panama Center	B	Non-USA
+Spain/Valencia4/2020	SARS-CoV-2	2020-02-26	A.2	S	Spain	Comunitat Valenciana	B	Non-USA
+Spain/Valencia266/2020	SARS-CoV-2	2020-02-29	A.2	S	Spain	Comunitat Valenciana	B	Non-USA
+Panama/328710/2020	SARS-CoV-2	2020-02-20	A.2	O	Panama	Panama Center	B	Non-USA
+Spain/PV-000805/2020	SARS-CoV-2	2020-03-08	A.2	S	Spain	Basque Country	B	Non-USA
+Spain/Valencia23/2020	SARS-CoV-2	2020-02-27	A.2	S	Spain	Comunitat Valenciana	B	Non-USA
+Greece/261_32221/2020	SARS-CoV-2	2020-03-10	A.5	S	Greece	Athens	B	Non-USA
+Mexico/Queretaro-InDRE_04/2020	SARS-CoV-2	2020-03-10	A.5	S	Mexico	Queretaro	B	Non-USA
+Thailand/Bangkok-CONI-0106/2020	SARS-CoV-2	2020-03-09	A.6	S	Thailand	Bangkok	B	Non-USA
+Thailand/Bangkok_1716/2020	SARS-CoV-2	2020-02-25	A.6	S	Thailand	Bangkok	B	Non-USA
+Thailand/MUMT-3/2020	SARS-CoV-2	2020-02-25	A.6	S	Thailand	Bangkok	B	Non-USA
+Thailand/SI202620-NT/2020	SARS-CoV-2	2020-02-22	A.6	S	Thailand	Thailand	B	Non-USA
+Thailand/SI202769-NT/2020	SARS-CoV-2	2020-02-25	A.6	O	Thailand	Thailand	B	Non-USA
+Thailand/SI202872-NT/2020	SARS-CoV-2	2020-02-25	A.6	S	Thailand	Thailand	B	Non-USA
+Japan/PG-0091/2020	SARS-CoV-2	2020-03-06	B	L	Japan	Hokkaido	B	Non-USA
+Singapore/187/2020	SARS-CoV-2	2020-02-27	B	L	Singapore	Singapore	B	Non-USA
+Japan/DP0803/2020	SARS-CoV-2	2020-02-17	B	O	Japan	Japan	B	Non-USA
+Japan/DP0568/2020	SARS-CoV-2	2020-02-17	B	O	Japan	Japan	B	Non-USA
+Singapore/3/2020	SARS-CoV-2	2020-02-01	B	O	Singapore	Singapore	B	Non-USA
+France/RA739/2020	SARS-CoV-2	2020-02-08	B	L	France	Auvergne-Rhône-Alpes	B	Non-USA
+Norway/1917/2020	SARS-CoV-2	2020-03-10	B.1	GH	Austria	Austria	B	Non-USA
+Canada/ON_PHL2259/2020	SARS-CoV-2	2020-02-29	B.1	GH	Canada	Ontario	B	Non-USA
+England/20100121007/2020	SARS-CoV-2	2020-02-29	B.1	G	United Kingdom	England	B	Non-USA
+Chile/Puerto_Montt_1/2020	SARS-CoV-2	2020-03-05	B.1	G	Chile	Puerto Montt	B	Non-USA
+England/20099072904/2020	SARS-CoV-2	2020-02-27	B.1	G	United Kingdom	England	B	Non-USA
+Beijing/DT-travelIT03/2020	SARS-CoV-2	2020-03-07	B.1	G	Italy	Lombardy	B	Non-USA
+Spain/Canarias201939/2020	SARS-CoV-2	2020-02-29	B.1.1	GR	Spain	Canary Islands	B	Non-USA
+Switzerland/GE1422/2020	SARS-CoV-2	2020-02-28	B.1.1	GR	Switzerland	Geneva	B	Non-USA
+Switzerland/1000477757/2020	SARS-CoV-2	2020-02-29	B.1.1	GR	Switzerland	Zürich	B	Non-USA
+Vietnam/VNHN_022/2020	SARS-CoV-2	2020-03-07	B.1.1	GR	Vietnam	Red River Delta	B	Non-USA
+Netherlands/Delft_1363424/2020	SARS-CoV-2	2020-02-28	B.1.1	GR	Italy	Italy	B	Non-USA
+Mexico/EdoMex-InDRE_07/2020	SARS-CoV-2	2020-02-28	B.1.1	GR	Italy	Lombardy	B	Non-USA
+Croatia/ZG-297-20/2020	SARS-CoV-2	2020-03-05	B.1.1.1	GR	Croatia	Varaždin County	B	Non-USA
+Iceland/79/2020	SARS-CoV-2	2020-03-09	B.1.1.17	GR	Iceland	Reykjavik	B	Non-USA
+Brazil/SP-14/2020	SARS-CoV-2	2020-03-05	B.1.1.28	GR	Italy	Italy	B	Non-USA
+Austria/CeMM0003/2020	SARS-CoV-2	2020-02-26	B.1.1.6	GR	Italy	Italy	B	Non-USA
+Austria/CeMM0143/2020	SARS-CoV-2	2020-02-27	B.1.1.6	GR	Austria	Vienna	B	Non-USA
+Austria/CeMM0146/2020	SARS-CoV-2	2020-02-28	B.1.1.6	GR	Austria	Vienna	B	Non-USA
+Austria/CeMM0147/2020	SARS-CoV-2	2020-02-28	B.1.1.6	GR	Austria	Vienna	B	Non-USA
+Austria/CeMM0401/2020	SARS-CoV-2	2020-02-28	B.1.1.6	GR	Austria	Austria	B	Non-USA
+Peru/INS-026/2020	SARS-CoV-2	2020-03-06	B.1.11	G	Peru	Arequipa	B	Non-USA
+SaudiArabia/562/2020	SARS-CoV-2	2020-02-16	B.1.113	GH	Saudi Arabia	Saudi Arabia	B	Non-USA
+SaudiArabia/578/2020	SARS-CoV-2	2020-02-17	B.1.113	GH	Saudi Arabia	Saudi Arabia	B	Non-USA
+Netherlands/NA_17/2020	SARS-CoV-2	2020-03-09	B.1.22	G	Netherlands	Netherlands	B	Non-USA
+SaudiArabia/671/2020	SARS-CoV-2	2020-02-27	B.1.36	GH	Saudi Arabia	Saudi Arabia	B	Non-USA
+SaudiArabia/583/2020	SARS-CoV-2	2020-02-18	B.1.36	GH	Saudi Arabia	Saudi Arabia	B	Non-USA
+SaudiArabia/677/2020	SARS-CoV-2	2020-03-01	B.1.36	GH	Saudi Arabia	Saudi Arabia	B	Non-USA
+SaudiArabia/518/2020	SARS-CoV-2	2020-02-10	B.1.36	GH	Saudi Arabia	Saudi Arabia	B	Non-USA
+SaudiArabia/509/2020	SARS-CoV-2	2020-02-09	B.1.36	GH	Saudi Arabia	Saudi Arabia	B	Non-USA
+SaudiArabia/627/2020	SARS-CoV-2	2020-02-23	B.1.36	GH	Saudi Arabia	Saudi Arabia	B	Non-USA
+Peru/INS-008/2020	SARS-CoV-2	2020-03-09	B.1.5	G	Peru	Huanuco	B	Non-USA
+Luxembourg/LNS0000001/2020	SARS-CoV-2	2020-02-29	B.1.5	G	Luxembourg	Luxembourg	B	Non-USA
+Italy/INMI5/2020	SARS-CoV-2	2020-03-04	B.1.5	G	Italy	Lazio	B	Non-USA
+Luxembourg/Lux1/2020	SARS-CoV-2	2020-02-29	B.1.5	G	Italy	Italy	B	Non-USA
+Panama/329108/2020	SARS-CoV-2	2020-03-10	B.1.5	G	Spain	Spain	B	Non-USA
+Switzerland/GE5373/2020	SARS-CoV-2	2020-02-27	B.1.5	G	Switzerland	Geneva	B	Non-USA
+Thailand/SI201712-NT/2020	SARS-CoV-2	2020-02-03	B.2	O	Thailand	Thailand	B	Non-USA
+Singapore/8/2020	SARS-CoV-2	2020-02-03	B.2	O	Singapore	Singapore	B	Non-USA
+HongKong/HKPU61-0202/2020	SARS-CoV-2	2020-02-17	B.2	O	Hong Kong	Hong Kong	B	Non-USA
+Iceland/13/2020	SARS-CoV-2	2020-02-27	B.2	V	Italy	Italy	B	Non-USA
+Finland/FIN01032020/2020	SARS-CoV-2	2020-03-01	B.2	V	Finland	Helsinki	B	Non-USA
+Brazil/SP-02/2020	SARS-CoV-2	2020-02-28	B.2	V	Italy	Lombardy	B	Non-USA
+England/20102088002/2020	SARS-CoV-2	2020-02-25	B.2.1	V	United Kingdom	England	B	Non-USA
+Brazil/ES-225/2020	SARS-CoV-2	2020-02-29	B.2.1	V	Brazil	Espirito Santo	B	Non-USA
+England/20078003804/2020	SARS-CoV-2	2020-02-13	B.2.1	V	United Kingdom	England	B	Non-USA
+England/20100001304/2020	SARS-CoV-2	2020-02-28	B.2.1	O	United Kingdom	England	B	Non-USA
+England/20088028304/2020	SARS-CoV-2	2020-02-20	B.2.1	V	United Kingdom	England	B	Non-USA
+Jamaica/JM-CDC-0869/2020	SARS-CoV-2	2020-03-09	B.2.1	V	Jamaica	Jamaica	B	Non-USA
+SouthKorea/KCDC2067/2020	SARS-CoV-2	2020-02-19	B.2.10	V	South Korea	South Korea	B	Non-USA
+SouthKorea/KCDC2045/2020	SARS-CoV-2	2020-02-20	B.2.10	V	South Korea	South Korea	B	Non-USA
+SouthKorea/KCDC2077/2020	SARS-CoV-2	2020-02-21	B.2.10	V	South Korea	South Korea	B	Non-USA
+SouthKorea/KCDC2048/2020	SARS-CoV-2	2020-02-21	B.2.10	V	South Korea	South Korea	B	Non-USA
+SouthKorea/KCDC2087/2020	SARS-CoV-2	2020-02-23	B.2.10	V	South Korea	South Korea	B	Non-USA
+SouthKorea/A2/2020	SARS-CoV-2	2020-03-08	B.2.10	V	South Korea	Seoul	B	Non-USA
+HongKong/HKPU33_0202/2020	SARS-CoV-2	2020-02-09	B.2.8	O	Hong Kong	Hong Kong	B	Non-USA
+HongKong/HKPU73-0802/2020	SARS-CoV-2	2020-02-22	B.2.8	V	Hong Kong	Hong Kong	B	Non-USA
+HongKong/VM20002868/2020	SARS-CoV-2	2020-02-24	B.2.8	O	Hong Kong	Hong Kong	B	Non-USA
+HongKong/HKPU29_0102/2020	SARS-CoV-2	2020-02-08	B.2.8	O	Hong Kong	Hong Kong	B	Non-USA
+HongKong/HKU-200723-002/2020	SARS-CoV-2	2020-03-09	B.2.8	V	Hong Kong	Hong Kong	B	Non-USA
+HongKong/HKPU44-0102/2020	SARS-CoV-2	2020-02-10	B.2.8	O	Hong Kong	Hong Kong	B	Non-USA
+Wales/PHWC-2C8E8/2020	SARS-CoV-2	2020-03-08	B.3	L	United Kingdom	Wales	B	Non-USA
+Germany/NRW-06/2020	SARS-CoV-2	2020-02-27	B.3	L	Germany	North Rhine Westphalia	B	Non-USA
+Germany/NRW-05/2020	SARS-CoV-2	2020-02-26	B.3	L	Germany	North Rhine Westphalia	B	Non-USA
+Germany/NRW-04/2020	SARS-CoV-2	2020-02-26	B.3	L	Germany	North Rhine Westphalia	B	Non-USA
+Germany/NRW-07/2020	SARS-CoV-2	2020-02-27	B.3	L	Germany	North Rhine Westphalia	B	Non-USA
+Germany/NRW-03/2020	SARS-CoV-2	2020-02-26	B.3	L	Germany	North Rhine Westphalia	B	Non-USA
+Shanghai/SH0126/2020	SARS-CoV-2	2020-02-15	B.4	O	China	Shanghai	B	Non-USA
+Oman/RESP-20-1189/2020	SARS-CoV-2	2020-03-02	B.4	L	Oman	Muscat	B	Non-USA
+Canada/BC_37_0-2/2020	SARS-CoV-2	2020-02-16	B.4	O	Iran	Iran	B	Non-USA
+Canada/BC_69243/2020	SARS-CoV-2	2020-02-20	B.4	O	Iran	Iran	B	Non-USA
+Pakistan/Gilgit1/2020	SARS-CoV-2	2020-03-04	B.4	O	Iran	Iran	B	Non-USA
+India/1115/2020	SARS-CoV-2	2020-03-10	B.4	O	Iran	Iran	B	Non-USA
+Japan/DP0464/2020	SARS-CoV-2	2020-02-16	B.5	O	Japan	Japan	B	Non-USA
+Japan/DP0588/2020	SARS-CoV-2	2020-02-17	B.5	O	Japan	Japan	B	Non-USA
+Japan/DP0764/2020	SARS-CoV-2	2020-02-17	B.5	O	Japan	Japan	B	Non-USA
+Malaysia/IMR-WC9174/2020	SARS-CoV-2	2020-03-04	B.6	O	Malaysia	Selangor	B	Non-USA
+Malaysia/IMR-WC9205/2020	SARS-CoV-2	2020-03-04	B.6	O	Malaysia	Selangor	B	Non-USA
+USA/MN-MDH-1273/2020	SARS-CoV-2	2020-03-10	A	S	USA	Minnesota	B	USA-other
+USA/VA_6171/2020	SARS-CoV-2	2020-03-06	A	S	USA	Virginia	B	USA-other
+USA/WA-S11/2020	SARS-CoV-2	2020-03-03	A.1	S	USA	Washington	B	USA-other
+USA/WA-UW42/2020	SARS-CoV-2	2020-03-09	A.1	S	USA	Washington	B	USA-other
+USA/MN-CDC-0106/2020	SARS-CoV-2	2020-03-10	A.1	S	USA	Minnesota	B	USA-other
+USA/WA-UW71/2020	SARS-CoV-2	2020-03-09	A.1	S	USA	Washington	B	USA-other
+USA/WA-S90/2020	SARS-CoV-2	2020-02-29	A.1	S	USA	Oregon	B	USA-other
+USA/WA-S7/2020	SARS-CoV-2	2020-02-24	A.1	S	USA	Washington	B	USA-other
+USA/WA-S248/2020	SARS-CoV-2	2020-03-10	A.1	S	USA	Washington	B	USA-other
+USA/WA-S34/2020	SARS-CoV-2	2020-03-02	A.1	S	USA	Washington	B	USA-other
+USA/WA-S49/2020	SARS-CoV-2	2020-03-04	A.1	S	USA	Washington	B	USA-other
+env/USA/FL-UF11/2020	SARS-CoV-2	2020-02-21	A.1	S	USA	Florida	B	USA-other
+USA/WA-S57/2020	SARS-CoV-2	2020-03-03	A.1	S	USA	Washington	B	USA-other
+USA/FL-BPHL-0537/2020	SARS-CoV-2	2020-03-06	A.1	S	USA	Florida	B	USA-other
+USA/WA-S23/2020	SARS-CoV-2	2020-03-02	A.1	S	USA	Washington	B	USA-other
+USA/FL_9655/2020	SARS-CoV-2	2020-03-05	A.3	S	USA	Florida	B	USA-other
+USA/GA-CDC-2059/2020	SARS-CoV-2	2020-03-07	A.3	O	USA	Georgia	B	USA-other
+USA/SC-DHEC-0008/2020	SARS-CoV-2	2020-03-10	A.3	S	USA	South Carolina	B	USA-other
+USA/GA-EHC-087I/2020	SARS-CoV-2	2020-03-10	A.3	S	USA	Georgia	B	USA-other
+USA/IN-CDC-2013/2020	SARS-CoV-2	2020-03-09	A.3	O	USA	Indiana	B	USA-other
+USA/MN-CDC-0108/2020	SARS-CoV-2	2020-03-10	A.3	O	USA	Minnesota	B	USA-other
+USA/SC_3575/2020	SARS-CoV-2	2020-03-07	A.3	S	USA	South Carolina	B	USA-other
+USA/FL-BPHL-0141/2020	SARS-CoV-2	2020-03-10	A.3	S	USA	Florida	B	USA-other
+USA/SC_6370/2020	SARS-CoV-2	2020-03-08	A.3	S	USA	South Carolina	B	USA-other
+USA/SC_3571/2020	SARS-CoV-2	2020-03-07	A.3	S	USA	South Carolina	B	USA-other
+USA/FL-CDC-2718/2020	SARS-CoV-2	2020-03-09	A.3	O	USA	Florida	B	USA-other
+USA/SC-DHEC-0001/2020	SARS-CoV-2	2020-03-06	A.3	S	USA	South Carolina	B	USA-other
+USA/GA-EHC-086H/2020	SARS-CoV-2	2020-03-10	A.3	S	USA	Georgia	B	USA-other
+USA/MI-MDHHS-SC20004/2020	SARS-CoV-2	2020-03-10	A.5	S	USA	Michigan	B	USA-other
+USA/CA_2602/2020	SARS-CoV-2	2020-02-26	B	L	USA	California	B	USA-other
+USA/CA-SCCPHD-UC125/2020	SARS-CoV-2	2020-03-06	B	O	USA	California	B	USA-other
+USA/CA-SCCPHD-UC124/2020	SARS-CoV-2	2020-03-05	B	S	USA	California	B	USA-other
+USA/WA-S30/2020	SARS-CoV-2	2020-02-28	B	S	USA	Washington	B	USA-other
+USA/CA-SCCPHD-UC143/2020	SARS-CoV-2	2020-03-09	B	O	USA	California	B	USA-other
+USA/CA-SCCPHD-UC149/2020	SARS-CoV-2	2020-03-10	B	O	USA	California	B	USA-other
+USA/CA-SCCPHD-UC139/2020	SARS-CoV-2	2020-03-09	B	L	USA	California	B	USA-other
+USA/CA-UCSF-UC33/2020	SARS-CoV-2	2020-03-07	B	L	USA	California	B	USA-other
+USA/CA-SCCPHD-UC116/2020	SARS-CoV-2	2020-03-04	B	L	USA	California	B	USA-other
+USA/CA-SCCPHD-UC109/2020	SARS-CoV-2	2020-03-02	B	L	USA	California	B	USA-other
+USA/CA-SCCPHD-UC16/2020	SARS-CoV-2	2020-03-04	B	L	USA	California	B	USA-other
+USA/CA-SCCPHD-UC13/2020	SARS-CoV-2	2020-03-02	B	L	USA	California	B	USA-other
+USA/CA-SCCPHD-UC155/2020	SARS-CoV-2	2020-03-10	B	L	USA	California	B	USA-other
+USA/IA_6391/2020	SARS-CoV-2	2020-03-07	B.1	G	USA	Iowa	B	USA-other
+USA/TX-HMH035/2020	SARS-CoV-2	2020-03-09	B.1	GH	USA	Texas	B	USA-other
+USA/NH_0004/2020	SARS-CoV-2	2020-02-29	B.1	GH	USA	New Hampshire	B	USA-other
+USA/VA-DCLS-0020/2020	SARS-CoV-2	2020-03-10	B.1	GH	USA	Virginia	B	USA-other
+USA/MA-MGH-00441/2020	SARS-CoV-2	2020-03-05	B.1	GH	USA	Massachusetts	B	USA-other
+USA/MI-MDHHS-SC20437/2020	SARS-CoV-2	2020-03-09	B.1	GH	USA	Michigan	B	USA-other
+USA/MA-MGH-00423/2020	SARS-CoV-2	2020-03-07	B.1	G	USA	Massachusetts	B	USA-other
+USA/CA-SCCPHD-UC187/2020	SARS-CoV-2	2020-03-07	B.1	O	USA	California	B	USA-other
+USA/TX_2967/2020	SARS-CoV-2	2020-03-01	B.1	GH	USA	Texas	B	USA-other
+USA/KS_4126/2020	SARS-CoV-2	2020-03-06	B.1	GH	USA	Kansas	B	USA-other
+USA/MA-MGH-00442/2020	SARS-CoV-2	2020-03-05	B.1	GH	USA	Massachusetts	B	USA-other
+USA/FL-BPHL-0139/2020	SARS-CoV-2	2020-03-07	B.1	GH	USA	Florida	B	USA-other
+USA/SC_3572/2020	SARS-CoV-2	2020-03-05	B.1	G	USA	South Carolina	B	USA-other
+USA/CT-Yale-003/2020	SARS-CoV-2	2020-03-08	B.1.1	O	USA	Connecticut	B	USA-other
+USA/MI-MDHHS-SC20162/2020	SARS-CoV-2	2020-03-10	B.1.1	GR	USA	Michigan	B	USA-other
+USA/CA-SCCPHD-UC135/2020	SARS-CoV-2	2020-03-07	B.1.1	O	USA	California	B	USA-other
+USA/CA-SCCPHD-UC134/2020	SARS-CoV-2	2020-03-07	B.1.1	O	USA	California	B	USA-other
+USA/FL_5091/2020	SARS-CoV-2	2020-02-28	B.1.1	S	USA	Florida	B	USA-other
+USA/MN5-MDH5/2020	SARS-CoV-2	2020-03-10	B.1.1	GR	USA	Minnesota	B	USA-other
+USA/CA-SCCPHD-UC114/2020	SARS-CoV-2	2020-03-03	B.1.1	O	USA	California	B	USA-other
+USA/WA-S4/2020	SARS-CoV-2	2020-03-01	B.1.1	O	USA	Washington	B	USA-other
+USA/GA_1621/2020	SARS-CoV-2	2020-03-04	B.1.1	GR	USA	Georgia	B	USA-other
+USA/CA-CDPH-UC25/2020	SARS-CoV-2	2020-03-04	B.1.1	O	USA	California	B	USA-other
+USA/GA_2741/2020	SARS-CoV-2	2020-02-29	B.1.1	GR	USA	Georgia	B	USA-other
+USA/GA_1299/2020	SARS-CoV-2	2020-03-03	B.1.1	GR	USA	Georgia	B	USA-other
+USA/FL-CDC-6318/2020	SARS-CoV-2	2020-03-09	B.1.1	GR	USA	Florida	B	USA-other
+USA/MI-MDHHS-SC20113/2020	SARS-CoV-2	2020-03-10	B.1.1.1	GR	USA	Michigan	B	USA-other
+USA/MI-MDHHS-SC20359/2020	SARS-CoV-2	2020-03-10	B.1.1.1	GR	USA	Michigan	B	USA-other
+USA/MI-MDHHS-SC20438/2020	SARS-CoV-2	2020-03-10	B.1.1.1	GR	USA	Michigan	B	USA-other
+USA/MI-MDHHS-SC20002/2020	SARS-CoV-2	2020-03-10	B.1.1.10	GR	USA	Michigan	B	USA-other
+USA/FL_1177/2020	SARS-CoV-2	2020-03-06	B.1.110	GH	USA	Florida	B	USA-other
+USA/FL_7169/2020	SARS-CoV-2	2020-03-02	B.1.110	GH	USA	Florida	B	USA-other
+USA/IL_0087/2020	SARS-CoV-2	2020-03-07	B.1.111	GH	USA	Illinois	B	USA-other
+USA/LA-CDC-0757/2020	SARS-CoV-2	2020-03-10	B.1.2	GH	USA	Louisiana	B	USA-other
+USA/LA_0842/2020	SARS-CoV-2	2020-03-09	B.1.2	GH	USA	Louisiana	B	USA-other
+USA/TX-CDC-3008/2020	SARS-CoV-2	2020-03-10	B.1.2	GH	USA	Texas	B	USA-other
+USA/WA-S274/2020	SARS-CoV-2	2020-03-08	B.1.21	GH	USA	Washington	B	USA-other
+USA/WA-UW29/2020	SARS-CoV-2	2020-03-08	B.1.21	GH	USA	Washington	B	USA-other
+USA/WA-UW60/2020	SARS-CoV-2	2020-03-09	B.1.21	GH	USA	Washington	B	USA-other
+USA/WA-UW69/2020	SARS-CoV-2	2020-03-10	B.1.21	GH	USA	Washington	B	USA-other
+USA/WA-UW78/2020	SARS-CoV-2	2020-03-10	B.1.21	GH	USA	Washington	B	USA-other
+USA/WA-UW82/2020	SARS-CoV-2	2020-03-10	B.1.21	GH	USA	Washington	B	USA-other
+USA/WA-UW96/2020	SARS-CoV-2	2020-03-10	B.1.21	GH	USA	Washington	B	USA-other
+USA/TX-CDC-3009/2020	SARS-CoV-2	2020-03-10	B.1.37	GH	USA	Texas	B	USA-other
+USA/UT_8906/2020	SARS-CoV-2	2020-03-07	B.1.43	GH	USA	Utah	B	USA-other
+USA/CA-SCCPHD-UC128/2020	SARS-CoV-2	2020-03-06	B.1.5	O	USA	California	B	USA-other
+USA/RI_0520/2020	SARS-CoV-2	2020-02-28	B.1.5	G	USA	Rhode Island	B	USA-other
+USA/RI_0556/2020	SARS-CoV-2	2020-03-01	B.1.5	G	USA	Rhode Island	B	USA-other
+USA/FL_9590/2020	SARS-CoV-2	2020-03-05	B.2	V	USA	Florida	B	USA-other
+USA/MA_1355/2020	SARS-CoV-2	2020-03-05	B.2	O	USA	Massachusetts	B	USA-other
+USA/MN4-MDH4/2020	SARS-CoV-2	2020-03-09	B.2	O	USA	Minnesota	B	USA-other
+USA/OR_2656/2020	SARS-CoV-2	2020-02-27	B.2	V	USA	Oregon	B	USA-other
+USA/TX-HMH037/2020	SARS-CoV-2	2020-03-08	B.2	V	USA	Texas	B	USA-other
+USA/NV_0052/2020	SARS-CoV-2	2020-03-09	B.2.1	V	USA	Nevada	B	USA-other
+USA/WA_5030/2020	SARS-CoV-2	2020-02-27	B.2.10	V	USA	Washington	B	USA-other
+USA/NE_6605/2020	SARS-CoV-2	2020-03-05	B.3	L	USA	Nebraska	B	USA-other
+USA/UT-010/2020	SARS-CoV-2	2020-03-10	B.3	L	USA	Utah	B	USA-other
+USA/WA-UW22/2020	SARS-CoV-2	2020-03-06	B.4	O	USA	Washington	B	USA-other
+USA/NY-NYU-VC-002/2020	SARS-CoV-2	2020-03-06	B.2.1	V	USA	New York	B	NY
+USA/NY-NYUMC1/2020	SARS-CoV-2	2020-03-04	B.1	V	USA	New York	B	NY
+USA/NY-PV09407/2020	SARS-CoV-2	2020-03-10	B.1	GH	USA	New York	B	NY
+USA/NY-PV09413/2020	SARS-CoV-2	2020-03-09	B.1	GH	USA	New York	B	NY
+USA/NY-PV09438/2020	SARS-CoV-2	2020-03-10	A.3	S	USA	New York	B	NY
+USA/NY-PV09442/2020	SARS-CoV-2	2020-03-08	B.1	GH	USA	New York	B	NY
+USA/NY-PV09444/2020	SARS-CoV-2	2020-03-04	B.1	GH	USA	New York	B	NY
+USA/NY-PV09448/2020	SARS-CoV-2	2020-03-09	B.1	O	USA	New York	B	NY
+USA/NY-SURV0144/2020	SARS-CoV-2	2020-03-02	B	L	USA	New York	B	NY
+USA/NY-SURV0162/2020	SARS-CoV-2	2020-03-09	B.1	O	USA	New York	B	NY
+USA/NY-SURV0165/2020	SARS-CoV-2	2020-03-09	B.2	V	USA	New York	B	NY
+USA/NY-SURV0166/2020	SARS-CoV-2	2020-03-09	B.2	V	USA	New York	B	NY
+USA/NY-SURV0171/2020	SARS-CoV-2	2020-03-09	B.1	O	USA	New York	B	NY
+USA/NY-SURV0175/2020	SARS-CoV-2	2020-03-09	B.1	O	USA	New York	B	NY
+USA/NY-SURV0302/2020	SARS-CoV-2	2020-03-09	B.1.3	O	USA	New York	B	NY
+USA/NY-SURV0444/2020	SARS-CoV-2	2020-03-09	B.1	O	USA	New York	B	NY
+USA/NY-SURV052/2020	SARS-CoV-2	2020-03-04	A.1	S	USA	New York	B	NY
+USA/NY-SURV0592/2020	SARS-CoV-2	2020-03-08	B.1	O	USA	New York	B	NY
+USA/NY-SURV076/2020	SARS-CoV-2	2020-03-05	B.1.3	GH	USA	New York	B	NY
+USA/NY-SURV0874/2020	SARS-CoV-2	2020-03-09	B.2	O	USA	New York	B	NY
+USA/NY-SURV097/2020	SARS-CoV-2	2020-03-09	B.2	O	USA	New York	B	NY
+USA/NY-Wadsworth-10495-01/2020	SARS-CoV-2	2020-03-03	B.1	GH	USA	New York	B	NY
+USA/NY-Wadsworth-10496-01/2020	SARS-CoV-2	2020-03-03	B.1	GH	USA	New York	B	NY
+USA/NY-Wadsworth-10528-01/2020	SARS-CoV-2	2020-03-03	B.1	GH	USA	New York	B	NY
+USA/NY-Wadsworth-10683-01/2020	SARS-CoV-2	2020-03-04	B.2.1	V	USA	New York	B	NY
+USA/NY-Wadsworth-10690-01/2020	SARS-CoV-2	2020-03-04	B.1	GH	USA	New York	B	NY
+USA/NY-Wadsworth-10707-01/2020	SARS-CoV-2	2020-03-04	B.1	GH	USA	New York	B	NY
+USA/NY-Wadsworth-11000-01/2020	SARS-CoV-2	2020-03-05	B.2.1	V	USA	New York	B	NY
+USA/NY-Wadsworth-11190-01/2020	SARS-CoV-2	2020-03-06	B.1	GH	USA	New York	B	NY
+USA/NY-Wadsworth-11191-01/2020	SARS-CoV-2	2020-03-06	B.1	GH	USA	New York	B	NY
+USA/NY-Wadsworth-11202-01/2020	SARS-CoV-2	2020-03-06	B.1	GH	USA	New York	B	NY
+USA/NY-Wadsworth-11207-01/2020	SARS-CoV-2	2020-03-06	B.1	GH	USA	New York	B	NY
+USA/NY-Wadsworth-11245-01/2020	SARS-CoV-2	2020-03-06	B.1	GH	USA	New York	B	NY
+USA/NY-Wadsworth-11249-01/2020	SARS-CoV-2	2020-03-06	B.1	GH	USA	New York	B	NY
+USA/NY-Wadsworth-11291-01/2020	SARS-CoV-2	2020-03-06	B.1	GH	USA	New York	B	NY
+USA/NY-Wadsworth-11330-01/2020	SARS-CoV-2	2020-03-07	B.1	GH	USA	New York	B	NY
+USA/NY-Wadsworth-11380-01/2020	SARS-CoV-2	2020-03-06	B.1	GH	USA	New York	B	NY
+USA/NY-Wadsworth-11717-01/2020	SARS-CoV-2	2020-03-08	B.1	GH	USA	New York	B	NY
+USA/NY-Wadsworth-11735-01/2020	SARS-CoV-2	2020-03-08	B.1	GH	USA	New York	B	NY
+USA/NY-Wadsworth-12883-02/2020	SARS-CoV-2	2020-03-10	B.1.3	GH	USA	New York	B	NY
+USA/NY2-PV08100/2020	SARS-CoV-2	2020-03-04	A.2	S	USA	New York	B	NY
+USA/NJ-CDC-7300/2020	SARS-CoV-2	2020-03-10	B.1	GH	USA	New Jersey	B	NJ
+USA/NJ_3201/2020	SARS-CoV-2	2020-03-04	B.1	GH	USA	New Jersey	B	NJ
+USA/NJ_3592/2020	SARS-CoV-2	2020-03-04	B.1	GH	USA	New Jersey	B	NJ
+USA/MD-CDC-0025/2020	SARS-CoV-2	2020-03-04	B.1	GH	USA	Maryland	B	MD
+USA/MD-HP00060/2020	SARS-CoV-2	2020-03-10	B.1	GH	USA	Maryland	B	MD
+USA/MD-HP00075/2020	SARS-CoV-2	2020-03-08	B.1	GH	USA	Maryland	B	MD
+USA/MD-HP00082/2020	SARS-CoV-2	2020-03-08	B.1.2	GH	USA	Maryland	B	MD
+USA/MDH-5622/2020	SARS-CoV-2	2020-03-08	B.1	GH	USA	Maryland	B	MD
+USA/MDH-5653/2020	SARS-CoV-2	2020-03-07	B.1	GH	USA	Maryland	B	MD
+USA/MDH-5875/2020	SARS-CoV-2	2020-03-08	B.1	GH	USA	Maryland	B	MD
+USA/MDH-6339/2020	SARS-CoV-2	2020-03-09	B.1	GH	USA	Maryland	B	MD
+USA/MDH-6572/2020	SARS-CoV-2	2020-03-08	B.1.5	G	USA	Maryland	B	MD
+USA/MDH-6612/2020	SARS-CoV-2	2020-03-09	B.1	GH	USA	Maryland	B	MD
+USA/MDH-7590/2020	SARS-CoV-2	2020-03-09	B.1	GH	USA	Maryland	B	MD
+USA/MD_0026/2020	SARS-CoV-2	2020-03-04	B.1	GH	USA	Maryland	B	MD
+USA/MD_0027/2020	SARS-CoV-2	2020-03-04	B.1	GH	USA	Maryland	B	MD

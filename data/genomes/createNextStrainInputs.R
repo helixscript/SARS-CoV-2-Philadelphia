@@ -4,9 +4,10 @@ library(lubridate)
 options(stringsAsFactors = FALSE)
 states <- readLines('US_state_names.txt')
 
+nextStrainMetaData <- read.table('nextStrainMetaData.tsv', sep = '\t', header = TRUE, quote = '', comment.char = '', fill = TRUE)
+
 gisaid <- readFasta('GISAID/sequences_2020-08-07_17-50.fasta')
 gisaid <- gisaid[! duplicated(gisaid@sread)]
-
 
 g <- readFasta('../../summaries/concensusSeqs90.fasta')
 g <- g[! as.character(g@id) %in% c('CCLB|Vero cells|20200328', 'E6|Vero cells|20200328')]
@@ -16,12 +17,12 @@ g <- g[! duplicated(g@sread)]
 o <- Reduce('append', list(g, gisaid))
 gisaid <- gisaid[! as.character(gisaid@id) %in% as.character(o[duplicated(o@sread)]@id)]
 
-#gisaid <-  gisaid[! as.character(gisaid@id) %in% c('Guangzhou/GZMU0059/2020')] 
 
 metaData <- read.table('GISAID/metadata_2020-08-07_19-18.tsv', header = TRUE, sep = '\t', quote = '', fill = TRUE)
 
 # Remove rows from the meta data for those genomes which were removed due to sequence duplication.
 metaData <- subset(metaData, strain %in% as.character(gisaid@id))
+
 
 metaData$virus <- 'SARS-CoV-2'
 metaData <- metaData[grepl('\\d\\d\\d\\d\\-\\d\\d\\-\\d\\d', metaData$date),]
@@ -38,13 +39,44 @@ pa <- subset(us, division_exposure == 'Pennsylvania') # "2020-03-05" "2020-03-05
 
 non_us <- subset(metaData, !strain %in% us$strain)
 
+
 set.seed(1)
-period_A <- sample_n(subset(non_us, period == 'A'), 100)
+# Limit non_us strains to those in nextStrain since they already filtered their strains to be good rep. strains.
+a <- subset(non_us, period == 'A' & strain %in% nextStrainMetaData$Strain)
+n <- 34
+
+period_A <- bind_rows(lapply(split(a, a$pangolin_lineage), function(x){
+  if(nrow(x) > n){
+    return(sample_n(x, n))
+  } else {
+    return(x)
+  }
+}))
+
 period_A$source <- 'Non-USA'
 
+#--------------------------------------------------------------------------------------------------
 
-a <- sample_n(subset(non_us, period == 'B'), 100)
-b <- sample_n(subset(us, ! division_exposure %in% c('New York', 'New Jersey', 'Maryland', 'Pennsylvania') & period == 'B'), 100)
+o <- subset(non_us, period == 'B' & strain %in% nextStrainMetaData$Strain)
+n <- 6
+a <- bind_rows(lapply(split(o, o$pangolin_lineage), function(x){
+  if(nrow(x) > n){
+    return(sample_n(x, n))
+  } else {
+    return(x)
+  }
+}))
+
+o <- subset(us, ! division_exposure %in% c('New York', 'New Jersey', 'Maryland', 'Pennsylvania') & period == 'B')
+n <- 13
+b <- bind_rows(lapply(split(o, o$pangolin_lineage), function(x){
+  if(nrow(x) > n){
+    return(sample_n(x, n))
+  } else {
+    return(x)
+  }
+}))
+
 c <- subset(us, period == 'B' & division_exposure == 'New York')
 d <- subset(us, period == 'B' & division_exposure == 'New Jersey')
 e <- subset(us, period == 'B' & division_exposure == 'Maryland')
@@ -55,14 +87,53 @@ d$source  <- 'NJ'
 e$source  <- 'MD'
 period_B <- bind_rows(period_A, a, b, c, d, e)  %>% mutate(period = 'B')
 
+#----------------------------------------------------------------------------------
 
 
+o <- subset(non_us, period == 'C' & strain %in% nextStrainMetaData$Strain)
+n <- 2
+a <- bind_rows(lapply(split(o, o$pangolin_lineage), function(x){
+  if(nrow(x) > n){
+    return(sample_n(x, n))
+  } else {
+    return(x)
+  }
+}))
 
-a <- sample_n(subset(non_us, period == 'C'), 100)
-b <- sample_n(subset(us, ! division_exposure %in% c('New York', 'New Jersey', 'Maryland', 'Pennsylvania') & period == 'C'), 100)
-c <- sample_n(subset(us, period == 'C' & division_exposure == 'New York'), 100)
+
+o <- subset(us, ! division_exposure %in% c('New York', 'New Jersey', 'Maryland', 'Pennsylvania') & period == 'C')
+n <- 2
+b <- bind_rows(lapply(split(o, o$pangolin_lineage), function(x){
+  if(nrow(x) > n){
+    return(sample_n(x, n))
+  } else {
+    return(x)
+  }
+}))
+
+
+o <- subset(us, period == 'C' & division_exposure == 'New York')
+n <- 7
+c <- bind_rows(lapply(split(o, o$pangolin_lineage), function(x){
+  if(nrow(x) > n){
+    return(sample_n(x, n))
+  } else {
+    return(x)
+  }
+}))
+
 d <- subset(us, period == 'C' & division_exposure == 'New Jersey')
-e <- sample_n(subset(us, period == 'C' & division_exposure == 'Maryland'), 100)
+
+o <- subset(us, period == 'C' & division_exposure == 'Maryland')
+n <- 30
+e <- bind_rows(lapply(split(o, o$pangolin_lineage), function(x){
+  if(nrow(x) > n){
+    return(sample_n(x, n))
+  } else {
+    return(x)
+  }
+}))
+
 a$source  <- 'Non-USA'
 b$source  <- 'USA-other'
 c$source  <- 'NY'
@@ -70,21 +141,23 @@ d$source  <- 'NJ'
 e$source  <- 'MD'
 period_C <- bind_rows(period_B, a, b, c, d, e) %>% mutate(period = 'C')
 
-
-periods <- select(bind_rows(period_A, period_B, period_C), strain, virus, date, GISAID_clade, country_exposure, division_exposure, period, source)
+periods <- select(bind_rows(period_A, period_B, period_C), strain, virus, date, pangolin_lineage, GISAID_clade, country_exposure, division_exposure, period, source)
 periods <- bind_rows(lapply(split(periods, periods$period), function(x) x[! duplicated(x$strain),]))
+
+system('rm -r nextStrainRun_A/results/* nextStrainRun_A/data/*')
+system('rm -r nextStrainRun_B/results/* nextStrainRun_B/data/*')
+system('rm -r nextStrainRun_C/results/* nextStrainRun_C/data/*')
 
 writeFasta(gisaid[as.character(gisaid@id) %in% subset(periods, period == 'A')$strain], file = 'nextStrainRun_A/data/sequences.fasta')
 write.table(subset(periods, period == 'A'), file = 'nextStrainRun_A/data/metadata.tsv', sep = '\t', col.names = TRUE, row.names = FALSE, quote = FALSE)
 
-
 writeFasta(gisaid[as.character(gisaid@id) %in% subset(periods, period == 'B')$strain], file = 'nextStrainRun_B/data/sequences.fasta')
 write.table(subset(periods, period == 'B'), file = 'nextStrainRun_B/data/metadata.tsv', sep = '\t', col.names = TRUE, row.names = FALSE, quote = FALSE)
-
 
 a <- tibble(strain = as.character(g@id), 
             virus = 'SARS-CoV-2', 
             date = unlist(lapply(strsplit(as.character(g@id), '\\|'), function(x) as.character(ymd(x[3])))),
+            pangolin_lineage = 'X',
             GISAID_clade = 'X', 
             country_exposure = 'USA', 
             division_exposure = 'Pennsylvania', 
@@ -102,7 +175,9 @@ library(ggplot2)
 
 createTree <- function(dir){
   o <- phylogram::read.dendrogram(file.path(dir, 'results/tree.nwk'))
+  browser()
   o <- phylogram::prune(o, 'Wuhan/WH02/2019')
+  o <- phylogram::prune(o, 'USA/WA-UW-4572/2020')
   
   m <- read.table(file.path(dir, 'data/metadata.tsv'), sep = '\t', header = TRUE)
   dendr <- ggdendro::dendro_data(o)
@@ -111,7 +186,7 @@ createTree <- function(dir){
                top_n(-1, wt = yend) %>% 
                slice(1) %>%
                ungroup() %>%
-               left_join(select(label(dendr), -y), by = 'x') %>%
+               left_join(select(ggdendro::label(dendr), -y), by = 'x') %>%
                left_join(select(m, strain, source), by = c('label' = 'strain'))
 
   pointData$source <- factor(as.character(pointData$source), levels = c("Non-USA", "USA-other", "NJ", "NY", "MD", "Philadelphia"))
@@ -137,37 +212,4 @@ createTree <- function(dir){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+createTree('nextStrainRun_C')
