@@ -41,13 +41,8 @@ library(Biostrings)
 # Order data list such that composite analyses are shown first.
 dat <- dat[order(grepl('-', unlist(lapply(dat, '[[', 'seq_sample'))))]
 
-# Limit major variants to variants with at least 5 reads.
-dat <- lapply(dat, function(x){
-         x$variantTableMajor <- subset(x$variantTableMajor, reads >= 5)
-         x
-       })
 
-
+# Convenience table for converting between VSP ids and human readable labels.
 seqSample_to_label <- bind_rows(lapply(dat, function(x) tibble(seq_sample = x$seq_sample, label = paste0(x$sampleType, '\n', x$date))))
 
 
@@ -97,7 +92,7 @@ The heat map below shows how variants are shared across subject samples where th
 Variants are called if a variant is covered by 5 for more reads, the alternative base is found in > 50% of reads, 
 the variant and yields a PHRED score > 20 which represents a probabilty of < 1% that a variant is called solely 
 because of sequencing error. Gray tiles denote positions where the variant was not the major variant or no variants 
-were found. The base composition of all tiles are shown in the following plot.
+were found. The base composition of tiles is shown in the following plot.
 
 \vspace{0.5cm}
 
@@ -119,8 +114,6 @@ varHeatMap <- function(x){
         })) 
   
   if(nrow(vt) == 0) return(NA)
-  
-#browser()
 
   # Cycle through all unique mutations found across the samples.
   vt2 <- bind_rows(lapply(split(vt, vt$s), function(mutation){
@@ -132,7 +125,6 @@ varHeatMap <- function(x){
              # Does this postion in this sample have enough coverage to return a tile in the plot?
              # if(mutation$POS[1] == 21526) browser()
              if(! mutation$POS[1] %in% x[[sample]]$pileupData$V2){
-               #browser()
                return(tibble())
              }
              
@@ -145,7 +137,6 @@ varHeatMap <- function(x){
                # This mutation was not found in this sample. Either WT, another mutation, 
                # or the same mutation which was not substantial enough to be considered major.
                # Return a data row with NA as a QUAL score which will create a gray tile.
-               #browser()
                return(tibble(POS = mutation$POS[1], s = mutation$s[1], seq_sample = sample, QUAL = NA, percentAlt = NA))
              }
            }))
@@ -352,7 +343,7 @@ sampleAnalysis <- function(dat){
                        geom_segment(aes(x = x1, y = y2, xend = x2, yend = y2, color = e), size = 3) +
                        labs(x = 'Genome position', y = 'Contigs')+
                        scale_x_continuous(limits = c(1, max(contigs$x2)), expand = c(0, 0)) +
-                       scale_color_gradient2(name = 'Edit dist.', low = "red", mid = "gold2", high = "green4", midpoint = 5) +
+                       scale_color_gradient2(name = 'Edit dist.', low = "green4", mid = "gold2", high = "red", midpoint = 5) +
                        theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
                              panel.background = element_blank(), axis.line = element_line(colour = "black"),
                              text = element_text(size=14),

@@ -211,7 +211,8 @@ if(nrow(opt$pileupData) > 0){
                              dplyr::group_by(POS) %>%
                              dplyr::top_n(1, wt = percentAlt) %>%
                              dplyr::slice(1) %>%
-                             dplyr::ungroup()
+                             dplyr::ungroup() %>%
+                             dplyr::filter(reads >= 5)
     
   }
 } else {
