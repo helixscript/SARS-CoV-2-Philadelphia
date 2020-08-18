@@ -41,6 +41,13 @@ library(Biostrings)
 # Order data list such that composite analyses are shown first.
 dat <- dat[order(grepl('-', unlist(lapply(dat, '[[', 'seq_sample'))))]
 
+# Add this to the VSP creation script.
+dat <- lapply(dat, function(x){
+         if(! 'variantTable' %in% names(x)) x$variantTable <- data.frame()
+         if(! 'variantTableMajor' %in% names(x)) x$variantTableMajor <- data.frame()
+         x
+        })
+
 
 # Convenience table for converting between VSP ids and human readable labels.
 seqSample_to_label <- bind_rows(lapply(dat, function(x) tibble(seq_sample = x$seq_sample, label = paste0(x$sampleType, '\n', x$date))))
@@ -140,9 +147,11 @@ varHeatMap <- function(x){
                return(tibble(POS = mutation$POS[1], s = mutation$s[1], seq_sample = sample, QUAL = NA, percentAlt = NA))
              }
            }))
-  })) %>%
-  arrange(POS) %>%
-  mutate(s = factor(s, levels = rev(unique(s))))
+  })) %>% dplyr::arrange(POS) 
+  
+  vt2$s <- as.character(vt2$s)
+  vt2$s <- sub('\\*', 'stop', vt2$s)
+  vt2$s = factor(vt2$s, levels = rev(unique(vt2$s)))
   
   vt2$label <- seqSample_to_label[match(vt2$seq_sample, seqSample_to_label$seq_sample),]$label
   
@@ -189,69 +198,75 @@ positions <- unique(unlist(lapply(dat2, function(x) x$variantTableMajor$POS)))
 # 21526  not in VSP0181  04/17/2020	OP variant table
 # x <- lapply(dat2, function(x) x$variantTable)
 
+if(length(positions) > 0){
+  # Limit positions to variantTableMajor.
+  d <- bind_rows(lapply(dat2, function(x){
+         if(nrow(x$variantTable) > 0){
+           x$variantTable <- subset(x$variantTable, POS %in% positions)
+           x$variantTable$seq_sample <- x$seq_sample
 
-# Limit positions to variantTableMajor.
-d <- bind_rows(lapply(dat2, function(x){
-       x$variantTable <- subset(x$variantTable, POS %in% positions)
-       x$variantTable$seq_sample <- x$seq_sample
+           if(nrow(x$variantTable) > 0){
+             x$variantTable$patient <- x$subject
+             x$variantTable$sample  <- x$sampleType
+             x$variantTable$date    <- x$date
+             return(x$variantTable)
+          } else {
+            return(data.frame())
+          }
+         } else {
+           return(data.frame())
+         }
+       } 
+     ))
 
-       if(nrow(x$variantTable) > 0){
-         x$variantTable$patient <- x$subject
-         x$variantTable$sample  <- x$sampleType
-         x$variantTable$date    <- x$date
-         
-         return(x$variantTable)
-      } else {
-        return(data.frame())
-      }
-     }))
-
-# Metadata cleanup
-d$date <- sub('^4/', '04/', d$date)
-d$date <- sub('^3/', '03/', d$date)
-
+  # Metadata cleanup
+  d$date <- sub('^4/', '04/', d$date)
+  d$date <- sub('^3/', '03/', d$date)
   
-# Create 100% expected data entries for other samples where no variants were found.
-d <- bind_rows(lapply(split(d, paste(d$sample, d$date)), function(a){
+  # Create 100% expected data entries for other samples where no variants were found.
+  d <- bind_rows(lapply(split(d, paste(d$sample, d$date)), function(a){
 
        # Here we create a mock data frame of all positins we need to report.
        # We join V4 (read count) from the pileup data so that we can report the number of reads 
        # for a position if no variants were called for a position.
        m <- data.frame(CHROM = 'genome', POS = positions, REF = 'X', ALT = 'e', QUAL = 225, percentAlt = 1,
                        seq_sample = a$seq_sample[1], patient = a$patient[1], sample = a$sample[1], date = a$date[1]) %>%
-             left_join(dplyr::select(dat2[[a$seq_sample[1]]]$pileupData, V2, V4), by = c('POS' = 'V2')) %>% dplyr::rename(reads = V4)
+            left_join(dplyr::select(dat2[[a$seq_sample[1]]]$pileupData, V2, V4), by = c('POS' = 'V2')) %>% 
+            dplyr::rename(reads = V4)
        
        if(any(is.na(m$reads))) m[is.na(m$reads),]$reads <- 0 # Replace NAs with zeros.
        bind_rows(a, subset(m, POS %in% positions[! positions %in% a$POS]))
      }))
 
-# Rename select entries.  
-d$ALT <- sub('^e$', 'Expected', d$ALT)
-d$ALT <- sub('\\?', 'Ins/Del', d$ALT)
-if(any(grepl('del', d$ALT))) d[grepl('del', d$ALT),]$ALT <- 'Ins/Del'
-if(any(grepl('ins', d$ALT))) d[grepl('ins', d$ALT),]$ALT <- 'Ins/Del'
+  # Rename select entries.  
+  d$ALT <- sub('^e$', 'Expected', d$ALT)
+  d$ALT <- sub('\\?', 'Ins/Del', d$ALT)
+  if(any(grepl('del', d$ALT))) d[grepl('del', d$ALT),]$ALT <- 'Ins/Del'
+  if(any(grepl('ins', d$ALT))) d[grepl('ins', d$ALT),]$ALT <- 'Ins/Del'
 
-d$ALT <- factor(d$ALT, levels = c('Expected', 'A', 'T', 'C', 'G', 'N', 'Ins/Del', 'No data'))
+  d$ALT <- factor(d$ALT, levels = c('Expected', 'A', 'T', 'C', 'G', 'N', 'Ins/Del', 'No data'))
   
-if(any(d$reads == 0)) d[d$reads == 0,]$ALT <- 'No data'
+  if(any(d$reads == 0)) d[d$reads == 0,]$ALT <- 'No data'
 
-d$POS <- factor(d$POS, levels = unique(sort(d$POS)))
+  d$POS <- factor(d$POS, levels = unique(sort(d$POS)))
   
-labels <- group_by(d, POS, sample, date) %>% summarise(reads = reads[1]) %>% ungroup() 
+  labels <- group_by(d, POS, sample, date) %>% summarise(reads = reads[1]) %>% ungroup() 
   
-p <- ggplot(d, aes(POS, percentAlt, fill = ALT)) + 
-     theme_bw() +
-     scale_fill_manual(name = 'Base change', drop=FALSE, values = c('gray50', 'green3', 'red2', 'dodgerblue', 'gold2', 'purple', 'black', 'gray90')) +
-     geom_col() +
-     geom_text(data=labels, aes(POS, 1, label = reads), inherit.aes = FALSE, vjust=0.5, hjust=1.1, angle=90, size=5) +
-     labs(x = 'Position', y = 'Percent reads') +
-     scale_y_continuous(labels = scales::percent) +
-     facet_wrap(sample~date, ncol = 1, strip.position = 'right') +
-     theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1, size = 12),
-           axis.text.y = element_text(size = 12),
-           axis.title=element_text(size=14),
-           panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-           panel.background = element_blank(), axis.line = element_line(colour = "black"))
+  p <- ggplot(d, aes(POS, percentAlt, fill = ALT)) + 
+       theme_bw() +
+       scale_fill_manual(name = 'Base change', drop=FALSE, 
+                         values = c('gray50', 'green3', 'red2', 'dodgerblue', 'gold2', 'purple', 'black', 'gray90')) +
+       geom_col() +
+       geom_text(data=labels, aes(POS, 1, label = reads), inherit.aes = FALSE, vjust=0.5, hjust=1.1, angle=90, size=5) +
+       labs(x = 'Position', y = 'Percent reads') +
+       scale_y_continuous(labels = scales::percent) +
+       facet_wrap(sample~date, ncol = 1, strip.position = 'right') +
+       theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1, size = 12),
+             axis.text.y = element_text(size = 12),
+             axis.title=element_text(size=14),
+             panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+             panel.background = element_blank(), axis.line = element_line(colour = "black"))
+}
 
 if(length(v) == 1){
     cat('\n\n*No variants found*  \n\n')

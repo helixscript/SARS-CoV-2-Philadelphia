@@ -2,7 +2,7 @@ library(tidyverse)
 library(parallel)
 library(Biostrings)
 options(stringsAsFactors = FALSE)
-overWriteSubjectReports <- TRUE
+overWriteSubjectReports <- FALSE
 mafftPath <- '~/ext/mafft/bin/mafft'
 CPUs <- 25
 
