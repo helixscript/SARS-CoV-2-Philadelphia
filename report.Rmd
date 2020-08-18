@@ -41,6 +41,16 @@ library(Biostrings)
 # Order data list such that composite analyses are shown first.
 dat <- dat[order(grepl('-', unlist(lapply(dat, '[[', 'seq_sample'))))]
 
+# Limit major variants to variants with at least 5 reads.
+dat <- lapply(dat, function(x){
+         x$variantTableMajor <- subset(x$variantTableMajor, reads >= 5)
+         x
+       })
+
+
+seqSample_to_label <- bind_rows(lapply(dat, function(x) tibble(seq_sample = x$seq_sample, label = paste0(x$sampleType, '\n', x$date))))
+
+
 # Create a printabe reference genome name from the reference genome path.
 refGenome <- sub('data/references/', '', sub( '.fasta', '', dat[[1]]$refGenomeFasta))
 
@@ -83,16 +93,17 @@ kable(sampleTable, 'latex', booktabs = T, linesep = '', align = 'c') %>%
 
 ### Variants shared across samples 
 
-The heat map below shows how variants are shared across subject samples. The quality scores are PHRED scaled values 
-[Q = -10log10(error rate)] where a score of 30 represents a probabilty of 99.9% that a variant is called correctly 
-and a score of 50 represents a probabilty of 99.999% Gray tiles denote that 10 or more reads covered the variant position 
-and the reference base was observed. Tiles are ommited if there are less than 10 reads covering a variant position.  
+The heat map below shows how variants are shared across subject samples where the percent variance is colored. 
+Variants are called if a variant is covered by 5 for more reads, the alternative base is found in > 50% of reads, 
+the variant and yields a PHRED score > 20 which represents a probabilty of < 1% that a variant is called solely 
+because of sequencing error. Gray tiles denote positions where the variant was not the major variant or no variants 
+were found. The base composition of all tiles are shown in the following plot.
 
 \vspace{0.5cm}
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.height=8.5, results='asis'}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.height=8.0, results='asis'}
 
-varHeatMap <- function(x, minPostionReadCoverage = 10){
+varHeatMap <- function(x){
   
   # Determine which samples have variant tables and bind them into a single table.
   vt <- bind_rows(lapply(x, function(j){
@@ -109,40 +120,49 @@ varHeatMap <- function(x, minPostionReadCoverage = 10){
   
   if(nrow(vt) == 0) return(NA)
   
+#browser()
 
   # Cycle through all unique mutations found across the samples.
   vt2 <- bind_rows(lapply(split(vt, vt$s), function(mutation){
+    
            # Cycle through all the samples with variant tables.
            bind_rows(lapply(unique(vt$seq_sample), function(sample){
              # Determine if the query variant was called for this sample at this position.
              
              # Does this postion in this sample have enough coverage to return a tile in the plot?
-             coverage <- subset(x[[sample]]$pileupData, V2 == mutation$POS[1])$V4
-             if(length(coverage) == 0 || coverage < minPostionReadCoverage) return(tibble())
+             # if(mutation$POS[1] == 21526) browser()
+             if(! mutation$POS[1] %in% x[[sample]]$pileupData$V2){
+               #browser()
+               return(tibble())
+             }
              
              # Is this mutation found in this samples variant table?
-             o <- subset(vt, s == mutation$s & seq_sample == sample)
+             o <- subset(vt, s == mutation$s[1] & seq_sample == sample)
              if(nrow(o) > 0){
-               # Yes, the mutation was found in this sample.
+               # Yes, the mutation was found in this sample and it was considered major (> 50%)
                return(o)
              } else {
-               # The mutation was not found in this sample. Either WT or another mutation was found.
+               # This mutation was not found in this sample. Either WT, another mutation, 
+               # or the same mutation which was not substantial enough to be considered major.
                # Return a data row with NA as a QUAL score which will create a gray tile.
+               #browser()
                return(tibble(POS = mutation$POS[1], s = mutation$s[1], seq_sample = sample, QUAL = NA, percentAlt = NA))
              }
            }))
-  })) %>% 
+  })) %>%
   arrange(POS) %>%
-  mutate(s = factor(s, levels = rev(unique(s)))) 
+  mutate(s = factor(s, levels = rev(unique(s))))
   
-  ggplot(vt2, aes(seq_sample, s, fill = percentAlt)) + 
+  vt2$label <- seqSample_to_label[match(vt2$seq_sample, seqSample_to_label$seq_sample),]$label
+  
+  ggplot(vt2, aes(label, s, fill = percentAlt)) + 
   theme_bw() +
   scale_fill_gradient2(name = 'Occurrence', limits = c(0.50, 1), low = "red", mid = "gold2", high = "green4", 
                        midpoint = 0.75, na.value = 'gray90', breaks = c(0.5, 0.75, 1), labels = c('50%', '75%', '100%')) +
   geom_tile(color = 'black') +
   scale_x_discrete(position = "top") +
   labs(x = '', y = '') +
-  theme(text = element_text(size=14), axis.text.x = element_text(angle = 90, hjust = 1))
+  theme(text = element_text(size=14), axis.text.x = element_text(angle = 90, hjust = 0.5))
 } 
 
 
@@ -151,27 +171,102 @@ seqSamples <- unname(unlist(lapply(dat, '[[', 'seq_sample')))
 base_seqSamples <- sub('\\-\\S+$', '', seqSamples)
 dat2 <- dat[!(base_seqSamples %in% seqSamples & grepl('\\-', seqSamples))]
 
-# Prepare variant table (ie. remove low level variants).
-dat3 <- lapply(dat2, function(x){
-          if(! 'variantTableMajor' %in% names(x)) x$variantTableMajor <- data.frame()
-          if(nrow(x$variantTableMajor) > 0) x$variantTableMajor <- subset(x$variantTableMajor, ALT != 'e' & percentAlt > 0.5)
-          x
-        })
 
-# lapply(dat3, function(x){
-#   max(unlist(lapply(split(x$variantTableMajor, x$variantTableMajor$POS), function(x2){
-#     if(nrow(x2)> 1) browser()
-#   })))
-# })
-
-v <- varHeatMap(dat3) 
+v <- varHeatMap(dat2) 
 
 if(length(v) == 1){
     cat('\n\n*No variants found*  \n\n')
 } else {
     print(v)
 }
+```
 
+
+\newpage
+
+### Relative read abundances of variants
+
+The plot below shows the relative abundances of bases read for each position in the previous variant heatmap 
+where the total number of read pairs covering each position is printed on the stacked bar plots.
+
+\vspace{0.5cm}
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.height=8.5, fig.width=8, results='asis'}
+
+positions <- unique(unlist(lapply(dat2, function(x) x$variantTableMajor$POS)))
+
+# 21526  not in VSP0181  04/17/2020	OP variant table
+# x <- lapply(dat2, function(x) x$variantTable)
+
+
+# Limit positions to variantTableMajor.
+d <- bind_rows(lapply(dat2, function(x){
+       x$variantTable <- subset(x$variantTable, POS %in% positions)
+       x$variantTable$seq_sample <- x$seq_sample
+
+       if(nrow(x$variantTable) > 0){
+         x$variantTable$patient <- x$subject
+         x$variantTable$sample  <- x$sampleType
+         x$variantTable$date    <- x$date
+         
+         return(x$variantTable)
+      } else {
+        return(data.frame())
+      }
+     }))
+
+# Metadata cleanup
+d$date <- sub('^4/', '04/', d$date)
+d$date <- sub('^3/', '03/', d$date)
+
+  
+# Create 100% expected data entries for other samples where no variants were found.
+d <- bind_rows(lapply(split(d, paste(d$sample, d$date)), function(a){
+
+       # Here we create a mock data frame of all positins we need to report.
+       # We join V4 (read count) from the pileup data so that we can report the number of reads 
+       # for a position if no variants were called for a position.
+       m <- data.frame(CHROM = 'genome', POS = positions, REF = 'X', ALT = 'e', QUAL = 225, percentAlt = 1,
+                       seq_sample = a$seq_sample[1], patient = a$patient[1], sample = a$sample[1], date = a$date[1]) %>%
+             left_join(dplyr::select(dat2[[a$seq_sample[1]]]$pileupData, V2, V4), by = c('POS' = 'V2')) %>% dplyr::rename(reads = V4)
+       
+       if(any(is.na(m$reads))) m[is.na(m$reads),]$reads <- 0 # Replace NAs with zeros.
+       bind_rows(a, subset(m, POS %in% positions[! positions %in% a$POS]))
+     }))
+
+# Rename select entries.  
+d$ALT <- sub('^e$', 'Expected', d$ALT)
+d$ALT <- sub('\\?', 'Ins/Del', d$ALT)
+if(any(grepl('del', d$ALT))) d[grepl('del', d$ALT),]$ALT <- 'Ins/Del'
+if(any(grepl('ins', d$ALT))) d[grepl('ins', d$ALT),]$ALT <- 'Ins/Del'
+
+d$ALT <- factor(d$ALT, levels = c('Expected', 'A', 'T', 'C', 'G', 'N', 'Ins/Del', 'No data'))
+  
+if(any(d$reads == 0)) d[d$reads == 0,]$ALT <- 'No data'
+
+d$POS <- factor(d$POS, levels = unique(sort(d$POS)))
+  
+labels <- group_by(d, POS, sample, date) %>% summarise(reads = reads[1]) %>% ungroup() 
+  
+p <- ggplot(d, aes(POS, percentAlt, fill = ALT)) + 
+     theme_bw() +
+     scale_fill_manual(name = 'Base change', drop=FALSE, values = c('gray50', 'green3', 'red2', 'dodgerblue', 'gold2', 'purple', 'black', 'gray90')) +
+     geom_col() +
+     geom_text(data=labels, aes(POS, 1, label = reads), inherit.aes = FALSE, vjust=0.5, hjust=1.1, angle=90, size=5) +
+     labs(x = 'Position', y = 'Percent reads') +
+     scale_y_continuous(labels = scales::percent) +
+     facet_wrap(sample~date, ncol = 1, strip.position = 'right') +
+     theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1, size = 12),
+           axis.text.y = element_text(size = 12),
+           axis.title=element_text(size=14),
+           panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+           panel.background = element_blank(), axis.line = element_line(colour = "black"))
+
+if(length(v) == 1){
+    cat('\n\n*No variants found*  \n\n')
+} else {
+    print(p)
+}
 ```
 
 \newpage

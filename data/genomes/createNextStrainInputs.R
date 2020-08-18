@@ -175,7 +175,7 @@ library(ggplot2)
 
 createTree <- function(dir){
   o <- phylogram::read.dendrogram(file.path(dir, 'results/tree.nwk'))
-  browser()
+  
   o <- phylogram::prune(o, 'Wuhan/WH02/2019')
   o <- phylogram::prune(o, 'USA/WA-UW-4572/2020')
   

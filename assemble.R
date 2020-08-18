@@ -13,7 +13,6 @@ option_list = list(
   make_option(c("--refGenomeBWA"), type="character", default='data/references/USA-WA1-2020.fasta', help="reference genome BWA db path", metavar="character"),   
   make_option(c("--refGenomeGenBank"), type="character", default='data/references/USA-WA1-2020.gb', help="reference genome BWA db path", metavar="character"), 
   make_option(c("--minVariantPhredScore"), type="integer", default=20, help="minimum PHRED score allowed for called varinats", metavar="character"),
-  make_option(c("--minVariantReadDepth"), type="integer", default=10, help="minimum varinat read depth", metavar="character"),
   make_option(c("--bwaPath"), type="character", default='~/ext/bwa', help="path to bwa binary", metavar="character"), 
   make_option(c("--megahitPath"), type="character", default='~/ext/megahit/bin/megahit', help="path to megahit binary", metavar="character"), 
   make_option(c("--minBWAmappingScore"), type="integer", default=30, help="minimum BWA mapping score", metavar="character"), 
@@ -27,8 +26,8 @@ opt$errorCode <- 0
 opt$errorMessage <- NA
 opt$workDir <- tmpFile()
 
-#opt$R1 <- 'data/sequencing/200613_M03249_0068_000000000-J37GK/VSP0046-1_S6_L001_R1_001.fastq.gz'
-#opt$R2 <- 'data/sequencing/200613_M03249_0068_000000000-J37GK/VSP0046-1_S6_L001_R2_001.fastq.gz'
+# p300 opt$R1 <- 'data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0244-1_S8_L001_R1_001.fastq.gz'
+# p300 opt$R2 <- 'data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0244-1_S8_L001_R2_001.fastq.gz'
 #opt$R1 <- 'data/sequencing/200518_M03249_0065_000000000-J37K3/VSP0001-1a_S2_L001_R1_001.fastq.gz,data/sequencing/200518_M03249_0065_000000000-J37K3/VSP0001-1b_S10_L001_R1_001.fastq.gz'
 #opt$R2 <- 'data/sequencing/200518_M03249_0065_000000000-J37K3/VSP0001-1a_S2_L001_R2_001.fastq.gz,data/sequencing/200518_M03249_0065_000000000-J37K3/VSP0001-1b_S10_L001_R2_001.fastq.gz'
 
@@ -151,6 +150,11 @@ opt$pileupData <- tryCatch({
 opt$variantTable      <- data.frame()
 opt$variantTableMajor <- data.frame()
 
+# Pileup format reports the number of read pairs (column 4) while VCF format (DP) 
+# reports the number of reads which appears to report 2x the pileup format value. 
+# Confirmed by looking at pileup in IGV.
+
+
 if(nrow(opt$pileupData) > 0){
   refGenomeLength <- nchar(as.character(readFasta(opt$refGenomeFasta)@sread))
   opt$refGenomePercentCovered <- nrow(opt$pileupData) / refGenomeLength
@@ -168,7 +172,7 @@ if(nrow(opt$pileupData) > 0){
   # Read in the variant table created by bcf tools. 
   # We use tryCatch() here because the table may be empty only containing the header information.
   opt$variantTable <- tryCatch({
-      system(paste0(opt$bcftoolsBin, "/bcftools filter -i'QUAL>", opt$minVariantPhredScore, " && DP>", opt$minVariantReadDepth, "' ", 
+      system(paste0(opt$bcftoolsBin, "/bcftools filter -i'QUAL>", opt$minVariantPhredScore, "' ", 
                     paste0(t1, '.vcf.gz'), " -O z -o ", paste0(t1, '.filt.vcf.gz')))
       
       system(paste0(opt$bcftoolsBin, '/bcftools index ', t1, '.filt.vcf.gz'))
