@@ -179,8 +179,8 @@ E6	E6	3/28/2020	Vero cells	VSP0002	Courtney	Invitrogen TRIzol Reagent	4/27/2020	
 270no-q	270	05/27/2020	NP-OP	VSP0178	Ron, Young	QiaAMP mini RNA	6/5/20	47	undetermined									
 272no-q	272	05/27/2020	NP-OP	VSP0179	Ron, Young	QiaAMP mini RNA	6/5/20	47	1.45E+04			6/18/2020	200618_M03249_0069_000000000-J3NJJ	99.8				
 1	222	04/17/2020	NP	VSP0180	Yize (Henry) Li							05/27/2020	200527_M03249_0066_000000000-J3R26					all swabs dry, viral isolate LW01
-2	222	04/17/2020	OP	VSP0181	Yize (Henry) Li							05/27/2020	200527_M03249_0066_000000000-J3R26					all swabs dry, viral isolate LW02
-3	222	04/20/2020	OP	VSP0182	Yize (Henry) Li							05/27/2020	200527_M03249_0066_000000000-J3R26					all swabs dry, viral isolate LW03
+2	222	04/17/2020	OP	VSP0181	Yize (Henry) Li		8/18/20		3.02E+10			05/27/2020	200527_M03249_0066_000000000-J3R26					all swabs dry, viral isolate LW02
+3	222	04/20/2020	OP	VSP0182	Yize (Henry) Li		8/18/20		2.65E+10			05/27/2020	200527_M03249_0066_000000000-J3R26					all swabs dry, viral isolate LW03
 4	223	04/17/2020	OP	VSP0183	Yize (Henry) Li							05/27/2020	200527_M03249_0066_000000000-J3R26					all swabs dry, viral isolate LW04
 5	211	04/08/2020	NP	VSP0184	Yize (Henry) Li							05/27/2020	200527_M03249_0066_000000000-J3R26					all swabs dry, viral isolate LW05
 6	211	04/13/2020	OP	VSP0185	Yize (Henry) Li							05/27/2020	200527_M03249_0066_000000000-J3R26					all swabs dry, viral isolate LW05
@@ -257,10 +257,65 @@ E6	E6	3/28/2020	Vero cells	VSP0002	Courtney	Invitrogen TRIzol Reagent	4/27/2020	
 307no-q	307	07/17/20	NP-OP	VSP0256	Ron, Young	QiaAMP mini RNA	7/22/20	47	6.27E+01				200725_M03249_0079_000000000-J2J3B					
 307s-q	307	07/17/20	Saliva	VSP0257	Ron, Young	QiaAMP mini RNA	7/22/20	47	7.60E+00									
 308no-q	308	07/20/20	NP-OP	VSP0258	Ron, Young	QiaAMP mini RNA	7/22/20	47	undetermined									
-309no-q	309	07/22/20	NP-OP	VSP0259	Ron, Young	QiaAMP mini RNA												
+309no-q	309	07/22/20	NP-OP	VSP0259	Ron, Young	QiaAMP mini RNA	8/17/20	37	9.02E-01									
 272p	272	6//17/20	Stool	VSP0260	Ron, Young		7/22/20	47	undetermined				200725_M03249_0079_000000000-J2J3B					
 288p	288	6/26/20	Stool	VSP0261	Ron, Young		7/22/20	47	undetermined				200725_M03249_0079_000000000-J2J3B					
 A549-isolate8	266	5/20/20		VSP0262	Yize (Henry) Li													Expanded RNA samples
 A549-isolate9	266	5/20/20		VSP0263	Yize (Henry) Li													located in box labelled "Covid-19 RNA (7 + 1 mock) from Henry Lee, 5/14/2020
 A549-isolate10	269	5/22/2020		VSP0264	Yize (Henry) Li													
-
+312no-q	312	07/27/2020	NP-OP	VSP0265	Ron, Young	QiaAMP mini RNA	8/17/20	37	7.96E+03									
+312s-q	312	07/27/2020	Saliva	VSP0266	Ron, Young	QiaAMP mini RNA	8/17/20	37	6.68E+04									
+313no-q	313	07/27/2020	NP-OP	VSP0267	Ron, Young	QiaAMP mini RNA	8/17/20	37	4.22E+01									
+312no-q	312	07/29/2020	NP-OP	VSP0268	Ron, Young	QiaAMP mini RNA	8/17/20	37	3.65E+02									
+312s-q	312	07/29/2020	Saliva	VSP0269	Ron, Young	QiaAMP mini RNA	8/17/20	37	2.98E+00									
+314no-q	314	07/29/2020	NP-OP	VSP0270	Ron, Young	QiaAMP mini RNA	8/17/20	37	9.11E-01									
+314s-q	314	07/29/2020	Saliva	VSP0271	Ron, Young	QiaAMP mini RNA	8/17/20	37	1.74E+02									
+315no-q	315	07/29/2020	NP-OP	VSP0272	Ron, Young	QiaAMP mini RNA	8/17/20	37	Undetermined									
+317no-q	317	08/03/2020	NP-OP	VSP0273	Ron, Young	QiaAMP mini RNA	8/17/20	37	8.03E+00									
+317s-q	317	08/03/2020	Saliva	VSP0274	Ron, Young	QiaAMP mini RNA	8/18/20	37	2.84E+01									
+318no-q	318	08/03/2020	NP-OP	VSP0275	Ron, Young	QiaAMP mini RNA	8/18/20	37	9.11E+00									
+319no-q	319	08/03/2020	NP-OP	VSP0276	Ron, Young	QiaAMP mini RNA	8/18/20	37	Undetermined									
+319s-q	319	08/03/2020	Saliva	VSP0277	Ron, Young	QiaAMP mini RNA	8/18/20	37	Undetermined									
+318no-q	318	08/05/2020	NP-OP	VSP0278	Ron, Young	QiaAMP mini RNA	8/18/20	37	1.66E+00									
+319no-q	319	08/05/2020	NP-OP	VSP0279	Ron, Young	QiaAMP mini RNA	8/18/20	37	Undetermined									
+320no-q	320	08/05/2020	NP-OP	VSP0280	Ron, Young	QiaAMP mini RNA	8/18/20	37	Undetermined									
+321no-q	321	08/05/2020	NP-OP	VSP0281	Ron, Young	QiaAMP mini RNA	8/18/20	37	Undetermined									
+MisC01	MisC01	06/01/2020	NP-OP	VSP0282	Paul Planet (CHOP)													
+MisC02	MisC02	06/01/2020	NP-OP	VSP0283	Paul Planet (CHOP)													
+MisC03	MisC03	06/01/2020	NP-OP	VSP0284	Paul Planet (CHOP)													
+MisC04	MisC04	06/01/2020	NP-OP	VSP0285	Paul Planet (CHOP)													
+MisC05	MisC05	06/01/2020	NP-OP	VSP0286	Paul Planet (CHOP)													
+MisC06	MisC06	06/01/2020	NP-OP	VSP0287	Paul Planet (CHOP)													
+MisC07	MisC07	06/01/2020	NP-OP	VSP0288	Paul Planet (CHOP)													
+MisC08	MisC08	06/01/2020	NP-OP	VSP0289	Paul Planet (CHOP)													
+MisC09	MisC09	06/01/2020	NP-OP	VSP0290	Paul Planet (CHOP)													
+MisC10	MisC10	06/01/2020	NP-OP	VSP0291	Paul Planet (CHOP)													
+MisC11	MisC11	06/01/2020	NP-OP	VSP0292	Paul Planet (CHOP)													
+MisC12	MisC12	06/01/2020	NP-OP	VSP0293	Paul Planet (CHOP)													
+MisC13	MisC13	06/01/2020	NP-OP	VSP0294	Paul Planet (CHOP)													
+MisC14	MisC14	06/01/2020	NP-OP	VSP0295	Paul Planet (CHOP)													
+MisC15	MisC15	06/01/2020	NP-OP	VSP0296	Paul Planet (CHOP)													
+MisC16	MisC16	06/01/2020	NP-OP	VSP0297	Paul Planet (CHOP)													
+315no-q	315	07/31/2020	NP-OP	VSP0298	Ron, Young	QiaAMP mini RNA	8/17/20	37	Undetermined									
+316no-q	316	07/31/2020	NP-OP	VSP0299	Ron, Young	QiaAMP mini RNA	8/17/20	37	Undetermined									
+317no-q	317	07/31/2020	NP-OP	VSP0300	Ron, Young	QiaAMP mini RNA	8/17/20	37	3.47E+01									
+317s-q	317	08/07/2020	Saliva	VSP0301	Ron, Young	QiaAMP mini RNA	8/18/20	37	3.01E+01									
+318e-q	318	08/07/2020	ETA	VSP0302	Ron, Young	QiaAMP mini RNA	8/18/20	37	6.98E+01									
+319no-q	319	08/07/2020	NP-OP	VSP0303	Ron, Young	QiaAMP mini RNA	8/18/20	37	1.75E+00									
+319s-q	319	08/07/2020	Saliva	VSP0304	Ron, Young	QiaAMP mini RNA	8/19/20	37	Undetermined									
+321no-q	321	08/07/2020	NP-OP	VSP0305	Ron, Young	QiaAMP mini RNA	8/19/20	37	Undetermined									
+322no-q	322	08/07/2020	NP-OP	VSP0306	Ron, Young	QiaAMP mini RNA	8/19/20	37	Undetermined									
+323no-q	323	08/07/2020	NP-OP	VSP0307	Ron, Young	QiaAMP mini RNA	8/19/20	37	Undetermined									
+322no-q	322	08/10/2020	NP-OP	VSP0308	Ron, Young	QiaAMP mini RNA	8/19/20	37	Undetermined									
+324no-q	324	08/10/2020	NP-OP	VSP0309	Ron, Young	QiaAMP mini RNA	8/19/20	37	Undetermined									
+318e-q	318	08/12/2020	ETA	VSP0310	Ron, Young	QiaAMP mini RNA	8/19/20	37	3.93E+00									
+324no-q	324	08/12/2020	NP-OP	VSP0311	Ron, Young	QiaAMP mini RNA	8/19/20	37	Undetermined									
+326no-q	326	08/12/2020	NP-OP	VSP0312	Ron, Young	QiaAMP mini RNA	8/19/20	37	Undetermined									
+328no-q	328	08/14/2020	NP-OP	VSP0313	Ron, Young	QiaAMP mini RNA	8/19/20	37	1.80E+01									
+328s-q	328	08/14/2020	Saliva	VSP0314	Ron, Young	QiaAMP mini RNA	8/19/20	37	4.30E+01									
+329no-q	329	08/14/2020	NP-OP	VSP0315	Ron, Young	QiaAMP mini RNA	8/19/20	37	Undetermined									
+328no-q	328	08/17/2020	NP-OP	VSP0316	Ron, Young	QiaAMP mini RNA												
+328s-q	328	08/17/2020	Saliva	VSP0317	Ron, Young	QiaAMP mini RNA												
+251no-q	251	5/6/20	NP-OP	VSP0318	Ron, Young	Traditional Trizol												
+266no-q	266	5/20/20	NP-OP	VSP0319	Ron, Young	QiaAMP mini RNA												
+266no-q	266	5/22/20	NP-OP	VSP0320	Ron, Young	QiaAMP mini RNA												

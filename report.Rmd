@@ -24,7 +24,8 @@ output:
 
 The table below provides a summary of subject samples for which sequencing data is available.  
 The experiments column shows the number of sequencing experiments performed for each specimen.  
-Experiment specific analyses are shown at the end of this report.  
+Experiment specific analyses are shown at the end of this report. The code base for this analysis 
+can be found ([here](https://github.com/everettJK/SARS-CoV-2-Philadelphia)).
 
 \vspace{0.5cm}
 
@@ -58,11 +59,18 @@ refGenome <- sub('data/references/', '', sub( '.fasta', '', dat[[1]]$refGenomeFa
 
 sampleTable <- bind_rows(lapply(dat, function(x){
   
-  maxContigLength = tryCatch({
-    sprintf("%.2f", max(Biostrings::width(x$contigs))/1000)
-  },  error = function(e) {
-    NA
- })
+  if(! 'contigs' %in% names(x)){
+    x$contigs <- Biostrings::DNAStringSet()
+    maxContigLength <- NA
+  } else if (length(x$contigs) == 0){
+    maxContigLength <- NA
+  } else {
+    maxContigLength = tryCatch({
+      sprintf("%.2f", max(Biostrings::width(x$contigs))/1000)
+    },  error = function(e) {
+      NA
+   })
+  }
   
  if(length(x$inputGenomes) == 0) x$inputGenomes <- NA
 
@@ -95,11 +103,11 @@ kable(sampleTable, 'latex', booktabs = T, linesep = '', align = 'c') %>%
 
 ### Variants shared across samples 
 
-The heat map below shows how variants are shared across subject samples where the percent variance is colored. 
-Variants are called if a variant is covered by 5 for more reads, the alternative base is found in > 50% of reads, 
-the variant and yields a PHRED score > 20 which represents a probabilty of < 1% that a variant is called solely 
-because of sequencing error. Gray tiles denote positions where the variant was not the major variant or no variants 
-were found. The base composition of tiles is shown in the following plot.
+The heat map below shows how variants (reference genome `r refGenome`) are shared across subject samples 
+where the percent variance is colored. Variants are called if a variant position is covered by 5 for more reads, 
+the alternative base is found in > 50% of read pairs and the variant yields a PHRED score > 20. Gray tiles denote 
+positions where the variant was not the major variant or no variants were found. The base composition of tiles are 
+shown in the following plot.
 
 \vspace{0.5cm}
 
@@ -194,9 +202,6 @@ where the total number of read pairs covering each position is printed on the st
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.height=8.5, fig.width=8, results='asis'}
 
 positions <- unique(unlist(lapply(dat2, function(x) x$variantTableMajor$POS)))
-
-# 21526  not in VSP0181  04/17/2020	OP variant table
-# x <- lapply(dat2, function(x) x$variantTable)
 
 if(length(positions) > 0){
   # Limit positions to variantTableMajor.
@@ -367,7 +372,7 @@ sampleAnalysis <- function(dat){
     }
   
     if(printPileUps){   
-      cat(paste0('The plot below shows the number of reads covering each nucleotide position in the reference genome (', refGenome, '). ', 
+      cat(paste0('The plot below shows the number of reads covering each nucleotide position in the reference genome. ', 
                  'Variants are shown as colored dots along the bottom of the plot and are color coded according by ',
                  'variant types: gray - transgenic, green - silent, gold - missense, red - nonsense, black - indel.',
                  '\n\n\\vspace{0.23cm}\n\n'))

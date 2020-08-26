@@ -11,6 +11,17 @@ samples <- read.table('data/samples.tsv', sep= '\t', header = TRUE, quote = '', 
 sampleInputs <- read.table('data/sampleInputs.tsv', sep= '\t', header = TRUE, stringsAsFactors = FALSE)
 
 
+#---
+
+#v <- unique(str_extract(list.files('summaries/VSPdata'), 'VSP\\d+'))
+#samples <- filter(samples, VSP %in% v)
+#o <- group_by(samples, patient_id) %>% summarise(timePoints = n_distinct(sample_date)) %>% ungroup() %>% filter(timePoints > 1) %>% arrange(desc(timePoints))
+
+samples <- samples[! grepl('MisC', samples$patient_id),]
+
+
+#---
+
 # Create subject summary reports for all subjects with experimental data (VSP data objects in VSP_data/).
 cluster <- makeCluster(CPUs)
 clusterExport(cluster, c('samples', 'sampleInputs', 'overWriteSubjectReports'))
