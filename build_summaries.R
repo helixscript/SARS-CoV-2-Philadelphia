@@ -104,6 +104,9 @@ summary <- bind_rows(lapply(list.files('summaries/sampleSummaries', full.names =
              t
 }))
 
+
+summary <- summary[!grepl('MisC', summary$Subject),]
+
 openxlsx::write.xlsx(summary, file = 'summaries/sampleSummary.xlsx')
 
 

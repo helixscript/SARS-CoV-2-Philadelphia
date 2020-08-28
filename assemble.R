@@ -26,6 +26,12 @@ opt$errorCode <- 0
 opt$errorMessage <- NA
 opt$workDir <- tmpFile()
 
+
+# Define data structures which must be present even if empty for downstream analyses.
+opt$variantTable      <- data.frame()
+opt$variantTableMajor <- data.frame()
+opt$contigs           <- Biostrings::DNAStringSet()
+
 # p300 opt$R1 <- 'data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0244-1_S8_L001_R1_001.fastq.gz'
 # p300 opt$R2 <- 'data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0244-1_S8_L001_R2_001.fastq.gz'
 #opt$R1 <- 'data/sequencing/200518_M03249_0065_000000000-J37K3/VSP0001-1a_S2_L001_R1_001.fastq.gz,data/sequencing/200518_M03249_0065_000000000-J37K3/VSP0001-1b_S10_L001_R1_001.fastq.gz'
@@ -147,8 +153,6 @@ opt$pileupData <- tryCatch({
                            })
 
 
-opt$variantTable      <- data.frame()
-opt$variantTableMajor <- data.frame()
 
 # Pileup format reports the number of read pairs (column 4) while VCF format (DP) 
 # reports the number of reads which appears to report 2x the pileup format value. 
