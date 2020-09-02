@@ -1,5 +1,5 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	percentRefReadCoverage	percentRefReadCoverage5
-196	VSP0008	composite	NA	ETA	4/8/2020	1.04	56.9%	26.5%
-196	VSP0008-1a	 single experiment	882	ETA	4/8/2020	0.65	18.2%	14.0%
-196	VSP0008-1b	 single experiment	882	ETA	4/8/2020	0.47	14.4%	9.2%
-196	VSP0008-2	 single experiment	4410	ETA	4/8/2020	0.70	42.5%	8.8%
+196	VSP0008	composite	NA	ETA	04/08/2020	1.04	57.5%	26.4%
+196	VSP0008-1a	 single experiment	882	ETA	04/08/2020	0.65	18.2%	14.0%
+196	VSP0008-1b	 single experiment	882	ETA	04/08/2020	0.47	14.4%	9.2%
+196	VSP0008-2	 single experiment	4410	ETA	04/08/2020	0.70	42.5%	8.7%

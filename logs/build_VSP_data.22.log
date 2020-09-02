@@ -1,0 +1,37 @@
+Tue Sep  1 16:31:44 2020
+Starting VSP0089 with 2 seq experiments.
+Tue Sep  1 16:31:44 2020 (summaries/VSPdata/VSP0089.composite.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0089.composite.RData --R1 data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0089-1_S2_L001_R1_001.fastq.gz,data/sequencing/200824_M03249_0087_000000000-JB8CJ/VSP0089-2_S9_L001_R1_001.fastq.gz --R2 data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0089-1_S2_L001_R2_001.fastq.gz,data/sequencing/200824_M03249_0087_000000000-JB8CJ/VSP0089-2_S9_L001_R2_001.fastq.gz
+
+Tue Sep  1 16:41:05 2020 (summaries/VSPdata/VSP0089-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0089-1.experiment.RData --R1 data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0089-1_S2_L001_R1_001.fastq.gz --R2 data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0089-1_S2_L001_R2_001.fastq.gz
+
+Tue Sep  1 16:48:58 2020 (summaries/VSPdata/VSP0089-2.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0089-2.experiment.RData --R1 data/sequencing/200824_M03249_0087_000000000-JB8CJ/VSP0089-2_S9_L001_R1_001.fastq.gz --R2 data/sequencing/200824_M03249_0087_000000000-JB8CJ/VSP0089-2_S9_L001_R2_001.fastq.gz
+
+Completed VSP0089
+
+Starting VSP0230 with 2 seq experiments.
+Tue Sep  1 16:50:34 2020 (summaries/VSPdata/VSP0230.composite.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0230.composite.RData --R1 data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0230-1_S6_L001_R1_001.fastq.gz,data/sequencing/200824_M03249_0087_000000000-JB8CJ/VSP0230-2_S17_L001_R1_001.fastq.gz --R2 data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0230-1_S6_L001_R2_001.fastq.gz,data/sequencing/200824_M03249_0087_000000000-JB8CJ/VSP0230-2_S17_L001_R2_001.fastq.gz
+
+Tue Sep  1 16:58:19 2020 (summaries/VSPdata/VSP0230-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0230-1.experiment.RData --R1 data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0230-1_S6_L001_R1_001.fastq.gz --R2 data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0230-1_S6_L001_R2_001.fastq.gz
+
+Tue Sep  1 17:02:53 2020 (summaries/VSPdata/VSP0230-2.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0230-2.experiment.RData --R1 data/sequencing/200824_M03249_0087_000000000-JB8CJ/VSP0230-2_S17_L001_R1_001.fastq.gz --R2 data/sequencing/200824_M03249_0087_000000000-JB8CJ/VSP0230-2_S17_L001_R2_001.fastq.gz
+
+Completed VSP0230
+
+Starting VSP0233 with 2 seq experiments.
+Tue Sep  1 17:06:16 2020 (summaries/VSPdata/VSP0233.composite.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0233.composite.RData --R1 data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0233-1_S7_L001_R1_001.fastq.gz,data/sequencing/200824_M03249_0087_000000000-JB8CJ/VSP0233-2_S18_L001_R1_001.fastq.gz --R2 data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0233-1_S7_L001_R2_001.fastq.gz,data/sequencing/200824_M03249_0087_000000000-JB8CJ/VSP0233-2_S18_L001_R2_001.fastq.gz
+
+Tue Sep  1 17:13:02 2020 (summaries/VSPdata/VSP0233-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0233-1.experiment.RData --R1 data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0233-1_S7_L001_R1_001.fastq.gz --R2 data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0233-1_S7_L001_R2_001.fastq.gz
+
+Tue Sep  1 17:16:30 2020 (summaries/VSPdata/VSP0233-2.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0233-2.experiment.RData --R1 data/sequencing/200824_M03249_0087_000000000-JB8CJ/VSP0233-2_S18_L001_R1_001.fastq.gz --R2 data/sequencing/200824_M03249_0087_000000000-JB8CJ/VSP0233-2_S18_L001_R2_001.fastq.gz
+
+Completed VSP0233
+
+Starting VSP0244 with 2 seq experiments.
+Tue Sep  1 17:19:36 2020 (summaries/VSPdata/VSP0244.composite.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0244.composite.RData --R1 data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0244-1_S8_L001_R1_001.fastq.gz,data/sequencing/200824_M03249_0087_000000000-JB8CJ/VSP0244-2_S21_L001_R1_001.fastq.gz --R2 data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0244-1_S8_L001_R2_001.fastq.gz,data/sequencing/200824_M03249_0087_000000000-JB8CJ/VSP0244-2_S21_L001_R2_001.fastq.gz
+
+Tue Sep  1 17:21:35 2020 (summaries/VSPdata/VSP0244-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0244-1.experiment.RData --R1 data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0244-1_S8_L001_R1_001.fastq.gz --R2 data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0244-1_S8_L001_R2_001.fastq.gz
+
+Tue Sep  1 17:23:09 2020 (summaries/VSPdata/VSP0244-2.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0244-2.experiment.RData --R1 data/sequencing/200824_M03249_0087_000000000-JB8CJ/VSP0244-2_S21_L001_R1_001.fastq.gz --R2 data/sequencing/200824_M03249_0087_000000000-JB8CJ/VSP0244-2_S21_L001_R2_001.fastq.gz
+
+Completed VSP0244
+

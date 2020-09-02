@@ -1,4 +1,4 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	percentRefReadCoverage	percentRefReadCoverage5
-CCLB	VSP0001	composite	NA	Vero cells	3/28/2020	27.21	99.9%	99.8%
-CCLB	VSP0001-1a	 single experiment	2.94e+08	Vero cells	3/28/2020	11.95	99.5%	96.5%
-CCLB	VSP0001-1b	 single experiment	2.94e+08	Vero cells	3/28/2020	22.89	99.1%	98.2%
+CCLB	VSP0001	composite	NA	Vero cells	03/28/2020	27.21	99.9%	99.8%
+CCLB	VSP0001-1a	 single experiment	2.94e+08	Vero cells	03/28/2020	11.95	99.5%	96.5%
+CCLB	VSP0001-1b	 single experiment	2.94e+08	Vero cells	03/28/2020	22.89	99.1%	98.2%
