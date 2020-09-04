@@ -104,10 +104,13 @@ summary <- bind_rows(lapply(list.files('summaries/sampleSummaries', full.names =
              t
 }))
 
-
 summary <- summary[!grepl('MisC', summary$Subject),]
 
 openxlsx::write.xlsx(summary, file = 'summaries/sampleSummary.xlsx')
+
+
+summary$sampleName <- paste(summary$Subject, summary$sampleType, summary$sampleDate2)
+
 
 
 
@@ -127,8 +130,8 @@ representativeSampleSummary <- function(summary, minPercentRefReadCoverage5){
   })) %>% dplyr::filter(percentRefReadCoverage5 >= minPercentRefReadCoverage5)
 }
 
-representativeSampleSummary_90 <- representativeSampleSummary(summary, 90)
-openxlsx::write.xlsx(representativeSampleSummary_90, file = 'summaries/representativeSampleSummary_90.xlsx')
+representativeSampleSummary_95 <- representativeSampleSummary(summary, 95)
+openxlsx::write.xlsx(representativeSampleSummary_95, file = 'summaries/representativeSampleSummary_95.xlsx')
 
 
 # The reference genome is 29,882 NT long
@@ -175,11 +178,8 @@ retrieveConcensusSeqs <- function(summary){
   }))
 }
 
-
-concensusSeqs90 <- retrieveConcensusSeqs(representativeSampleSummary_90)
-writeXStringSet(concensusSeqs90, file = 'summaries/concensusSeqs90.fasta')
-
-
+concensusSeqs95 <- retrieveConcensusSeqs(representativeSampleSummary_95)
+writeXStringSet(concensusSeqs95, file = 'summaries/concensusSeqs95.fasta')
 
 
 # Retrieve VSP objects and create a concatnetated table of variants.
@@ -194,15 +194,8 @@ retrieveVariantTables <- function(summary){
   }))
 }
 
-variantTable <- retrieveVariantTables(representativeSampleSummary_90)
+variantTable <- retrieveVariantTables(representativeSampleSummary_95)
 
-# The colated variant table has all variants for each position. 
-# Here we reduce it to the dominant variants. 
-
-variantTable <- filter(variantTable,  percentAlt > 0.5 & ! ALT == 'e') %>%
-                group_by(sample, POS) %>%
-                top_n(1, wt = percentAlt) %>%
-                ungroup()
 
 
 # Create a table of variants with subject and sample counts.
@@ -216,15 +209,15 @@ variantSummary <-
 openxlsx::write.xlsx(variantSummary, file = 'summaries/variantSummary.xlsx')
 
 v <- group_by(variantTable, subject, sample) %>% mutate(variants = paste0(POS, '|', genes)) %>% ungroup() %>% select(subject, sample, variants)
-v2 <- reshape2::dcast(v, subject+sample~variants, value.var = 'variants')
+v2 <- reshape2::dcast(mutate(v, x = 'x'), subject+sample~variants, value.var = 'x')
 openxlsx::write.xlsx(v2, file = 'summaries/variantSummary2.xlsx')
 
 
 # Align the concensus sequences.
-if(! file.exists('summaries/concensusSeqs90.mafft')) system(paste0(mafftPath, ' --thread 25 --globalpair --maxiterate 50 summaries/concensusSeqs90.fasta > summaries/concensusSeqs90.mafft'))
+if(! file.exists('summaries/concensusSeqs95.mafft')) system(paste0(mafftPath, ' --thread 25 --globalpair --maxiterate 50 summaries/concensusSeqs95.fasta > summaries/concensusSeqs95.mafft'))
 
 # Build phylogenetic tree.
-v <- ape::read.dna("summaries/concensusSeqs90.mafft", format="fasta")
+v <- ape::read.dna("summaries/concensusSeqs95.mafft", format="fasta")
 v_phyDat <- phangorn::phyDat(v, type = "DNA", levels = NULL)
 
 # Determine best mode and create a distance matrix.
@@ -246,7 +239,7 @@ concensusSeqPhyloPlot <-
         panel.background=element_rect(fill="white"),
         panel.grid=element_blank())
 
-ggsave(concensusSeqPhyloPlot, height = 10, width = 12, units = 'in', file = 'summaries/concensusSeqs90PhyloPlot.pdf')
+ggsave(concensusSeqPhyloPlot, height = 10, width = 12, units = 'in', file = 'summaries/concensusSeqs95PhyloPlot.pdf')
 
 
 # Order variant table to match dendro plot
