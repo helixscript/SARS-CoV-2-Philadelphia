@@ -4,7 +4,7 @@ library(Biostrings)
 options(stringsAsFactors = FALSE)
 overWriteSubjectReports <- FALSE
 mafftPath <- '~/ext/mafft/bin/mafft'
-CPUs <- 25
+CPUs <- 10
 
 # Read in sample data table.
 samples <- read.table('data/samples.tsv', sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE)
@@ -60,7 +60,7 @@ invisible(parLapply(cluster, split(d, d$s), function(p){
            # experiments and composite analyses where multiple experiments where combined.
              load(f)
              opt$vsp <- str_extract(f, 'VSP\\d+')
-             opt$seq_sample <-  str_extract(f, 'VSP\\d+\\-?\\d+?[ab]?')
+             opt$seq_sample <-  str_extract(f, 'VSP\\d+\\-?\\d+?[abm]?')
            
              d <- subset(samples, VSP == opt$vsp)
              opt$sample_id <- d$sample_id[1]

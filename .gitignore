@@ -1,5 +1,7 @@
 data/sequencing
 data/genomes/GISAID
+data/sequencingBackup
+data/sequencing.org
 summaries/VSPalignments
 summaries/VSPdata
 summaries/patientReportsData

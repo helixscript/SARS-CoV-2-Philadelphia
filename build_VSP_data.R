@@ -24,6 +24,7 @@ invisible(parLapply(cluster, split(d, d$s), function(x){
   
   invisible(sapply(x$vsp, function(vsp){
 
+    message(vsp)
     # All the files to draw R1 and R2 read files from for VSP.
     sampleFiles <- list.files('data/sequencing', recursive = TRUE, pattern = paste0('^', vsp, '-'))
   
