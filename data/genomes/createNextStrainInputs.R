@@ -9,7 +9,11 @@ nextStrainMetaData <- read.table('nextStrainMetaData.tsv', sep = '\t', header = 
 gisaid <- readFasta('GISAID/sequences_2020-08-07_17-50.fasta')
 gisaid <- gisaid[! duplicated(gisaid@sread)]
 
-g <- readFasta('../../summaries/concensusSeqs90.fasta')
+g <- readFasta('../../summaries/concensusSeqs95.fasta')
+
+# Remove 228_NP_OP_20200424
+g <- g[! grepl('228\\|NP\\-OP\\|20200424', as.character(g@id))]
+
 g <- g[! as.character(g@id) %in% c('CCLB|Vero cells|20200328', 'E6|Vero cells|20200328')]
 g <- g[! duplicated(g@sread)]
 
@@ -168,20 +172,24 @@ writeFasta(Reduce('append', list(g, gisaid[as.character(gisaid@id) %in% subset(p
 write.table(bind_rows(a, subset(periods, period == 'C')), file = 'nextStrainRun_C/data/metadata.tsv', sep = '\t', col.names = TRUE, row.names = FALSE, quote = FALSE)
 
 
-
+# Run next Strain sofware...
+# conda activate nextstrain
+# cd into nextStrainRin dir
+# sh ../nextStrainComms.sh
 
 
 library(ggplot2)
 
 createTree <- function(dir){
   o <- phylogram::read.dendrogram(file.path(dir, 'results/tree.nwk'))
-  
-  o <- phylogram::prune(o, 'Wuhan/WH02/2019')
+ 
+  # Remove outliers by looking at the first points in the pointData df below. 
+  o <- phylogram::prune(o, 'Malaysia/IMR_WC085/2020')
   o <- phylogram::prune(o, 'USA/WA-UW-4572/2020')
   
   m <- read.table(file.path(dir, 'data/metadata.tsv'), sep = '\t', header = TRUE)
   dendr <- ggdendro::dendro_data(o)
-  #browser()
+  # browser()
   pointData <- group_by(subset(ggdendro::segment(dendr), x %in% ggdendro::label(dendr)$x), x) %>%
                top_n(-1, wt = yend) %>% 
                slice(1) %>%
@@ -193,7 +201,7 @@ createTree <- function(dir){
 
   a <- subset(pointData, source == 'Philadelphia')
   b <- subset(pointData, source != 'Philadelphia')
-  pointData <- bind_rows(a, b)
+  pointData <- bind_rows(b, a)
 
   ggplot() +
     geom_segment(data=ggdendro::segment(dendr), aes(x=x, y=y, xend=xend, yend=yend), size = 0.2, color = 'gray') + 
@@ -212,4 +220,10 @@ createTree <- function(dir){
 }
 
 
-createTree('nextStrainRun_C')
+A <- createTree('nextStrainRun_A')
+B <- createTree('nextStrainRun_B')
+C <- createTree('nextStrainRun_C')
+
+ggsave(A, filename = 'A.pdf', height = 3,  width = 3, units = 'in', useDingbats = FALSE)
+ggsave(B, filename = 'B.pdf', height = 5,  width = 4, units = 'in', useDingbats = FALSE)
+ggsave(C, filename = 'C.pdf', height = 10, width = 5, units = 'in', useDingbats = FALSE)

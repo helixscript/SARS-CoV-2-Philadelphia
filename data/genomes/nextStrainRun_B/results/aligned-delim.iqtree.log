@@ -4,8 +4,8 @@ Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
 
 Host:    microb191 (AVX2, FMA3, 188 GB RAM)
 Command: iqtree -ninit 2 -n 2 -me 0.05 -nt 30 -s results/aligned-delim.fasta -m GTR
-Seed:    533369 (Using SPRNG - Scalable Parallel Random Number Generator)
-Time:    Fri Aug 14 13:39:27 2020
+Seed:    259934 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Sep 11 15:12:57 2020
 Kernel:  AVX+FMA - 30 threads (48 CPU cores detected)
 
 Reading alignment file results/aligned-delim.fasta ... Fasta format detected
@@ -378,50 +378,50 @@ Alignment has 363 sequences with 29903 columns, 5451 distinct patterns
  363  USA_X_X_CA-CDPH-UC25_X_X_2020                     23.01%    passed     95.99%
 ****  TOTAL                                              1.30%  0 sequences failed composition chi2 test (p-value<5%; df=3)
 
-Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.061 seconds
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.069 seconds
 
 NOTE: 64 MB RAM (0 GB) is required!
 Estimate model parameters (epsilon = 0.500)
-1. Initial log-likelihood: -47548.023
-2. Current log-likelihood: -47315.769
-Optimal log-likelihood: -47315.599
-Rate parameters:  A-C: 0.49406  A-G: 1.27487  A-T: 0.41982  C-G: 0.33794  C-T: 3.40972  G-T: 1.00000
+1. Initial log-likelihood: -47546.593
+2. Current log-likelihood: -47330.682
+Optimal log-likelihood: -47330.652
+Rate parameters:  A-C: 0.49180  A-G: 1.28372  A-T: 0.44846  C-G: 0.32637  C-T: 3.34037  G-T: 1.00000
 Base frequencies:  A: 0.299  C: 0.184  G: 0.196  T: 0.321
-Parameters optimization took 2 rounds (0.495 sec)
-Computing ML distances based on estimated model parameters... 19.032 sec
+Parameters optimization took 2 rounds (0.618 sec)
+Computing ML distances based on estimated model parameters... 18.404 sec
 Computing BIONJ tree...
-0.128 seconds
-Log-likelihood of BIONJ tree: -47501.420
+0.132 seconds
+Log-likelihood of BIONJ tree: -47501.608
 --------------------------------------------------------------------
 |             INITIALIZING CANDIDATE TREE SET                      |
 --------------------------------------------------------------------
 
 Do NNI search on 2 best initial trees
 Estimate model parameters (epsilon = 0.500)
-BETTER TREE FOUND at iteration 1: -47308.023
+BETTER TREE FOUND at iteration 1: -47320.874
 Finish initializing candidate tree set (4)
-Current best tree score: -47308.023 / CPU time: 4.375
+Current best tree score: -47320.874 / CPU time: 3.405
 Number of iterations: 2
-TREE SEARCH COMPLETED AFTER 2 ITERATIONS / Time: 0h:0m:6s
+TREE SEARCH COMPLETED AFTER 2 ITERATIONS / Time: 0h:0m:5s
 
 --------------------------------------------------------------------
 |                    FINALIZING TREE SEARCH                        |
 --------------------------------------------------------------------
 Performs final model parameters optimization
 Estimate model parameters (epsilon = 0.050)
-1. Initial log-likelihood: -47308.023
-Optimal log-likelihood: -47308.019
-Rate parameters:  A-C: 0.48604  A-G: 1.28291  A-T: 0.41534  C-G: 0.33825  C-T: 3.42433  G-T: 1.00000
+1. Initial log-likelihood: -47320.874
+Optimal log-likelihood: -47320.872
+Rate parameters:  A-C: 0.48505  A-G: 1.28879  A-T: 0.44160  C-G: 0.32169  C-T: 3.36088  G-T: 1.00000
 Base frequencies:  A: 0.299  C: 0.184  G: 0.196  T: 0.321
-Parameters optimization took 1 rounds (0.132 sec)
-BEST SCORE FOUND : -47308.019
+Parameters optimization took 1 rounds (0.154 sec)
+BEST SCORE FOUND : -47320.872
 Total tree length: 0.021
 
 Total number of iterations: 2
-CPU time used for tree search: 128.604 sec (0h:2m:8s)
-Wall-clock time used for tree search: 4.379 sec (0h:0m:4s)
-Total CPU time used: 178.336 sec (0h:2m:58s)
-Total wall-clock time used: 6.413 sec (0h:0m:6s)
+CPU time used for tree search: 99.328 sec (0h:1m:39s)
+Wall-clock time used for tree search: 3.409 sec (0h:0m:3s)
+Total CPU time used: 153.460 sec (0h:2m:33s)
+Total wall-clock time used: 5.652 sec (0h:0m:5s)
 
 Analysis results written to: 
   IQ-TREE report:                results/aligned-delim.fasta.iqtree
@@ -429,4 +429,4 @@ Analysis results written to:
   Likelihood distances:          results/aligned-delim.fasta.mldist
   Screen log file:               results/aligned-delim.fasta.log
 
-Date and Time: Fri Aug 14 13:39:35 2020
+Date and Time: Fri Sep 11 15:13:03 2020
