@@ -1,6 +1,7 @@
 library(tidyverse)
 library(parallel)
 library(Biostrings)
+library(lubridate)
 options(stringsAsFactors = FALSE)
 overWriteSubjectReports <- FALSE
 mafftPath <- '~/ext/mafft/bin/mafft'
@@ -11,16 +12,43 @@ samples <- read.table('data/samples.tsv', sep= '\t', header = TRUE, quote = '', 
 sampleInputs <- read.table('data/sampleInputs.tsv', sep= '\t', header = TRUE, stringsAsFactors = FALSE)
 
 
-#---
+# Trim leading and trailing white space from metadata.
+trimLeadingTrailingWhtSpace <- function(x) gsub('^\\s+|\\s+$', '', x)
+samples$sample_id   <- sapply(samples$sample_id, trimLeadingTrailingWhtSpace)
+samples$patient_id  <- sapply(samples$patient_id, trimLeadingTrailingWhtSpace)
+samples$sample_date <- sapply(samples$sample_date, trimLeadingTrailingWhtSpace)
+samples$sample_type <- sapply(samples$sample_type, trimLeadingTrailingWhtSpace)
+samples$VSP         <- sapply(samples$VSP, trimLeadingTrailingWhtSpace)
 
-#v <- unique(str_extract(list.files('summaries/VSPdata'), 'VSP\\d+'))
-#samples <- filter(samples, VSP %in% v)
-#o <- group_by(samples, patient_id) %>% summarise(timePoints = n_distinct(sample_date)) %>% ungroup() %>% filter(timePoints > 1) %>% arrange(desc(timePoints))
 
+# Standardize date formatting
+samples$sample_date <- as.character(mdy(samples$sample_date))
+
+
+# Create a vector of VSP ids with sequencning data.
+availableVSPs <- unique(str_extract(list.files('summaries/VSPdata'), 'VSP\\d+'))
+
+
+# Remove MisC analysis. 
 samples <- samples[! grepl('MisC', samples$patient_id),]
 
 
-#---
+# Remove 228_NP_OP_20200424
+samples <- samples[! samples$VSP == 'VSP0069',]
+
+
+# Identify potential sample duplications.
+sampleUniquenessCheck <- 
+  group_by(samples, patient_id, sample_date, sample_type) %>%
+  summarise(n = n()) %>%
+  ungroup()
+
+sampleUniquenessCheck2 <- 
+  group_by(filter(samples, VSP %in% availableVSPs), patient_id, sample_date, sample_type) %>%
+  summarise(n = n(), VSPids = paste(VSP, collapse = ', ')) %>%
+  ungroup() %>%
+  filter(n > 1)
+
 
 # Create subject summary reports for all subjects with experimental data (VSP data objects in VSP_data/).
 cluster <- makeCluster(CPUs)
@@ -100,17 +128,12 @@ summary <- bind_rows(lapply(list.files('summaries/sampleSummaries', full.names =
              t$largestContig <- as.numeric(t$largestContig)
              t$percentRefReadCoverage <- as.numeric(sub('%', '', t$percentRefReadCoverage))
              t$percentRefReadCoverage5 <- as.numeric(sub('%', '', t$percentRefReadCoverage5))
-             t$sampleDate2 <- gsub('-', '', as.character(lubridate::mdy(t$sampleDate)))
+             t$sampleDate2 <- gsub('-', '', t$sampleDate)
              t
 }))
 
-summary <- summary[!grepl('MisC', summary$Subject),]
-
-openxlsx::write.xlsx(summary, file = 'summaries/sampleSummary.xlsx')
-
-
 summary$sampleName <- paste(summary$Subject, summary$sampleType, summary$sampleDate2)
-
+openxlsx::write.xlsx(summary, file = 'summaries/sampleSummary.xlsx')
 
 
 
@@ -131,6 +154,13 @@ representativeSampleSummary <- function(summary, minPercentRefReadCoverage5){
 }
 
 representativeSampleSummary_95 <- representativeSampleSummary(summary, 95)
+
+# There are a number of genomes which were determined with both expanded and non-expanded samples.
+# Here we remove the expanded culture genomes where the same results was found with the non-expanded genomes.
+# Two genomes were different fom one another: 211|ETA|20200413 / 211−TCE|ETA|20200413.
+
+representativeSampleSummary_95 <- subset(representativeSampleSummary_95, ! sampleName %in% c('266-TCE NP-OP 20200522', '266-TCE NP-OP 20200520'))
+
 openxlsx::write.xlsx(representativeSampleSummary_95, file = 'summaries/representativeSampleSummary_95.xlsx')
 
 
@@ -179,7 +209,9 @@ retrieveConcensusSeqs <- function(summary){
 }
 
 concensusSeqs95 <- retrieveConcensusSeqs(representativeSampleSummary_95)
+concensusSeqs95 <- concensusSeqs95[! names(concensusSeqs95) %in% c('266-TCE|NP-OP|20200522', '266-TCE|NP-OP|20200520')]
 writeXStringSet(concensusSeqs95, file = 'summaries/concensusSeqs95.fasta')
+
 
 
 # Retrieve VSP objects and create a concatnetated table of variants.
@@ -214,7 +246,9 @@ openxlsx::write.xlsx(v2, file = 'summaries/variantSummary2.xlsx')
 
 
 # Align the concensus sequences.
-if(! file.exists('summaries/concensusSeqs95.mafft')) system(paste0(mafftPath, ' --thread 25 --globalpair --maxiterate 50 summaries/concensusSeqs95.fasta > summaries/concensusSeqs95.mafft'))
+if(! file.exists('summaries/concensusSeqs95.mafft')) system(paste0(mafftPath, ' --thread 10 --globalpair --maxiterate 5 summaries/concensusSeqs95.fasta > summaries/concensusSeqs95.mafft'))
+
+# mafft --reorder --anysymbol --nomemsave --adjustdirection --thread 2
 
 # Build phylogenetic tree.
 v <- ape::read.dna("summaries/concensusSeqs95.mafft", format="fasta")

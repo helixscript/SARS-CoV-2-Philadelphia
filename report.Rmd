@@ -248,14 +248,20 @@ varHeatMap2 <- function(x){
   
   readLabels <- group_by(vt2, s, seqSample) %>% summarise(reads = reads[1]) %>% ungroup()
   
+ # browser()
   ggplot(vt2, aes(seqSample, percentAlt, fill = ALT, label = reads)) +
     geom_col() +
     scale_fill_manual(name = 'Base change', drop=FALSE, 
                          values = c('gray50', 'green3', 'red2', 'dodgerblue', 'gold2', 'purple', 'black', 'gray90')) +
-    geom_text(aes(seqSample, 0.5, label = reads), inherit.aes = FALSE, size = 3) +
-    facet_grid(s~sampleName, scales = 'free_x', switch = 'y') +
+    geom_text(aes(seqSample, 0.5, label = reads), inherit.aes = FALSE, size = 5) +
+    facet_grid(s~sampleName, scales = 'free_x', switch = 'y', space = "free") +
     labs(x = '', y = '') +
-    theme(strip.text.y = element_text(angle = 180),
+    theme(strip.text.y = element_text(angle = 180, size = 14),
+          strip.text.x = element_text(angle = 0, size = 14),
+    #panel.grid.major = element_blank(),
+    #panel.grid.minor = element_blank(),
+    #panel.border = element_blank(),
+    panel.background = element_blank(),
           axis.title.y = element_blank(),
           axis.line.x  = element_blank(),
           axis.line.y  = element_blank(),
@@ -266,7 +272,7 @@ varHeatMap2 <- function(x){
           panel.grid.minor = element_blank(), 
           axis.line = element_line(colour = "black"),
           strip.background = element_rect(fill="white"), 
-          line = element_blank(), axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+          line = element_blank(), axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1, size = 14))
 } 
 
 

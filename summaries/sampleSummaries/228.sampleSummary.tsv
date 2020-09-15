@@ -1,20 +1,16 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	percentRefReadCoverage	percentRefReadCoverage5
-228	VSP0021	composite	NA	NP	4/22/2020	29.82	99.8%	99.8%
-228	VSP0022	composite	NA	OP	4/22/2020	29.68	99.8%	98.8%
-228	VSP0069	composite	NA	NP-OP	04/24/2020	18.98	98.5%	98.5%
-228	VSP0187	composite	NA	ETA	05/29/2020	NA	NA	NA
-228	VSP0188	composite	NA	NP-OP	05/29/2020	29.90	99.8%	99.8%
-228	VSP0021-1m	 single experiment	NA	NP	4/22/2020	29.82	99.8%	99.7%
-228	VSP0021-2	 single experiment	11000	NP	4/22/2020	29.82	99.8%	99.8%
-228	VSP0022-1a	 single experiment	268000	OP	4/22/2020	1.75	78.3%	37.7%
-228	VSP0022-2	 single experiment	1340000	OP	4/22/2020	0.24	6.2%	0.0%
-228	VSP0022-3	 single experiment	1340000	OP	4/22/2020	29.68	99.8%	98.8%
-228	VSP0069-1	 single experiment	97.5	NP-OP	04/24/2020	6.54	92.2%	88.2%
-228	VSP0069-2	 single experiment	97.5	NP-OP	04/24/2020	9.23	90.5%	90.0%
-228	VSP0069-3	 single experiment	97.5	NP-OP	04/24/2020	6.37	87.1%	85.5%
-228	VSP0187-1	 single experiment	60.2	ETA	05/29/2020	NA	NA	NA
-228	VSP0187-2	 single experiment	301	ETA	05/29/2020	NA	NA	NA
-228	VSP0188-1	 single experiment	2040	NP-OP	05/29/2020	9.60	93.7%	93.5%
-228	VSP0188-2	 single experiment	10200	NP-OP	05/29/2020	22.61	99.1%	99.1%
-228	VSP0188-3	 single experiment	10200	NP-OP	05/29/2020	29.87	99.8%	99.8%
-228	VSP0189-1	 single experiment	85100	Saliva	05/29/2020	29.82	99.8%	99.8%
+228	VSP0021	composite	NA	NP	2020-04-22	29.82	99.8%	99.8%
+228	VSP0022	composite	NA	OP	2020-04-22	29.68	99.8%	98.8%
+228	VSP0187	composite	NA	ETA	2020-05-29	NA	NA	NA
+228	VSP0188	composite	NA	NP-OP	2020-05-29	29.90	99.8%	99.8%
+228	VSP0021-1m	 single experiment	NA	NP	2020-04-22	29.82	99.8%	99.7%
+228	VSP0021-2	 single experiment	11000	NP	2020-04-22	29.82	99.8%	99.8%
+228	VSP0022-1a	 single experiment	268000	OP	2020-04-22	1.75	78.3%	37.7%
+228	VSP0022-2	 single experiment	1340000	OP	2020-04-22	0.24	6.2%	0.0%
+228	VSP0022-3	 single experiment	1340000	OP	2020-04-22	29.68	99.8%	98.8%
+228	VSP0187-1	 single experiment	60.2	ETA	2020-05-29	NA	NA	NA
+228	VSP0187-2	 single experiment	301	ETA	2020-05-29	NA	NA	NA
+228	VSP0188-1	 single experiment	2040	NP-OP	2020-05-29	9.60	93.7%	93.5%
+228	VSP0188-2	 single experiment	10200	NP-OP	2020-05-29	22.61	99.1%	99.1%
+228	VSP0188-3	 single experiment	10200	NP-OP	2020-05-29	29.87	99.8%	99.8%
+228	VSP0189-1	 single experiment	85100	Saliva	2020-05-29	29.82	99.8%	99.8%
