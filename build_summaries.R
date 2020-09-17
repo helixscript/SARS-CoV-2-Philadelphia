@@ -136,34 +136,6 @@ summary$sampleName <- paste(summary$Subject, summary$sampleType, summary$sampleD
 openxlsx::write.xlsx(summary, file = 'summaries/sampleSummary.xlsx')
 
 
-
-# Select a sample to represent each subject, sample type, time point combination.
-# Select composite samples when available otherwise select the samples with the greated coverage.
-# Break ties with read coverage percentages.
-
-representativeSampleSummary <- function(summary, minPercentRefReadCoverage5){
-  bind_rows(lapply(split(summary, paste(summary$Subject, summary$sampleType, summary$sampleDate2)), function(x){
-    r <- subset(x, type == 'composite')
-    if(nrow(r) > 0){
-      r <- top_n(r, 1, wt = percentRefReadCoverage5) %>% dplyr::slice(1)
-    } else{
-      r <- top_n(x, 1, wt = percentRefReadCoverage5) %>% dplyr::slice(1)
-    }
-    r
-  })) %>% dplyr::filter(percentRefReadCoverage5 >= minPercentRefReadCoverage5)
-}
-
-representativeSampleSummary_95 <- representativeSampleSummary(summary, 95)
-
-# There are a number of genomes which were determined with both expanded and non-expanded samples.
-# Here we remove the expanded culture genomes where the same results was found with the non-expanded genomes.
-# Two genomes were different fom one another: 211|ETA|20200413 / 211−TCE|ETA|20200413.
-
-representativeSampleSummary_95 <- subset(representativeSampleSummary_95, ! sampleName %in% c('266-TCE NP-OP 20200522', '266-TCE NP-OP 20200520'))
-
-openxlsx::write.xlsx(representativeSampleSummary_95, file = 'summaries/representativeSampleSummary_95.xlsx')
-
-
 # The reference genome is 29,882 NT long
 # 90% of this length is 26,893 NT.
 # Select summary records with longer contigs, break ties with read coverage %.
@@ -193,6 +165,42 @@ contigs <- Reduce('append', lapply(1:nrow(longContigSampleSummary), function(x){
 
 writeXStringSet(contigs, file = 'summaries/contigs90.fasta')
 
+
+# Select a sample to represent each subject, sample type, time point combination.
+# Select composite samples when available otherwise select the samples with the greated coverage.
+# Break ties with read coverage percentages.
+
+representativeSampleSummary <- function(summary, minPercentRefReadCoverage5){
+  bind_rows(lapply(split(summary, paste(summary$Subject, summary$sampleType, summary$sampleDate2)), function(x){
+    r <- subset(x, type == 'composite')
+    if(nrow(r) > 0){
+      r <- top_n(r, 1, wt = percentRefReadCoverage5) %>% dplyr::slice(1)
+    } else{
+      r <- top_n(x, 1, wt = percentRefReadCoverage5) %>% dplyr::slice(1)
+    }
+    r
+  })) %>% dplyr::filter(percentRefReadCoverage5 >= minPercentRefReadCoverage5)
+}
+
+representativeSampleSummary_95 <- representativeSampleSummary(summary, 95)
+
+# There are a number of genomes which were determined with both expanded and non-expanded samples.
+# Here we remove the expanded culture genomes where the same results was found with the non-expanded genomes.
+# Two genomes were different fom one another: 211|ETA|20200413 / 211−TCE|ETA|20200413.
+
+representativeSampleSummary_95 <- subset(representativeSampleSummary_95, ! sampleName %in% c('266-TCE NP-OP 20200522', '266-TCE NP-OP 20200520'))
+
+
+# The two controls yielded the same genome sequence with almost identical statistics.
+# We only need to report one. Drop one control and rename it.
+
+representativeSampleSummary_95 <- subset(representativeSampleSummary_95, ! Subject == 'CCLB')
+i <- which(representativeSampleSummary_95$Subject == 'E6')
+representativeSampleSummary_95[i,]$Subject <- 'USA-WA1-2020-TCE'
+representativeSampleSummary_95[i,]$sampleType <- 'NP-OP'
+representativeSampleSummary_95[i,]$sampleName <- 'USA-WA1-2020-TCE NP-OP 20200328'
+
+openxlsx::write.xlsx(representativeSampleSummary_95, file = 'summaries/representativeSampleSummary_95.xlsx')
 
 
 # Retrieve consensus sequences from representative samples.
@@ -248,14 +256,13 @@ openxlsx::write.xlsx(v2, file = 'summaries/variantSummary2.xlsx')
 # Align the concensus sequences.
 if(! file.exists('summaries/concensusSeqs95.mafft')) system(paste0(mafftPath, ' --thread 10 --globalpair --maxiterate 5 summaries/concensusSeqs95.fasta > summaries/concensusSeqs95.mafft'))
 
-# mafft --reorder --anysymbol --nomemsave --adjustdirection --thread 2
 
 # Build phylogenetic tree.
 v <- ape::read.dna("summaries/concensusSeqs95.mafft", format="fasta")
 v_phyDat <- phangorn::phyDat(v, type = "DNA", levels = NULL)
 
 # Determine best mode and create a distance matrix.
-mt <- phangorn::modelTest(v_phyDat)
+# mt <- phangorn::modelTest(v_phyDat)
 dna_dist <- phangorn::dist.ml(v_phyDat, model="JC69")
 
 # Create a data frame to plot tree.
@@ -281,11 +288,9 @@ variantTable$sample <- factor(as.character(variantTable$sample), levels = unique
 variantTable <- dplyr::arrange(variantTable, POS)
 variantTable$genes <- factor(as.character(variantTable$genes), levels = unique(as.character(variantTable$genes)))
 
-
 variantTable$genes <- as.character(variantTable$genes)
 variantTable$genes <- gsub('intergenic', 'Intergenic', variantTable$genes)
 variantTable$genes <- factor(as.character(variantTable$genes), levels = unique(as.character(variantTable$genes)))
-
 
 genomeVariantPlot <- 
   ggplot(variantTable, aes(POS, sample, color = genes)) + 
@@ -304,9 +309,8 @@ ggsave(genomeVariantPlot, height = 10, width = 12, units = 'in', file = 'summari
 
 
 # Create a single results download.
-file.remove('summaries.zip')
+if(file.exists('summaries.zip')) file.remove('summaries.zip')
 system('zip summaries/summaries.zip summaries/*.xlsx summaries/*.pdf summaries/*.fasta summaries/patientReports/*')
-
 
 
 # Create plots of sequence coverage vs. sample inputs using different scale cutoffs to better visualize the data.
