@@ -1,7 +1,7 @@
 augur align \
   --nthreads 30 \
   --sequences data/sequences.fasta \
-  --reference-sequence /home/everett/projects/SARS-CoV-2-Philadelphia/data/references/USA-WA1-2020.gb \
+  --reference-sequence config/SARS-CoV-2_outgroup.gb \
   --output results/aligned.fasta \
   --fill-gaps;
 

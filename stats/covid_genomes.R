@@ -71,6 +71,11 @@ dendr$labels$label <- gsub(" ","_",gsub("-","_",gsub("\\|","_",dendr$labels$labe
 
 which(unique(nextClade$seqName) %in% labels(dna_dist))
 
+metadata <- read.table("/home/kevin/projects/covid/data/metadata.csv",
+                       sep = "\t", header = TRUE, stringsAsFactors = FALSE) %>%
+  mutate(zip=if_else(Zip.code<10000,paste0("0",as.character(Zip.code)),as.character(Zip.code)),
+         Outcome=toupper(Outcome))
+
 dnaDistDf <- melt(as.matrix(dna_dist), varnames =c("row","col")) %>%
   mutate(rowP=substr(row,1,3),
          colP=substr(col,1,3)) %>%
@@ -83,17 +88,33 @@ dnaDistDf <- melt(as.matrix(dna_dist), varnames =c("row","col")) %>%
   as.data.frame()
 rownames(dnaDistDf) <- dnaDistDf$rowP
 patient_dna_dist <- as.dist(as.matrix(dnaDistDf %>% select(-rowP)))
-  
-metadata <- read.table("/home/kevin/projects/covid/data/metadata.csv",
-                       sep = "\t", header = TRUE, stringsAsFactors = FALSE) %>%
-  mutate(zip=if_else(Zip.code<10000,paste0("0",as.character(Zip.code)),as.character(Zip.code)),
-         Outcome=toupper(Outcome))
 
 treeZips <- metadata$zip[match(as.integer(labels(patient_dna_dist)), metadata$Subject.ID)]
 adonis(patient_dna_dist ~ treeZips, method = "bray", perm = 999)
 
 treeOutcomes <- metadata$Outcome[match(as.integer(labels(patient_dna_dist)), metadata$Subject.ID)]
 adonis(patient_dna_dist ~ treeOutcomes, method = "bray", perm = 999)
+
+
+
+dnaDistDf <- melt(as.matrix(dna_dist), varnames =c("row","col")) %>%
+  mutate(rowP=substr(row,1,3),
+         colP=substr(col,1,3)) %>%
+  filter(rowP != colP) %>%
+  filter(rowP != "CCL" & rowP != "E6_") %>%
+  select(-rowP, -colP) %>%
+  spread(col, value) %>%
+  select(-CCLB_Vero_cells_20200328, -E6_Vero_cells_20200328) %>%
+  as.data.frame()
+rownames(dnaDistDf) <- dnaDistDf$row
+patient_dna_dist <- as.dist(as.matrix(dnaDistDf %>% select(-row)))
+
+treeZips <- metadata$zip[match(as.integer(substr(labels(patient_dna_dist),1,3)), metadata$Subject.ID)]
+adonis(patient_dna_dist ~ treeZips, method = "bray", perm = 999)
+
+treeOutcomes <- metadata$Outcome[match(as.integer(labels(patient_dna_dist)), metadata$Subject.ID)]
+adonis(patient_dna_dist ~ treeOutcomes, method = "bray", perm = 999)
+
 
 
 

@@ -71,6 +71,7 @@ r <- bind_rows(parLapply(cluster, split(q, 1:length(q)), function(x){
 }))
 
 stopCluster(cluster)
+saveRDS(r, file = 'summaries/nearestBlastGenomes.rds')
 
 nearestGenomes <- bind_rows(lapply(split(r, r$qname), function(x){
   a <- sort((table(x$region2)/n_distinct(x$sseqid))*100, decreasing = TRUE)
@@ -97,4 +98,54 @@ nearestGenomes <- bind_rows(lapply(split(r, r$qname), function(x){
          genomeHits = p) 
 }))
 
+
+# Find nearest genomes within Philadelphia cohort.
+
+q <- q[! as.character(q@id) %in% 'USA-WA1-2020-TCE|NP-OP|20200328']
+cohortPatientIDs <- unlist(lapply(strsplit(as.character(q@id), '\\|'), '[[', 1))
+
+r2 <- bind_rows(lapply(split(q, 1:length(q)), function(x){
+  patientID <- unlist(str_split(as.character(x@id), '\\|'))[1]
+  patientID <- sub('\\-TCE$', '', patientID)
+  
+  t <- tmpFile()
+  q2 <- q[! cohortPatientIDs %in% patientID]
+  writeFasta(q2, file = paste0(t, '.ref_fasta'))
+  system(paste0(makeblastdb, ' -in ', paste0(t, '.ref_fasta'), ' -dbtype nucl'))
+  
+  writeFasta(x, file = paste0(t, '.query_fasta'))
+  system(paste0(blastn, ' -query ', paste0(t, '.query_fasta'),  ' -db ', paste0(t, '.ref_fasta'), ' -out ', 
+                paste0(t, '.blast'), ' -outfmt 6 -max_target_seqs 1000' ))
+  
+  b <- read.table(paste0(t, '.blast'), sep = '\t', header = FALSE)
+  names(b) <- c('qname', 'sseqid', 'pident', 'length', 'mismatch', 'gapopen', 'qstart', 'qend', 'sstart', 'send', 'evalue', 'bitscore')
+  b$alignmentLength <- b$qend - b$qstart + 1
+  b$alignmentPercent <- (b$alignmentLength / width(x))*100
+  b <- subset(b, alignmentPercent >= minGenomeAlignmentPercentage)
+  
+  minMisMatch <- min(b$mismatch)
+  invisible(file.remove(list.files(pattern = paste0('^',t))))
+  b <- subset(b, mismatch == minMisMatch)
+  b$nUniqueGenomeHits <- n_distinct(as.character(q2[as.character(q2@id) %in% as.character(b$sseqid)]@sread))
+  b
+}))
+
+
+
+
+
+nearestCohortGenomes <- bind_rows(lapply(split(r2, r2$qname), function(x){
+  tibble(subject = x$qname[1], 
+         nGenomeHits = n_distinct(x$sseqid),
+         nUniqueGenomeHits = x$nUniqueGenomeHits[1],
+         nMismatchesPhil = x$mismatch[1], 
+         minPercentCoverage = sprintf("%.1f%%", min(x$alignmentPercent))) 
+}))
+
+
+nearestGenomes <- select(nearestGenomes, subject, patientsymptomOnset, genomesSearched, 
+                         nGenomeHits, nUniqueGenomeHits, nMismatches, nMismatchesPhil, nMismatchesPhilLess, minPercentCoverage, genomeHits)
+
 openxlsx::write.xlsx(nearestGenomes, file = 'summaries/nearestGenomes.xlsx')
+
+
