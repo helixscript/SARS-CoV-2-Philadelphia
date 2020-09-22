@@ -4,424 +4,424 @@ Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
 
 Host:    microb191 (AVX2, FMA3, 188 GB RAM)
 Command: iqtree -ninit 2 -n 2 -me 0.05 -nt 30 -s results/aligned-delim.fasta -m GTR
-Seed:    259934 (Using SPRNG - Scalable Parallel Random Number Generator)
-Time:    Fri Sep 11 15:12:57 2020
+Seed:    133922 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Sep 21 12:39:06 2020
 Kernel:  AVX+FMA - 30 threads (48 CPU cores detected)
 
 Reading alignment file results/aligned-delim.fasta ... Fasta format detected
 Alignment most likely contains DNA/RNA sequences
-Alignment has 363 sequences with 29903 columns, 5451 distinct patterns
-150 parsimony-informative, 369 singleton sites, 29384 constant sites
+Alignment has 363 sequences with 29882 columns, 5432 distinct patterns
+146 parsimony-informative, 354 singleton sites, 29382 constant sites
                                                  Gap/Ambiguity  Composition  p-value
-   1  NC_045512.2                                        0.00%    passed     99.55%
-   2  USA_X_X_CA-SCCPHD-UC134_X_X_2020                  30.94%    passed     81.74%
-   3  USA_X_X_CA-SCCPHD-UC155_X_X_2020                   0.13%    passed    100.00%
-   4  USA_X_X_CA-UCSF-UC33_X_X_2020                      2.63%    passed     99.47%
-   5  Sichuan_X_X_SC-WCH4-287_X_X_2020                   0.00%    passed     99.55%
-   6  Sichuan_X_X_SC-GA-062_X_X_2020                     0.00%    passed     99.56%
-   7  USA_X_X_CA-SCCPHD-UC13_X_X_2020                    0.47%    passed     99.79%
-   8  USA_X_X_CA-SCCPHD-UC143_X_X_2020                  19.20%    passed     79.17%
-   9  Germany_X_X_NRW-03_X_X_2020                        1.38%    passed     99.95%
-  10  Germany_X_X_NRW-06_X_X_2020                        0.40%    passed    100.00%
-  11  USA_X_X_UT-010_X_X_2020                            0.00%    passed     99.38%
-  12  Germany_X_X_NRW-04_X_X_2020                        0.41%    passed     99.99%
-  13  Germany_X_X_NRW-05_X_X_2020                        1.60%    passed     99.97%
-  14  Germany_X_X_NRW-07_X_X_2020                        3.24%    passed     99.95%
-  15  Brazil_X_X_SP-02_X_X_2020                          0.40%    passed     99.99%
-  16  USA_X_X_TX-HMH037_X_X_2020                         1.14%    passed     99.90%
-  17  Italy_X_X_SPL1_X_X_2020                            0.00%    passed     99.55%
-  18  England_X_X_20078003804_X_X_2020                   0.33%    passed     99.97%
-  19  Sweden_X_X_20-02114_X_X_2020                       0.00%    passed     99.62%
-  20  USA_X_X_CA-SCCPHD-UC116_X_X_2020                   5.60%    passed     99.58%
-  21  Belgium_X_X_GHB-03021_X_X_2020                     0.15%    passed     99.99%
-  22  USA_X_X_AZ1_X_X_2020                               0.07%    passed     99.99%
-  23  USA_X_X_FL_5091_X_X_2020                           0.07%    passed     99.99%
-  24  USA_X_X_MN-CDC-0106_X_X_2020                       0.07%    passed    100.00%
-  25  USA_X_X_NY-SURV052_X_X_2020                        0.07%    passed    100.00%
-  26  USA_X_X_CA_2602_X_X_2020                           0.07%    passed     99.99%
-  27  USA_X_X_NE_6605_X_X_2020                           0.07%    passed     99.97%
-  28  USA_X_X_NY-SURV0144_X_X_2020                       0.07%    passed     99.99%
-  29  Jamaica_X_X_JM-CDC-0869_X_X_2020                   0.07%    passed     99.99%
-  30  USA_X_X_OR_2656_X_X_2020                           0.07%    passed     99.99%
-  31  USA_X_X_FL_9590_X_X_2020                           0.07%    passed     99.99%
-  32  USA_X_X_MA_1355_X_X_2020                           0.07%    passed     99.99%
-  33  USA_X_X_NY-SURV097_X_X_2020                        0.07%    passed     99.99%
-  34  USA_X_X_NY-SURV0874_X_X_2020                       0.07%    passed     99.99%
-  35  USA_X_X_NY-SURV0165_X_X_2020                       0.07%    passed     99.99%
-  36  USA_X_X_NY-SURV0166_X_X_2020                       0.07%    passed     99.99%
-  37  USA_X_X_WA_5030_X_X_2020                           0.07%    passed     99.98%
-  38  USA_X_X_CA1_X_X_2020                               0.07%    passed     99.99%
-  39  USA_X_X_FL-CDC-2718_X_X_2020                       0.08%    passed     99.98%
-  40  USA_X_X_FL_9655_X_X_2020                           0.07%    passed     99.99%
-  41  USA_X_X_IN-CDC-2013_X_X_2020                       0.08%    passed     99.98%
-  42  USA_X_X_GA-CDC-2059_X_X_2020                       0.08%    passed     99.99%
-  43  USA_X_X_IL2_X_X_2020                               0.07%    passed     99.98%
-  44  USA_X_X_SC_3571_X_X_2020                           0.07%    passed     99.98%
-  45  USA_X_X_SC_3575_X_X_2020                           0.07%    passed     99.99%
-  46  USA_X_X_SC_6370_X_X_2020                           0.08%    passed     99.99%
-  47  USA_X_X_MN-CDC-0108_X_X_2020                       0.08%    passed     99.99%
-  48  USA_X_X_IL1_X_X_2020                               0.10%    passed     99.97%
-  49  USA_X_X_NV_0052_X_X_2020                           0.07%    passed     99.99%
-  50  France_X_X_IDF0386-islP1_X_X_2020                  0.10%    passed    100.00%
-  51  USA_X_X_CA2_X_X_2020                               0.07%    passed     99.99%
-  52  Singapore_X_X_1_X_X_2020                           0.19%    passed     99.99%
-  53  USA_X_X_CA-SCCPHD-UC149_X_X_2020                   4.60%    passed     89.77%
-  54  Singapore_X_X_3_X_X_2020                           0.20%    passed     99.99%
-  55  Mexico_X_X_Queretaro-InDRE_04_X_X_2020             0.10%    passed    100.00%
-  56  USA_X_X_MI-MDHHS-SC20437_X_X_2020                  0.35%    passed     99.92%
-  57  USA_X_X_VA_6171_X_X_2020                           0.07%    passed     99.98%
-  58  England_X_X_01_X_X_2020                            0.22%    passed     99.96%
-  59  England_X_X_02_X_X_2020                            0.22%    passed     99.95%
-  60  Guangdong_X_X_20SF629_X_X_2020                     0.12%    passed    100.00%
-  61  Malaysia_X_X_MKAK-CL-2020-5047_X_X_2020            0.16%    passed     99.99%
-  62  Shanghai_X_X_SH0009_X_X_2020                       0.22%    passed     99.99%
-  63  Shanghai_X_X_SH0032_X_X_2020                       0.23%    passed     99.99%
-  64  Shanghai_X_X_SH0022_X_X_2020                       0.22%    passed     99.99%
-  65  Shanghai_X_X_SH0126_X_X_2020                       0.22%    passed     99.99%
-  66  Austria_X_X_CeMM0003_X_X_2020                      0.29%    passed     99.98%
-  67  Austria_X_X_CeMM0146_X_X_2020                      0.20%    passed    100.00%
-  68  Austria_X_X_CeMM0143_X_X_2020                      0.21%    passed    100.00%
-  69  USA_X_X_MI-MDHHS-SC20113_X_X_2020                  1.20%    passed     99.85%
-  70  USA_X_X_MI-MDHHS-SC20162_X_X_2020                  0.31%    passed     99.96%
-  71  USA_X_X_FL-CDC-6318_X_X_2020                       0.08%    passed     99.96%
-  72  USA_X_X_GA_1621_X_X_2020                           0.07%    passed     99.98%
-  73  USA_X_X_GA_1299_X_X_2020                           0.07%    passed     99.98%
-  74  USA_X_X_GA_2741_X_X_2020                           0.07%    passed     99.98%
-  75  Canada_X_X_ON_PHL2259_X_X_2020                     0.38%    passed     99.90%
-  76  USA_X_X_FL_1177_X_X_2020                           0.07%    passed     99.98%
-  77  USA_X_X_FL_7169_X_X_2020                           0.07%    passed     99.99%
-  78  USA_X_X_KS_4126_X_X_2020                           0.07%    passed     99.99%
-  79  USA_X_X_TX-CDC-3009_X_X_2020                       0.07%    passed     99.99%
-  80  USA_X_X_IL_0087_X_X_2020                           0.07%    passed     99.98%
-  81  USA_X_X_MD_0026_X_X_2020                           0.07%    passed     99.98%
-  82  USA_X_X_LA-CDC-0757_X_X_2020                       0.07%    passed     99.95%
-  83  USA_X_X_TX-CDC-3008_X_X_2020                       0.07%    passed     99.98%
-  84  USA_X_X_NH_0004_X_X_2020                           0.07%    passed     99.99%
-  85  USA_X_X_NJ-CDC-7300_X_X_2020                       0.07%    passed     99.99%
-  86  USA_X_X_NY-SURV0162_X_X_2020                       0.07%    passed     99.99%
-  87  USA_X_X_NY-SURV0444_X_X_2020                       0.07%    passed     99.99%
-  88  USA_X_X_TX_2967_X_X_2020                           0.09%    passed     99.97%
-  89  USA_X_X_MD-CDC-0025_X_X_2020                       0.08%    passed     99.96%
-  90  USA_X_X_NY-SURV0171_X_X_2020                       0.07%    passed     99.98%
-  91  USA_X_X_NJ_3201_X_X_2020                           0.07%    passed     99.98%
-  92  USA_X_X_NY-SURV0302_X_X_2020                       0.07%    passed     99.97%
-  93  USA_X_X_NY-SURV076_X_X_2020                        0.07%    passed     99.95%
-  94  USA_X_X_NJ_3592_X_X_2020                           0.09%    passed     99.98%
-  95  USA_X_X_UT_8906_X_X_2020                           0.08%    passed     99.97%
-  96  USA_X_X_MD_0027_X_X_2020                           0.09%    passed     99.97%
-  97  USA_X_X_IA_6391_X_X_2020                           0.07%    passed     99.99%
-  98  USA_X_X_RI_0520_X_X_2020                           0.07%    passed     99.99%
-  99  USA_X_X_RI_0556_X_X_2020                           0.07%    passed     99.99%
- 100  USA_X_X_SC_3572_X_X_2020                           0.07%    passed     99.99%
- 101  USA_X_X_LA_0842_X_X_2020                           0.07%    passed     99.95%
- 102  Switzerland_X_X_GE1422_X_X_2020                    0.02%    passed     99.60%
- 103  Austria_X_X_CeMM0147_X_X_2020                      0.26%    passed     99.98%
- 104  Switzerland_X_X_1000477757_X_X_2020                0.10%    passed     99.99%
- 105  Beijing_X_X_DT-travelIT03_X_X_2020                 0.00%    passed     99.59%
- 106  SaudiArabia_X_X_509_X_X_2020                       0.00%    passed     99.44%
- 107  SaudiArabia_X_X_583_X_X_2020                       0.00%    passed     99.60%
- 108  SaudiArabia_X_X_627_X_X_2020                       0.00%    passed     99.54%
- 109  SaudiArabia_X_X_671_X_X_2020                       0.00%    passed     99.54%
- 110  USA_X_X_MD-HP00075_X_X_2020                        0.42%    passed     99.96%
- 111  USA_X_X_TX-HMH035_X_X_2020                         0.40%    passed     99.96%
- 112  SaudiArabia_X_X_518_X_X_2020                       0.00%    passed     99.59%
- 113  SaudiArabia_X_X_562_X_X_2020                       0.00%    passed     99.42%
- 114  SaudiArabia_X_X_578_X_X_2020                       0.00%    passed     99.42%
- 115  USA_X_X_MD-HP00060_X_X_2020                        1.14%    passed     99.81%
- 116  SaudiArabia_X_X_677_X_X_2020                       0.00%    passed     99.62%
- 117  USA_X_X_VA-DCLS-0020_X_X_2020                      0.05%    passed     99.65%
- 118  USA_X_X_CA-SCCPHD-UC187_X_X_2020                   3.32%    passed     99.96%
- 119  Brazil_X_X_SP-14_X_X_2020                          0.18%    passed    100.00%
- 120  Luxembourg_X_X_Lux1_X_X_2020                       0.39%    passed     99.93%
- 121  Netherlands_X_X_NA_17_X_X_2020                     0.39%    passed     99.91%
- 122  Netherlands_X_X_Delft_1363424_X_X_2020             1.86%    passed     99.96%
- 123  Mexico_X_X_EdoMex-InDRE_07_X_X_2020                0.28%    passed     99.96%
- 124  Vietnam_X_X_VNHN_022_X_X_2020                      0.15%    passed     99.99%
- 125  Australia_X_X_NSW01_X_X_2020                       0.40%    passed     99.99%
- 126  Australia_X_X_NSW04_X_X_2020                       0.40%    passed     99.99%
- 127  Australia_X_X_NSW03_X_X_2020                       0.40%    passed     99.99%
- 128  HongKong_X_X_HKU-200723-004_X_X_2020               0.40%    passed     99.99%
- 129  Germany_X_X_BavPat1-ChVir929_X_X_2020              0.40%    passed     99.97%
- 130  USA_X_X_NY-Wadsworth-11330-01_X_X_2020             0.51%    passed     99.95%
- 131  USA_X_X_NY-Wadsworth-11190-01_X_X_2020             0.76%    passed     99.95%
- 132  USA_X_X_NY-Wadsworth-11249-01_X_X_2020             1.01%    passed     99.73%
- 133  USA_X_X_NY-Wadsworth-11245-01_X_X_2020             1.02%    passed     99.79%
- 134  USA_X_X_NY-Wadsworth-11191-01_X_X_2020             0.46%    passed     99.93%
- 135  USA_X_X_NY-Wadsworth-11717-01_X_X_2020             0.33%    passed     99.98%
- 136  USA_X_X_NY-Wadsworth-11735-01_X_X_2020             0.32%    passed     99.98%
- 137  Austria_X_X_CeMM0401_X_X_2020                      0.40%    passed     99.99%
- 138  Spain_X_X_Valencia23_X_X_2020                      5.86%    passed     98.62%
- 139  Spain_X_X_Valencia4_X_X_2020                       1.65%    passed     99.99%
- 140  Chile_X_X_Puerto_Montt_1_X_X_2020                  0.24%    passed    100.00%
- 141  Australia_X_X_NSW2153_X_X_2020                     0.41%    passed     99.95%
- 142  France_X_X_IDF0372_X_X_2020                        0.17%    passed     99.99%
- 143  Thailand_X_X_61_X_X_2020                           0.18%    passed     99.98%
- 144  Thailand_X_X_NIH-162_X_X_2020                      0.21%    passed    100.00%
- 145  Switzerland_X_X_GE5373_X_X_2020                    0.13%    passed    100.00%
- 146  Italy_X_X_INMI5_X_X_2020                           0.37%    passed     99.99%
- 147  Peru_X_X_INS-008_X_X_2020                          1.26%    passed     99.74%
- 148  Peru_X_X_INS-026_X_X_2020                          1.26%    passed     99.63%
- 149  Canada_X_X_ON_ON-VIDO-01-2_X_X_2020                0.25%    passed     99.97%
- 150  HongKong_X_X_VB20017970-2_X_X_2020                 0.23%    passed     99.99%
- 151  Wuhan_X_X_WIV02_X_X_2019                           0.26%    passed     99.99%
- 152  France_X_X_IDF0515_X_X_2020                        0.13%    passed     99.99%
- 153  Japan_X_X_DP0464_X_X_2020                          0.24%    passed     99.98%
- 154  Japan_X_X_DP0588_X_X_2020                          0.23%    passed     99.98%
- 155  Wuhan_X_X_WIV05_X_X_2019                           0.17%    passed     99.99%
- 156  Japan_X_X_DP0764_X_X_2020                          0.10%    passed    100.00%
- 157  Japan_X_X_NA-20-05-1_X_X_2020                      0.08%    passed     99.99%
- 158  Japan_X_X_TY-WK-501_X_X_2020                       0.08%    passed     99.99%
- 159  Japan_X_X_TY-WK-521_X_X_2020                       0.08%    passed     99.99%
- 160  Taiwan_X_X_2_X_X_2020                              0.08%    passed    100.00%
- 161  Germany_X_X_BavPat4-ChVir1019_X_X_2020             0.23%    passed     99.99%
- 162  USA_X_X_MA-MGH-00441_X_X_2020                      0.38%    passed     99.86%
- 163  Germany_X_X_BavPat2-ChVir984-ChVir1017_X_X_2020    0.15%    passed    100.00%
- 164  Nepal_X_X_61_X_X_2020                              0.31%    passed    100.00%
- 165  Thailand_X_X_Bangkok_1716_X_X_2020                 0.13%    passed    100.00%
- 166  Thailand_X_X_SI200040-NT_X_X_2020                  0.33%    passed     99.98%
- 167  Thailand_X_X_SI200383-NT_X_X_2020                  0.31%    passed     99.98%
- 168  Thailand_X_X_SI200478-NST_X_X_2020                 0.23%    passed     99.98%
- 169  Thailand_X_X_SI201712-NT_X_X_2020                  0.29%    passed     99.98%
- 170  Thailand_X_X_SI200468-NT_X_X_2020                  0.25%    passed     99.97%
- 171  Thailand_X_X_SI202620-NT_X_X_2020                  0.23%    passed     99.98%
- 172  Thailand_X_X_SI203285-NT_X_X_2020                  0.28%    passed     99.96%
- 173  Thailand_X_X_SI202872-NT_X_X_2020                  0.78%    passed     99.77%
- 174  Italy_X_X_INMI1-cs_X_X_2020                        0.39%    passed     99.99%
- 175  Japan_X_X_DP0568_X_X_2020                          0.39%    passed     99.99%
- 176  Australia_X_X_VIC03_X_X_2020                       0.05%    passed     99.68%
- 177  HongKong_X_X_VB20024950-2_X_X_2020                 0.37%    passed     99.99%
- 178  Singapore_X_X_8_X_X_2020                           0.48%    passed     99.98%
- 179  France_X_X_IDF0373_X_X_2020                        0.31%    passed    100.00%
- 180  Wuhan_X_X_0126-C106_X_X_2020                       0.23%    passed     99.98%
- 181  Ganzhou_X_X_JX81_X_X_2020                          0.12%    passed     99.90%
- 182  HongKong_X_X_HKU-907a_X_X_2020                     0.12%    passed     99.91%
- 183  HongKong_X_X_HKU-902a_X_X_2020                     0.05%    passed     99.91%
- 184  Taiwan_X_X_4_X_X_2020                              0.04%    passed     99.92%
- 185  HongKong_X_X_HKU-902b_X_X_2020                     0.04%    passed     99.90%
- 186  Thailand_X_X_Nonthaburi_59_X_X_2020                0.05%    passed     99.91%
- 187  Thailand_X_X_Nonthaburi_68_X_X_2020                0.15%    passed     99.99%
- 188  Thailand_X_X_Phuket_247_X_X_2020                   0.12%    passed    100.00%
- 189  HongKong_X_X_HKU-911a_X_X_2020                     0.04%    passed     99.91%
- 190  Vietnam_X_X_19-01S_X_X_2020                        0.04%    passed     99.91%
- 191  Taiwan_X_X_3_X_X_2020                              0.04%    passed     99.93%
- 192  Yunnan_X_X_IVDC-YN-003_X_X_2020                    0.06%    passed     99.95%
- 193  Thailand_X_X_Bangkok_238_X_X_2020                  0.13%    passed    100.00%
- 194  Thailand_X_X_Bangkok_323_X_X_2020                  0.16%    passed     99.99%
- 195  HongKong_X_X_HKU-913a_X_X_2020                     0.04%    passed     99.95%
- 196  Singapore_X_X_7_X_X_2020                           0.04%    passed     99.91%
- 197  Thailand_X_X_Bangkok_269_X_X_2020                  0.06%    passed     99.95%
- 198  Thailand_X_X_Nonthaburi_363_X_X_2020               0.14%    passed    100.00%
- 199  Singapore_X_X_187_X_X_2020                         0.98%    passed     99.91%
- 200  HongKong_X_X_HKU-903a_X_X_2020                     0.04%    passed     99.87%
- 201  Singapore_X_X_466_X_X_2020                         0.80%    passed     99.77%
- 202  Taiwan_X_X_8_X_X_2020                              0.05%    passed     99.94%
- 203  Vietnam_X_X_19-02S_X_X_2020                        0.04%    passed     99.92%
- 204  HongKong_X_X_HKU-001a_X_X_2020                     0.04%    passed     99.90%
- 205  Singapore_X_X_15_X_X_2020                          1.39%    passed     99.71%
- 206  Singapore_X_X_20_X_X_2020                          0.07%    passed     99.95%
- 207  Australia_X_X_QLD01_X_X_2020                       0.20%    passed    100.00%
- 208  Australia_X_X_QLD02_X_X_2020                       0.13%    passed    100.00%
- 209  SouthKorea_X_X_KCDC03_X_X_2020                     0.28%    passed     99.99%
- 210  Malaysia_X_X_MKAK-CL-2020-5096_X_X_2020            0.84%    passed     99.79%
- 211  USA_X_X_WA-S248_X_X_2020                           0.16%    passed     99.99%
- 212  USA_X_X_WA-S57_X_X_2020                            0.14%    passed     99.99%
- 213  USA_X_X_WA-S49_X_X_2020                            0.15%    passed     99.99%
- 214  USA_X_X_WA-S7_X_X_2020                             0.24%    passed     99.99%
- 215  USA_X_X_WA-S90_X_X_2020                            0.15%    passed     99.99%
- 216  Malaysia_X_X_MKAK-CL-2020-6430_X_X_2020            0.15%    passed     99.99%
- 217  USA_X_X_WA-S34_X_X_2020                            0.20%    passed     99.98%
- 218  env_X_X_USA_X_X_FL-UF11_X_X_2020                   0.05%    passed     99.98%
- 219  India_X_X_1-31_X_X_2020                            0.17%    passed     99.99%
- 220  SouthKorea_X_X_KCDC2169_X_X_2020                   0.14%    passed     99.99%
- 221  Taiwan_X_X_NTU01_X_X_2020                          1.44%    passed     99.86%
- 222  USA_X_X_MN-MDH-1273_X_X_2020                       0.20%    passed     99.98%
- 223  USA_X_X_WA-S23_X_X_2020                            0.17%    passed    100.00%
- 224  USA_X_X_WA-S11_X_X_2020                            0.08%    passed    100.00%
- 225  Canada_X_X_BC_37_0-2_X_X_2020                      1.31%    passed     99.94%
- 226  Canada_X_X_BC_69243_X_X_2020                       2.27%    passed    100.00%
- 227  Oman_X_X_RESP-20-1189_X_X_2020                     0.00%    passed     99.45%
- 228  USA_X_X_WA-UW22_X_X_2020                           0.17%    passed     99.99%
- 229  Japan_X_X_DP0803_X_X_2020                          0.45%    passed     99.99%
- 230  Finland_X_X_FIN01032020_X_X_2020                   1.61%    passed     99.79%
- 231  SouthKorea_X_X_KCDC2067_X_X_2020                   0.13%    passed     99.99%
- 232  SouthKorea_X_X_KCDC2077_X_X_2020                   0.15%    passed     99.99%
- 233  Australia_X_X_VIC02_X_X_2020                       1.04%    passed     99.58%
- 234  SouthKorea_X_X_KCDC2045_X_X_2020                   0.05%    passed     99.69%
- 235  SouthKorea_X_X_KCDC2087_X_X_2020                   0.06%    passed     99.61%
- 236  SouthKorea_X_X_KCDC2048_X_X_2020                   0.04%    passed     99.61%
- 237  Australia_X_X_VIC13_X_X_2020                       0.25%    passed     99.81%
- 238  SouthKorea_X_X_KCDC2062_X_X_2020                   0.02%    passed     99.72%
- 239  SouthKorea_X_X_KCDC2002_X_X_2020                   0.06%    passed     99.54%
- 240  Thailand_X_X_Bangkok_580_X_X_2020                  0.05%    passed     99.80%
- 241  USA_X_X_CA-SCCPHD-UC124_X_X_2020                   7.13%    passed     97.12%
- 242  SouthKorea_X_X_KCDC06_X_X_2020                     0.38%    passed     99.93%
- 243  SouthKorea_X_X_KCDC07_X_X_2020                     0.38%    passed     99.92%
- 244  Norway_X_X_1917_X_X_2020                           0.12%    passed     99.99%
- 245  USA_X_X_NY-Wadsworth-10495-01_X_X_2020             0.27%    passed     99.99%
- 246  USA_X_X_NY-Wadsworth-10496-01_X_X_2020             0.27%    passed     99.99%
- 247  USA_X_X_NY-Wadsworth-11291-01_X_X_2020             0.27%    passed     99.99%
- 248  USA_X_X_NY-Wadsworth-11380-01_X_X_2020             0.27%    passed     99.99%
- 249  USA_X_X_NY-Wadsworth-10707-01_X_X_2020             0.27%    passed     99.98%
- 250  USA_X_X_NY-Wadsworth-10528-01_X_X_2020             0.27%    passed     99.99%
- 251  USA_X_X_NY-Wadsworth-11202-01_X_X_2020             0.27%    passed     99.99%
- 252  USA_X_X_NY-Wadsworth-11207-01_X_X_2020             0.27%    passed     99.99%
- 253  USA_X_X_NY-Wadsworth-12883-02_X_X_2020             0.27%    passed     99.98%
- 254  USA_X_X_NY-Wadsworth-10690-01_X_X_2020             0.27%    passed     99.99%
- 255  USA_X_X_NY-PV09407_X_X_2020                        0.60%    passed     99.95%
- 256  USA_X_X_NY-PV09413_X_X_2020                        0.60%    passed     99.95%
- 257  USA_X_X_NY-PV09448_X_X_2020                        3.97%    passed     98.70%
- 258  USA_X_X_MA-MGH-00423_X_X_2020                     15.75%    passed     33.11%
- 259  USA_X_X_WA-UW78_X_X_2020                           0.27%    passed     99.95%
- 260  USA_X_X_WA-S274_X_X_2020                           0.10%    passed    100.00%
- 261  USA_X_X_NY-PV09444_X_X_2020                        0.63%    passed     99.97%
- 262  USA_X_X_WA-UW82_X_X_2020                           0.17%    passed     99.94%
- 263  USA_X_X_WA-UW29_X_X_2020                           0.71%    passed     99.20%
- 264  USA_X_X_WA-UW69_X_X_2020                           0.06%    passed     99.69%
- 265  USA_X_X_WA-UW96_X_X_2020                           0.31%    passed     99.87%
- 266  USA_X_X_WA-UW60_X_X_2020                           0.19%    passed     99.88%
- 267  Australia_X_X_VIC01_X_X_2020                       0.03%    passed     99.48%
- 268  Iceland_X_X_13_X_X_2020                            1.77%    passed     97.89%
- 269  USA_X_X_CA-SCCPHD-UC16_X_X_2020                    0.31%    passed     99.93%
- 270  Brazil_X_X_ES-225_X_X_2020                         0.48%    passed     99.99%
- 271  Greece_X_X_261_32221_X_X_2020                      0.83%    passed     99.98%
- 272  USA_X_X_NY-Wadsworth-10683-01_X_X_2020             0.28%    passed    100.00%
- 273  USA_X_X_NY-Wadsworth-11000-01_X_X_2020             0.27%    passed     99.99%
- 274  SouthKorea_X_X_A2_X_X_2020                         0.12%    passed     99.98%
- 275  Malaysia_X_X_IMR-WC9205_X_X_2020                   0.14%    passed    100.00%
- 276  Malaysia_X_X_IMR-WC9174_X_X_2020                   0.03%    passed    100.00%
- 277  Pakistan_X_X_Gilgit1_X_X_2020                      0.22%    passed     99.97%
- 278  HongKong_X_X_VM20001061-2_X_X_2020                 0.18%    passed     99.98%
- 279  USA_X_X_WA-S30_X_X_2020                            5.99%    passed     97.53%
- 280  USA_X_X_GA-EHC-086H_X_X_2020                       0.29%    passed     99.96%
- 281  USA_X_X_GA-EHC-087I_X_X_2020                       0.29%    passed     99.96%
- 282  USA_X_X_NY-PV09438_X_X_2020                        1.25%    passed     99.60%
- 283  USA_X_X_SC-DHEC-0008_X_X_2020                      0.28%    passed     99.98%
- 284  Australia_X_X_SA01_X_X_2020                        0.48%    passed     99.94%
- 285  Australia_X_X_SAP305_X_X_2020                      0.08%    passed     99.62%
- 286  Australia_X_X_SA04_X_X_2020                        0.89%    passed     99.90%
- 287  HongKong_X_X_HKPU12_2201_X_X_2020                  5.15%    passed     97.99%
- 288  HongKong_X_X_HKPU29_0102_X_X_2020                  0.40%    passed     99.99%
- 289  HongKong_X_X_HKPU33_0202_X_X_2020                  3.16%    passed    100.00%
- 290  HongKong_X_X_HKPU44-0102_X_X_2020                  0.53%    passed     99.98%
- 291  HongKong_X_X_HKPU2_1801_X_X_2020                   3.34%    passed     99.75%
- 292  HongKong_X_X_HKPU61-0202_X_X_2020                  1.36%    passed     99.95%
- 293  HongKong_X_X_HKU-200723-002_X_X_2020               0.41%    passed     99.99%
- 294  Japan_X_X_PG-0091_X_X_2020                         0.38%    passed    100.00%
- 295  Malaysia_X_X_IMR_WC085_X_X_2020                    0.08%    passed     99.96%
- 296  Malaysia_X_X_IMR_WC119_X_X_2020                    0.78%    passed     99.84%
- 297  Thailand_X_X_MUMT-3_X_X_2020                       0.26%    passed    100.00%
- 298  Thailand_X_X_SI202769-NT_X_X_2020                  0.70%    passed     99.91%
- 299  Panama_X_X_333271_X_X_2020                         2.73%    passed     97.55%
- 300  USA_X_X_NY2-PV08100_X_X_2020                       0.48%    passed     99.99%
- 301  India_X_X_1115_X_X_2020                            0.13%    passed     99.98%
- 302  Luxembourg_X_X_LNS0000001_X_X_2020                 0.34%    passed     99.94%
- 303  USA_X_X_MI-MDHHS-SC20002_X_X_2020                  1.53%    passed     99.89%
- 304  England_X_X_20099072904_X_X_2020                   5.05%    passed     91.89%
- 305  Iceland_X_X_79_X_X_2020                            0.53%    passed     99.86%
- 306  Spain_X_X_Canarias201939_X_X_2020                  0.23%    passed    100.00%
- 307  USA_X_X_MD-HP00082_X_X_2020                        1.62%    passed     99.99%
- 308  England_X_X_20088028304_X_X_2020                   0.42%    passed     99.91%
- 309  England_X_X_20100001304_X_X_2020                   5.82%    passed     90.82%
- 310  England_X_X_20100121007_X_X_2020                   0.36%    passed     99.97%
- 311  HongKong_X_X_VM20002868_X_X_2020                   0.46%    passed     99.97%
- 312  Wuhan_X_X_HB-WH1-129_X_X_2020                      0.00%    passed     99.60%
- 313  USA_X_X_MI-MDHHS-SC20004_X_X_2020                  3.66%    passed     99.59%
- 314  USA_X_X_SC-DHEC-0001_X_X_2020                      0.35%    passed     99.98%
- 315  Croatia_X_X_ZG-297-20_X_X_2020                     0.03%    passed     99.42%
- 316  USA_X_X_MI-MDHHS-SC20438_X_X_2020                  1.85%    passed     99.89%
- 317  USA_X_X_MI-MDHHS-SC20359_X_X_2020                  1.90%    passed     99.89%
- 318  India_X_X_1-27_X_X_2020                            0.16%    passed     99.99%
- 319  France_X_X_RA739_X_X_2020                          0.50%    passed     99.99%
- 320  Shanghai_X_X_SH0035_X_X_2020                       2.94%    passed     93.59%
- 321  USA_X_X_WA-UW42_X_X_2020                           0.39%    passed     99.82%
- 322  USA_X_X_CA6_X_X_2020                               0.15%    passed     99.96%
- 323  USA_X_X_NY-SURV0175_X_X_2020                       0.10%    passed     99.99%
- 324  USA_X_X_NY-SURV0592_X_X_2020                       0.08%    passed     99.99%
- 325  USA_X_X_MDH-5875_X_X_2020                          2.53%    passed     95.87%
- 326  Jiangsu_X_X_IVDC-JS-001_X_X_2020                   0.29%    passed     99.87%
- 327  Panama_X_X_328941_X_X_2020                         2.28%    passed     98.04%
- 328  Panama_X_X_329547_X_X_2020                         2.18%    passed     97.68%
- 329  Panama_X_X_329108_X_X_2020                         2.85%    passed     96.26%
- 330  USA_X_X_MN5-MDH5_X_X_2020                          0.42%    passed     99.98%
- 331  Thailand_X_X_Bangkok-CONI-0106_X_X_2020            0.83%    passed     99.71%
- 332  USA_X_X_MN4-MDH4_X_X_2020                          1.03%    passed     99.94%
- 333  Spain_X_X_PV-000805_X_X_2020                       0.24%    passed     99.51%
- 334  Spain_X_X_Valencia266_X_X_2020                     1.17%    passed     99.74%
- 335  USA_X_X_WA-UW71_X_X_2020                           0.15%    passed     99.61%
- 336  USA_X_X_NY-PV09442_X_X_2020                        0.71%    passed     99.96%
- 337  Panama_X_X_328710_X_X_2020                         4.53%    passed     94.26%
- 338  Wuhan_X_X_WHUH020_X_X_2020                         0.75%    passed     99.71%
- 339  USA_X_X_CA-SCCPHD-UC128_X_X_2020                  11.51%    passed     64.74%
- 340  USA_X_X_MA-MGH-00442_X_X_2020                      1.01%    passed     99.78%
- 341  USA_X_X_CA-SCCPHD-UC135_X_X_2020                  27.55%    passed     58.44%
- 342  USA_X_X_CA-SCCPHD-UC139_X_X_2020                   1.69%    passed     99.55%
- 343  England_X_X_20102088002_X_X_2020                   1.94%    passed     99.72%
- 344  HongKong_X_X_HKPU73-0802_X_X_2020                  2.27%    passed     99.99%
- 345  USA_X_X_CT-Yale-003_X_X_2020                      10.65%    passed     88.30%
- 346  USA_X_X_MDH-5622_X_X_2020                          9.07%    passed     57.77%
- 347  USA_X_X_MDH-6612_X_X_2020                          1.53%    passed     99.49%
- 348  USA_X_X_MDH-6572_X_X_2020                          2.11%    passed     96.00%
- 349  USA_X_X_MDH-7590_X_X_2020                          4.49%    passed     90.83%
- 350  USA_X_X_MDH-5653_X_X_2020                          3.79%    passed     93.58%
- 351  USA_X_X_MDH-6339_X_X_2020                          4.90%    passed     94.13%
- 352  Wales_X_X_PHWC-2C8E8_X_X_2020                      4.03%    passed     99.95%
- 353  USA_X_X_FL-BPHL-0139_X_X_2020                      4.24%    passed     98.62%
- 354  USA_X_X_FL-BPHL-0141_X_X_2020                      3.96%    passed     98.84%
- 355  USA_X_X_CA-SCCPHD-UC114_X_X_2020                  18.71%    passed     80.17%
- 356  USA_X_X_CA-SCCPHD-UC109_X_X_2020                   5.44%    passed     99.95%
- 357  USA_X_X_NY-NYU-VC-002_X_X_2020                     5.44%    passed     98.44%
- 358  USA_X_X_CA-SCCPHD-UC125_X_X_2020                   7.70%    passed     92.50%
- 359  Thailand_X_X_NIH-190_X_X_2020                      7.40%    passed     91.27%
- 360  USA_X_X_FL-BPHL-0537_X_X_2020                      7.63%    passed     94.30%
- 361  USA_X_X_NY-NYUMC1_X_X_2020                        16.13%    passed     33.91%
- 362  USA_X_X_WA-S4_X_X_2020                            34.16%    passed     52.74%
- 363  USA_X_X_CA-CDPH-UC25_X_X_2020                     23.01%    passed     95.99%
-****  TOTAL                                              1.30%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+   1  MN985325.1                                         0.00%    passed     99.97%
+   2  USA_X_X_NY-SURV052_X_X_2020                        0.00%    passed     99.99%
+   3  Belgium_X_X_GHB-03021_X_X_2020                     0.08%    passed     99.98%
+   4  USA_X_X_FL_5091_X_X_2020                           0.00%    passed     99.99%
+   5  USA_X_X_AZ1_X_X_2020                               0.00%    passed     99.97%
+   6  USA_X_X_MN-CDC-0106_X_X_2020                       0.00%    passed     99.99%
+   7  USA_X_X_CA_2602_X_X_2020                           0.00%    passed     99.97%
+   8  USA_X_X_NE_6605_X_X_2020                           0.00%    passed     99.95%
+   9  USA_X_X_NY-SURV0144_X_X_2020                       0.00%    passed     99.98%
+  10  Jamaica_X_X_JM-CDC-0869_X_X_2020                   0.00%    passed     99.97%
+  11  USA_X_X_OR_2656_X_X_2020                           0.00%    passed     99.97%
+  12  USA_X_X_FL_9590_X_X_2020                           0.00%    passed     99.98%
+  13  USA_X_X_MA_1355_X_X_2020                           0.00%    passed     99.97%
+  14  USA_X_X_NY-SURV097_X_X_2020                        0.00%    passed     99.97%
+  15  USA_X_X_NY-SURV0874_X_X_2020                       0.00%    passed     99.97%
+  16  USA_X_X_NY-SURV0165_X_X_2020                       0.00%    passed     99.98%
+  17  USA_X_X_NY-SURV0166_X_X_2020                       0.00%    passed     99.98%
+  18  USA_X_X_WA_5030_X_X_2020                           0.00%    passed     99.96%
+  19  USA_X_X_CA1_X_X_2020                               0.00%    passed     99.97%
+  20  USA_X_X_FL-CDC-2718_X_X_2020                       0.01%    passed     99.97%
+  21  USA_X_X_FL_9655_X_X_2020                           0.00%    passed     99.97%
+  22  USA_X_X_IN-CDC-2013_X_X_2020                       0.01%    passed     99.96%
+  23  USA_X_X_GA-CDC-2059_X_X_2020                       0.01%    passed     99.97%
+  24  USA_X_X_IL2_X_X_2020                               0.00%    passed     99.96%
+  25  USA_X_X_SC_3571_X_X_2020                           0.00%    passed     99.96%
+  26  USA_X_X_SC_3575_X_X_2020                           0.00%    passed     99.97%
+  27  USA_X_X_SC_6370_X_X_2020                           0.01%    passed     99.97%
+  28  USA_X_X_MN-CDC-0108_X_X_2020                       0.01%    passed     99.97%
+  29  USA_X_X_IL1_X_X_2020                               0.03%    passed     99.94%
+  30  USA_X_X_CA-SCCPHD-UC116_X_X_2020                   5.54%    passed     99.68%
+  31  USA_X_X_NV_0052_X_X_2020                           0.00%    passed     99.98%
+  32  USA_X_X_VA_6171_X_X_2020                           0.00%    passed     99.96%
+  33  Mexico_X_X_Queretaro-InDRE_04_X_X_2020             0.03%    passed    100.00%
+  34  USA_X_X_MI-MDHHS-SC20437_X_X_2020                  0.28%    passed     99.95%
+  35  France_X_X_IDF0386-islP1_X_X_2020                  0.03%    passed    100.00%
+  36  USA_X_X_CA2_X_X_2020                               0.00%    passed     99.97%
+  37  Singapore_X_X_1_X_X_2020                           0.12%    passed    100.00%
+  38  USA_X_X_CA-SCCPHD-UC149_X_X_2020                   4.53%    passed     89.90%
+  39  Singapore_X_X_3_X_X_2020                           0.13%    passed    100.00%
+  40  Guangdong_X_X_20SF629_X_X_2020                     0.05%    passed    100.00%
+  41  England_X_X_01_X_X_2020                            0.15%    passed     99.97%
+  42  England_X_X_02_X_X_2020                            0.15%    passed     99.97%
+  43  Italy_X_X_INMI1-cs_X_X_2020                        0.32%    passed    100.00%
+  44  Japan_X_X_DP0568_X_X_2020                          0.32%    passed    100.00%
+  45  Australia_X_X_VIC03_X_X_2020                       0.05%    passed     99.99%
+  46  Beijing_X_X_DT-travelIT03_X_X_2020                 0.00%    passed     99.97%
+  47  Brazil_X_X_SP-02_X_X_2020                          0.33%    passed    100.00%
+  48  USA_X_X_TX-HMH037_X_X_2020                         1.07%    passed     99.93%
+  49  Italy_X_X_SPL1_X_X_2020                            0.00%    passed     99.97%
+  50  England_X_X_20078003804_X_X_2020                   0.26%    passed     99.99%
+  51  Sweden_X_X_20-02114_X_X_2020                       0.00%    passed     99.98%
+  52  Germany_X_X_NRW-03_X_X_2020                        1.31%    passed     99.97%
+  53  Germany_X_X_NRW-06_X_X_2020                        0.33%    passed    100.00%
+  54  USA_X_X_UT-010_X_X_2020                            0.00%    passed     99.94%
+  55  Germany_X_X_NRW-04_X_X_2020                        0.34%    passed    100.00%
+  56  Germany_X_X_NRW-05_X_X_2020                        1.53%    passed     99.97%
+  57  Germany_X_X_NRW-07_X_X_2020                        3.18%    passed     99.94%
+  58  Sichuan_X_X_SC-WCH4-287_X_X_2020                   0.00%    passed     99.97%
+  59  USA_X_X_CA-SCCPHD-UC134_X_X_2020                  30.89%    passed     82.40%
+  60  USA_X_X_CA-SCCPHD-UC155_X_X_2020                   0.06%    passed    100.00%
+  61  Sichuan_X_X_SC-GA-062_X_X_2020                     0.00%    passed     99.97%
+  62  USA_X_X_CA-SCCPHD-UC13_X_X_2020                    0.45%    passed     99.96%
+  63  USA_X_X_CA-SCCPHD-UC143_X_X_2020                  19.15%    passed     80.01%
+  64  USA_X_X_CA-SCCPHD-UC124_X_X_2020                   7.11%    passed     97.50%
+  65  SaudiArabia_X_X_509_X_X_2020                       0.00%    passed     99.92%
+  66  SaudiArabia_X_X_583_X_X_2020                       0.00%    passed     99.96%
+  67  SaudiArabia_X_X_627_X_X_2020                       0.00%    passed     99.95%
+  68  SaudiArabia_X_X_671_X_X_2020                       0.00%    passed     99.95%
+  69  USA_X_X_MD-HP00075_X_X_2020                        0.35%    passed     99.97%
+  70  USA_X_X_TX-HMH035_X_X_2020                         0.33%    passed     99.97%
+  71  SaudiArabia_X_X_518_X_X_2020                       0.00%    passed     99.95%
+  72  SaudiArabia_X_X_562_X_X_2020                       0.00%    passed     99.91%
+  73  SaudiArabia_X_X_578_X_X_2020                       0.00%    passed     99.88%
+  74  USA_X_X_MD-HP00060_X_X_2020                        1.07%    passed     99.85%
+  75  SaudiArabia_X_X_677_X_X_2020                       0.00%    passed     99.97%
+  76  USA_X_X_VA-DCLS-0020_X_X_2020                      0.05%    passed     99.98%
+  77  England_X_X_20100121007_X_X_2020                   0.29%    passed     99.98%
+  78  Austria_X_X_CeMM0003_X_X_2020                      0.22%    passed     99.99%
+  79  Austria_X_X_CeMM0146_X_X_2020                      0.13%    passed    100.00%
+  80  Austria_X_X_CeMM0143_X_X_2020                      0.14%    passed    100.00%
+  81  USA_X_X_MI-MDHHS-SC20113_X_X_2020                  1.13%    passed     99.89%
+  82  USA_X_X_MI-MDHHS-SC20162_X_X_2020                  0.24%    passed     99.98%
+  83  USA_X_X_FL-CDC-6318_X_X_2020                       0.01%    passed     99.94%
+  84  USA_X_X_GA_1621_X_X_2020                           0.00%    passed     99.96%
+  85  USA_X_X_GA_1299_X_X_2020                           0.00%    passed     99.96%
+  86  USA_X_X_GA_2741_X_X_2020                           0.00%    passed     99.95%
+  87  Canada_X_X_ON_PHL2259_X_X_2020                     0.31%    passed     99.93%
+  88  USA_X_X_FL_1177_X_X_2020                           0.00%    passed     99.96%
+  89  USA_X_X_FL_7169_X_X_2020                           0.00%    passed     99.97%
+  90  USA_X_X_KS_4126_X_X_2020                           0.00%    passed     99.97%
+  91  USA_X_X_TX-CDC-3009_X_X_2020                       0.00%    passed     99.97%
+  92  USA_X_X_IL_0087_X_X_2020                           0.00%    passed     99.96%
+  93  USA_X_X_MD_0026_X_X_2020                           0.00%    passed     99.97%
+  94  USA_X_X_LA-CDC-0757_X_X_2020                       0.00%    passed     99.93%
+  95  USA_X_X_TX-CDC-3008_X_X_2020                       0.00%    passed     99.96%
+  96  USA_X_X_NH_0004_X_X_2020                           0.00%    passed     99.97%
+  97  USA_X_X_NJ-CDC-7300_X_X_2020                       0.00%    passed     99.98%
+  98  USA_X_X_NY-SURV0162_X_X_2020                       0.00%    passed     99.97%
+  99  USA_X_X_NY-SURV0444_X_X_2020                       0.00%    passed     99.97%
+ 100  USA_X_X_TX_2967_X_X_2020                           0.02%    passed     99.94%
+ 101  USA_X_X_MD-CDC-0025_X_X_2020                       0.01%    passed     99.94%
+ 102  USA_X_X_NY-SURV0171_X_X_2020                       0.00%    passed     99.97%
+ 103  USA_X_X_NJ_3201_X_X_2020                           0.00%    passed     99.97%
+ 104  USA_X_X_NY-SURV0302_X_X_2020                       0.00%    passed     99.95%
+ 105  USA_X_X_NY-SURV076_X_X_2020                        0.00%    passed     99.93%
+ 106  USA_X_X_NJ_3592_X_X_2020                           0.02%    passed     99.96%
+ 107  USA_X_X_UT_8906_X_X_2020                           0.01%    passed     99.95%
+ 108  USA_X_X_MD_0027_X_X_2020                           0.02%    passed     99.95%
+ 109  USA_X_X_IA_6391_X_X_2020                           0.00%    passed     99.98%
+ 110  USA_X_X_RI_0520_X_X_2020                           0.00%    passed     99.97%
+ 111  USA_X_X_RI_0556_X_X_2020                           0.00%    passed     99.98%
+ 112  USA_X_X_SC_3572_X_X_2020                           0.00%    passed     99.99%
+ 113  USA_X_X_LA_0842_X_X_2020                           0.00%    passed     99.94%
+ 114  Switzerland_X_X_GE1422_X_X_2020                    0.02%    passed     99.98%
+ 115  Austria_X_X_CeMM0147_X_X_2020                      0.19%    passed     99.98%
+ 116  Switzerland_X_X_1000477757_X_X_2020                0.03%    passed     99.99%
+ 117  SouthKorea_X_X_KCDC2045_X_X_2020                   0.05%    passed     99.99%
+ 118  SouthKorea_X_X_KCDC2087_X_X_2020                   0.06%    passed     99.98%
+ 119  SouthKorea_X_X_KCDC2048_X_X_2020                   0.04%    passed     99.98%
+ 120  Brazil_X_X_SP-14_X_X_2020                          0.11%    passed    100.00%
+ 121  Luxembourg_X_X_Lux1_X_X_2020                       0.32%    passed     99.95%
+ 122  Netherlands_X_X_NA_17_X_X_2020                     0.32%    passed     99.93%
+ 123  Netherlands_X_X_Delft_1363424_X_X_2020             1.79%    passed     99.93%
+ 124  Mexico_X_X_EdoMex-InDRE_07_X_X_2020                0.21%    passed     99.98%
+ 125  Vietnam_X_X_VNHN_022_X_X_2020                      0.08%    passed    100.00%
+ 126  Australia_X_X_NSW01_X_X_2020                       0.33%    passed     99.99%
+ 127  Australia_X_X_NSW04_X_X_2020                       0.33%    passed     99.99%
+ 128  Australia_X_X_NSW03_X_X_2020                       0.33%    passed    100.00%
+ 129  HongKong_X_X_HKU-200723-004_X_X_2020               0.33%    passed    100.00%
+ 130  Germany_X_X_BavPat1-ChVir929_X_X_2020              0.33%    passed     99.98%
+ 131  USA_X_X_NY-Wadsworth-11330-01_X_X_2020             0.44%    passed     99.96%
+ 132  USA_X_X_NY-Wadsworth-11190-01_X_X_2020             0.69%    passed     99.95%
+ 133  USA_X_X_NY-Wadsworth-11249-01_X_X_2020             0.94%    passed     99.69%
+ 134  USA_X_X_NY-Wadsworth-11245-01_X_X_2020             0.95%    passed     99.75%
+ 135  USA_X_X_NY-Wadsworth-11191-01_X_X_2020             0.39%    passed     99.96%
+ 136  USA_X_X_NY-Wadsworth-11717-01_X_X_2020             0.26%    passed     99.99%
+ 137  USA_X_X_NY-Wadsworth-11735-01_X_X_2020             0.25%    passed     99.99%
+ 138  Austria_X_X_CeMM0401_X_X_2020                      0.33%    passed     99.99%
+ 139  Spain_X_X_Valencia23_X_X_2020                      5.80%    passed     98.31%
+ 140  Spain_X_X_Valencia4_X_X_2020                       1.58%    passed     99.99%
+ 141  Chile_X_X_Puerto_Montt_1_X_X_2020                  0.17%    passed    100.00%
+ 142  Australia_X_X_NSW2153_X_X_2020                     0.34%    passed     99.97%
+ 143  France_X_X_IDF0372_X_X_2020                        0.10%    passed     99.99%
+ 144  Thailand_X_X_61_X_X_2020                           0.11%    passed     99.99%
+ 145  Thailand_X_X_NIH-162_X_X_2020                      0.14%    passed    100.00%
+ 146  Switzerland_X_X_GE5373_X_X_2020                    0.06%    passed    100.00%
+ 147  Italy_X_X_INMI5_X_X_2020                           0.30%    passed    100.00%
+ 148  Peru_X_X_INS-008_X_X_2020                          1.19%    passed     99.77%
+ 149  Peru_X_X_INS-026_X_X_2020                          1.19%    passed     99.66%
+ 150  Canada_X_X_ON_ON-VIDO-01-2_X_X_2020                0.18%    passed     99.99%
+ 151  HongKong_X_X_VB20017970-2_X_X_2020                 0.16%    passed    100.00%
+ 152  Wuhan_X_X_WIV02_X_X_2019                           0.19%    passed    100.00%
+ 153  France_X_X_IDF0515_X_X_2020                        0.06%    passed    100.00%
+ 154  Japan_X_X_DP0464_X_X_2020                          0.17%    passed     99.99%
+ 155  Japan_X_X_DP0588_X_X_2020                          0.16%    passed     99.99%
+ 156  Wuhan_X_X_WIV05_X_X_2019                           0.10%    passed     99.99%
+ 157  Japan_X_X_DP0764_X_X_2020                          0.03%    passed    100.00%
+ 158  Japan_X_X_NA-20-05-1_X_X_2020                      0.01%    passed     99.98%
+ 159  Japan_X_X_TY-WK-501_X_X_2020                       0.01%    passed     99.98%
+ 160  Japan_X_X_TY-WK-521_X_X_2020                       0.01%    passed     99.98%
+ 161  Taiwan_X_X_2_X_X_2020                              0.01%    passed     99.99%
+ 162  Germany_X_X_BavPat4-ChVir1019_X_X_2020             0.16%    passed    100.00%
+ 163  USA_X_X_MA-MGH-00441_X_X_2020                      0.31%    passed     99.91%
+ 164  Germany_X_X_BavPat2-ChVir984-ChVir1017_X_X_2020    0.08%    passed    100.00%
+ 165  Nepal_X_X_61_X_X_2020                              0.24%    passed    100.00%
+ 166  Thailand_X_X_Bangkok_1716_X_X_2020                 0.06%    passed    100.00%
+ 167  Thailand_X_X_SI200040-NT_X_X_2020                  0.26%    passed     99.99%
+ 168  Thailand_X_X_SI200383-NT_X_X_2020                  0.24%    passed     99.99%
+ 169  Thailand_X_X_SI200478-NST_X_X_2020                 0.16%    passed     99.99%
+ 170  Thailand_X_X_SI201712-NT_X_X_2020                  0.22%    passed     99.99%
+ 171  Thailand_X_X_SI200468-NT_X_X_2020                  0.18%    passed     99.98%
+ 172  Thailand_X_X_SI202620-NT_X_X_2020                  0.16%    passed     99.99%
+ 173  Thailand_X_X_SI203285-NT_X_X_2020                  0.21%    passed     99.98%
+ 174  Thailand_X_X_SI202872-NT_X_X_2020                  0.71%    passed     99.80%
+ 175  Norway_X_X_1917_X_X_2020                           0.05%    passed    100.00%
+ 176  USA_X_X_NY-Wadsworth-10495-01_X_X_2020             0.20%    passed    100.00%
+ 177  USA_X_X_NY-Wadsworth-10496-01_X_X_2020             0.20%    passed     99.99%
+ 178  USA_X_X_NY-Wadsworth-11291-01_X_X_2020             0.20%    passed     99.99%
+ 179  USA_X_X_NY-Wadsworth-11380-01_X_X_2020             0.20%    passed     99.99%
+ 180  USA_X_X_NY-Wadsworth-10707-01_X_X_2020             0.20%    passed     99.99%
+ 181  USA_X_X_NY-Wadsworth-10528-01_X_X_2020             0.20%    passed     99.99%
+ 182  USA_X_X_NY-Wadsworth-11202-01_X_X_2020             0.20%    passed     99.99%
+ 183  USA_X_X_NY-Wadsworth-11207-01_X_X_2020             0.20%    passed    100.00%
+ 184  USA_X_X_NY-Wadsworth-12883-02_X_X_2020             0.20%    passed     99.99%
+ 185  USA_X_X_NY-Wadsworth-10690-01_X_X_2020             0.20%    passed     99.99%
+ 186  USA_X_X_NY-PV09407_X_X_2020                        0.53%    passed     99.97%
+ 187  USA_X_X_NY-PV09413_X_X_2020                        0.53%    passed     99.96%
+ 188  USA_X_X_NY-PV09448_X_X_2020                        3.91%    passed     98.83%
+ 189  USA_X_X_MA-MGH-00423_X_X_2020                     15.70%    passed     33.08%
+ 190  USA_X_X_WA-UW78_X_X_2020                           0.20%    passed     99.97%
+ 191  USA_X_X_WA-S274_X_X_2020                           0.03%    passed     99.99%
+ 192  USA_X_X_NY-PV09444_X_X_2020                        0.56%    passed     99.98%
+ 193  USA_X_X_WA-UW82_X_X_2020                           0.13%    passed     99.96%
+ 194  France_X_X_IDF0373_X_X_2020                        0.24%    passed    100.00%
+ 195  HongKong_X_X_VB20024950-2_X_X_2020                 0.30%    passed     99.99%
+ 196  Singapore_X_X_8_X_X_2020                           0.41%    passed     99.99%
+ 197  Australia_X_X_QLD01_X_X_2020                       0.13%    passed    100.00%
+ 198  Australia_X_X_QLD02_X_X_2020                       0.06%    passed    100.00%
+ 199  SouthKorea_X_X_KCDC03_X_X_2020                     0.21%    passed    100.00%
+ 200  Malaysia_X_X_MKAK-CL-2020-5096_X_X_2020            0.77%    passed     99.74%
+ 201  USA_X_X_WA-S248_X_X_2020                           0.09%    passed    100.00%
+ 202  USA_X_X_WA-S57_X_X_2020                            0.07%    passed    100.00%
+ 203  USA_X_X_WA-S49_X_X_2020                            0.08%    passed    100.00%
+ 204  USA_X_X_WA-S7_X_X_2020                             0.17%    passed    100.00%
+ 205  USA_X_X_WA-S90_X_X_2020                            0.08%    passed    100.00%
+ 206  Malaysia_X_X_MKAK-CL-2020-6430_X_X_2020            0.08%    passed     99.99%
+ 207  USA_X_X_WA-S34_X_X_2020                            0.13%    passed     99.99%
+ 208  env_X_X_USA_X_X_FL-UF11_X_X_2020                   0.00%    passed     99.99%
+ 209  India_X_X_1-31_X_X_2020                            0.10%    passed    100.00%
+ 210  SouthKorea_X_X_KCDC2169_X_X_2020                   0.07%    passed     99.99%
+ 211  Taiwan_X_X_NTU01_X_X_2020                          1.37%    passed     99.83%
+ 212  USA_X_X_MN-MDH-1273_X_X_2020                       0.13%    passed     99.99%
+ 213  USA_X_X_WA-S23_X_X_2020                            0.10%    passed    100.00%
+ 214  USA_X_X_WA-S11_X_X_2020                            0.01%    passed     99.99%
+ 215  Ganzhou_X_X_JX81_X_X_2020                          0.08%    passed     99.97%
+ 216  HongKong_X_X_HKU-907a_X_X_2020                     0.08%    passed     99.97%
+ 217  HongKong_X_X_HKU-902a_X_X_2020                     0.01%    passed     99.97%
+ 218  Taiwan_X_X_4_X_X_2020                              0.00%    passed     99.98%
+ 219  HongKong_X_X_HKU-902b_X_X_2020                     0.00%    passed     99.97%
+ 220  Thailand_X_X_Nonthaburi_59_X_X_2020                0.01%    passed     99.97%
+ 221  Thailand_X_X_Nonthaburi_68_X_X_2020                0.08%    passed    100.00%
+ 222  Thailand_X_X_Phuket_247_X_X_2020                   0.05%    passed    100.00%
+ 223  HongKong_X_X_HKU-911a_X_X_2020                     0.00%    passed     99.97%
+ 224  Vietnam_X_X_19-01S_X_X_2020                        0.00%    passed     99.97%
+ 225  Taiwan_X_X_3_X_X_2020                              0.00%    passed     99.97%
+ 226  Yunnan_X_X_IVDC-YN-003_X_X_2020                    0.02%    passed     99.99%
+ 227  Thailand_X_X_Bangkok_238_X_X_2020                  0.06%    passed    100.00%
+ 228  Thailand_X_X_Bangkok_323_X_X_2020                  0.09%    passed    100.00%
+ 229  HongKong_X_X_HKU-913a_X_X_2020                     0.00%    passed     99.99%
+ 230  Singapore_X_X_7_X_X_2020                           0.00%    passed     99.97%
+ 231  Thailand_X_X_Bangkok_269_X_X_2020                  0.02%    passed     99.99%
+ 232  Thailand_X_X_Nonthaburi_363_X_X_2020               0.07%    passed    100.00%
+ 233  Singapore_X_X_187_X_X_2020                         0.94%    passed     99.95%
+ 234  HongKong_X_X_HKU-903a_X_X_2020                     0.00%    passed     99.95%
+ 235  Singapore_X_X_466_X_X_2020                         0.76%    passed     99.88%
+ 236  Taiwan_X_X_8_X_X_2020                              0.01%    passed     99.99%
+ 237  Vietnam_X_X_19-02S_X_X_2020                        0.00%    passed     99.98%
+ 238  HongKong_X_X_HKU-001a_X_X_2020                     0.00%    passed     99.97%
+ 239  Singapore_X_X_15_X_X_2020                          1.36%    passed     99.82%
+ 240  Singapore_X_X_20_X_X_2020                          0.02%    passed     99.99%
+ 241  Thailand_X_X_Bangkok_580_X_X_2020                  0.04%    passed     99.99%
+ 242  Malaysia_X_X_MKAK-CL-2020-5047_X_X_2020            0.09%    passed     99.99%
+ 243  Shanghai_X_X_SH0009_X_X_2020                       0.15%    passed    100.00%
+ 244  Shanghai_X_X_SH0032_X_X_2020                       0.16%    passed    100.00%
+ 245  Shanghai_X_X_SH0022_X_X_2020                       0.15%    passed    100.00%
+ 246  Shanghai_X_X_SH0126_X_X_2020                       0.15%    passed     99.99%
+ 247  Wuhan_X_X_0126-C106_X_X_2020                       0.16%    passed     99.99%
+ 248  Shanghai_X_X_SH0035_X_X_2020                       2.87%    passed     93.18%
+ 249  Canada_X_X_BC_37_0-2_X_X_2020                      1.24%    passed     99.93%
+ 250  Canada_X_X_BC_69243_X_X_2020                       2.20%    passed    100.00%
+ 251  Oman_X_X_RESP-20-1189_X_X_2020                     0.00%    passed     99.95%
+ 252  USA_X_X_WA-UW22_X_X_2020                           0.14%    passed    100.00%
+ 253  Australia_X_X_VIC02_X_X_2020                       1.04%    passed     99.97%
+ 254  Australia_X_X_VIC13_X_X_2020                       0.25%    passed     99.99%
+ 255  SouthKorea_X_X_KCDC2062_X_X_2020                   0.02%    passed     99.99%
+ 256  USA_X_X_CT-Yale-003_X_X_2020                      10.66%    passed     93.18%
+ 257  SouthKorea_X_X_KCDC2002_X_X_2020                   0.06%    passed     99.97%
+ 258  Japan_X_X_DP0803_X_X_2020                          0.38%    passed     99.99%
+ 259  Pakistan_X_X_Gilgit1_X_X_2020                      0.15%    passed     99.98%
+ 260  Australia_X_X_SA01_X_X_2020                        0.41%    passed     99.95%
+ 261  Australia_X_X_SAP305_X_X_2020                      0.08%    passed     99.98%
+ 262  Australia_X_X_SA04_X_X_2020                        0.82%    passed     99.92%
+ 263  USA_X_X_GA-EHC-086H_X_X_2020                       0.22%    passed     99.98%
+ 264  USA_X_X_GA-EHC-087I_X_X_2020                       0.22%    passed     99.98%
+ 265  USA_X_X_NY-PV09438_X_X_2020                        1.18%    passed     99.62%
+ 266  USA_X_X_SC-DHEC-0008_X_X_2020                      0.21%    passed     99.99%
+ 267  HongKong_X_X_VM20001061-2_X_X_2020                 0.11%    passed     99.99%
+ 268  USA_X_X_WA-S30_X_X_2020                            5.92%    passed     97.57%
+ 269  Malaysia_X_X_IMR-WC9205_X_X_2020                   0.07%    passed    100.00%
+ 270  Brazil_X_X_ES-225_X_X_2020                         0.41%    passed    100.00%
+ 271  Finland_X_X_FIN01032020_X_X_2020                   1.54%    passed     99.80%
+ 272  SouthKorea_X_X_KCDC2067_X_X_2020                   0.06%    passed     99.99%
+ 273  SouthKorea_X_X_KCDC2077_X_X_2020                   0.08%    passed     99.99%
+ 274  SouthKorea_X_X_A2_X_X_2020                         0.05%    passed     99.97%
+ 275  Greece_X_X_261_32221_X_X_2020                      0.76%    passed     99.99%
+ 276  USA_X_X_NY-Wadsworth-10683-01_X_X_2020             0.21%    passed    100.00%
+ 277  USA_X_X_NY-Wadsworth-11000-01_X_X_2020             0.20%    passed    100.00%
+ 278  Malaysia_X_X_IMR-WC9174_X_X_2020                   0.00%    passed     99.99%
+ 279  USA_X_X_CA-UCSF-UC33_X_X_2020                      2.56%    passed     99.43%
+ 280  Japan_X_X_PG-0091_X_X_2020                         0.31%    passed    100.00%
+ 281  Malaysia_X_X_IMR_WC085_X_X_2020                    0.01%    passed     99.96%
+ 282  Australia_X_X_VIC01_X_X_2020                       0.03%    passed     99.96%
+ 283  Iceland_X_X_13_X_X_2020                            1.70%    passed     97.77%
+ 284  USA_X_X_CA-SCCPHD-UC16_X_X_2020                    0.26%    passed     99.97%
+ 285  Wuhan_X_X_HB-WH1-129_X_X_2020                      0.00%    passed     99.98%
+ 286  Malaysia_X_X_IMR_WC119_X_X_2020                    0.71%    passed     99.86%
+ 287  Thailand_X_X_MUMT-3_X_X_2020                       0.19%    passed    100.00%
+ 288  HongKong_X_X_VM20002868_X_X_2020                   0.39%    passed     99.99%
+ 289  Thailand_X_X_SI202769-NT_X_X_2020                  0.63%    passed     99.92%
+ 290  Panama_X_X_333271_X_X_2020                         2.66%    passed     97.70%
+ 291  USA_X_X_NY2-PV08100_X_X_2020                       0.41%    passed    100.00%
+ 292  India_X_X_1115_X_X_2020                            0.06%    passed     99.99%
+ 293  England_X_X_20099072904_X_X_2020                   4.98%    passed     92.66%
+ 294  Spain_X_X_Canarias201939_X_X_2020                  0.16%    passed    100.00%
+ 295  Luxembourg_X_X_LNS0000001_X_X_2020                 0.27%    passed     99.97%
+ 296  USA_X_X_MI-MDHHS-SC20002_X_X_2020                  1.47%    passed     99.87%
+ 297  Croatia_X_X_ZG-297-20_X_X_2020                     0.03%    passed     99.93%
+ 298  USA_X_X_MI-MDHHS-SC20438_X_X_2020                  1.78%    passed     99.93%
+ 299  USA_X_X_MI-MDHHS-SC20359_X_X_2020                  1.83%    passed     99.94%
+ 300  USA_X_X_WA-UW29_X_X_2020                           0.71%    passed     99.82%
+ 301  USA_X_X_WA-UW69_X_X_2020                           0.06%    passed     99.98%
+ 302  USA_X_X_WA-UW96_X_X_2020                           0.28%    passed     99.92%
+ 303  USA_X_X_WA-UW60_X_X_2020                           0.19%    passed    100.00%
+ 304  France_X_X_RA739_X_X_2020                          0.43%    passed     99.99%
+ 305  SouthKorea_X_X_KCDC06_X_X_2020                     0.33%    passed     99.95%
+ 306  SouthKorea_X_X_KCDC07_X_X_2020                     0.33%    passed     99.94%
+ 307  Jiangsu_X_X_IVDC-JS-001_X_X_2020                   0.25%    passed     99.95%
+ 308  Panama_X_X_328941_X_X_2020                         2.21%    passed     98.16%
+ 309  Panama_X_X_329547_X_X_2020                         2.11%    passed     97.81%
+ 310  Panama_X_X_329108_X_X_2020                         2.78%    passed     96.64%
+ 311  USA_X_X_WA-UW42_X_X_2020                           0.37%    passed     99.95%
+ 312  USA_X_X_WA-UW71_X_X_2020                           0.15%    passed     99.97%
+ 313  India_X_X_1-27_X_X_2020                            0.09%    passed    100.00%
+ 314  USA_X_X_CA-SCCPHD-UC187_X_X_2020                   3.26%    passed     99.98%
+ 315  USA_X_X_NY-SURV0592_X_X_2020                       0.01%    passed     99.97%
+ 316  USA_X_X_NY-SURV0175_X_X_2020                       0.03%    passed     99.97%
+ 317  USA_X_X_CA6_X_X_2020                               0.08%    passed     99.92%
+ 318  Iceland_X_X_79_X_X_2020                            0.46%    passed     99.89%
+ 319  USA_X_X_MD-HP00082_X_X_2020                        1.55%    passed     99.99%
+ 320  Spain_X_X_PV-000805_X_X_2020                       0.22%    passed     99.90%
+ 321  Spain_X_X_Valencia266_X_X_2020                     1.10%    passed     99.70%
+ 322  HongKong_X_X_HKPU12_2201_X_X_2020                  5.08%    passed     98.23%
+ 323  HongKong_X_X_HKPU29_0102_X_X_2020                  0.33%    passed     99.99%
+ 324  HongKong_X_X_HKPU33_0202_X_X_2020                  3.10%    passed    100.00%
+ 325  HongKong_X_X_HKPU44-0102_X_X_2020                  0.46%    passed     99.99%
+ 326  HongKong_X_X_HKPU2_1801_X_X_2020                   3.28%    passed     99.82%
+ 327  HongKong_X_X_HKPU61-0202_X_X_2020                  1.29%    passed     99.94%
+ 328  HongKong_X_X_HKU-200723-002_X_X_2020               0.34%    passed     99.99%
+ 329  HongKong_X_X_HKPU73-0802_X_X_2020                  2.20%    passed     99.99%
+ 330  Thailand_X_X_Bangkok-CONI-0106_X_X_2020            0.76%    passed     99.72%
+ 331  USA_X_X_MN4-MDH4_X_X_2020                          0.96%    passed     99.95%
+ 332  USA_X_X_MN5-MDH5_X_X_2020                          0.35%    passed     99.99%
+ 333  USA_X_X_MI-MDHHS-SC20004_X_X_2020                  3.59%    passed     99.61%
+ 334  USA_X_X_SC-DHEC-0001_X_X_2020                      0.28%    passed     99.99%
+ 335  England_X_X_20088028304_X_X_2020                   0.35%    passed     99.94%
+ 336  England_X_X_20100001304_X_X_2020                   5.76%    passed     91.49%
+ 337  USA_X_X_NY-PV09442_X_X_2020                        0.64%    passed     99.97%
+ 338  England_X_X_20102088002_X_X_2020                   1.87%    passed     99.79%
+ 339  Panama_X_X_328710_X_X_2020                         4.47%    passed     94.31%
+ 340  Wuhan_X_X_WHUH020_X_X_2020                         0.75%    passed     99.60%
+ 341  USA_X_X_CA-SCCPHD-UC128_X_X_2020                  11.45%    passed     65.96%
+ 342  USA_X_X_MA-MGH-00442_X_X_2020                      0.94%    passed     99.81%
+ 343  USA_X_X_CA-SCCPHD-UC135_X_X_2020                  27.50%    passed     58.81%
+ 344  USA_X_X_CA-SCCPHD-UC139_X_X_2020                   1.62%    passed     99.56%
+ 345  USA_X_X_MDH-5622_X_X_2020                          9.00%    passed     58.58%
+ 346  USA_X_X_MDH-6612_X_X_2020                          1.46%    passed     99.60%
+ 347  USA_X_X_MDH-6572_X_X_2020                          2.04%    passed     96.41%
+ 348  USA_X_X_MDH-7590_X_X_2020                          4.42%    passed     91.32%
+ 349  USA_X_X_MDH-5653_X_X_2020                          3.72%    passed     93.99%
+ 350  USA_X_X_MDH-5875_X_X_2020                          2.46%    passed     96.24%
+ 351  USA_X_X_MDH-6339_X_X_2020                          4.90%    passed     91.35%
+ 352  USA_X_X_FL-BPHL-0139_X_X_2020                      4.18%    passed     98.49%
+ 353  USA_X_X_FL-BPHL-0141_X_X_2020                      3.89%    passed     98.62%
+ 354  Wales_X_X_PHWC-2C8E8_X_X_2020                      3.97%    passed     99.94%
+ 355  USA_X_X_CA-SCCPHD-UC109_X_X_2020                   5.38%    passed     99.96%
+ 356  USA_X_X_CA-SCCPHD-UC114_X_X_2020                  18.65%    passed     81.30%
+ 357  USA_X_X_NY-NYU-VC-002_X_X_2020                     5.44%    passed     95.98%
+ 358  USA_X_X_CA-SCCPHD-UC125_X_X_2020                   7.64%    passed     93.07%
+ 359  Thailand_X_X_NIH-190_X_X_2020                      7.34%    passed     91.27%
+ 360  USA_X_X_FL-BPHL-0537_X_X_2020                      7.62%    passed     95.40%
+ 361  USA_X_X_NY-NYUMC1_X_X_2020                        16.07%    passed     33.64%
+ 362  USA_X_X_WA-S4_X_X_2020                            34.11%    passed     53.41%
+ 363  USA_X_X_CA-CDPH-UC25_X_X_2020                     22.96%    passed     96.30%
+****  TOTAL                                              1.24%  0 sequences failed composition chi2 test (p-value<5%; df=3)
 
-Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.069 seconds
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.059 seconds
 
-NOTE: 64 MB RAM (0 GB) is required!
+NOTE: 63 MB RAM (0 GB) is required!
 Estimate model parameters (epsilon = 0.500)
-1. Initial log-likelihood: -47546.593
-2. Current log-likelihood: -47330.682
-Optimal log-likelihood: -47330.652
-Rate parameters:  A-C: 0.49180  A-G: 1.28372  A-T: 0.44846  C-G: 0.32637  C-T: 3.34037  G-T: 1.00000
+1. Initial log-likelihood: -47208.275
+2. Current log-likelihood: -46976.793
+Optimal log-likelihood: -46976.748
+Rate parameters:  A-C: 0.34498  A-G: 1.22447  A-T: 0.37848  C-G: 0.32328  C-T: 3.30221  G-T: 1.00000
 Base frequencies:  A: 0.299  C: 0.184  G: 0.196  T: 0.321
-Parameters optimization took 2 rounds (0.618 sec)
-Computing ML distances based on estimated model parameters... 18.404 sec
+Parameters optimization took 2 rounds (0.776 sec)
+Computing ML distances based on estimated model parameters... 18.272 sec
 Computing BIONJ tree...
-0.132 seconds
-Log-likelihood of BIONJ tree: -47501.608
+0.134 seconds
+Log-likelihood of BIONJ tree: -47150.263
 --------------------------------------------------------------------
 |             INITIALIZING CANDIDATE TREE SET                      |
 --------------------------------------------------------------------
 
 Do NNI search on 2 best initial trees
 Estimate model parameters (epsilon = 0.500)
-BETTER TREE FOUND at iteration 1: -47320.874
+BETTER TREE FOUND at iteration 1: -46972.266
 Finish initializing candidate tree set (4)
-Current best tree score: -47320.874 / CPU time: 3.405
+Current best tree score: -46972.266 / CPU time: 3.966
 Number of iterations: 2
-TREE SEARCH COMPLETED AFTER 2 ITERATIONS / Time: 0h:0m:5s
+TREE SEARCH COMPLETED AFTER 2 ITERATIONS / Time: 0h:0m:6s
 
 --------------------------------------------------------------------
 |                    FINALIZING TREE SEARCH                        |
 --------------------------------------------------------------------
 Performs final model parameters optimization
 Estimate model parameters (epsilon = 0.050)
-1. Initial log-likelihood: -47320.874
-Optimal log-likelihood: -47320.872
-Rate parameters:  A-C: 0.48505  A-G: 1.28879  A-T: 0.44160  C-G: 0.32169  C-T: 3.36088  G-T: 1.00000
+1. Initial log-likelihood: -46972.266
+Optimal log-likelihood: -46972.258
+Rate parameters:  A-C: 0.33425  A-G: 1.23328  A-T: 0.38072  C-G: 0.31781  C-T: 3.31880  G-T: 1.00000
 Base frequencies:  A: 0.299  C: 0.184  G: 0.196  T: 0.321
-Parameters optimization took 1 rounds (0.154 sec)
-BEST SCORE FOUND : -47320.872
-Total tree length: 0.021
+Parameters optimization took 1 rounds (0.168 sec)
+BEST SCORE FOUND : -46972.258
+Total tree length: 0.020
 
 Total number of iterations: 2
-CPU time used for tree search: 99.328 sec (0h:1m:39s)
-Wall-clock time used for tree search: 3.409 sec (0h:0m:3s)
-Total CPU time used: 153.460 sec (0h:2m:33s)
-Total wall-clock time used: 5.652 sec (0h:0m:5s)
+CPU time used for tree search: 116.972 sec (0h:1m:56s)
+Wall-clock time used for tree search: 3.970 sec (0h:0m:3s)
+Total CPU time used: 175.496 sec (0h:2m:55s)
+Total wall-clock time used: 6.352 sec (0h:0m:6s)
 
 Analysis results written to: 
   IQ-TREE report:                results/aligned-delim.fasta.iqtree
@@ -429,4 +429,4 @@ Analysis results written to:
   Likelihood distances:          results/aligned-delim.fasta.mldist
   Screen log file:               results/aligned-delim.fasta.log
 
-Date and Time: Fri Sep 11 15:13:03 2020
+Date and Time: Mon Sep 21 12:39:13 2020
