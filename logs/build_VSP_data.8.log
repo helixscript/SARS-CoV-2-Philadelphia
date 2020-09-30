@@ -1,0 +1,32 @@
+Tue Sep 29 17:26:50 2020
+Starting VSP9981 with 1 seq experiments.
+summaries/VSPdata/VSP9981-1a.experiment.RData exists -- skipping.
+Completed VSP9981
+
+Starting VSP0046 with 1 seq experiments.
+summaries/VSPdata/VSP0046-1.experiment.RData exists -- skipping.
+Completed VSP0046
+
+Starting VSP0050 with 4 seq experiments.
+summaries/VSPdata/VSP0050.composite.RData exists -- skipping.
+summaries/VSPdata/VSP0050-1.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0050-2.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0050-3.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0050-4.experiment.RData exists -- skipping.
+Completed VSP0050
+
+Starting VSP0061 with 4 seq experiments.
+summaries/VSPdata/VSP0061.composite.RData exists -- skipping.
+summaries/VSPdata/VSP0061-1.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0061-2.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0061-3.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0061-4.experiment.RData exists -- skipping.
+Completed VSP0061
+
+Starting VSP0069 with 3 seq experiments.
+summaries/VSPdata/VSP0069.composite.RData exists -- skipping.
+summaries/VSPdata/VSP0069-1.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0069-2.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0069-3.experiment.RData exists -- skipping.
+Completed VSP0069
+

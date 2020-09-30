@@ -8,7 +8,9 @@ mafftPath <- '~/ext/mafft/bin/mafft'
 CPUs <- 10
 
 # Read in sample data table.
-samples <- read.table('data/samples.tsv', sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE)
+#samples <- read.table('data/samples.tsv', sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE)
+samples <- read.table('data/pub_32516797_samples.tsv', sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE)
+
 sampleInputs <- read.table('data/sampleInputs.tsv', sep= '\t', header = TRUE, stringsAsFactors = FALSE)
 
 

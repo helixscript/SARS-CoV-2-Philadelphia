@@ -1,0 +1,27 @@
+Tue Sep 29 17:26:50 2020
+Starting VSP0318 with 1 seq experiments.
+summaries/VSPdata/VSP0318-1.experiment.RData exists -- skipping.
+Completed VSP0318
+
+Starting VSP0319 with 1 seq experiments.
+summaries/VSPdata/VSP0319-1.experiment.RData exists -- skipping.
+Completed VSP0319
+
+Starting VSP0320 with 1 seq experiments.
+summaries/VSPdata/VSP0320-1.experiment.RData exists -- skipping.
+Completed VSP0320
+
+Starting VSP9999 with 1 seq experiments.
+summaries/VSPdata/VSP9999-1.experiment.RData exists -- skipping.
+Completed VSP9999
+
+Starting VSP8000 with 1 seq experiments.
+Tue Sep 29 17:26:50 2020 (summaries/VSPdata/VSP8000-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8000-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8000-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8000-1_S10_L001_R2_001.fastq.gz
+
+Completed VSP8000
+
+Starting VSP8001 with 1 seq experiments.
+Tue Sep 29 17:42:55 2020 (summaries/VSPdata/VSP8001-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8001-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8001-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8001-1_S10_L001_R2_001.fastq.gz
+
+Completed VSP8001
+

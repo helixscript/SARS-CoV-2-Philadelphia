@@ -1,0 +1,26 @@
+Tue Sep 29 17:26:50 2020
+Starting VSP8025 with 1 seq experiments.
+Tue Sep 29 17:26:50 2020 (summaries/VSPdata/VSP8025-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8025-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8025-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8025-1_S10_L001_R2_001.fastq.gz
+
+Completed VSP8025
+
+Starting VSP8026 with 1 seq experiments.
+Tue Sep 29 17:27:58 2020 (summaries/VSPdata/VSP8026-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8026-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8026-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8026-1_S10_L001_R2_001.fastq.gz
+
+Completed VSP8026
+
+Starting VSP8027 with 1 seq experiments.
+Tue Sep 29 17:37:28 2020 (summaries/VSPdata/VSP8027-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8027-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8027-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8027-1_S10_L001_R2_001.fastq.gz
+
+Completed VSP8027
+
+Starting VSP8028 with 1 seq experiments.
+Tue Sep 29 17:53:43 2020 (summaries/VSPdata/VSP8028-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8028-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8028-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8028-1_S10_L001_R2_001.fastq.gz
+
+Completed VSP8028
+
+Starting VSP8029 with 1 seq experiments.
+Tue Sep 29 18:06:22 2020 (summaries/VSPdata/VSP8029-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8029-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8029-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8029-1_S10_L001_R2_001.fastq.gz
+
+Completed VSP8029
+

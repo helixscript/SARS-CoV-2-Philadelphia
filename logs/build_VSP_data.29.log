@@ -1,0 +1,31 @@
+Tue Sep 29 17:26:50 2020
+Starting VSP8036 with 1 seq experiments.
+Tue Sep 29 17:26:50 2020 (summaries/VSPdata/VSP8036-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8036-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8036-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8036-1_S10_L001_R2_001.fastq.gz
+
+Completed VSP8036
+
+Starting VSP8037 with 1 seq experiments.
+Tue Sep 29 18:08:59 2020 (summaries/VSPdata/VSP8037-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8037-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8037-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8037-1_S10_L001_R2_001.fastq.gz
+
+Completed VSP8037
+
+Starting VSP8038 with 1 seq experiments.
+Tue Sep 29 18:30:52 2020 (summaries/VSPdata/VSP8038-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8038-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8038-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8038-1_S10_L001_R2_001.fastq.gz
+
+Completed VSP8038
+
+Starting VSP8039 with 1 seq experiments.
+Tue Sep 29 18:42:00 2020 (summaries/VSPdata/VSP8039-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8039-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8039-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8039-1_S10_L001_R2_001.fastq.gz
+
+Completed VSP8039
+
+Starting VSP8040 with 1 seq experiments.
+Tue Sep 29 19:11:33 2020 (summaries/VSPdata/VSP8040-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8040-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8040-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8040-1_S10_L001_R2_001.fastq.gz
+
+Completed VSP8040
+
+Starting VSP8041 with 1 seq experiments.
+Tue Sep 29 19:46:28 2020 (summaries/VSPdata/VSP8041-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8041-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8041-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8041-1_S10_L001_R2_001.fastq.gz
+
+Completed VSP8041
+
