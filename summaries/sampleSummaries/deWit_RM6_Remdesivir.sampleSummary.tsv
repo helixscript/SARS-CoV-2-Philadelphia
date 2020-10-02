@@ -1,0 +1,6 @@
+Subject	exp	type	genomes	sampleType	sampleDate	largestContig	percentRefReadCoverage	percentRefReadCoverage5
+deWit_RM6_Remdesivir	VSP8008-1	 single experiment	NA	Rectal_swab	2020-06-03	1.12	79.0%	77.1%
+deWit_RM6_Remdesivir	VSP8009-1	 single experiment	NA	BAL	2020-06-04	30.00	100.0%	100.0%
+deWit_RM6_Remdesivir	VSP8018-1	 single experiment	NA	RLLL	2020-06-08	17.60	99.9%	99.9%
+deWit_RM6_Remdesivir	VSP8037-1	 single experiment	NA	Nose_swab	2020-06-06	24.48	100.0%	100.0%
+deWit_RM6_Remdesivir	VSP8038-1	 single experiment	NA	LLLL	2020-06-08	NA	14.6%	14.4%

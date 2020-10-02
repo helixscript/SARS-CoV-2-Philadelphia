@@ -9,7 +9,11 @@ CPUs <- 10
 
 # Read in sample data table.
 #samples <- read.table('data/samples.tsv', sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE)
-samples <- read.table('data/pub_32516797_samples.tsv', sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE)
+samples <- read.table('data/deWit_samples.tsv', sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE)
+
+
+# Remove MisC analysis. 
+samples <- samples[! grepl('MisC', samples$patient_id),]
 
 sampleInputs <- read.table('data/sampleInputs.tsv', sep= '\t', header = TRUE, stringsAsFactors = FALSE)
 
@@ -30,9 +34,6 @@ samples$sample_date <- as.character(mdy(samples$sample_date))
 # Create a vector of VSP ids with sequencning data.
 availableVSPs <- unique(str_extract(list.files('summaries/VSPdata'), 'VSP\\d+'))
 
-
-# Remove MisC analysis. 
-samples <- samples[! grepl('MisC', samples$patient_id),]
 
 
 # Remove 228_NP_OP_20200424

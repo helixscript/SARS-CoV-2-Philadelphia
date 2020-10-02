@@ -1,0 +1,5 @@
+Subject	exp	type	genomes	sampleType	sampleDate	largestContig	percentRefReadCoverage	percentRefReadCoverage5
+deWit_RM9_Vehicle	VSP8007-1	 single experiment	NA	BAL	2020-06-04	30.09	100.0%	100.0%
+deWit_RM9_Vehicle	VSP8014-1	 single experiment	NA	Nose_swab	2020-06-06	30.01	100.0%	100.0%
+deWit_RM9_Vehicle	VSP8032-1	 single experiment	NA	LLLL	2020-06-08	15.75	100.0%	100.0%
+deWit_RM9_Vehicle	VSP8046-1	 single experiment	NA	RLLL	2020-06-08	23.43	100.0%	99.9%
