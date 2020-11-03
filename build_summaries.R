@@ -8,8 +8,8 @@ mafftPath <- '~/ext/mafft/bin/mafft'
 CPUs <- 10
 
 # Read in sample data table.
-#samples <- read.table('data/samples.tsv', sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE)
-samples <- read.table('data/deWit_samples.tsv', sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE)
+samples <- read.table('data/samples.tsv', sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE)
+#samples <- read.table('data/deWit_samples.tsv', sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE)
 
 
 # Remove MisC analysis. 
@@ -261,7 +261,17 @@ if(! file.exists('summaries/concensusSeqs95.mafft')) system(paste0(mafftPath, ' 
 
 
 # Build phylogenetic tree.
-v <- ape::read.dna("summaries/concensusSeqs95.mafft", format="fasta")
+#v <- ape::read.dna("summaries/concensusSeqs95.mafft", format="fasta")
+
+v <- ape::read.dna("summaries/concensusSeqs95.fasta", format="fasta")
+dist <- ape::dist.dna(v)
+plot(hclust(dist, method='average'))
+
+plot(ape::nj(dist))
+plot(phangorn::upgma(dist))
+
+
+
 v_phyDat <- phangorn::phyDat(v, type = "DNA", levels = NULL)
 
 # Determine best mode and create a distance matrix.

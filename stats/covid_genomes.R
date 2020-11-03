@@ -3,7 +3,7 @@ library(vegan)
 library(reshape2)
 
 load(file = "/home/everett/projects/SARS-CoV-2-Philadelphia/stats/treeData.RData")
-dna_dist <- dist_setNames(dna_dist, gsub(" ","_",gsub("-","_",gsub("\\|","_",labels(dna_dist)))))
+dna_dist <- usedist::dist_setNames(dna_dist, gsub(" ","_",gsub("-","_",gsub("\\|","_",labels(dna_dist)))))
 dendr$labels$label <- gsub(" ","_",gsub("-","_",gsub("\\|","_",dendr$labels$label)))
 
 which(unique(nextClade$seqName) %in% labels(dna_dist))
@@ -118,3 +118,23 @@ nextCladeSubs %>% filter(substitution %in% names(sig_snps)) %>%
   arrange(position, seqName)
 
 nextCladeAA %>% filter(NTposition==18999)
+
+
+snpsDf <-
+  do.call(rbind, lapply(colnames(nextCladeSnps)[2:(ncol(nextCladeSnps)-1)], function(col) {
+    fish.matrix <- matrix(c(sum(nextCladeSnps[,col] & nextCladeSnps$live),
+                            sum(nextCladeSnps[,col] & !nextCladeSnps$live),
+                            sum(!nextCladeSnps[,col] & nextCladeSnps$live),
+                            sum(!nextCladeSnps[,col] & !nextCladeSnps$live)),
+                          ncol=2)
+    fish.test <- fisher.test(fish.matrix)
+    fish.p.value <- fish.test$p.value
+    return(data.frame(SNP=col,
+                      PresentAlive=fish.matrix[1],
+                      PresentDead=fish.matrix[2],
+                      AbsentAlive=fish.matrix[3],
+                      AbsentDead=fish.matrix[4],
+                      PValue=fish.p.value))
+  }))
+
+write.table(snpsDf, "/home/kevin/projects/covid/tableX.csv", sep = ",", quote = FALSE, row.names = FALSE)

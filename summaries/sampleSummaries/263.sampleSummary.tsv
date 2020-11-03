@@ -1,0 +1,4 @@
+Subject	exp	type	genomes	sampleType	sampleDate	largestContig	percentRefReadCoverage	percentRefReadCoverage5
+263	VSP0142-1	 single experiment	NA	ETA	2020-05-15	29.81	99.7%	99.6%
+263	VSP0143-1	 single experiment	172000	NP-OP	2020-05-15	29.85	99.8%	99.8%
+263	VSP0148-1	 single experiment	NA	NP-OP	2020-05-18	8.68	90.7%	89.5%
