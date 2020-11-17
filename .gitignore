@@ -6,3 +6,5 @@ data/sequencing.org
 summaries/VSPalignments
 summaries/VSPdata
 summaries/patientReportsData
+HLA/read_pileup_data
+HLA/seqData
