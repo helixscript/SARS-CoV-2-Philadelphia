@@ -1,0 +1,46 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##bcftoolsVersion=1.10.2-34-g1a12af0-dirty+htslib-1.10.2-57-gf58a6f3
+##bcftoolsCommand=mpileup -A --max-depth 100000 -Ou -f db/HLA-B_cds_C.ff o.filt.sorted.bam
+##reference=file://db/HLA-B_cds_C.ff
+##contig=<ID=HLA-B_cds_C,length=789>
+##ALT=<ID=*,Description="Represents allele(s) other than observed.">
+##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
+##INFO=<ID=IDV,Number=1,Type=Integer,Description="Maximum number of raw reads supporting an indel">
+##INFO=<ID=IMF,Number=1,Type=Float,Description="Maximum fraction of raw reads supporting an indel">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Raw read depth">
+##INFO=<ID=VDB,Number=1,Type=Float,Description="Variant Distance Bias for filtering splice-site artefacts in RNA-seq data (bigger is better)",Version="3">
+##INFO=<ID=RPB,Number=1,Type=Float,Description="Mann-Whitney U test of Read Position Bias (bigger is better)">
+##INFO=<ID=MQB,Number=1,Type=Float,Description="Mann-Whitney U test of Mapping Quality Bias (bigger is better)">
+##INFO=<ID=BQB,Number=1,Type=Float,Description="Mann-Whitney U test of Base Quality Bias (bigger is better)">
+##INFO=<ID=MQSB,Number=1,Type=Float,Description="Mann-Whitney U test of Mapping Quality vs Strand Bias (bigger is better)">
+##INFO=<ID=SGB,Number=1,Type=Float,Description="Segregation based metric.">
+##INFO=<ID=MQ0F,Number=1,Type=Float,Description="Fraction of MQ0 reads (smaller is better)">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="List of Phred-scaled genotype likelihoods">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##INFO=<ID=ICB,Number=1,Type=Float,Description="Inbreeding Coefficient Binomial test (bigger is better)">
+##INFO=<ID=HOB,Number=1,Type=Float,Description="Bias in the number of HOMs number (smaller is better)">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes for each ALT allele, in the same order as listed">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##INFO=<ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases">
+##INFO=<ID=MQ,Number=1,Type=Integer,Description="Average mapping quality">
+##bcftools_callVersion=1.10.2-34-g1a12af0-dirty+htslib-1.10.2-57-gf58a6f3
+##bcftools_callCommand=call -mv -Oz -o o.filt.sorted.vcf.gz; Date=Wed Nov 18 20:56:15 2020
+##bcftools_filterVersion=1.10.2-34-g1a12af0-dirty+htslib-1.10.2-57-gf58a6f3
+##bcftools_filterCommand=filter -iQUAL>20&DP>50 -O z -o o.filt.sorted.vcf2.gz o.filt.sorted.vcf.gz; Date=Wed Nov 18 20:56:41 2020
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	o.filt.sorted.bam
+HLA-B_cds_C	133	.	A	G	228	PASS	DP=38904;VDB=3.43306e-14;SGB=-0.693147;RPB=0.960612;MQB=0.980368;MQSB=0.867103;BQB=0.011584;MQ0F=0;AC=2;AN=2;DP4=333,12,20218,406;MQ=59	GT:PL	1/1:255,255,0
+HLA-B_cds_C	134	.	G	A	228	PASS	DP=38602;VDB=4.21075e-14;SGB=-0.693147;RPB=0.0804471;MQB=0.995483;MQSB=0.881685;BQB=0.0552877;MQ0F=0;AC=2;AN=2;DP4=319,13,19879,429;MQ=59	GT:PL	1/1:255,255,0
+HLA-B_cds_C	195	.	A	G	228	PASS	DP=21202;VDB=2.50353e-16;SGB=-0.693147;RPB=4.96545e-06;MQB=0.76921;MQSB=0.166636;BQB=3.21944e-17;MQ0F=0;AC=2;AN=2;DP4=351,37,10631,3383;MQ=59	GT:PL	1/1:255,255,0
+HLA-B_cds_C	198	.	T	A	228	PASS	DP=21095;VDB=2.79253e-16;SGB=-0.693147;RPB=0.0160436;MQB=0.957551;MQSB=0.163471;BQB=2.32522e-09;MQ0F=0;AC=2;AN=2;DP4=28,7,10943,3442;MQ=59	GT:PL	1/1:255,255,0
+HLA-B_cds_C	201	.	A	T	228	PASS	DP=21051;VDB=1.40355e-17;SGB=-0.693147;RPB=0.000451614;MQB=0.741191;MQSB=0.165942;BQB=1.34445e-14;MQ0F=0;AC=2;AN=2;DP4=383,38,10564,3400;MQ=59	GT:PL	1/1:255,255,0
+HLA-B_cds_C	202	.	C	G	228	PASS	DP=21131;VDB=5.67986e-17;SGB=-0.693147;RPB=0;MQB=0.935137;MQSB=0.170096;BQB=0;MQ0F=0;AC=2;AN=2;DP4=1079,488,9929,2939;MQ=59	GT:PL	1/1:255,49,0
+HLA-B_cds_C	231	.	G	A	228	PASS	DP=38164;VDB=0.000570487;SGB=-0.693147;RPB=0.0274159;MQB=0.645038;MQSB=0.147255;BQB=0.000928885;MQ0F=0;AC=2;AN=2;DP4=376,55,19946,3645;MQ=59	GT:PL	1/1:255,255,0
+HLA-B_cds_C	298	.	C	T	228	PASS	DP=62787;VDB=0.494895;SGB=-0.693147;RPB=0.941468;MQB=0.817881;MQSB=0.672532;BQB=4.86246e-05;MQ0F=0;AC=2;AN=2;DP4=18,3,34580,4765;MQ=59	GT:PL	1/1:255,255,0
+HLA-B_cds_C	406	.	C	G	228	PASS	DP=75181;VDB=0.287598;SGB=-0.693147;RPB=0.439675;MQB=0.969383;MQSB=0.985382;BQB=6.19046e-08;MQ0F=0;AC=2;AN=2;DP4=579,62,36318,8432;MQ=59	GT:PL	1/1:255,255,0
+HLA-B_cds_C	468	.	G	T	228	PASS	DP=56642;VDB=0.401189;SGB=-0.693147;RPB=0.943341;MQB=0.509706;MQSB=0.508117;BQB=0.0112118;MQ0F=0;AC=2;AN=2;DP4=144,71,24752,10633;MQ=59	GT:PL	1/1:255,255,0
+HLA-B_cds_C	532	.	C	G	228	PASS	DP=36813;VDB=4.82103e-05;SGB=-0.693147;RPB=0.890721;MQB=0.968931;MQSB=0.134092;BQB=3.46278e-09;MQ0F=0;AC=2;AN=2;DP4=3,17,16326,7178;MQ=59	GT:PL	1/1:255,255,0
+HLA-B_cds_C	534	.	A	C	228	PASS	DP=36311;VDB=8.48881e-06;SGB=-0.693147;RPB=3.94096e-08;MQB=0.991357;MQSB=0.109344;BQB=8.88689e-12;MQ0F=0;AC=2;AN=2;DP4=17,2,15980,7273;MQ=59	GT:PL	1/1:255,255,0
+HLA-B_cds_C	539	.	G	C	228	PASS	DP=35072;VDB=2.32757e-05;SGB=-0.693147;RPB=0.00560228;MQB=0.995073;MQSB=0.0820146;BQB=3.20397e-07;MQ0F=0;AC=2;AN=2;DP4=4,7,15509,7200;MQ=59	GT:PL	1/1:255,255,0
+HLA-B_cds_C	547	.	T	G	228	PASS	DP=36196;VDB=1.02054e-05;SGB=-0.693147;RPB=0.424077;MQB=0.9956;MQSB=0.212424;BQB=0.420847;MQ0F=0;AC=2;AN=2;DP4=7,8,15091,7402;MQ=59	GT:PL	1/1:255,255,0
+HLA-B_cds_C	622	.	T	C	228	PASS	DP=79465;VDB=0.617246;SGB=-0.693147;RPB=0.215387;MQB=0.999962;MQSB=0.744534;BQB=2.09212e-05;MQ0F=0;AC=2;AN=2;DP4=6,5,33681,9324;MQ=59	GT:PL	1/1:255,255,0
