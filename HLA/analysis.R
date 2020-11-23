@@ -266,5 +266,6 @@ invisible(lapply(split(d, d$subject), function(x){
   files <- list.files('variant_calls', pattern = 'HLA-A_A.vcf$|HLA-B_C.vcf$', full.names = FALSE)
   files <- files[grepl(paste0(x$sample, collapse = '|'), files)]
   v <- variantGrid(files, unique(x$sample))
-  ggsave(v, file = paste('trees_and_grids/subject_', x$subject[1], '_HLA-A_HLA-B_grid.pdf'), height = n_distinct(x$sample)*0.75, width = 20, units = 'in')
+  h <- c(2.5, 3.0, 3.5, 4, 4)
+  ggsave(v, file = paste('trees_and_grids/subject_', x$subject[1], '_HLA-A_HLA-B_grid.pdf'), height = h[[n_distinct(x$sample)]], width = 20, units = 'in')
 }))
