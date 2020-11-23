@@ -8,3 +8,4 @@ summaries/VSPdata
 summaries/patientReportsData
 HLA/read_pileup_data
 HLA/seqData
+HLA/trimmedSeqData
