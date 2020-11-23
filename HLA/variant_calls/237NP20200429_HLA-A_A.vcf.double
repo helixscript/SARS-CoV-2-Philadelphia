@@ -1,9 +1,9 @@
 ##fileformat=VCFv4.2
 ##FILTER=<ID=PASS,Description="All filters passed">
 ##bcftoolsVersion=1.10.2-34-g1a12af0-dirty+htslib-1.10.2-57-gf58a6f3
-##bcftoolsCommand=mpileup -A --max-depth 100000 -Ou -f db/HLA-A_cds_A.ff o.filt.sorted.bam
-##reference=file://db/HLA-A_cds_A.ff
-##contig=<ID=HLA-A_cds_A,length=697>
+##bcftoolsCommand=mpileup -A --max-depth 100000 -Ou -f db/HLA-A.A o.filt.sorted.bam
+##reference=file://db/HLA-A.A
+##contig=<ID=HLA-A.A,length=697>
 ##ALT=<ID=*,Description="Represents allele(s) other than observed.">
 ##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
 ##INFO=<ID=IDV,Number=1,Type=Integer,Description="Maximum number of raw reads supporting an indel">
@@ -25,7 +25,7 @@
 ##INFO=<ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases">
 ##INFO=<ID=MQ,Number=1,Type=Integer,Description="Average mapping quality">
 ##bcftools_callVersion=1.10.2-34-g1a12af0-dirty+htslib-1.10.2-57-gf58a6f3
-##bcftools_callCommand=call -mv -Oz -o o.filt.sorted.vcf.gz; Date=Wed Nov 18 19:58:59 2020
+##bcftools_callCommand=call -mv -Oz -o o.filt.sorted.vcf.gz; Date=Fri Nov 20 16:13:50 2020
 ##bcftools_filterVersion=1.10.2-34-g1a12af0-dirty+htslib-1.10.2-57-gf58a6f3
-##bcftools_filterCommand=filter -iQUAL>20&DP>50 -O z -o o.filt.sorted.vcf2.gz o.filt.sorted.vcf.gz; Date=Wed Nov 18 19:59:10 2020
+##bcftools_filterCommand=filter -iQUAL>50&DP>100 -O z -o o.filt.sorted.vcf2.gz o.filt.sorted.vcf.gz; Date=Fri Nov 20 16:13:54 2020
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	o.filt.sorted.bam

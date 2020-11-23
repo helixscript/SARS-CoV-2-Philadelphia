@@ -1,9 +1,9 @@
 ##fileformat=VCFv4.2
 ##FILTER=<ID=PASS,Description="All filters passed">
 ##bcftoolsVersion=1.10.2-34-g1a12af0-dirty+htslib-1.10.2-57-gf58a6f3
-##bcftoolsCommand=mpileup -A --max-depth 100000 -Ou -f db/HLA-A_cds_B.ff o.filt.sorted.bam
-##reference=file://db/HLA-A_cds_B.ff
-##contig=<ID=HLA-A_cds_B,length=565>
+##bcftoolsCommand=mpileup -A --max-depth 100000 -Ou -f db/HLA-A.B o.filt.sorted.bam
+##reference=file://db/HLA-A.B
+##contig=<ID=HLA-A.B,length=565>
 ##ALT=<ID=*,Description="Represents allele(s) other than observed.">
 ##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
 ##INFO=<ID=IDV,Number=1,Type=Integer,Description="Maximum number of raw reads supporting an indel">
@@ -25,12 +25,14 @@
 ##INFO=<ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases">
 ##INFO=<ID=MQ,Number=1,Type=Integer,Description="Average mapping quality">
 ##bcftools_callVersion=1.10.2-34-g1a12af0-dirty+htslib-1.10.2-57-gf58a6f3
-##bcftools_callCommand=call -mv -Oz -o o.filt.sorted.vcf.gz; Date=Wed Nov 18 19:46:06 2020
+##bcftools_callCommand=call -mv -Oz -o o.filt.sorted.vcf.gz; Date=Fri Nov 20 16:08:20 2020
 ##bcftools_filterVersion=1.10.2-34-g1a12af0-dirty+htslib-1.10.2-57-gf58a6f3
-##bcftools_filterCommand=filter -iQUAL>20&DP>50 -O z -o o.filt.sorted.vcf2.gz o.filt.sorted.vcf.gz; Date=Wed Nov 18 19:46:22 2020
+##bcftools_filterCommand=filter -iQUAL>50&DP>100 -O z -o o.filt.sorted.vcf2.gz o.filt.sorted.vcf.gz; Date=Fri Nov 20 16:08:24 2020
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	o.filt.sorted.bam
-HLA-A_cds_B	73	.	C	A	226	PASS	DP=26600;VDB=6.8999e-24;SGB=-0.693147;RPB=0.58248;MQB=0.999587;MQSB=0.990998;BQB=0.00271555;MQ0F=0;AC=2;AN=2;DP4=2038,26,11270,134;MQ=59	GT:PL	1/1:253,55,0
-HLA-A_cds_B	343	.	G	C	228	PASS	DP=50757;VDB=4.09926e-05;SGB=-0.693147;RPB=0;MQB=0.994836;MQSB=0.999982;BQB=1.01309e-32;MQ0F=0;AC=2;AN=2;DP4=4430,648,22331,4351;MQ=59	GT:PL	1/1:255,0,1
-HLA-A_cds_B	418	.	G	A	228	PASS	DP=54101;VDB=0.0130956;SGB=-0.693147;RPB=3.9187e-40;MQB=0.98384;MQSB=0.998449;BQB=0.104117;MQ0F=0;AC=2;AN=2;DP4=910,415,24338,6918;MQ=59	GT:PL	1/1:255,179,0
-HLA-A_cds_B	456	.	A	T	228	PASS	DP=52789;VDB=0.0050349;SGB=-0.693147;RPB=0.0438792;MQB=0.86788;MQSB=0.991568;BQB=7.47173e-08;MQ0F=0;AC=2;AN=2;DP4=460,365,22245,8324;MQ=59	GT:PL	1/1:255,255,0
-HLA-A_cds_B	484	.	T	G	228	PASS	DP=49292;VDB=2.20334e-05;SGB=-0.693147;RPB=0.0851012;MQB=0.90145;MQSB=0.964374;BQB=0.936924;MQ0F=0;AC=2;AN=2;DP4=10,4,19116,10366;MQ=59	GT:PL	1/1:255,255,0
+HLA-A.B	73	.	C	A	228	PASS	DP=10757;VDB=1.04754e-12;SGB=-0.693147;RPB=0.0363303;MQB=1;MQSB=1;BQB=0.317073;MQ0F=0;AC=2;AN=2;DP4=759,3,4971,19;MQ=60	GT:PL	1/1:255,90,0
+HLA-A.B	342	.	G	A	228	PASS	DP=21511;VDB=9.96838e-06;SGB=-0.693147;RPB=1.4013e-45;MQB=0.992737;MQSB=0.999772;BQB=0.026885;MQ0F=0;AC=2;AN=2;DP4=1849,339,9432,2269;MQ=59	GT:PL	1/1:255,23,0
+HLA-A.B	347	.	G	T	228	PASS	DP=22053;VDB=9.57976e-05;SGB=-0.693147;RPB=3.36497e-19;MQB=0.993027;MQSB=0.999538;BQB=0.173619;MQ0F=0;AC=2;AN=2;DP4=1679,480,9534,2357;MQ=59	GT:PL	1/1:255,28,0
+HLA-A.B	418	.	G	A	228	PASS	DP=22069;VDB=0.0916626;SGB=-0.693147;RPB=0.999033;MQB=0.995767;MQSB=0.999759;BQB=5.74672e-06;MQ0F=0;AC=2;AN=2;DP4=180,165,9749,4165;MQ=59	GT:PL	1/1:255,255,0
+HLA-A.B	456	.	A	T	228	PASS	DP=21224;VDB=0.0229827;SGB=-0.693147;RPB=0.644019;MQB=1;MQSB=1;BQB=0.0652563;MQ0F=0;AC=2;AN=2;DP4=134,159,8458,4831;MQ=60	GT:PL	1/1:255,255,0
+HLA-A.B	484	.	T	G	228	PASS	DP=19752;VDB=0.00865933;SGB=-0.693147;RPB=0.0209299;MQB=1;MQSB=1;BQB=0.695934;MQ0F=0;AC=2;AN=2;DP4=3,2,7114,5307;MQ=60	GT:PL	1/1:255,255,0
+HLA-A.B	551	.	C	G	67	PASS	DP=13906;VDB=0;SGB=-0.693147;RPB=0;MQB=1;MQSB=1;BQB=0;MQ0F=0;AC=2;AN=2;DP4=361,444,3356,2849;MQ=60	GT:PL	1/1:94,51,0

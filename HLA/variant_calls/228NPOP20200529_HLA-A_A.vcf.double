@@ -1,9 +1,9 @@
 ##fileformat=VCFv4.2
 ##FILTER=<ID=PASS,Description="All filters passed">
 ##bcftoolsVersion=1.10.2-34-g1a12af0-dirty+htslib-1.10.2-57-gf58a6f3
-##bcftoolsCommand=mpileup -A --max-depth 100000 -Ou -f db/HLA-A_cds_A.ff o.filt.sorted.bam
-##reference=file://db/HLA-A_cds_A.ff
-##contig=<ID=HLA-A_cds_A,length=697>
+##bcftoolsCommand=mpileup -A --max-depth 100000 -Ou -f db/HLA-A.A o.filt.sorted.bam
+##reference=file://db/HLA-A.A
+##contig=<ID=HLA-A.A,length=697>
 ##ALT=<ID=*,Description="Represents allele(s) other than observed.">
 ##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
 ##INFO=<ID=IDV,Number=1,Type=Integer,Description="Maximum number of raw reads supporting an indel">
@@ -25,8 +25,9 @@
 ##INFO=<ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases">
 ##INFO=<ID=MQ,Number=1,Type=Integer,Description="Average mapping quality">
 ##bcftools_callVersion=1.10.2-34-g1a12af0-dirty+htslib-1.10.2-57-gf58a6f3
-##bcftools_callCommand=call -mv -Oz -o o.filt.sorted.vcf.gz; Date=Wed Nov 18 19:51:43 2020
+##bcftools_callCommand=call -mv -Oz -o o.filt.sorted.vcf.gz; Date=Fri Nov 20 16:10:50 2020
 ##bcftools_filterVersion=1.10.2-34-g1a12af0-dirty+htslib-1.10.2-57-gf58a6f3
-##bcftools_filterCommand=filter -iQUAL>20&DP>50 -O z -o o.filt.sorted.vcf2.gz o.filt.sorted.vcf.gz; Date=Wed Nov 18 19:51:55 2020
+##bcftools_filterCommand=filter -iQUAL>50&DP>100 -O z -o o.filt.sorted.vcf2.gz o.filt.sorted.vcf.gz; Date=Fri Nov 20 16:10:53 2020
 #CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	o.filt.sorted.bam
-HLA-A_cds_A	392	.	T	G	228	PASS	DP=70129;VDB=0.622485;SGB=-0.693147;RPB=0.448215;MQB=0.999988;MQSB=0.999951;BQB=0.142278;MQ0F=0;AC=2;AN=2;DP4=35,12,30025,10784;MQ=59	GT:PL	1/1:255,255,0
+HLA-A.A	326	.	G	A	228	PASS	DP=29008;VDB=0.305189;SGB=-0.693147;RPB=8.61516e-11;MQB=1;MQSB=1;BQB=9.47861e-16;MQ0F=0;AC=2;AN=2;DP4=1568,617,12462,3896;MQ=60	GT:PL	1/1:255,96,0
+HLA-A.A	392	.	T	G	228	PASS	DP=26601;VDB=0.946088;SGB=-0.693147;RPB=0.0893404;MQB=1;MQSB=1;BQB=0.533635;MQ0F=0;AC=2;AN=2;DP4=9,2,11216,5639;MQ=60	GT:PL	1/1:255,255,0
