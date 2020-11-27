@@ -1,0 +1,153 @@
+# VERSIONS:
+# HISAT2 - 2.2.1
+
+# HISAT-genotype - 1.3.2
+
+# Database - Database /home/everett/hisatgenotype/indicies/hla derived from HISATgenotype DB version: NONE
+# COMMAND:
+/home/everett/hisatgenotype/hisatgenotype --base hla -1 trimmedSeqDataCollations/228NP20200422.R1.fastq.gz -2 trimmedSeqDataCollations/228NP20200422.R2.fastq.gz -p 3 --out-dir hisatgenotype/228NP20200422
+
+		hisat2 graph
+			148054 reads and 74123 pairs are aligned
+				1 A*02:01:01:02L (count: 58426)
+				2 A*02:01:01:01 (count: 58426)
+				3 A*02:01:01:06 (count: 58426)
+				4 A*02:01:01:08 (count: 58426)
+				5 A*02:01:01:03 (count: 58415)
+				6 A*02:01:01:07 (count: 58388)
+				7 A*02:01:01:04 (count: 58382)
+				8 A*02:01:01:10 (count: 58356)
+				9 A*02:01:01:09 (count: 57817)
+				10 A*02:01:01:05 (count: 57213)
+
+
+				1 ranked A*02:01:01:03 (abundance: 44.57%)
+				2 ranked A*02:629 (abundance: 38.22%)
+				3 ranked A*02:294 (abundance: 6.63%)
+				4 ranked A*11:01:01:02 (abundance: 6.18%)
+				5 ranked A*02:338 (abundance: 4.39%)
+			234129 reads and 117216 pairs are aligned
+				1 B*51:01:01:01 (count: 89885)
+				2 B*51:193 (count: 89885)
+				3 B*51:01:01:02 (count: 89706)
+				4 B*51:187 (count: 89373)
+				5 B*51:32 (count: 89016)
+				6 B*51:01:02 (count: 88972)
+				7 B*51:151 (count: 88391)
+				8 B*51:57 (count: 88274)
+				9 B*51:161 (count: 88151)
+				10 B*51:105 (count: 88151)
+
+
+				1 ranked B*35:08:01 (abundance: 37.45%)
+				2 ranked B*51:193 (abundance: 25.94%)
+				3 ranked B*51:01:01:02 (abundance: 25.94%)
+				4 ranked B*78:02:01 (abundance: 6.22%)
+				5 ranked B*51:04 (abundance: 4.45%)
+			3137 reads and 1576 pairs are aligned
+				1 C*04:09N (count: 1169)
+				2 C*04:01:01:04 (count: 1169)
+				3 C*04:01:01:01 (count: 1169)
+				4 C*04:01:01:02 (count: 1169)
+				5 C*04:01:01:05 (count: 1169)
+				6 C*04:01:01:06 (count: 1169)
+				7 C*04:01:01:07 (count: 1169)
+				8 C*04:01:79 (count: 1169)
+				9 C*04:30 (count: 1164)
+				10 C*04:226 (count: 1164)
+
+
+				1 ranked C*16:04:01 (abundance: 11.55%)
+				2 ranked C*04:01:79 (abundance: 8.22%)
+				3 ranked C*04:09N (abundance: 8.22%)
+				4 ranked C*04:162 (abundance: 8.22%)
+				5 ranked C*04:226 (abundance: 8.22%)
+				6 ranked C*04:30 (abundance: 8.22%)
+				7 ranked C*04:79 (abundance: 8.22%)
+				8 ranked C*04:82 (abundance: 8.22%)
+				9 ranked C*04:01:01:04 (abundance: 8.22%)
+				10 ranked C*07:245 (abundance: 6.80%)
+			19331 reads and 9678 pairs are aligned
+				1 E*01:01:01:03 (count: 8937)
+				2 E*01:01:01:01 (count: 8937)
+				3 E*01:01:01:02 (count: 8932)
+				4 E*01:01:01:06 (count: 8931)
+				5 E*01:01:01:04 (count: 8927)
+				6 E*01:01:01:05 (count: 8927)
+				7 E*01:01:01:07 (count: 8923)
+				8 E*01:03:01:01 (count: 8320)
+				9 E*01:03:01:02 (count: 8315)
+				10 E*01:10 (count: 8308)
+
+
+				1 ranked E*01:01:01:05 (abundance: 64.75%)
+				2 ranked E*01:10 (abundance: 35.25%)
+			466 reads and 234 pairs are aligned
+				1 F*01:01:01:01 (count: 234)
+				2 F*01:01:01:02 (count: 234)
+				3 F*01:01:01:03 (count: 234)
+				4 F*01:01:01:04 (count: 234)
+				5 F*01:01:01:06 (count: 234)
+				6 F*01:01:01:08 (count: 234)
+				7 F*01:01:01:05 (count: 234)
+				8 F*01:01:02:01 (count: 234)
+				9 F*01:01:02:02 (count: 234)
+				10 F*01:01:02:03 (count: 234)
+
+
+				1 ranked F*01:02 (abundance: 50.00%)
+				2 ranked F*01:01:02:05 (abundance: 50.00%)
+			6095 reads and 3051 pairs are aligned
+				1 G*01:01:01:01 (count: 2211)
+				2 G*01:01:01:02 (count: 2211)
+				3 G*01:01:01:03 (count: 1836)
+				4 G*01:01:01:04 (count: 1836)
+				5 G*01:01:01:05 (count: 1836)
+				6 G*01:01:21 (count: 1836)
+				7 G*01:01:08 (count: 1810)
+				8 G*01:01:01:06 (count: 1759)
+				9 G*01:01:03:03 (count: 1548)
+				10 G*01:01:20 (count: 1415)
+
+
+				1 ranked G*01:01:21 (abundance: 23.89%)
+				2 ranked G*01:01:05 (abundance: 22.03%)
+				3 ranked G*01:01:03:03 (abundance: 12.02%)
+				4 ranked G*01:01:01:01 (abundance: 10.96%)
+				5 ranked G*01:01:01:02 (abundance: 10.96%)
+				6 ranked G*01:01:08 (abundance: 10.44%)
+				7 ranked G*01:01:19 (abundance: 9.69%)
+			58 reads and 31 pairs are aligned
+				1 H*02:04 (count: 28)
+				2 H*02:06 (count: 9)
+				3 H*01:01:01:01 (count: 8)
+				4 H*01:01:01:03 (count: 8)
+				5 H*01:01:01:02 (count: 8)
+				6 H*02:03 (count: 8)
+				7 H*02:01:01:01 (count: 7)
+				8 H*02:01:01:02 (count: 7)
+				9 H*01:02 (count: 7)
+				10 H*02:02 (count: 7)
+
+
+				1 ranked H*02:04 (abundance: 55.78%)
+				2 ranked H*01:01:01:03 (abundance: 24.87%)
+				3 ranked H*02:06 (abundance: 19.35%)
+			4 reads and 2 pairs are aligned
+				1 K*01:01:01:01 (count: 2)
+				2 K*01:03 (count: 1)
+				3 K*01:01:01:04 (count: 1)
+				4 K*01:02 (count: 1)
+
+
+				1 ranked K*01:01:01:01 (abundance: 50.00%)
+				2 ranked K*01:03 (abundance: 50.00%)
+			23168 reads and 11615 pairs are aligned
+				1 L*01:02 (count: 11467)
+				2 L*01:01:01:02 (count: 2922)
+				3 L*01:01:01:01 (count: 2922)
+				4 L*01:01:01:03 (count: 2922)
+				5 L*01:01:02 (count: 2597)
+
+
+				1 ranked L*01:02 (abundance: 100.00%)

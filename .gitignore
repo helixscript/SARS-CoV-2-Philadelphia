@@ -9,3 +9,5 @@ summaries/patientReportsData
 HLA/read_pileup_data
 HLA/seqData
 HLA/trimmedSeqData
+HLA/seqDataCollations
+HLA/trimmedSeqDataCollations

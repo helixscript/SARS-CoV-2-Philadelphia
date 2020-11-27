@@ -20,6 +20,27 @@ d <- tibble(file = list.files('trimmedSeqData'),
             dir = ifelse(grepl('_R1_', file), 'R1', 'R2')) %>%
      filter(! grepl('Control', sample))
 
+trimmedSeqDataCollations
+
+invisible(lapply(split(d, d$sample), function(x){
+  comm1 <- paste0('cat ', paste0('trimmedSeqData/', x$file[grepl('_R1_', x$file)], collapse = ' '), ' > trimmedSeqDataCollations/', x$sample[1], '.R1.fastq.gz')
+  comm2 <- paste0('cat ', paste0('trimmedSeqData/', x$file[grepl('_R2_', x$file)], collapse = ' '), ' > trimmedSeqDataCollations/', x$sample[1], '.R2.fastq.gz')
+  message(comm1)
+  message(comm2)
+  system(comm1)
+  system(comm2)
+}))
+
+
+invisible(lapply(split(d, d$sample), function(x){
+  comm1 <- paste0('cat ', paste0('seqData/', x$file[grepl('_R1_', x$file)], collapse = ' '), ' > seqDataCollations/', x$sample[1], '.R1.fastq.gz')
+  comm2 <- paste0('cat ', paste0('seqData/', x$file[grepl('_R2_', x$file)], collapse = ' '), ' > seqDataCollations/', x$sample[1], '.R2.fastq.gz')
+  message(comm1)
+  message(comm2)
+  system(comm1)
+  system(comm2)
+ }))
+
 
 dbs <- list('A' = 'db/HLA-A.A', 'B' = 'db/HLA-A.B', 'C' = 'db/HLA-B.C', 'D' = 'db/HLA-B.D')
 
