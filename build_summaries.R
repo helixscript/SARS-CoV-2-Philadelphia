@@ -9,6 +9,7 @@ CPUs <- 10
 
 # Read in sample data table.
 samples <- read.table('data/samples.tsv', sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE)
+samples <- subset(samples, ! patient_id == '237') 
 #samples <- read.table('data/deWit_samples.tsv', sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE)
 
 
@@ -134,6 +135,9 @@ summary <- bind_rows(lapply(list.files('summaries/sampleSummaries', full.names =
              t$sampleDate2 <- gsub('-', '', t$sampleDate)
              t
 }))
+
+summary <- summary[! grepl('Control', summary$sampleType, ignore.case = TRUE),]
+
 
 summary$sampleName <- paste(summary$Subject, summary$sampleType, summary$sampleDate2)
 openxlsx::write.xlsx(summary, file = 'summaries/sampleSummary.xlsx')
