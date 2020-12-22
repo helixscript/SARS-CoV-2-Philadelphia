@@ -174,7 +174,7 @@ write.table(bind_rows(a, subset(periods, period == 'C')), file = 'nextStrainRun_
 
 # Run next Strain sofware...
 # conda activate nextstrain
-# cd into nextStrainRin dir
+# cd into nextStrainRun dir
 # sh ../nextStrainComms.sh
 
 

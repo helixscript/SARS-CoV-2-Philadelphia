@@ -1,31 +1,25 @@
-Tue Sep 29 17:26:50 2020
-Starting VSP8013 with 1 seq experiments.
-Tue Sep 29 17:26:50 2020 (summaries/VSPdata/VSP8013-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8013-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8013-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8013-1_S10_L001_R2_001.fastq.gz
+Tue Dec 22 13:43:05 2020
+Starting VSP8012 with 1 seq experiments.
+summaries/VSPdata/VSP8012-1.experiment.RData exists -- skipping.
+Completed VSP8012
 
+Starting VSP8013 with 1 seq experiments.
+summaries/VSPdata/VSP8013-1.experiment.RData exists -- skipping.
 Completed VSP8013
 
 Starting VSP8014 with 1 seq experiments.
-Tue Sep 29 17:51:45 2020 (summaries/VSPdata/VSP8014-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8014-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8014-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8014-1_S10_L001_R2_001.fastq.gz
-
+summaries/VSPdata/VSP8014-1.experiment.RData exists -- skipping.
 Completed VSP8014
 
 Starting VSP8015 with 1 seq experiments.
-Tue Sep 29 17:55:19 2020 (summaries/VSPdata/VSP8015-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8015-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8015-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8015-1_S10_L001_R2_001.fastq.gz
-
+summaries/VSPdata/VSP8015-1.experiment.RData exists -- skipping.
 Completed VSP8015
 
 Starting VSP8016 with 1 seq experiments.
-Tue Sep 29 18:22:52 2020 (summaries/VSPdata/VSP8016-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8016-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8016-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8016-1_S10_L001_R2_001.fastq.gz
-
+summaries/VSPdata/VSP8016-1.experiment.RData exists -- skipping.
 Completed VSP8016
 
 Starting VSP8017 with 1 seq experiments.
-Tue Sep 29 18:24:15 2020 (summaries/VSPdata/VSP8017-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8017-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8017-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8017-1_S10_L001_R2_001.fastq.gz
-
+summaries/VSPdata/VSP8017-1.experiment.RData exists -- skipping.
 Completed VSP8017
-
-Starting VSP8018 with 1 seq experiments.
-Tue Sep 29 18:41:50 2020 (summaries/VSPdata/VSP8018-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8018-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8018-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8018-1_S10_L001_R2_001.fastq.gz
-
-Completed VSP8018
 

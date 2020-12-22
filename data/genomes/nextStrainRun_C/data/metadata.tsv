@@ -13,10 +13,9 @@ strain	virus	date	pangolin_lineage	GISAID_clade	country_exposure	division_exposu
 227|OP|20200422	SARS-CoV-2	2020-04-22	X	X	USA	Pennsylvania	C	Philadelphia
 228|NP|20200422	SARS-CoV-2	2020-04-22	X	X	USA	Pennsylvania	C	Philadelphia
 235|NP-OP|20200424	SARS-CoV-2	2020-04-24	X	X	USA	Pennsylvania	C	Philadelphia
-237|NP|20200429	SARS-CoV-2	2020-04-29	X	X	USA	Pennsylvania	C	Philadelphia
-237|NP-OP|20200427	SARS-CoV-2	2020-04-27	X	X	USA	Pennsylvania	C	Philadelphia
-237|OP|20200429	SARS-CoV-2	2020-04-29	X	X	USA	Pennsylvania	C	Philadelphia
+238|NP|20200429	SARS-CoV-2	2020-04-29	X	X	USA	Pennsylvania	C	Philadelphia
 239|NP|20200429	SARS-CoV-2	2020-04-29	X	X	USA	Pennsylvania	C	Philadelphia
+240|NP-OP|20200501	SARS-CoV-2	2020-05-01	X	X	USA	Pennsylvania	C	Philadelphia
 242|ETA|20200504	SARS-CoV-2	2020-05-04	X	X	USA	Pennsylvania	C	Philadelphia
 247|NP-OP|20200501	SARS-CoV-2	2020-05-01	X	X	USA	Pennsylvania	C	Philadelphia
 251|ETA|20200506	SARS-CoV-2	2020-05-06	X	X	USA	Pennsylvania	C	Philadelphia
@@ -34,6 +33,7 @@ strain	virus	date	pangolin_lineage	GISAID_clade	country_exposure	division_exposu
 290|NP-OP|20200629	SARS-CoV-2	2020-06-29	X	X	USA	Pennsylvania	C	Philadelphia
 290|NP-OP|20200701	SARS-CoV-2	2020-07-01	X	X	USA	Pennsylvania	C	Philadelphia
 307|NP-OP|20200717	SARS-CoV-2	2020-07-17	X	X	USA	Pennsylvania	C	Philadelphia
+USA-WA1-2020-TCE|NP-OP|20200328	SARS-CoV-2	2020-03-28	X	X	USA	Pennsylvania	C	Philadelphia
 HongKong/HKU-907a/2020	SARS-CoV-2	2020-01-27	A	S	Hong Kong	Hong Kong	C	Non-USA
 Japan/TY-WK-501/2020	SARS-CoV-2	2020-01-31	A	S	Japan	Tokyo	C	Non-USA
 Singapore/15/2020	SARS-CoV-2	2020-01-27	A	S	Singapore	Singapore	C	Non-USA

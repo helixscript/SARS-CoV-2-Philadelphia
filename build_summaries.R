@@ -136,7 +136,7 @@ summary <- bind_rows(lapply(list.files('summaries/sampleSummaries', full.names =
              t
 }))
 
-summary <- summary[! grepl('Control', summary$sampleType, ignore.case = TRUE),]
+summary <- summary[! grepl('Control|PCR|Mock', summary$sampleType, ignore.case = TRUE),]
 
 
 summary$sampleName <- paste(summary$Subject, summary$sampleType, summary$sampleDate2)
@@ -266,29 +266,30 @@ if(! file.exists('summaries/concensusSeqs95.mafft')) system(paste0(mafftPath, ' 
 
 # Build phylogenetic tree.
 #v <- ape::read.dna("summaries/concensusSeqs95.mafft", format="fasta")
+#
+#v <- ape::read.dna("summaries/concensusSeqs95.fasta", format="fasta")
+#dist <- ape::dist.dna(v)
+#plot(hclust(dist, method='average'))
+#
+# v_phyDat <- phangorn::phyDat(v, type = "DNA", levels = NULL)
+#
+# dna_dist <- phangorn::dist.ml(v_phyDat, model="JC69")
 
-v <- ape::read.dna("summaries/concensusSeqs95.fasta", format="fasta")
-dist <- ape::dist.dna(v)
-plot(hclust(dist, method='average'))
 
-plot(ape::nj(dist))
-plot(phangorn::upgma(dist))
-
-
-
-v_phyDat <- phangorn::phyDat(v, type = "DNA", levels = NULL)
-
-# Determine best mode and create a distance matrix.
-# mt <- phangorn::modelTest(v_phyDat)
-dna_dist <- phangorn::dist.ml(v_phyDat, model="JC69")
 
 # Create a data frame to plot tree.
-dendr <- ggdendro::dendro_data(hclust(dna_dist, method='average'), type="rectangle") 
+#dendr <- ggdendro::dendro_data(hclust(dna_dist, method='average'), type="rectangle") 
 
-concensusSeqPhyloPlot <- 
+dendr <- ggdendro::dendro_data(phylogram::read.dendrogram('data/sampleTree.nwk'), type="rectangle")
+
+segments <- ggdendro::segment(dendr)
+labels <- ggdendro::label(dendr)
+
+
+#concensusSeqPhyloPlot <- 
   ggplot() + 
-  geom_segment(data=ggdendro::segment(dendr), aes(x=x, y=y, xend=xend, yend=yend)) + 
-  geom_text(data=ggdendro::label(dendr), aes(x=x, y=y, label=label, hjust=0), size=3) +
+  geom_segment(data=segments, aes(x=x, y=y, xend=xend, yend=yend)) + 
+  geom_text(data=labels, aes(x=x, y=y, label=label, hjust=0), size=3) +
   coord_flip() + scale_y_reverse(expand=c(0.2, 0)) + 
   theme(axis.line.y=element_blank(),
         axis.ticks.y=element_blank(),
@@ -322,7 +323,7 @@ genomeVariantPlot <-
         legend.position="bottom") +
   guides(color=guide_legend(nrow=1))
 
-ggsave(genomeVariantPlot, height = 10, width = 12, units = 'in', file = 'summaries/genomeVariantPlot.pdf')
+ggsave(genomeVariantPlot, height = 10, width = 12, units = 'in', file = 'summaries/genomeVariantPlot.pdf', useDingbats = FALSE)
 
 
 # Create a single results download.

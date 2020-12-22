@@ -14,8 +14,8 @@ d <- data.frame(vsp = unique(unlist(lapply(strsplit(unlist(lapply(strsplit(f, '_
 d$s <- ntile(1:nrow(d), CPUs)
 
 
-invisible(parLapply(cluster, split(d, d$s), function(x){
-#invisible(lapply(split(d, d$s), function(x){
+#invisible(parLapply(cluster, split(d, d$s), function(x){
+invisible(lapply(split(d, d$s), function(x){
   library(dplyr)
   library(stringr)
   

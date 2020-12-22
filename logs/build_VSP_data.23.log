@@ -1,26 +1,25 @@
-Tue Sep 29 17:26:50 2020
-Starting VSP8002 with 1 seq experiments.
-Tue Sep 29 17:26:50 2020 (summaries/VSPdata/VSP8002-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8002-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8002-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8002-1_S10_L001_R2_001.fastq.gz
+Tue Dec 22 13:43:05 2020
+Starting VSP8000 with 1 seq experiments.
+summaries/VSPdata/VSP8000-1.experiment.RData exists -- skipping.
+Completed VSP8000
 
+Starting VSP8001 with 1 seq experiments.
+summaries/VSPdata/VSP8001-1.experiment.RData exists -- skipping.
+Completed VSP8001
+
+Starting VSP8002 with 1 seq experiments.
+summaries/VSPdata/VSP8002-1.experiment.RData exists -- skipping.
 Completed VSP8002
 
 Starting VSP8003 with 1 seq experiments.
-Tue Sep 29 17:34:37 2020 (summaries/VSPdata/VSP8003-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8003-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8003-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8003-1_S10_L001_R2_001.fastq.gz
-
+summaries/VSPdata/VSP8003-1.experiment.RData exists -- skipping.
 Completed VSP8003
 
 Starting VSP8004 with 1 seq experiments.
-Tue Sep 29 18:05:03 2020 (summaries/VSPdata/VSP8004-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8004-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8004-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8004-1_S10_L001_R2_001.fastq.gz
-
+summaries/VSPdata/VSP8004-1.experiment.RData exists -- skipping.
 Completed VSP8004
 
 Starting VSP8005 with 1 seq experiments.
-Tue Sep 29 18:08:07 2020 (summaries/VSPdata/VSP8005-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8005-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8005-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8005-1_S10_L001_R2_001.fastq.gz
-
+summaries/VSPdata/VSP8005-1.experiment.RData exists -- skipping.
 Completed VSP8005
-
-Starting VSP8006 with 1 seq experiments.
-Tue Sep 29 18:16:14 2020 (summaries/VSPdata/VSP8006-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP8006-1.experiment.RData --R1 data/sequencing/pub_32516797/VSP8006-1_S10_L001_R1_001.fastq.gz --R2 data/sequencing/pub_32516797/VSP8006-1_S10_L001_R2_001.fastq.gz
-
-Completed VSP8006
 
