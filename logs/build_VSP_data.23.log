@@ -1,4 +1,29 @@
-Tue Dec 22 13:43:05 2020
+Wed Jan  6 14:01:53 2021
+Starting VSP0544 with 1 seq experiments.
+Wed Jan  6 14:01:53 2021 (summaries/VSPdata/VSP0544-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0544-1.experiment.RData --R1 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP0544-1_S19_L001_R1_001.fastq.gz --R2 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP0544-1_S19_L001_R2_001.fastq.gz
+
+Completed VSP0544
+
+Starting VSP0545 with 1 seq experiments.
+Wed Jan  6 14:02:47 2021 (summaries/VSPdata/VSP0545-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0545-1.experiment.RData --R1 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP0545-1_S20_L001_R1_001.fastq.gz --R2 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP0545-1_S20_L001_R2_001.fastq.gz
+
+Completed VSP0545
+
+Starting VSP0546 with 1 seq experiments.
+Wed Jan  6 14:04:14 2021 (summaries/VSPdata/VSP0546-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0546-1.experiment.RData --R1 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP0546-1_S21_L001_R1_001.fastq.gz --R2 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP0546-1_S21_L001_R2_001.fastq.gz
+
+Completed VSP0546
+
+Starting VSP0547 with 1 seq experiments.
+Wed Jan  6 14:06:09 2021 (summaries/VSPdata/VSP0547-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0547-1.experiment.RData --R1 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP0547-1_S22_L001_R1_001.fastq.gz --R2 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP0547-1_S22_L001_R2_001.fastq.gz
+
+Completed VSP0547
+
+Starting VSP9979 with 1 seq experiments.
+Wed Jan  6 14:07:10 2021 (summaries/VSPdata/VSP9979-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP9979-1.experiment.RData --R1 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP9979-1_S23_L001_R1_001.fastq.gz --R2 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP9979-1_S23_L001_R2_001.fastq.gz
+
+Completed VSP9979
+
 Starting VSP8000 with 1 seq experiments.
 summaries/VSPdata/VSP8000-1.experiment.RData exists -- skipping.
 Completed VSP8000
@@ -6,20 +31,4 @@ Completed VSP8000
 Starting VSP8001 with 1 seq experiments.
 summaries/VSPdata/VSP8001-1.experiment.RData exists -- skipping.
 Completed VSP8001
-
-Starting VSP8002 with 1 seq experiments.
-summaries/VSPdata/VSP8002-1.experiment.RData exists -- skipping.
-Completed VSP8002
-
-Starting VSP8003 with 1 seq experiments.
-summaries/VSPdata/VSP8003-1.experiment.RData exists -- skipping.
-Completed VSP8003
-
-Starting VSP8004 with 1 seq experiments.
-summaries/VSPdata/VSP8004-1.experiment.RData exists -- skipping.
-Completed VSP8004
-
-Starting VSP8005 with 1 seq experiments.
-summaries/VSPdata/VSP8005-1.experiment.RData exists -- skipping.
-Completed VSP8005
 

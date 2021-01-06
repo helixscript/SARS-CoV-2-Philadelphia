@@ -1,4 +1,16 @@
-Tue Dec 22 13:43:05 2020
+Wed Jan  6 14:07:23 2021
+Starting VSP8015 with 1 seq experiments.
+summaries/VSPdata/VSP8015-1.experiment.RData exists -- skipping.
+Completed VSP8015
+
+Starting VSP8016 with 1 seq experiments.
+summaries/VSPdata/VSP8016-1.experiment.RData exists -- skipping.
+Completed VSP8016
+
+Starting VSP8017 with 1 seq experiments.
+summaries/VSPdata/VSP8017-1.experiment.RData exists -- skipping.
+Completed VSP8017
+
 Starting VSP8018 with 1 seq experiments.
 summaries/VSPdata/VSP8018-1.experiment.RData exists -- skipping.
 Completed VSP8018
@@ -10,16 +22,4 @@ Completed VSP8019
 Starting VSP8020 with 1 seq experiments.
 summaries/VSPdata/VSP8020-1.experiment.RData exists -- skipping.
 Completed VSP8020
-
-Starting VSP8021 with 1 seq experiments.
-summaries/VSPdata/VSP8021-1.experiment.RData exists -- skipping.
-Completed VSP8021
-
-Starting VSP8022 with 1 seq experiments.
-summaries/VSPdata/VSP8022-1.experiment.RData exists -- skipping.
-Completed VSP8022
-
-Starting VSP8023 with 1 seq experiments.
-summaries/VSPdata/VSP8023-1.experiment.RData exists -- skipping.
-Completed VSP8023
 

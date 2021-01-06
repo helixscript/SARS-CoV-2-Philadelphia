@@ -1,8 +1,4 @@
-Tue Dec 22 13:40:08 2020
-Starting VSP9986 with 1 seq experiments.
-summaries/VSPdata/VSP9986-1b.experiment.RData exists -- skipping.
-Completed VSP9986
-
+Wed Jan  6 13:29:15 2021
 Starting VSP9987 with 1 seq experiments.
 summaries/VSPdata/VSP9987-1b.experiment.RData exists -- skipping.
 Completed VSP9987
@@ -27,4 +23,10 @@ summaries/VSPdata/VSP0010-3.experiment.RData exists -- skipping.
 summaries/VSPdata/VSP0010-4.experiment.RData exists -- skipping.
 summaries/VSPdata/VSP0010-5.experiment.RData exists -- skipping.
 Completed VSP0010
+
+Starting VSP0011 with 2 seq experiments.
+summaries/VSPdata/VSP0011.composite.RData exists -- skipping.
+summaries/VSPdata/VSP0011-1m.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0011-2.experiment.RData exists -- skipping.
+Completed VSP0011
 

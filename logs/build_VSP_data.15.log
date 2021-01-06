@@ -1,29 +1,31 @@
-Tue Dec 22 13:40:08 2020
-Starting VSP0206 with 1 seq experiments.
-summaries/VSPdata/VSP0206-1.experiment.RData exists -- skipping.
-Completed VSP0206
+Wed Jan  6 13:29:16 2021
+Starting VSP0244 with 2 seq experiments.
+summaries/VSPdata/VSP0244.composite.RData exists -- skipping.
+summaries/VSPdata/VSP0244-1.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0244-2.experiment.RData exists -- skipping.
+Completed VSP0244
 
-Starting VSP9996 with 1 seq experiments.
-summaries/VSPdata/VSP9996-1.experiment.RData exists -- skipping.
-Completed VSP9996
+Starting VSP0246 with 1 seq experiments.
+summaries/VSPdata/VSP0246-1.experiment.RData exists -- skipping.
+Completed VSP0246
 
-Starting VSP0065 with 2 seq experiments.
-summaries/VSPdata/VSP0065.composite.RData exists -- skipping.
-summaries/VSPdata/VSP0065-1.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0065-2.experiment.RData exists -- skipping.
-Completed VSP0065
+Starting VSP0248 with 1 seq experiments.
+summaries/VSPdata/VSP0248-1.experiment.RData exists -- skipping.
+Completed VSP0248
 
-Starting VSP0080 with 1 seq experiments.
-summaries/VSPdata/VSP0080-1.experiment.RData exists -- skipping.
-Completed VSP0080
+Starting VSP0254 with 1 seq experiments.
+summaries/VSPdata/VSP0254-1.experiment.RData exists -- skipping.
+Completed VSP0254
 
-Starting VSP0088 with 1 seq experiments.
-summaries/VSPdata/VSP0088-1.experiment.RData exists -- skipping.
-Completed VSP0088
+Starting VSP0255 with 1 seq experiments.
+summaries/VSPdata/VSP0255-1.experiment.RData exists -- skipping.
+Completed VSP0255
 
-Starting VSP0089 with 2 seq experiments.
-summaries/VSPdata/VSP0089.composite.RData exists -- skipping.
-summaries/VSPdata/VSP0089-1.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0089-2.experiment.RData exists -- skipping.
-Completed VSP0089
+Starting VSP0256 with 1 seq experiments.
+summaries/VSPdata/VSP0256-1.experiment.RData exists -- skipping.
+Completed VSP0256
+
+Starting VSP0260 with 1 seq experiments.
+summaries/VSPdata/VSP0260-1.experiment.RData exists -- skipping.
+Completed VSP0260
 

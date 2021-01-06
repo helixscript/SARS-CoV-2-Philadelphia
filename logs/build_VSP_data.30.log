@@ -1,4 +1,8 @@
-Tue Dec 22 13:43:05 2020
+Wed Jan  6 14:07:23 2021
+Starting VSP8041 with 1 seq experiments.
+summaries/VSPdata/VSP8041-1.experiment.RData exists -- skipping.
+Completed VSP8041
+
 Starting VSP8042 with 1 seq experiments.
 summaries/VSPdata/VSP8042-1.experiment.RData exists -- skipping.
 Completed VSP8042

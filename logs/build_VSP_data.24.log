@@ -1,4 +1,20 @@
-Tue Dec 22 13:43:05 2020
+Wed Jan  6 14:07:23 2021
+Starting VSP8002 with 1 seq experiments.
+summaries/VSPdata/VSP8002-1.experiment.RData exists -- skipping.
+Completed VSP8002
+
+Starting VSP8003 with 1 seq experiments.
+summaries/VSPdata/VSP8003-1.experiment.RData exists -- skipping.
+Completed VSP8003
+
+Starting VSP8004 with 1 seq experiments.
+summaries/VSPdata/VSP8004-1.experiment.RData exists -- skipping.
+Completed VSP8004
+
+Starting VSP8005 with 1 seq experiments.
+summaries/VSPdata/VSP8005-1.experiment.RData exists -- skipping.
+Completed VSP8005
+
 Starting VSP8006 with 1 seq experiments.
 summaries/VSPdata/VSP8006-1.experiment.RData exists -- skipping.
 Completed VSP8006
@@ -6,20 +22,4 @@ Completed VSP8006
 Starting VSP8007 with 1 seq experiments.
 summaries/VSPdata/VSP8007-1.experiment.RData exists -- skipping.
 Completed VSP8007
-
-Starting VSP8008 with 1 seq experiments.
-summaries/VSPdata/VSP8008-1.experiment.RData exists -- skipping.
-Completed VSP8008
-
-Starting VSP8009 with 1 seq experiments.
-summaries/VSPdata/VSP8009-1.experiment.RData exists -- skipping.
-Completed VSP8009
-
-Starting VSP8010 with 1 seq experiments.
-summaries/VSPdata/VSP8010-1.experiment.RData exists -- skipping.
-Completed VSP8010
-
-Starting VSP8011 with 1 seq experiments.
-summaries/VSPdata/VSP8011-1.experiment.RData exists -- skipping.
-Completed VSP8011
 
