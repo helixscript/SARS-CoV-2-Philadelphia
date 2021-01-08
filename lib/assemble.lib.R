@@ -80,7 +80,10 @@ megaHitContigs <- function(R1, R2, label = 'x', workDir = '.', megahit.path = 'm
 
 parsePileUpString <- function(x){
   # Remove read boundary markers
-  x <- toupper(gsub('\\$|\\^\\S', '', x))
+  x <- toupper(gsub('\\*|\\$|\\^\\S', '', x))
+  
+  # Remove leading strand indicator from indels. 
+  x <- gsub('[\\.\\,]([\\-\\+])', '\\1', x, perl = TRUE)
   
   counts <- list('e' = 0, '?' = 0)
   

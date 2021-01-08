@@ -316,9 +316,9 @@ MisC16	MisC16	CHOP_Planet	06/01/2020	NP-OP	VSP0297	Paul Planet (CHOP)
 329no-q	329	UPHS	08/14/2020	NP-OP	VSP0315	Ron, Young	QiaAMP mini RNA	8/19/20	37	Undetermined									
 328no-q	328	UPHS	08/17/2020	NP-OP	VSP0316	Ron, Young	QiaAMP mini RNA	9/11/20	37	1.23E+00									
 328s-q	328	UPHS	08/17/2020	Saliva	VSP0317	Ron, Young	QiaAMP mini RNA	9/11/20	37	2.32E+01									
-251no-q	251	UPHS	05/06/20	NP-OP	VSP0318	Ron, Young	Traditional Trizol	09/09/20	37	1.78E+05									
-266no-q	266	UPHS	05/20/20	NP-OP	VSP0319	Ron, Young	QiaAMP mini RNA	09/09/20	37	2.87E+04									
-266no-q	266	UPHS	05/22/20	NP-OP	VSP0320	Ron, Young	QiaAMP mini RNA	09/09/20	37	1.15E+06									
+251no-q	251	UPHS	5/6/20	NP-OP	VSP0318	Ron, Young	Traditional Trizol	09/09/20	37	1.78E+05									
+266no-q	266	UPHS	5/20/20	NP-OP	VSP0319	Ron, Young	QiaAMP mini RNA	09/09/20	37	2.87E+04									
+266no-q	266	UPHS	5/22/20	NP-OP	VSP0320	Ron, Young	QiaAMP mini RNA	09/09/20	37	1.15E+06									
 330no-q	330	UPHS	08/24/2020	NP-OP	VSP0321	Ron, Young	QiaAMP mini RNA	9/11/20	37	Undetermined									
 P01s-q	P01	UPHS	08/26/2020	Saliva	VSP0323	Aoife	QiaAMP mini RNA	9/11/20	37	Undetermined									
 330no-q	330	UPHS	08/26/2020	NP-OP	VSP0324	Ron, Young	QiaAMP mini RNA	9/11/20	37	Undetermined									
@@ -542,23 +542,23 @@ J37ML	J37ML	UPHS	06/09/2020	H2O-1b	VSP9980	Pascha
 431no	431	UPHS	12/9/2020	NP-OP	VSP0523	Ron, Young	QiaAMP mini RNA												
 430no	430	UPHS	12/11/2020	NP-OP	VSP0524	Ron, Young	QiaAMP mini RNA												
 431no	431	UPHS	12/11/2020	NP-OP	VSP0525	Ron, Young	QiaAMP mini RNA												
-2745	2745	UPHS	12/10/20	Saliva	VSP0526	Ron, Young	QiaAMP mini RNA	12/14/20	37	4.02E+01									
-2746	2746	UPHS	12/10/20	Saliva	VSP0527	Ron, Young	QiaAMP mini RNA	12/14/20	37	Undetermined									
-2747	2747	UPHS	12/10/20	Saliva	VSP0528	Ron, Young	QiaAMP mini RNA	12/14/20	37	Undetermined									
-2748	2748	UPHS	12/10/20	Saliva	VSP0529	Ron, Young	QiaAMP mini RNA	12/14/20	37	6.22E+03									
-2749	2749	UPHS	12/10/20	Saliva	VSP0530	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.01E+02									
-2750	2750	UPHS	12/10/20	Saliva	VSP0531	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.76E+03									
-2751	2751	UPHS	12/10/20	Saliva	VSP0532	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.02E+02									
-2752	2752	UPHS	12/10/20	Saliva	VSP0533	Ron, Young	QiaAMP mini RNA	12/14/20	37	5.25E+02									
-2753	2753	UPHS	12/11/20	Saliva	VSP0534	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.82E+03									
-2754	2754	UPHS	12/11/20	Saliva	VSP0535	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.67E+01									
-2755	2755	UPHS	12/11/20	Saliva	VSP0536	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.78E+01									
-2756	2756	UPHS	12/11/20	Saliva	VSP0537	Ron, Young	QiaAMP mini RNA	12/14/20	37	5.34E+04									
-2757	2757	UPHS	12/11/20	Saliva	VSP0538	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.65E+05									
-2758	2758	UPHS	12/11/20	Saliva	VSP0539	Ron, Young	QiaAMP mini RNA	12/14/20	37	4.99E+00									
-3157	3157	UPHS	12/11/20	Saliva	VSP0540	Ron, Young	QiaAMP mini RNA	12/14/20	37	7.32E+02									
-3193	3193	UPHS	12/11/20	Saliva	VSP0541	Ron, Young	QiaAMP mini RNA	12/14/20	37	Undetermined									
-3197	3197	UPHS	12/11/20	Saliva	VSP0542	Ron, Young	QiaAMP mini RNA	12/14/20	37	4.36E+00									
+2745	2745	PennSecurity_Dec2020	12/10/20	Saliva	VSP0526	Ron, Young	QiaAMP mini RNA	12/14/20	37	4.02E+01									
+2746	2746	PennSecurity_Dec2020	12/10/20	Saliva	VSP0527	Ron, Young	QiaAMP mini RNA	12/14/20	37	Undetermined									
+2747	2747	PennSecurity_Dec2020	12/10/20	Saliva	VSP0528	Ron, Young	QiaAMP mini RNA	12/14/20	37	Undetermined									
+2748	2748	PennSecurity_Dec2020	12/10/20	Saliva	VSP0529	Ron, Young	QiaAMP mini RNA	12/14/20	37	6.22E+03									
+2749	2749	PennSecurity_Dec2020	12/10/20	Saliva	VSP0530	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.01E+02									
+2750	2750	PennSecurity_Dec2020	12/10/20	Saliva	VSP0531	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.76E+03									
+2751	2751	PennSecurity_Dec2020	12/10/20	Saliva	VSP0532	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.02E+02									
+2752	2752	PennSecurity_Dec2020	12/10/20	Saliva	VSP0533	Ron, Young	QiaAMP mini RNA	12/14/20	37	5.25E+02									
+2753	2753	PennSecurity_Dec2020	12/11/20	Saliva	VSP0534	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.82E+03									
+2754	2754	PennSecurity_Dec2020	12/11/20	Saliva	VSP0535	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.67E+01									
+2755	2755	PennSecurity_Dec2020	12/11/20	Saliva	VSP0536	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.78E+01									
+2756	2756	PennSecurity_Dec2020	12/11/20	Saliva	VSP0537	Ron, Young	QiaAMP mini RNA	12/14/20	37	5.34E+04									
+2757	2757	PennSecurity_Dec2020	12/11/20	Saliva	VSP0538	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.65E+05									
+2758	2758	PennSecurity_Dec2020	12/11/20	Saliva	VSP0539	Ron, Young	QiaAMP mini RNA	12/14/20	37	4.99E+00									
+3157	3157	PennSecurity_Dec2020	12/11/20	Saliva	VSP0540	Ron, Young	QiaAMP mini RNA	12/14/20	37	7.32E+02									
+3193	3193	PennSecurity_Dec2020	12/11/20	Saliva	VSP0541	Ron, Young	QiaAMP mini RNA	12/14/20	37	Undetermined									
+3197	3197	PennSecurity_Dec2020	12/11/20	Saliva	VSP0542	Ron, Young	QiaAMP mini RNA	12/14/20	37	4.36E+00									
 161	161	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0543	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	6.14E+02									
 374	374	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0544	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	1.71E+02									
 95-267	95-267	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0545	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	2.52E+02									
@@ -580,3 +580,6 @@ J37ML	J37ML	UPHS	06/09/2020	H2O-1b	VSP9980	Pascha
 437s	437	UPHS	12/18/2020	saliva	VSP0561	Ron, Young	QiaAMP mini RNA												
 438no	438	UPHS	12/18/2020	NP-OP	VSP0562	Ron, Young	QiaAMP mini RNA												
 J78GM	J78GM	UPHS	12/12/2020	Negative control	VSP9979	Pascha													
+DOH1	DOH1	dept of health	1/6/2021	VTM	VSP0563	dept of health	QiaAMP mini RNA												
+SouthAfrica_HLS-UCT-GS-1396-KRISP	SouthAfrica_HLS-UCT-GS-1396-KRISP	simulated_dataset	11/18/2020	simulated	VSP8000	GISAID													
+England_EPI_ISL_747519	England_EPI_ISL_747519	simulated_dataset	12/11/2020	simulated	VSP8001	GISAID													

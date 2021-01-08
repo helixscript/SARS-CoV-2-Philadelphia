@@ -15,9 +15,11 @@ option_list = list(
   make_option(c("--minVariantPhredScore"), type="integer", default=20, help="minimum PHRED score allowed for called varinats", metavar="character"),
   make_option(c("--bwaPath"), type="character", default='~/ext/bwa', help="path to bwa binary", metavar="character"), 
   make_option(c("--megahitPath"), type="character", default='~/ext/megahit/bin/megahit', help="path to megahit binary", metavar="character"), 
-  make_option(c("--minBWAmappingScore"), type="integer", default=30, help="minimum BWA mapping score", metavar="character"), 
+  make_option(c("--minBWAmappingScore"), type="integer", default=20, help="minimum BWA mapping score", metavar="character"), 
   make_option(c("--samtoolsBin"), type="character", default='~/ext/samtools/bin', help="path to samtools bin", metavar="character"), 
   make_option(c("--bcftoolsBin"), type="character", default='~/ext/bcftools/bin',  help="path to bcftools bin", metavar="character"))
+
+# Changed minBWAmappingScore from 30 to 20 on 2021-01-07
 
 opt_parser = OptionParser(option_list=option_list)
 opt = parse_args(opt_parser)
@@ -32,10 +34,8 @@ opt$variantTable      <- data.frame()
 opt$variantTableMajor <- data.frame()
 opt$contigs           <- Biostrings::DNAStringSet()
 
-# p300 opt$R1 <- 'data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0244-1_S8_L001_R1_001.fastq.gz'
-# p300 opt$R2 <- 'data/sequencing/200725_M03249_0079_000000000-J2J3B/VSP0244-1_S8_L001_R2_001.fastq.gz'
-#opt$R1 <- 'data/sequencing/200518_M03249_0065_000000000-J37K3/VSP0001-1a_S2_L001_R1_001.fastq.gz,data/sequencing/200518_M03249_0065_000000000-J37K3/VSP0001-1b_S10_L001_R1_001.fastq.gz'
-#opt$R2 <- 'data/sequencing/200518_M03249_0065_000000000-J37K3/VSP0001-1a_S2_L001_R2_001.fastq.gz,data/sequencing/200518_M03249_0065_000000000-J37K3/VSP0001-1b_S10_L001_R2_001.fastq.gz'
+opt$R1 <- 'data/sequencing/simulated/VSP8001-1_S2_L001_R1_001.fastq.gz'
+opt$R2 <- 'data/sequencing/simulated/VSP8001-1_S2_L001_R2_001.fastq.gz'
 
 if(! 'outputFile' %in% names(opt)) stop('--workDir must be defined.')
 if(! 'workDir' %in% names(opt)) stop('--workDir must be defined.')
@@ -63,7 +63,7 @@ writeFasta(r[[2]], file = paste0(t1, '_R2.trimmed.fasta'))
 
 
 # Align trimmed reads to the reference genome.
-system(paste0(opt$bwaPath, ' mem -M ', opt$refGenomeBWA, ' ',  paste0(t1, '_R1.trimmed.fasta'), ' ', 
+system(paste0(opt$bwaPath, ' mem -M -L 2,2 ', opt$refGenomeBWA, ' ',  paste0(t1, '_R1.trimmed.fasta'), ' ', 
               paste0(t1, '_R2.trimmed.fasta'),  ' > ', paste0(t1, '_genome.sam')))
 system(paste0(opt$samtoolsBin, '/samtools view -S -b ', paste0(t1, '_genome.sam'), ' > ', paste0(t1, '_genome.bam')))
 invisible(file.remove(paste0(t1, '_genome.sam')))
@@ -136,11 +136,14 @@ system(paste0(opt$samtoolsBin, '/samtools sort -o ', paste0(t1, '_genome.filt.so
 system(paste0(opt$samtoolsBin, '/samtools index ', paste0(t1, '_genome.filt.sorted.bam')))
 
 
+# JKE
+
 # Save bam and bam index files for downstream analyses.
 system(paste0('cp ', t1, '_genome.filt.sorted.bam ', sub('.RData', '.bam', sub('VSPdata', 'VSPalignments', opt$outputFile))))
 system(paste0('cp ', t1, '_genome.filt.sorted.bam.bai ', sub('.RData', '.bam.bai', sub('VSPdata', 'VSPalignments', opt$outputFile))))
 
 
+# Create pileup data file for determining depth at specific locations.
 system(paste0(opt$samtoolsBin, '/samtools mpileup --output ', paste0(t1, '.pileup'), ' --max-depth 100000 -f ', 
               opt$refGenomeFasta, ' ', paste0(t1, '_genome.filt.sorted.bam')))
 
@@ -210,8 +213,9 @@ if(nrow(opt$pileupData) > 0){
       stop('Error parsing variant occurrences.')
     })
     
+    # JKE
     # Select the major variant for each position.
-    opt$variantTableMajor <- dplyr::filter(opt$variantTable,  percentAlt > 0.5 & ! ALT == 'e') %>%
+    opt$variantTableMajor <- dplyr::filter(opt$variantTable,  percentAlt >= 0.5 & ! ALT == 'e') %>%
                              dplyr::group_by(POS) %>%
                              dplyr::top_n(1, wt = percentAlt) %>%
                              dplyr::slice(1) %>%
@@ -276,8 +280,10 @@ if(nrow(opt$variantTableMajor) > 0){
     v <- GRanges(seqnames = 'genome', ranges = IRanges(x$POS, end = x$POS), strand = '+')
     o <- GenomicRanges::findOverlaps(v, cds)
   
+    #browser()
+    
     if(length(o) == 0){
-      x$genes <- 'transgenic'
+      x$genes <- 'intergenic'
       x$type <- ' '
     } else {
       hit <- cds[subjectHits(o)]

@@ -139,6 +139,11 @@ summary <- bind_rows(lapply(list.files('summaries/sampleSummaries', full.names =
 summary <- summary[! grepl('Control|PCR|Mock', summary$sampleType, ignore.case = TRUE),]
 
 
+selectPatients <- c('2745', '2746', '2747', '2748', '2749','2750', '2751', '2752', '2753','2754',
+                    '2755','2756', '2757','2758','3157','3193','3197')
+summary <- subset(summary, Subject %in% selectPatients)
+
+
 summary$sampleName <- paste(summary$Subject, summary$sampleType, summary$sampleDate2)
 openxlsx::write.xlsx(summary, file = 'summaries/sampleSummary.xlsx')
 
@@ -265,22 +270,21 @@ if(! file.exists('summaries/concensusSeqs95.mafft')) system(paste0(mafftPath, ' 
 
 
 # Build phylogenetic tree.
-#v <- ape::read.dna("summaries/concensusSeqs95.mafft", format="fasta")
+v <- ape::read.dna("summaries/concensusSeqs95.mafft", format="fasta")
 #
 #v <- ape::read.dna("summaries/concensusSeqs95.fasta", format="fasta")
 #dist <- ape::dist.dna(v)
 #plot(hclust(dist, method='average'))
 #
-# v_phyDat <- phangorn::phyDat(v, type = "DNA", levels = NULL)
-#
-# dna_dist <- phangorn::dist.ml(v_phyDat, model="JC69")
+v_phyDat <- phangorn::phyDat(v, type = "DNA", levels = NULL)
+
+dna_dist <- phangorn::dist.ml(v_phyDat, model="JC69")
 
 
 
 # Create a data frame to plot tree.
-#dendr <- ggdendro::dendro_data(hclust(dna_dist, method='average'), type="rectangle") 
-
-dendr <- ggdendro::dendro_data(phylogram::read.dendrogram('data/sampleTree.nwk'), type="rectangle")
+dendr <- ggdendro::dendro_data(hclust(dna_dist, method='average'), type="rectangle") 
+#dendr <- ggdendro::dendro_data(phylogram::read.dendrogram('data/sampleTree.nwk'), type="rectangle")
 
 segments <- ggdendro::segment(dendr)
 labels <- ggdendro::label(dendr)

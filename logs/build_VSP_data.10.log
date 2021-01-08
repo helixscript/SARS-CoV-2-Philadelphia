@@ -1,25 +1,30 @@
-Wed Jan  6 13:29:16 2021
-Starting VSP0189 with 1 seq experiments.
-summaries/VSPdata/VSP0189-1.experiment.RData exists -- skipping.
-Completed VSP0189
+Wed Jan  6 21:46:09 2021
+Starting VSP0069 with 3 seq experiments.
+summaries/VSPdata/VSP0069.composite.RData exists -- skipping.
+summaries/VSPdata/VSP0069-1.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0069-2.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0069-3.experiment.RData exists -- skipping.
+Completed VSP0069
 
-Starting VSP0195 with 1 seq experiments.
-summaries/VSPdata/VSP0195-1.experiment.RData exists -- skipping.
-Completed VSP0195
+Starting VSP0079 with 4 seq experiments.
+summaries/VSPdata/VSP0079.composite.RData exists -- skipping.
+summaries/VSPdata/VSP0079-1.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0079-2.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0079-3.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0079-4.experiment.RData exists -- skipping.
+Completed VSP0079
 
-Starting VSP0196 with 1 seq experiments.
-summaries/VSPdata/VSP0196-1.experiment.RData exists -- skipping.
-Completed VSP0196
+Starting VSP0107 with 2 seq experiments.
+summaries/VSPdata/VSP0107.composite.RData exists -- skipping.
+summaries/VSPdata/VSP0107-1.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0107-2.experiment.RData exists -- skipping.
+Completed VSP0107
 
-Starting VSP0209 with 1 seq experiments.
-summaries/VSPdata/VSP0209-1.experiment.RData exists -- skipping.
-Completed VSP0209
+Starting VSP9991 with 1 seq experiments.
+summaries/VSPdata/VSP9991-1.experiment.RData exists -- skipping.
+Completed VSP9991
 
-Starting VSP0210 with 1 seq experiments.
-summaries/VSPdata/VSP0210-1.experiment.RData exists -- skipping.
-Completed VSP0210
-
-Starting VSP9992 with 1 seq experiments.
-summaries/VSPdata/VSP9992-1.experiment.RData exists -- skipping.
-Completed VSP9992
+Starting VSP0045 with 1 seq experiments.
+summaries/VSPdata/VSP0045-1.experiment.RData exists -- skipping.
+Completed VSP0045
 
