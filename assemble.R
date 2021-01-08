@@ -15,11 +15,9 @@ option_list = list(
   make_option(c("--minVariantPhredScore"), type="integer", default=20, help="minimum PHRED score allowed for called varinats", metavar="character"),
   make_option(c("--bwaPath"), type="character", default='~/ext/bwa', help="path to bwa binary", metavar="character"), 
   make_option(c("--megahitPath"), type="character", default='~/ext/megahit/bin/megahit', help="path to megahit binary", metavar="character"), 
-  make_option(c("--minBWAmappingScore"), type="integer", default=20, help="minimum BWA mapping score", metavar="character"), 
+  make_option(c("--minBWAmappingScore"), type="integer", default=30, help="minimum BWA mapping score", metavar="character"), 
   make_option(c("--samtoolsBin"), type="character", default='~/ext/samtools/bin', help="path to samtools bin", metavar="character"), 
   make_option(c("--bcftoolsBin"), type="character", default='~/ext/bcftools/bin',  help="path to bcftools bin", metavar="character"))
-
-# Changed minBWAmappingScore from 30 to 20 on 2021-01-07
 
 opt_parser = OptionParser(option_list=option_list)
 opt = parse_args(opt_parser)
@@ -63,15 +61,24 @@ writeFasta(r[[2]], file = paste0(t1, '_R2.trimmed.fasta'))
 
 
 # Align trimmed reads to the reference genome.
-system(paste0(opt$bwaPath, ' mem -M -L 2,2 ', opt$refGenomeBWA, ' ',  paste0(t1, '_R1.trimmed.fasta'), ' ', 
+system(paste0(opt$bwaPath, ' mem -M ', opt$refGenomeBWA, ' ',  paste0(t1, '_R1.trimmed.fasta'), ' ', 
               paste0(t1, '_R2.trimmed.fasta'),  ' > ', paste0(t1, '_genome.sam')))
 system(paste0(opt$samtoolsBin, '/samtools view -S -b ', paste0(t1, '_genome.sam'), ' > ', paste0(t1, '_genome.bam')))
 invisible(file.remove(paste0(t1, '_genome.sam')))
 
 
+#JKE 
+#---
+#system(paste0(opt$samtoolsBin, '/samtools sort -o ', paste0(t1, '_genome.sorted.bam'), ' ', paste0(t1, '_genome.bam')))
+#system(paste0(opt$samtoolsBin, '/samtools index ', paste0(t1, '_genome.sorted.bam')))
+
+#---
+
 # Remove read pairs with mapping qualities below the provided min score and read pairs not properly mapped.
-system(paste0(opt$samtoolsBin, '/samtools view -q ', opt$minBWAmappingScore, ' -f 0x2 -b ', 
-              t1, '_genome.bam > ', t1, '_genome.filt.bam'))
+# system(paste0(opt$samtoolsBin, '/samtools view -q ', opt$minBWAmappingScore, ' -f 0x2 -b ', 
+#               t1, '_genome.bam > ', t1, '_genome.filt.bam'))
+
+system(paste0(opt$samtoolsBin, '/samtools view -q ', opt$minBWAmappingScore, ' -b ', t1, '_genome.bam > ', t1, '_genome.filt.bam'))
 
 
 # Retrieve a list of aligned reads.
