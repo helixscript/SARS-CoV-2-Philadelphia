@@ -47,6 +47,8 @@ invisible(parLapply(cluster, split(d, d$s), function(x){
                   
         write(paste0(date(), ' (', outputFile, ') ', comm, '\n'), file = logFile, append = TRUE)
         
+        #browser() 
+        
         tryCatch({
            system(comm)
         }, error = function(e) {

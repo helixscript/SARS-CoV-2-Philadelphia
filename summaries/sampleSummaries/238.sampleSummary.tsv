@@ -1,4 +1,4 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	percentRefReadCoverage	percentRefReadCoverage5
-238	VSP0039	composite	NA	NP	2020-04-29	29.89	99.8%	99.8%
-238	VSP0039-1m	 single experiment	NA	NP	2020-04-29	29.67	99.2%	99.2%
-238	VSP0039-2	 single experiment	2465	NP	2020-04-29	29.89	99.8%	99.8%
+238	VSP0039	composite	NA	NP	2020-04-29	29.89	100.0%	99.8%
+238	VSP0039-1m	 single experiment	NA	NP	2020-04-29	29.67	100.0%	99.2%
+238	VSP0039-2	 single experiment	2465	NP	2020-04-29	29.89	100.0%	99.8%

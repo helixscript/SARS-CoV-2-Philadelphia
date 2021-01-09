@@ -1,5 +1,5 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	percentRefReadCoverage	percentRefReadCoverage5
-J37K3	VSP9986-1b	 single experiment	NA	H20_PCR-1b	2020-05-18	NA	0.2%	0.1%
-J37K3	VSP9987-1b	 single experiment	NA	H2O_RT-1b	2020-05-18	NA	NA	NA
-J37K3	VSP9988-1a	 single experiment	NA	H20_PCR-1a	2020-05-18	NA	0.4%	0.4%
-J37K3	VSP9989-1a	 single experiment	NA	H2O_RT-1a	2020-05-18	NA	0.6%	0.3%
+J37K3	VSP9986-1b	 single experiment	NA	H20_PCR-1b	2020-05-18	NA	100.0%	0.1%
+J37K3	VSP9987-1b	 single experiment	NA	H2O_RT-1b	2020-05-18	NA	100.0%	0.0%
+J37K3	VSP9988-1a	 single experiment	NA	H20_PCR-1a	2020-05-18	NA	100.0%	0.4%
+J37K3	VSP9989-1a	 single experiment	NA	H2O_RT-1a	2020-05-18	NA	100.0%	0.3%

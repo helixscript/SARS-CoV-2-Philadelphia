@@ -32,8 +32,9 @@ opt$variantTable      <- data.frame()
 opt$variantTableMajor <- data.frame()
 opt$contigs           <- Biostrings::DNAStringSet()
 
-opt$R1 <- 'data/sequencing/simulated/VSP8001-1_S2_L001_R1_001.fastq.gz'
-opt$R2 <- 'data/sequencing/simulated/VSP8001-1_S2_L001_R2_001.fastq.gz'
+# Testing data
+# opt$R1 <- 'data/sequencing/simulated/VSP9977-1_S1_L001_R1_001.fastq.gz'
+# opt$R2 <- 'data/sequencing/simulated/VSP9977-1_S1_L001_R2_001.fastq.gz'
 
 if(! 'outputFile' %in% names(opt)) stop('--workDir must be defined.')
 if(! 'workDir' %in% names(opt)) stop('--workDir must be defined.')
@@ -66,13 +67,6 @@ system(paste0(opt$bwaPath, ' mem -M ', opt$refGenomeBWA, ' ',  paste0(t1, '_R1.t
 system(paste0(opt$samtoolsBin, '/samtools view -S -b ', paste0(t1, '_genome.sam'), ' > ', paste0(t1, '_genome.bam')))
 invisible(file.remove(paste0(t1, '_genome.sam')))
 
-
-#JKE 
-#---
-#system(paste0(opt$samtoolsBin, '/samtools sort -o ', paste0(t1, '_genome.sorted.bam'), ' ', paste0(t1, '_genome.bam')))
-#system(paste0(opt$samtoolsBin, '/samtools index ', paste0(t1, '_genome.sorted.bam')))
-
-#---
 
 # Remove read pairs with mapping qualities below the provided min score and read pairs not properly mapped.
 # system(paste0(opt$samtoolsBin, '/samtools view -q ', opt$minBWAmappingScore, ' -f 0x2 -b ', 
@@ -143,15 +137,13 @@ system(paste0(opt$samtoolsBin, '/samtools sort -o ', paste0(t1, '_genome.filt.so
 system(paste0(opt$samtoolsBin, '/samtools index ', paste0(t1, '_genome.filt.sorted.bam')))
 
 
-# JKE
-
 # Save bam and bam index files for downstream analyses.
 system(paste0('cp ', t1, '_genome.filt.sorted.bam ', sub('.RData', '.bam', sub('VSPdata', 'VSPalignments', opt$outputFile))))
 system(paste0('cp ', t1, '_genome.filt.sorted.bam.bai ', sub('.RData', '.bam.bai', sub('VSPdata', 'VSPalignments', opt$outputFile))))
 
 
 # Create pileup data file for determining depth at specific locations.
-system(paste0(opt$samtoolsBin, '/samtools mpileup --output ', paste0(t1, '.pileup'), ' --max-depth 100000 -f ', 
+system(paste0(opt$samtoolsBin, '/samtools mpileup -A -a --output ', paste0(t1, '.pileup'), ' --max-depth 100000 -f ', 
               opt$refGenomeFasta, ' ', paste0(t1, '_genome.filt.sorted.bam')))
 
 
@@ -220,7 +212,6 @@ if(nrow(opt$pileupData) > 0){
       stop('Error parsing variant occurrences.')
     })
     
-    # JKE
     # Select the major variant for each position.
     opt$variantTableMajor <- dplyr::filter(opt$variantTable,  percentAlt >= 0.5 & ! ALT == 'e') %>%
                              dplyr::group_by(POS) %>%
@@ -283,21 +274,40 @@ if(nrow(opt$variantTableMajor) > 0){
   seqlevels(cds) <- 'genome'
   seqnames(cds)  <- 'genome'
   
+  # Calculate how the shift left or right caused by deletions and insertions.
+  opt$variantTableMajor$shift <- ifelse(grepl('del', opt$variantTableMajor$ALT), (nchar(opt$variantTableMajor$ALT)-3)*-1, 0)
+  opt$variantTableMajor$shift <- ifelse(grepl('ins', opt$variantTableMajor$ALT), (nchar(opt$variantTableMajor$ALT)-3), opt$variantTableMajor$shift)
+  
+  # Remove variant positions flanking indels since they appear to be artifacts. 
+  artifacts <- c(opt$variantTableMajor[grep('ins|del', opt$variantTableMajor$ALT),]$POS + abs(opt$variantTableMajor[grep('ins|del', opt$variantTableMajor$ALT),]$shift),
+                 opt$variantTableMajor[grep('ins|del', opt$variantTableMajor$ALT),]$POS -1)
+  
+  opt$variantTableMajor <- opt$variantTableMajor[! opt$variantTableMajor$POS %in% artifacts,]
+  
   opt$variantTableMajor <- bind_rows(lapply(split(opt$variantTableMajor, 1:nrow(opt$variantTableMajor)), function(x){
     v <- GRanges(seqnames = 'genome', ranges = IRanges(x$POS, end = x$POS), strand = '+')
     o <- GenomicRanges::findOverlaps(v, cds)
-  
-    #browser()
     
     if(length(o) == 0){
       x$genes <- 'intergenic'
       x$type <- ' '
     } else {
+      
+      # Define the gene the variant is within.
       hit <- cds[subjectHits(o)]
       x$genes <- paste0(hit$gene, collapse = ', ')
       
+      # Retrieve the amino acid sequence of the gene the variant is within.
       orf  <- as.character(translate(DNAString(substr(as.character(readFasta(opt$refGenomeFasta)@sread), start(hit), end(hit)))))
+      
       orf2 <- as.character(translate(DNAString(substr(opt$concensusSeq, start(hit), end(hit)))))
+      
+    
+      # Determine the offset of this position in the concensus sequence because it may not be the same length
+      # if indels have been applied. Here we sum the indel shifts before this variant call.
+      offset <- sum(opt$variantTableMajor[1:grep(x$POS, opt$variantTableMajor$POS),]$shift)
+      
+      #if(x$POS == 14408) browser()  # P314L
       
       #              1   2   3   4   5   6   7   8
       # 123 456 789 012 345 678 901 234 567 890 123
@@ -311,16 +321,18 @@ if(nrow(opt$variantTableMajor) > 0){
       
       aa <- round(((x$POS - start(hit)) + 2)/3)
       orf_aa <- substr(orf, aa, aa)
-      orf2_aa <- substr(orf2, aa, aa)
+      
+      aa2 <- round((((x$POS + offset) - start(hit)) + 2)/3)
+      orf2_aa <- substr(orf2, aa2, aa2)
       
       maxALTchars <- max(nchar(unlist(strsplit(as.character(x$ALT), ','))))
       
       if(nchar(as.character(x$REF)) == 1 & nchar(as.character(x$ALT)) > 1 & maxALTchars == 1){
         x$type <- paste0(x$POS, '_mixedPop')
-      } else if (nchar(as.character(x$REF)) > maxALTchars){  
-        x$type <- paste0(x$POS, '_del')
-      } else if (nchar(as.character(x$REF)) < maxALTchars) {
-        x$type <- paste0(x$POS, '_ins')
+      } else if (grepl('ins', as.character(x$ALT))){  
+        x$type <- paste0(x$POS, '_ins', nchar(x$ALT)-3)
+      } else if (grepl('del', as.character(x$ALT))){
+        x$type <- paste0(x$POS, '_del', nchar(x$ALT)-3)
       } else if (orf_aa != orf2_aa){
         x$type <- paste0(orf_aa, aa, orf2_aa)
       } else {
