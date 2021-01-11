@@ -1,0 +1,26 @@
+Mon Jan 11 12:41:47 2021
+Starting VSP0406 with 1 seq experiments.
+Mon Jan 11 12:41:47 2021 (summaries/VSPdata/VSP0406-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0406-1.experiment.RData --R1 data/sequencing/210108_M03249_0139_000000000-JFKGR/VSP0406-1_S18_L001_R1_001.fastq.gz --R2 data/sequencing/210108_M03249_0139_000000000-JFKGR/VSP0406-1_S18_L001_R2_001.fastq.gz
+
+Completed VSP0406
+
+Starting VSP0413 with 1 seq experiments.
+Mon Jan 11 12:43:10 2021 (summaries/VSPdata/VSP0413-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0413-1.experiment.RData --R1 data/sequencing/210108_M03249_0139_000000000-JFKGR/VSP0413-1_S16_L001_R1_001.fastq.gz --R2 data/sequencing/210108_M03249_0139_000000000-JFKGR/VSP0413-1_S16_L001_R2_001.fastq.gz
+
+Completed VSP0413
+
+Starting VSP0415 with 1 seq experiments.
+Mon Jan 11 12:46:04 2021 (summaries/VSPdata/VSP0415-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0415-1.experiment.RData --R1 data/sequencing/210108_M03249_0139_000000000-JFKGR/VSP0415-1_S17_L001_R1_001.fastq.gz --R2 data/sequencing/210108_M03249_0139_000000000-JFKGR/VSP0415-1_S17_L001_R2_001.fastq.gz
+
+Completed VSP0415
+
+Starting VSP0421 with 1 seq experiments.
+Mon Jan 11 12:48:31 2021 (summaries/VSPdata/VSP0421-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0421-1.experiment.RData --R1 data/sequencing/210108_M03249_0139_000000000-JFKGR/VSP0421-1_S14_L001_R1_001.fastq.gz --R2 data/sequencing/210108_M03249_0139_000000000-JFKGR/VSP0421-1_S14_L001_R2_001.fastq.gz
+
+Completed VSP0421
+
+Starting VSP0424 with 1 seq experiments.
+Mon Jan 11 12:52:04 2021 (summaries/VSPdata/VSP0424-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0424-1.experiment.RData --R1 data/sequencing/210108_M03249_0139_000000000-JFKGR/VSP0424-1_S15_L001_R1_001.fastq.gz --R2 data/sequencing/210108_M03249_0139_000000000-JFKGR/VSP0424-1_S15_L001_R2_001.fastq.gz
+
+Completed VSP0424
+
