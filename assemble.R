@@ -285,8 +285,19 @@ if(nrow(opt$variantTableMajor) > 0){
   opt$variantTableMajor <- opt$variantTableMajor[! opt$variantTableMajor$POS %in% artifacts,]
   
   opt$variantTableMajor <- bind_rows(lapply(split(opt$variantTableMajor, 1:nrow(opt$variantTableMajor)), function(x){
+    
+    
+    
+    # Determine the offset of this position in the concensus sequence because it may not be the same length
+    # if indels have been applied. Here we sum the indel shifts before this variant call.
+    offset <- sum(opt$variantTableMajor[1:grep(x$POS, opt$variantTableMajor$POS),]$shift)
+    
+    cds2 <- cds
+    start(cds2) <- start(cds2) + offset
+    end(cds2) <- end(cds2) + offset
+    
     v <- GRanges(seqnames = 'genome', ranges = IRanges(x$POS, end = x$POS), strand = '+')
-    o <- GenomicRanges::findOverlaps(v, cds)
+    o <- GenomicRanges::findOverlaps(v, cds2)
     
     if(length(o) == 0){
       x$genes <- 'intergenic'
@@ -294,7 +305,7 @@ if(nrow(opt$variantTableMajor) > 0){
     } else {
       
       # Define the gene the variant is within.
-      hit <- cds[subjectHits(o)]
+      hit <- cds2[subjectHits(o)]
       x$genes <- paste0(hit$gene, collapse = ', ')
       
       # Retrieve the amino acid sequence of the gene the variant is within.
@@ -305,9 +316,7 @@ if(nrow(opt$variantTableMajor) > 0){
     
       # Determine the offset of this position in the concensus sequence because it may not be the same length
       # if indels have been applied. Here we sum the indel shifts before this variant call.
-      offset <- sum(opt$variantTableMajor[1:grep(x$POS, opt$variantTableMajor$POS),]$shift)
-      
-      #if(x$POS == 14408) browser()  # P314L
+      # offset <- sum(opt$variantTableMajor[1:grep(x$POS, opt$variantTableMajor$POS),]$shift)
       
       #              1   2   3   4   5   6   7   8
       # 123 456 789 012 345 678 901 234 567 890 123
@@ -330,11 +339,11 @@ if(nrow(opt$variantTableMajor) > 0){
       if(nchar(as.character(x$REF)) == 1 & nchar(as.character(x$ALT)) > 1 & maxALTchars == 1){
         x$type <- paste0(x$POS, '_mixedPop')
       } else if (grepl('ins', as.character(x$ALT))){  
-        x$type <- paste0(x$POS, '_ins', nchar(x$ALT)-3)
+        x$type <- paste0('ins ', nchar(x$ALT)-3)
       } else if (grepl('del', as.character(x$ALT))){
-        x$type <- paste0(x$POS, '_del', nchar(x$ALT)-3)
+        x$type <- paste0('del ', nchar(x$ALT)-3)
       } else if (orf_aa != orf2_aa){
-        x$type <- paste0(orf_aa, aa, orf2_aa)
+        x$type <- paste0(orf_aa, aa2, orf2_aa)
       } else {
         x$type <- 'silent'
       }
@@ -346,6 +355,17 @@ if(nrow(opt$variantTableMajor) > 0){
   # There were no variants called so we report the reference as the concensus sequence.
   opt$concensusSeq <- as.character(readFasta(opt$refGenomeFasta)@sread)
 }
+
+
+# BCFtools calls indels bythe base preceding the modification.
+# Here we find deletion calls and increment the position by one to mark the first deleted base.
+i <- opt$variantTable$POS %in% opt$variantTable[grep('del', opt$variantTable$ALT),]$POS
+opt$variantTable[i,]$POS <- opt$variantTable[i,]$POS + 1
+
+i <- opt$variantTableMajor$POS %in% opt$variantTableMajor[grep('del', opt$variantTableMajor$ALT),]$POS
+opt$variantTableMajor[i,]$POS <- opt$variantTableMajor[i,]$POS + 1
+
+
 
 save(opt, file = opt$outputFile)
 unlink(opt$workDir, recursive = TRUE)

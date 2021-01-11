@@ -96,6 +96,7 @@ invisible(parLapply(cluster, split(d, d$s), function(p){
            
              d <- subset(samples, VSP == opt$vsp)
              opt$sample_id <- d$sample_id[1]
+             opt$trial_id <- d$trial_id[1]
              opt$subject <- d$patient_id[1]
              opt$date <- d$sample_date[1]
              opt$sampleType = d$sample_type[1]
@@ -113,7 +114,7 @@ invisible(parLapply(cluster, split(d, d$s), function(p){
          
     save(dat, file = paste0('summaries/patientReportsData/', dat[[1]]$subject, '.RData'))
          
-     result = tryCatch({
+    result = tryCatch({
               rmarkdown::render('report.Rmd',
                                 output_file = paste0('summaries/patientReports/', dat[[1]]$subject, '.pdf'),
                                 params = list('date'  = format(Sys.time(), "%Y-%m-%d"),

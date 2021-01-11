@@ -1,9 +1,9 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	percentRefReadCoverage	percentRefReadCoverage5
-266	VSP0155	composite	NA	NP-OP	2020-05-20	22.33	100.0%	99.0%
-266	VSP0163	composite	NA	NP-OP	2020-05-22	29.75	100.0%	99.8%
-266	VSP0155-1	 single experiment	17000	NP-OP	2020-05-20	21.43	100.0%	98.5%
-266	VSP0155-2	 single experiment	85000	NP-OP	2020-05-20	22.33	100.0%	98.6%
-266	VSP0163-1	 single experiment	1530000	NP-OP	2020-05-22	29.75	100.0%	99.8%
-266	VSP0163-2	 single experiment	7650000	NP-OP	2020-05-22	29.84	100.0%	99.8%
-266	VSP0319-1	 single experiment	143500	NP-OP	2020-05-20	22.25	100.0%	98.5%
-266	VSP0320-1	 single experiment	5750000	NP-OP	2020-05-22	29.86	100.0%	99.8%
+266	VSP0155	composite	NA	NP-OP	2020-05-20	22.33	99.8%	99.0%
+266	VSP0163	composite	NA	NP-OP	2020-05-22	29.75	99.9%	99.8%
+266	VSP0155-1	 single experiment	17000	NP-OP	2020-05-20	21.43	99.4%	98.5%
+266	VSP0155-2	 single experiment	85000	NP-OP	2020-05-20	22.33	99.7%	98.6%
+266	VSP0163-1	 single experiment	1530000	NP-OP	2020-05-22	29.75	99.9%	99.8%
+266	VSP0163-2	 single experiment	7650000	NP-OP	2020-05-22	29.84	99.9%	99.8%
+266	VSP0319-1	 single experiment	143500	NP-OP	2020-05-20	22.25	99.3%	98.5%
+266	VSP0320-1	 single experiment	5750000	NP-OP	2020-05-22	29.86	99.8%	99.8%

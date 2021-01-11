@@ -78,8 +78,8 @@ sampleTable <- bind_rows(lapply(dat, function(x){
  tibble(exp = x$seq_sample, type = ifelse(! grepl('-', x$seq_sample), 'composite', ' single experiment'), 
         genomes = x$inputGenomes, sampleType = x$sampleType, 
         sampleDate = x$date, largestContig = maxContigLength,
-        percentRefReadCoverage   = ifelse(is.null(x$refGenomePercentCovered), NA, sprintf("%.1f%%", x$refGenomePercentCovered*100)), 
-        percentRefReadCoverage5 = ifelse(is.null(x$refGenomePercentCovered_5reads), NA, sprintf("%.1f%%", x$refGenomePercentCovered_5reads*100))) 
+        percentRefReadCoverage   = ifelse(is.null(x$refGenomePercentCovered), NA, sprintf("%.1f%%", (sum(x$pileupData$V4 != 0)/nrow(x$pileupData))*100)), 
+        percentRefReadCoverage5 = ifelse(is.null(x$refGenomePercentCovered_5reads), NA, sprintf("%.1f%%", (sum(x$pileupData$V4 >= 5)/nrow(x$pileupData))*100))) 
 }))
 
 # Write a copy of the sample table to a file.
