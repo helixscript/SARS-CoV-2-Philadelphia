@@ -1,4 +1,22 @@
-Mon Jan 11 12:41:47 2021
+Fri Jan 15 00:11:43 2021
+Starting VSP0039 with 2 seq experiments.
+summaries/VSPdata/VSP0039.composite.RData exists -- skipping.
+summaries/VSPdata/VSP0039-1m.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0039-2.experiment.RData exists -- skipping.
+Completed VSP0039
+
+Starting VSP0041 with 2 seq experiments.
+summaries/VSPdata/VSP0041.composite.RData exists -- skipping.
+summaries/VSPdata/VSP0041-1m.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0041-2.experiment.RData exists -- skipping.
+Completed VSP0041
+
+Starting VSP0042 with 2 seq experiments.
+summaries/VSPdata/VSP0042.composite.RData exists -- skipping.
+summaries/VSPdata/VSP0042-1m.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0042-2.experiment.RData exists -- skipping.
+Completed VSP0042
+
 Starting VSP0044 with 2 seq experiments.
 summaries/VSPdata/VSP0044.composite.RData exists -- skipping.
 summaries/VSPdata/VSP0044-1m.experiment.RData exists -- skipping.
@@ -12,27 +30,4 @@ Completed VSP9981
 Starting VSP0046 with 1 seq experiments.
 summaries/VSPdata/VSP0046-1.experiment.RData exists -- skipping.
 Completed VSP0046
-
-Starting VSP0050 with 4 seq experiments.
-summaries/VSPdata/VSP0050.composite.RData exists -- skipping.
-summaries/VSPdata/VSP0050-1.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0050-2.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0050-3.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0050-4.experiment.RData exists -- skipping.
-Completed VSP0050
-
-Starting VSP0061 with 4 seq experiments.
-summaries/VSPdata/VSP0061.composite.RData exists -- skipping.
-summaries/VSPdata/VSP0061-1.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0061-2.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0061-3.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0061-4.experiment.RData exists -- skipping.
-Completed VSP0061
-
-Starting VSP0069 with 3 seq experiments.
-summaries/VSPdata/VSP0069.composite.RData exists -- skipping.
-summaries/VSPdata/VSP0069-1.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0069-2.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0069-3.experiment.RData exists -- skipping.
-Completed VSP0069
 

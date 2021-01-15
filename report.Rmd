@@ -201,6 +201,8 @@ varHeatMap2 <- function(x){
            dplyr::mutate(sampleName = j$sampleName)
         })) 
   
+  #browser()
+  
   if(nrow(vt) == 0) return(NA)
   
   # Cycle through all unique mutations found across the samples.
@@ -214,6 +216,9 @@ varHeatMap2 <- function(x){
                
                # Find the sample in the list that matches the current sample.
                if(x2$sampleName == sample){
+                 
+                    #if(mutation$POS[1] == 11291) browser()
+                 
                     # Is there any data for this mutant position in the pileup and was this mutation shown in the composite grid.
                     if(mutation$POS[1] %in% x2$pileupData$V2 & mutation$s[1] %in% unique(v$data$s)){
                       # Yes, there is data. Extract the base counts by parsing the pileup format.
@@ -275,7 +280,7 @@ varHeatMap2 <- function(x){
           line = element_blank(), axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1, size = 14))
 } 
 
-
+# JKE
 # Remove the composite experiments.
 dat2 <- dat[grepl('\\-\\d', names(dat))]
 

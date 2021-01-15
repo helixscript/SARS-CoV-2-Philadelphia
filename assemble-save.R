@@ -33,8 +33,8 @@ opt$variantTableMajor <- data.frame()
 opt$contigs           <- Biostrings::DNAStringSet()
 
 # Testing data
-#opt$R1 <- 'data/sequencing/210112_M03249_0141_000000000-JFP4J/VSP0563-2_S1_L001_R1_001.fastq.gz'
-#opt$R2 <- 'data/sequencing/210112_M03249_0141_000000000-JFP4J/VSP0563-2_S1_L001_R2_001.fastq.gz'
+opt$R1 <- 'data/sequencing/210112_M03249_0141_000000000-JFP4J/VSP0563-2_S1_L001_R1_001.fastq.gz'
+opt$R2 <- 'data/sequencing/210112_M03249_0141_000000000-JFP4J/VSP0563-2_S1_L001_R2_001.fastq.gz'
 
 if(! 'outputFile' %in% names(opt)) stop('--workDir must be defined.')
 if(! 'workDir' %in% names(opt)) stop('--workDir must be defined.')
@@ -290,10 +290,8 @@ if(nrow(opt$variantTableMajor) > 0){
   
   opt$variantTableMajor <- bind_rows(lapply(split(opt$variantTableMajor, 1:nrow(opt$variantTableMajor)), function(x){
     
-    #if(x$POS == 3267) browser()
-    #if(x$POS == 28270) browser()
-    #if(x$POS == 28280) browser()
-    #message(x$POS)
+    
+    if(x$POS == 28270) browser()
     
     # Determine the offset of this position in the concensus sequence because it may not be the same length
     # if indels have been applied. Here we sum the indel shifts before this variant call.
@@ -305,35 +303,22 @@ if(nrow(opt$variantTableMajor) > 0){
     start(cds2) <- start(cds2) + offset 
     end(cds2) <- end(cds2) + offset 
     
-    v1 <- GRanges(seqnames = 'genome', ranges = IRanges(x$POS, end = x$POS), strand = '+')
-    o1 <- GenomicRanges::findOverlaps(v1, cds)
+    v <- GRanges(seqnames = 'genome', ranges = IRanges(x$POS, end = x$POS), strand = '+')
+    o <- GenomicRanges::findOverlaps(v, cds2)
     
-    v2 <- GRanges(seqnames = 'genome', ranges = IRanges(x$POS + offset, end = x$POS + offset), strand = '+')
-    o2 <- GenomicRanges::findOverlaps(v2, cds2)
-    
-    if(length(o2) == 0){
+    if(length(o) == 0){
       x$genes <- 'intergenic'
-      
-      if (grepl('ins', as.character(x$ALT))){
-        x$type <- paste0('ins ', nchar(x$ALT)-3)
-      } else if (grepl('del', as.character(x$ALT))){
-        x$type <- paste0('del ', nchar(x$ALT)-3)
-      } else {
-        x$type <- ' '
-      }
+      x$type <- ' '
     } else {
       
       # Define the gene the variant is within.
-      hit1 <- cds[subjectHits(o1)]
-      hit2 <- cds2[subjectHits(o2)]
+      hit <- cds2[subjectHits(o)]
+      x$genes <- paste0(hit$gene, collapse = ', ')
       
-      x$genes <- paste0(hit2$gene, collapse = ', ')
+      # Retrieve the amino acid sequence of the gene the variant is within.
+      orf  <- as.character(translate(DNAString(substr(as.character(readFasta(opt$refGenomeFasta)@sread), start(hit), end(hit)))))
       
-      # Native gene AA sequence.
-      orf1  <- as.character(translate(DNAString(substr(as.character(readFasta(opt$refGenomeFasta)@sread), start(hit1), end(hit1)))))
-      
-      # Variant gene AA sequence.
-      orf2 <- as.character(translate(DNAString(substr(opt$concensusSeq, start(hit2), end(hit2)))))
+      orf2 <- as.character(translate(DNAString(substr(opt$concensusSeq, start(hit), end(hit)))))
       
     
       # Determine the offset of this position in the concensus sequence because it may not be the same length
@@ -350,17 +335,17 @@ if(nrow(opt$variantTableMajor) > 0){
       #                                  x  26-10 + 2 = 18/3 = 6.0 = 6
       #                                   x 27-10 + 2 = 19/3 = 6.3 ~ 6
       
-      aa <- round(((x$POS - start(hit1)) + 2)/3)
-      orf_aa <- substr(orf1, aa, aa)
-
-      aa2 <- round((((x$POS + offset) - start(hit2)) + 2)/3)
+      aa <- round(((x$POS - start(hit)) + 2)/3)
+      orf_aa <- substr(orf, aa, aa)
+      
+      aa2 <- round((((x$POS + offset) - start(hit)) + 2)/3)
       orf2_aa <- substr(orf2, aa2, aa2)
-
+      
       maxALTchars <- max(nchar(unlist(strsplit(as.character(x$ALT), ','))))
-
+      
       if(nchar(as.character(x$REF)) == 1 & nchar(as.character(x$ALT)) > 1 & maxALTchars == 1){
         x$type <- paste0(x$POS, '_mixedPop')
-      } else if (grepl('ins', as.character(x$ALT))){
+      } else if (grepl('ins', as.character(x$ALT))){  
         x$type <- paste0('ins ', nchar(x$ALT)-3)
       } else if (grepl('del', as.character(x$ALT))){
         x$type <- paste0('del ', nchar(x$ALT)-3)
@@ -369,7 +354,7 @@ if(nrow(opt$variantTableMajor) > 0){
       } else {
         x$type <- 'silent'
       }
-     }
+    }
     x
   }))
   
@@ -383,19 +368,6 @@ if(nrow(opt$variantTableMajor) > 0){
 # Here we find deletion calls and increment the position by one to mark the first deleted base.
 i <- opt$variantTable$POS %in% opt$variantTable[grep('del', opt$variantTable$ALT),]$POS
 opt$variantTable[i,]$POS <- opt$variantTable[i,]$POS + 1
-
-
-# Deletions may be incomplete and we do not want to call variants for bases beneath major deletions.
-# Here we delete variants beneath major deletions. 
-#
-# This may be too harsh since there may be true mixed populations -- consider a more robust approach.
-i <- opt$variantTableMajor$POS %in% opt$variantTableMajor[grep('del', opt$variantTableMajor$ALT),]$POS
-o <- opt$variantTableMajor[i,]
-r <- unlist(lapply(split(o, 1:nrow(o)), function(x){
-  (x$POS+1):(x$POS+1+abs(x$shift))
-}))
-opt$variantTableMajor <- opt$variantTableMajor[! opt$variantTableMajor$POS %in% r,]
-
 
 i <- opt$variantTableMajor$POS %in% opt$variantTableMajor[grep('del', opt$variantTableMajor$ALT),]$POS
 opt$variantTableMajor[i,]$POS <- opt$variantTableMajor[i,]$POS + 1
