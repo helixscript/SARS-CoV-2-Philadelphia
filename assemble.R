@@ -298,6 +298,8 @@ if(nrow(opt$variantTableMajor) > 0){
     # Determine the offset of this position in the concensus sequence because it may not be the same length
     # if indels have been applied. Here we sum the indel shifts before this variant call.
     
+    # JKE -- grep can return multiples?
+    
     offset <- sum(opt$variantTableMajor[1:grep(x$POS, opt$variantTableMajor$POS),]$shift) 
     #offset <- sum(opt$variantTableMajor[1:(grep(x$POS, opt$variantTableMajor$POS)-1),]$shift) 
     
@@ -382,7 +384,7 @@ if(nrow(opt$variantTableMajor) > 0){
 # BCFtools calls indels bythe base preceding the modification.
 # Here we find deletion calls and increment the position by one to mark the first deleted base.
 i <- opt$variantTable$POS %in% opt$variantTable[grep('del', opt$variantTable$ALT),]$POS
-opt$variantTable[i,]$POS <- opt$variantTable[i,]$POS + 1
+if(any(i)) opt$variantTable[i,]$POS <- opt$variantTable[i,]$POS + 1
 
 
 # Deletions may be incomplete and we do not want to call variants for bases beneath major deletions.
@@ -390,16 +392,17 @@ opt$variantTable[i,]$POS <- opt$variantTable[i,]$POS + 1
 #
 # This may be too harsh since there may be true mixed populations -- consider a more robust approach.
 i <- opt$variantTableMajor$POS %in% opt$variantTableMajor[grep('del', opt$variantTableMajor$ALT),]$POS
-o <- opt$variantTableMajor[i,]
-r <- unlist(lapply(split(o, 1:nrow(o)), function(x){
-  (x$POS+1):(x$POS+1+abs(x$shift))
-}))
-opt$variantTableMajor <- opt$variantTableMajor[! opt$variantTableMajor$POS %in% r,]
 
+if(any(i)){
+  o <- opt$variantTableMajor[i,]
+  r <- unlist(lapply(split(o, 1:nrow(o)), function(x){
+    (x$POS+1):(x$POS+1+abs(x$shift))
+  }))
+  opt$variantTableMajor <- opt$variantTableMajor[! opt$variantTableMajor$POS %in% r,]
+}
 
 i <- opt$variantTableMajor$POS %in% opt$variantTableMajor[grep('del', opt$variantTableMajor$ALT),]$POS
-opt$variantTableMajor[i,]$POS <- opt$variantTableMajor[i,]$POS + 1
-
+if(any(i)) opt$variantTableMajor[i,]$POS <- opt$variantTableMajor[i,]$POS + 1
 
 
 save(opt, file = opt$outputFile)

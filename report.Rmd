@@ -105,7 +105,7 @@ kable(sampleTable, 'latex', booktabs = T, linesep = '', align = 'c') %>%
 ### Variants shared across samples 
 
 The heat map below shows how variants (reference genome `r refGenome`) are shared across subject samples 
-where the percent variance is colored. Variants are called if a variant position is covered by 5 for more reads, 
+where the percent variance is colored. Variants are called if a variant position is covered by 5 or more reads, 
 the alternative base is found in > 50% of read pairs and the variant yields a PHRED score > 20. Gray tiles denote 
 positions where the variant was not the major variant or no variants were found. The relative base compositions of each 
 experiment used to calculate tiles are shown in the following plot where the total number of position reads are shown atop 
