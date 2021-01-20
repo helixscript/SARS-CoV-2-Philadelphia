@@ -11,7 +11,9 @@ summary <- bind_rows(lapply(list.files('summaries/sampleSummaries', full.names =
   t$percentRefReadCoverage5 <- as.numeric(sub('%', '', t$percentRefReadCoverage5))
   t$sampleDate2 <- gsub('-', '', t$sampleDate)
   t
-})) %>% filter(percentRefReadCoverage5 >= 90, ! grepl('Control|PCR|Mock|simulated', sampleType, ignore.case = TRUE))
+})) 
+
+# %>% filter(percentRefReadCoverage5 >= 90, ! grepl('Control|PCR|Mock|simulated', sampleType, ignore.case = TRUE))
 
 
 # Select a sample to represent each subject, sample type, time point combination.
@@ -51,6 +53,7 @@ concensusSeqs90_5 <- retrieveConcensusSeqs(representativeSampleSummary_90)
 writeXStringSet(concensusSeqs90_5, file = 'summaries/allGenomes_90_5.fasta')
 
 # Run in pangolin CONDA environment.
+# conda activate pangolin
 # pangolin -t 25 -o summaries/allGenomes_90_5.pangolin summaries/allGenomes_90_5.fasta
 
 p <- read.table('summaries/allGenomes_90_5.pangolin/lineage_report.csv', sep = ',', header = TRUE)
