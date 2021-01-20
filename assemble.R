@@ -36,6 +36,10 @@ opt$contigs           <- Biostrings::DNAStringSet()
 #opt$R1 <- 'data/sequencing/210112_M03249_0141_000000000-JFP4J/VSP0563-2_S1_L001_R1_001.fastq.gz'
 #opt$R2 <- 'data/sequencing/210112_M03249_0141_000000000-JFP4J/VSP0563-2_S1_L001_R2_001.fastq.gz'
 
+#opt$R1 <- 'data/sequencing/210113_M05588_0364_000000000-JGMP7/VSP0563-3_S1_L001_R1_001.fastq.gz'
+#opt$R2 <- 'data/sequencing/210113_M05588_0364_000000000-JGMP7/VSP0563-3_S1_L001_R2_001.fastq.gz'
+
+
 if(! 'outputFile' %in% names(opt)) stop('--workDir must be defined.')
 if(! 'workDir' %in% names(opt)) stop('--workDir must be defined.')
 if(dir.exists(opt$workDir)) stop('Error -- output directory already exists')
@@ -142,9 +146,15 @@ system(paste0('cp ', t1, '_genome.filt.sorted.bam ', sub('.RData', '.bam', sub('
 system(paste0('cp ', t1, '_genome.filt.sorted.bam.bai ', sub('.RData', '.bam.bai', sub('VSPdata', 'VSPalignments', opt$outputFile))))
 
 
+# Determine the maximum read depth. Overlapping mates will count a position twice.
+system(paste0(opt$samtoolsBin, '/samtools depth -d 0 ', paste0(t1, '_genome.filt.sorted.bam'), ' -o ', paste0(t1, '.depth')))
+maxReadDepth <- max(read.table(paste0(t1, '.depth'), sep = '\t', header = FALSE)[,3])
+
+
 # Create pileup data file for determining depth at specific locations.
-system(paste0(opt$samtoolsBin, '/samtools mpileup -A -a --output ', paste0(t1, '.pileup'), ' --max-depth 100000 -f ', 
-              opt$refGenomeFasta, ' ', paste0(t1, '_genome.filt.sorted.bam')))
+# (!) mpileup will remove duplicate reads.
+system(paste0(opt$samtoolsBin, '/samtools mpileup -A -a -Q 0 -o ', paste0(t1, '.pileup'), ' -d ', maxReadDepth, 
+              ' -f ', opt$refGenomeFasta, ' ', paste0(t1, '_genome.filt.sorted.bam')))
 
 
 # Determine the percentage of the reference genome covered in the pileup data.
@@ -171,15 +181,16 @@ if(nrow(opt$pileupData) > 0){
   
   # If pileup data could be created then we can try to call variants.
   # --max-depth 100000 
-  system(paste0(opt$bcftoolsBin, '/bcftools mpileup -A -Ou -f ', opt$refGenomeFasta, ' ',
+  system(paste0(opt$bcftoolsBin, '/bcftools mpileup -A -Ou -f ', opt$refGenomeFasta, ' -d 10 ',
                 paste0(t1, '_genome.filt.sorted.bam'), ' |  ', opt$bcftoolsBin,  '/bcftools call -mv -Oz ', 
-                '-o ', paste0(t1, '.vcf.gz')))
+                ' -o ', paste0(t1, '.vcf.gz')))
   
   
   # Read in the variant table created by bcf tools. 
   # We use tryCatch() here because the table may be empty only containing the header information.
   opt$variantTable <- tryCatch({
-      system(paste0(opt$bcftoolsBin, "/bcftools filter -i'QUAL>", opt$minVariantPhredScore, "' ", 
+      ### system(paste0(opt$bcftoolsBin, "/bcftools filter -i'QUAL>", opt$minVariantPhredScore, "' ", 
+      system(paste0(opt$bcftoolsBin, "/bcftools filter -i'QUAL>", opt$minVariantPhredScore, " && DP>10' ", 
                     paste0(t1, '.vcf.gz'), " -O z -o ", paste0(t1, '.filt.vcf.gz')))
       
       system(paste0(opt$bcftoolsBin, '/bcftools index ', t1, '.filt.vcf.gz'))

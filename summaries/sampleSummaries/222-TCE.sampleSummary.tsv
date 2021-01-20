@@ -3,6 +3,6 @@ Subject	exp	type	genomes	sampleType	sampleDate	largestContig	percentRefReadCover
 222-TCE	VSP0182	composite	NA	OP	2020-04-20	29.57	99.9%	99.9%
 222-TCE	VSP0180-1m	 single experiment	NA	NP	2020-04-17	29.87	99.9%	99.9%
 222-TCE	VSP0181-1m	 single experiment	NA	OP	2020-04-17	30.04	99.9%	99.9%
-222-TCE	VSP0181-2	 single experiment	1.51e+11	OP	2020-04-17	29.34	99.9%	99.7%
+222-TCE	VSP0181-2	 single experiment	1.51e+11	OP	2020-04-17	29.34	99.9%	99.8%
 222-TCE	VSP0182-1m	 single experiment	NA	OP	2020-04-20	29.87	99.9%	99.9%
-222-TCE	VSP0182-2	 single experiment	1.325e+11	OP	2020-04-20	20.33	99.9%	99.4%
+222-TCE	VSP0182-2	 single experiment	1.325e+11	OP	2020-04-20	20.33	99.9%	99.8%

@@ -201,8 +201,6 @@ varHeatMap2 <- function(x){
            dplyr::mutate(sampleName = j$sampleName)
         })) 
   
-  #browser()
-  
   if(nrow(vt) == 0) return(NA)
   
   # Cycle through all unique mutations found across the samples.
@@ -253,12 +251,17 @@ varHeatMap2 <- function(x){
   
   readLabels <- group_by(vt2, s, seqSample) %>% summarise(reads = reads[1]) %>% ungroup()
   
- # browser()
+  vt2 <- group_by(vt2, POS) %>%
+         mutate(textColor = ifelse(any(ALT == 'Ins/Del' & percentAlt > 0.5), TRUE, FALSE)) %>%
+         ungroup()
+
   ggplot(vt2, aes(seqSample, percentAlt, fill = ALT, label = reads)) +
     geom_col() +
     scale_fill_manual(name = 'Base change', drop=FALSE, 
                          values = c('gray50', 'green3', 'red2', 'dodgerblue', 'gold2', 'purple', 'black', 'gray90')) +
-    geom_text(aes(seqSample, 0.5, label = reads), inherit.aes = FALSE, size = 5) +
+    geom_text(aes(seqSample, 0.5, label = reads, color = textColor), inherit.aes = FALSE, size = 5) +
+    scale_color_manual(values = c('black', 'white')) +
+    
     facet_grid(s~sampleName, scales = 'free_x', switch = 'y', space = "free") +
     labs(x = '', y = '') +
     theme(strip.text.y = element_text(angle = 180, size = 14),
@@ -277,10 +280,11 @@ varHeatMap2 <- function(x){
           panel.grid.minor = element_blank(), 
           axis.line = element_line(colour = "black"),
           strip.background = element_rect(fill="white"), 
-          line = element_blank(), axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1, size = 14))
+          line = element_blank(), axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1, size = 14)) +
+    guides(color = FALSE)
 } 
 
-# JKE
+
 # Remove the composite experiments.
 dat2 <- dat[grepl('\\-\\d', names(dat))]
 

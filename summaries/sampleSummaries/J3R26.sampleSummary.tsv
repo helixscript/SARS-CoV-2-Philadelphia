@@ -1,5 +1,5 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	percentRefReadCoverage	percentRefReadCoverage5
 J3R26	VSP9982-1b	 single experiment	NA	H2O-1b	2020-05-27	0.28	6.1%	0.1%
 J3R26	VSP9983-1a	 single experiment	NA	H2O-1a	2020-05-27	NA	1.5%	0.6%
-J3R26	VSP9984-1b	 single experiment	NA	MockR-1b	2020-05-27	0.73	63.9%	54.3%
-J3R26	VSP9985-1a	 single experiment	NA	MockR-1a	2020-05-27	0.62	60.1%	48.8%
+J3R26	VSP9984-1b	 single experiment	NA	MockR-1b	2020-05-27	0.73	63.9%	57.4%
+J3R26	VSP9985-1a	 single experiment	NA	MockR-1a	2020-05-27	0.62	60.1%	54.0%
