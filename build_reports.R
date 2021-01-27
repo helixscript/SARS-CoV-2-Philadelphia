@@ -17,6 +17,7 @@ sampleInputs <- read.table('data/sampleInputs.tsv', sep= '\t', header = TRUE, st
 # Trim leading and trailing white space from metadata.
 trimLeadingTrailingWhtSpace <- function(x) gsub('^\\s+|\\s+$', '', x)
 samples$sample_id   <- sapply(samples$sample_id, trimLeadingTrailingWhtSpace)
+samples$trial_id    <- sapply(samples$trial_id, trimLeadingTrailingWhtSpace)
 samples$patient_id  <- sapply(samples$patient_id, trimLeadingTrailingWhtSpace)
 samples$sample_date <- sapply(samples$sample_date, trimLeadingTrailingWhtSpace)
 samples$sample_type <- sapply(samples$sample_type, trimLeadingTrailingWhtSpace)
@@ -50,28 +51,35 @@ write(date(), file = 'logs/buid_subject_reports.log', append = FALSE)
 
 
 # Create a table of patient ids with a chunking vector.
-d <- data.frame(patient_id = unique(samples$patient_id))
-d$s <- ntile(1:nrow(d), CPUs)
+d <- dplyr::select(samples, patient_id, trial_id) %>% dplyr::distinct() %>% dplyr::mutate(s = ntile(1:n(), CPUs))
 
+
+#d <- d[grepl('DOH', d$patient_id),]
 
 # Build patient reports.
 invisible(parLapply(cluster, split(d, d$s), function(p){
 #invisible(lapply(split(d, d$s), function(p){  
   library(tidyverse)
   
-  invisible(sapply(p$patient_id, function(patientID){
-    x <- subset(samples, patient_id == patientID)
-  
-    if(overWriteSubjectReports == FALSE & file.exists(paste0('summaries/patientReports/', x$patient_id[1], '.pdf'))) return()
+  invisible(lapply(split(p, paste(p$patient_id, p$trial_id)), function(r){
     
-    message('Starting subject: ', x$patient_id[1], ', samples: ', paste0(x$VSP, collapse = '|'))
+    x <- subset(samples, patient_id == r$patient_id & trial_id == r$trial_id)
+  
+    dir1 <- file.path('summaries/patientReports', r$trial_id)
+    dir2 <- file.path('summaries/patientReportsData', r$trial_id)
+    
+    if(! dir.exists(dir1)) dir.create(dir1)
+    if(! dir.exists(dir2)) dir.create(dir2)
+    
+    if(overWriteSubjectReports == FALSE & file.exists(file.path(dir1, paste0(r$patient_id, '.pdf')))) return()
+    
     files <- list.files('summaries/VSPdata', pattern = paste0(x$VSP, collapse = '|'), full.names = TRUE)
 
     if(length(files) == 0){
       write(paste0('[.] No VSP data files for subject ', x$patient_id[1]), file = 'logs/buid_subject_reports.log', append = TRUE)
       return()
     }
-  
+    
     dat <- lapply(files, function(f){
            # Here we load VSP data files where there are two types of files, analyses of individual sequencing 
            # experiments and composite analyses where multiple experiments where combined.
@@ -97,13 +105,13 @@ invisible(parLapply(cluster, split(d, d$s), function(p){
          
     names(dat) <- unlist(lapply(dat, '[[', 'seq_sample'))
          
-    save(dat, file = paste0('summaries/patientReportsData/', dat[[1]]$subject, '.RData'))
+    save(dat, file = file.path(dir2, paste0(r$patient_id, '.RData')))
     
     result = tryCatch({
               rmarkdown::render('report.Rmd',
-                                output_file = paste0('summaries/patientReports/', dat[[1]]$trial_id, '-', dat[[1]]$subject, '.pdf'),
+                                output_file = file.path(dir1, paste0(r$patient_id, '.pdf')),
                                 params = list('date'  = format(Sys.time(), "%Y-%m-%d"),
-                                              'title' = paste0('COVID-19 subject ', dat[[1]]$subject)))
+                                              'title' = paste0('COVID-19 subject ', r$patient_id)))
               }, error = function(e) {
                  write(paste0('[!] Failed to create subject report for ', dat[[1]]$subject), file = 'logs/buid_subject_reports.log', append = TRUE)
               })

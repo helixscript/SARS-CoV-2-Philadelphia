@@ -1,26 +1,31 @@
-Tue Jan 19 15:36:30 2021
-Starting VSP0544 with 1 seq experiments.
-Tue Jan 19 15:36:30 2021 (summaries/VSPdata/VSP0544-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0544-1.experiment.RData --R1 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP0544-1_S19_L001_R1_001.fastq.gz --R2 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP0544-1_S19_L001_R2_001.fastq.gz
+Tue Jan 26 20:12:25 2021
+Starting VSP0424 with 1 seq experiments.
+Tue Jan 26 20:12:25 2021 (summaries/VSPdata/VSP0424-2.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0424-2.experiment.RData --R1 data/sequencing/210122_M03249_0146_000000000-JHV59/VSP0424-2_S15_L001_R1_001.fastq.gz --R2 data/sequencing/210122_M03249_0146_000000000-JHV59/VSP0424-2_S15_L001_R2_001.fastq.gz
 
-Completed VSP0544
+Completed VSP0424
 
-Starting VSP0545 with 1 seq experiments.
-Tue Jan 19 15:38:56 2021 (summaries/VSPdata/VSP0545-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0545-1.experiment.RData --R1 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP0545-1_S20_L001_R1_001.fastq.gz --R2 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP0545-1_S20_L001_R2_001.fastq.gz
+Starting VSP0425 with 1 seq experiments.
+Tue Jan 26 20:22:59 2021 (summaries/VSPdata/VSP0425-2.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0425-2.experiment.RData --R1 data/sequencing/210122_M03249_0146_000000000-JHV59/VSP0425-2_S13_L001_R1_001.fastq.gz --R2 data/sequencing/210122_M03249_0146_000000000-JHV59/VSP0425-2_S13_L001_R2_001.fastq.gz
 
-Completed VSP0545
+Completed VSP0425
 
-Starting VSP0546 with 1 seq experiments.
-Tue Jan 19 15:43:36 2021 (summaries/VSPdata/VSP0546-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0546-1.experiment.RData --R1 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP0546-1_S21_L001_R1_001.fastq.gz --R2 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP0546-1_S21_L001_R2_001.fastq.gz
+Starting VSP0429 with 1 seq experiments.
+Tue Jan 26 20:30:15 2021 (summaries/VSPdata/VSP0429-2.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0429-2.experiment.RData --R1 data/sequencing/210122_M03249_0146_000000000-JHV59/VSP0429-2_S12_L001_R1_001.fastq.gz --R2 data/sequencing/210122_M03249_0146_000000000-JHV59/VSP0429-2_S12_L001_R2_001.fastq.gz
 
-Completed VSP0546
+Completed VSP0429
 
-Starting VSP0547 with 1 seq experiments.
-Tue Jan 19 15:49:33 2021 (summaries/VSPdata/VSP0547-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0547-1.experiment.RData --R1 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP0547-1_S22_L001_R1_001.fastq.gz --R2 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP0547-1_S22_L001_R2_001.fastq.gz
+Starting VSP0448 with 1 seq experiments.
+Tue Jan 26 20:36:58 2021 (summaries/VSPdata/VSP0448-2.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0448-2.experiment.RData --R1 data/sequencing/210122_M03249_0146_000000000-JHV59/VSP0448-2_S11_L001_R1_001.fastq.gz --R2 data/sequencing/210122_M03249_0146_000000000-JHV59/VSP0448-2_S11_L001_R2_001.fastq.gz
 
-Completed VSP0547
+Completed VSP0448
 
-Starting VSP9979 with 1 seq experiments.
-Tue Jan 19 15:52:22 2021 (summaries/VSPdata/VSP9979-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP9979-1.experiment.RData --R1 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP9979-1_S23_L001_R1_001.fastq.gz --R2 data/sequencing/201214_M03249_0133_000000000-J78GM/VSP9979-1_S23_L001_R2_001.fastq.gz
+Starting VSP0460 with 1 seq experiments.
+Tue Jan 26 20:46:13 2021 (summaries/VSPdata/VSP0460-2.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0460-2.experiment.RData --R1 data/sequencing/210122_M03249_0146_000000000-JHV59/VSP0460-2_S10_L001_R1_001.fastq.gz --R2 data/sequencing/210122_M03249_0146_000000000-JHV59/VSP0460-2_S10_L001_R2_001.fastq.gz
 
-Completed VSP9979
+Completed VSP0460
+
+Starting VSP0470 with 1 seq experiments.
+Tue Jan 26 20:55:04 2021 (summaries/VSPdata/VSP0470-2.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP0470-2.experiment.RData --R1 data/sequencing/210122_M03249_0146_000000000-JHV59/VSP0470-2_S9_L001_R1_001.fastq.gz --R2 data/sequencing/210122_M03249_0146_000000000-JHV59/VSP0470-2_S9_L001_R2_001.fastq.gz
+
+Completed VSP0470
 

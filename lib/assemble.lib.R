@@ -37,6 +37,33 @@ prepareTrimmedReads <- function(R1, R2, qualCode = '5'){
   list(R1, R2)
 }
 
+createSoftwareVersionTable <- function(){
+  if(! dir.exists(opt$samtoolsBin)) stop('Error - samtools bin does not exist')
+  opt$samtoolsVersion <<- paste0(system(paste(file.path(opt$samtoolsBin, 'samtools'), '--version'), intern = TRUE)[1:2], collapse = ' ')
+  opt$samtoolsVersion <<- sub('samtools\\s+', '', opt$samtoolsVersion)
+  
+  if(! dir.exists(opt$bcftoolsBin)) stop('Error - bcftools bin does not exist')
+  opt$bcftoolsVersion <<- paste0(system(paste(file.path(opt$bcftoolsBin, 'bcftools'), '--version'), intern = TRUE)[1:2], collapse = ' ')
+  opt$bcftoolsVersion <<- sub('bcftools\\s+', '', opt$bcftoolsVersion)
+  
+  if(! file.exists(opt$bwaPath)) stop('Error - bwa path does not exist')
+  system(paste(opt$bwaPath, '2>', file.path(opt$workDir, 'bwa.version')))
+  v <- readLines(file.path(opt$workDir, 'bwa.version'))
+  opt$bwaVersion <<- sub('version:\\s+', '', tolower(v[grep('Version', v, ignore.case = TRUE)]))
+  
+  
+  p <- c('#!/bin/bash', paste0('source ', opt$condaShellPath), 'conda activate pangolin', 'pangolin -v')
+  writeLines(p, file.path(opt$workDir, 'pangolin.version.script'))
+  system(paste0('chmod 755 ', file.path(opt$workDir, 'pangolin.version.script')))
+  opt$pangolinVersion <<- sub('pangolin\\s+', '',  system(file.path(opt$workDir, 'pangolin.version.script'), intern = TRUE))
+  
+  p <- installed.packages()[names(sessionInfo()$otherPkgs), 'Version']
+  bind_rows(tibble('Software/R package' = c('R', 'bwa', 'samtools', 'bcftools', 'pangolin'),
+                   'Version' = c(paste0(R.Version()$major, '.', R.Version()$minor),
+                                 opt$bwaVersion, opt$samtoolsVersion, opt$bcftoolsVersion, opt$pangolinVersion)),
+            tibble('Software/R package' = names(p), 'Version' = p))
+}
+
 
 # megaHitContigs <- function(R1, R2, label = 'x', workDir = '.', megahit.path = 'megahit'){
 #   contigs <- Reduce('append', lapply(c(1, 2, 3), function(n){

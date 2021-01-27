@@ -10,27 +10,47 @@ option_list = list(
   make_option(c("--R1"), type="character", default=NULL, help="comma delimited list of R1 fastq files", metavar="character"),
   make_option(c("--R2"), type="character", default=NULL, help="comma delimited list of R2 fastq files", metavar="character"),
   make_option(c("--refGenomeFasta"), type="character", default='data/references/USA-WA1-2020.fasta', help="reference genome FASTA path", metavar="character"),   
-  make_option(c("--refGenomeBWA"), type="character", default='data/references/USA-WA1-2020.fasta', help="reference genome BWA db path", metavar="character"),   
-  make_option(c("--refGenomeGenBank"), type="character", default='data/references/USA-WA1-2020.gb', help="reference genome BWA db path", metavar="character"), 
+  make_option(c("--refGenomeBWA"), type="character", default='data/references/USA-WA1-2020.fasta', help="path to ref genome BWA database", metavar="character"),   
+  make_option(c("--refGenomeGenBank"), type="character", default='data/references/USA-WA1-2020.gb', help="path to ref genome genBank file", metavar="character"), 
   make_option(c("--minVariantPhredScore"), type="integer", default=20, help="minimum PHRED score allowed for called varinats", metavar="character"),
   make_option(c("--bwaPath"), type="character", default='~/ext/bwa', help="path to bwa binary", metavar="character"), 
   make_option(c("--megahitPath"), type="character", default='~/ext/megahit/bin/megahit', help="path to megahit binary", metavar="character"), 
   make_option(c("--minBWAmappingScore"), type="integer", default=30, help="minimum BWA mapping score", metavar="character"), 
+  make_option(c("--minPangolinConf"), type="numeric", default=0.9, help="minimum pangolin confidence value (0-1)", metavar="character"), 
   make_option(c("--samtoolsBin"), type="character", default='~/ext/samtools/bin', help="path to samtools bin", metavar="character"), 
+  make_option(c("--condaShellPath"), type="character", default='~/miniconda3/etc/profile.d/conda.sh', help="path to conda.sh", metavar="character"),
   make_option(c("--bcftoolsBin"), type="character", default='~/ext/bcftools/bin',  help="path to bcftools bin", metavar="character"))
 
 opt_parser = OptionParser(option_list=option_list)
 opt = parse_args(opt_parser)
 
-opt$errorCode <- 0
-opt$errorMessage <- NA
+
+# Handle missing required parameters.
+if(! 'R1' %in% names(opt)) stop('--R1 must be defined.')
+if(! 'R2' %in% names(opt)) stop('--R2 must be defined.')
+
+
+# Create work directory.
 opt$workDir <- tmpFile()
+if(dir.exists(opt$workDir)) stop('Error -- output directory already exists')
+dir.create(opt$workDir)
+if(! dir.exists(opt$workDir)) stop('Error -- could not create the output directory.')
+
+
+# Create table of software and R package version numbers.
+opt$softwareVersionTable <- createSoftwareVersionTable()
 
 
 # Define data structures which must be present even if empty for downstream analyses.
+opt$errorCode <- 0
+opt$errorMessage <- NA
+opt$pangolinAssignment <- NA
+opt$pangolinAssignmentProbability <- NA
+opt$pangolinAssignmentPangoLEARN_version <- NA
 opt$variantTable      <- data.frame()
 opt$variantTableMajor <- data.frame()
 opt$contigs           <- Biostrings::DNAStringSet()
+
 
 # Testing data
 #opt$R1 <- 'data/sequencing/210112_M03249_0141_000000000-JFP4J/VSP0563-2_S1_L001_R1_001.fastq.gz'
@@ -40,14 +60,7 @@ opt$contigs           <- Biostrings::DNAStringSet()
 #opt$R2 <- 'data/sequencing/210113_M05588_0364_000000000-JGMP7/VSP0563-3_S1_L001_R2_001.fastq.gz'
 
 
-if(! 'outputFile' %in% names(opt)) stop('--workDir must be defined.')
-if(! 'workDir' %in% names(opt)) stop('--workDir must be defined.')
-if(dir.exists(opt$workDir)) stop('Error -- output directory already exists')
-dir.create(opt$workDir)
-if(! dir.exists(opt$workDir)) stop('Error -- could not create the output directory.')
 
-if(! 'R1' %in% names(opt)) stop('--R1 must be defined.')
-if(! 'R2' %in% names(opt)) stop('--R2 must be defined.')
 
 R1s <- unlist(strsplit(opt$R1, ','));  if(! all(file.exists(R1s))) stop('All the R1 files could not be found.')
 R2s <- unlist(strsplit(opt$R2, ','));  if(! all(file.exists(R2s))) stop('All the R1 files could not be found.')
@@ -173,11 +186,8 @@ opt$pileupData <- tryCatch({
 
 if(nrow(opt$pileupData) > 0){
   refGenomeLength <- nchar(as.character(readFasta(opt$refGenomeFasta)@sread))
-  opt$refGenomePercentCovered <- nrow(opt$pileupData) / refGenomeLength
+  opt$refGenomePercentCovered <- nrow(subset(opt$pileupData,  V4 >= 1))  / refGenomeLength
   opt$refGenomePercentCovered_5reads <- nrow(subset(opt$pileupData,  V4 >= 5))  / refGenomeLength
-  opt$refGenomePercentCovered_10reads <- nrow(subset(opt$pileupData, V4 >= 10)) / refGenomeLength
-  opt$refGenomePercentCovered_25reads <- nrow(subset(opt$pileupData, V4 >= 25)) / refGenomeLength
-  opt$refGenomePercentCovered_50reads <- nrow(subset(opt$pileupData, V4 >= 50)) / refGenomeLength
   
   # If pileup data could be created then we can try to call variants.
   # --max-depth 100000 
@@ -237,9 +247,6 @@ if(nrow(opt$pileupData) > 0){
 } else {
   opt$refGenomePercentCovered <- 0
   opt$refGenomePercentCovered_5reads  <- 0
-  opt$refGenomePercentCovered_10reads <- 0
-  opt$refGenomePercentCovered_25reads <- 0
-  opt$refGenomePercentCovered_50reads <- 0
   
   opt$errorCode <- 5
   opt$errorMessage <- 'No pileup or variant data available.'
@@ -277,6 +284,30 @@ if(nrow(opt$variantTableMajor) > 0){
                   t1, '.filt.vcf.copy2.gz > ', t1, '.consensus.fasta'))
   
     opt$concensusSeq <- as.character(readFasta(paste0(t1, '.consensus.fasta'))@sread)
+    
+    # Predict pangolin lineage for genomes with >= 90% coverage.
+    if(opt$refGenomePercentCovered >= 0.90){
+      
+      # Create a bash script which will start the requires Conda environment and run pangolin.
+      p <- c('#!/bin/bash', paste0('source ', opt$condaShellPath), 'conda activate pangolin', 'pangolin -o $2 $1')
+      writeLines(p, file.path(opt$workDir, 'pangolin.script'))
+      system(paste0('chmod 755 ', file.path(opt$workDir, 'pangolin.script')))
+      
+      comm <- paste0(file.path(opt$workDir, 'pangolin.script'), ' ', t1, '.consensus.fasta ', t1, '.consensus.pangolin')
+      system(comm)
+      
+      if(file.exists(paste0(t1, '.consensus.pangolin/lineage_report.csv'))){
+        o <- read.csv(paste0(t1, '.consensus.pangolin/lineage_report.csv')) %>% dplyr::arrange(desc(probability)) 
+      
+        if(nrow(o) > 0){
+          if(as.numeric(o[1,]$probability) >= opt$minPangolinConf){
+            opt$pangolinAssignment <- o[1,]$lineage
+            opt$pangolinAssignmentProbability <- o[1,]$probability
+            opt$pangolinAssignmentPangoLEARN_version <- o[1,]$pangoLEARN_version
+          }
+        }
+      }
+    } 
   }, error=function(cond) {
     stop('Error creating concensus sequence.')
   })
@@ -300,11 +331,6 @@ if(nrow(opt$variantTableMajor) > 0){
   opt$variantTableMajor <- opt$variantTableMajor[! opt$variantTableMajor$POS %in% artifacts,]
   
   opt$variantTableMajor <- bind_rows(lapply(split(opt$variantTableMajor, 1:nrow(opt$variantTableMajor)), function(x){
-    
-    #if(x$POS == 3267) browser()
-    #if(x$POS == 28270) browser()
-    #if(x$POS == 28280) browser()
-    #message(x$POS)
     
     # Determine the offset of this position in the concensus sequence because it may not be the same length
     # if indels have been applied. Here we sum the indel shifts before this variant call.

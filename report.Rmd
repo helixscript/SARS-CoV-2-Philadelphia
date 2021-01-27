@@ -13,6 +13,7 @@ header-includes:
    - \newcommand{\elandscape}{\end{landscape}}
    - \usepackage{pdfpages}
    - \usepackage{booktabs}
+   - \usepackage{longtable}
    - \usepackage{makecell}
    - \usepackage{float}
 output:
@@ -24,8 +25,8 @@ output:
 
 The table below provides a summary of subject samples for which sequencing data is available.  
 The experiments column shows the number of sequencing experiments performed for each specimen.  
-Experiment specific analyses are shown at the end of this report. The code base for this analysis 
-can be found ([here](https://github.com/everettJK/SARS-CoV-2-Philadelphia)).
+Experiment specific analyses are shown at the end of this report. Lineages are called with the 
+Pangolin software tool (Rambaut et al 2020) for genomes with > 90% sequence coverage.
 
 \vspace{0.5cm}
 
@@ -74,10 +75,15 @@ sampleTable <- bind_rows(lapply(dat, function(x){
   }
   
  if(length(x$inputGenomes) == 0) x$inputGenomes <- NA
+ 
 
- tibble(exp = x$seq_sample, type = ifelse(! grepl('-', x$seq_sample), 'composite', ' single experiment'), 
-        genomes = x$inputGenomes, sampleType = x$sampleType, 
-        sampleDate = x$date, largestContig = maxContigLength,
+ tibble(exp = x$seq_sample, 
+        type = ifelse(! grepl('-', x$seq_sample), 'composite', ' single experiment'), 
+        genomes = x$inputGenomes, 
+        sampleType = x$sampleType, 
+        sampleDate = x$date, 
+        largestContig = maxContigLength,
+        lineage = x$pangolinAssignment,
         percentRefReadCoverage   = ifelse(is.null(x$refGenomePercentCovered), NA, sprintf("%.1f%%", (sum(x$pileupData$V4 != 0)/nrow(x$pileupData))*100)), 
         percentRefReadCoverage5 = ifelse(is.null(x$refGenomePercentCovered_5reads), NA, sprintf("%.1f%%", (sum(x$pileupData$V4 >= 5)/nrow(x$pileupData))*100))) 
 }))
@@ -85,22 +91,23 @@ sampleTable <- bind_rows(lapply(dat, function(x){
 # Write a copy of the sample table to a file.
 sampleTableOutput <- sampleTable
 sampleTableOutput$Subject <- dat[[1]]$subject
-sampleTableOutput <- sampleTableOutput[,c(9, 1:8)]
+sampleTableOutput <- sampleTableOutput[,c(10, 1:9)]
 write.table(sampleTableOutput, sep = '\t', col.names = TRUE, row.names = FALSE, quote = FALSE,
             file = paste0('summaries/sampleSummaries/', dat[[1]]$subject, '.sampleSummary.tsv'))
 
-names(sampleTable) <- c('Experiment', 'Type', 'Input genomes', 'Sample type', 'Sample date', 'Largest contig (KD)', 
-                        'Reference read\ncoverage', 'Reference read\ncoverage (>= 5 reads)')
+names(sampleTable) <- c('Experiment', 'Type', 'Genomes', 'Sample type', 'Sample date', 'Largest contig (KD)', 
+                        'Lineage', 'Reference read\ncoverage', 'Reference read\ncoverage (>= 5 reads)')
 
 kable(sampleTable, 'latex', booktabs = T, linesep = '', align = 'c') %>% 
   column_spec(4, width = "2cm") %>% 
   column_spec(6, width = "3cm") %>% 
-  column_spec(7, width = "3cm") %>%
-  column_spec(8, width = "5cm") %>%
+  column_spec(8, width = "3cm") %>%
+  column_spec(9, width = "5cm") %>%
   kable_styling(latex_options="scale_down")
 ```
 
 \newpage
+
 
 ### Variants shared across samples 
 
@@ -308,7 +315,7 @@ if(length(v2) == 1){
 
 \newpage
 
-## Analyses of individual experiments and composite results.  
+## Analyses of individual experiments and composite results  
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE,  results='asis', fig.width=8, fig.height=2}
 sampleAnalysis <- function(dat){
@@ -431,4 +438,12 @@ sampleAnalysis <- function(dat){
 sampleAnalysis(dat)
 ```
 
+\newpage
 
+## Software environment
+
+```{r, echo=FALSE}
+kable(dat[[1]]$softwareVersionTable, longtable = T, booktabs = T,  linesep = '', align = 'l') %>% 
+  column_spec(1, width = "5cm") %>% 
+  kable_styling(latex_options =c("repeat_header"))
+```

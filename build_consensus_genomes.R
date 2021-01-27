@@ -1,5 +1,6 @@
 library(dplyr)
 library(Biostrings)
+library(tidyverse)
 source('lib/lib.R')
 
 # Collate sampe summary table and omit problematic samples and subjects.
@@ -40,4 +41,42 @@ system('./pangolin.sh')
 p <- read.table('summaries/allGenomes_90_5.pangolin/lineage_report.csv', sep = ',', header = TRUE)
 unlink('summaries/allGenomes_90_5.pangolin', recursive = TRUE)
 openxlsx::write.xlsx(p[,1:3], file = 'summaries/allGenomes_90_5.pangolin.xlsx')
+
+
+
+
+
+
+d <- openxlsx::read.xlsx('summaries/allGenomes_90_5.pangolin.xlsx')
+
+d <- bind_rows(lapply(1:nrow(d), function(x){
+  x <- d[x,]
+  x$date <- unlist(str_split(x$taxon, '\\|'))[3]
+  o <- ymd(x$date)
+  x$days <- as.integer(o)
+  x$dateLabel <- paste0(month(o), '/', year(o))
+  x
+}))
+
+d <- d[d$days != 18349,]
+d <- d[! grepl('simulate', d$taxon),]
+d <- d[order(d$days),]
+d$dateLabel <- factor(d$dateLabel, levels = unique(d$dateLabel))
+d$lineage <- factor(d$lineage, levels = unique(d$lineage))
+
+colors <- grDevices::colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))(n_distinct(d$lineage)) 
+
+ggplot(d, aes(dateLabel, fill = lineage)) + 
+  theme_bw() +
+  geom_bar(stat = 'count') +
+  scale_fill_manual(name = 'Lineage', values = colors) +
+  guides(fill=guide_legend(ncol=2)) +
+  labs(x = 'Sample Date', y = 'Genomes') +
+  theme(axis.text=element_text(size=16), axis.title=element_text(size=16), legend.title=element_text(size=16),
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        panel.background = element_blank(), axis.line = element_line(colour = "black"),
+        axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+
+
+
 
