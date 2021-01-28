@@ -580,7 +580,7 @@ J37ML	J37ML	UPHS	06/09/2020	H2O-1b	VSP9980	Pascha
 437s	437	UPHS	12/18/2020	saliva	VSP0561	Ron, Young	QiaAMP mini RNA	1/11/21	37	2.07E+02								
 438no	438	UPHS	12/18/2020	NP-OP	VSP0562	Ron, Young	QiaAMP mini RNA	1/11/21	37	Undetermined								
 J78GM	J78GM	UPHS	12/12/2020	Negative control	VSP9979	Pascha												
-DOH1	DOH1	Dept of health	1/6/2021	VTM	VSP0563	Claire Newbern	QiaAMP mini RNA	1/7/21	27	2.02E+05							Claire.Newbern@Phila.gov, Bernadette.Matthis@Phila.gov	UK variant investigation
+DOH1	DOH1	Dept of Health	1/6/2021	VTM	VSP0563	Claire Newbern	QiaAMP mini RNA	1/7/21	27	2.02E+05							Claire.Newbern@Phila.gov, Bernadette.Matthis@Phila.gov	UK variant investigation
 SouthAfrica_HLS-UCT-GS-1396-KRISP	SouthAfrica_HLS-UCT-GS-1396-KRISP	simulated_dataset	11/18/2020	simulated	VSP9978	GISAID												
 England_EPI_ISL_747519	England_EPI_ISL_747519	simulated_dataset	12/11/2020	simulated	VSP9977	GISAID												
 424e	424	UPHS	12/20/20	ETA	VSP0564	Ron												
@@ -645,7 +645,7 @@ JGMP7	JGMP7	Other	1/12/20221	Negative control	VSP9975	Pascha								210113_M0558
 443s	443	UPHS	12/23/2020	Saliva	VSP0621	Ron												
 		UPHS		Negative control	VSP9974	Pascha					Pascha (1/14/2020)							
 sdrop2_molpath	sdrop2_molpath	HUP	1/20/2021	0.9% Saline	VSP0622	Feldman, Michael												
-100667644	100667644	Dept of health/michael feldman	1/21/2021	Saliva	VSP0623	dept of health/michael feldman												
+100667644	100667644	Dept of Health - Feldman	1/21/2021	Saliva	VSP0623	dept of health/michael feldman												
 molpath-sdrop3	molpath-sdrop3	HUP	1/22/2021		VSP0624	Emilie Rabut												
 molpath-sdrop4	molpath-sdrop4	HUP	1/22/2021		VSP0625	Emilie Rabut												
 molpath-seq1	molpath-seq1	HUP	1/22/2021		VSP0626	Emilie Rabut												

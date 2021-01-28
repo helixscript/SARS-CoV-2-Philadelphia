@@ -60,8 +60,6 @@ opt$contigs           <- Biostrings::DNAStringSet()
 #opt$R2 <- 'data/sequencing/210113_M05588_0364_000000000-JGMP7/VSP0563-3_S1_L001_R2_001.fastq.gz'
 
 
-
-
 R1s <- unlist(strsplit(opt$R1, ','));  if(! all(file.exists(R1s))) stop('All the R1 files could not be found.')
 R2s <- unlist(strsplit(opt$R2, ','));  if(! all(file.exists(R2s))) stop('All the R1 files could not be found.')
 

@@ -21,3 +21,18 @@ representativeSampleSummary <- function(summary, minPercentRefReadCoverage5){
     r
   })) %>% dplyr::filter(percentRefReadCoverage5 >= minPercentRefReadCoverage5)
 }
+
+
+# Retrieve consensus sequences from representative samples.
+retrieveConcensusSeqs <- function(summary){
+  Reduce('append', lapply(1:nrow(summary), function(x){
+    x <- summary[x,]
+    f <- paste0('summaries/VSPdata/', x$exp, '.', ifelse(x$type == 'composite', 'composite', 'experiment'), '.RData')
+    if(! file.exists(f)) stop('Can not locate VSP data file -- ', f)
+    load(f)
+    d <- DNAStringSet(opt$concensusSeq)
+    
+    names(d) <- gsub('\\s+', '_', paste0(x$trial_id, '|', x$Subject, '|', x$sampleType, '|', x$sampleDate2, '|', x$lineage))
+    d
+  }))
+}

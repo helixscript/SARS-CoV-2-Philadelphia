@@ -54,7 +54,7 @@ write(date(), file = 'logs/buid_subject_reports.log', append = FALSE)
 d <- dplyr::select(samples, patient_id, trial_id) %>% dplyr::distinct() %>% dplyr::mutate(s = ntile(1:n(), CPUs))
 
 
-#d <- d[grepl('DOH', d$patient_id),]
+#d <- d[grepl('Dept of Health - Feldman', d$trial_id),]
 
 # Build patient reports.
 invisible(parLapply(cluster, split(d, d$s), function(p){
@@ -64,12 +64,14 @@ invisible(parLapply(cluster, split(d, d$s), function(p){
   invisible(lapply(split(p, paste(p$patient_id, p$trial_id)), function(r){
     
     x <- subset(samples, patient_id == r$patient_id & trial_id == r$trial_id)
-  
-    dir1 <- file.path('summaries/patientReports', r$trial_id)
+
+    browser()
+    
+    dir1 <- file.path('summaries/trials', r$trial_id)
     dir2 <- file.path('summaries/patientReportsData', r$trial_id)
+    dir3 <- file.path('summaries/sampleSummaries', r$trial_id)
     
     if(! dir.exists(dir1)) dir.create(dir1)
-    if(! dir.exists(dir2)) dir.create(dir2)
     
     if(overWriteSubjectReports == FALSE & file.exists(file.path(dir1, paste0(r$patient_id, '.pdf')))) return()
     
@@ -79,6 +81,10 @@ invisible(parLapply(cluster, split(d, d$s), function(p){
       write(paste0('[.] No VSP data files for subject ', x$patient_id[1]), file = 'logs/buid_subject_reports.log', append = TRUE)
       return()
     }
+    
+    
+    if(! dir.exists(dir2)) dir.create(dir2)
+    if(! dir.exists(dir3)) dir.create(dir3)
     
     dat <- lapply(files, function(f){
            # Here we load VSP data files where there are two types of files, analyses of individual sequencing 
@@ -113,38 +119,7 @@ invisible(parLapply(cluster, split(d, d$s), function(p){
                                 params = list('date'  = format(Sys.time(), "%Y-%m-%d"),
                                               'title' = paste0('COVID-19 subject ', r$patient_id)))
               }, error = function(e) {
-                 write(paste0('[!] Failed to create subject report for ', dat[[1]]$subject), file = 'logs/buid_subject_reports.log', append = TRUE)
+                 write(paste0('[!] Failed to create subject report for ', r$patient_id, ' from the ', r$trial_id, ' trial.'), file = 'logs/buid_subject_reports.log', append = TRUE)
               })
     }))
 }))
-
-
-
-
-# Create plots of sequence coverage vs. sample inputs using different scale cutoffs to better visualize the data.
-
-samples$N1_copies_per_ul <- as.numeric(samples$N1_copies_per_ul)
-d <- samples[!is.na(samples$N1_copies_per_ul), c('VSP', 'N1_copies_per_ul')]
-d <- subset(d, VSP %in% stringr::str_extract(list.files('summaries/VSPdata'), 'VSP\\d+'))
-d <- bind_rows(lapply(split(d, d$VSP), function(x){
-      files <- list.files('summaries/VSPdata')
-      files <- files[grep(paste0('^', x$VSP), files)]
-      p <- unlist(lapply(files, function(f){
-        load(file.path('summaries/VSPdata', f))
-        opt$refGenomePercentCovered_5reads
-      }))
-      x$coverage5 <- max(p)
-      x$files <- length(p)
-      x
-    }))
-  
-invisible(lapply(c('Inf', '1e6', '1e4'), function(x){
-            p1 <- ggplot(subset(d, N1_copies_per_ul <= as.numeric(x)), aes(N1_copies_per_ul, coverage5)) + 
-                  theme_bw() +
-                  scale_y_continuous(labels = scales::percent) +
-                  geom_point() +
-                  labs(x = 'Copies per ul', y = 'SARS-CoV2 coverage (>= 5 reads per position)') +
-                  ggtitle(paste0('Concentration limit: ', x))
-    
-            ggsave(p1, file = paste0('summaries/inputGenomesVsCoverage_', x, '_cutoff.pdf'), units = 'in', height = 5)
-          }))

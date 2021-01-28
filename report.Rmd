@@ -93,7 +93,7 @@ sampleTableOutput <- sampleTable
 sampleTableOutput$Subject <- dat[[1]]$subject
 sampleTableOutput <- sampleTableOutput[,c(10, 1:9)]
 write.table(sampleTableOutput, sep = '\t', col.names = TRUE, row.names = FALSE, quote = FALSE,
-            file = paste0('summaries/sampleSummaries/', dat[[1]]$subject, '.sampleSummary.tsv'))
+            file = file.path(dir3, paste0(dat[[1]]$subject, '.sampleSummary.tsv')))
 
 names(sampleTable) <- c('Experiment', 'Type', 'Genomes', 'Sample type', 'Sample date', 'Largest contig (KD)', 
                         'Lineage', 'Reference read\ncoverage', 'Reference read\ncoverage (>= 5 reads)')

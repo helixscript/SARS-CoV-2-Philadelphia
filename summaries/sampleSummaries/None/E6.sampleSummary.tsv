@@ -1,0 +1,5 @@
+Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
+E6	VSP0002	composite	NA	Vero cells	2020-03-28	30.02	NA	99.8%	99.8%
+E6	VSP0002-1m	 single experiment	NA	Vero cells	2020-03-28	30.00	NA	99.8%	99.8%
+E6	VSP0002-2m	 single experiment	NA	Vero cells	2020-03-28	29.90	NA	99.8%	99.8%
+E6	VSP0002-3m	 single experiment	NA	Vero cells	2020-03-28	29.82	NA	99.8%	99.4%
