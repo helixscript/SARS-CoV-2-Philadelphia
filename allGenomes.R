@@ -5,7 +5,6 @@ library(lubridate)
 source('lib/lib.R')
 mafftPath <- '~/ext/mafft/bin/mafft'
 
-
 samples <- removeProblematicSamples(read.table('data/samples.tsv', sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE))
 
 # Collate sample summary table and omit problematic samples and subjects.

@@ -21,6 +21,8 @@ invisible(lapply(list.dirs('summaries/trials'), function(x){
   # Collate the major variant tables for genomes with >= 50% coverage. Genomes with less coverage 
   # are prone to odd variant calls due to alignment edge effects.
   
+  if(nrow(d) == 0) return()
+  
   o <- representativeSampleSummary(d, minPercentRefReadCoverage5 = 50) %>% pull(exp)
   
   if(length(o) > 0){

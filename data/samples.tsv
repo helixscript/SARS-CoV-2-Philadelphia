@@ -326,25 +326,25 @@ P01s-q	P01	UPHS	08/26/2020	Saliva	VSP0323	Aoife	QiaAMP mini RNA	9/11/20	37	Undet
 333no-q	333	UPHS	08/26/2020	NP-OP	VSP0326	Ron, Young	QiaAMP mini RNA	9/11/20	37	Undetermined								
 334no-q	334	UPHS	08/26/2020	NP-OP	VSP0327	Ron, Young	QiaAMP mini RNA	9/11/20	37	1.01E+03								
 334s-q	334	UPHS	08/26/2020	Saliva	VSP0328	Ron, Young	QiaAMP mini RNA	9/11/20	37	2.91E+02								
-JB8CJ	JB8CJ	UPHS	08/24/2020	WaterControl	VSP9999	Pascha												
-J327N	J327N	UPHS	08/05/2020	WaterControl	VSP9998	Pascha												
-J2J3B	J2J3B	UPHS	07/25/2020	WaterControl	VSP9997	Pascha												
-J78FF	J78FF	UPHS	07/20/2020	WaterControl	VSP9996	Pascha												
-J77FR	J77FR	UPHS	07/13/2020	WaterControl	VSP9995	Pascha												
-J77FG	J77FG	UPHS	07/03/2020	WaterControl	VSP9994	Pascha												
-CRD4J	CRD4J	UPHS	06/26/2020	WaterControl	VSP9993	Pascha												
-J3NJJ	J3NJJ	UPHS	06/18/2020	WaterControl	VSP9992	Pascha												
-J37GK	J37GK	UPHS	06/13/2020	WaterControl	VSP9991	Pascha												
-J37K3	J37K3	UPHS	05/18/2020	H2O_RT-1a	VSP9989	Pascha												
-J37K3	J37K3	UPHS	05/18/2020	H20_PCR-1a	VSP9988	Pascha												
-J37K3	J37K3	UPHS	05/18/2020	H2O_RT-1b	VSP9987	Pascha												
-J37K3	J37K3	UPHS	05/18/2020	H20_PCR-1b	VSP9986	Pascha												
-J3R26	J3R26	UPHS	05/27/2020	MockR-1a	VSP9985	Pascha												
-J3R26	J3R26	UPHS	05/27/2020	MockR-1b	VSP9984	Pascha												
-J3R26	J3R26	UPHS	05/27/2020	H2O-1a	VSP9983	Pascha												
-J3R26	J3R26	UPHS	05/27/2020	H2O-1b	VSP9982	Pascha												
-J37ML	J37ML	UPHS	06/09/2020	H2O-1a	VSP9981	Pascha												
-J37ML	J37ML	UPHS	06/09/2020	H2O-1b	VSP9980	Pascha												
+JB8CJ	JB8CJ	seqRunControl	08/24/2020	WaterControl	VSP9999	Pascha												
+J327N	J327N	seqRunControl	08/05/2020	WaterControl	VSP9998	Pascha												
+J2J3B	J2J3B	seqRunControl	07/25/2020	WaterControl	VSP9997	Pascha												
+J78FF	J78FF	seqRunControl	07/20/2020	WaterControl	VSP9996	Pascha												
+J77FR	J77FR	seqRunControl	07/13/2020	WaterControl	VSP9995	Pascha												
+J77FG	J77FG	seqRunControl	07/03/2020	WaterControl	VSP9994	Pascha												
+CRD4J	CRD4J	seqRunControl	06/26/2020	WaterControl	VSP9993	Pascha												
+J3NJJ	J3NJJ	seqRunControl	06/18/2020	WaterControl	VSP9992	Pascha												
+J37GK	J37GK	seqRunControl	06/13/2020	WaterControl	VSP9991	Pascha												
+J37K3	J37K3	seqRunControl	05/18/2020	H2O_RT-1a	VSP9989	Pascha												
+J37K3	J37K3	seqRunControl	05/18/2020	H20_PCR-1a	VSP9988	Pascha												
+J37K3	J37K3	seqRunControl	05/18/2020	H2O_RT-1b	VSP9987	Pascha												
+J37K3	J37K3	seqRunControl	05/18/2020	H20_PCR-1b	VSP9986	Pascha												
+J3R26	J3R26	seqRunControl	05/27/2020	MockR-1a	VSP9985	Pascha												
+J3R26	J3R26	seqRunControl	05/27/2020	MockR-1b	VSP9984	Pascha												
+J3R26	J3R26	seqRunControl	05/27/2020	H2O-1a	VSP9983	Pascha												
+J3R26	J3R26	seqRunControl	05/27/2020	H2O-1b	VSP9982	Pascha												
+J37ML	J37ML	seqRunControl	06/09/2020	H2O-1a	VSP9981	Pascha												
+J37ML	J37ML	seqRunControl	06/09/2020	H2O-1b	VSP9980	Pascha												
 333no-q	333	UPHS	08/28/2020	NP-OP	VSP0329	Ron, Young	QiaAMP mini RNA	9/11/20	37	Undetermined								
 334no-q	334	UPHS	08/28/2020	NP-OP	VSP0330	Ron, Young	QiaAMP mini RNA	9/11/20	37	7.02E-01								
 334s-q	334	UPHS	08/28/2020	Saliva	VSP0331	Ron, Young	QiaAMP mini RNA	9/11/20	37	2.16E+01								
@@ -415,37 +415,37 @@ J37ML	J37ML	UPHS	06/09/2020	H2O-1b	VSP9980	Pascha
 369e-q	369	UPHS	10/12/2020	ETA	VSP0396	Ron, Young	QiaAMP mini RNA	10/26/20	37	1.89E+03								
 369no-q	369	UPHS	10/12/2020	NP-OP	VSP0397	Ron, Young	QiaAMP mini RNA	10/26/20	37	1.04E+04								
 371no-q	371	UPHS	10/12/2020	NP-OP	VSP0398	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined								
-373no-q	373	UPHS	10/12/2020	NP-OP	VSP0399	Ron, Young	QiaAMP mini RNA	10/26/20	37	5.39E+05	Pascha (1/14/2020)							
+373no-q	373	UPHS	10/12/2020	NP-OP	VSP0399	Ron, Young	QiaAMP mini RNA	10/26/20	37	5.39E+05				210122_M03249_0146_000000000-JHV59				
 369e-q	369	UPHS	10/14/2020	ETA	VSP0400	Ron, Young	QiaAMP mini RNA	10/26/20	37	9.83E+02								
 371s-q	371	UPHS	10/14/2020	Saliva	VSP0401	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined								
 373no-q	373	UPHS	10/14/2020	NP-OP	VSP0402	Ron, Young	QiaAMP mini RNA	10/26/20	37	1.36E+05								
 375e-q	375	UPHS	10/14/2020	ETA	VSP0403	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined								
 353s-q	353	UPHS	10/16/2020	Saliva	VSP0404	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined								
 369e-q	369	UPHS	10/16/2020	ETA	VSP0405	Ron, Young	QiaAMP mini RNA	10/29/20	37	3.98E+02								
-371s-q	371	UPHS	10/16/2020	Saliva	VSP0406	Ron, Young	QiaAMP mini RNA	10/29/20	37	2.81E+02	Pascha (1/14/2020)							
+371s-q	371	UPHS	10/16/2020	Saliva	VSP0406	Ron, Young	QiaAMP mini RNA	10/29/20	37	2.81E+02				210122_M03249_0146_000000000-JHV59				
 373no-q	373	UPHS	10/16/2020	NP-OP	VSP0407	Ron, Young	QiaAMP mini RNA	10/29/20	37	4.03E+04								
 375e-q	375	UPHS	10/16/2020	ETA	VSP0408	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined								
 377no-q	377	UPHS	10/16/2020	NP-OP	VSP0409	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined								
 378no-q	378	UPHS	10/16/2020	NP-OP	VSP0410	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined								
 341e-q	341	UPHS	10/19/2020	ETA	VSP0411	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined								
 377no-q	377	UPHS	10/19/2020	NP-OP	VSP0412	Ron, Young	QiaAMP mini RNA	10/29/20	37	3.76E+00								
-377s-q	377	UPHS	10/19/2020	Saliva	VSP0413	Ron, Young	QiaAMP mini RNA	10/29/20	37	1.58E+02	Pascha (1/14/2020)							
+377s-q	377	UPHS	10/19/2020	Saliva	VSP0413	Ron, Young	QiaAMP mini RNA	10/29/20	37	1.58E+02				210122_M03249_0146_000000000-JHV59				
 379no-q	379	UPHS	10/19/2020	NP-OP	VSP0414	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined								
-379s-q	379	UPHS	10/19/2020	Saliva	VSP0415	Ron, Young	QiaAMP mini RNA	10/29/20	37	1.36E+02	Pascha (1/14/2020)							
+379s-q	379	UPHS	10/19/2020	Saliva	VSP0415	Ron, Young	QiaAMP mini RNA	10/29/20	37	1.36E+02				210122_M03249_0146_000000000-JHV59				
 380no-q	380	UPHS	10/19/2020	NP-OP	VSP0416	Ron, Young	QiaAMP mini RNA	10/29/20	37	5.84E+01								
 380s-q	380	UPHS	10/19/2020	Saliva	VSP0417	Ron, Young	QiaAMP mini RNA	10/29/20	37	3.40E+01								
 379no-q	379	UPHS	10/21/2020	NP-OP	VSP0418	Ron, Young	QiaAMP mini RNA	10/29/20	37	1.22E+01								
 380no-q	380	UPHS	10/21/2020	NP-OP	VSP0419	Ron, Young	QiaAMP mini RNA	10/29/20	37	1.12E+02								
 380s-q	380	UPHS	10/21/2020	Saliva	VSP0420	Ron, Young	QiaAMP mini RNA	10/29/20	37	3.38E+04								
-381no-q	381	UPHS	10/21/2020	NP-OP	VSP0421	Ron, Young	QiaAMP mini RNA	10/29/20	37	4.33E+02	Pascha (1/14/2020)							
+381no-q	381	UPHS	10/21/2020	NP-OP	VSP0421	Ron, Young	QiaAMP mini RNA	10/29/20	37	4.33E+02				210122_M03249_0146_000000000-JHV59				
 381s-q	381	UPHS	10/21/2020	Saliva	VSP0422	Ron, Young	QiaAMP mini RNA	10/29/20	37	8.04E+01								
 382no-q	382	UPHS	10/21/2020	NP-OP	VSP0423	Ron, Young	QiaAMP mini RNA	10/29/20	37	1.84E+01								
-382s-q	382	UPHS	10/21/2020	Saliva	VSP0424	Ron, Young	QiaAMP mini RNA	10/29/20	37	1.40E+04	Pascha (1/14/2020)							
-380s-q	380	UPHS	10/23/2020	Saliva	VSP0425	Ron, Young	QiaAMP mini RNA	10/29/20	37	6.54E+05	Pascha (1/14/2020)							
+382s-q	382	UPHS	10/21/2020	Saliva	VSP0424	Ron, Young	QiaAMP mini RNA	10/29/20	37	1.40E+04				210122_M03249_0146_000000000-JHV59				
+380s-q	380	UPHS	10/23/2020	Saliva	VSP0425	Ron, Young	QiaAMP mini RNA	10/29/20	37	6.54E+05								
 383no-q	383	UPHS	10/23/2020	NP-OP	VSP0426	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined								
 384no-q	384	UPHS	10/23/2020	NP-OP	VSP0427	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined								
 385no-q	385	UPHS	10/26/2020	NP-OP	VSP0428	Ron, Young	QiaAMP mini RNA	11/13/20	37	5.26E+03								
-385s-q	385	UPHS	10/26/2020	Saliva	VSP0429	Ron, Young	QiaAMP mini RNA	11/13/20	37	2.80E+05	Pascha (1/14/2020)							
+385s-q	385	UPHS	10/26/2020	Saliva	VSP0429	Ron, Young	QiaAMP mini RNA	11/13/20	37	2.80E+05				210122_M03249_0146_000000000-JHV59				
 386no-q	386	UPHS	10/26/2020	NP-OP	VSP0430	Ron, Young	QiaAMP mini RNA	11/13/20	37	1.41E+01								
 386s-q	386	UPHS	10/26/2020	Saliva	VSP0431	Ron, Young	QiaAMP mini RNA	11/13/20	37	1.22E+00								
 382no-q	382	UPHS	10/28/2020	NP-OP	VSP0432	Ron, Young	QiaAMP mini RNA	11/13/20	37	Undetermined								
@@ -464,7 +464,7 @@ J37ML	J37ML	UPHS	06/09/2020	H2O-1b	VSP9980	Pascha
 391s-q	391	UPHS	11/2/2020	Saliva	VSP0445	Ron, Young	QiaAMP mini RNA	11/20/20	37	7.93E+01								
 392no-q	392	UPHS	11/2/2020	NP-OP	VSP0446	Ron, Young	QiaAMP mini RNA	11/20/20	37	1.80E+00								
 392s-q	392	UPHS	11/2/2020	Saliva	VSP0447	Ron, Young	QiaAMP mini RNA	11/20/20	37	3.14E-01								
-391no-q	391	UPHS	11/4/2020	NP-OP	VSP0448	Ron, Young	QiaAMP mini RNA	11/20/20	37	1.80E+05	Pascha (1/14/2020)							
+391no-q	391	UPHS	11/4/2020	NP-OP	VSP0448	Ron, Young	QiaAMP mini RNA	11/20/20	37	1.80E+05				210122_M03249_0146_000000000-JHV59				
 393no-q	393	UPHS	11/4/2020	NP-OP	VSP0449	Ron, Young	QiaAMP mini RNA	11/20/20	37	Undetermined								
 394no-q	394	UPHS	11/4/2020	NP-OP	VSP0450	Ron, Young	QiaAMP mini RNA	11/20/20	37	Undetermined								
 395no-q	395	UPHS	11/4/2020	NP-OP	VSP0451	Ron, Young	QiaAMP mini RNA	11/20/20	37	Undetermined								
@@ -476,7 +476,7 @@ J37ML	J37ML	UPHS	06/09/2020	H2O-1b	VSP9980	Pascha
 400no-q	400	UPHS	11/11/2020	NP-OP	VSP0457	Ron, Young	QiaAMP mini RNA	12/22/20	37	Undetermined								
 400s-q	400	UPHS	11/11/2020	Saliva	VSP0458	Ron, Young	QiaAMP mini RNA	12/22/20	37	Undetermined								
 401no-1	401	UPHS	11/11/2020	NP-OP	VSP0459	Ron, Young	QiaAMP mini RNA	12/22/20	37	2.08E+01								
-401s-q	401	UPHS	11/11/2020	Saliva	VSP0460	Ron, Young	QiaAMP mini RNA	12/22/20	37	5.68E+02	Pascha (1/14/2020)							
+401s-q	401	UPHS	11/11/2020	Saliva	VSP0460	Ron, Young	QiaAMP mini RNA	12/22/20	37	5.68E+02				210122_M03249_0146_000000000-JHV59				
 402no-q	402	UPHS	11/11/2020	NP-OP	VSP0461	Ron, Young	QiaAMP mini RNA	12/22/20	37	1.49E+01								
 402s-q	402	UPHS	11/11/2020	Saliva	VSP0462	Ron, Young	QiaAMP mini RNA	12/22/20	37	4.00E+00								
 403no-q	403	UPHS	11/11/2020	NP-OP	VSP0463	Ron, Young	QiaAMP mini RNA	12/22/20	37	5.78E+00								
@@ -486,7 +486,7 @@ J37ML	J37ML	UPHS	06/09/2020	H2O-1b	VSP9980	Pascha
 403s-q	403	UPHS	11/13/2020	Saliva	VSP0467	Ron, Young	QiaAMP mini RNA	12/22/20	37	8.95E+00								
 405no-q	405	UPHS	11/13/2020	NP-OP	VSP0468	Ron, Young	QiaAMP mini RNA	12/22/20	37	Undetermined								
 405s-q	405	UPHS	11/13/2020	Saliva	VSP0469	Ron, Young	QiaAMP mini RNA	12/22/20	37	3.33E+00								
-406no-q	406	UPHS	11/13/2020	NP-OP	VSP0470	Ron, Young	QiaAMP mini RNA	12/22/20	37	4.74E+05	Pascha (1/14/2020)							
+406no-q	406	UPHS	11/13/2020	NP-OP	VSP0470	Ron, Young	QiaAMP mini RNA	12/22/20	37	4.74E+05				210122_M03249_0146_000000000-JHV59				
 406s-q	406	UPHS	11/13/2020	Saliva	VSP0471	Ron, Young	QiaAMP mini RNA	12/22/20	37	2.65E+04								
 407no-q	407	UPHS	11/13/2020	NP-OP	VSP0472	Ron, Young	QiaAMP mini RNA	12/22/20	37	1.85E+01								
 407s-q	407	UPHS	11/13/2020	Saliva	VSP0473	Ron, Young	QiaAMP mini RNA	12/22/20	37	8.33E-01								
@@ -495,11 +495,11 @@ J37ML	J37ML	UPHS	06/09/2020	H2O-1b	VSP9980	Pascha
 405s-q	405	UPHS	11/16/2020	Saliva	VSP0476	Ron, Young	QiaAMP mini RNA	12/22/20	37	6.79E+00								
 406no-q	406	UPHS	11/16/2020	NP-OP	VSP0477	Ron, Young	QiaAMP mini RNA	12/22/20	37	1.45E+05								
 408no-q	408	UPHS	11/16/2020	NP-OP	VSP0478	Ron, Young	QiaAMP mini RNA	12/23/20	37	8.33E+03								
-409s-q	409	UPHS	11/16/2020	Saliva	VSP0479	Ron, Young	QiaAMP mini RNA	12/23/20	37	8.28E+05	Pascha (1/14/2020)							
+409s-q	409	UPHS	11/16/2020	Saliva	VSP0479	Ron, Young	QiaAMP mini RNA	12/23/20	37	8.28E+05				210122_M03249_0146_000000000-JHV59				
 410no-q	410	UPHS	11/16/2020	NP-OP	VSP0480	Ron, Young	QiaAMP mini RNA	12/23/20	37	Undetermined								
 406s-q	406	UPHS	11/18/2020	Saliva	VSP0481	Ron, Young	QiaAMP mini RNA	12/23/20	37	1.11E+03								
 408no-q	408	UPHS	11/18/2020	NP-OP	VSP0482	Ron, Young	QiaAMP mini RNA	12/23/20	37	6.43E+03								
-408s-q	408	UPHS	11/18/2020	Saliva	VSP0483	Ron, Young	QiaAMP mini RNA	12/23/20	37	1.18E+04	Pascha (1/14/2020)							
+408s-q	408	UPHS	11/18/2020	Saliva	VSP0483	Ron, Young	QiaAMP mini RNA	12/23/20	37	1.18E+04				210122_M03249_0146_000000000-JHV59				
 409s-q	409	UPHS	11/18/2020	Saliva	VSP0484	Ron, Young	QiaAMP mini RNA	12/23/20	37	4.16E+04								
 411no-q	411	UPHS	11/18/2020	NP-OP	VSP0485	Ron, Young	QiaAMP mini RNA	12/23/20	37	Undetermined								
 411s-q	411	UPHS	11/18/2020	Saliva	VSP0486	Ron, Young	QiaAMP mini RNA	12/23/20	37	Undetermined								
@@ -507,7 +507,7 @@ J37ML	J37ML	UPHS	06/09/2020	H2O-1b	VSP9980	Pascha
 411no-q	411	UPHS	11/20/2020	NP-OP	VSP0488	Ron, Young	QiaAMP mini RNA	12/23/20	37	Undetermined								
 412no-q	412	UPHS	11/20/2020	NP-OP	VSP0489	Ron, Young	QiaAMP mini RNA	12/23/20	37	Undetermined								
 412s-q	412	UPHS	11/20/2020	Saliva	VSP0490	Ron, Young	QiaAMP mini RNA	12/23/20	37	Undetermined								
-414e-q	414	UPHS	11/20/2020	ETA	VSP0491	Ron, Young	QiaAMP mini RNA	1/4/20	37	2.25E+04	Pascha (1/14/2020)							
+414e-q	414	UPHS	11/20/2020	ETA	VSP0491	Ron, Young	QiaAMP mini RNA	1/4/20	37	2.25E+04				210122_M03249_0146_000000000-JHV59				
 414no-q	414	UPHS	11/20/2020	NP-OP	VSP0492	Ron, Young	QiaAMP mini RNA	1/4/20	37	3.89E+01								
 405s-q	405	UPHS	11/23/2020	Saliva	VSP0493	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined								
 415no-q	415	UPHS	11/23/2020	NP-OP	VSP0494	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined								
@@ -519,27 +519,27 @@ J37ML	J37ML	UPHS	06/09/2020	H2O-1b	VSP9980	Pascha
 421no-q	421	UPHS	11/30/2020	NP-OP	VSP0500	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined								
 413e-q	413	UPHS	12/2/2020	ETA	VSP0501	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined								
 423no-q	423	UPHS	12/2/2020	NP-OP	VSP0502	Ron, Young	QiaAMP mini RNA	1/4/20	37	2.03E+03								
-423s-q	423	UPHS	12/2/2020	Saliva	VSP0503	Ron, Young	QiaAMP mini RNA	1/4/20	37	6.02E+03	Pascha (1/14/2020)							
+423s-q	423	UPHS	12/2/2020	Saliva	VSP0503	Ron, Young	QiaAMP mini RNA	1/4/20	37	6.02E+03				210122_M03249_0146_000000000-JHV59				
 420no-q	420	UPHS	12/3/2020	NP-OP	VSP0504	Ron, Young	QiaAMP mini RNA	1/4/20	37	1.29E+01								
-425no-q	425	UPHS	12/3/2020	NP-OP	VSP0505	Ron, Young	QiaAMP mini RNA	1/4/20	37	6.71E+03	Pascha (1/14/2020)							
+425no-q	425	UPHS	12/3/2020	NP-OP	VSP0505	Ron, Young	QiaAMP mini RNA	1/4/20	37	6.71E+03				210122_M03249_0146_000000000-JHV59				
 425s-q	425	UPHS	12/3/2020	Saliva	VSP0506	Ron, Young	QiaAMP mini RNA	1/4/20	37	4.77E+03								
 413e	413	UPHS	12/4/2020	ETA	VSP0507	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined								
 420no	420	UPHS	12/4/2020	NP-OP	VSP0508	Ron, Young	QiaAMP mini RNA	1/4/20	37	4.13E+00								
 423s	423	UPHS	12/4/2020	Saliva	VSP0509	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined								
-427no	427	UPHS	12/4/2020	NP-OP	VSP0510	Ron, Young	QiaAMP mini RNA	1/4/20	37	6.92E+05	Pascha (1/14/2020)							
-420e	420	UPHS	12/7/2020	ETA	VSP0511	Ron, Young	QiaAMP mini RNA	1/4/20	37	4.17E+03	Pascha (1/14/2020)							
+427no	427	UPHS	12/4/2020	NP-OP	VSP0510	Ron, Young	QiaAMP mini RNA	1/4/20	37	6.92E+05				210122_M03249_0146_000000000-JHV59				
+420e	420	UPHS	12/7/2020	ETA	VSP0511	Ron, Young	QiaAMP mini RNA	1/4/20	37	4.17E+03				210122_M03249_0146_000000000-JHV59				
 424no	424	UPHS	12/7/2020	NP-OP	VSP0512	Ron, Young	QiaAMP mini RNA	1/4/20	37	5.14E+01								
 428no	428	UPHS	12/7/2020	NP-OP	VSP0513	Ron, Young	QiaAMP mini RNA	1/4/20	37	1.67E+01								
-428s	428	UPHS	12/7/2020	Saliva	VSP0514	Ron, Young	QiaAMP mini RNA	1/4/20	37	9.52E+03	Pascha (1/14/2020)							
+428s	428	UPHS	12/7/2020	Saliva	VSP0514	Ron, Young	QiaAMP mini RNA	1/4/20	37	9.52E+03				210122_M03249_0146_000000000-JHV59				
 429no	429	UPHS	12/7/2020	NP-OP	VSP0515	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined								
 429s	429	UPHS	12/7/2020	Saliva	VSP0516	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined								
-424no	424	UPHS	12/9/2020	NP-OP	VSP0517	Ron, Young	QiaAMP mini RNA	1/11/20	37	8.68E+03								
+424no	424	UPHS	12/9/2020	NP-OP	VSP0517	Ron, Young	QiaAMP mini RNA	1/11/20	37	8.68E+03	Shantan (1/27/2020)							
 428no	428	UPHS	12/9/2020	NP-OP	VSP0518	Ron, Young	QiaAMP mini RNA	1/11/20	37	1.78E+01								
 428s	428	UPHS	12/9/2020	Saliva	VSP0519	Ron, Young	QiaAMP mini RNA	1/11/20	37	5.32E+03								
 429no	429	UPHS	12/9/2020	NP-OP	VSP0520	Ron, Young	QiaAMP mini RNA	1/11/20	37	Undetermined								
 430no	430	UPHS	12/9/2020	NP-OP	VSP0521	Ron, Young	QiaAMP mini RNA	1/11/20	37	Undetermined								
 430s	430	UPHS	12/9/2020	Saliva	VSP0522	Ron, Young	QiaAMP mini RNA	1/11/20	37	Undetermined								
-431no	431	UPHS	12/9/2020	NP-OP	VSP0523	Ron, Young	QiaAMP mini RNA	1/11/20	37	4.07E+02								
+431no	431	UPHS	12/9/2020	NP-OP	VSP0523	Ron, Young	QiaAMP mini RNA	1/11/20	37	4.07E+02	Shantan (1/27/2020)							
 430no	430	UPHS	12/11/2020	NP-OP	VSP0524	Ron, Young	QiaAMP mini RNA	1/11/20	37	Undetermined								
 431no	431	UPHS	12/11/2020	NP-OP	VSP0525	Ron, Young	QiaAMP mini RNA	1/11/20	37	5.76E+01								
 2745	2745	PennEssentialWorkers_Dec2020	12/10/20	Saliva	VSP0526	Ron, Young	QiaAMP mini RNA	12/14/20	37	4.02E+01				201214_M03249_0133_000000000-J78GM				
@@ -559,118 +559,125 @@ J37ML	J37ML	UPHS	06/09/2020	H2O-1b	VSP9980	Pascha
 3157	3157	PennEssentialWorkers_Dec2020	12/11/20	Saliva	VSP0540	Ron, Young	QiaAMP mini RNA	12/14/20	37	7.32E+02				201214_M03249_0133_000000000-J78GM				
 3193	3193	PennEssentialWorkers_Dec2020	12/11/20	Saliva	VSP0541	Ron, Young	QiaAMP mini RNA	12/14/20	37	Undetermined				201214_M03249_0133_000000000-J78GM				
 3197	3197	PennEssentialWorkers_Dec2020	12/11/20	Saliva	VSP0542	Ron, Young	QiaAMP mini RNA	12/14/20	37	4.36E+00				201214_M03249_0133_000000000-J78GM				
-161	161	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0543	Ganguly Lab	QiaAMP mini RNA	12/14/20	32	6.14E+02							ganguly@pennmedicine.upenn.edu	
-374	374	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0544	Ganguly Lab	QiaAMP mini RNA	12/14/20	32	1.71E+02							ganguly@pennmedicine.upenn.edu	
-95-267	95-267	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0545	Ganguly Lab	QiaAMP mini RNA	12/14/20	32	2.52E+02							ganguly@pennmedicine.upenn.edu	
-97-736	97-736	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0546	Ganguly Lab	QiaAMP mini RNA	12/14/20	32	3.61E+05							ganguly@pennmedicine.upenn.edu	
-10-1017	10-1017	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0547	Ganguly Lab	QiaAMP mini RNA	12/14/20	32	1.43E+04							ganguly@pennmedicine.upenn.edu	
+161	161	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0543	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	6.14E+02							ganguly@pennmedicine.upenn.edu	
+374	374	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0544	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	1.71E+02							ganguly@pennmedicine.upenn.edu	
+95-267	95-267	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0545	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	2.52E+02							ganguly@pennmedicine.upenn.edu	
+97-736	97-736	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0546	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	3.61E+05							ganguly@pennmedicine.upenn.edu	
+10-1017	10-1017	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0547	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	1.43E+04							ganguly@pennmedicine.upenn.edu	
 424s	424	UPHS	12/14/20	Saliva	VSP0548	Ron, Young	QiaAMP mini RNA	1/11/21	37	Undetermined								
 431s	431	UPHS	12/14/20	Saliva	VSP0549	Ron, Young	QiaAMP mini RNA	1/11/21	37	Undetermined								
-434no	434	UPHS	12/14/20	NP-OP	VSP0550	Ron, Young	QiaAMP mini RNA	1/11/21	37	2.15E+05								
+434no	434	UPHS	12/14/20	NP-OP	VSP0550	Ron, Young	QiaAMP mini RNA	1/11/21	37	2.15E+05	Shantan (1/27/2020)							
 435no	435	UPHS	12/14/20	NP-OP	VSP0551	Ron, Young	QiaAMP mini RNA	1/11/21	37	Undetermined								
 435s	435	UPHS	12/14/20	Saliva	VSP0552	Ron, Young	QiaAMP mini RNA	1/11/21	37	1.43E+01								
 436no	436	UPHS	12/14/20	NP-OP	VSP0553	Ron, Young	QiaAMP mini RNA	1/11/21	37	Undetermined								
-436s	436	UPHS	12/14/20	Saliva	VSP0554	Ron, Young	QiaAMP mini RNA	1/11/21	37	6.72E+02								
+436s	436	UPHS	12/14/20	Saliva	VSP0554	Ron, Young	QiaAMP mini RNA	1/11/21	37	6.72E+02	Shantan (1/27/2020)							
 413e	413	UPHS	12/18/2020	ETA	VSP0555	Ron, Young	QiaAMP mini RNA	1/11/21	37	Undetermined								
 428s	428	UPHS	12/18/2020	saliva	VSP0556	Ron, Young	QiaAMP mini RNA	1/11/21	37	Undetermined								
 435no	435	UPHS	12/18/2020	NP-OP	VSP0557	Ron, Young	QiaAMP mini RNA	1/11/21	37	2.47E+01								
 435s	435	UPHS	12/18/2020	saliva	VSP0558	Ron, Young	QiaAMP mini RNA	1/11/21	37	1.60E+00								
 436no	436	UPHS	12/18/2020	NP-OP	VSP0559	Ron, Young	QiaAMP mini RNA	1/11/21	37	Undetermined								
-437no	437	UPHS	12/18/2020	NP-OP	VSP0560	Ron, Young	QiaAMP mini RNA	1/11/21	37	3.95E+04								
+437no	437	UPHS	12/18/2020	NP-OP	VSP0560	Ron, Young	QiaAMP mini RNA	1/11/21	37	3.95E+04	Shantan (1/27/2020)							
 437s	437	UPHS	12/18/2020	saliva	VSP0561	Ron, Young	QiaAMP mini RNA	1/11/21	37	2.07E+02								
 438no	438	UPHS	12/18/2020	NP-OP	VSP0562	Ron, Young	QiaAMP mini RNA	1/11/21	37	Undetermined								
-J78GM	J78GM	UPHS	12/12/2020	Negative control	VSP9979	Pascha												
-DOH1	DOH1	Dept of Health	1/6/2021	VTM	VSP0563	Claire Newbern	QiaAMP mini RNA	1/7/21	27	2.02E+05							Claire.Newbern@Phila.gov, Bernadette.Matthis@Phila.gov	UK variant investigation
+J78GM	J78GM	seqRunControl	12/12/2020	Negative control	VSP9979	Pascha												
+DOH1	DOH1	Dept of Health	1/6/2021	VTM	VSP0563	Claire Newbern	QiaAMP mini RNA	1/7/21	27	2.02E+05				210113_M05588_0364_000000000			Claire.Newbern@Phila.gov, Bernadette.Matthis@Phila.gov	UK variant investigation
 SouthAfrica_HLS-UCT-GS-1396-KRISP	SouthAfrica_HLS-UCT-GS-1396-KRISP	simulated_dataset	11/18/2020	simulated	VSP9978	GISAID												
 England_EPI_ISL_747519	England_EPI_ISL_747519	simulated_dataset	12/11/2020	simulated	VSP9977	GISAID												
-424e	424	UPHS	12/20/20	ETA	VSP0564	Ron												
-439no	439	UPHS	12/20/20	NP-OP	VSP0565	Ron												
-440no	440	UPHS	12/20/20	NP-OP	VSP0566	Ron												
-440s	440	UPHS	12/20/20	Saliva	VSP0567	Ron												
-442no	442	UPHS	1/6/21	NP-OP	VSP0568	Ron												
-442s	442	UPHS	1/6/21	Saliva	VSP0569	Ron												
-443no	443	UPHS	1/6/21	NP-OP	VSP0570	Ron												
-sdrop1_molpath	sdrop1_molpath	HUP	1/8/21	0.9% Saline	VSP0571	Feldman, Michael		1/18/21	37					210113_M05588_0364_000000000			Michael.Feldman2@pennmedicine.upenn.edu	S gene drop out study
-442no	442	UPHS	1/8/21	NP-OP	VSP0572	Ron												
-442s	442	UPHS	1/8/21	Saliva	VSP0573	Ron												
-443no	443	UPHS	1/8/21	NP-OP	VSP0574	Ron												
-443s	443	UPHS	1/8/21	Saliva	VSP0575	Ron												
-444no	444	UPHS	1/8/21	NP-OP	VSP0576	Ron												
-444s	444	UPHS	1/8/21	Saliva	VSP0577	Ron												
-445no	445	UPHS	1/8/21	NP-OP	VSP0578	Ron												
-E50703779-NR; 695237884	653685	Lancaster	1/8/21	Nasal swab in VTM or Saline	VSP0579	Kontra, Joseph		1/18/21	37					210113_M05588_0364_000000000			joseph.kontra@pennmedicine.upenn.edu	S gene drop out study
-E50603080-09; 695181121	2181202	Lancaster	1/8/21	Nasal swab in VTM or Saline	VSP0580	Kontra, Joseph		1/18/21	37					210113_M05588_0364_000000000			joseph.kontra@pennmedicine.upenn.edu	S gene drop out study
-E50605712-NR; 695215402	2081815	Lancaster	1/8/21	Nasal swab in VTM or Saline	VSP0581	Kontra, Joseph		1/18/21	37					210113_M05588_0364_000000000			joseph.kontra@pennmedicine.upenn.edu	S gene drop out study
-E50701962-NR; 695215333	1044999	Lancaster	1/8/21	Nasal swab in VTM or Saline	VSP0582	Kontra, Joseph		1/18/21	37					210113_M05588_0364_000000000			joseph.kontra@pennmedicine.upenn.edu	S gene drop out study
-E50405634-NR; 695036702	354398	Lancaster	1/8/21	Nasal swab in VTM or Saline	VSP0583	Kontra, Joseph		1/18/21	37					210113_M05588_0364_000000000			joseph.kontra@pennmedicine.upenn.edu	S gene drop out study
-JFKGR	JFKGR	UPHS	01/09/2021	Negative control	VSP9976	Pascha								210108_M03249_0139_000000000-JFKGR				
-JGMP7	JGMP7	Other	1/12/20221	Negative control	VSP9975	Pascha								210113_M05588_0364_000000000				
-444no	444	UPHS	1/11/21	NP-OP	VSP0584	Ron												
-445no	445	UPHS	1/11/21	NP-OP	VSP0585	Ron												
-445s	445	UPHS	1/11/21	Saliva	VSP0586	Ron												
-447no	447	UPHS	1/11/21	NP-OP	VSP0587	Ron												
-447s	447	UPHS	1/11/21	Saliva	VSP0588	Ron												
-448no	448	UPHS	1/11/21	NP-OP	VSP0589	Ron												
-448s	448	UPHS	1/11/21	Saliva	VSP0590	Ron												
-448no	448	UPHS	1/13/21	NP-OP	VSP0591	Ron												
-449no	449	UPHS	1/13/21	NP-OP	VSP0592	Ron												
-449s	449	UPHS	1/13/21	Saliva	VSP0593	Ron												
-450no	450	UPHS	1/13/21	NP-OP	VSP0594	Ron												
-450s	450	UPHS	1/13/21	Saliva	VSP0595	Ron												
-448s	448	UPHS	1/15/21	Saliva	VSP0596	Ron												
-450no	450	UPHS	1/15/21	NP-OP	VSP0597	Ron												
-450s	450	UPHS	1/15/21	Saliva	VSP0598	Ron												
-452no	452	UPHS	1/15/21	NP-OP	VSP0599	Ron												
-452s	452	UPHS	1/15/21	Saliva	VSP0600	Ron												
-453no	453	UPHS	1/15/21	NP-OP	VSP0601	Ron												
-3184	3184	Security outbreak		Saliva	VSP0602						Pascha (1/20/2020)							
-2007	2007	COVIDSAFE		Saliva	VSP0603			1/21/21	37		Pascha (1/20/2020)							
-9070	9070	COVIDSAFE		Saliva	VSP0604			1/21/21	37		Pascha (1/20/2020)							
-1974	1974	COVIDSAFE		Saliva	VSP0605			1/21/21	37		Pascha (1/20/2020)							
-3057	3057	COVIDSAFE		Saliva	VSP0606			1/21/21	37		Pascha (1/20/2020)							
-3120	3120	COVIDSAFE		Saliva	VSP0607			1/21/21	37		Pascha (1/20/2020)							
-2456	2456	COVIDSAFE		Saliva	VSP0608			1/21/21	37		Pascha (1/20/2020)							
-3110	3110	COVIDSAFE		Saliva	VSP0609			1/21/21	37		Pascha (1/20/2020)							
-7303	7303	COVIDSAFE		Saliva	VSP0610			1/21/21	37		Pascha (1/20/2020)							
-9106	9106	COVIDSAFE		Saliva	VSP0611			1/21/21	37		Pascha (1/20/2020)							
-9102	9102	COVIDSAFE		Saliva	VSP0612			1/21/21	37		Pascha (1/20/2020)							
-8504	8504	COVIDSAFE		Saliva	VSP0613			1/21/21	37		Pascha (1/20/2020)							
-8512	8512	COVIDSAFE		Saliva	VSP0614			1/21/21	37		Pascha (1/20/2020)							
-3228	3228	COVIDSAFE		Saliva	VSP0615			1/21/21	37		Pascha (1/20/2020)							
-4736	4736	COVIDSAFE		Saliva	VSP0616						Pascha (1/20/2020)							
-4329	4329	COVIDSAFE		Saliva	VSP0617						Pascha (1/20/2020)							
+424e	424	UPHS	12/20/20	ETA	VSP0564	Ron		1/27/20	37	1.78E+03								
+439no	439	UPHS	12/20/20	NP-OP	VSP0565	Ron		1/27/20	37	1.38E+00								
+440no	440	UPHS	12/20/20	NP-OP	VSP0566	Ron		1/27/20	37	Undetermined								
+440s	440	UPHS	12/20/20	Saliva	VSP0567	Ron		1/27/20	37	Undetermined								
+442no	442	UPHS	1/6/21	NP-OP	VSP0568	Ron		1/27/20	37	Undetermined								
+442s	442	UPHS	1/6/21	Saliva	VSP0569	Ron		1/27/20	37	2.00E+00								
+443no	443	UPHS	1/6/21	NP-OP	VSP0570	Ron		1/27/20	37	1.08E+00								
+sdrop1_molpath	sdrop1_molpath	HUP	1/8/21	0.9% Saline	VSP0571	Feldman, Michael		1/18/21	37	8.56E+00				210113_M05588_0364_000000000			Michael.Feldman2@pennmedicine.upenn.edu	S gene drop out study
+442no	442	UPHS	1/8/21	NP-OP	VSP0572	Ron		1/27/20	37	Undetermined								
+442s	442	UPHS	1/8/21	Saliva	VSP0573	Ron		1/27/20	37	Undetermined								
+443no	443	UPHS	1/8/21	NP-OP	VSP0574	Ron		1/27/20	37	Undetermined								
+443s	443	UPHS	1/8/21	Saliva	VSP0575	Ron		1/27/20	37	1.60E+01								
+444no	444	UPHS	1/8/21	NP-OP	VSP0576	Ron		1/27/20	37	1.48E+03								
+444s	444	UPHS	1/8/21	Saliva	VSP0577	Ron		1/27/20	37	5.85E+00								
+445no	445	UPHS	1/8/21	NP-OP	VSP0578	Ron		1/28/21	37									
+E50703779-NR; 695237884	653685	Lancaster	1/8/21	Nasal swab in VTM or Saline	VSP0579	Kontra, Joseph		1/18/21	37	2.51E+01				210113_M05588_0364_000000000			joseph.kontra@pennmedicine.upenn.edu	S gene drop out study
+E50603080-09; 695181121	2181202	Lancaster	1/8/21	Nasal swab in VTM or Saline	VSP0580	Kontra, Joseph		1/18/21	37	1.45E+01				210113_M05588_0364_000000000			joseph.kontra@pennmedicine.upenn.edu	S gene drop out study
+E50605712-NR; 695215402	2081815	Lancaster	1/8/21	Nasal swab in VTM or Saline	VSP0581	Kontra, Joseph		1/18/21	37	7.32E+01				210113_M05588_0364_000000000			joseph.kontra@pennmedicine.upenn.edu	S gene drop out study
+E50701962-NR; 695215333	1044999	Lancaster	1/8/21	Nasal swab in VTM or Saline	VSP0582	Kontra, Joseph		1/18/21	37	2.79E+00				210113_M05588_0364_000000000			joseph.kontra@pennmedicine.upenn.edu	S gene drop out study
+E50405634-NR; 695036702	354398	Lancaster	1/8/21	Nasal swab in VTM or Saline	VSP0583	Kontra, Joseph		1/18/21	37	1.87E+03				210113_M05588_0364_000000000			joseph.kontra@pennmedicine.upenn.edu	S gene drop out study
+JFKGR	JFKGR	seqRunControl	01/09/2021	Negative control	VSP9976	Pascha								210108_M03249_0139_000000000-JFKGR				
+JGMP7	JGMP7	seqRunControl	1/12/20221	Negative control	VSP9975	Pascha								210113_M05588_0364_000000000				
+444no	444	UPHS	1/11/21	NP-OP	VSP0584	Ron		1/28/21	37									
+445no	445	UPHS	1/11/21	NP-OP	VSP0585	Ron		1/28/21	37									
+445s	445	UPHS	1/11/21	Saliva	VSP0586	Ron		1/28/21	37									
+447no	447	UPHS	1/11/21	NP-OP	VSP0587	Ron		1/28/21	37									
+447s	447	UPHS	1/11/21	Saliva	VSP0588	Ron		1/28/21	37									
+448no	448	UPHS	1/11/21	NP-OP	VSP0589	Ron		1/28/21	37									
+448s	448	UPHS	1/11/21	Saliva	VSP0590	Ron		1/28/21	37									
+448no	448	UPHS	1/13/21	NP-OP	VSP0591	Ron		1/28/21	37									
+449no	449	UPHS	1/13/21	NP-OP	VSP0592	Ron		1/28/21	37									
+449s	449	UPHS	1/13/21	Saliva	VSP0593	Ron		1/28/21	37									
+450no	450	UPHS	1/13/21	NP-OP	VSP0594	Ron		1/28/21	37									
+450s	450	UPHS	1/13/21	Saliva	VSP0595	Ron		1/28/21	37									
+448s	448	UPHS	1/15/21	Saliva	VSP0596	Ron		1/28/21	37	3.06E+04								
+450no	450	UPHS	1/15/21	NP-OP	VSP0597	Ron		1/28/21	37	Undetermined								
+450s	450	UPHS	1/15/21	Saliva	VSP0598	Ron		1/28/21	37	Undetermined								
+452no	452	UPHS	1/15/21	NP-OP	VSP0599	Ron		1/28/21	37	1.20E+02								
+452s	452	UPHS	1/15/21	Saliva	VSP0600	Ron		1/28/21	37	1.88E+04								
+453no	453	UPHS	1/15/21	NP-OP	VSP0601	Ron		1/28/21	37	1.47E+03								
+3184	3184	PennEssentialWorkers_Dec2020	01/01/21	Saliva	VSP0602									210126_M03543_0239_000000000-JHL95				
+2007	2007	COVIDSAFE	01/01/21	Saliva	VSP0603			1/21/21	37	2.75E+05				210126_M03543_0239_000000000-JHL95				
+9070	9070	COVIDSAFE	01/01/21	Saliva	VSP0604			1/21/21	37	8.90E+03				210126_M03543_0239_000000000-JHL95				
+1974	1974	COVIDSAFE	01/01/21	Saliva	VSP0605			1/21/21	37	2.17E+03				210126_M03543_0239_000000000-JHL95				
+3057	3057	COVIDSAFE	01/01/21	Saliva	VSP0606			1/21/21	37	2.08E+03				210126_M03543_0239_000000000-JHL95				
+3120	3120	COVIDSAFE	01/01/21	Saliva	VSP0607			1/21/21	37	5.72E+03				210126_M03543_0239_000000000-JHL95				
+2456	2456	COVIDSAFE	01/01/21	Saliva	VSP0608			1/21/21	37	1.93E+05				210126_M03543_0239_000000000-JHL95				
+3110	3110	COVIDSAFE	01/01/21	Saliva	VSP0609			1/21/21	37	7.89E+03				210126_M03543_0239_000000000-JHL95				
+7303	7303	COVIDSAFE	01/01/21	Saliva	VSP0610			1/21/21	37	Undetermined				210126_M03543_0239_000000000-JHL95				
+9106	9106	COVIDSAFE	01/01/21	Saliva	VSP0611			1/21/21	37	1.85E+03				210126_M03543_0239_000000000-JHL95				
+9102	9102	COVIDSAFE	01/01/21	Saliva	VSP0612			1/21/21	37	Undetermined				210126_M03543_0239_000000000-JHL95				
+8504	8504	COVIDSAFE	01/01/21	Saliva	VSP0613			1/21/21	37	9.36E+06				210126_M03543_0239_000000000-JHL95				
+8512	8512	COVIDSAFE	01/01/21	Saliva	VSP0614			1/21/21	37	7.19E+03				210126_M03543_0239_000000000-JHL95				
+3228	3228	COVIDSAFE	01/01/21	Saliva	VSP0615			1/21/21	37	5.02E+03				210126_M03543_0239_000000000-JHL95				
+4736	4736	COVIDSAFE	01/01/21	Saliva	VSP0616			1/28/21	37	Undetermined				210126_M03543_0239_000000000-JHL95				
+4329	4329	COVIDSAFE	01/01/21	Saliva	VSP0617									210126_M03543_0239_000000000-JHL95				
 440no	440	UPHS	12/23/2020	NP-OP	VSP0618	Ron												
 441no	441	UPHS	12/23/2020	NP-OP	VSP0619	Ron												
 443no	443	UPHS	12/23/2020	NP-OP	VSP0620	Ron												
 443s	443	UPHS	12/23/2020	Saliva	VSP0621	Ron												
-		UPHS		Negative control	VSP9974	Pascha					Pascha (1/14/2020)							
-sdrop2_molpath	sdrop2_molpath	HUP	1/20/2021	0.9% Saline	VSP0622	Feldman, Michael												
-100667644	100667644	Dept of Health - Feldman	1/21/2021	Saliva	VSP0623	dept of health/michael feldman												
-molpath-sdrop3	molpath-sdrop3	HUP	1/22/2021		VSP0624	Emilie Rabut												
-molpath-sdrop4	molpath-sdrop4	HUP	1/22/2021		VSP0625	Emilie Rabut												
-molpath-seq1	molpath-seq1	HUP	1/22/2021		VSP0626	Emilie Rabut												
-452no	452	UPHS	1/20/21	NP-OP	VSP0627	Ron												
-452s	452	UPHS	1/20/21	Saliva	VSP0628	Ron												
-455no	455	UPHS	1/20/21	NP-OP	VSP0629	Ron												
-455no	455	UPHS	1/22/21	NP-OP	VSP0630	Ron												
-455s	455	UPHS	1/22/21	Saliva	VSP0631	Ron												
-457no	457	UPHS	1/22/21	NP-OP	VSP0632	Ron												
+JHV59	JHV59	seqRunControl	1/22/2021	Negative control	VSP9974	Pascha								210122_M03249_0146_000000000-JHV59				
+sdrop2_molpath	sdrop2_molpath	HUP	1/20/2021	0.9% Saline	VSP0622	Feldman, Michael					Shantan (1/27/2020)							
+100667644	100667644	Dept of Health Feldman	1/21/2021	Saliva	VSP0623	dept of health/michael feldman					Shantan (1/27/2020)							Possible UK variant, student travelled from UK
+molpath-sdrop3	molpath-sdrop3	HUP	1/22/2021	Unknown	VSP0624	Emilie Rabut					Shantan (1/27/2020)							
+molpath-sdrop4	molpath-sdrop4	HUP	1/22/2021	Unknown	VSP0625	Emilie Rabut					Shantan (1/27/2020)							
+molpath-seq1	molpath-seq1	HUP	1/22/2021	Unknown	VSP0626	Emilie Rabut					Pascha (1/27/2020) and Shantan (1/27/2020)							vaccinated COVID-19 positive 
+452no	452	UPHS	1/20/21	NP-OP	VSP0627	Ron		1/28/21	37	1.68E+03								
+452s	452	UPHS	1/20/21	Saliva	VSP0628	Ron		1/28/21	37	8.15E+03								
+455no	455	UPHS	1/20/21	NP-OP	VSP0629	Ron		1/28/21	37	2.78E+01								
+455no	455	UPHS	1/22/21	NP-OP	VSP0630	Ron		1/28/21	37	4.89E+01								
+455s	455	UPHS	1/22/21	Saliva	VSP0631	Ron		1/28/21	37	1.53E+01								
+457no	457	UPHS	1/22/21	NP-OP	VSP0632	Ron		1/28/21	37	Undetermined								
 455s	455	UPHS	1/25/21	Saliva	VSP0633	Ron												
 459s	459	UPHS	1/25/21	Saliva	VSP0634	Ron												
 460no	460	UPHS	1/25/21	Saliva	VSP0635	Ron												
 460s	460	UPHS	1/25/21	NP-OP	VSP0636	Ron												
-H2101200627	AHS21001204	Dept of Health	1/22/21	VTM	VSP0637	Dept of Health												
-H2101191203	AHS19005093	Dept of Health	1/22/21	VTM	VSP0638	Dept of Health												
-H2101200615	AHS19029976	Dept of Health	1/22/21	VTM	VSP0639	Dept of Health												
-H2101200710	AHS19010094	Dept of Health	1/22/21	VTM	VSP0640	Dept of Health												
-H2101140635	ACUTE21000985	Dept of Health	1/22/21	VTM	VSP0641	Dept of Health												
-H2101200308	AHS21000915	Dept of Health	1/22/21	VTM	VSP0642	Dept of Health												
-H2101140648	ACUTE21000991	Dept of Health	1/22/21	VTM	VSP0643	Dept of Health												
-H2101140757	ACUTE21001041	Dept of Health	1/22/21	VTM	VSP0644	Dept of Health												
-H2101140647	ACUTE21000990	Dept of Health	1/22/21	VTM	VSP0645	Dept of Health												
-H2101140656	ACUTE21000998	Dept of Health	1/22/21	VTM	VSP0646	Dept of Health												
-H2101200475	RISONS21001145	Dept of Health	1/22/21	VTM	VSP0647	Dept of Health												
-H2101200481	RISONS21001140	Dept of Health	1/22/21	VTM	VSP0648	Dept of Health												
-H2101200465	RISONS21001141	Dept of Health	1/22/21	VTM	VSP0649	Dept of Health												
-H2101200470	RISONS21001144	Dept of Health	1/22/21	VTM	VSP0650	Dept of Health												
-H2101200469	RISONS21001143	Dept of Health	1/22/21	VTM	VSP0651	Dept of Health												
+H2101200627	AHS21001204	Dept of Health	1/22/21	VTM	VSP0637	Dept of Health					Pascha (1/27/2020)							
+H2101191203	AHS19005093	Dept of Health	1/22/21	VTM	VSP0638	Dept of Health					Pascha (1/27/2020)							
+H2101200615	AHS19029976	Dept of Health	1/22/21	VTM	VSP0639	Dept of Health					Pascha (1/27/2020)							
+H2101200710	AHS19010094	Dept of Health	1/22/21	VTM	VSP0640	Dept of Health					Pascha (1/27/2020)							
+H2101140635	ACUTE21000985	Dept of Health	1/22/21	VTM	VSP0641	Dept of Health					Pascha (1/27/2020)							
+H2101200308	AHS21000915	Dept of Health	1/22/21	VTM	VSP0642	Dept of Health					Pascha (1/27/2020)							
+H2101140648	ACUTE21000991	Dept of Health	1/22/21	VTM	VSP0643	Dept of Health					Pascha (1/27/2020)							
+H2101140757	ACUTE21001041	Dept of Health	1/22/21	VTM	VSP0644	Dept of Health					Pascha (1/27/2020)							
+H2101140647	ACUTE21000990	Dept of Health	1/22/21	VTM	VSP0645	Dept of Health					Pascha (1/27/2020)							
+H2101140656	ACUTE21000998	Dept of Health	1/22/21	VTM	VSP0646	Dept of Health					Pascha (1/27/2020)							
+H2101200475	RISONS21001145	Dept of Health	1/22/21	VTM	VSP0647	Dept of Health					Pascha (1/27/2020)							
+H2101200481	RISONS21001140	Dept of Health	1/22/21	VTM	VSP0648	Dept of Health					Pascha (1/27/2020)							
+H2101200465	RISONS21001141	Dept of Health	1/22/21	VTM	VSP0649	Dept of Health					Pascha (1/27/2020)							
+H2101200470	RISONS21001144	Dept of Health	1/22/21	VTM	VSP0650	Dept of Health					Pascha (1/27/2020)							
+H2101200469	RISONS21001143	Dept of Health	1/22/21	VTM	VSP0651	Dept of Health					Pascha (1/27/2020)							
+JHL95	JHL95	seqRunControl	1/27/2020	Negative control	VSP9973	Pascha								210126_M03543_0239_000000000-JHL95				
+xxx	xxx	seqRunControl	1/29/2020	Negative control	VSP9972	Pascha					Pascha (1/27/2020)							
+451e	451	UPHS	1/27/2020	ETA	VSP0652	Ron												
+459no	459	UPHS	1/27/2020	NP-OP	VSP0653	Ron												
+459s	459	UPHS	1/27/2020	Saliva	VSP0654	Ron												
+460s	460	UPHS	1/27/2020	SAliva	VSP0655	Ron												
+461no	460	UPHS	1/27/2020	NP-OP	VSP0656	Ron												

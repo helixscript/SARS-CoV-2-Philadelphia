@@ -10,6 +10,7 @@ CPUs <- 10
 # Read in sample data table.
 samples <- removeProblematicSamples(read.table('data/samples.tsv', sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE))
 
+
 # Read in input data values.
 sampleInputs <- read.table('data/sampleInputs.tsv', sep= '\t', header = TRUE, stringsAsFactors = FALSE)
 
@@ -55,8 +56,15 @@ d <- dplyr::select(samples, patient_id, trial_id) %>% dplyr::distinct() %>% dply
 
 
 #d <- d[grepl('Dept of Health - Feldman', d$trial_id),]
+#d <- subset(d, trial_id == 'Run control')
 
 # Build patient reports.
+#
+# When ran from the command line, reports are outputted to pwd rather than the targeted directory.
+# Consider saving the lapply environment to a tmp file, pass the file name to the markdown file and 
+# have the markdown file load the saved data. Alternatively there may be a problem with the tryCatch 
+# not reading the parent enviroment.
+
 invisible(parLapply(cluster, split(d, d$s), function(p){
 #invisible(lapply(split(d, d$s), function(p){  
   library(tidyverse)
@@ -64,8 +72,6 @@ invisible(parLapply(cluster, split(d, d$s), function(p){
   invisible(lapply(split(p, paste(p$patient_id, p$trial_id)), function(r){
     
     x <- subset(samples, patient_id == r$patient_id & trial_id == r$trial_id)
-
-    browser()
     
     dir1 <- file.path('summaries/trials', r$trial_id)
     dir2 <- file.path('summaries/patientReportsData', r$trial_id)
@@ -112,6 +118,8 @@ invisible(parLapply(cluster, split(d, d$s), function(p){
     names(dat) <- unlist(lapply(dat, '[[', 'seq_sample'))
          
     save(dat, file = file.path(dir2, paste0(r$patient_id, '.RData')))
+    
+    #browser()
     
     result = tryCatch({
               rmarkdown::render('report.Rmd',
