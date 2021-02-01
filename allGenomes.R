@@ -82,7 +82,7 @@ names(o) <- gsub('PennEssentialWorkers_Dec2020', 'PennEssential', names(o))
 names(o) <- gsub('\\|[A-Z\\.\\d]+$', '', names(o), perl = TRUE)
 Biostrings::writeXStringSet(o, 'summaries/highQualGenomes/genomes.fasta2')
 
-system(paste0(mafftPath, ' --phylipout --namelength ', max(nchar(names(concensusSeqs90_5))), ' --thread 10 --auto --addfragments summaries/highQualGenomes/genomes.fasta2 summaries/highQualGenomes/referenceGenome.fasta > summaries/highQualGenomes/genomes.mafft'))
+system(paste0(mafftPath, ' --phylipout --namelength ', max(nchar(names(concensusSeqs90_5))), ' --thread 20 --auto --addfragments summaries/highQualGenomes/genomes.fasta2 summaries/highQualGenomes/referenceGenome.fasta > summaries/highQualGenomes/genomes.mafft'))
 system('raxmlHPC-PTHREADS-SSE3 -s summaries/highQualGenomes/genomes.mafft -m GTRGAMMA -T 25 -n raxmlOut -f a -x 12345 -p 12345 -N autoMRE')
 
 dendr <- ggdendro::dendro_data(phylogram::read.dendrogram('RAxML_bestTree.raxmlOut'), type="rectangle")
@@ -107,7 +107,7 @@ ggsave(p, filename = 'summaries/highQualGenomes/raxmlPhyloPlot.pdf', units = 'in
 
 
 # Hierarchical tree.
-system(paste0(mafftPath, ' --namelength ', max(nchar(names(concensusSeqs90_5))), ' --thread 10 --auto --addfragments summaries/highQualGenomes/genomes.fasta2 summaries/highQualGenomes/referenceGenome.fasta > summaries/highQualGenomes/genomes.mafft'))
+system(paste0(mafftPath, ' --namelength ', max(nchar(names(concensusSeqs90_5))), ' --thread 20 --auto --addfragments summaries/highQualGenomes/genomes.fasta2 summaries/highQualGenomes/referenceGenome.fasta > summaries/highQualGenomes/genomes.mafft'))
 
 v <- ape::read.dna("summaries/highQualGenomes/genomes.mafft", format="fasta")
 v_phyDat <- phangorn::phyDat(v, type = "DNA", levels = NULL)
