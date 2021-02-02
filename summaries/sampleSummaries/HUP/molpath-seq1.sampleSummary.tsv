@@ -1,2 +1,4 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
+molpath-seq1	VSP0626	composite	NA	Unknown	2021-01-22	20.39	B.1.1	99.7%	99.1%
 molpath-seq1	VSP0626-1	 single experiment	NA	Unknown	2021-01-22	21.48	B.1.1	99.0%	99.0%
+molpath-seq1	VSP0626-2	 single experiment	NA	Unknown	2021-01-22	20.65	B.1.1	99.7%	99.1%

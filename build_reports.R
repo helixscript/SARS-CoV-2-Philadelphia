@@ -65,8 +65,8 @@ d <- dplyr::select(samples, patient_id, trial_id) %>% dplyr::distinct() %>% dply
 # have the markdown file load the saved data. Alternatively there may be a problem with the tryCatch 
 # not reading the parent enviroment.
 
-invisible(parLapply(cluster, split(d, d$s), function(p){
-#invisible(lapply(split(d, d$s), function(p){  
+#invisible(parLapply(cluster, split(d, d$s), function(p){
+invisible(lapply(split(d, d$s), function(p){  
   library(tidyverse)
   
   invisible(lapply(split(p, paste(p$patient_id, p$trial_id)), function(r){
@@ -78,6 +78,8 @@ invisible(parLapply(cluster, split(d, d$s), function(p){
     dir3 <- file.path('summaries/sampleSummaries', r$trial_id)
     
     if(! dir.exists(dir1)) dir.create(dir1)
+    
+    message(file.path(dir1, paste0(r$patient_id, '.pdf')))
     
     if(overWriteSubjectReports == FALSE & file.exists(file.path(dir1, paste0(r$patient_id, '.pdf')))) return()
     

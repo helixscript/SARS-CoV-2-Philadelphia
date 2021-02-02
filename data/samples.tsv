@@ -441,7 +441,7 @@ J37ML	J37ML	seqRunControl	06/09/2020	H2O-1b	VSP9980	Pascha
 381s-q	381	UPHS	10/21/2020	Saliva	VSP0422	Ron, Young	QiaAMP mini RNA	10/29/20	37	8.04E+01								
 382no-q	382	UPHS	10/21/2020	NP-OP	VSP0423	Ron, Young	QiaAMP mini RNA	10/29/20	37	1.84E+01								
 382s-q	382	UPHS	10/21/2020	Saliva	VSP0424	Ron, Young	QiaAMP mini RNA	10/29/20	37	1.40E+04				210122_M03249_0146_000000000-JHV59				
-380s-q	380	UPHS	10/23/2020	Saliva	VSP0425	Ron, Young	QiaAMP mini RNA	10/29/20	37	6.54E+05								
+380s-q	380	UPHS	10/23/2020	Saliva	VSP0425	Ron, Young	QiaAMP mini RNA	10/29/20	37	6.54E+05				210122_M03249_0146_000000000-JHV59				
 383no-q	383	UPHS	10/23/2020	NP-OP	VSP0426	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined								
 384no-q	384	UPHS	10/23/2020	NP-OP	VSP0427	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined								
 385no-q	385	UPHS	10/26/2020	NP-OP	VSP0428	Ron, Young	QiaAMP mini RNA	11/13/20	37	5.26E+03								
@@ -559,11 +559,11 @@ J37ML	J37ML	seqRunControl	06/09/2020	H2O-1b	VSP9980	Pascha
 3157	3157	PennEssentialWorkers_Dec2020	12/11/20	Saliva	VSP0540	Ron, Young	QiaAMP mini RNA	12/14/20	37	7.32E+02				201214_M03249_0133_000000000-J78GM				
 3193	3193	PennEssentialWorkers_Dec2020	12/11/20	Saliva	VSP0541	Ron, Young	QiaAMP mini RNA	12/14/20	37	Undetermined				201214_M03249_0133_000000000-J78GM				
 3197	3197	PennEssentialWorkers_Dec2020	12/11/20	Saliva	VSP0542	Ron, Young	QiaAMP mini RNA	12/14/20	37	4.36E+00				201214_M03249_0133_000000000-J78GM				
-161	161	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0543	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	6.14E+02							ganguly@pennmedicine.upenn.edu	
-374	374	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0544	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	1.71E+02							ganguly@pennmedicine.upenn.edu	
-95-267	95-267	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0545	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	2.52E+02							ganguly@pennmedicine.upenn.edu	
-97-736	97-736	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0546	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	3.61E+05							ganguly@pennmedicine.upenn.edu	
-10-1017	10-1017	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0547	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	1.43E+04							ganguly@pennmedicine.upenn.edu	
+161	161	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0543	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	6.14E+02				201214_M03249_0133_000000000-J78GM			ganguly@pennmedicine.upenn.edu	
+374	374	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0544	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	1.71E+02				201214_M03249_0133_000000000-J78GM			ganguly@pennmedicine.upenn.edu	
+95-267	95-267	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0545	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	2.52E+02				201214_M03249_0133_000000000-J78GM			ganguly@pennmedicine.upenn.edu	
+97-736	97-736	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0546	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	3.61E+05				201214_M03249_0133_000000000-J78GM			ganguly@pennmedicine.upenn.edu	
+10-1017	10-1017	COVIDSAFE	12/11/20	Saliva - Positive Control	VSP0547	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	1.43E+04				201214_M03249_0133_000000000-J78GM			ganguly@pennmedicine.upenn.edu	
 424s	424	UPHS	12/14/20	Saliva	VSP0548	Ron, Young	QiaAMP mini RNA	1/11/21	37	Undetermined								
 431s	431	UPHS	12/14/20	Saliva	VSP0549	Ron, Young	QiaAMP mini RNA	1/11/21	37	Undetermined								
 434no	434	UPHS	12/14/20	NP-OP	VSP0550	Ron, Young	QiaAMP mini RNA	1/11/21	37	2.15E+05	Shantan (1/27/2021)			210130_M03249_0150_000000000-JHV54				
@@ -613,7 +613,7 @@ JGMP7	JGMP7	seqRunControl	1/12/20221	Negative control	VSP9975	Pascha								2101
 448no	448	UPHS	1/11/21	NP-OP	VSP0589	Ron		1/28/21	37									
 448s	448	UPHS	1/11/21	Saliva	VSP0590	Ron		1/28/21	37									
 448no	448	UPHS	1/13/21	NP-OP	VSP0591	Ron		1/28/21	37									
-449no	449	UPHS	1/13/21	NP-OP	VSP0592	Ron		1/28/21	37									
+449no	449	UPHS	1/13/21	NP-OP	VSP0592	Ron		1/28/21	37	 								
 449s	449	UPHS	1/13/21	Saliva	VSP0593	Ron		1/28/21	37									
 450no	450	UPHS	1/13/21	NP-OP	VSP0594	Ron		1/28/21	37									
 450s	450	UPHS	1/13/21	Saliva	VSP0595	Ron		1/28/21	37									
@@ -645,10 +645,10 @@ JGMP7	JGMP7	seqRunControl	1/12/20221	Negative control	VSP9975	Pascha								2101
 443s	443	UPHS	12/23/2020	Saliva	VSP0621	Ron												
 JHV59	JHV59	seqRunControl	1/22/2021	Negative control	VSP9974	Pascha								210122_M03249_0146_000000000-JHV59				
 sdrop2_molpath	sdrop2_molpath	HUP	1/20/2021	0.9% Saline	VSP0622	Feldman, Michael		1/28/21	37	1.08E+06	Shantan (1/27/2021)			210130_M03249_0150_000000000-JHV54				
-100667644	100667644	Dept of Health Feldman	1/21/2021	Saliva	VSP0623	dept of health/michael feldman		1/28/21	37	5.11E+03	Shantan (1/27/2021)			210130_M03249_0150_000000000-JHV54				Possible UK variant, student travelled from UK
+100667644	100667644	Dept of Health - Feldman	1/21/2021	Saliva	VSP0623	dept of health/michael feldman		1/28/21	37	5.11E+03	Shantan (1/27/2021)			210130_M03249_0150_000000000-JHV54				Possible UK variant, student travelled from UK
 molpath-sdrop3	molpath-sdrop3	HUP	1/22/2021	Unknown	VSP0624	Emilie Rabut		1/28/21	37	Undetermined	Shantan (1/27/2021)			210130_M03249_0150_000000000-JHV54				
 molpath-sdrop4	molpath-sdrop4	HUP	1/22/2021	Unknown	VSP0625	Emilie Rabut		1/28/21	37	5.54E+03	Shantan (1/27/2021)			210130_M03249_0150_000000000-JHV54				
-molpath-seq1	molpath-seq1	HUP	1/22/2021	Unknown	VSP0626	Emilie Rabut		1/28/21	37	9.33E+05	Pascha (1/27/2020) and Shantan (1/27/2021)			210130_M03249_0150_000000000-JHV54				vaccinated COVID-19 positive 
+molpath-seq1	molpath-seq1	HUP	1/22/2021	Unknown	VSP0626	Emilie Rabut		1/28/21	37	9.33E+05	Pascha (1/27/2020) and Shantan (1/27/2021)			210130_M03249_0150_000000000-JHV54,210129_M00281_0672_000000000-JHLHC				vaccinated COVID-19 positive 
 452no	452	UPHS	1/20/21	NP-OP	VSP0627	Ron		1/28/21	37	1.68E+03								
 452s	452	UPHS	1/20/21	Saliva	VSP0628	Ron		1/28/21	37	8.15E+03								
 455no	455	UPHS	1/20/21	NP-OP	VSP0629	Ron		1/28/21	37	2.78E+01								
@@ -659,23 +659,23 @@ molpath-seq1	molpath-seq1	HUP	1/22/2021	Unknown	VSP0626	Emilie Rabut		1/28/21	37
 459s	459	UPHS	1/25/21	Saliva	VSP0634	Ron												
 460no	460	UPHS	1/25/21	Saliva	VSP0635	Ron												
 460s	460	UPHS	1/25/21	NP-OP	VSP0636	Ron												
-H2101200627	AHS21001204	Dept of Health	1/22/21	VTM	VSP0637	Dept of Health		1/28/21	37	1.20E+03	Pascha (1/27/2020)							
-H2101191203	AHS19005093	Dept of Health	1/22/21	VTM	VSP0638	Dept of Health		1/28/21	37	4.58E+01	Pascha (1/27/2020)							
-H2101200615	AHS19029976	Dept of Health	1/22/21	VTM	VSP0639	Dept of Health		1/28/21	37	1.43E+06	Pascha (1/27/2020)							
-H2101200710	AHS19010094	Dept of Health	1/22/21	VTM	VSP0640	Dept of Health		1/28/21	37	1.83E+04	Pascha (1/27/2020)							
-H2101140635	ACUTE21000985	Dept of Health	1/22/21	VTM	VSP0641	Dept of Health		1/28/21	37	Undetermined	Pascha (1/27/2020)							
-H2101200308	AHS21000915	Dept of Health	1/22/21	VTM	VSP0642	Dept of Health		1/28/21	37	4.89E+05	Pascha (1/27/2020)							
-H2101140648	ACUTE21000991	Dept of Health	1/22/21	VTM	VSP0643	Dept of Health		1/28/21	37	8.33E+04	Pascha (1/27/2020)							
-H2101140757	ACUTE21001041	Dept of Health	1/22/21	VTM	VSP0644	Dept of Health		1/28/21	37	1.01E+04	Pascha (1/27/2020)							
-H2101140647	ACUTE21000990	Dept of Health	1/22/21	VTM	VSP0645	Dept of Health		1/28/21	37	3.76E+06	Pascha (1/27/2020)							
-H2101140656	ACUTE21000998	Dept of Health	1/22/21	VTM	VSP0646	Dept of Health		1/28/21	37	1.35E+05	Pascha (1/27/2020)							
-H2101200475	RISONS21001145	Dept of Health	1/22/21	VTM	VSP0647	Dept of Health		1/28/21	37	7.28E+05	Pascha (1/27/2020)							
-H2101200481	RISONS21001140	Dept of Health	1/22/21	VTM	VSP0648	Dept of Health		1/28/21	37	2.52E+05	Pascha (1/27/2020)							
-H2101200465	RISONS21001141	Dept of Health	1/22/21	VTM	VSP0649	Dept of Health		1/28/21	37	4.66E+06	Pascha (1/27/2020)							
-H2101200470	RISONS21001144	Dept of Health	1/22/21	VTM	VSP0650	Dept of Health		1/28/21	37	2.44E+06	Pascha (1/27/2020)							
-H2101200469	RISONS21001143	Dept of Health	1/22/21	VTM	VSP0651	Dept of Health		1/28/21	37	2.77E+06	Pascha (1/27/2020)							
+H2101200627	AHS21001204	Dept of Health	1/22/21	VTM	VSP0637	Dept of Health		1/28/21	37	1.20E+03				210129_M00281_0672_000000000-JHLHC				
+H2101191203	AHS19005093	Dept of Health	1/22/21	VTM	VSP0638	Dept of Health		1/28/21	37	4.58E+01				210129_M00281_0672_000000000-JHLHC				
+H2101200615	AHS19029976	Dept of Health	1/22/21	VTM	VSP0639	Dept of Health		1/28/21	37	1.43E+06				210129_M00281_0672_000000000-JHLHC				
+H2101200710	AHS19010094	Dept of Health	1/22/21	VTM	VSP0640	Dept of Health		1/28/21	37	1.83E+04				210129_M00281_0672_000000000-JHLHC				
+H2101140635	ACUTE21000985	Dept of Health	1/22/21	VTM	VSP0641	Dept of Health		1/28/21	37	Undetermined				210129_M00281_0672_000000000-JHLHC				
+H2101200308	AHS21000915	Dept of Health	1/22/21	VTM	VSP0642	Dept of Health		1/28/21	37	4.89E+05				210129_M00281_0672_000000000-JHLHC				
+H2101140648	ACUTE21000991	Dept of Health	1/22/21	VTM	VSP0643	Dept of Health		1/28/21	37	8.33E+04				210129_M00281_0672_000000000-JHLHC				
+H2101140757	ACUTE21001041	Dept of Health	1/22/21	VTM	VSP0644	Dept of Health		1/28/21	37	1.01E+04				210129_M00281_0672_000000000-JHLHC				
+H2101140647	ACUTE21000990	Dept of Health	1/22/21	VTM	VSP0645	Dept of Health		1/28/21	37	3.76E+06				210129_M00281_0672_000000000-JHLHC				
+H2101140656	ACUTE21000998	Dept of Health	1/22/21	VTM	VSP0646	Dept of Health		1/28/21	37	1.35E+05				210129_M00281_0672_000000000-JHLHC				
+H2101200475	RISONS21001145	Dept of Health	1/22/21	VTM	VSP0647	Dept of Health		1/28/21	37	7.28E+05				210129_M00281_0672_000000000-JHLHC				
+H2101200481	RISONS21001140	Dept of Health	1/22/21	VTM	VSP0648	Dept of Health		1/28/21	37	2.52E+05				210129_M00281_0672_000000000-JHLHC				
+H2101200465	RISONS21001141	Dept of Health	1/22/21	VTM	VSP0649	Dept of Health		1/28/21	37	4.66E+06				210129_M00281_0672_000000000-JHLHC				
+H2101200470	RISONS21001144	Dept of Health	1/22/21	VTM	VSP0650	Dept of Health		1/28/21	37	2.44E+06				210129_M00281_0672_000000000-JHLHC				
+H2101200469	RISONS21001143	Dept of Health	1/22/21	VTM	VSP0651	Dept of Health		1/28/21	37	2.77E+06				210129_M00281_0672_000000000-JHLHC				
 JHL95	JHL95	seqRunControl	1/27/2020	Negative control	VSP9973	Pascha								210126_M03543_0239_000000000-JHL95				
-JHLHC	JHLHC	seqRunControl	1/29/2020	Negative control	VSP9972	Pascha					Pascha (1/27/2020)							
+JHLHC	JHLHC	seqRunControl	1/29/2020	Negative control	VSP9972	Pascha								210129_M00281_0672_000000000-JHLHC				
 451e	451	UPHS	1/27/2020	ETA	VSP0652	Ron												
 459no	459	UPHS	1/27/2020	NP-OP	VSP0653	Ron												
 459s	459	UPHS	1/27/2020	Saliva	VSP0654	Ron												
@@ -683,3 +683,30 @@ JHLHC	JHLHC	seqRunControl	1/29/2020	Negative control	VSP9972	Pascha					Pascha (
 461no	460	UPHS	1/27/2020	NP-OP	VSP0656	Ron												
 461s	461	UPHS	1/27/2020	Saliva	VSP0657	Ron												
 JHV54	JHV54	seqRunControl	1/30/2021	Negative control	VSP9971	Shantan					Shantan (1/27/2021)			210130_M03249_0150_000000000-JHV54				
+molpath-seq3	molpath-seq3	HUP	2/1/2021		VSP0758	Feldman, Michael										vaccinated COVID-19 positive 		
+MPCluster2-Seq1	MPCluster2-Seq1	HUP	2/1/2021	Swab	VSP0759	Feldman, Michael												
+MPCluster2-Seq2	MPCluster2-Seq2	HUP	2/1/2021	Swab	VSP0760	Feldman, Michael												
+MPCluster2-Seq3	MPCluster2-Seq3	HUP	2/1/2021	Swab	VSP0761	Feldman, Michael												
+MPCluster2-Seq4	MPCluster2-Seq4	HUP	2/1/2021	Swab	VSP0762	Feldman, Michael												
+MPCluster2-Seq5	MPCluster2-Seq5	HUP	2/1/2021	Swab	VSP0763	Feldman, Michael												
+MPCluster2-Seq6	MPCluster2-Seq6	HUP	2/1/2021	Swab	VSP0764	Feldman, Michael												
+MPCluster2-Seq7	MPCluster2-Seq7	HUP	2/1/2021	Swab	VSP0765	Feldman, Michael												
+MPCluster2-Seq8	MPCluster2-Seq8	HUP	2/1/2021	Swab	VSP0766	Feldman, Michael												
+MPCluster2-Seq9	MPCluster2-Seq9	HUP	2/1/2021	Swab	VSP0767	Feldman, Michael												
+MPCluster2-Seq10	MPCluster2-Seq10	HUP	2/1/2021	Swab	VSP0768	Feldman, Michael												
+MPCluster2-Seq11	MPCluster2-Seq11	HUP	2/1/2021	Swab	VSP0769	Feldman, Michael												
+PQ-Seq1	PQ-Seq1	HUP	2/1/2021	Saliva	VSP0770	Feldman, Michael												
+PQ-Seq2	PQ-Seq2	HUP	2/1/2021	Saliva	VSP0771	Feldman, Michael												
+PQ-Seq3	PQ-Seq3	HUP	2/1/2021	Saliva	VSP0772	Feldman, Michael												
+PQ-Seq4	PQ-Seq4	HUP	2/1/2021	Saliva	VSP0773	Feldman, Michael												
+PQ-Seq5	PQ-Seq5	HUP	2/1/2021	Saliva	VSP0774	Feldman, Michael												
+PQ-Seq6	PQ-Seq6	HUP	2/1/2021	Saliva	VSP0775	Feldman, Michael												
+PQ-Seq7	PQ-Seq7	HUP	2/1/2021	Saliva	VSP0776	Feldman, Michael												
+PQ-Seq8	PQ-Seq8	HUP	2/1/2021	Saliva	VSP0777	Feldman, Michael												
+PQ-Seq9	PQ-Seq9	HUP	2/1/2021	Saliva	VSP0778	Feldman, Michael												
+PQ-Seq10	PQ-Seq10	HUP	2/1/2021	Saliva	VSP0779	Feldman, Michael												
+PQ-Seq11	PQ-Seq11	HUP	2/1/2021	Saliva	VSP0780	Feldman, Michael												
+PQ-Seq12	PQ-Seq12	HUP	2/1/2021	Saliva	VSP0781	Feldman, Michael												
+PQ-Seq13	PQ-Seq13	HUP	2/1/2021	Saliva	VSP0782	Feldman, Michael												
+PQ-Seq14	PQ-Seq14	HUP	2/1/2021	Saliva	VSP0783	Feldman, Michael												
+PQ-Seq15	PQ-Seq15	HUP	2/1/2021	Saliva	VSP0784	Feldman, Michael												

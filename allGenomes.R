@@ -103,7 +103,7 @@ p <- ggplot() +
 
 invisible(file.remove(list.files(pattern = 'raxmlOut')))
 
-ggsave(p, filename = 'summaries/highQualGenomes/raxmlPhyloPlot.pdf', units = 'in', height = 15, width = 15)
+ggsave(p, filename = 'summaries/highQualGenomes/raxmlPhyloPlot.pdf', units = 'in', height = 15, width = 18)
 
 
 # Hierarchical tree.
@@ -130,7 +130,7 @@ concensusSeqPhyloPlot <-
         panel.background=element_rect(fill="white"),
         panel.grid=element_blank())
 
-ggsave(concensusSeqPhyloPlot, height = 12, width = 15, units = 'in', file = 'summaries/highQualGenomes/hierarchicalPhyloPlot.pdf')
+ggsave(concensusSeqPhyloPlot, height = 16, width = 18, units = 'in', file = 'summaries/highQualGenomes/hierarchicalPhyloPlot.pdf')
 invisible(file.remove(list.files('summaries/highQualGenomes', pattern = 'mafft|referenceGenome|fasta2', full.names = TRUE)))
 
 

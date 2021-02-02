@@ -1,20 +1,4 @@
-Sun Jan 31 13:05:23 2021
-Starting VSP0141 with 1 seq experiments.
-summaries/VSPdata/VSP0141-1.experiment.RData exists -- skipping.
-Completed VSP0141
-
-Starting VSP0142 with 1 seq experiments.
-summaries/VSPdata/VSP0142-1.experiment.RData exists -- skipping.
-Completed VSP0142
-
-Starting VSP0148 with 1 seq experiments.
-summaries/VSPdata/VSP0148-1.experiment.RData exists -- skipping.
-Completed VSP0148
-
-Starting VSP0166 with 1 seq experiments.
-summaries/VSPdata/VSP0166-1.experiment.RData exists -- skipping.
-Completed VSP0166
-
+Mon Feb  1 23:39:04 2021
 Starting VSP0200 with 1 seq experiments.
 summaries/VSPdata/VSP0200-1.experiment.RData exists -- skipping.
 Completed VSP0200
@@ -26,4 +10,24 @@ Completed VSP0206
 Starting VSP9996 with 1 seq experiments.
 summaries/VSPdata/VSP9996-1.experiment.RData exists -- skipping.
 Completed VSP9996
+
+Starting VSP0065 with 2 seq experiments.
+summaries/VSPdata/VSP0065.composite.RData exists -- skipping.
+summaries/VSPdata/VSP0065-1.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0065-2.experiment.RData exists -- skipping.
+Completed VSP0065
+
+Starting VSP0080 with 1 seq experiments.
+summaries/VSPdata/VSP0080-1.experiment.RData exists -- skipping.
+Completed VSP0080
+
+Starting VSP0088 with 1 seq experiments.
+summaries/VSPdata/VSP0088-1.experiment.RData exists -- skipping.
+Completed VSP0088
+
+Starting VSP0089 with 2 seq experiments.
+summaries/VSPdata/VSP0089.composite.RData exists -- skipping.
+summaries/VSPdata/VSP0089-1.experiment.RData exists -- skipping.
+summaries/VSPdata/VSP0089-2.experiment.RData exists -- skipping.
+Completed VSP0089
 
