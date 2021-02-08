@@ -45,37 +45,6 @@ summary <- removeProblematicSamples(bind_rows(lapply(list.files('summaries/sampl
 representativeSampleSummary_90 <- representativeSampleSummary(summary, 90)
 
 
-# Retrieve VSP objects and create a concatnetated table of variants.
-retrieveVariantTables <- function(summary){
-  bind_rows(lapply(1:nrow(summary), function(x){
-    x <- summary[x,]
-    f <- paste0('summaries/VSPdata/', x$exp, '.', ifelse(x$type == 'composite', 'composite', 'experiment'), '.RData')
-    if(! file.exists(f)) stop('Can not locate VSP data file -- ', f)
-    load(f)
-    if(nrow(opt$variantTableMajor) > 0) opt$variantTableMajor$sample <-  paste0(x$Subject, '|', x$sampleType, '|', x$sampleDate2)
-    opt$variantTableMajor
-  }))
-}
-
-variantTable <- retrieveVariantTables(representativeSampleSummary_90)
-
-
-
-# Create a table of variants with subject and sample counts.
-variantTable$subject <- unlist(lapply(str_extract_all(variantTable$sample, '([^\\|]+)'), '[', 1))
-variantSummary <- 
-  group_by(variantTable, POS) %>%
-  summarise(nSubjects = n_distinct(subject), nSamples = n_distinct(sample), gene = genes[1], mutation = type[1]) %>%
-  ungroup() %>% 
-  arrange(desc(nSamples))
-
-openxlsx::write.xlsx(variantSummary, file = 'summaries/allGenomes_90_5_variantSummary.xlsx')
-
-v <- group_by(variantTable, subject, sample) %>% mutate(variants = paste0(POS, '|', genes)) %>% ungroup() %>% select(subject, sample, variants)
-v2 <- reshape2::dcast(mutate(v, x = 'x'), subject+sample~variants, value.var = 'x')
-openxlsx::write.xlsx(v2, file = 'summaries/allGenomes_90_5_variantSummary2.xlsx')
-
-
 
 # Order variant table to match dendro plot
 variantTable$sample <- factor(as.character(variantTable$sample), levels = unique(dendr$labels$label))

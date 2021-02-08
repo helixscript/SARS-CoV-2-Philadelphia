@@ -53,10 +53,9 @@ p$PANGO.Lineage <- factor(p$PANGO.Lineage, levels = lineages)
 
 colors <- c('gray90', grDevices::colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))(length(lineages) - 1)) 
 
-colors <- c('gray90',  '#3e647d', '#7b92a8', '#82c0e9', '#2d6d66', '#bfa19c', '#008bbc',
+colors2 <- c('gray90',  '#3e647d', '#7b92a8', '#82c0e9', '#2d6d66', '#bfa19c', '#008bbc',
             '#97b6b0', '#d7d29e', '#1a476f', '#90353b', '#9c8847', '#938dd2', '#6e8e84',
             '#c10534', '#bab05d')
-            
             
 nextStrainPlot <- 
   ggplot(d, aes(dateLabel, fill = PANGO.Lineage)) + 
@@ -71,7 +70,8 @@ nextStrainPlot <-
         axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 
 ggsave(nextStrainPlot, file = 'nextStrain_USA.pdf', units = 'in', width = 10, height = 10)
-
+nextStrainPlot <- nextStrainPlot + scale_fill_manual(name = 'Lineage', values = colors2, drop = FALSE)
+ggsave(nextStrainPlot, file = 'nextStrain_USA_palette2.pdf', units = 'in', width = 10, height = 10)
 
 PhlStrainPlot <- 
   ggplot(p, aes(dateLabel, fill = PANGO.Lineage)) + 
@@ -86,4 +86,6 @@ PhlStrainPlot <-
         axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 
 ggsave(PhlStrainPlot, file = 'Philadelphia_.pdf', units = 'in', width = 10, height = 10)
+PhlStrainPlot <- PhlStrainPlot + scale_fill_manual(name = 'Lineage', values = colors2, drop = FALSE)
+ggsave(PhlStrainPlot, file = 'Philadelphia_palette2.pdf', units = 'in', width = 10, height = 10)
                       
