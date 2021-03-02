@@ -41,9 +41,10 @@ lineages <- c(lineages, o[! o %in% lineages][1:2])
 o <- names(sort(table(c(d$PANGO.Lineage, p$PANGO.Lineage)), decreasing = TRUE))
 lineages <- c( 'Other', o[o %in% lineages])
 
+dateLabels <-  unique(c(as.character(d$dateLabel), '2/2021'))
 
-d$dateLabel <- factor(d$dateLabel, levels = unique(d$dateLabel))
-p$dateLabel <- factor(p$dateLabel, levels = unique(d$dateLabel))
+d$dateLabel <- factor(d$dateLabel, levels = dateLabels)
+p$dateLabel <- factor(p$dateLabel, levels = dateLabels)
 
 d$PANGO.Lineage <- ifelse(d$PANGO.Lineage %in% lineages, d$PANGO.Lineage, 'Other')
 d$PANGO.Lineage <- factor(d$PANGO.Lineage, levels = lineages)
@@ -85,7 +86,7 @@ PhlStrainPlot <-
         panel.background = element_blank(), axis.line = element_line(colour = "black"),
         axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 
-ggsave(PhlStrainPlot, file = 'Philadelphia_.pdf', units = 'in', width = 10, height = 10)
+ggsave(PhlStrainPlot, file = 'Philadelphia.pdf', units = 'in', width = 10, height = 10)
 PhlStrainPlot <- PhlStrainPlot + scale_fill_manual(name = 'Lineage', values = colors2, drop = FALSE)
 ggsave(PhlStrainPlot, file = 'Philadelphia_palette2.pdf', units = 'in', width = 10, height = 10)
                       

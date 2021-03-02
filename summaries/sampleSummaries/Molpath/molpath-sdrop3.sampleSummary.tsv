@@ -1,0 +1,4 @@
+Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
+molpath-sdrop3	VSP0624	composite	NA	Saline	2021-01-22	NA	NA	12.1%	5.4%
+molpath-sdrop3	VSP0624-1	 single experiment	NA	Saline	2021-01-22	NA	NA	10.6%	3.5%
+molpath-sdrop3	VSP0624-2	 single experiment	NA	Saline	2021-01-22	NA	NA	6.9%	4.1%

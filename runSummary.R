@@ -7,7 +7,8 @@ seqDataDir <- 'data/sequencing'
 samples <- read.table('data/samples.tsv', sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE)
 
 f <- list.files(seqDataDir, pattern = '^VSP', recursive = TRUE, full.names = TRUE)
-d <- tibble(path = f[grepl('000000000', f)])
+#d <- tibble(path = f[grepl('000000000', f)])
+d <- tibble(path = f)
 
 d$exp <- sapply(d$path, function(x){
            x <- unlist(strsplit(x, '/'))
@@ -27,7 +28,7 @@ d$VSP <- str_extract(d$exp, 'VSP\\d+')
 d$subject <- samples[match(d$VSP, samples$VSP),]$patient_id
 d$trial <- samples[match(d$VSP, samples$VSP),]$trial_id
 d$sampleDate <- samples[match(d$VSP, samples$VSP),]$sample_date
-d$run <- unlist(lapply(str_match_all(d$path, '000000000\\-([^\\/]+)'), '[', 2))
+d$run <- unlist(lapply(strsplit(sub(paste0(seqDataDir, '/'), '', d$path), '/'), '[', 1))
 
 d <- arrange(d, desc(days)) %>% select(date, run, exp, trial, subject, sampleDate) %>% distinct()
 

@@ -1,2 +1,4 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
+431	VSP0523	composite	NA	NP-OP	2020-12-09	4.56	NA	82.1%	81.3%
 431	VSP0523-1	 single experiment	NA	NP-OP	2020-12-09	4.53	NA	81.8%	80.8%
+431	VSP0523-2	 single experiment	NA	NP-OP	2020-12-09	4.63	NA	81.7%	80.9%
