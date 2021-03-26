@@ -19,8 +19,10 @@ option_list = list(
   make_option(c("--minPangolinConf"), type="numeric", default=0.9, help="minimum pangolin confidence value (0-1)", metavar="character"), 
   make_option(c("--samtoolsBin"), type="character", default='~/ext/samtools/bin', help="path to samtools bin", metavar="character"), 
   make_option(c("--condaShellPath"), type="character", default='~/miniconda3/etc/profile.d/conda.sh', help="path to conda.sh", metavar="character"),
-  make_option(c("--bcftoolsBin"), type="character", default='~/ext/bcftools/bin',  help="path to bcftools bin", metavar="character"))
+  make_option(c("--bcftoolsBin"), type="character", default='~/ext/bcftools/bin',  help="path to bcftools bin", metavar="character"),
+  make_option(c("--trimQualCode"), type="character", default='5',  help="Min qual trim code", metavar="character"))
 
+ 
 opt_parser = OptionParser(option_list=option_list)
 opt = parse_args(opt_parser)
 
@@ -56,8 +58,9 @@ opt$contigs           <- Biostrings::DNAStringSet()
 #opt$R1 <- 'data/sequencing/210112_M03249_0141_000000000-JFP4J/VSP0563-2_S1_L001_R1_001.fastq.gz'
 #opt$R2 <- 'data/sequencing/210112_M03249_0141_000000000-JFP4J/VSP0563-2_S1_L001_R2_001.fastq.gz'
 
-#opt$R1 <- 'data/sequencing/210113_M05588_0364_000000000-JGMP7/VSP0563-3_S1_L001_R1_001.fastq.gz'
-#opt$R2 <- 'data/sequencing/210113_M05588_0364_000000000-JGMP7/VSP0563-3_S1_L001_R2_001.fastq.gz'
+#opt$R1 <- 'data/sequencing/Lennon/VSP0909-1_S1_L001_R1_001.fastq.gz'
+#opt$R2 <- 'data/sequencing/Lennon/VSP0909-1_S1_L001_R2_001.fastq.gz'
+#opt$trimQualCode <- '+'
 
 
 R1s <- unlist(strsplit(opt$R1, ','));  if(! all(file.exists(R1s))) stop('All the R1 files could not be found.')
@@ -71,7 +74,7 @@ system(paste0('cat ', paste0(R2s, collapse = ' '), ' > ', t1, '_R2.fastq'))
   
 
 # Quality trim reads and create trimmed FASTA files.
-r <- prepareTrimmedReads(readFastq(paste0(t1, '_R1.fastq')), readFastq(paste0(t1, '_R2.fastq')))
+r <- prepareTrimmedReads(readFastq(paste0(t1, '_R1.fastq')), readFastq(paste0(t1, '_R2.fastq')), qualCode = opt$trimQualCode)
 writeFasta(r[[1]], file = paste0(t1, '_R1.trimmed.fasta'))
 writeFasta(r[[2]], file = paste0(t1, '_R2.trimmed.fasta'))
 
@@ -416,7 +419,7 @@ if(nrow(opt$variantTableMajor) > 0){
 }
 
 
-# BCFtools calls indels bythe base preceding the modification.
+# BCFtools calls indels by the base preceding the modification.
 # Here we find deletion calls and increment the position by one to mark the first deleted base.
 i <- opt$variantTable$POS %in% opt$variantTable[grep('del', opt$variantTable$ALT),]$POS
 if(any(i)) opt$variantTable[i,]$POS <- opt$variantTable[i,]$POS + 1

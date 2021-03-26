@@ -1,13 +1,6 @@
 data/sequencing
 data/genomes/GISAID
 data/genomes/gisaide
-data/sequencingBackup
-data/sequencing.org
 summaries/VSPalignments
 summaries/VSPdata
 summaries/patientReportsData
-HLA/read_pileup_data
-HLA/seqData
-HLA/trimmedSeqData
-HLA/seqDataCollations
-HLA/trimmedSeqDataCollations

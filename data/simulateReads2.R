@@ -5,8 +5,8 @@ library(parallel)
 fragLength <- 250
 stepSize <- 5
 
-s <- readFasta('VOCs.ff')@sread
-t <- s[1]
+s <- readFasta('ODoherty_concensus.210304.fasta')@sread
+t <- s[4]
 
 
 qual <- paste0(rep('A', fragLength), collapse = '')

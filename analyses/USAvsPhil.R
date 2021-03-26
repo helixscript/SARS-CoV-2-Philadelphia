@@ -41,7 +41,7 @@ lineages <- c(lineages, o[! o %in% lineages][1:2])
 o <- names(sort(table(c(d$PANGO.Lineage, p$PANGO.Lineage)), decreasing = TRUE))
 lineages <- c( 'Other', o[o %in% lineages])
 
-dateLabels <-  unique(c(as.character(d$dateLabel), '2/2021'))
+dateLabels <-  unique(c(as.character(d$dateLabel), '2/2021', '3/2021'))
 
 d$dateLabel <- factor(d$dateLabel, levels = dateLabels)
 p$dateLabel <- factor(p$dateLabel, levels = dateLabels)

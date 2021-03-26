@@ -1,0 +1,4 @@
+Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
+MPCluster2-Seq14	VSP0806	composite	NA	Saline	2021-02-11	29.47	B.1.234	100.0%	99.9%
+MPCluster2-Seq14	VSP0806-1	 single experiment	NA	Saline	2021-02-11	29.47	B.1.234	100.0%	99.8%
+MPCluster2-Seq14	VSP0806-2	 single experiment	NA	Saline	2021-02-11	29.85	B.1.234	99.9%	99.9%

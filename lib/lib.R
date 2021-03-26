@@ -3,6 +3,7 @@ removeProblematicSamples <- function(x){
   if('Subject' %in% names(x))    x <- dplyr::filter(x, Subject != '237')
   if('patient_id' %in% names(x)) x <- dplyr::filter(x, patient_id != '237')
   if('patient_id' %in% names(x)) x <- dplyr::filter(x, ! grepl('MisC', patient_id, ignore.case = TRUE))
+  #if('trial_id' %in% names(x))   x <- dplyr::filter(x, ! grepl('ODoherty', trial_id, ignore.case = TRUE))
   x
 }
 
