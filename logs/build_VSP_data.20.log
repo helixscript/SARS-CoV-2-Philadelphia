@@ -1,59 +1,16 @@
-Thu Mar 25 20:43:49 2021
-Starting VSP9968 with 1 seq experiments.
-summaries/VSPdata/VSP9968-1.experiment.RData exists -- skipping.
-Completed VSP9968
+Mon Mar 29 18:32:26 2021
+Starting VSP1091 with 1 seq experiments.
+Mon Mar 29 18:32:26 2021 (summaries/VSPdata/VSP1091-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP1091-1.experiment.RData --R1 /data/sequencing/Illumina-archive/SARS-CoV-2/210326_NB551353_0085_AHTMV3AFX2/VSP1091-1_S70_R1_001.fastq.gz --R2 /data/sequencing/Illumina-archive/SARS-CoV-2/210326_NB551353_0085_AHTMV3AFX2/VSP1091-1_S70_R2_001.fastq.gz
 
-Starting VSP0804 with 1 seq experiments.
-summaries/VSPdata/VSP0804-1.experiment.RData exists -- skipping.
-Completed VSP0804
+Completed VSP1091
 
-Starting VSP0805 with 1 seq experiments.
-summaries/VSPdata/VSP0805-1.experiment.RData exists -- skipping.
-Completed VSP0805
+Starting VSP1092 with 1 seq experiments.
+Mon Mar 29 18:36:10 2021 (summaries/VSPdata/VSP1092-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP1092-1.experiment.RData --R1 /data/sequencing/Illumina-archive/SARS-CoV-2/210326_NB551353_0085_AHTMV3AFX2/VSP1092-1_S69_R1_001.fastq.gz --R2 /data/sequencing/Illumina-archive/SARS-CoV-2/210326_NB551353_0085_AHTMV3AFX2/VSP1092-1_S69_R2_001.fastq.gz
 
-Starting VSP0806 with 2 seq experiments.
-summaries/VSPdata/VSP0806.composite.RData exists -- skipping.
-summaries/VSPdata/VSP0806-1.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0806-2.experiment.RData exists -- skipping.
-Completed VSP0806
+Completed VSP1092
 
-Starting VSP0807 with 1 seq experiments.
-summaries/VSPdata/VSP0807-1.experiment.RData exists -- skipping.
-Completed VSP0807
+Starting VSP1093 with 1 seq experiments.
+Mon Mar 29 18:42:49 2021 (summaries/VSPdata/VSP1093-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP1093-1.experiment.RData --R1 /data/sequencing/Illumina-archive/SARS-CoV-2/210326_NB551353_0085_AHTMV3AFX2/VSP1093-1_S68_R1_001.fastq.gz --R2 /data/sequencing/Illumina-archive/SARS-CoV-2/210326_NB551353_0085_AHTMV3AFX2/VSP1093-1_S68_R2_001.fastq.gz
 
-Starting VSP0808 with 1 seq experiments.
-summaries/VSPdata/VSP0808-1.experiment.RData exists -- skipping.
-Completed VSP0808
-
-Starting VSP0809 with 1 seq experiments.
-summaries/VSPdata/VSP0809-1.experiment.RData exists -- skipping.
-Completed VSP0809
-
-Starting VSP0810 with 1 seq experiments.
-summaries/VSPdata/VSP0810-1.experiment.RData exists -- skipping.
-Completed VSP0810
-
-Starting VSP0811 with 1 seq experiments.
-summaries/VSPdata/VSP0811-1.experiment.RData exists -- skipping.
-Completed VSP0811
-
-Starting VSP0812 with 1 seq experiments.
-summaries/VSPdata/VSP0812-1.experiment.RData exists -- skipping.
-Completed VSP0812
-
-Starting VSP0813 with 1 seq experiments.
-summaries/VSPdata/VSP0813-1.experiment.RData exists -- skipping.
-Completed VSP0813
-
-Starting VSP0814 with 1 seq experiments.
-summaries/VSPdata/VSP0814-1.experiment.RData exists -- skipping.
-Completed VSP0814
-
-Starting VSP0815 with 1 seq experiments.
-summaries/VSPdata/VSP0815-1.experiment.RData exists -- skipping.
-Completed VSP0815
-
-Starting VSP0843 with 1 seq experiments.
-summaries/VSPdata/VSP0843-1.experiment.RData exists -- skipping.
-Completed VSP0843
+Completed VSP1093
 

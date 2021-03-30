@@ -299,7 +299,7 @@ dat2 <- dat[grepl('\\-\\d', names(dat))]
 dat2 <- lapply(dat2, function(x){
           x$vsp <- str_extract(x$seq_sample, 'VSP\\d+')
           x$sampleType <- samples[match(x$vsp, samples$VSP),]$sample_type
-          x$sampleDate <- samples[match(x$vsp, samples$VSP),]$sample_date
+          x$sampleDate <- samples[match(x$vsp, samples$VSP),]$sampleCollection_date
           x$sampleName <- paste0(x$sampleType, '\n', x$sampleDate)
           x
          })

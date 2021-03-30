@@ -1,0 +1,1203 @@
+sample_id	patient_id	trial_id	sample_date	sampleExtraction_date	sample_type	VSP	collected_from	extraction_technique	qpcr_date	RNA_vol_uL	N1_copies_per_ul	sequencing_progress	N2_copies_per_ul	avg_copy-uL	MiseqID	Rationale		PI_Contat	Age	Sex	Race	Zip_Code	Vaccination _Status	Testing_Date	Symptoms_Present
+CCLB	CCLB	None	3/28/2020		Vero cells	VSP0001	Courtney	Invitrogen TRIzol Reagent	4/27/2020		2.94E+08		4.05E+08	3.49E+08	200518_M03249_0065_000000000-J37K3										
+E6	E6	None	3/28/2020		Vero cells	VSP0002	Courtney	Invitrogen TRIzol Reagent	4/27/2020		9.20E+07		1.10E+08	1.01E+08	200518_M03249_0065_000000000-J37K3										
+196-all	196	UPHS	4/8/2020		ETA	VSP0003	Yize (Henry) Li	DNA/RNA All Prep	4/21/2020	0	1.55E+02		2.27E+02	1.91E+02											
+197-all	197	UPHS	3/30/2020		ETA	VSP0004	Yize (Henry) Li	DNA/RNA All Prep	4/21/2020	10	6.73E+03		9.51E+03	8.12E+03											
+203-all	203	UPHS	4/8/2020		ETA	VSP0005	Yize (Henry) Li	DNA/RNA All Prep	4/21/2020	10	5.73E+02		1.08E+03	8.27E+02											
+209-all	209	UPHS	4/8/2020		ETA	VSP0006	Yize (Henry) Li	DNA/RNA All Prep	4/21/2020	10	2.55E+04		3.20E+04	2.88E+04											
+210-all	210	UPHS	4/8/2020		ETA	VSP0007	Yize (Henry) Li	DNA/RNA All Prep	4/21/2020	0	2.64E+04		3.66E+04	3.15E+04											
+196-tri	196	UPHS	4/8/2020		ETA	VSP0008	Yize (Henry) Li	Traditional Trizol	4/28/2020	15	8.82E+02		7.94E+02	8.38E+02	200518_M03249_0065_000000000-J37K3										
+197-tri	197	UPHS	3/30/2020		ETA	VSP0009	Yize (Henry) Li	Traditional Trizol	4/28/2020	17	4.42E+04		5.11E+04	4.77E+04	200527_M03249_0066_000000000-J3R26										
+203-tri	203	UPHS	4/8/2020		ETA	VSP0010	Yize (Henry) Li	Traditional Trizol	4/28/2020	12	2.95E+03		4.25E+03	3.60E+03	200527_M03249_0066_000000000-J3R26, 200713_M03249_0074_000000000-J77FR										
+209-tri	209	UPHS	4/8/2020		ETA	VSP0011	Yize (Henry) Li	Traditional Trizol	4/28/2020	17	4.30E+05		5.01E+05	4.65E+05	200527_M03249_0066_000000000-J3R26										
+210-tri	210	UPHS	4/8/2020		ETA	VSP0012	Yize (Henry) Li	Traditional Trizol	4/28/2020	12	1.32E+05		1.98E+05	1.65E+05	200527_M03249_0066_000000000-J3R26										
+211-tri	211	UPHS	4/13/2020		ETA	VSP0013	Yize (Henry) Li	Traditional Trizol	4/27/2020	15	9.96E+07		1.43E+08	1.21E+08	200518_M03249_0065_000000000-J37K3										
+213-tri	213	UPHS	4/15/2020		ETA	VSP0014	Yize (Henry) Li	Traditional Trizol	4/27/2020	15	1.77E+06		1.82E+06	1.79E+06	200518_M03249_0065_000000000-J37K3, 200527_M03249_0066_000000000-J3R26										
+218a-tri	218	UPHS	4/15/2020		ETA	VSP0015	Yize (Henry) Li	Traditional Trizol	4/27/2020	12	4.38E+02		1.92E+02	3.15E+02	200518_M03249_0065_000000000-J37K3										
+218b-tri	218	UPHS	4/17/2020		ETA	VSP0016	Yize (Henry) Li	Traditional Trizol	4/27/2020	17	5.62E+02		2.94E+02	4.28E+02	200527_M03249_0066_000000000-J3R26										
+219-tri	219	UPHS	4/17/2020		ETA	VSP0017	Yize (Henry) Li	Traditional Trizol	4/27/2020	9	1.87E+03		1.16E+03	1.51E+03	200527_M03249_0066_000000000-J3R26, 200713_M03249_0074_000000000-J77FR										
+225-tri	225	UPHS	4/17/2020		ETA	VSP0018	Yize (Henry) Li	Traditional Trizol	4/27/2020	12	8.16E+04		6.98E+04	7.57E+04	200527_M03249_0066_000000000-J3R26										
+227n	227	UPHS	4/22/2020		NP	VSP0019	Ron	Traditional Trizol	4/28/2020	47	undetermined		undetermined	undetermined											
+227o	227	UPHS	4/22/2020		OP	VSP0020	Ron	Traditional Trizol	4/28/2020	47	8.46E+02		1.11E+03	9.80E+02	200609_M03249_0067_000000000-J37ML, 200720_M03249_0076_000000000-J78FF										
+228n	228	UPHS	4/22/2020		NP	VSP0021	Ron	Traditional Trizol	4/28/2020	47	2.20E+03		2.58E+03	2.39E+03	200609_M03249_0067_000000000-J37ML, 200824_M03249_0087_000000000-JB8CJ										
+228o	228	UPHS	4/22/2020		OP	VSP0022	Ron	Traditional Trizol	4/28/2020	42	2.68E+05		2.64E+05	2.66E+05	200609_M03249_0067_000000000-J37ML, 200713_M03249_0074_000000000-J77FR, 200824_M03249_0087_000000000-JB8CJ										
+230n1	230	UPHS	4/22/2020		NP	VSP0023	Ron	Traditional Trizol	4/28/2020	47	undetermined		undetermined	undetermined											
+230n2	230	UPHS	4/22/2020		NP	VSP0024	Ron	Traditional Trizol	4/28/2020	47	undetermined		undetermined	undetermined											
+232n	232	UPHS	4/22/2020		NP	VSP0025	Ron	Traditional Trizol	4/28/2020	47	undetermined		undetermined	undetermined											
+232o	232	UPHS	4/22/2020		OP	VSP0026	Ron	Traditional Trizol	4/28/2020	47	undetermined		undetermined	undetermined											
+234-tri	234	UPHS	4/27/2020		NP-OP	VSP0027	Ron, Young	Traditional Trizol	4/28/2020	47	undetermined		undetermined	undetermined											
+234-qia	234	UPHS	4/27/2020		NP-OP	VSP0028	Ron, Young	QiaAMP mini RNA+carrier RNA	4/28/2020	47	undetermined		undetermined	undetermined											
+235-tri	235	UPHS	4/27/2020		NP-OP	VSP0029	Ron, Young	Traditional Trizol	4/28/2020	47	4.43E+02		8.08E+02	6.26E+02	200609_M03249_0067_000000000-J37ML										
+235-qia	235	UPHS	4/27/2020		NP-OP	VSP0030	Ron, Young	QiaAMP mini RNA+carrier RNA	4/28/2020	42	3.71E+05		3.96E+05	3.83E+05	200609_M03249_0067_000000000-J37ML, 200720_M03249_0076_000000000-J78FF										
+236-tri	236	UPHS	4/27/2020		NP-OP	VSP0031	Ron, Young	Traditional Trizol	4/28/2020	47	undetermined		undetermined	undetermined											
+236-qia	236	UPHS	4/27/2020		NP-OP	VSP0032	Ron, Young	QiaAMP mini RNA+carrier RNA	4/28/2020	47	undetermined		undetermined	undetermined											
+237-tri	237	UPHS	4/27/2020		NP-OP	VSP0033	Ron, Young	Traditional Trizol	4/28/2020	47	5.97E+02		1.08E+03	8.40E+02	200609_M03249_0067_000000000-J37ML, 200713_M03249_0074_000000000-J77FR										
+237-qia	237	UPHS	4/27/2020		NP-OP	VSP0034	Ron, Young	QiaAMP mini RNA+carrier RNA	4/28/2020	42	3.79E+05		4.07E+05	3.93E+05	200609_M03249_0067_000000000-J37ML, 200713_M03249_0074_000000000-J77FR										
+230n-tri	230	UPHS	4/29/2020		NP	VSP0035	Ron, Young	Traditional Trizol	5/5/2020	47	undetermined														
+230o-tri	230	UPHS	4/29/2020		OP	VSP0036	Ron, Young	Traditional Trizol	5/5/2020	47	undetermined														
+237n-tri	237	UPHS	4/29/2020		NP	VSP0037	Ron, Young	Traditional Trizol	5/5/2020	47	1.54E+02				200609_M03249_0067_000000000-J37ML, 200713_M03249_0074_000000000-J77FR										
+237o-tri	237	UPHS	4/29/2020		OP	VSP0038	Ron, Young	Traditional Trizol	5/5/2020	47	4.12E+02				200609_M03249_0067_000000000-J37ML, 200725_M03249_0079_000000000-J2J3B										
+238n-tri	238	UPHS	4/29/2020		NP	VSP0039	Ron, Young	Traditional Trizol	5/5/2020	42	4.93E+02				200609_M03249_0067_000000000-J37ML										
+238o-tri	238	UPHS	4/29/2020		OP	VSP0040	Ron, Young	Traditional Trizol	5/5/2020	47	6.28E+00														
+239n-tri	239	UPHS	4/29/2020		NP	VSP0041	Ron, Young	Traditional Trizol	5/5/2020	47	1.25E+04				200609_M03249_0067_000000000-J37ML, 200720_M03249_0076_000000000-J78FF										
+239o-tri	239	UPHS	4/29/2020		OP	VSP0042	Ron, Young	Traditional Trizol	5/5/2020	47	6.49E+03				200609_M03249_0067_000000000-J37ML										
+240n-tri	240	UPHS	4/29/2020		NP	VSP0043	Ron, Young	Traditional Trizol	5/5/2020	47	undetermined														
+242n-tri	242	UPHS	4/29/2020		NP	VSP0044	Ron, Young	Traditional Trizol	5/5/2020	47	3.95E+04				200609_M03249_0067_000000000-J37ML										
+242o-tri	242	UPHS	4/29/2020		OP	VSP0045	Ron, Young	Traditional Trizol	5/5/2020	47	6.67E+02				200618_M03249_0069_000000000-J3NJJ										
+240-qia	240	UPHS	05/01/2020		NP-OP	VSP0046	Ron, Young	QiaAMP mini RNA+carrier RNA	5/5/2020	42	7.28E+04				200613_M03249_0068_000000000-J37GK										
+242-qia	242	UPHS	05/01/2020		NP-OP	VSP0047	Ron, Young	QiaAMP mini RNA+carrier RNA	5/5/2020	47	2.22E+05				200618_M03249_0069_000000000-J3NJJ										
+244-qia	244	UPHS	05/01/2020		NP-OP	VSP0048	Ron, Young	QiaAMP mini RNA+carrier RNA	5/5/2020	47	undetermined														
+245-qia	245	UPHS	05/01/2020		NP-OP	VSP0049	Ron, Young	QiaAMP mini RNA+carrier RNA	5/5/2020	47	undetermined														
+247-qia	247	UPHS	05/01/2020		NP-OP	VSP0050	Ron, Young	QiaAMP mini RNA+carrier RNA	5/5/2020	42	4.38E+02				200613_M03249_0068_000000000-J37GK, 200703_M03249_0072_000000000-J77FG										
+212-t	212	UPHS	05/04/2020		ETA	VSP0051	Ron, Young	Traditional Trizol	5/6/2020	47	undetermined														
+242-t	242	UPHS	05/04/2020		ETA	VSP0052	Ron, Young	Traditional Trizol	5/6/2020	47	1.42E+06				200618_M03249_0069_000000000-J3NJJ										
+245-t	245	UPHS	05/04/2020		NP-OP	VSP0053	Ron, Young	Traditional Trizol	5/6/2020	47	undetermined														
+246no-t	246	UPHS	05/04/2020		NP-OP	VSP0054	Ron, Young	Traditional Trizol	5/6/2020	47	undetermined														
+246s-t	246	UPHS	05/04/2020		Saliva	VSP0055	Ron, Young	Traditional Trizol	5/6/2020	47	undetermined														
+248-t	248	UPHS	05/04/2020		NP-OP	VSP0056	Ron, Young	Traditional Trizol	5/6/2020	47	1.31E+03														
+251-t	251	UPHS	05/04/2020		NP-OP	VSP0057	Ron, Young	Traditional Trizol	5/6/2020	47	5.74E+05														
+252-t	252	UPHS	05/04/2020		NP-OP	VSP0058	Ron, Young	Traditional Trizol	5/6/2020	47	undetermined														
+212-q	212	UPHS	05/04/2020		ETA	VSP0059	Ron, Young	QiaAMP mini RNA+carrier RNA	5/6/2020	47	undetermined														
+242-q	242	UPHS	05/04/2020		ETA	VSP0060	Ron, Young	QiaAMP mini RNA+carrier RNA	5/6/2020	47	9.06E+05														
+245-q	245	UPHS	05/04/2020		NP-OP	VSP0061	Ron, Young	QiaAMP mini RNA+carrier RNA	5/6/2020	42	5.64E+02				200613_M03249_0068_000000000-J37GK, 200703_M03249_0072_000000000-J77FG										
+246no-q	246	UPHS	05/04/2020		NP-OP	VSP0062	Ron, Young	QiaAMP mini RNA+carrier RNA	5/6/2020	47	undetermined														
+246s-q	246	UPHS	05/04/2020		Saliva	VSP0063	Ron, Young	QiaAMP mini RNA+carrier RNA	5/6/2020	47	undetermined														
+248-q	248	UPHS	05/04/2020		NP-OP	VSP0064	Ron, Young	QiaAMP mini RNA+carrier RNA	5/6/2020	47	9.93E+02														
+251-q	251	UPHS	05/04/2020		NP-OP	VSP0065	Ron, Young	QiaAMP mini RNA+carrier RNA	5/6/2020	47	1.51E+06				200725_M03249_0079_000000000-J2J3B, 200824_M03249_0087_000000000-JB8CJ, 200725_M03249_0079_000000000-J2J3B										
+252-q	252	UPHS	05/04/2020		NP-OP	VSP0066	Ron, Young	QiaAMP mini RNA+carrier RNA	5/6/2020	47	undetermined														
+227nh-t	227	UPHS	04/24/2020		NP-HI	VSP0067	Ron, Young	Traditional Trizol	5/8/2020	47	undetermined														
+227oh-t	227	UPHS	04/24/2020		OP-HI	VSP0068	Ron, Young	Traditional Trizol	5/8/2020	47	undetermined														
+228no-t	228	UPHS	04/24/2020		NP-OP	VSP0069	Ron, Young	Traditional Trizol	5/8/2020	42	1.95E+01				200613_M03249_0068_000000000-J37GK, 200713_M03249_0074_000000000-J77FR										
+228noh-t	228	UPHS	04/24/2020		NP-OP-HI	VSP0070	Ron, Young	Traditional Trizol	5/8/2020	47	1.94E+01														
+232n-t	232	UPHS	04/24/2020		NP	VSP0071	Ron, Young	Traditional Trizol	5/8/2020	47	undetermined														
+232o-t	232	UPHS	04/24/2020		OP	VSP0072	Ron, Young	Traditional Trizol	5/8/2020	47	undetermined					Hospitalized									
+232nh-t	232	UPHS	04/24/2020		NP-HI	VSP0073	Ron, Young	Traditional Trizol	5/8/2020	47	undetermined					Hospitalized									
+232oh-t	232	UPHS	04/24/2020		OP-HI	VSP0074	Ron, Young	Traditional Trizol	5/8/2020	47	undetermined					Hospitalized									
+233n-t	233	UPHS	04/24/2020		NP	VSP0075	Ron, Young	Traditional Trizol	5/8/2020	47	undetermined					Hospitalized									
+233o-t	233	UPHS	04/24/2020		OP	VSP0076	Ron, Young	Traditional Trizol	5/8/2020	47	undetermined					Hospitalized									
+233nh-t	233	UPHS	04/24/2020		NP-HI	VSP0077	Ron, Young	Traditional Trizol	5/8/2020	47	undetermined					Hospitalized									
+233oh-t	233	UPHS	04/24/2020		OP-HI	VSP0078	Ron, Young	Traditional Trizol	5/8/2020	47	undetermined					Hospitalized									
+234noh-t	234	UPHS	04/24/2020		NP-OP-HI	VSP0079	Ron, Young	Traditional Trizol	5/8/2020	42	2.95E+01				200613_M03249_0068_000000000-J37GK, 200703_M03249_0072_000000000-J77FG	Hospitalized									
+235no-t	235	UPHS	04/24/2020		NP-OP	VSP0080	Ron, Young	Traditional Trizol	5/8/2020	47	3.52E+04				200725_M03249_0079_000000000-J2J3B, 200725_M03249_0079_000000000-J2J3B	Hospitalized									
+235noh-t	235	UPHS	04/24/2020		NP-OP-HI	VSP0081	Ron, Young	Traditional Trizol	5/8/2020	47	3.60E+04					Hospitalized									
+233no-q	233	UPHS	05/06/2020		NP-OP	VSP0082	Ron, Young	QiaAMP mini RNA+carrier RNA	5/8/2020	47	undetermined					Hospitalized									
+237no-q	237	UPHS	05/06/2020		NP-OP	VSP0083	Ron, Young	QiaAMP mini RNA+carrier RNA	5/8/2020	47	5.90E+00					Hospitalized									
+237s-q	237	UPHS	05/06/2020		Saliva	VSP0084	Ron, Young	QiaAMP mini RNA+carrier RNA	5/8/2020	47	1.50E+02				200720_M03249_0076_000000000-J78FF	Hospitalized									
+242e-q	242	UPHS	05/06/2020		ETA	VSP0085	Ron, Young	QiaAMP mini RNA+carrier RNA	5/8/2020	47	8.54E+00				200618_M03249_0069_000000000-J3NJJ,200703_M03249_0072_000000000-J77FG	Hospitalized									
+248e-q	248	UPHS	05/06/2020		ETA	VSP0086	Ron, Young	QiaAMP mini RNA+carrier RNA	5/8/2020	47	1.73E+03				200626_M03249_0070_000000000-CRD4J, 200713_M03249_0074_000000000-J77FR	Hospitalized									
+248no-q	248	UPHS	05/06/2020		NP-OP	VSP0087	Ron, Young	QiaAMP mini RNA+carrier RNA	5/8/2020	47	2.46E+01					Hospitalized									
+251e-q	251	UPHS	05/06/2020		ETA	VSP0088	Ron, Young	QiaAMP mini RNA+carrier RNA	5/8/2020	47	5.11E+04				200725_M03249_0079_000000000-J2J3B, 200725_M03249_0079_000000000-J2J3B	Hospitalized									
+251no-q	251	UPHS	05/06/2020		NP-OP	VSP0089	Ron, Young	QiaAMP mini RNA+carrier RNA	5/8/2020	47	1.14E+05				200725_M03249_0079_000000000-J2J3B, 200824_M03249_0087_000000000-JB8CJ, 200725_M03249_0079_000000000-J2J3B	Hospitalized									
+252e-q	252	UPHS	05/06/2020		ETA	VSP0090	Ron, Young	QiaAMP mini RNA+carrier RNA	5/8/2020	47	undetermined					Hospitalized									
+252no-q	252	UPHS	05/06/2020		NP-OP	VSP0091	Ron, Young	QiaAMP mini RNA+carrier RNA	5/8/2020	47	undetermined					Hospitalized									
+255no-q	255	UPHS	05/06/2020		NP-OP	VSP0092	Ron, Young	QiaAMP mini RNA+carrier RNA	5/8/2020	47	undetermined					Hospitalized									
+210e-q	210	UPHS	05/08/2020		ETA	VSP0093	Ron, Young	QiaAMP mini RNA	5/13/20	47	undetermined					Hospitalized									
+237s-q	237	UPHS	05/08/2020		Saliva	VSP0094	Ron, Young	QiaAMP mini RNA	5/13/20	47	undetermined					Hospitalized									
+252e-q	252	UPHS	05/08/2020		ETA	VSP0095	Ron, Young	QiaAMP mini RNA	5/13/20	47	undetermined					Hospitalized									
+252no-q	252	UPHS	05/08/2020		NP-OP	VSP0096	Ron, Young	QiaAMP mini RNA	5/13/20	47	undetermined					Hospitalized									
+253no-q	253	UPHS	05/08/2020		NP-OP	VSP0097	Ron, Young	QiaAMP mini RNA	5/13/20	47	undetermined					Hospitalized									
+253s-q	253	UPHS	05/08/2020		Saliva	VSP0098	Ron, Young	QiaAMP mini RNA	5/13/20	47	8.51E+01					Hospitalized									
+255no-q	255	UPHS	05/08/2020		NP-OP	VSP0099	Ron, Young	QiaAMP mini RNA	5/13/20	47	undetermined					Hospitalized									
+256e-q	256	UPHS	05/08/2020		ETA	VSP0100	Ron, Young	QiaAMP mini RNA	5/13/20	47	2.76E+06				200618_M03249_0069_000000000-J3NJJ	Hospitalized									
+256no-q	256	UPHS	05/08/2020		NP-OP	VSP0101	Ron, Young	QiaAMP mini RNA	5/13/20	47	2.21E+05					Hospitalized									
+257no-q	257	UPHS	05/08/2020		NP-OP	VSP0102	Ron, Young	QiaAMP mini RNA	5/13/20	47	5.18E+04				200626_M03249_0070_000000000-CRD4J	Hospitalized									
+258no-q	258	UPHS	05/08/2020		NP-OP	VSP0103	Ron, Young	QiaAMP mini RNA	5/13/20	47	undetermined					Hospitalized									
+252no-t	252	UPHS	05/08/2020		NP-OP	VSP0104	Ron, Young	Traditional Trizol	5/13/20	47	undetermined					Hospitalized									
+253no-t	253	UPHS	05/08/2020		NP-OP	VSP0105	Ron, Young	Traditional Trizol	5/13/20	47	undetermined					Hospitalized									
+255no-t	255	UPHS	05/08/2020		NP-OP	VSP0106	Ron, Young	Traditional Trizol	5/13/20	47	undetermined					Hospitalized									
+256no-t	256	UPHS	05/08/2020		NP-OP	VSP0107	Ron, Young	Traditional Trizol	5/13/20	40	1.19E+05				200613_M03249_0068_000000000-J37GK, 200713_M03249_0074_000000000-J77FR	Hospitalized									
+257no-t	257	UPHS	05/08/2020		NP-OP	VSP0108	Ron, Young	Traditional Trizol	5/13/20	47	3.57E+03					Hospitalized									
+258no-t	258	UPHS	05/08/2020		NP-OP	VSP0109	Ron, Young	Traditional Trizol	5/13/20	47	undetermined					Hospitalized									
+252no-tc	252	UPHS	05/08/2020		NP-OP	VSP0110	Ron, Young	Trizol+carrier RNA	5/13/20	47	undetermined					Hospitalized									
+253no-tc	253	UPHS	05/08/2020		NP-OP	VSP0111	Ron, Young	Trizol+carrier RNA	5/13/20	47	undetermined					Hospitalized									
+255no-tc	255	UPHS	05/08/2020		NP-OP	VSP0112	Ron, Young	Trizol+carrier RNA	5/13/20	47	undetermined					Hospitalized									
+256no-tc	256	UPHS	05/08/2020		NP-OP	VSP0113	Ron, Young	Trizol+carrier RNA	5/13/20	47	3.26E+05					Hospitalized									
+257no-tc	257	UPHS	05/08/2020		NP-OP	VSP0114	Ron, Young	Trizol+carrier RNA	5/13/20	47	1.18E+04					Hospitalized									
+258no-tc	258	UPHS	05/08/2020		NP-OP	VSP0115	Ron, Young	Trizol+carrier RNA	5/13/20	47	undetermined					Hospitalized									
+254no-t	254	UPHS	05/11/2020		NP-OP	VSP0116	Ron, Young	Traditional Trizol	5/13/20	47	undetermined					Hospitalized									
+254no-tc	254	UPHS	05/11/2020		NP-OP	VSP0117	Ron, Young	Trizol+carrier RNA	5/13/20	47	undetermined					Hospitalized									
+256no-t2	256	UPHS	05/11/2020		NP-OP	VSP0118	Ron, Young	Traditional Trizol	5/13/20	47	2.69E+02				200618_M03249_0069_000000000-J3NJJ, 200703_M03249_0072_000000000-J77FG	Hospitalized									
+256no-tc2	256	UPHS	05/11/2020		NP-OP	VSP0119	Ron, Young	Trizol+carrier RNA	5/13/20	47	1.42E+02					Hospitalized									
+225s-q	225	UPHS	05/11/2020		Saliva	VSP0120	Ron, Young	QiaAMP mini RNA	5/13/20	47	undetermined					Hospitalized									
+237s-q	237	UPHS	05/11/2020		Saliva	VSP0121	Ron, Young	QiaAMP mini RNA	5/13/20	47	2.29E+01					Hospitalized									
+254no-q	254	UPHS	05/11/2020		NP-OP	VSP0122	Ron, Young	QiaAMP mini RNA	5/13/20	47	undetermined					Hospitalized									
+256e-q	256	UPHS	05/11/2020		ETA	VSP0123	Ron, Young	QiaAMP mini RNA	5/13/20	47	1.23E+05				200618_M03249_0069_000000000-J3NJJ	Hospitalized									
+256no-q	256	UPHS	05/11/2020		NP-OP	VSP0124	Ron, Young	QiaAMP mini RNA	5/13/20	47	1.69E+02					Hospitalized									
+237s-q1	237	UPHS	05/13/2020		Saliva	VSP0125	Ron, Young	QiaAMP mini RNA	5/20/20	47	undetermined					Hospitalized									
+248e-q1	248	UPHS	05/13/2020		ETA	VSP0126	Ron, Young	QiaAMP mini RNA	5/20/20	47	undetermined					Hospitalized									
+254no-q1	254	UPHS	05/13/2020		NP-OP	VSP0127	Ron, Young	QiaAMP mini RNA	5/20/20	47	undetermined					Hospitalized									
+255e-q1	255	UPHS	05/13/2020		ETA	VSP0128	Ron, Young	QiaAMP mini RNA	5/20/20	47	undetermined					Hospitalized									
+257no-q1	257	UPHS	05/13/2020		NP-OP	VSP0129	Ron, Young	QiaAMP mini RNA	5/20/20	47	3.71E+03					Hospitalized									
+259s-q1	259	UPHS	05/13/2020		Saliva	VSP0130	Ron, Young	QiaAMP mini RNA	5/20/20	47	undetermined					Hospitalized									
+260no-q1	260	UPHS	05/13/2020		NP-OP	VSP0131	Ron, Young	QiaAMP mini RNA	5/20/20	47	undetermined					Hospitalized									
+260s-q1	260	UPHS	05/13/2020		Saliva	VSP0132	Ron, Young	QiaAMP mini RNA	5/20/20	47	1.45E+02					Hospitalized									
+237s-q2	237	UPHS	05/15/2020		Saliva	VSP0133	Ron, Young	QiaAMP mini RNA	5/20/20	47	4.31E+02					Hospitalized									
+254s-q1	254	UPHS	05/15/2020		Saliva	VSP0134	Ron, Young	QiaAMP mini RNA	5/20/20	47	undetermined					Hospitalized									
+257s-q1	257	UPHS	05/15/2020		Saliva	VSP0135	Ron, Young	QiaAMP mini RNA	5/20/20	47	9.88E+02					Hospitalized									
+259no-q1	259	UPHS	05/15/2020		NP-OP	VSP0136	Ron, Young	QiaAMP mini RNA	5/20/20	47	undetermined					Hospitalized									
+259s-q2	259	UPHS	05/15/2020		Saliva	VSP0137	Ron, Young	QiaAMP mini RNA	5/20/20	47	undetermined					Hospitalized									
+260no-q2	260	UPHS	05/15/2020		NP-OP	VSP0138	Ron, Young	QiaAMP mini RNA	5/20/20	47	undetermined					Hospitalized									
+260s-q2	260	UPHS	05/15/2020		Saliva	VSP0139	Ron, Young	QiaAMP mini RNA	5/20/20	47	undetermined					Hospitalized									
+261e-q1	261	UPHS	05/15/2020		ETA	VSP0140	Ron, Young	QiaAMP mini RNA	5/20/20	47	9.36E+04				200720_M03249_0076_000000000-J78FF	Hospitalized									
+262no-q1	262	UPHS	05/15/2020		NP-OP	VSP0141	Ron, Young	QiaAMP mini RNA	5/20/20	47	1.86E+04				200720_M03249_0076_000000000-J78FF	Hospitalized									
+263e-q1	263	UPHS	05/15/2020		ETA	VSP0142	Ron, Young	QiaAMP mini RNA	5/20/20	47	4.38E+04				200720_M03249_0076_000000000-J78FF	Hospitalized									
+263no-q1	263	UPHS	05/15/2020		NP-OP	VSP0143	Ron, Young	QiaAMP mini RNA	5/20/20	47	1.72E+05				200626_M03249_0070_000000000-CRD4J	Hospitalized									
+237s-q3	237	UPHS	05/18/2020		Saliva	VSP0144	Ron, Young	QiaAMP mini RNA	5/20/20	47	4.38E+02					Hospitalized									
+248e-q1	248	UPHS	05/18/2020		ETA	VSP0145	Ron, Young	QiaAMP mini RNA	5/20/20	47	1.12E+03					Hospitalized									
+248e-t	248	UPHS	05/18/2020		ETA	VSP0146	Ron, Young	Traditional Trizol	5/20/20	47	3.06E+03					Hospitalized									
+248e-tc	248	UPHS	05/18/2020		ETA	VSP0147	Ron, Young	Trizol + Carrier RNA	5/20/20	47	7.55E+03					Hospitalized									
+263no-q2	263	UPHS	05/18/2020		NP-OP	VSP0148	Ron, Young	QiaAMP mini RNA	5/20/20	47	2.77E+03				200720_M03249_0076_000000000-J78FF	Hospitalized									
+264s-q1	264	UPHS	05/18/2020		Saliva	VSP0149	Ron, Young	QiaAMP mini RNA	5/20/20	47	undetermined					Hospitalized									
+237s-q	237	UPHS	05/20/2020		Saliva	VSP0150	Ron, Young	QiaAMP mini RNA	5/27/20	47	2.67E+01					Hospitalized									
+248e-t	248	UPHS	05/20/2020		ETA	VSP0151	Ron, Young	Traditional Trizol	5/27/20	47	1.45E+02					Hospitalized									
+248e-tc	248	UPHS	05/20/2020		ETA	VSP0152	Ron, Young	Trizol + Carrier RNA	5/27/20	47	1.90E+02					Hospitalized									
+248e-q	248	UPHS	05/20/2020		ETA	VSP0153	Ron, Young	QiaAMP mini RNA	5/27/20	47	4.12E+02					Hospitalized									
+260s-q	260	UPHS	05/20/2020		Saliva	VSP0154	Ron, Young	QiaAMP mini RNA	5/27/20	47	undetermined					Hospitalized									
+266no-q	266	UPHS	05/20/2020		NP-OP	VSP0155	Ron, Young	QiaAMP mini RNA	5/27/20	47	1.70E+04				200626_M03249_0070_000000000-CRD4J, 200824_M03249_0087_000000000-JB8CJ	Hospitalized									
+252e-t	252	UPHS	05/22/2020		ETA	VSP0156	Ron, Young	Traditional Trizol	5/27/20	47	undetermined					Hospitalized									
+252e-tc	252	UPHS	05/22/2020		ETA	VSP0157	Ron, Young	Trizol + Carrier RNA	5/27/20	47	undetermined					Hospitalized									
+252e-q	252	UPHS	05/22/2020		ETA	VSP0158	Ron, Young	QiaAMP mini RNA	5/27/20	47	undetermined					Hospitalized									
+264e-t	264	UPHS	05/22/2020		ETA	VSP0159	Ron, Young	Traditional Trizol	5/27/20	47	2.01E+01					Hospitalized									
+264e-tc	264	UPHS	05/22/2020		ETA	VSP0160	Ron, Young	Trizol + Carrier RNA	5/27/20	47	3.35E+01					Hospitalized									
+264e-q	264	UPHS	05/22/2020		ETA	VSP0161	Ron, Young	QiaAMP mini RNA	5/27/20	47	4.87E+01					Hospitalized									
+264no-q	264	UPHS	05/22/2020		NP-OP	VSP0162	Ron, Young	QiaAMP mini RNA	5/27/20	47	4.13E+01					Hospitalized									
+266no-q	266	UPHS	05/22/2020		NP-OP	VSP0163	Ron, Young	QiaAMP mini RNA	5/27/20	47	1.53E+06				200626_M03249_0070_000000000-CRD4J, 200824_M03249_0087_000000000-JB8CJ	Hospitalized									
+268no-q	268	UPHS	05/22/2020		NP-OP	VSP0164	Ron, Young	QiaAMP mini RNA	5/27/20	47	undetermined					Hospitalized									
+268s-q	268	UPHS	05/22/2020		Saliva	VSP0165	Ron, Young	QiaAMP mini RNA	5/27/20	47	undetermined					Hospitalized									
+269no-q	269	UPHS	05/22/2020		NP-OP	VSP0166	Ron, Young	QiaAMP mini RNA	5/27/20	47	3.86E+04				200720_M03249_0076_000000000-J78FF	Hospitalized									
+242e-t	242	UPHS	05/27/2020		ETA	VSP0167	Ron, Young	Traditional Trizol	6/5/20	47	1.66E+02					Hospitalized									
+242e-tc	242	UPHS	05/27/2020		ETA	VSP0168	Ron, Young	Trizol + Carrier RNA	6/5/20	47	3.48E+02					Hospitalized									
+242e-q	242	UPHS	05/27/2020		ETA	VSP0169	Ron, Young	QiaAMP mini RNA	6/5/20	47	4.85E+02				200824_M03249_0087_000000000-JB8CJ	Hospitalized									
+255e-t	255	UPHS	05/27/2020		ETA	VSP0170	Ron, Young	Traditional Trizol	6/5/20	47	undetermined					Hospitalized									
+255e-tc	255	UPHS	05/27/2020		ETA	VSP0171	Ron, Young	Trizol + Carrier RNA	6/5/20	47	undetermined					Hospitalized									
+255e-q	255	UPHS	05/27/2020		ETA	VSP0172	Ron, Young	QiaAMP mini RNA	6/5/20	47	undetermined					Hospitalized									
+261s-q	261	UPHS	05/27/2020		Saliva	VSP0173	Ron, Young	QiaAMP mini RNA	6/5/20	47	undetermined					Hospitalized									
+269e-t	269	UPHS	05/27/2020		ETA	VSP0174	Ron, Young	Traditional Trizol	6/5/20	47	1.16E+05					Hospitalized									
+269e-tc	269	UPHS	05/27/2020		ETA	VSP0175	Ron, Young	Trizol + Carrier RNA	6/5/20	47	4.20E+05					Hospitalized									
+269e-q	269	UPHS	05/27/2020		ETA	VSP0176	Ron, Young	QiaAMP mini RNA	6/5/20	47	1.66E+05				200626_M03249_0070_000000000-CRD4J	Hospitalized									
+269no-q	269	UPHS	05/27/2020		NP-OP	VSP0177	Ron, Young	QiaAMP mini RNA	6/5/20	47	5.97E+01				200626_M03249_0070_000000000-CRD4J, 200720_M03249_0076_000000000-J78FF	Hospitalized									
+270no-q	270	UPHS	05/27/2020		NP-OP	VSP0178	Ron, Young	QiaAMP mini RNA	6/5/20	47	undetermined					Hospitalized									
+272no-q	272	UPHS	05/27/2020		NP-OP	VSP0179	Ron, Young	QiaAMP mini RNA	6/5/20	47	1.45E+04				200618_M03249_0069_000000000-J3NJJ	Hospitalized									
+1	222-TCE	UPHS	04/17/2020		NP	VSP0180	Yize (Henry) Li		09/09/20		9.83E+09				200527_M03249_0066_000000000-J3R26	Hospitalized									
+2	222-TCE	UPHS	04/17/2020		OP	VSP0181	Yize (Henry) Li		8/18/20		3.02E+10				200527_M03249_0066_000000000-J3R26, 200824_M03249_0087_000000000-JB8CJ	Hospitalized									
+3	222-TCE	UPHS	04/20/2020		OP	VSP0182	Yize (Henry) Li		8/18/20		2.65E+10				200527_M03249_0066_000000000-J3R26, 200824_M03249_0087_000000000-JB8CJ	Hospitalized									
+4	223-TCE	UPHS	04/17/2020		OP	VSP0183	Yize (Henry) Li		09/09/20		8.44E+09				200527_M03249_0066_000000000-J3R26	Hospitalized									
+5	211-TCE	UPHS	04/08/2020		NP	VSP0184	Yize (Henry) Li		09/09/20		2.46E+09				200527_M03249_0066_000000000-J3R26, 200720_M03249_0076_000000000-J78FF	Hospitalized									
+6	211-TCE	UPHS	04/13/2020		OP	VSP0185	Yize (Henry) Li		09/09/20		3.48E+09				200527_M03249_0066_000000000-J3R26	Hospitalized									
+7	211-TCE	UPHS	04/13/2020		ETA	VSP0186	Yize (Henry) Li		09/09/20		2.75E+09				200527_M03249_0066_000000000-J3R26	Hospitalized									
+228e-q	228	UPHS	05/29/2020		ETA	VSP0187	Ron, Young	QiaAMP mini RNA	6/5/20	47	6.02E+01				200618_M03249_0069_000000000-J3NJJ, 200824_M03249_0087_000000000-JB8CJ, 200720_M03249_0076_000000000-J78FF	Hospitalized									
+228no-q	228	UPHS	05/29/2020		NP-OP	VSP0188	Ron, Young	QiaAMP mini RNA	6/5/20	47	2.04E+03				200618_M03249_0069_000000000-J3NJJ, 200713_M03249_0074_000000000-J77FR, 200824_M03249_0087_000000000-JB8CJ	Hospitalized									
+228s-q	228	UPHS	05/29/2020		Saliva	VSP0189	Ron, Young	QiaAMP mini RNA	6/5/20	47	8.51E+04				200618_M03249_0069_000000000-J3NJJ	Hospitalized									
+248e-q	248	UPHS	05/29/2020		ETA	VSP0190	Ron, Young	QiaAMP mini RNA	6/5/20	47	undetermined					Hospitalized									
+261e-q	261	UPHS	05/29/2020		ETA	VSP0191	Ron, Young	QiaAMP mini RNA	6/5/20	47	8.33E+01					Hospitalized									
+263e-q	263	UPHS	05/29/2020		ETA	VSP0192	Ron, Young	QiaAMP mini RNA	6/5/20	47	undetermined					Hospitalized									
+271no-q	271	UPHS	05/29/2020		NP-OP	VSP0193	Ron, Young	QiaAMP mini RNA	6/5/20	47	undetermined					Hospitalized									
+271s-q	271	UPHS	05/29/2020		Saliva	VSP0194	Ron, Young	QiaAMP mini RNA	6/5/20	47	undetermined					Hospitalized									
+272e-q	272	UPHS	05/29/2020		ETA	VSP0195	Ron, Young	QiaAMP mini RNA	6/5/20	47	1.53E+06				200618_M03249_0069_000000000-J3NJJ	Hospitalized									
+272no-q	272	UPHS	05/29/2020		NP-OP	VSP0196	Ron, Young	QiaAMP mini RNA	6/5/20	47	1.43E+04				200618_M03249_0069_000000000-J3NJJ	Hospitalized									
+255e-q	255	UPHS	06/08/2020		ETA	VSP0197	Ron, Young	QiaAMP mini RNA	6/17/20	47	undetermined					Hospitalized									
+261e-q	261	UPHS	06/08/2020		ETA	VSP0198	Ron, Young	QiaAMP mini RNA	6/17/20	47	4.62E+01					Hospitalized									
+263e-q	263	UPHS	06/08/2020		ETA	VSP0199	Ron, Young	QiaAMP mini RNA	6/17/20	47	undetermined					Hospitalized									
+269e-q	269	UPHS	06/08/2020		ETA	VSP0200	Ron, Young	QiaAMP mini RNA	6/17/20	47	1.56E+02				200720_M03249_0076_000000000-J78FF	Hospitalized									
+275no-q	275	UPHS	06/08/2020		NP-OP	VSP0201	Ron, Young	QiaAMP mini RNA	6/17/20	47	undetermined					Hospitalized									
+269e-q	269	UPHS	06/12/2020		ETA	VSP0202	Ron, Young	QiaAMP mini RNA	6/17/20	47	1.63E+04				200626_M03249_0070_000000000-CRD4J	Hospitalized									
+275no-q	275	UPHS	06/12/2020		NP-OP	VSP0203	Ron, Young	QiaAMP mini RNA	6/17/20	47	undetermined					Hospitalized									
+277no-q	277	UPHS	06/12/2020		NP-OP	VSP0204	Ron, Young	QiaAMP mini RNA	6/17/20	47	undetermined					Hospitalized									
+278no-q	278	UPHS	06/12/2020		NP-OP	VSP0205	Ron, Young	QiaAMP mini RNA	6/17/20	47	undetermined					Hospitalized									
+279no-q	279	UPHS	06/12/2020		NP-OP	VSP0206	Ron, Young	QiaAMP mini RNA	6/17/20	47	5.47E+01				200720_M03249_0076_000000000-J78FF	Hospitalized									
+272e-q	272	UPHS	06/15/2020		ETA	VSP0207	Ron, Young	QiaAMP mini RNA	6/17/20	47	1.60E+01					Hospitalized									
+280no-q	280	UPHS	06/15/2020		NP-OP	VSP0208	Ron, Young	QiaAMP mini RNA	6/17/20	47	undetermined					Hospitalized									
+205	205	UPHS	06/15/2020		Unk	VSP0209				0	N/A				200618_M03249_0069_000000000-J3NJJ	Hospitalized									
+297	297	UPHS	06/15/2020		Unk	VSP0210				0	N/A				200618_M03249_0069_000000000-J3NJJ	Hospitalized									
+277no-q	277	UPHS	06/17/2020		NP-OP	VSP0211	Ron, Young	QiaAMP mini RNA	6/26/20	47	undetermined					Hospitalized									
+282e-q	282	UPHS	06/17/2020		ETA	VSP0212	Ron, Young	QiaAMP mini RNA	6/26/20	47	undetermined					Hospitalized									
+282no-q	282	UPHS	06/17/2020		NP-OP	VSP0213	Ron, Young	QiaAMP mini RNA	6/26/20	47	undetermined					Hospitalized									
+283no-q	283	UPHS	06/17/2020		NP-OP	VSP0214	Ron, Young	QiaAMP mini RNA	6/26/20	47	undetermined					Hospitalized									
+284no-q	284	UPHS	06/17/2020		NP-OP	VSP0215	Ron, Young	QiaAMP mini RNA	6/26/20	47	4.81E+01					Hospitalized									
+285no-q	285	UPHS	06/17/2020		NP-OP	VSP0216	Ron, Young	QiaAMP mini RNA	6/26/20	47	undetermined					Hospitalized									
+282no-q	282	UPHS	06/22/2020		NP-OP	VSP0217	Ron, Young	QiaAMP mini RNA	6/26/20	47	undetermined					Hospitalized									
+283no-q	283	UPHS	06/22/2020		NP-OP	VSP0218	Ron, Young	QiaAMP mini RNA	6/26/20	47	undetermined					Hospitalized									
+285no-q	285	UPHS	06/22/2020		NP-OP	VSP0219	Ron, Young	QiaAMP mini RNA	6/26/20	47	undetermined					Hospitalized									
+287no-q	287	UPHS	06/22/2020		NP-OP	VSP0220	Ron, Young	QiaAMP mini RNA	6/26/20	47	undetermined					Hospitalized									
+288no-q	288	UPHS	06/22/2020		NP-OP	VSP0221	Ron, Young	QiaAMP mini RNA	6/26/20	47	undetermined					Hospitalized									
+286no-q	286	UPHS	06/24/2020		NP-OP	VSP0222	Ron, Young	QiaAMP mini RNA	6/26/20	47	undetermined					Hospitalized									
+287no-q	287	UPHS	06/24/2020		NP-OP	VSP0223	Ron, Young	QiaAMP mini RNA	6/26/20	47	undetermined					Hospitalized									
+288no-q	288	UPHS	06/24/2020		NP-OP	VSP0224	Ron, Young	QiaAMP mini RNA	6/26/20	47	undetermined					Hospitalized									
+286no-q	286	UPHS	06/26/2020		NP-OP	VSP0225	Ron, Young	QiaAMP mini RNA	7/15/20	47	undetermined					Hospitalized									
+288e-q	288	UPHS	06/26/2020		ETA	VSP0226	Ron, Young	QiaAMP mini RNA	7/15/20	47	undetermined					Hospitalized									
+288no-q	288	UPHS	06/26/2020		NP-OP	VSP0227	Ron, Young	QiaAMP mini RNA	7/15/20	47	undetermined					Hospitalized									
+289no-q	289	UPHS	06/26/2020		NP-OP	VSP0228	Ron, Young	QiaAMP mini RNA	7/15/20	47	undetermined					Hospitalized									
+288e-q	288	UPHS	06/29/2020		ETA	VSP0229	Ron, Young	QiaAMP mini RNA	7/15/20	47	undetermined					Hospitalized									
+290no-q	290	UPHS	06/29/2020		NP-OP	VSP0230	Ron, Young	QiaAMP mini RNA	7/15/20	47	2.35E+03				200725_M03249_0079_000000000-J2J3B, 200824_M03249_0087_000000000-JB8CJ, 200725_M03249_0079_000000000-J2J3B	Hospitalized									
+291no-q	291	UPHS	06/29/2020		NP-OP	VSP0231	Ron, Young	QiaAMP mini RNA	7/15/20	47	undetermined					Hospitalized									
+288e-q	288	UPHS	07/01/2020		ETA	VSP0232	Ron, Young	QiaAMP mini RNA	7/15/20	47	undetermined					Hospitalized									
+290no-q	290	UPHS	07/01/2020		NP-OP	VSP0233	Ron, Young	QiaAMP mini RNA	7/15/20	47	5.58E+03				200824_M03249_0087_000000000-JB8CJ, 200725_M03249_0079_000000000-J2J3B	Hospitalized									
+292no-q	292	UPHS	07/01/2020		NP-OP	VSP0234	Ron, Young	QiaAMP mini RNA	7/15/20	47	undetermined					Hospitalized									
+293no-q	293	UPHS	07/01/2020		NP-OP	VSP0235	Ron, Young	QiaAMP mini RNA	7/15/20	47	undetermined					Hospitalized									
+297no-q	297	UPHS	07/08/2020		NP-OP	VSP0236	Ron, Young	QiaAMP mini RNA	7/15/20	47	undetermined					Hospitalized									
+298no-q	298	UPHS	07/08/2020		NP-OP	VSP0237	Ron, Young	QiaAMP mini RNA	7/15/20	47	undetermined					Hospitalized									
+299no-q	299	UPHS	07/08/2020		NP-OP	VSP0238	Ron, Young	QiaAMP mini RNA	7/15/20	47	undetermined					Hospitalized									
+298no-q	298	UPHS	07/10/2020		NP-OP	VSP0239	Ron, Young	QiaAMP mini RNA	7/15/20	47	undetermined					Hospitalized									
+299no-q	299	UPHS	07/10/2020		NP-OP	VSP0240	Ron, Young	QiaAMP mini RNA	7/15/20	47	undetermined					Hospitalized									
+301no-q	301	UPHS	07/10/2020		NP-OP	VSP0241	Ron, Young	QiaAMP mini RNA	7/15/20	47	undetermined					Hospitalized									
+300no-q	300	UPHS	07/10/2020		NP-OP	VSP0242	Ron, Young	QiaAMP mini RNA	7/22/20	47	undetermined				200824_M03249_0087_000000000-JB8CJ	Hospitalized									
+300s-q	300	UPHS	07/10/2020		Saliva	VSP0243	Ron, Young	QiaAMP mini RNA	7/22/20	47	undetermined				200824_M03249_0087_000000000-JB8CJ	Hospitalized									
+300no-q	300	UPHS	07/13/2020		NP-OP	VSP0244	Ron, Young	QiaAMP mini RNA	7/22/20	47	undetermined				200725_M03249_0079_000000000-J2J3B, 200824_M03249_0087_000000000-JB8CJ, 200725_M03249_0079_000000000-J2J3B	Hospitalized									
+301no-q	301	UPHS	07/13/2020		NP-OP	VSP0245	Ron, Young	QiaAMP mini RNA	7/22/20	47	undetermined					Hospitalized									
+303no-q	303	UPHS	07/13/2020		NP-OP	VSP0246	Ron, Young	QiaAMP mini RNA	7/22/20	47	7.51E+00				200725_M03249_0079_000000000-J2J3B, 200725_M03249_0079_000000000-J2J3B	Hospitalized									
+303s-q	303	UPHS	07/13/2020		Saliva	VSP0247	Ron, Young	QiaAMP mini RNA	7/22/20	47	3.94E+02					Hospitalized									
+304no-q	304	UPHS	07/13/2020		NP-OP	VSP0248	Ron, Young	QiaAMP mini RNA	7/22/20	47	undetermined				200725_M03249_0079_000000000-J2J3B, 200725_M03249_0079_000000000-J2J3B	Hospitalized									
+304s-q	304	UPHS	07/13/2020		Saliva	VSP0249	Ron, Young	QiaAMP mini RNA	7/22/20	47	1.19E+02					Hospitalized									
+303no-q	303	UPHS	07/15/2020		NP-OP	VSP0250	Ron, Young	QiaAMP mini RNA	7/22/20	47	undetermined					Hospitalized									
+303s-q	303	UPHS	07/15/2020		Saliva	VSP0251	Ron, Young	QiaAMP mini RNA	7/22/20	47	1.57E+01					Hospitalized									
+304no-q	304	UPHS	07/15/2020		NP-OP	VSP0252	Ron, Young	QiaAMP mini RNA	7/22/20	47	undetermined					Hospitalized									
+304s-q	304	UPHS	07/15/2020		Saliva	VSP0253	Ron, Young	QiaAMP mini RNA	7/22/20	47	undetermined					Hospitalized									
+305no-q	305	UPHS	07/15/2020		NP-OP	VSP0254	Ron, Young	QiaAMP mini RNA	7/22/20	47	undetermined				200725_M03249_0079_000000000-J2J3B, 200725_M03249_0079_000000000-J2J3B	Hospitalized									
+306no-q	306	UPHS	07/15/2020		NP-OP	VSP0255	Ron, Young	QiaAMP mini RNA	7/22/20	47	undetermined				200725_M03249_0079_000000000-J2J3B, 200725_M03249_0079_000000000-J2J3B	Hospitalized									
+307no-q	307	UPHS	07/17/20		NP-OP	VSP0256	Ron, Young	QiaAMP mini RNA	7/22/20	47	6.27E+01				200725_M03249_0079_000000000-J2J3B, 200725_M03249_0079_000000000-J2J3B	Hospitalized									
+307s-q	307	UPHS	07/17/20		Saliva	VSP0257	Ron, Young	QiaAMP mini RNA	7/22/20	47	7.60E+00					Hospitalized									
+308no-q	308	UPHS	07/20/20		NP-OP	VSP0258	Ron, Young	QiaAMP mini RNA	7/22/20	47	undetermined					Hospitalized									
+309no-q	309	UPHS	07/22/20		NP-OP	VSP0259	Ron, Young	QiaAMP mini RNA	8/17/20	37	9.02E-01					Hospitalized									
+272p	272	UPHS	6//17/20		Stool	VSP0260	Ron, Young		7/22/20	47	undetermined				200725_M03249_0079_000000000-J2J3B, 200725_M03249_0079_000000000-J2J3B	Hospitalized									
+288p	288	UPHS	6/26/20		Stool	VSP0261	Ron, Young		7/22/20	47	undetermined				200725_M03249_0079_000000000-J2J3B, 200725_M03249_0079_000000000-J2J3B	Hospitalized									
+A549-isolate8	266-TCE	UPHS	5/20/20		NP-OP	VSP0262	Yize (Henry) Li		09/09/20		1.17E+10				200824_M03249_0087_000000000-JB8CJ	Hospitalized									
+A549-isolate9	266-TCE	UPHS	5/22/20		NP-OP	VSP0263	Yize (Henry) Li		09/09/20		7.51E+09				200824_M03249_0087_000000000-JB8CJ	Hospitalized									
+A549-isolate10	269-TCE	UPHS	5/22/2020		NP-OP	VSP0264	Yize (Henry) Li		09/09/20		6.20E+09					Hospitalized									
+312no-q	312	UPHS	07/27/2020		NP-OP	VSP0265	Ron, Young	QiaAMP mini RNA	8/17/20	37	7.96E+03					Hospitalized									
+312s-q	312	UPHS	07/27/2020		Saliva	VSP0266	Ron, Young	QiaAMP mini RNA	8/17/20	37	6.68E+04	Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Hospitalized									
+313no-q	313	UPHS	07/27/2020		NP-OP	VSP0267	Ron, Young	QiaAMP mini RNA	8/17/20	37	4.22E+01					Hospitalized									
+312no-q	312	UPHS	07/29/2020		NP-OP	VSP0268	Ron, Young	QiaAMP mini RNA	8/17/20	37	3.65E+02					Hospitalized									
+312s-q	312	UPHS	07/29/2020		Saliva	VSP0269	Ron, Young	QiaAMP mini RNA	8/17/20	37	2.98E+00					Hospitalized									
+314no-q	314	UPHS	07/29/2020		NP-OP	VSP0270	Ron, Young	QiaAMP mini RNA	8/17/20	37	9.11E-01					Hospitalized									
+314s-q	314	UPHS	07/29/2020		Saliva	VSP0271	Ron, Young	QiaAMP mini RNA	8/17/20	37	1.74E+02	Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Hospitalized									
+315no-q	315	UPHS	07/29/2020		NP-OP	VSP0272	Ron, Young	QiaAMP mini RNA	8/17/20	37	Undetermined					Hospitalized									
+317no-q	317	UPHS	08/03/2020		NP-OP	VSP0273	Ron, Young	QiaAMP mini RNA	8/17/20	37	8.03E+00					Hospitalized									
+317s-q	317	UPHS	08/03/2020		Saliva	VSP0274	Ron, Young	QiaAMP mini RNA	8/18/20	37	2.84E+01					Hospitalized									
+318no-q	318	UPHS	08/03/2020		NP-OP	VSP0275	Ron, Young	QiaAMP mini RNA	8/18/20	37	9.11E+00					Hospitalized									
+319no-q	319	UPHS	08/03/2020		NP-OP	VSP0276	Ron, Young	QiaAMP mini RNA	8/18/20	37	Undetermined					Hospitalized									
+319s-q	319	UPHS	08/03/2020		Saliva	VSP0277	Ron, Young	QiaAMP mini RNA	8/18/20	37	Undetermined					Hospitalized									
+318no-q	318	UPHS	08/05/2020		NP-OP	VSP0278	Ron, Young	QiaAMP mini RNA	8/18/20	37	1.66E+00					Hospitalized									
+319no-q	319	UPHS	08/05/2020		NP-OP	VSP0279	Ron, Young	QiaAMP mini RNA	8/18/20	37	Undetermined					Hospitalized									
+320no-q	320	UPHS	08/05/2020		NP-OP	VSP0280	Ron, Young	QiaAMP mini RNA	8/18/20	37	Undetermined					Hospitalized									
+321no-q	321	UPHS	08/05/2020		NP-OP	VSP0281	Ron, Young	QiaAMP mini RNA	8/18/20	37	Undetermined					Hospitalized									
+MisC01	MisC01	CHOP_Planet	06/01/2020		NP-OP	VSP0282	Paul Planet (CHOP)									Pediatric	Pediatric MIS-C study	PLANETP@EMAIL.CHOP.EDU							
+MisC02	MisC02	CHOP_Planet	06/01/2020		NP-OP	VSP0283	Paul Planet (CHOP)				2.85E+09					Pediatric	Pediatric MIS-C study	PLANETP@EMAIL.CHOP.EDU							
+MisC03	MisC03	CHOP_Planet	06/01/2020		NP-OP	VSP0284	Paul Planet (CHOP)				1.82E+09					Pediatric	Pediatric MIS-C study	PLANETP@EMAIL.CHOP.EDU							
+MisC04	MisC04	CHOP_Planet	06/01/2020		NP-OP	VSP0285	Paul Planet (CHOP)				41354157					Pediatric	Pediatric MIS-C study	PLANETP@EMAIL.CHOP.EDU							
+MisC05	MisC05	CHOP_Planet	06/01/2020		NP-OP	VSP0286	Paul Planet (CHOP)				11533122					Pediatric	Pediatric MIS-C study	PLANETP@EMAIL.CHOP.EDU							
+MisC06	MisC06	CHOP_Planet	06/01/2020		NP-OP	VSP0287	Paul Planet (CHOP)				11072554					Pediatric	Pediatric MIS-C study	PLANETP@EMAIL.CHOP.EDU							
+MisC07	MisC07	CHOP_Planet	06/01/2020		NP-OP	VSP0288	Paul Planet (CHOP)				3734834.7					Pediatric	Pediatric MIS-C study	PLANETP@EMAIL.CHOP.EDU							
+MisC08	MisC08	CHOP_Planet	06/01/2020		NP-OP	VSP0289	Paul Planet (CHOP)				565213.32					Pediatric	Pediatric MIS-C study	PLANETP@EMAIL.CHOP.EDU							
+MisC09	MisC09	CHOP_Planet	06/01/2020		NP-OP	VSP0290	Paul Planet (CHOP)				147279.26					Pediatric	Pediatric MIS-C study	PLANETP@EMAIL.CHOP.EDU							
+MisC10	MisC10	CHOP_Planet	06/01/2020		NP-OP	VSP0291	Paul Planet (CHOP)				19723.558					Pediatric	Pediatric MIS-C study	PLANETP@EMAIL.CHOP.EDU							
+MisC11	MisC11	CHOP_Planet	06/01/2020		NP-OP	VSP0292	Paul Planet (CHOP)				13760.781					Pediatric	Pediatric MIS-C study	PLANETP@EMAIL.CHOP.EDU							
+MisC12	MisC12	CHOP_Planet	06/01/2020		NP-OP	VSP0293	Paul Planet (CHOP)				5035.7585					Pediatric	Pediatric MIS-C study	PLANETP@EMAIL.CHOP.EDU							
+MisC13	MisC13	CHOP_Planet	06/01/2020		NP-OP	VSP0294	Paul Planet (CHOP)				3005.2189					Pediatric	Pediatric MIS-C study	PLANETP@EMAIL.CHOP.EDU							
+MisC14	MisC14	CHOP_Planet	06/01/2020		NP-OP	VSP0295	Paul Planet (CHOP)				1565.6341					Pediatric	Pediatric MIS-C study	PLANETP@EMAIL.CHOP.EDU							
+MisC15	MisC15	CHOP_Planet	06/01/2020		NP-OP	VSP0296	Paul Planet (CHOP)				1063.0377					Pediatric	Pediatric MIS-C study	PLANETP@EMAIL.CHOP.EDU							
+MisC16	MisC16	CHOP_Planet	06/01/2020		NP-OP	VSP0297	Paul Planet (CHOP)				430.74306					Pediatric	Pediatric MIS-C study	PLANETP@EMAIL.CHOP.EDU							
+315no-q	315	UPHS	07/31/2020		NP-OP	VSP0298	Ron, Young	QiaAMP mini RNA	8/17/20	37	Undetermined					Hospitalized									
+316no-q	316	UPHS	07/31/2020		NP-OP	VSP0299	Ron, Young	QiaAMP mini RNA	8/17/20	37	Undetermined					Hospitalized									
+317no-q	317	UPHS	07/31/2020		NP-OP	VSP0300	Ron, Young	QiaAMP mini RNA	8/17/20	37	3.47E+01					Hospitalized									
+317s-q	317	UPHS	08/07/2020		Saliva	VSP0301	Ron, Young	QiaAMP mini RNA	8/18/20	37	3.01E+01					Hospitalized									
+318e-q	318	UPHS	08/07/2020		ETA	VSP0302	Ron, Young	QiaAMP mini RNA	8/18/20	37	6.98E+01					Hospitalized									
+319no-q	319	UPHS	08/07/2020		NP-OP	VSP0303	Ron, Young	QiaAMP mini RNA	8/18/20	37	1.75E+00					Hospitalized									
+319s-q	319	UPHS	08/07/2020		Saliva	VSP0304	Ron, Young	QiaAMP mini RNA	8/19/20	37	Undetermined					Hospitalized									
+321no-q	321	UPHS	08/07/2020		NP-OP	VSP0305	Ron, Young	QiaAMP mini RNA	8/19/20	37	Undetermined					Hospitalized									
+322no-q	322	UPHS	08/07/2020		NP-OP	VSP0306	Ron, Young	QiaAMP mini RNA	8/19/20	37	Undetermined					Hospitalized									
+323no-q	323	UPHS	08/07/2020		NP-OP	VSP0307	Ron, Young	QiaAMP mini RNA	8/19/20	37	Undetermined					Hospitalized									
+322no-q	322	UPHS	08/10/2020		NP-OP	VSP0308	Ron, Young	QiaAMP mini RNA	8/19/20	37	Undetermined					Hospitalized									
+324no-q	324	UPHS	08/10/2020		NP-OP	VSP0309	Ron, Young	QiaAMP mini RNA	8/19/20	37	Undetermined					Hospitalized									
+318e-q	318	UPHS	08/12/2020		ETA	VSP0310	Ron, Young	QiaAMP mini RNA	8/19/20	37	3.93E+00					Hospitalized									
+324no-q	324	UPHS	08/12/2020		NP-OP	VSP0311	Ron, Young	QiaAMP mini RNA	8/19/20	37	Undetermined					Hospitalized									
+326no-q	326	UPHS	08/12/2020		NP-OP	VSP0312	Ron, Young	QiaAMP mini RNA	8/19/20	37	Undetermined					Hospitalized									
+328no-q	328	UPHS	08/14/2020		NP-OP	VSP0313	Ron, Young	QiaAMP mini RNA	8/19/20	37	1.80E+01					Hospitalized									
+328s-q	328	UPHS	08/14/2020		Saliva	VSP0314	Ron, Young	QiaAMP mini RNA	8/19/20	37	4.30E+01					Hospitalized									
+329no-q	329	UPHS	08/14/2020		NP-OP	VSP0315	Ron, Young	QiaAMP mini RNA	8/19/20	37	Undetermined					Hospitalized									
+328no-q	328	UPHS	08/17/2020		NP-OP	VSP0316	Ron, Young	QiaAMP mini RNA	9/11/20	37	1.23E+00					Hospitalized									
+328s-q	328	UPHS	08/17/2020		Saliva	VSP0317	Ron, Young	QiaAMP mini RNA	9/11/20	37	2.32E+01					Hospitalized									
+251no-q	251	UPHS	5/6/20		NP-OP	VSP0318	Ron, Young	Traditional Trizol	09/09/20	37	1.78E+05				200824_M03249_0087_000000000-JB8CJ	Hospitalized									
+266no-q	266	UPHS	5/20/20		NP-OP	VSP0319	Ron, Young	QiaAMP mini RNA	09/09/20	37	2.87E+04				200824_M03249_0087_000000000-JB8CJ	Hospitalized									
+266no-q	266	UPHS	5/22/20		NP-OP	VSP0320	Ron, Young	QiaAMP mini RNA	09/09/20	37	1.15E+06				200824_M03249_0087_000000000-JB8CJ	Hospitalized									
+330no-q	330	UPHS	08/24/2020		NP-OP	VSP0321	Ron, Young	QiaAMP mini RNA	9/11/20	37	Undetermined					Hospitalized									
+P01s-q	P01	UPHS	08/26/2020		Saliva	VSP0323	Aoife	QiaAMP mini RNA	9/11/20	37	Undetermined					Hospitalized									
+330no-q	330	UPHS	08/26/2020		NP-OP	VSP0324	Ron, Young	QiaAMP mini RNA	9/11/20	37	Undetermined					Hospitalized									
+333e-q	333	UPHS	08/26/2020		ETA	VSP0325	Ron, Young	QiaAMP mini RNA	9/11/20	37	Undetermined					Hospitalized									
+333no-q	333	UPHS	08/26/2020		NP-OP	VSP0326	Ron, Young	QiaAMP mini RNA	9/11/20	37	Undetermined					Hospitalized									
+334no-q	334	UPHS	08/26/2020		NP-OP	VSP0327	Ron, Young	QiaAMP mini RNA	9/11/20	37	1.01E+03	Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Hospitalized									
+334s-q	334	UPHS	08/26/2020		Saliva	VSP0328	Ron, Young	QiaAMP mini RNA	9/11/20	37	2.91E+02					Hospitalized									
+JB8CJ	JB8CJ	seqRunControl	08/24/2020		WaterControl	VSP9999	Pascha																		
+J327N	J327N	seqRunControl	08/05/2020		WaterControl	VSP9998	Pascha																		
+J2J3B	J2J3B	seqRunControl	07/25/2020		WaterControl	VSP9997	Pascha																		
+J78FF	J78FF	seqRunControl	07/20/2020		WaterControl	VSP9996	Pascha																		
+J77FR	J77FR	seqRunControl	07/13/2020		WaterControl	VSP9995	Pascha																		
+J77FG	J77FG	seqRunControl	07/03/2020		WaterControl	VSP9994	Pascha																		
+CRD4J	CRD4J	seqRunControl	06/26/2020		WaterControl	VSP9993	Pascha																		
+J3NJJ	J3NJJ	seqRunControl	06/18/2020		WaterControl	VSP9992	Pascha																		
+J37GK	J37GK	seqRunControl	06/13/2020		WaterControl	VSP9991	Pascha																		
+J37K3	J37K3	seqRunControl	05/18/2020		H2O_RT-1a	VSP9989	Pascha																		
+J37K3	J37K3	seqRunControl	05/18/2020		H20_PCR-1a	VSP9988	Pascha																		
+J37K3	J37K3	seqRunControl	05/18/2020		H2O_RT-1b	VSP9987	Pascha																		
+J37K3	J37K3	seqRunControl	05/18/2020		H20_PCR-1b	VSP9986	Pascha																		
+J3R26	J3R26	seqRunControl	05/27/2020		MockR-1a	VSP9985	Pascha																		
+J3R26	J3R26	seqRunControl	05/27/2020		MockR-1b	VSP9984	Pascha																		
+J3R26	J3R26	seqRunControl	05/27/2020		H2O-1a	VSP9983	Pascha																		
+J3R26	J3R26	seqRunControl	05/27/2020		H2O-1b	VSP9982	Pascha																		
+J37ML	J37ML	seqRunControl	06/09/2020		H2O-1a	VSP9981	Pascha																		
+J37ML	J37ML	seqRunControl	06/09/2020		H2O-1b	VSP9980	Pascha																		
+333no-q	333	UPHS	08/28/2020		NP-OP	VSP0329	Ron, Young	QiaAMP mini RNA	9/11/20	37	Undetermined					Hospitalized									
+334no-q	334	UPHS	08/28/2020		NP-OP	VSP0330	Ron, Young	QiaAMP mini RNA	9/11/20	37	7.02E-01					Hospitalized									
+334s-q	334	UPHS	08/28/2020		Saliva	VSP0331	Ron, Young	QiaAMP mini RNA	9/11/20	37	2.16E+01					Hospitalized									
+335no-q	335	UPHS	08/28/2020		NP-OP	VSP0332	Ron, Young	QiaAMP mini RNA	9/11/20	37	Undetermined					Hospitalized									
+335s-q	335	UPHS	08/28/2020		Saliva	VSP0333	Ron, Young	QiaAMP mini RNA	9/11/20	37	Undetermined					Hospitalized									
+336no-q	336	UPHS	08/28/2020		NP-OP	VSP0334	Ron, Young	QiaAMP mini RNA	9/11/20	37	6.49E+01					Hospitalized									
+332e-q	332	UPHS	08/31/2020		ETA	VSP0335	Ron, Young	QiaAMP mini RNA	9/11/20	37	Undetermined					Hospitalized									
+337no-q	337	UPHS	08/31/2020		NP-OP	VSP0336	Ron, Young	QiaAMP mini RNA	9/11/20	37	Undetermined					Hospitalized									
+337s-q	337	UPHS	08/31/2020		Saliva	VSP0337	Ron, Young	QiaAMP mini RNA	9/11/20	37	Undetermined					Hospitalized									
+330s-q	330	UPHS	09/02/2020		Saliva	VSP0338	Ron, Young	QiaAMP mini RNA	9/11/20	37	Undetermined					Hospitalized									
+332e-q	332	UPHS	09/02/2020		ETA	VSP0339	Ron, Young	QiaAMP mini RNA	9/11/20	37	Undetermined					Hospitalized									
+338s-q	338	UPHS	09/02/2020		Saliva	VSP0340	Ron, Young	QiaAMP mini RNA	9/11/20	37	Undetermined					Hospitalized									
+339no-q	339	UPHS	09/02/2020		NP-OP	VSP0341	Ron, Young	QiaAMP mini RNA	9/11/20	37	Undetermined					Hospitalized									
+339e-q	339	UPHS	09/02/2020		ETA	VSP0342	Ron, Young	QiaAMP mini RNA	9/11/20	37	Undetermined					Hospitalized									
+330s-q	330	UPHS	09/04/2020		Saliva	VSP0343	Ron, Young	QiaAMP mini RNA	9/14/20	37	Undetermined					Hospitalized									
+338s-q	338	UPHS	09/04/2020		Saliva	VSP0344	Ron, Young	QiaAMP mini RNA	9/14/20	37	Undetermined					Hospitalized									
+339no-q	339	UPHS	09/04/2020		NP-OP	VSP0345	Ron, Young	QiaAMP mini RNA	9/14/20	37	Undetermined					Hospitalized									
+341s-q	341	UPHS	09/04/2020		Saliva	VSP0346	Ron, Young	QiaAMP mini RNA	9/14/20	37	Undetermined					Hospitalized									
+341s-q	341	UPHS	09/09/2020		Saliva	VSP0347	Ron, Young	QiaAMP mini RNA	9/14/20	37	Undetermined					Hospitalized									
+342no-q	342	UPHS	09/09/2020		NP-OP	VSP0348	Ron, Young	QiaAMP mini RNA	9/14/20	37	Undetermined					Hospitalized									
+343no-q	343	UPHS	09/09/2020		NP-OP	VSP0349	Ron, Young	QiaAMP mini RNA	9/14/20	37	Undetermined					Hospitalized									
+333s-q	333	UPHS	09/11/2020		Saliva	VSP0350	Ron, Young	QiaAMP mini RNA	9/14/20	37	Undetermined					Hospitalized									
+339e-q	339	UPHS	09/11/2020		ETA	VSP0351	Ron, Young	QiaAMP mini RNA	9/14/20	37	1.19E+00					Hospitalized									
+342no-q	342	UPHS	09/11/2020		NP-OP	VSP0352	Ron, Young	QiaAMP mini RNA	9/14/20	37	Undetermined					Hospitalized									
+343no-q	343	UPHS	09/11/2020		NP-OP	VSP0353	Ron, Young	QiaAMP mini RNA	9/14/20	37	Undetermined					Hospitalized									
+347no-q	347	UPHS	09/14/2020		NP-OP	VSP0354	Ron, Young	QiaAMP mini RNA	10/08/20	37	Undetermined					Hospitalized									
+339e-q	339	UPHS	09/16/2020		ETA	VSP0355	Ron, Young	QiaAMP mini RNA	10/08/20	37	Undetermined					Hospitalized									
+346no-q	346	UPHS	09/16/2020		NP-OP	VSP0356	Ron, Young	QiaAMP mini RNA	10/08/20	37	5.52E+04	Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Hospitalized									
+346s-q	346	UPHS	09/16/2020		Saliva	VSP0357	Ron, Young	QiaAMP mini RNA	10/08/20	37	8.66E+02					Hospitalized									
+348e-q	348	UPHS	09/16/2020		ETA	VSP0358	Ron, Young	QiaAMP mini RNA	10/08/20	37	1.58E+05					Hospitalized									
+348no-q	348	UPHS	09/16/2020		NP-OP	VSP0359	Ron, Young	QiaAMP mini RNA	10/08/20	37	7.41E+05	Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Hospitalized									
+350s-q	350	UPHS	09/16/2020		Saliva	VSP0360	Ron, Young	QiaAMP mini RNA	10/08/20	37	Undetermined					Hospitalized									
+346s-q	346	UPHS	09/18/2020		Saliva	VSP0361	Ron, Young	QiaAMP mini RNA	10/08/20	37	8.74E+02					Hospitalized									
+348no-q	348	UPHS	09/18/2020		NP-OP	VSP0362	Ron, Young	QiaAMP mini RNA	10/08/20	37	5.04E+04					Hospitalized									
+350s-q	350	UPHS	09/18/2020		Saliva	VSP0363	Ron, Young	QiaAMP mini RNA	10/08/20	37	Undetermined					Hospitalized									
+351s-q	351	UPHS	09/18/2020		Saliva	VSP0364	Ron, Young	QiaAMP mini RNA	10/08/20	37	Undetermined					Hospitalized									
+339e-q	339	UPHS	09/21/2020		ETA	VSP0365	Ron, Young	QiaAMP mini RNA	10/14/20	37	Undetermined					Hospitalized									
+350s-q	350	UPHS	09/21/2020		Saliva	VSP0366	Ron, Young	QiaAMP mini RNA	10/08/20	37	Undetermined					Hospitalized									
+355no-q	355	UPHS	09/23/2020		NP-OP	VSP0367	Ron, Young	QiaAMP mini RNA	10/14/20	37	Undetermined					Hospitalized									
+332no-q	332	UPHS	09/25/2020		NP-OP	VSP0368	Ron, Young	QiaAMP mini RNA	10/14/20	37	Undetermined					Hospitalized									
+353no-q	353	UPHS	09/25/2020		NP-OP	VSP0369	Ron, Young	QiaAMP mini RNA	10/14/20	37	Undetermined					Hospitalized									
+356no-q	356	UPHS	09/25/2020		NP-OP	VSP0370	Ron, Young	QiaAMP mini RNA	10/14/20	37	Undetermined					Hospitalized									
+357e-q	357	UPHS	09/25/2020		Saliva	VSP0371	Ron, Young	QiaAMP mini RNA	10/14/20	37	Undetermined					Hospitalized									
+357no-q	357	UPHS	09/25/2020		NP-OP	VSP0372	Ron, Young	QiaAMP mini RNA	10/14/20	37	Undetermined					Hospitalized									
+350no-q	350	UPHS	09/28/2020		NP-OP	VSP0373	Ron, Young	QiaAMP mini RNA	10/14/20	37	Undetermined					Hospitalized									
+359no-q	359	UPHS	09/28/2020		NP-OP	VSP0374	Ron, Young	QiaAMP mini RNA	10/14/20	37	Undetermined					Hospitalized									
+360no-q	360	UPHS	09/28/2020		NP-OP	VSP0375	Ron, Young	QiaAMP mini RNA	10/14/20	37	Undetermined					Hospitalized									
+361no-q	361	UPHS	09/28/2020		NP-OP	VSP0376	Ron, Young	QiaAMP mini RNA	10/14/20	37	Undetermined					Hospitalized									
+358no-q	358	UPHS	09/30/2020		NP-OP	VSP0377	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined					Hospitalized									
+362no-q	362	UPHS	09/30/2020		NP-OP	VSP0378	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined					Hospitalized									
+363no-q	363	UPHS	09/30/2020		NP-OP	VSP0379	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined					Hospitalized									
+357e-q	357	UPHS	10/2/2020		ETA	VSP0380	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined					Hospitalized									
+364e-q	364	UPHS	10/2/2020		ETA	VSP0381	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined					Hospitalized									
+364no-q	364	UPHS	10/2/2020		NP-OP	VSP0382	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined					Hospitalized									
+365no-q	365	UPHS	10/2/2020		NP-OP	VSP0383	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined					Hospitalized									
+366no-q	366	UPHS	10/2/2020		NP-OP	VSP0384	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined					Hospitalized									
+357e-q	357	UPHS	10/5/2020		ETA	VSP0385	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined					Hospitalized									
+357no-q	357	UPHS	10/5/2020		NP-OP	VSP0386	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined					Hospitalized									
+367no-q	367	UPHS	10/5/2020		NP-OP	VSP0387	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined					Hospitalized									
+368no-q	368	UPHS	10/5/2020		NP-OP	VSP0388	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined					Hospitalized									
+353s-q	353	UPHS	10/7/2020		Saliva	VSP0389	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined					Hospitalized									
+369no-q	369	UPHS	10/7/2020		NP-OP	VSP0390	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined					Hospitalized									
+353s-q	353	UPHS	10/9/2020		Saliva	VSP0391	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined					Hospitalized									
+369e-q	369	UPHS	10/9/2020		ETA	VSP0392	Ron, Young	QiaAMP mini RNA	10/26/20	37	1.71E+04					Hospitalized									
+369no-q	369	UPHS	10/9/2020		NP-OP	VSP0393	Ron, Young	QiaAMP mini RNA	10/26/20	37	7.78E+04	Shantan (2/3/2020)			210208_M03249_0155_000000000-JHTMY	Hospitalized									
+371no-q	371	UPHS	10/9/2020		NP-OP	VSP0394	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined					Hospitalized									
+372no-q	372	UPHS	10/9/2020		NP-OP	VSP0395	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined					Hospitalized									
+369e-q	369	UPHS	10/12/2020		ETA	VSP0396	Ron, Young	QiaAMP mini RNA	10/26/20	37	1.89E+03					Hospitalized									
+369no-q	369	UPHS	10/12/2020		NP-OP	VSP0397	Ron, Young	QiaAMP mini RNA	10/26/20	37	1.04E+04					Hospitalized									
+371no-q	371	UPHS	10/12/2020		NP-OP	VSP0398	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined					Hospitalized									
+373no-q	373	UPHS	10/12/2020		NP-OP	VSP0399	Ron, Young	QiaAMP mini RNA	10/26/20	37	5.39E+05				210122_M03249_0146_000000000-JHV59	Hospitalized									
+369e-q	369	UPHS	10/14/2020		ETA	VSP0400	Ron, Young	QiaAMP mini RNA	10/26/20	37	9.83E+02					Hospitalized									
+371s-q	371	UPHS	10/14/2020		Saliva	VSP0401	Ron, Young	QiaAMP mini RNA	10/26/20	37	Undetermined					Hospitalized									
+373no-q	373	UPHS	10/14/2020		NP-OP	VSP0402	Ron, Young	QiaAMP mini RNA	10/26/20	37	1.36E+05					Hospitalized									
+375e-q	375	UPHS	10/14/2020		ETA	VSP0403	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined					Hospitalized									
+353s-q	353	UPHS	10/16/2020		Saliva	VSP0404	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined					Hospitalized									
+369e-q	369	UPHS	10/16/2020		ETA	VSP0405	Ron, Young	QiaAMP mini RNA	10/29/20	37	3.98E+02					Hospitalized									
+371s-q	371	UPHS	10/16/2020		Saliva	VSP0406	Ron, Young	QiaAMP mini RNA	10/29/20	37	2.81E+02				210122_M03249_0146_000000000-JHV59	Hospitalized									
+373no-q	373	UPHS	10/16/2020		NP-OP	VSP0407	Ron, Young	QiaAMP mini RNA	10/29/20	37	4.03E+04					Hospitalized									
+375e-q	375	UPHS	10/16/2020		ETA	VSP0408	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined					Hospitalized									
+377no-q	377	UPHS	10/16/2020		NP-OP	VSP0409	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined					Hospitalized									
+378no-q	378	UPHS	10/16/2020		NP-OP	VSP0410	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined					Hospitalized									
+341e-q	341	UPHS	10/19/2020		ETA	VSP0411	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined					Hospitalized									
+377no-q	377	UPHS	10/19/2020		NP-OP	VSP0412	Ron, Young	QiaAMP mini RNA	10/29/20	37	3.76E+00					Hospitalized									
+377s-q	377	UPHS	10/19/2020		Saliva	VSP0413	Ron, Young	QiaAMP mini RNA	10/29/20	37	1.58E+02				210122_M03249_0146_000000000-JHV59	Hospitalized									
+379no-q	379	UPHS	10/19/2020		NP-OP	VSP0414	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined					Hospitalized									
+379s-q	379	UPHS	10/19/2020		Saliva	VSP0415	Ron, Young	QiaAMP mini RNA	10/29/20	37	1.36E+02				210122_M03249_0146_000000000-JHV59	Hospitalized									
+380no-q	380	UPHS	10/19/2020		NP-OP	VSP0416	Ron, Young	QiaAMP mini RNA	10/29/20	37	5.84E+01					Hospitalized									
+380s-q	380	UPHS	10/19/2020		Saliva	VSP0417	Ron, Young	QiaAMP mini RNA	10/29/20	37	3.40E+01					Hospitalized									
+379no-q	379	UPHS	10/21/2020		NP-OP	VSP0418	Ron, Young	QiaAMP mini RNA	10/29/20	37	1.22E+01					Hospitalized									
+380no-q	380	UPHS	10/21/2020		NP-OP	VSP0419	Ron, Young	QiaAMP mini RNA	10/29/20	37	1.12E+02					Hospitalized									
+380s-q	380	UPHS	10/21/2020		Saliva	VSP0420	Ron, Young	QiaAMP mini RNA	10/29/20	37	3.38E+04					Hospitalized									
+381no-q	381	UPHS	10/21/2020		NP-OP	VSP0421	Ron, Young	QiaAMP mini RNA	10/29/20	37	4.33E+02				210122_M03249_0146_000000000-JHV59	Hospitalized									
+381s-q	381	UPHS	10/21/2020		Saliva	VSP0422	Ron, Young	QiaAMP mini RNA	10/29/20	37	8.04E+01					Hospitalized									
+382no-q	382	UPHS	10/21/2020		NP-OP	VSP0423	Ron, Young	QiaAMP mini RNA	10/29/20	37	1.84E+01					Hospitalized									
+382s-q	382	UPHS	10/21/2020		Saliva	VSP0424	Ron, Young	QiaAMP mini RNA	10/29/20	37	1.40E+04				210122_M03249_0146_000000000-JHV59	Hospitalized									
+380s-q	380	UPHS	10/23/2020		Saliva	VSP0425	Ron, Young	QiaAMP mini RNA	10/29/20	37	6.54E+05				210122_M03249_0146_000000000-JHV59	Hospitalized									
+383no-q	383	UPHS	10/23/2020		NP-OP	VSP0426	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined					Hospitalized									
+384no-q	384	UPHS	10/23/2020		NP-OP	VSP0427	Ron, Young	QiaAMP mini RNA	10/29/20	37	Undetermined					Hospitalized									
+385no-q	385	UPHS	10/26/2020		NP-OP	VSP0428	Ron, Young	QiaAMP mini RNA	11/13/20	37	5.26E+03					Hospitalized									
+385s-q	385	UPHS	10/26/2020		Saliva	VSP0429	Ron, Young	QiaAMP mini RNA	11/13/20	37	2.80E+05				210122_M03249_0146_000000000-JHV59	Hospitalized									
+386no-q	386	UPHS	10/26/2020		NP-OP	VSP0430	Ron, Young	QiaAMP mini RNA	11/13/20	37	1.41E+01					Hospitalized									
+386s-q	386	UPHS	10/26/2020		Saliva	VSP0431	Ron, Young	QiaAMP mini RNA	11/13/20	37	1.22E+00					Hospitalized									
+382no-q	382	UPHS	10/28/2020		NP-OP	VSP0432	Ron, Young	QiaAMP mini RNA	11/13/20	37	Undetermined					Hospitalized									
+382s-q	382	UPHS	10/28/2020		Saliva	VSP0433	Ron, Young	QiaAMP mini RNA	11/13/20	37	3.53E+00					Hospitalized									
+385no-q	385	UPHS	10/28/2020		NP-OP	VSP0434	Ron, Young	QiaAMP mini RNA	11/13/20	37	1.61E+02					Hospitalized									
+385s-q	385	UPHS	10/28/2020		Saliva	VSP0435	Ron, Young	QiaAMP mini RNA	11/13/20	37	5.90E+04					Hospitalized									
+386no-q	386	UPHS	10/28/2020		NP-OP	VSP0436	Ron, Young	QiaAMP mini RNA	11/13/20	37	Undetermined					Hospitalized									
+386s-q	386	UPHS	10/28/2020		Saliva	VSP0437	Ron, Young	QiaAMP mini RNA	11/13/20	37	Undetermined					Hospitalized									
+387no-q	387	UPHS	10/28/2020		NP-OP	VSP0438	Ron, Young	QiaAMP mini RNA	11/13/20	37	Undetermined					Hospitalized									
+363e-q	363	UPHS	10/30/2020		ETA	VSP0439	Ron, Young	QiaAMP mini RNA	11/13/20	37	Undetermined					Hospitalized									
+382s-q	382	UPHS	10/30/2020		Saliva	VSP0440	Ron, Young	QiaAMP mini RNA	11/20/20	37	3.68E+01					Hospitalized									
+385s-q	385	UPHS	10/30/2020		Saliva	VSP0441	Ron, Young	QiaAMP mini RNA	11/20/20	37	1.31E+05					Hospitalized									
+387no-q	387	UPHS	10/30/2020		NP-OP	VSP0442	Ron, Young	QiaAMP mini RNA	11/20/20	37	4.17E-01					Hospitalized									
+387s-q	387	UPHS	10/30/2020		Saliva	VSP0443	Ron, Young	QiaAMP mini RNA	11/20/20	37	1.73E+00					Hospitalized									
+391no-q	391	UPHS	11/2/2020		NP-OP	VSP0444	Ron, Young	QiaAMP mini RNA	11/20/20	37	3.18E+03					Hospitalized									
+391s-q	391	UPHS	11/2/2020		Saliva	VSP0445	Ron, Young	QiaAMP mini RNA	11/20/20	37	7.93E+01					Hospitalized									
+392no-q	392	UPHS	11/2/2020		NP-OP	VSP0446	Ron, Young	QiaAMP mini RNA	11/20/20	37	1.80E+00					Hospitalized									
+392s-q	392	UPHS	11/2/2020		Saliva	VSP0447	Ron, Young	QiaAMP mini RNA	11/20/20	37	3.14E-01					Hospitalized									
+391no-q	391	UPHS	11/4/2020		NP-OP	VSP0448	Ron, Young	QiaAMP mini RNA	11/20/20	37	1.80E+05				210122_M03249_0146_000000000-JHV59	Hospitalized									
+393no-q	393	UPHS	11/4/2020		NP-OP	VSP0449	Ron, Young	QiaAMP mini RNA	11/20/20	37	Undetermined					Hospitalized									
+394no-q	394	UPHS	11/4/2020		NP-OP	VSP0450	Ron, Young	QiaAMP mini RNA	11/20/20	37	Undetermined					Hospitalized									
+395no-q	395	UPHS	11/4/2020		NP-OP	VSP0451	Ron, Young	QiaAMP mini RNA	11/20/20	37	Undetermined					Hospitalized									
+341e-q	341	UPHS	11/6/2020		ETA	VSP0452	Ron, Young	QiaAMP mini RNA	12/22/20	37	Undetermined					Hospitalized									
+396no-q	396	UPHS	11/6/2020		NP-OP	VSP0453	Ron, Young	QiaAMP mini RNA	12/22/20	37	Undetermined					Hospitalized									
+400no-q	400	UPHS	11/9/2020		NP-OP	VSP0454	Ron, Young	QiaAMP mini RNA	12/22/20	37	3.81E-01	Pascha (02/11/2020)				Hospitalized									
+400s-q	400	UPHS	11/9/2020		Saliva	VSP0455	Ron, Young	QiaAMP mini RNA	12/22/20	37	2.54E-01					Hospitalized									
+401no-q	401	UPHS	11/9/2020		NP-OP	VSP0456	Ron, Young	QiaAMP mini RNA	12/22/20	37	4.59E-01					Hospitalized									
+400no-q	400	UPHS	11/11/2020		NP-OP	VSP0457	Ron, Young	QiaAMP mini RNA	12/22/20	37	Undetermined					Hospitalized									
+400s-q	400	UPHS	11/11/2020		Saliva	VSP0458	Ron, Young	QiaAMP mini RNA	12/22/20	37	Undetermined					Hospitalized									
+401no-1	401	UPHS	11/11/2020		NP-OP	VSP0459	Ron, Young	QiaAMP mini RNA	12/22/20	37	2.08E+01					Hospitalized									
+401s-q	401	UPHS	11/11/2020		Saliva	VSP0460	Ron, Young	QiaAMP mini RNA	12/22/20	37	5.68E+02				210122_M03249_0146_000000000-JHV59	Hospitalized									
+402no-q	402	UPHS	11/11/2020		NP-OP	VSP0461	Ron, Young	QiaAMP mini RNA	12/22/20	37	1.49E+01					Hospitalized									
+402s-q	402	UPHS	11/11/2020		Saliva	VSP0462	Ron, Young	QiaAMP mini RNA	12/22/20	37	4.00E+00					Hospitalized									
+403no-q	403	UPHS	11/11/2020		NP-OP	VSP0463	Ron, Young	QiaAMP mini RNA	12/22/20	37	5.78E+00					Hospitalized									
+404no-q	404	UPHS	11/11/2020		NP-OP	VSP0464	Ron, Young	QiaAMP mini RNA	12/22/20	37	1.62E+01					Hospitalized									
+404s-q	404	UPHS	11/11/2020		Saliva	VSP0465	Ron, Young	QiaAMP mini RNA	12/22/20	37	2.86E+00					Hospitalized									
+403no-q	403	UPHS	11/13/2020		NP-OP	VSP0466	Ron, Young	QiaAMP mini RNA	12/22/20	37	4.90E-01					Hospitalized									
+403s-q	403	UPHS	11/13/2020		Saliva	VSP0467	Ron, Young	QiaAMP mini RNA	12/22/20	37	8.95E+00					Hospitalized									
+405no-q	405	UPHS	11/13/2020		NP-OP	VSP0468	Ron, Young	QiaAMP mini RNA	12/22/20	37	Undetermined					Hospitalized									
+405s-q	405	UPHS	11/13/2020		Saliva	VSP0469	Ron, Young	QiaAMP mini RNA	12/22/20	37	3.33E+00					Hospitalized									
+406no-q	406	UPHS	11/13/2020		NP-OP	VSP0470	Ron, Young	QiaAMP mini RNA	12/22/20	37	4.74E+05				210122_M03249_0146_000000000-JHV59	Hospitalized									
+406s-q	406	UPHS	11/13/2020		Saliva	VSP0471	Ron, Young	QiaAMP mini RNA	12/22/20	37	2.65E+04					Hospitalized									
+407no-q	407	UPHS	11/13/2020		NP-OP	VSP0472	Ron, Young	QiaAMP mini RNA	12/22/20	37	1.85E+01					Hospitalized									
+407s-q	407	UPHS	11/13/2020		Saliva	VSP0473	Ron, Young	QiaAMP mini RNA	12/22/20	37	8.33E-01	Pascha (02/11/2020)				Hospitalized									
+403s-q	403	UPHS	11/16/2020		Saliva	VSP0474	Ron, Young	QiaAMP mini RNA	12/22/20	37	Undetermined					Hospitalized									
+405no-q	405	UPHS	11/16/2020		NP-OP	VSP0475	Ron, Young	QiaAMP mini RNA	12/22/20	37	Undetermined					Hospitalized									
+405s-q	405	UPHS	11/16/2020		Saliva	VSP0476	Ron, Young	QiaAMP mini RNA	12/22/20	37	6.79E+00					Hospitalized									
+406no-q	406	UPHS	11/16/2020		NP-OP	VSP0477	Ron, Young	QiaAMP mini RNA	12/22/20	37	1.45E+05					Hospitalized									
+408no-q	408	UPHS	11/16/2020		NP-OP	VSP0478	Ron, Young	QiaAMP mini RNA	12/23/20	37	8.33E+03					Hospitalized									
+409s-q	409	UPHS	11/16/2020		Saliva	VSP0479	Ron, Young	QiaAMP mini RNA	12/23/20	37	8.28E+05				210122_M03249_0146_000000000-JHV59	Hospitalized									
+410no-q	410	UPHS	11/16/2020		NP-OP	VSP0480	Ron, Young	QiaAMP mini RNA	12/23/20	37	Undetermined					Hospitalized									
+406s-q	406	UPHS	11/18/2020		Saliva	VSP0481	Ron, Young	QiaAMP mini RNA	12/23/20	37	1.11E+03					Hospitalized									
+408no-q	408	UPHS	11/18/2020		NP-OP	VSP0482	Ron, Young	QiaAMP mini RNA	12/23/20	37	6.43E+03					Hospitalized									
+408s-q	408	UPHS	11/18/2020		Saliva	VSP0483	Ron, Young	QiaAMP mini RNA	12/23/20	37	1.18E+04				210122_M03249_0146_000000000-JHV59	Hospitalized									
+409s-q	409	UPHS	11/18/2020		Saliva	VSP0484	Ron, Young	QiaAMP mini RNA	12/23/20	37	4.16E+04					Hospitalized									
+411no-q	411	UPHS	11/18/2020		NP-OP	VSP0485	Ron, Young	QiaAMP mini RNA	12/23/20	37	Undetermined					Hospitalized									
+411s-q	411	UPHS	11/18/2020		Saliva	VSP0486	Ron, Young	QiaAMP mini RNA	12/23/20	37	Undetermined					Hospitalized									
+409s-q	409	UPHS	11/20/2020		Saliva	VSP0487	Ron, Young	QiaAMP mini RNA	12/23/20	37	6.11E+03					Hospitalized									
+411no-q	411	UPHS	11/20/2020		NP-OP	VSP0488	Ron, Young	QiaAMP mini RNA	12/23/20	37	Undetermined					Hospitalized									
+412no-q	412	UPHS	11/20/2020		NP-OP	VSP0489	Ron, Young	QiaAMP mini RNA	12/23/20	37	Undetermined					Hospitalized									
+412s-q	412	UPHS	11/20/2020		Saliva	VSP0490	Ron, Young	QiaAMP mini RNA	12/23/20	37	Undetermined					Hospitalized									
+414e-q	414	UPHS	11/20/2020		ETA	VSP0491	Ron, Young	QiaAMP mini RNA	1/4/20	37	2.25E+04				210122_M03249_0146_000000000-JHV59	Hospitalized									
+414no-q	414	UPHS	11/20/2020		NP-OP	VSP0492	Ron, Young	QiaAMP mini RNA	1/4/20	37	3.89E+01					Hospitalized									
+405s-q	405	UPHS	11/23/2020		Saliva	VSP0493	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined					Hospitalized									
+415no-q	415	UPHS	11/23/2020		NP-OP	VSP0494	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined					Hospitalized									
+416no-q	416	UPHS	11/23/2020		NP-OP	VSP0495	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined					Hospitalized									
+417no-q	417	UPHS	11/23/2020		NP-OP	VSP0496	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined					Hospitalized									
+418no-q	418	UPHS	11/25/2020		NP-OP	VSP0497	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined					Hospitalized									
+419no-q	419	UPHS	11/25/2020		NP-OP	VSP0498	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined					Hospitalized									
+408no-q	408	UPHS	11/30/2020		NP-OP	VSP0499	Ron, Young	QiaAMP mini RNA	1/4/20	37	1.87E+00					Hospitalized									
+421no-q	421	UPHS	11/30/2020		NP-OP	VSP0500	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined					Hospitalized									
+413e-q	413	UPHS	12/2/2020		ETA	VSP0501	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined					Hospitalized									
+423no-q	423	UPHS	12/2/2020		NP-OP	VSP0502	Ron, Young	QiaAMP mini RNA	1/4/20	37	2.03E+03					Hospitalized									
+423s-q	423	UPHS	12/2/2020		Saliva	VSP0503	Ron, Young	QiaAMP mini RNA	1/4/20	37	6.02E+03				210122_M03249_0146_000000000-JHV59	Hospitalized									
+420no-q	420	UPHS	12/3/2020		NP-OP	VSP0504	Ron, Young	QiaAMP mini RNA	1/4/20	37	1.29E+01					Hospitalized									
+425no-q	425	UPHS	12/3/2020		NP-OP	VSP0505	Ron, Young	QiaAMP mini RNA	1/4/20	37	6.71E+03				210122_M03249_0146_000000000-JHV59	Hospitalized									
+425s-q	425	UPHS	12/3/2020		Saliva	VSP0506	Ron, Young	QiaAMP mini RNA	1/4/20	37	4.77E+03					Hospitalized									
+413e	413	UPHS	12/4/2020		ETA	VSP0507	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined					Hospitalized									
+420no	420	UPHS	12/4/2020		NP-OP	VSP0508	Ron, Young	QiaAMP mini RNA	1/4/20	37	4.13E+00					Hospitalized									
+423s	423	UPHS	12/4/2020		Saliva	VSP0509	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined					Hospitalized									
+427no	427	UPHS	12/4/2020		NP-OP	VSP0510	Ron, Young	QiaAMP mini RNA	1/4/20	37	6.92E+05				210122_M03249_0146_000000000-JHV59	Hospitalized									
+420e	420	UPHS	12/7/2020		ETA	VSP0511	Ron, Young	QiaAMP mini RNA	1/4/20	37	4.17E+03				210122_M03249_0146_000000000-JHV59	Hospitalized									
+424no	424	UPHS	12/7/2020		NP-OP	VSP0512	Ron, Young	QiaAMP mini RNA	1/4/20	37	5.14E+01					Hospitalized									
+428no	428	UPHS	12/7/2020		NP-OP	VSP0513	Ron, Young	QiaAMP mini RNA	1/4/20	37	1.67E+01					Hospitalized									
+428s	428	UPHS	12/7/2020		Saliva	VSP0514	Ron, Young	QiaAMP mini RNA	1/4/20	37	9.52E+03				210122_M03249_0146_000000000-JHV59	Hospitalized									
+429no	429	UPHS	12/7/2020		NP-OP	VSP0515	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined					Hospitalized									
+429s	429	UPHS	12/7/2020		Saliva	VSP0516	Ron, Young	QiaAMP mini RNA	1/4/20	37	Undetermined					Hospitalized									
+424no	424	UPHS	12/9/2020		NP-OP	VSP0517	Ron, Young	QiaAMP mini RNA	1/11/20	37	8.68E+03				210130_M03249_0150_000000000-JHV54	Hospitalized									
+428no	428	UPHS	12/9/2020		NP-OP	VSP0518	Ron, Young	QiaAMP mini RNA	1/11/20	37	1.78E+01					Hospitalized									
+428s	428	UPHS	12/9/2020		Saliva	VSP0519	Ron, Young	QiaAMP mini RNA	1/11/20	37	5.32E+03					Hospitalized									
+429no	429	UPHS	12/9/2020		NP-OP	VSP0520	Ron, Young	QiaAMP mini RNA	1/11/20	37	Undetermined					Hospitalized									
+430no	430	UPHS	12/9/2020		NP-OP	VSP0521	Ron, Young	QiaAMP mini RNA	1/11/20	37	Undetermined					Hospitalized									
+430s	430	UPHS	12/9/2020		Saliva	VSP0522	Ron, Young	QiaAMP mini RNA	1/11/20	37	Undetermined					Hospitalized									
+431no	431	UPHS	12/9/2020		NP-OP	VSP0523	Ron, Young	QiaAMP mini RNA	1/11/20	37	4.07E+02				210130_M03249_0150_000000000-JHV54	Hospitalized									
+430no	430	UPHS	12/11/2020		NP-OP	VSP0524	Ron, Young	QiaAMP mini RNA	1/11/20	37	Undetermined					Hospitalized									
+431no	431	UPHS	12/11/2020		NP-OP	VSP0525	Ron, Young	QiaAMP mini RNA	1/11/20	37	5.76E+01					Hospitalized									
+2745	2745	PennEssentialWorkers_Dec2020	12/10/20		Saliva	VSP0526	Ron, Young	QiaAMP mini RNA	12/14/20	37	4.02E+01	Pascha (02/11/2020)			201214_M03249_0133_000000000-J78GM	Outbreak									
+2746	2746	PennEssentialWorkers_Dec2020	12/10/20		Saliva	VSP0527	Ron, Young	QiaAMP mini RNA	12/14/20	37	Undetermined				201214_M03249_0133_000000000-J78GM	Outbreak									
+2747	2747	PennEssentialWorkers_Dec2020	12/10/20		Saliva	VSP0528	Ron, Young	QiaAMP mini RNA	12/14/20	37	Undetermined				201214_M03249_0133_000000000-J78GM	Outbreak									
+2748	2748	PennEssentialWorkers_Dec2020	12/10/20		Saliva	VSP0529	Ron, Young	QiaAMP mini RNA	12/14/20	37	6.22E+03				201214_M03249_0133_000000000-J78GM	Outbreak									
+2749	2749	PennEssentialWorkers_Dec2020	12/10/20		Saliva	VSP0530	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.01E+02				201214_M03249_0133_000000000-J78GM	Outbreak									
+2750	2750	PennEssentialWorkers_Dec2020	12/10/20		Saliva	VSP0531	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.76E+03				201214_M03249_0133_000000000-J78GM	Outbreak									
+2751	2751	PennEssentialWorkers_Dec2020	12/10/20		Saliva	VSP0532	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.02E+02				201214_M03249_0133_000000000-J78GM	Outbreak									
+2752	2752	PennEssentialWorkers_Dec2020	12/10/20		Saliva	VSP0533	Ron, Young	QiaAMP mini RNA	12/14/20	37	5.25E+02				201214_M03249_0133_000000000-J78GM	Outbreak									
+2753	2753	PennEssentialWorkers_Dec2020	12/11/20		Saliva	VSP0534	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.82E+03				201214_M03249_0133_000000000-J78GM	Outbreak									
+2754	2754	PennEssentialWorkers_Dec2020	12/11/20		Saliva	VSP0535	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.67E+01	Pascha (02/11/2020)			201214_M03249_0133_000000000-J78GM	Outbreak									
+2755	2755	PennEssentialWorkers_Dec2020	12/11/20		Saliva	VSP0536	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.78E+01	Pascha (02/11/2020)			201214_M03249_0133_000000000-J78GM	Outbreak									
+2756	2756	PennEssentialWorkers_Dec2020	12/11/20		Saliva	VSP0537	Ron, Young	QiaAMP mini RNA	12/14/20	37	5.34E+04				201214_M03249_0133_000000000-J78GM	Outbreak									
+2757	2757	PennEssentialWorkers_Dec2020	12/11/20		Saliva	VSP0538	Ron, Young	QiaAMP mini RNA	12/14/20	37	1.65E+05				201214_M03249_0133_000000000-J78GM	Outbreak									
+2758	2758	PennEssentialWorkers_Dec2020	12/11/20		Saliva	VSP0539	Ron, Young	QiaAMP mini RNA	12/14/20	37	4.99E+00				201214_M03249_0133_000000000-J78GM	Outbreak									
+3157	3157	PennEssentialWorkers_Dec2020	12/11/20		Saliva	VSP0540	Ron, Young	QiaAMP mini RNA	12/14/20	37	7.32E+02				201214_M03249_0133_000000000-J78GM	Outbreak									
+3193	3193	PennEssentialWorkers_Dec2020	12/11/20		Saliva	VSP0541	Ron, Young	QiaAMP mini RNA	12/14/20	37	Undetermined				201214_M03249_0133_000000000-J78GM	Outbreak									
+3197	3197	PennEssentialWorkers_Dec2020	12/11/20		Saliva	VSP0542	Ron, Young	QiaAMP mini RNA	12/14/20	37	4.36E+00				201214_M03249_0133_000000000-J78GM	Outbreak									
+161	161	COVIDSAFE	11/30/20		Saliva - Positive Control	VSP0543	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	6.14E+02				201214_M03249_0133_000000000-J78GM	Asymptomatic		ganguly@pennmedicine.upenn.edu							
+374	374	COVIDSAFE	12/1/20		Saliva - Positive Control	VSP0544	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	1.71E+02				201214_M03249_0133_000000000-J78GM	Asymptomatic		ganguly@pennmedicine.upenn.edu							
+95-267	95-267	COVIDSAFE	11/20/20		Saliva - Positive Control	VSP0545	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	2.52E+02				201214_M03249_0133_000000000-J78GM	Asymptomatic		ganguly@pennmedicine.upenn.edu							
+97-736	97-736	COVIDSAFE	10/28/20		Saliva - Positive Control	VSP0546	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	3.61E+05				201214_M03249_0133_000000000-J78GM	Asymptomatic		ganguly@pennmedicine.upenn.edu							
+10-1017	10-1017	COVIDSAFE	11/13/20		Saliva - Positive Control	VSP0547	Ganguly Lab	QiaAMP mini RNA	12/14/20	37	1.43E+04				201214_M03249_0133_000000000-J78GM	Asymptomatic		ganguly@pennmedicine.upenn.edu							
+424s	424	UPHS	12/14/20		Saliva	VSP0548	Ron, Young	QiaAMP mini RNA	1/11/21	37	Undetermined					Hospitalized									
+431s	431	UPHS	12/14/20		Saliva	VSP0549	Ron, Young	QiaAMP mini RNA	1/11/21	37	Undetermined					Hospitalized									
+434no	434	UPHS	12/14/20		NP-OP	VSP0550	Ron, Young	QiaAMP mini RNA	1/11/21	37	2.15E+05				210130_M03249_0150_000000000-JHV54	Hospitalized									
+435no	435	UPHS	12/14/20		NP-OP	VSP0551	Ron, Young	QiaAMP mini RNA	1/11/21	37	Undetermined					Hospitalized									
+435s	435	UPHS	12/14/20		Saliva	VSP0552	Ron, Young	QiaAMP mini RNA	1/11/21	37	1.43E+01					Hospitalized									
+436no	436	UPHS	12/14/20		NP-OP	VSP0553	Ron, Young	QiaAMP mini RNA	1/11/21	37	Undetermined					Hospitalized									
+436s	436	UPHS	12/14/20		Saliva	VSP0554	Ron, Young	QiaAMP mini RNA	1/11/21	37	6.72E+02				210130_M03249_0150_000000000-JHV54	Hospitalized									
+413e	413	UPHS	12/18/2020		ETA	VSP0555	Ron, Young	QiaAMP mini RNA	1/11/21	37	Undetermined					Hospitalized									
+428s	428	UPHS	12/18/2020		saliva	VSP0556	Ron, Young	QiaAMP mini RNA	1/11/21	37	Undetermined					Hospitalized									
+435no	435	UPHS	12/18/2020		NP-OP	VSP0557	Ron, Young	QiaAMP mini RNA	1/11/21	37	2.47E+01					Hospitalized									
+435s	435	UPHS	12/18/2020		saliva	VSP0558	Ron, Young	QiaAMP mini RNA	1/11/21	37	1.60E+00					Hospitalized									
+436no	436	UPHS	12/18/2020		NP-OP	VSP0559	Ron, Young	QiaAMP mini RNA	1/11/21	37	Undetermined					Hospitalized									
+437no	437	UPHS	12/18/2020		NP-OP	VSP0560	Ron, Young	QiaAMP mini RNA	1/11/21	37	3.95E+04				210130_M03249_0150_000000000-JHV54	Hospitalized									
+437s	437	UPHS	12/18/2020		saliva	VSP0561	Ron, Young	QiaAMP mini RNA	1/11/21	37	2.07E+02					Hospitalized									
+438no	438	UPHS	12/18/2020		NP-OP	VSP0562	Ron, Young	QiaAMP mini RNA	1/11/21	37	Undetermined					Hospitalized									
+J78GM	J78GM	seqRunControl	12/12/2020		Negative control	VSP9979	Pascha																		
+DOH1	DOH1	Dept of Health	1/6/2021		VTM	VSP0563	Claire Newbern	QiaAMP mini RNA	1/7/21	27	2.02E+05				210113_M05588_0364_000000000	Outbreak	UK variant (2nd case in PA)	Claire.Newbern@Phila.gov, Bernadette.Matthis@Phila.gov							
+SouthAfrica_HLS-UCT-GS-1396-KRISP	SouthAfrica_HLS-UCT-GS-1396-KRISP	simulated_dataset	11/18/2020		simulated	VSP9978	GISAID																		
+England_EPI_ISL_747519	England_EPI_ISL_747519	simulated_dataset	12/11/2020		simulated	VSP9977	GISAID																		
+424e	424	UPHS	12/20/20		ETA	VSP0564	Ron	QiaAMP mini RNA	1/27/20	37	1.78E+03					Hospitalized									
+439no	439	UPHS	12/20/20		NP-OP	VSP0565	Ron	QiaAMP mini RNA	1/27/20	37	1.38E+00					Hospitalized									
+440no	440	UPHS	12/20/20		NP-OP	VSP0566	Ron	QiaAMP mini RNA	1/27/20	37	Undetermined					Hospitalized									
+440s	440	UPHS	12/20/20		Saliva	VSP0567	Ron	QiaAMP mini RNA	1/27/20	37	Undetermined					Hospitalized									
+442no	442	UPHS	1/6/21		NP-OP	VSP0568	Ron	QiaAMP mini RNA	1/27/20	37	Undetermined					Hospitalized									
+442s	442	UPHS	1/6/21		Saliva	VSP0569	Ron	QiaAMP mini RNA	1/27/20	37	2.00E+00					Hospitalized									
+443no	443	UPHS	1/6/21		NP-OP	VSP0570	Ron	QiaAMP mini RNA	1/27/20	37	1.08E+00					Hospitalized									
+molpath-sdrop1	sdrop1_molpath	HUP	1/3/21		0.9% Saline	VSP0571	Feldman, Michael	QiaAMP mini RNA	1/18/21	37	8.56E+00				210113_M05588_0364_000000000	S drop out		Michael.Feldman2@pennmedicine.upenn.edu				19118		1/3/21	
+442no	442	UPHS	1/8/21		NP-OP	VSP0572	Ron	QiaAMP mini RNA	1/27/20	37	Undetermined					Hospitalized									
+442s	442	UPHS	1/8/21		Saliva	VSP0573	Ron	QiaAMP mini RNA	1/27/20	37	Undetermined					Hospitalized									
+443no	443	UPHS	1/8/21		NP-OP	VSP0574	Ron	QiaAMP mini RNA	1/27/20	37	Undetermined					Hospitalized									
+443s	443	UPHS	1/8/21		Saliva	VSP0575	Ron	QiaAMP mini RNA	1/27/20	37	1.60E+01					Hospitalized									
+444no	444	UPHS	1/8/21		NP-OP	VSP0576	Ron	QiaAMP mini RNA	1/27/20	37	1.48E+03	Shantan (2/3/2020)			210208_M03249_0155_000000000-JHTMY	Hospitalized									
+444s	444	UPHS	1/8/21		Saliva	VSP0577	Ron	QiaAMP mini RNA	1/27/20	37	5.85E+00					Hospitalized									
+445no	445	UPHS	1/8/21		NP-OP	VSP0578	Ron	QiaAMP mini RNA	1/28/21	37	3.62E+03					Hospitalized									
+E50703779-NR; 695237884	653685	Lancaster	1/8/21		Nasal swab in VTM or Saline	VSP0579	Kontra, Joseph	QiaAMP mini RNA	1/18/21	37	2.51E+01				210113_M05588_0364_000000000	S drop out		joseph.kontra@pennmedicine.upenn.edu							
+E50603080-09; 695181121	2181202	Lancaster	1/8/21		Nasal swab in VTM or Saline	VSP0580	Kontra, Joseph	QiaAMP mini RNA	1/18/21	37	1.45E+01				210113_M05588_0364_000000000	S drop out		joseph.kontra@pennmedicine.upenn.edu							
+E50605712-NR; 695215402	2081815	Lancaster	1/8/21		Nasal swab in VTM or Saline	VSP0581	Kontra, Joseph	QiaAMP mini RNA	1/18/21	37	7.32E+01				210113_M05588_0364_000000000	S drop out		joseph.kontra@pennmedicine.upenn.edu							
+E50701962-NR; 695215333	1044999	Lancaster	1/8/21		Nasal swab in VTM or Saline	VSP0582	Kontra, Joseph	QiaAMP mini RNA	1/18/21	37	2.79E+00				210113_M05588_0364_000000000	S drop out		joseph.kontra@pennmedicine.upenn.edu							
+E50405634-NR; 695036702	354398	Lancaster	1/8/21		Nasal swab in VTM or Saline	VSP0583	Kontra, Joseph	QiaAMP mini RNA	1/18/21	37	1.87E+03				210113_M05588_0364_000000000	S drop out		joseph.kontra@pennmedicine.upenn.edu							
+JFKGR	JFKGR	seqRunControl	01/09/2021		Negative control	VSP9976	Pascha								210108_M03249_0139_000000000-JFKGR										
+JGMP7	JGMP7	seqRunControl	1/12/20221		Negative control	VSP9975	Pascha								210113_M05588_0364_000000000										
+444no	444	UPHS	1/11/21		NP-OP	VSP0584	Ron	QiaAMP mini RNA	1/28/21	37	2.39E+03					Hospitalized									
+445no	445	UPHS	1/11/21		NP-OP	VSP0585	Ron	QiaAMP mini RNA	1/28/21	37	1.21E+02					Hospitalized									
+445s	445	UPHS	1/11/21		Saliva	VSP0586	Ron	QiaAMP mini RNA	1/28/21	37	1.19E+04	Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Hospitalized									
+447no	447	UPHS	1/11/21		NP-OP	VSP0587	Ron	QiaAMP mini RNA	1/28/21	37	1.32E+02					Hospitalized									
+447s	447	UPHS	1/11/21		Saliva	VSP0588	Ron	QiaAMP mini RNA	1/28/21	37	3.23E+02	Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Hospitalized									
+448no	448	UPHS	1/11/21		NP-OP	VSP0589	Ron	QiaAMP mini RNA	1/28/21	37	1.22E+00					Hospitalized									
+448s	448	UPHS	1/11/21		Saliva	VSP0590	Ron	QiaAMP mini RNA	1/28/21	37	2.91E+01					Hospitalized									
+448no	448	UPHS	1/13/21		NP-OP	VSP0591	Ron	QiaAMP mini RNA	1/28/21	37	Undetermined					Hospitalized									
+449no	449	UPHS	1/13/21		NP-OP	VSP0592	Ron	QiaAMP mini RNA	1/28/21	37	Undetermined					Hospitalized									
+449s	449	UPHS	1/13/21		Saliva	VSP0593	Ron	QiaAMP mini RNA	1/28/21	37	Undetermined					Hospitalized									
+450no	450	UPHS	1/13/21		NP-OP	VSP0594	Ron	QiaAMP mini RNA	1/28/21	37	Undetermined					Hospitalized									
+450s	450	UPHS	1/13/21		Saliva	VSP0595	Ron	QiaAMP mini RNA	1/28/21	37	Undetermined					Hospitalized									
+448s	448	UPHS	1/15/21		Saliva	VSP0596	Ron	QiaAMP mini RNA	1/28/21	37	3.06E+04	Shantan (2/3/2020)			210208_M03249_0155_000000000-JHTMY	Hospitalized									
+450no	450	UPHS	1/15/21		NP-OP	VSP0597	Ron	QiaAMP mini RNA	1/28/21	37	Undetermined					Hospitalized									
+450s	450	UPHS	1/15/21		Saliva	VSP0598	Ron	QiaAMP mini RNA	1/28/21	37	Undetermined					Hospitalized									
+452no	452	UPHS	1/15/21		NP-OP	VSP0599	Ron	QiaAMP mini RNA	1/28/21	37	1.20E+02					Hospitalized									
+452s	452	UPHS	1/15/21		Saliva	VSP0600	Ron	QiaAMP mini RNA	1/28/21	37	1.88E+04	Shantan (2/3/2020)			210208_M03249_0155_000000000-JHTMY	Hospitalized									
+453no	453	UPHS	1/15/21		NP-OP	VSP0601	Ron	QiaAMP mini RNA	1/28/21	37	1.47E+03	Shantan (2/3/2020)			210208_M03249_0155_000000000-JHTMY	Hospitalized									
+3184	3184	PennEssentialWorkers_Dec2020	01/01/21		Saliva	VSP0602	Ron	QiaAMP mini RNA	1/28/21	37	Undetermined				210126_M03543_0239_000000000-JHL95	Outbreak									
+2007	2007	COVIDSAFE	12/09/20	01/01/21	Saliva	VSP0603	Ganguly Lab	QiaAMP mini RNA	1/21/21	37	2.75E+05				210126_M03543_0239_000000000-JHL95	Asymptomatic									
+9070	9070	COVIDSAFE	12/09/20	01/01/21	Saliva	VSP0604	Ganguly Lab	QiaAMP mini RNA	1/21/21	37	8.90E+03				210126_M03543_0239_000000000-JHL95	Asymptomatic									
+1974	1974	COVIDSAFE	12/09/20	01/01/21	Saliva	VSP0605	Ganguly Lab	QiaAMP mini RNA	1/21/21	37	2.17E+03				210126_M03543_0239_000000000-JHL95	Asymptomatic									
+3057	3057	COVIDSAFE	12/07/20	01/01/21	Saliva	VSP0606	Ganguly Lab	QiaAMP mini RNA	1/21/21	37	2.08E+03				210126_M03543_0239_000000000-JHL95	Asymptomatic									
+3120	3120	COVIDSAFE	12/15/20	01/01/21	Saliva	VSP0607	Ganguly Lab	QiaAMP mini RNA	1/21/21	37	5.72E+03				210126_M03543_0239_000000000-JHL95	Asymptomatic									
+2456	2456	COVIDSAFE	12/15/20	01/01/21	Saliva	VSP0608	Ganguly Lab	QiaAMP mini RNA	1/21/21	37	1.93E+05				210126_M03543_0239_000000000-JHL95	Asymptomatic									
+3110	3110	COVIDSAFE	12/15/20	01/01/21	Saliva	VSP0609	Ganguly Lab	QiaAMP mini RNA	1/21/21	37	7.89E+03				210126_M03543_0239_000000000-JHL95	Asymptomatic									
+7303	7303	COVIDSAFE	12/15/20	01/01/21	Saliva	VSP0610	Ganguly Lab	QiaAMP mini RNA	1/21/21	37	Undetermined				210126_M03543_0239_000000000-JHL95	Asymptomatic									
+9106	9106	COVIDSAFE	12/15/20	01/01/21	Saliva	VSP0611	Ganguly Lab	QiaAMP mini RNA	1/21/21	37	1.85E+03				210126_M03543_0239_000000000-JHL95	Asymptomatic									
+9102	9102	COVIDSAFE	12/22/20	01/01/21	Saliva	VSP0612	Ganguly Lab	QiaAMP mini RNA	1/21/21	37	Undetermined				210126_M03543_0239_000000000-JHL95	Asymptomatic									
+8504	8504	COVIDSAFE	12/29/20	01/01/21	Saliva	VSP0613	Ganguly Lab	QiaAMP mini RNA	1/21/21	37	9.36E+06				210126_M03543_0239_000000000-JHL95	Asymptomatic									
+8512	8512	COVIDSAFE	12/29/20	01/01/21	Saliva	VSP0614	Ganguly Lab	QiaAMP mini RNA	1/21/21	37	7.19E+03				210126_M03543_0239_000000000-JHL95	Asymptomatic									
+3228	3228	COVIDSAFE	01/04/21	01/01/21	Saliva	VSP0615	Ganguly Lab	QiaAMP mini RNA	1/21/21	37	5.02E+03				210126_M03543_0239_000000000-JHL95	Asymptomatic									
+4736	4736	COVIDSAFE	01/04/21	01/01/21	Saliva	VSP0616	Ganguly Lab	QiaAMP mini RNA	1/28/21	37	Undetermined				210126_M03543_0239_000000000-JHL95	Asymptomatic									
+4329	4329	COVIDSAFE	01/04/21	01/01/21	Saliva	VSP0617	Ganguly Lab	QiaAMP mini RNA	1/28/21	37	8.26E+03				210126_M03543_0239_000000000-JHL95	Asymptomatic									
+439s	439	UPHS	12/23/2020		Saliva	VSP0618	Ron									Hospitalized									
+440no	440	UPHS	12/23/2020		NP-OP	VSP0619	Ron									Hospitalized									
+440s	440	UPHS	12/23/2020		Saliva	VSP0620	Ron									Hospitalized									
+441s	441	UPHS	12/23/2020		Saliva	VSP0621	Ron																		
+JHV59	JHV59	seqRunControl	1/22/2021		Negative control	VSP9974	Pascha								210122_M03249_0146_000000000-JHV59										
+molpath-sdrop2	sdrop2_molpath	Molpath	1/20/2021		0.9% Saline	VSP0622	Feldman, Michael	QiaAMP mini RNA	1/28/21	37	1.08E+06				210130_M03249_0150_000000000-JHV54	S drop out						19104		1/18/21	
+Molpath-Seq2	100667644	Molpath	1/21/2021		Saliva	VSP0623	Feldman, Michael	QiaAMP mini RNA	1/28/21	37	5.11E+03				210130_M03249_0150_000000000-JHV54	Outbreak	UK variant, student travelled from UK	Michael.Feldman2@pennmedicine.upenn.edu				19104		1/18/21	
+molpath-sdrop3	molpath-sdrop3	Molpath	1/22/2021		Saline	VSP0624	Emilie Rabut	QiaAMP mini RNA	1/28/21	37	Undetermined				210130_M03249_0150_000000000-JHV54	S drop out						19151		1/21/21	
+molpath-sdrop4	molpath-sdrop4	Molpath	1/22/2021		Saline	VSP0625	Emilie Rabut	QiaAMP mini RNA	1/28/21	37	5.54E+03				210130_M03249_0150_000000000-JHV54	S drop out						19104		1/21/21	
+molpath-seq1	molpath-seq1	Molpath	1/22/2021		Saline	VSP0626	Emilie Rabut	QiaAMP mini RNA	1/28/21	37	9.33E+05				210130_M03249_0150_000000000-JHV54, 210129_M00281_0672_000000000-JHLHC	Vaccine breakthrough						19116	Vaccinated	1/21/21	
+452no	452	UPHS	1/20/21		NP-OP	VSP0627	Ron	QiaAMP mini RNA	1/28/21	37	1.68E+03					Hospitalized									
+452s	452	UPHS	1/20/21		Saliva	VSP0628	Ron	QiaAMP mini RNA	1/28/21	37	8.15E+03					Hospitalized									
+455no	455	UPHS	1/20/21		NP-OP	VSP0629	Ron	QiaAMP mini RNA	1/28/21	37	2.78E+01					Hospitalized									
+455no	455	UPHS	1/22/21		NP-OP	VSP0630	Ron	QiaAMP mini RNA	1/28/21	37	4.89E+01					Hospitalized									
+455s	455	UPHS	1/22/21		Saliva	VSP0631	Ron	QiaAMP mini RNA	1/28/21	37	1.53E+01					Hospitalized									
+457no	457	UPHS	1/22/21		NP-OP	VSP0632	Ron	QiaAMP mini RNA	1/28/21	37	Undetermined					Hospitalized									
+455s	455	UPHS	1/25/21		Saliva	VSP0633	Ron	QiaAMP mini RNA	2/4/21	37	1.25E+03	Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Hospitalized									
+459s	459	UPHS	1/25/21		Saliva	VSP0634	Ron	QiaAMP mini RNA	2/4/21	37	3.99E+05					Hospitalized									
+460no	460	UPHS	1/25/21		Saliva	VSP0635	Ron	QiaAMP mini RNA	2/4/21	37	Undetermined					Hospitalized									
+460s	460	UPHS	1/25/21		NP-OP	VSP0636	Ron	QiaAMP mini RNA	2/4/21	37	Undetermined					Hospitalized									
+H2101191203H2101200627	AHS21001204	Dept of Health	1/22/21		VTM	VSP0637	Dept of Health	QiaAMP mini RNA	1/28/21	37	1.20E+03				210129_M00281_0672_000000000-JHLHC			Claire.Newbern@Phila.gov,							
+H2101191203	AHS19005093	Dept of Health	1/22/21		VTM	VSP0638	Dept of Health	QiaAMP mini RNA	1/28/21	37	4.58E+01				210129_M00281_0672_000000000-JHLHC			Claire.Newbern@Phila.gov,							
+H2101200615	AHS19029976	Dept of Health	1/22/21		VTM	VSP0639	Dept of Health	QiaAMP mini RNA	1/28/21	37	1.43E+06				210129_M00281_0672_000000000-JHLHC			Claire.Newbern@Phila.gov,							
+H2101200710	AHS19010094	Dept of Health	1/22/21		VTM	VSP0640	Dept of Health	QiaAMP mini RNA	1/28/21	37	1.83E+04				210129_M00281_0672_000000000-JHLHC			Claire.Newbern@Phila.gov,							
+H2101140635	ACUTE21000985	Dept of Health	1/22/21		VTM	VSP0641	Dept of Health	QiaAMP mini RNA	1/28/21	37	Undetermined				210129_M00281_0672_000000000-JHLHC			Claire.Newbern@Phila.gov,							
+H2101200308	AHS21000915	Dept of Health	1/22/21		VTM	VSP0642	Dept of Health	QiaAMP mini RNA	1/28/21	37	4.89E+05				210129_M00281_0672_000000000-JHLHC			Claire.Newbern@Phila.gov,							
+H2101140648	ACUTE21000991	Dept of Health	1/22/21		VTM	VSP0643	Dept of Health	QiaAMP mini RNA	1/28/21	37	8.33E+04				210129_M00281_0672_000000000-JHLHC			Claire.Newbern@Phila.gov,							
+H2101140757	ACUTE21001041	Dept of Health	1/22/21		VTM	VSP0644	Dept of Health	QiaAMP mini RNA	1/28/21	37	1.01E+04				210129_M00281_0672_000000000-JHLHC			Claire.Newbern@Phila.gov,							
+H2101140647	ACUTE21000990	Dept of Health	1/22/21		VTM	VSP0645	Dept of Health	QiaAMP mini RNA	1/28/21	37	3.76E+06				210129_M00281_0672_000000000-JHLHC			Claire.Newbern@Phila.gov,							
+H2101140656	ACUTE21000998	Dept of Health	1/22/21		VTM	VSP0646	Dept of Health	QiaAMP mini RNA	1/28/21	37	1.35E+05				210129_M00281_0672_000000000-JHLHC			Claire.Newbern@Phila.gov,							
+H2101200475	RISONS21001145	Dept of Health	1/22/21		VTM	VSP0647	Dept of Health	QiaAMP mini RNA	1/28/21	37	7.28E+05				210129_M00281_0672_000000000-JHLHC			Claire.Newbern@Phila.gov,							
+H2101200481	RISONS21001140	Dept of Health	1/22/21		VTM	VSP0648	Dept of Health	QiaAMP mini RNA	1/28/21	37	2.52E+05				210129_M00281_0672_000000000-JHLHC			Claire.Newbern@Phila.gov,							
+H2101200465	RISONS21001141	Dept of Health	1/22/21		VTM	VSP0649	Dept of Health	QiaAMP mini RNA	1/28/21	37	4.66E+06				210129_M00281_0672_000000000-JHLHC			Claire.Newbern@Phila.gov,							
+H2101200470	RISONS21001144	Dept of Health	1/22/21		VTM	VSP0650	Dept of Health	QiaAMP mini RNA	1/28/21	37	2.44E+06				210129_M00281_0672_000000000-JHLHC			Claire.Newbern@Phila.gov,							
+H2101200469	RISONS21001143	Dept of Health	1/22/21		VTM	VSP0651	Dept of Health	QiaAMP mini RNA	1/28/21	37	2.77E+06				210129_M00281_0672_000000000-JHLHC			Claire.Newbern@Phila.gov,							
+JHL95	JHL95	seqRunControl	1/27/2020		Negative control	VSP9973	Pascha								210126_M03543_0239_000000000-JHL95										
+JHLHC	JHLHC	seqRunControl	1/29/2020		Negative control	VSP9972	Pascha								210129_M00281_0672_000000000-JHLHC										
+451e	451	UPHS	1/27/2020		ETA	VSP0652	Ron	QiaAMP mini RNA	2/4/21	37	Undetermined					Hospitalized									
+459no	459	UPHS	1/27/2020		NP-OP	VSP0653	Ron	QiaAMP mini RNA	2/4/21	37	1.70E+03					Hospitalized									
+459s	459	UPHS	1/27/2020		Saliva	VSP0654	Ron	QiaAMP mini RNA	2/4/21	37	1.14E+06	Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Hospitalized									
+460s	460	UPHS	1/27/2020		SAliva	VSP0655	Ron	QiaAMP mini RNA	2/4/21	37	3.47E+01					Hospitalized									
+461no	460	UPHS	1/27/2020		NP-OP	VSP0656	Ron	QiaAMP mini RNA	2/4/21	37	5.32E+04					Hospitalized									
+461s	461	UPHS	1/27/2020		Saliva	VSP0657	Ron	QiaAMP mini RNA	2/4/21	37	1.33E+05	Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Hospitalized									
+JHV54	JHV54	seqRunControl	1/30/2021		Negative control	VSP9971	Shantan								210130_M03249_0150_000000000-JHV54										
+molpath-seq3	molpath-seq3	Molpath	2/1/2021		Saline	VSP0758	Feldman, Michael	QiaAMP mini RNA	2/4/21	37	1.45E+03					Vaccine breakthrough						19154	Vaccinated	1/27/21	
+MPCluster2-Seq1	MPCluster2-Seq1	Molpath	2/1/2021		Swab	VSP0759	Feldman, Michael	QiaAMP mini RNA	2/4/21	37	7.66E+03	Shantan (2/3/2020)			210208_M03249_0155_000000000-JHTMY	Outbreak	Student Cluster; Cluster 2		20	Male	Hispanic Latin-White	48324			
+MPCluster2-Seq2	MPCluster2-Seq2	Molpath	2/1/2021		Swab	VSP0760	Feldman, Michael	QiaAMP mini RNA	2/4/21	37	3.38E+03	Shantan (2/3/2020)			210208_M03249_0155_000000000-JHTMY	Outbreak	Student Cluster; Cluster 2		20	Male	Asian	66221			
+MPCluster2-Seq3	MPCluster2-Seq3	Molpath	2/1/2021		Swab	VSP0761	Feldman, Michael	QiaAMP mini RNA	2/4/21	37	1.91E+05	Shantan (2/3/2020)			210208_M03249_0155_000000000-JHTMY	Outbreak	Student Cluster; Cluster 2		22	Male	Hispanic Latin-White	19104			
+MPCluster2-Seq4	MPCluster2-Seq4	Molpath	2/1/2021		Swab	VSP0762	Feldman, Michael	QiaAMP mini RNA	2/4/21	37	Undetermined	Shantan (2/3/2020)			210208_M03249_0155_000000000-JHTMY	Outbreak	Student Cluster; Cluster 2		21	Male	Asian	19104			
+MPCluster2-Seq5	MPCluster2-Seq5	Molpath	2/1/2021		Swab	VSP0763	Feldman, Michael	QiaAMP mini RNA	2/4/21	37	2.11E+05	Shantan (2/3/2020)			210208_M03249_0155_000000000-JHTMY	Outbreak	Student Cluster; Cluster 2		21	Male	Hispanic Latin-Black	19104			
+MPCluster2-Seq6	MPCluster2-Seq6	Molpath	2/1/2021		Swab	VSP0764	Feldman, Michael	QiaAMP mini RNA	2/4/21	37	1.63E+04	Shantan (2/3/2020)			210208_M03249_0155_000000000-JHTMY	Outbreak	Student Cluster; Cluster 2		21	Male	Asian	19104			
+MPCluster2-Seq7	MPCluster2-Seq7	Molpath	2/1/2021		Swab	VSP0765	Feldman, Michael	QiaAMP mini RNA	2/4/21	37	1.52E+06	Shantan (2/3/2020)			210208_M03249_0155_000000000-JHTMY	Outbreak	Student Cluster; Cluster 2		21	Male	Hispanic Latin-White	19104			
+MPCluster2-Seq8	MPCluster2-Seq8	Molpath	2/1/2021		Swab	VSP0766	Feldman, Michael	QiaAMP mini RNA	2/4/21	37	4.36E+05	Shantan (2/3/2020)			210208_M03249_0155_000000000-JHTMY	Outbreak	Student Cluster; Cluster 2		21	Male	Hispanic Latin-White	19104			
+MPCluster2-Seq9	MPCluster2-Seq9	Molpath	2/1/2021		Swab	VSP0767	Feldman, Michael	QiaAMP mini RNA	2/4/21	37	2.98E+06	Shantan (2/3/2020)			210208_M03249_0155_000000000-JHTMY	Outbreak	Student Cluster; Cluster 2		21	Male	Hispanic Latin-White	19104			
+MPCluster2-Seq10	MPCluster2-Seq10	Molpath	2/1/2021		Swab	VSP0768	Feldman, Michael	QiaAMP mini RNA	2/4/21	37	3.86E+05	Shantan (2/3/2020)			210208_M03249_0155_000000000-JHTMY	Outbreak	Student Cluster; Cluster 2		20	Male	Hispanic Latin-White	19104			
+MPCluster2-Seq11	MPCluster2-Seq11	Molpath	2/1/2021		Swab	VSP0769	Feldman, Michael	QiaAMP mini RNA	2/4/21	37	8.24E+05	Shantan (2/3/2020)			210208_M03249_0155_000000000-JHTMY	Outbreak	Student Cluster; Cluster 2		21	Male	Hispanic	19104			
+PQ-Seq1	PQ-Seq1	Molpath	2/1/2021		Saliva	VSP0770	Feldman, Michael	QiaAMP mini RNA	2/4/21	37	1.63E+05				210210_M03249_0156_000000000-JHTN3	Outbreak	Cluster 1		48	Male	Hispanic Latin-Black	19144			
+PQ-Seq2	PQ-Seq2	Molpath	2/1/2021		Saliva	VSP0771	Feldman, Michael	QiaAMP mini RNA	2/4/21	37	2.01E+03				210210_M03249_0156_000000000-JHTN3	Outbreak	Cluster 1		57	Male	Hispanic Latin-Black	19119			
+PQ-Seq3	PQ-Seq3	Molpath	2/1/2021		Saliva	VSP0772	Feldman, Michael	QiaAMP mini RNA	2/4/21	37	7.77E+03				210210_M03249_0156_000000000-JHTN3	Outbreak	Cluster 1		49	Female	N/A	19060			
+PQ-Seq4	PQ-Seq4	Molpath	2/1/2021		Saliva	VSP0773	Feldman, Michael	QiaAMP mini RNA	2/23/21	37	8.24E+04				210210_M03249_0156_000000000-JHTN3	Outbreak	Cluster 1		38	Female	Hispanic Latin-Black	19131			
+PQ-Seq5	PQ-Seq5	Molpath	2/1/2021		Saliva	VSP0774	Feldman, Michael	QiaAMP mini RNA	2/23/21	37	1.31E+04				210210_M03249_0156_000000000-JHTN3	Outbreak	Cluster 1		58	Male	N/A	19137			
+PQ-Seq6	PQ-Seq6	Molpath	2/1/2021		Saliva	VSP0775	Feldman, Michael	QiaAMP mini RNA	2/23/21	37	2.37E+06				210210_M03249_0156_000000000-JHTN3	Outbreak	Cluster 1		59	Male	N/A	19145			
+PQ-Seq7	PQ-Seq7	Molpath	2/1/2021		Saliva	VSP0776	Feldman, Michael	QiaAMP mini RNA	2/23/21	37	Undetermined				210210_M03249_0156_000000000-JHTN3	Outbreak	Cluster 1		66	Female	N/A	19104			
+PQ-Seq8	PQ-Seq8	Molpath	2/1/2021		Saliva	VSP0777	Feldman, Michael	QiaAMP mini RNA	2/23/21	37	Undetermined				210210_M03249_0156_000000000-JHTN3	Outbreak	Cluster 1		50	Female	Mulitple	19104			
+PQ-Seq9	PQ-Seq9	Molpath	2/1/2021		Saliva	VSP0778	Feldman, Michael	QiaAMP mini RNA	2/23/21	37	2.85E+02				210210_M03249_0156_000000000-JHTN3	Outbreak	Cluster 1		50	Female	Hispanic Latin-Black	19131			
+PQ-Seq10	PQ-Seq10	Molpath	2/1/2021		Saliva	VSP0779	Feldman, Michael	QiaAMP mini RNA	2/23/21	37	1.84E+04				210210_M03249_0156_000000000-JHTN3	Outbreak	Cluster 2		20	Male	Hispanic	19104			
+PQ-Seq11	PQ-Seq11	Molpath	2/1/2021		Saliva	VSP0780	Feldman, Michael	QiaAMP mini RNA	2/23/21	37	6.83E+02				210210_M03249_0156_000000000-JHTN3	Outbreak	Cluster 2		20	Male	Hispanic Latin-White	19104			
+PQ-Seq12	PQ-Seq12	Molpath	2/1/2021		Saliva	VSP0781	Feldman, Michael	QiaAMP mini RNA	2/23/21	37	4.69E+04				210210_M03249_0156_000000000-JHTN3	Outbreak	Cluster 2		21	Male	N/A	19104			
+PQ-Seq13	PQ-Seq13	Molpath	2/1/2021		Saliva	VSP0782	Feldman, Michael	QiaAMP mini RNA	2/23/21	37	2.42E+03				210210_M03249_0156_000000000-JHTN3	Outbreak	Cluster 2		20	Male	Asian	19104			
+PQ-Seq14	PQ-Seq14	Molpath	2/1/2021		Saliva	VSP0783	Feldman, Michael	QiaAMP mini RNA	2/23/21	37	1.10E+04				210210_M03249_0156_000000000-JHTN3	Outbreak	Cluster 2		19	Male	Hispanic Latin-White	19104			
+PQ-Seq15	PQ-Seq15	Molpath	2/1/2021		Saliva	VSP0784	Feldman, Michael	QiaAMP mini RNA	2/23/21	37	1.21E+04				210210_M03249_0156_000000000-JHTN3	Outbreak	Cluster 2		20	Male	Multiple	19104			
+461no	461	UPHS	1/29/2021		NP-OP	VSP0785	Ron	QiaAMP mini RNA	2/20/21	37	Undetermined					Hospitalized									
+461s	461	UPHS	1/29/2021		Saliva	VSP0786	Ron	QiaAMP mini RNA	2/20/21	37	Undetermined					Hospitalized									
+462no	462	UPHS	1/29/2021		NP-OP	VSP0787	Ron	QiaAMP mini RNA	2/20/21	37	1.13E+02					Hospitalized									
+463no	463	UPHS	1/29/2021		NP-OP	VSP0788	Ron	QiaAMP mini RNA	2/20/21	37	5.66E+03					Hospitalized									
+463s	463	UPHS	1/29/2021		Saliva	VSP0789	Ron	QiaAMP mini RNA	2/20/21	37	1.35E+04					Hospitalized									
+464s	464	UPHS	1/29/2021		Saliva	VSP0790	Ron	QiaAMP mini RNA	2/20/21	37	7.37E+03					Hospitalized									
+464s	464	UPHS	2/3/2021		Saliva	VSP0791	Ron	QiaAMP mini RNA	2/20/21	37	4.91E+02					Hospitalized									
+465no	465	UPHS	2/3/2021		NP-OP	VSP0792	Ron	QiaAMP mini RNA	2/20/21	37	Undetermined					Hospitalized									
+464s	464	UPHS	2/5/2021		Saliva	VSP0793	Ron	QiaAMP mini RNA	2/20/21	37	3.87E+02					Hospitalized									
+467s	467	UPHS	2/5/2021		Saliva	VSP0794	Ron	QiaAMP mini RNA	2/20/21	37	2.20E+03					Hospitalized									
+468no	468	UPHS	2/5/2021		NP-OP	VSP0795	Ron	QiaAMP mini RNA	2/20/21	37	1.01E+03					Hospitalized									
+468s	468	UPHS	2/5/2021		Saliva	VSP0796	Ron	QiaAMP mini RNA	2/20/21	37	6.36E+05					Hospitalized									
+469no	469	UPHS	2/5/2021		NP-OP	VSP0797	Ron	QiaAMP mini RNA	2/20/21	37	Undetermined					Hospitalized									
+JHTMY	JHTMY	seqRunControl	2/6/2021		Negative control	VSP9970	Shantan								210208_M03249_0155_000000000-JHTMY										
+468no	468	UPHS	2/8/2021		NP-OP	VSP0798	Ron	QiaAMP mini RNA	2/23/21	37	7.83E+02					Hospitalized									
+468s	468	UPHS	2/8/2021		Saliva	VSP0799	Ron	QiaAMP mini RNA	2/23/21	37	2.31E+03					Hospitalized									
+470no	470	UPHS	2/8/2021		NP-OP	VSP0800	Ron	QiaAMP mini RNA	2/23/21	37	Undetermined					Hospitalized									
+H2101300063	H2101300063	Dept of Health	2/9/2021		VTM or Saline	VSP0658	Claire Newbern	QiaAMP mini RNA							210216_M03249_0158_000000000			Claire.Newbern@Phila.gov,							
+H2101300054	H2101300054	Dept of Health	2/9/2021		VTM or Saline	VSP0659	Claire Newbern	QiaAMP mini RNA							210216_M03249_0158_000000000			Claire.Newbern@Phila.gov,							
+H2101300048	H2101300048	Dept of Health	2/9/2021		VTM or Saline	VSP0660	Claire Newbern	QiaAMP mini RNA							210216_M03249_0158_000000000			Claire.Newbern@Phila.gov,							
+H2101290654	H2101290654	Dept of Health	2/9/2021		VTM or Saline	VSP0661	Claire Newbern	QiaAMP mini RNA							210216_M03249_0158_000000000			Claire.Newbern@Phila.gov,							
+H2101290600	H2101290600	Dept of Health	2/9/2021		VTM or Saline	VSP0662	Claire Newbern	QiaAMP mini RNA							210216_M03249_0158_000000000			Claire.Newbern@Phila.gov,							
+H2102040793	H2102040793	Dept of Health	2/9/2021		VTM or Saline	VSP0663	Claire Newbern	QiaAMP mini RNA							210216_M03249_0158_000000000			Claire.Newbern@Phila.gov,							
+H2102040766	H2102040766	Dept of Health	2/9/2021		VTM or Saline	VSP0664	Claire Newbern	QiaAMP mini RNA							210216_M03249_0158_000000000			Claire.Newbern@Phila.gov,							
+H2102040684	H2102040684	Dept of Health	2/9/2021		VTM or Saline	VSP0665	Claire Newbern	QiaAMP mini RNA							210216_M03249_0158_000000000			Claire.Newbern@Phila.gov,							
+H2102040519	H2102040519	Dept of Health	2/9/2021		VTM or Saline	VSP0666	Claire Newbern	QiaAMP mini RNA							210216_M03249_0158_000000000			Claire.Newbern@Phila.gov,							
+H2192040371	H2192040371	Dept of Health	2/9/2021		VTM or Saline	VSP0667	Claire Newbern	QiaAMP mini RNA							210216_M03249_0158_000000000			Claire.Newbern@Phila.gov,							
+H2102030358	H2102030358	Dept of Health	2/9/2021		VTM or Saline	VSP0668	Claire Newbern	QiaAMP mini RNA							210216_M03249_0158_000000000			Claire.Newbern@Phila.gov,							
+H2102030496	H2102030496	Dept of Health	2/9/2021		VTM or Saline	VSP0669	Claire Newbern	QiaAMP mini RNA							210216_M03249_0158_000000000			Claire.Newbern@Phila.gov,							
+H2102030405	H2102030405	Dept of Health	2/9/2021		VTM or Saline	VSP0670	Claire Newbern	QiaAMP mini RNA							210216_M03249_0158_000000000			Claire.Newbern@Phila.gov,							
+H2102030297	H2102030297	Dept of Health	2/9/2021		VTM or Saline	VSP0671	Claire Newbern	QiaAMP mini RNA							210216_M03249_0158_000000000			Claire.Newbern@Phila.gov,							
+467s	467	UPHS	2/10/2021		Saliva	VSP0801	Ron	QiaAMP mini RNA	2/23/21	37	Undetermined					Hospitalized									
+472no	472	UPHS	2/10/2021		NP-OP	VSP0802	Ron	QiaAMP mini RNA	2/23/21	37	1.55E+05					Hospitalized									
+472s	472	UPHS	2/10/2021		Saliva	VSP0803	Ron	QiaAMP mini RNA	2/23/21	37	2.49E+04					Hospitalized									
+JHTN3	JHTN3	seqRunControl	2/6/2021		Negative control	VSP9969	Pascha								210210_M03249_0156_000000000-JHTN3	Hospitalized									
+MPCluster2-Seq12	MPCluster2-Seq12	Molpath	2/11/2021		Saline	VSP0804	Emilie Rabut	QiaAMP mini RNA				Shantan (2/22/2020)			210222_M03249_0160_000000000-JHTHM	Outbreak			20	Male	Multiple	19104			
+MPCluster2-Seq13	MPCluster2-Seq13	Molpath	2/11/2021		Saline	VSP0805	Emilie Rabut	QiaAMP mini RNA				Shantan (2/22/2020)			210222_M03249_0160_000000000-JHTHM	Outbreak			22	Male	Hispanic Latin-White	19139			
+MPCluster2-Seq14	MPCluster2-Seq14	Molpath	2/11/2021		Saline	VSP0806	Emilie Rabut	QiaAMP mini RNA				Shantan (2/22/2020)			210222_M03249_0160_000000000-JHTHM	Outbreak			19	Male	Asian	19104			
+MPCluster2-Seq15	MPCluster2-Seq15	Molpath	2/11/2021		Saline	VSP0807	Emilie Rabut	QiaAMP mini RNA				Shantan (2/22/2020)			210222_M03249_0160_000000000-JHTHM	Outbreak			20	Female	Hispanic Latin-White	19104			
+MolPath-Seq4	MolPath-Seq4	Molpath	2/11/2021		Saline	VSP0808	Emilie Rabut	QiaAMP mini RNA				Shantan (2/22/2020)			210222_M03249_0160_000000000-JHTHM	Vaccine breakthrough									
+MolPath-Seq5	MolPath-Seq5	Molpath	2/11/2021		Saline	VSP0809	Emilie Rabut	QiaAMP mini RNA				Shantan (2/22/2020)			210222_M03249_0160_000000000-JHTHM	Vaccine breakthrough						19146	Vaccinated	2/3/21	
+MolPath-Seq6	MolPath-Seq6	Molpath	2/11/2021		Saline	VSP0810	Emilie Rabut	QiaAMP mini RNA				Shantan (2/22/2020)			210222_M03249_0160_000000000-JHTHM	Vaccine breakthrough						19352	Vaccinated	2/3/21	
+Molpath-SDrop5	Molpath-SDrop5	Molpath	2/11/2021		Saline	VSP0811	Emilie Rabut	QiaAMP mini RNA				Shantan (2/22/2020)			210222_M03249_0160_000000000-JHTHM	S drop out						19373		2/3/21	
+Molpath-SDrop6	Molpath-SDrop6	Molpath	2/11/2021		Saline	VSP0812	Emilie Rabut	QiaAMP mini RNA				Shantan (2/22/2020)			210222_M03249_0160_000000000-JHTHM	S drop out						19026		2/6/21	
+HUP-Q-0001	HUP-Q-0001	Molpath	2/11/2021		Saline	VSP0813	Emilie Rabut	QiaAMP mini RNA				Shantan (2/22/2020)			210222_M03249_0160_000000000-JHTHM	S drop out						19087		2/10/21	
+HUP-Q-0003	HUP-Q-0003	Molpath	2/12/2021		Saline	VSP0814	Emilie Rabut	QiaAMP mini RNA				Shantan (2/22/2020)			210222_M03249_0160_000000000-JHTHM	S drop out						8081		2/10/2021	
+HUP-Q-0004	HUP-Q-0004	Molpath	2/12/2021		Saline	VSP0815	Emilie Rabut	QiaAMP mini RNA				Shantan (2/22/2020)			210222_M03249_0160_000000000-JHTHM	S drop out						8620		2/12/2021	
+HUP-PH-0001	HUP-PH-0001	Molpath	2/12/2021		Saline	VSP0816	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			56	M	Black	19139	NA		
+HUP-PH-0002	HUP-PH-0002	Molpath	2/12/2021		Saline	VSP0817	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			55	F	White (non-hispanic, non-latino)	18974	NA		
+HUP-PH-0003	HUP-PH-0003	Molpath	2/12/2021		Saline	VSP0818	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			63	M	White (non-hispanic, non-latino)	18092	NA		
+HUP-PH-0004	HUP-PH-0004	Molpath	2/12/2021		Saline	VSP0819	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			75	F	Black	19106	NA		
+HUP-PH-0005	HUP-PH-0005	Molpath	2/12/2021		Saline	VSP0820	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			50	M	Asian	19148	NA		
+HUP-PH-0006	HUP-PH-0006	Molpath	2/12/2021		Saline	VSP0821	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			62	F	White (non-hispanic, non-latino)	17522	NA		
+HUP-PH-0009	HUP-PH-0009	Molpath	2/12/2021		Saline	VSP0822	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			44	F	White	19130	NA		
+HUP-PH-0010	HUP-PH-0010	Molpath	2/12/2021		Saline	VSP0823	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			31	F	Black	19138	NA		
+HUP-PH-0011	HUP-PH-0011	Molpath	2/12/2021		Saline	VSP0824	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			36	F	Black	19149	NA		
+HUP-PH-0012	HUP-PH-0012	Molpath	2/12/2021		Saline	VSP0825	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			32	F	White	19083	NA		
+HUP-PH-0013	HUP-PH-0013	Molpath	2/11/2021		Saline	VSP0826	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			18	F	HLW-Hispanic Latin-White	19104			
+HUP-PH-0014	HUP-PH-0014	Molpath	2/11/2021		Saline	VSP0827	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			19	F	HLW-Hispanic Latin-White	19104			
+HUP-PH-0015	HUP-PH-0015	Molpath	2/11/2021		Saline	VSP0828	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			18	F	Hispanic	19104			
+HUP-PH-0016	HUP-PH-0016	Molpath	2/12/2021		Saline	VSP0829	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2020)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			18	F	Hispanic Latin-White	19104			
+467s	467	UPHS	2/12/2021		Saliva	VSP0830	Ron	QiaAMP mini RNA	2/23/21	37	4.22E+02					Hospitalized									
+468s	468	UPHS	2/12/2021		Saliva	VSP0831	Ron	QiaAMP mini RNA	2/23/21	37	Undetermined					Hospitalized									
+472no	472	UPHS	2/12/2021		NP-OP	VSP0832	Ron	QiaAMP mini RNA	2/23/21	37	8.80E+06					Hospitalized									
+472s	472	UPHS	2/12/2021		Saliva	VSP0833	Ron	QiaAMP mini RNA	2/23/21	37	1.01E+05					Hospitalized									
+474s	474	UPHS	2/12/2021		Saliva	VSP0834	Ron	QiaAMP mini RNA	2/23/21	37	Undetermined					Hospitalized									
+475no	475	UPHS	2/12/2021		NP-OP	VSP0835	Ron	QiaAMP mini RNA	2/23/21	37	1.05E+03					Hospitalized									
+475s	475	UPHS	2/12/2021		Saliva	VSP0836	Ron	QiaAMP mini RNA	2/23/21	37	1.18E+03					Hospitalized									
+472s	472	UPHS	2/15/2021		Saliva	VSP0837	Ron	QiaAMP mini RNA	2/23/21	37	2.15E+04					Hospitalized									
+474no	474	UPHS	2/15/2021		NP-OP	VSP0838	Ron	QiaAMP mini RNA	2/23/21	37	Undetermined					Hospitalized									
+474s	474	UPHS	2/15/2021		Saliva	VSP0839	Ron	QiaAMP mini RNA	2/23/21	37	7.02E+02					Hospitalized									
+476no	476	UPHS	2/15/2021		NP-OP	VSP0840	Ron	QiaAMP mini RNA	2/23/21	37	5.92E+05					Hospitalized									
+476s	476	UPHS	2/15/2021		Saliva	VSP0841	Ron	QiaAMP mini RNA	2/23/21	37	1.82E+04					Hospitalized									
+454no	454	UPHS	1/15/2021		NP-OP	VSP0842	Ron	QiaAMP mini RNA	2/23/21	37	Undetermined					Hospitalized									
+PQ-Seq16	PQ-Seq16	Molpath	2/15/2021		Saliva	VSP0843	Emilie Rabut	QiaAMP mini RNA				Shantan (2/22/2020)			210222_M03249_0160_000000000-JHTHM	Outbreak			35	Female	Other	93704			
+PQ-Seq17	PQ-Seq17	Molpath	2/15/2021		Saliva	VSP0844	Emilie Rabut	QiaAMP mini RNA				Shantan (2/22/2020)			210222_M03249_0160_000000000-JHTHM	Outbreak			39	Female	N/A	19083			
+PQ-Seq18	PQ-Seq18	Molpath	2/15/2021		Saliva	VSP0845	Emilie Rabut	QiaAMP mini RNA				Shantan (2/22/2020)			210222_M03249_0160_000000000-JHTHM	Outbreak			27	Male	Hispanic Latin-White	19102			
+PQ-Seq19	PQ-Seq19	Molpath	2/15/2021		Saliva	VSP0846	Emilie Rabut	QiaAMP mini RNA				Shantan (2/22/2020)			210222_M03249_0160_000000000-JHTHM	Outbreak			21	Male	Hispanic Latin-Black	19104			
+JKML5	JKML5	seqRunControl	2/6/2021		Negative control	VSP9968	Pascha	QiaAMP mini RNA							210216_M03249_0158_000000000										
+JHTHM	JHTHM	seqRunControl	2/22/2021		Negative control	VSP9967	Shantan	QiaAMP mini RNA							210222_M03249_0160_000000000-JHTHM										
+475no	475	UPHS	2/15/2021		NP-OP	VSP0847	Ron	QiaAMP mini RNA	3/15/21	37	Undetermined					Hospitalized									
+475s	475	UPHS	2/15/2021		Saliva	VSP0848	Ron	QiaAMP mini RNA	3/15/21	37	Undetermined					Hospitalized									
+477s	477	UPHS	2/15/2021		Saliva	VSP0849	Ron	QiaAMP mini RNA	3/15/21	37	Undetermined					Hospitalized									
+467s	467	UPHS	2/17/2021		Saliva	VSP0850	Ron	QiaAMP mini RNA	3/15/21	37	Undetermined					Hospitalized									
+472s	472	UPHS	2/17/2021		Saliva	VSP0851	Ron	QiaAMP mini RNA	3/15/21	37	Undetermined					Hospitalized									
+478no	478	UPHS	2/17/2021		NP-OP	VSP0852	Ron	QiaAMP mini RNA	3/15/21	37	1.94E+01					Hospitalized									
+464s	464	UPHS	2/19/2021		Saliva	VSP0853	Ron	QiaAMP mini RNA	3/15/21	37	2.09E+04					Hospitalized									
+472s	472	UPHS	2/19/2021		Saliva	VSP0854	Ron	QiaAMP mini RNA	3/15/21	37	4.23E+01					Hospitalized									
+476no	476	UPHS	2/19/2021		NP-OP	VSP0855	Ron	QiaAMP mini RNA	3/15/21	37	Undetermined					Hospitalized									
+480no	480	UPHS	2/19/2021		NP-OP	VSP0856	Ron	QiaAMP mini RNA	3/15/21	37	1.10E+01					Hospitalized									
+480s	480	UPHS	2/19/2021		Saliva	VSP0857	Ron	QiaAMP mini RNA	3/15/21	37	1.91E+01					Hospitalized									
+472s	472	UPHS	2/22/2021		Saliva	VSP0858	Ron	QiaAMP mini RNA	3/15/21	37	1.53E+06					Hospitalized									
+482no	482	UPHS	2/22/2021		NP-OP	VSP0859	Ron	QiaAMP mini RNA	3/15/21	37	6.32E+06					Hospitalized									
+482s	482	UPHS	2/22/2021		Saliva	VSP0860	Ron	QiaAMP mini RNA	3/15/21	37	6.99E+00					Hospitalized									
+HUP-PH-0017	HUP PH-0017	Molpath	2/22/2021		Saline	VSP0861	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2021)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			66	Male	White	8824			
+HUP-PH-0018	HUP PH-0018	Molpath	2/22/2021		Saline	VSP0862	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2021)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			56	Female	Hispanic Latin-White	19320			
+HUP-PH-0019	HUP PH-0019	Molpath	2/22/2021		Saline	VSP0863	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2021)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			60	Male	White	8108			
+HUP-PH-0020	HUP PH-0020	Molpath	2/22/2021		Saline	VSP0864	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2021)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			65	Male	White	18045			
+HUP-PH-0021	HUP PH-0021	Molpath	2/22/2021		Saline	VSP0865	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2021)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			48	Male	White	17552			
+HUP-PH-0022	HUP PH-0022	Molpath	2/22/2021		Saliva	VSP0866	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2021)			210304_NB551353_0078_AHNWKNAFX2	Hospitalized			36	Female	American Indian	19142			
+HUP-PH-0023	HUP PH-0023	Molpath	2/22/2021		Saline	VSP0867	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2021)			210304_NB551353_0078_AHNWKNAFX2	Outbreak			49	Male	White	19136			
+HUP-Q-0005	HUP Q-0005	Molpath	2/22/2021		Saline	VSP0868	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2021)			210304_NB551353_0078_AHNWKNAFX2	S drop out						8512		2/16/21	
+HUP-Q-0006	HUP Q-0006	Molpath	2/22/2021		Saline	VSP0869	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2021)			210304_NB551353_0078_AHNWKNAFX2	S drop out						19142		2/16/21	
+HUP-Q-0007	HUP Q-0007	Molpath	2/22/2021		Saline	VSP0870	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2021)			210304_NB551353_0078_AHNWKNAFX2	S drop out						8502		2/12/21	
+HUP-Q-0008	HUP Q-0008	Molpath	2/22/2021		Saline	VSP0871	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2021)			210304_NB551353_0078_AHNWKNAFX2	S drop out						19143		2/17/21	
+HUP-Q-0009	HUP Q-0009	Molpath	2/22/2021		Saline	VSP0872	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2021)			210304_NB551353_0078_AHNWKNAFX2	S drop out						19312		2/19/21	
+HUP-Q-0010	HUP Q-0010	Molpath	2/22/2021		Saline	VSP0873	Emilie Rabut	QiaAMP mini RNA				Shantan (2/27/2021)			210304_NB551353_0078_AHNWKNAFX2	S drop out						19138		2/20/21	
+472s	472	UPHS	2/24/2021		Saliva	VSP0874	Ron	QiaAMP mini RNA	3/15/21	37	2.13E+04					Hospitalized									
+484no	484	UPHS	2/24/2021		NP-OP	VSP0875	Ron	QiaAMP mini RNA	3/15/21	37	2.80E+04					Hospitalized									
+484s	484	UPHS	2/24/2021		Saliva	VSP0876	Ron	QiaAMP mini RNA	3/15/21	37	Undetermined					Hospitalized									
+485s	485	UPHS	2/24/2021		Saliva	VSP0877	Ron	QiaAMP mini RNA	3/15/21	37	5.62E+04					Hospitalized									
+486no	486	UPHS	2/24/2021		NP-OP	VSP0878	Ron	QiaAMP mini RNA	3/15/21	37	7.74E+04					Hospitalized									
+H2102170726	H2102170726	Dept of Health	3/1/2021		VTM	VSP0672	Claire Newbern					Lisa (3/11/2021)				Random									
+H2102160885	H2102160885	Dept of Health	3/1/2021		VTM	VSP0673	Claire Newbern					Lisa (3/11/2021)				Random									
+H2102170795	H2102170795	Dept of Health	3/1/2021		VTM	VSP0674	Claire Newbern					Lisa (3/11/2021)				Random									
+H2102170747	H2102170747	Dept of Health	3/1/2021		VTM	VSP0675	Claire Newbern					Lisa (3/11/2021)				Random									
+H2102170532	H2102170532	Dept of Health	3/1/2021		VTM	VSP0676	Claire Newbern					Lisa (3/11/2021)				Random									
+H2102170736	H2102170736	Dept of Health	3/1/2021		VTM	VSP0677	Claire Newbern					Lisa (3/11/2021)				Random									
+H2102160891	H2102160891	Dept of Health	3/1/2021		VTM	VSP0678	Claire Newbern					Lisa (3/11/2021)				Random									
+H2102200033	H2102200033	Dept of Health	3/1/2021		VTM	VSP0679	Claire Newbern					Lisa (3/11/2021)				Random									
+H2102220686	H2102220686	Dept of Health	3/1/2021		VTM	VSP0680	Claire Newbern					Lisa (3/11/2021)				Random									
+H2102230858	H2102230858	Dept of Health	3/1/2021		VTM	VSP0681	Claire Newbern					Lisa (3/11/2021)				Random									
+H2102230845	H2102230845	Dept of Health	3/1/2021		VTM	VSP0682	Claire Newbern					Lisa (3/11/2021)				Random									
+H2102230852	H2102230852	Dept of Health	3/1/2021		VTM	VSP0683	Claire Newbern					Lisa (3/11/2021)				Random									
+H2102240764	H2102240764	Dept of Health	3/1/2021		VTM	VSP0684	Claire Newbern					Lisa (3/11/2021)				Random									
+H2102250351	H2102250351	Dept of Health	3/1/2021		VTM	VSP0685	Claire Newbern					Lisa (3/11/2021)				Random									
+HUP Q-0011	HUP Q-0011	Molpath	3/1/2021		Saline	VSP0879	Emilie Rabut					Lisa (3/11/2021)				S Drop						19104		44249	
+HUP Q-0012	HUP Q-0012	Molpath	3/1/2021		Saline	VSP0880	Emilie Rabut					Lisa (3/11/2021)				S Drop						19104		44249	
+HUP-Q-0013	HUP-Q-0013	Molpath	3/1/2021		unknown	VSP0881	Emilie Rabut					Lisa (3/11/2021)				Vaccine Breakthrough							Vaccinated	44249	
+HUP Q-0014	HUP Q-0014	Molpath	3/1/2021		Saline	VSP0882	Emilie Rabut					Lisa (3/11/2021)				S Drop						8501		44250	
+HUP Q-0019	HUP Q-0019	Molpath	3/1/2021		Saliva	VSP0883	Emilie Rabut					Lisa (3/11/2021)				Vaccine Breakthrough						19044	Vaccinated	44245	
+HUP Q-0015	HUP Q-0015	Molpath	3/1/2021		Saline	VSP0884	Emilie Rabut					Lisa (3/11/2021)				S Drop						19143		44251	
+HUP Q-0016	HUP Q-0016	Molpath	3/1/2021		Saline	VSP0885	Emilie Rabut					Lisa (3/11/2021)				S Drop						19026		44251	
+HUP Q-0022	HUP Q-0022	Molpath	3/1/2021		Saline	VSP0886	Emilie Rabut					Lisa (3/11/2021)				S drop out								44252	
+HUP Q-0023	HUP Q-0023	Molpath	3/1/2021		VTM	VSP0887	Emilie Rabut					Lisa (3/11/2021)				S drop out								44252	
+HUP Q-0024	HUP Q-0024	Molpath	3/1/2021		VTM	VSP0888	Emilie Rabut					Lisa (3/11/2021)				S drop out								44252	
+HUP Q-0018	HUP Q-0018	Molpath	3/1/2021		Saline	VSP0889	Emilie Rabut					Lisa (3/11/2021)				Vaccine Breakthrough						8638	Vaccinated	44250	
+HUP Q-0020	HUP Q-0020	Molpath	3/1/2021		Saliva	VSP0890	Emilie Rabut					Lisa (3/11/2021)				Vaccine Breakthrough						19104		44251	
+HUP Q-0017	HUP Q-0017	Molpath	3/1/2021		Saline	VSP0891	Emilie Rabut					Lisa (3/11/2021)				S drop out						19103		44252	
+HUP Q-0021	HUP Q-0021	Molpath	3/1/2021		Saline	VSP0892	Emilie Rabut					Lisa (3/11/2021)				S drop out						19148		44253	
+HUP Q-0025	HUP Q-0025	Molpath	3/1/2021		Saline	VSP0893	Emilie Rabut					Lisa (3/11/2021)				S drop out						8619		44253	
+HUP Q-0026	HUP Q-0026	Molpath	3/1/2021		Saline	VSP0894	Emilie Rabut					Lisa (3/11/2021)				S drop out						8690		44253	
+HUP-Q-0027	HUP-Q-0027	Molpath	3/1/2021		Saline	VSP0895	Emilie Rabut					Lisa (3/11/2021)				S drop out						19720		44253	
+HUP-Q-0028	HUP-Q-0028	Molpath	3/1/2021		Saline	VSP0896	Emilie Rabut					Lisa (3/11/2021)				S drop out						19131		44254	
+HUP Q-0029	HUP Q-0029	Molpath	3/1/2021		Saline	VSP0897	Emilie Rabut					Lisa (3/11/2021)				S drop out						19104		44254	
+HUP PH-0024	HUP PH-0024	Molpath	3/1/2021		Saline	VSP0898	Emilie Rabut					Lisa (3/11/2021)				Outbreak			56	Male	White	8060			
+HUP PH-0025	HUP PH-0025	Molpath	3/1/2021		Saline	VSP0899	Emilie Rabut					Lisa (3/11/2021)				Outbreak			35	Female	White	19121			
+HUP PH-0026	HUP PH-0026	Molpath	3/1/2021		Saline	VSP0900	Emilie Rabut					Lisa (3/11/2021)				Outbreak			26	Female	White	8062			
+HUP PH-0027	HUP PH-0027	Molpath	3/1/2021		Saline	VSP0901	Emilie Rabut					Lisa (3/11/2021)				Outbreak			57	Male	Other	18938			
+UPHS-0001	UPHS-0001	Molpath	3/1/2021		Saline	VSP0902	Emilie Rabut									Random			28	Male	White	19145			
+486no	486	UPHS	3/1/2021		NP-OP	VSP0903	Ron	QiaAMP mini RNA	3/15/21	37	2.45E+05					Hospitalized									
+486s	486	UPHS	3/1/2021		Saliva	VSP0904	Ron	QiaAMP mini RNA	3/15/21	37	Undetermined					Hospitalized									
+490no	490	UPHS	3/1/2021		NP-OP	VSP0905	Ron	QiaAMP mini RNA	3/15/21	37	Undetermined					Hospitalized									
+472s	472	UPHS	3/3/2021		Saliva	VSP0906	Ron	QiaAMP mini RNA	3/15/21	37	3.63E+03					Hospitalized									
+489s	489	UPHS	3/3/2021		Saliva	VSP0907	Ron	QiaAMP mini RNA	3/15/21	37	3.53E+03					Hospitalized									
+491no	491	UPHS	3/3/2021		NP-OP	VSP0908	Ron	QiaAMP mini RNA	3/15/21	37	Undetermined					Hospitalized									
+AHNWKNAFX2	AHNWKNAFX2	seqRunControl	3/4/2021		Negative control	VSP9966	Shantan								210304_NB551353_0078_AHNWKNAFX2										
+patient_A1	patient_A1	ODoherty	3/1/2021		ImmunoComp_sim	VSP9965	John																		
+patient_B1	patient_B1	ODoherty	3/1/2021		ImmunoComp_sim	VSP9964	John																		
+patient_C1	patient_C1	ODoherty	3/1/2021		ImmunoComp_sim	VSP9963	John																		
+patient_SS26	patient_SS26	ODoherty	3/1/2021		Canine_sim	VSP9962	John																		
+Lennon_canine1	Lennon_canine1	Lennnon_animals	3/1/2021		Canine	VSP0909	Liz Lennon																		
+472s	472	UPHS	3/5/2021		Saliva	VSP0910	Ron	QiaAMP mini RNA	3/15/21	37	3.61E+05					Hospitalized									
+486no	486	UPHS	3/5/2021		NP-OP	VSP0911	Ron	QiaAMP mini RNA	3/15/21	37	6.79E+01					Hospitalized									
+489no	489	UPHS	3/5/2021		NP-OP	VSP0912	Ron	QiaAMP mini RNA	3/15/21	37	6.75E+03					Hospitalized									
+489s	489	UPHS	3/5/2021		Saliva	VSP0913	Ron	QiaAMP mini RNA	3/15/21	37	2.92E+03					Hospitalized									
+491no	491	UPHS	3/5/2021		NP-OP	VSP0914	Ron	QiaAMP mini RNA	3/15/21	37	Undetermined					Hospitalized									
+492no	492	UPHS	3/5/2021		NP-OP	VSP0915	Ron	QiaAMP mini RNA	3/15/21	37	1.15E+05					Hospitalized									
+486no	486	UPHS	3/8/2021		NP-OP	VSP0916	Ron	QiaAMP mini RNA	3/15/21	37	6.61E+05					Hospitalized									
+486s	486	UPHS	3/8/2021		Saliva	VSP0917	Ron	QiaAMP mini RNA	3/15/21	37	1.95E+02					Hospitalized									
+495no	495	UPHS	3/8/2021		NP-OP	VSP0918	Ron	QiaAMP mini RNA	3/15/21	37	7.23E+03					Hospitalized									
+495s	495	UPHS	3/8/2021		Saliva	VSP0919	Ron	QiaAMP mini RNA	3/15/21	37	1.31E+01					Hospitalized									
+472s	472	UPHS	2/26/2021		Saliva	VSP0920	Ron	QiaAMP mini RNA	3/15/21	37	3.20E+04					Hospitalized									
+476e	476	UPHS	2/26/2021		ETA	VSP0921	Ron	QiaAMP mini RNA	3/15/21	37	3.22E+01					Hospitalized									
+485no	485	UPHS	2/26/2021		unknown	VSP0922	Ron	QiaAMP mini RNA	3/15/21	37	3.99E+02					Hospitalized									
+485s	485	UPHS	2/26/2021		Saliva	VSP0923	Ron	QiaAMP mini RNA	3/15/21	37	2.28E+05					Hospitalized									
+486no	486	UPHS	2/26/2021		NP-OP	VSP0924	Ron	QiaAMP mini RNA	3/15/21	37	3.02E+04					Hospitalized									
+486s	486	UPHS	2/26/2021		Saliva	VSP0925	Ron	QiaAMP mini RNA								Hospitalized									
+487no	487	UPHS	2/26/2021		NP-OP	VSP0926	Ron	QiaAMP mini RNA	3/15/21	37	4.54E+04					Hospitalized									
+487s	487	UPHS	2/26/2021		Saliva	VSP0927	Ron	QiaAMP mini RNA	3/15/21	37	1.74E+01					Hospitalized									
+494s	494	UPHS	3/8/2021		Saliva	VSP0928	Ron									Hospitalized									
+494no	494	UPHS	3/10/2021		NP-OP	VSP0929	Ron									Hospitalized									
+494s	494	UPHS	3/10/2021		Saliva	VSP0930	Ron									Hospitalized									
+495no	495	UPHS	3/10/2021		NP-OP	VSP0931	Ron									Hospitalized									
+495s	495	UPHS	3/10/2021		Saliva	VSP0932	Ron									Hospitalized									
+496s	496	UPHS	3/10/2021		Saliva	VSP0933	Ron									Hospitalized									
+H2102080816	H2102080816	Dept of Health	3/1/2021		VTM	VSP0686	Claire Newbern									Random		Claire.Newbern@Phila.gov							
+H2102060055	H2102060055	Dept of Health	3/1/2021		VTM	VSP0687	Claire Newbern									Random		Claire.Newbern@Phila.gov							
+H2102060042	H2102060042	Dept of Health	3/1/2021		VTM	VSP0688	Claire Newbern									Random		Claire.Newbern@Phila.gov							
+H2102100346	H2102100346	Dept of Health	3/1/2021		VTM	VSP0689	Claire Newbern									Random		Claire.Newbern@Phila.gov							
+H2102090603	H2102090603	Dept of Health	3/1/2021		VTM	VSP0690	Claire Newbern									Random		Claire.Newbern@Phila.gov							
+H2102080588	H2102080588	Dept of Health	3/1/2021		VTM	VSP0691	Claire Newbern									Random		Claire.Newbern@Phila.gov							
+H2102100888	H2102100888	Dept of Health	3/1/2021		VTM	VSP0692	Claire Newbern									Random		Claire.Newbern@Phila.gov							
+UPHS-0001	UPHS-0001	Molpath	3/8/2021	3/16/2021	Saline	VSP0934	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			28	Male	White	19145			
+UPHS-0002	UPHS-0002	Molpath	3/8/2021	3/16/2021	unknown	VSP0935	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			32	Female	Black	19132			
+UPHS-0003	UPHS-0003	Molpath	3/8/2021	3/16/2021	unknown	VSP0936	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			44	Female	White	19711			
+UPHS-0004	UPHS-0004	Molpath	3/8/2021	3/16/2021	unknown	VSP0937	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			66	Female	White	19018			
+UPHS-0005	UPHS-0005	Molpath	3/8/2021	3/16/2021	unknown	VSP0938	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			50	Male	White	19425			
+UPHS-0006	UPHS-0006	Molpath	3/8/2021	3/16/2021	unknown	VSP0939	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			50	Female	White	19720			
+UPHS-0007	UPHS-0007	Molpath	3/8/2021	3/16/2021	unknown	VSP0940	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			70	Female	Black	19022			
+UPHS-0008	UPHS-0008	Molpath	3/8/2021	3/16/2021	unknown	VSP0941	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			65	Male	White	8204			
+UPHS-0009	UPHS-0009	Molpath	3/8/2021	3/16/2021	unknown	VSP0942	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			35	Female	Black	19143			
+UPHS-0010	UPHS-0010	Molpath	3/8/2021	3/16/2021	unknown	VSP0943	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			66	Female	Black	19145			
+UPHS-0011	UPHS-0011	Molpath	3/8/2021	3/16/2021	unknown	VSP0944	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			64	Female	Black	19142			
+UPHS-0012	UPHS-0012	Molpath	3/8/2021	3/16/2021	unknown	VSP0945	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			63	Male	Black	19143			
+UPHS-0013	UPHS-0013	Molpath	3/8/2021	3/16/2021	unknown	VSP0946	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			66	Male	Black	19143			
+UPHS-0014	UPHS-0014	Molpath	3/8/2021	3/16/2021	unknown	VSP0947	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			64	Female	Black	19145			
+UPHS-0016	UPHS-0016	Molpath	3/8/2021	3/16/2021	unknown	VSP0948	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			55	Male	Black	19151			
+UPHS-0017	UPHS-0017	Molpath	3/8/2021	3/16/2021	Saline	VSP0949	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			72	Male	White	19401			
+UPHS-0018	UPHS-0018	Molpath	3/8/2021	3/16/2021	Saline	VSP0950	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			56	Male	White	8060			
+UPHS-0019	UPHS-0019	Molpath	3/8/2021	3/16/2021	Saline	VSP0951	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			64	Female	Asian	8068			
+UPHS-0020	UPHS-0020	Molpath	3/8/2021	3/16/2021	VTM	VSP0952	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			50	Female	White	19720			
+UPHS-0021	UPHS-0021	Molpath	3/8/2021	3/16/2021	Saline	VSP0953	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			41	Female	White	19145			
+UPHS-0022	UPHS-0022	Molpath	3/8/2021	3/16/2021	Saline	VSP0954	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			33	Male	Black	19015			
+UPHS-0023	UPHS-0023	Molpath	3/8/2021	3/16/2021	Saline	VSP0955	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			19	Male	Hispanic Latin White	19104			
+UPHS-0024	UPHS-0024	Molpath	3/8/2021	3/16/2021	Saline	VSP0956	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			27	Male	White	8691			
+UPHS-0025	UPHS-0025	Molpath	3/8/2021	3/16/2021	Saline	VSP0957	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			24	Male	Asian	China?			
+UPHS-0026	UPHS-0026	Molpath	3/8/2021	3/16/2021	Saline	VSP0958	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			30	Male	Black	19131			
+UPHS-0027	UPHS-0027	Molpath	3/8/2021	3/16/2021	Saline	VSP0959	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			22	Male	Unknown	19145			
+UPHS-0028	UPHS-0028	Molpath	3/8/2021	3/16/2021	Saline	VSP0960	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			41	Female	Black	19104			
+UPHS-0029	UPHS-0029	Molpath	3/8/2021	3/16/2021	Saline	VSP0961	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			29	Male	White	19135			
+UPHS-0030	UPHS-0030	Molpath	3/8/2021	3/16/2021	Saline	VSP0962	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			55	Female	White	8043			
+UPHS-0031	UPHS-0031	Molpath	3/8/2021	3/16/2021	Saline	VSP0963	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			16	Male	Other	19111			
+UPHS-0032	UPHS-0032	Molpath	3/8/2021	3/16/2021	Saline	VSP0964	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			58	Female	Other	8520			
+UPHS-0033	UPHS-0033	Molpath	3/8/2021	3/16/2021	unknown	VSP0965	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			77	Male	White	19115			
+UPHS-0034	UPHS-0034	Molpath	3/8/2021	3/16/2021	unknown	VSP0966	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			43	Female	Black	19139			
+UPHS-0035	UPHS-0035	Molpath	3/8/2021	3/16/2021	Saline	VSP0967	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			58	Female	White	19145			
+UPHS-0036	UPHS-0036	Molpath	3/8/2021	3/16/2021	Saline	VSP0968	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			81	Female	White	19148			
+UPHS-0037	UPHS-0037	Molpath	3/8/2021	3/16/2021	Saline	VSP0969	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			80	Male	White	19010			
+UPHS-0038	UPHS-0038	Molpath	3/8/2021	3/16/2021	Saline	VSP0970	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			49	Female	White	19014			
+UPHS-0039	UPHS-0039	Molpath	3/8/2021	3/16/2021	Saline	VSP0971	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			20	Female	Black	19143			
+UPHS-0040	UPHS-0040	Molpath	3/8/2021	3/16/2021	Saline	VSP0972	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			56	Female	White	19130			
+UPHS-0041	UPHS-0041	Molpath	3/8/2021	3/16/2021	Saline	VSP0973	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			79	Male	White	19148			
+UPHS-0042	UPHS-0042	Molpath	3/8/2021	3/16/2021	Saline	VSP0974	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			55	Female	White	8882			
+UPHS-0043	UPHS-0043	Molpath	3/8/2021	3/16/2021	Saline	VSP0975	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			54	Male	Hispanic Latin Black	19139			
+UPHS-0044	UPHS-0044	Molpath	3/8/2021	3/16/2021	Saline	VSP0976	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			27	Female	White	8753			
+UPHS-0045	UPHS-0045	Molpath	3/8/2021	3/16/2021	saline	VSP0977	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			74	Female	Black	19145			
+UPHS-0046	UPHS-0046	Molpath	3/8/2021	3/16/2021	Saline	VSP0978	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			56	Male	White	19426			
+UPHS-0047	UPHS-0047	Molpath	3/8/2021	3/16/2021	Saline	VSP0979	Emilie Rabut	QiaAMP mini RNA				Pascha (3/17/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			31	Female	Black	19139			
+UPHS-0048	UPHS-0048	Molpath	3/8/2021	3/14/2021	Saline	VSP0980	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			62	Female	White	19403			
+UPHS-0049	UPHS-0049	Molpath	3/8/2021	3/14/2021	Saline	VSP0981	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			26	Male	Black	19132			
+UPHS-0050	UPHS-0050	Molpath	3/8/2021	3/14/2021	Saline	VSP0982	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			54	Female	White	19403			
+UPHS-0051	UPHS-0051	Molpath	3/8/2021	3/14/2021	Saline	VSP0983	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			64	Female	Black	19143			
+UPHS-0052	UPHS-0052	Molpath	3/8/2021	3/14/2021	Saline	VSP0984	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			59	Female	Black	19023			
+UPHS-0053	UPHS-0053	Molpath	3/8/2021	3/14/2021	Saline	VSP0985	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			33	Female	Black	19147			
+UPHS-0054	UPHS-0054	Molpath	3/8/2021	3/14/2021	Saline	VSP0986	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			46	Female	Black	19143			
+UPHS-0055	UPHS-0055	Molpath	3/8/2021	3/14/2021	Saline	VSP0987	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			10	Male	Other	17602			
+UPHS-0056	UPHS-0056	Molpath	3/8/2021	3/14/2021	Saline	VSP0988	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			7	Female	Other	17602			
+UPHS-0057	UPHS-0057	Molpath	3/8/2021	3/14/2021	Saline	VSP0989	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random; S drop			16	Female	White	19310			
+UPHS-0058	UPHS-0058	Molpath	3/8/2021	3/14/2021	VTM	VSP0990	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random; S drop			38	Female	White	17603			
+UPHS-0059	UPHS-0059	Molpath	3/8/2021	3/14/2021	Saline	VSP0991	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random; S drop			48	Female	Black	17603			
+UPHS-0060	UPHS-0060	Molpath	3/8/2021	3/14/2021	Saline	VSP0992	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			60	Male	Black	19139			
+UPHS-0061	UPHS-0061	Molpath	3/8/2021	3/14/2021	Saline	VSP0993	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			28	Female	Other	19145			
+UPHS-0062	UPHS-0062	Molpath	3/8/2021	3/14/2021	Saline	VSP0994	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			41	Female	Other	8648			
+UPHS-0063	UPHS-0063	Molpath	3/8/2021	3/14/2021	Saline	VSP0995	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			34	Male	White	8084			
+UPHS-0064	UPHS-0064	Molpath	3/8/2021	3/14/2021	Saline	VSP0996	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			16	Male	White	19073			
+UPHS-0065	UPHS-0065	Molpath	3/8/2021	3/14/2021	Saline	VSP0997	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			24	Female	Black	8536			
+UPHS-0066	UPHS-0066	Molpath	3/8/2021	3/14/2021	Saline	VSP0998	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			68	Female	Black	19139			
+UPHS-0067	UPHS-0067	Molpath	3/8/2021	3/14/2021	Saline	VSP0999	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			41	Female	White	19148			
+UPHS-0068	UPHS-0068	Molpath	3/8/2021	3/14/2021	Saline	VSP1000	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			30	Female	Asian	19103			
+UPHS-0069	UPHS-0069	Molpath	3/8/2021	3/14/2021	Saline	VSP1001	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			29	Female	Black	19131			
+UPHS-0070	UPHS-0070	Molpath	3/8/2021	3/14/2021	Saline	VSP1002	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			27	Male	Hispanic Latin Black	19103			
+UPHS-0071	UPHS-0071	Molpath	3/8/2021	3/14/2021	Saline	VSP1003	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			49	Male	Hispanic Latin White	19148			
+UPHS-0072	UPHS-0072	Molpath	3/8/2021	3/14/2021	Saline	VSP1004	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			51	Female	Black	19023			
+UPHS-0073	UPHS-0073	Molpath	3/8/2021	3/14/2021	Saline	VSP1005	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			29	Female	White	19341			
+UPHS-0074	UPHS-0074	Molpath	3/8/2021	3/14/2021	Saline	VSP1006	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			56	Female	White	19380			
+UPHS-0075	UPHS-0075	Molpath	3/8/2021	3/14/2021	Saline	VSP1007	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			59	Male	White	19520			
+UPHS-0076	UPHS-0076	Molpath	3/8/2021	3/14/2021	Saline	VSP1008	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			59	Female	Black	19082			
+UPHS-0077	UPHS-0077	Molpath	3/8/2021	3/14/2021	Saline	VSP1009	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			29	Female	Hispanic Latin White	19104			
+UPHS-0078	UPHS-0078	Molpath	3/8/2021	3/14/2021	VTM	VSP1010	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			62	Female	Asian	8558			
+UPHS-0079	UPHS-0079	Molpath	3/8/2021	3/14/2021	VTM	VSP1011	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			58	Male	Asian	8558			
+UPHS-0080	UPHS-0080	Molpath	3/8/2021	3/14/2021	VTM	VSP1012	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			78	Female	Black	8618			
+UPHS-0081	UPHS-0081	Molpath	3/8/2021	3/14/2021	Saline	VSP1013	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			61	Male	Other	8520			
+UPHS-0082	UPHS-0082	Molpath	3/8/2021	3/14/2021	Saline	VSP1014	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			57	Male	White	19021			
+UPHS-0083	UPHS-0083	Molpath	3/8/2021	3/14/2021	Saline	VSP1015	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			65	Male	Other	8854			
+UPHS-0084	UPHS-0084	Molpath	3/8/2021	3/14/2021	Saline	VSP1016	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			35	Female	Asian	19104			
+UPHS-0085	UPHS-0085	Molpath	3/8/2021	3/14/2021	Saline	VSP1017	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			59	Female	Other	8520			
+UPHS-0086	UPHS-0086	Molpath	3/8/2021	3/14/2021	Saline	VSP1018	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			61	Female	Black	19036			
+UPHS-0087	UPHS-0087	Molpath	3/8/2021	3/14/2021	Saline	VSP1019	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			47	Female	Black	19703			
+UPHS-0088	UPHS-0088	Molpath	3/8/2021	3/14/2021	Saline	VSP1020	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			56	Female	White	8816			
+UPHS-0090	UPHS-0090	Molpath	3/8/2021	3/14/2021	Saline	VSP1021	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			39	Female	Other	8520			
+UPHS-0091	UPHS-0091	Molpath	3/8/2021	3/14/2021	Saline	VSP1022	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			63	Female	Black	19143			
+UPHS-0092	UPHS-0092	Molpath	3/8/2021	3/14/2021	Saline	VSP1023	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			39	Male	Black	8084			
+UPHS-0093	UPHS-0093	Molpath	3/8/2021	3/14/2021	Saline	VSP1024	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			50	Male	White	19425			
+UPHS-0094	UPHS-0094	Molpath	3/8/2021	3/14/2021	Saline	VSP1025	Emilie Rabut	QiaAMP mini RNA				Shantan (3/15/2021)			210322_NB551353_0084_AHT2YGAFX2	Random			65	Male	Black	19153			
+UPHS-0095	UPHS-0095	Molpath	3/8/2021	3/21/2021	saline	VSP1026	Emilie Rabut	QiaAMP mini RNA				Shantan (3/22/2021)				Random			26	Female	White	8062			
+UPHS-0096	UPHS-0096	Molpath	3/8/2021	3/21/2021	Saline	VSP1027	Emilie Rabut	QiaAMP mini RNA				Shantan (3/22/2021)				Random			27	Female	Black	19120			
+UPHS-0097	UPHS-0097	Molpath	3/8/2021	3/21/2021	Saline	VSP1028	Emilie Rabut	QiaAMP mini RNA				Shantan (3/22/2021)				Random			56	Female	Hispanic Latin-White	19320			
+UPHS-0098	UPHS-0098	Molpath	3/8/2021	3/21/2021	Saline	VSP1029	Emilie Rabut	QiaAMP mini RNA				Shantan (3/22/2021)				Random			31	Female	White	19111			
+UPHS-0099	UPHS-0099	Molpath	3/8/2021	3/21/2021	Saline	VSP1030	Emilie Rabut	QiaAMP mini RNA				Shantan (3/22/2021)				Random			31	Female	American Indian	19131			
+UPHS-0100	UPHS-0100	Molpath	3/8/2021	3/21/2021	Saline	VSP1031	Emilie Rabut	QiaAMP mini RNA				Shantan (3/22/2021)				Random			27	Female	White	8016			
+HUP Q-0030	HUP Q-0030	Molpath	3/8/2021	3/21/2021	Saline	VSP1032	Emilie Rabut	QiaAMP mini RNA				Shantan (3/22/2021)				S Drop						19143			
+HUP Q-0031	HUP Q-0031	Molpath	3/8/2021	3/21/2021	Saline	VSP1033	Emilie Rabut	QiaAMP mini RNA				Shantan (3/22/2021)				S Drop						19312			
+HUP Q-0032	HUP Q-0032	Molpath	3/8/2021	3/21/2021	Saline	VSP1034	Emilie Rabut	QiaAMP mini RNA				Shantan (3/22/2021)				S Drop						19145			
+HUP Q-0033	HUP Q-0033	Molpath	3/8/2021	3/21/2021	Saline	VSP1035	Emilie Rabut	QiaAMP mini RNA				Shantan (3/22/2021)				S Drop						19145			
+HUP Q-0034	HUP Q-0034	Molpath	3/8/2021	3/21/2021	Saline	VSP1036	Emilie Rabut	QiaAMP mini RNA				Shantan (3/22/2021)				S Drop						19145			
+HUP PH-0028	HUP PH-0028	Molpath	3/8/2021	3/21/2021	Saliva	VSP1037	Emilie Rabut	QiaAMP mini RNA				Shantan (3/22/2021)				Outbreak			38	Male	N/A	19104			
+H2102080816	H2102080816	Dept of Health	3/1/2021	3/21/2021	VTM	VSP0693	Claire Newbern	QiaAMP mini RNA				Shantan (3/22/2021)				Random									
+H2102060055	H2102060055	Dept of Health	3/1/2021	3/21/2021	VTM	VSP0694	Claire Newbern	QiaAMP mini RNA				Shantan (3/22/2021)				Random									
+H2102060042	H2102060042	Dept of Health	3/1/2021	3/21/2021	VTM	VSP0695	Claire Newbern	QiaAMP mini RNA				Shantan (3/22/2021)				Random									
+H2102100346	H2102100346	Dept of Health	3/1/2021	3/21/2021	VTM	VSP0696	Claire Newbern	QiaAMP mini RNA				Shantan (3/22/2021)				Random									
+H2102090603	H2102090603	Dept of Health	3/1/2021	3/21/2021	VTM	VSP0697	Claire Newbern	QiaAMP mini RNA				Shantan (3/22/2021)				Random									
+H2102080588	H2102080588	Dept of Health	3/1/2021	3/21/2021	VTM	VSP0698	Claire Newbern	QiaAMP mini RNA				Shantan (3/22/2021)				Random									
+H2102100888	H2102100888	Dept of Health	3/1/2021	3/21/2021	VTM	VSP0699	Claire Newbern	QiaAMP mini RNA				Shantan (3/22/2021)				Random									
+486no	486	UPHS	3/12/2021		NP-OP	VSP1038	Ron									Hospitalized									
+494s	494	UPHS	3/12/2021		Saliva	VSP1039	Ron									Hospitalized									
+496no	496	UPHS	3/12/2021		NP-OP	VSP1040	Ron									Hospitalized									
+496s	496	UPHS	3/15/2021		Saliva	VSP1041	Ron									Hospitalized									
+500s	500	UPHS	3/15/2021		Saliva	VSP1042	Ron									Hospitalized									
+501no	501	UPHS	3/15/2021		NP-OP	VSP1043	Ron									Hospitalized									
+501s	501	UPHS	3/15/2021		Saliva	VSP1044	Ron									Hospitalized									
+500no	500	UPHS	3/17/2021		NP-OP	VSP1045	Ron									Hospitalized									
+500s	500	UPHS	3/17/2021		Saliva	VSP1046	Ron									Hospitalized									
+502no	502	UPHS	3/17/2021		NP-OP	VSP1047	Ron									Hospitalized									
+H2103080875	H2103080875	Dept of Health	3/17/2021	3/21/2021	Saline	VSP0700	Claire Newbern	QiaAMP mini RNA				Shantan (3/22/2021)													
+H2103090778	H2103090778	Dept of Health	3/17/2021	3/21/2021	VTM	VSP0701	Claire Newbern	QiaAMP mini RNA				Shantan (3/22/2021)													
+H2103080906	H2103080906	Dept of Health	3/17/2021	3/21/2021	VTM	VSP0702	Claire Newbern	QiaAMP mini RNA				Shantan (3/22/2021)													
+H2103090803	H2103090803	Dept of Health	3/17/2021	3/21/2021	Saline	VSP0703	Claire Newbern	QiaAMP mini RNA				Shantan (3/22/2021)													
+H2103090759	H2103090759	Dept of Health	3/17/2021	3/21/2021	VTM	VSP0704	Claire Newbern	QiaAMP mini RNA				Shantan (3/22/2021)													
+H2103110713	H2103110713	Dept of Health	3/17/2021	3/21/2021	VTM	VSP0705	Claire Newbern	QiaAMP mini RNA				Shantan (3/22/2021)													
+H2103110830	H2103110830	Dept of Health	3/17/2021	3/21/2021	VTM	VSP0706	Claire Newbern	QiaAMP mini RNA				Shantan (3/22/2021)													
+S-210108-00462	S-210108-00462	COVIDSAFE	3/17/2021	3/21/2021	unknown	VSP1048	Ganguly Lab	QiaAMP mini RNA				Shantan (3/22/2021)													
+S-210113-01300	S-210113-01300	COVIDSAFE	3/17/2021	3/21/2021	unknown	VSP1049	Ganguly Lab	QiaAMP mini RNA				Shantan (3/22/2021)													
+S-210120-01295	S-210120-01295	COVIDSAFE	3/17/2021	3/21/2021	unknown	VSP1050	Ganguly Lab	QiaAMP mini RNA				Shantan (3/22/2021)													
+S−210122−02276	S−210122−02276	COVIDSAFE	3/17/2021	3/21/2021	unknown	VSP1051	Ganguly Lab	QiaAMP mini RNA				Shantan (3/22/2021)													
+S−210121-02333	S−210121-02333	COVIDSAFE	3/17/2021	3/21/2021	unknown	VSP1052	Ganguly Lab	QiaAMP mini RNA				Shantan (3/22/2021)				1/2 N1 on PCR, negative on beacon									
+S-210122-02024	S-210122-02024	COVIDSAFE	3/17/2021	3/21/2021	unknown	VSP1053	Ganguly Lab	QiaAMP mini RNA				Shantan (3/22/2021)													
+S-210122-01963	S-210122-01963	COVIDSAFE	3/17/2021	3/21/2021	unknown	VSP1054	Ganguly Lab	QiaAMP mini RNA				Shantan (3/22/2021)				1/2 As1e and 1/2 Penn on beacon, negative on PCR									
+kit ID 019634	kit ID 019634	COVIDSAFE	3/17/2021	3/21/2021	unknown	VSP1055	Ganguly Lab	QiaAMP mini RNA				Shantan (3/22/2021)				flagged as potential on beacon, negative on PCR									
+S-210128-01783	S-210128-01783	COVIDSAFE	3/17/2021	3/21/2021	unknown	VSP1056	Ganguly Lab	QiaAMP mini RNA				Shantan (3/22/2021)													
+S−210203−04683	S−210203−04683	COVIDSAFE	3/17/2021	3/21/2021	unknown	VSP1057	Ganguly Lab	QiaAMP mini RNA				Shantan (3/22/2021)													
+S−210203−01682	S−210203−01682	COVIDSAFE	3/17/2021	3/21/2021	unknown	VSP1058	Ganguly Lab	QiaAMP mini RNA				Shantan (3/22/2021)													
+S-210222-03420	S-210222-03420	COVIDSAFE	3/17/2021	3/21/2021	unknown	VSP1059	Ganguly Lab	QiaAMP mini RNA				Shantan (3/22/2021)													
+S-210226-01457	S-210226-01457	COVIDSAFE	3/17/2021	3/21/2021	unknown	VSP1060	Ganguly Lab	QiaAMP mini RNA				Shantan (3/22/2021)													
+S−210309−01551	S−210309−01551	COVIDSAFE	3/17/2021	3/21/2021	unknown	VSP1061	Ganguly Lab	QiaAMP mini RNA				Shantan (3/22/2021)													
+S-210107-00602	S-210107-00602	COVIDSAFE	3/17/2021	3/21/2021	unknown	VSP1062	Ganguly Lab	QiaAMP mini RNA				Shantan (3/22/2021)				2/2 AS1e 0/2 Penn on beacon; 0/2 N1 on PCR									
+500s	500	UPHS	3/19/2021		unknown	VSP1063	Ron									Hospitalized									
+504no	504	UPHS	3/19/2021		unknown	VSP1064	Ron									Hospitalized									
+504s	504	UPHS	3/19/2021		unknown	VSP1065	Ron									Hospitalized									
+505no	505	UPHS	3/19/2021		unknown	VSP1066	Ron									Hospitalized									
+505s	505	UPHS	3/19/2021		unknown	VSP1067	Ron									Hospitalized									
+HUP Q-0036	HUP Q-0036	Molpath	3/15/2021	3/21/2021	Saline	VSP1068	Emilie Rabut	QiaAMP mini RNA				Shantan (3/22/2021)				S drop out						19147			
+HUP Q-0037	HUP Q-0037	Molpath	3/15/2021	3/21/2021	Saline	VSP1069	Emilie Rabut	QiaAMP mini RNA				Shantan (3/22/2021)				S drop out						19145			
+HUP Q-0038	HUP Q-0038	Molpath	3/15/2021	3/21/2021	Saline	VSP1070	Emilie Rabut	QiaAMP mini RNA				Shantan (3/22/2021)				S drop out						19335			
+HUP Q-0039	HUP Q-0039	Molpath	3/15/2021	3/21/2021	Saline	VSP1071	Emilie Rabut	QiaAMP mini RNA				Shantan (3/22/2021)				S drop out						19342			
+HUP Q-0040	HUP Q-0040	Molpath	3/15/2021	3/21/2021	Saline	VSP1072	Emilie Rabut	QiaAMP mini RNA				Shantan (3/22/2021)				S drop out; Vaccine Breakthrough						19122			
+HUP Q-0041	HUP Q-0041	Molpath	3/15/2021		Saline	VSP1073	Emilie Rabut									S drop out						19010			
+HUP Q-0042	HUP Q-0042	Molpath	3/15/2021		Saline	VSP1074	Emilie Rabut									S drop out						19148			
+HUP Q-0043	HUP Q-0043	Molpath	3/15/2021		Saline	VSP1075	Emilie Rabut									S drop out						8094			
+HUP Q-0044	HUP Q-0044	Molpath	3/15/2021		Saline	VSP1076	Emilie Rabut									S drop out						19111			
+HUP Q-0045	HUP Q-0045	Molpath	3/15/2021		Saline	VSP1077	Emilie Rabut									S drop out						19139			
+HUP Q-0046	HUP Q-0046	Molpath	3/15/2021		Saline	VSP1078	Emilie Rabut									S drop out						19311			
+HUP Q-0047	HUP Q-0047	Molpath	3/15/2021		Saline	VSP1079	Emilie Rabut									S drop out						19129			
+HUP Q-0048	HUP Q-0048	Molpath	3/15/2021		Saline	VSP1080	Emilie Rabut									S drop out						19014			
+HUP Q-0049	HUP Q-0049	Molpath	3/15/2021		Saline	VSP1081	Emilie Rabut									S drop out						19014			
+HUP Q-0050	HUP Q-0050	Molpath	3/15/2021		Saline	VSP1082	Emilie Rabut									S drop out						19114			
+HUP Q-0051	HUP Q-0051	Molpath	3/15/2021		Saline	VSP1083	Emilie Rabut									Vaccine breakthrough						8096			
+HUP Q-0052	HUP Q-0052	Molpath	3/15/2021		Saline	VSP1084	Emilie Rabut									S drop out						19128			
+HUP Q-0053	HUP Q-0053	Molpath	3/15/2021		Saline	VSP1085	Emilie Rabut									S drop out						19104			
+UPHS-0101	UPHS-0101	Molpath	3/15/2021		Saline	VSP1086	Emilie Rabut									Random			31	Female	Hispanic Latin White	19148			
+UPHS-0102	UPHS-0102	Molpath	3/15/2021		Saline	VSP1087	Emilie Rabut									Random			76	Female	White	19003			
+UPHS-0103	UPHS-0103	Molpath	3/15/2021		Saline	VSP1088	Emilie Rabut									Random			56	Male	White	19425			
+UPHS-0104	UPHS-0104	Molpath	3/15/2021		Saline	VSP1089	Emilie Rabut									Random			51	Male	White	8610			
+UPHS-0105	UPHS-0105	Molpath	3/15/2021		Saline	VSP1090	Emilie Rabut									Random			21	Female	White	18017			
+UPHS-0106	UPHS-0106	Molpath	3/15/2021		Saline	VSP1091	Emilie Rabut									Random			40	Female	Black	19143			
+UPHS-0107	UPHS-0107	Molpath	3/15/2021		Saline	VSP1092	Emilie Rabut									Random			27	Female	White	8753			
+UPHS-0108	UPHS-0108	Molpath	3/15/2021		Saline	VSP1093	Emilie Rabut									Random			44	Female	Hispanic Latin-White	19139			
+UPHS-0109	UPHS-0109	Molpath	3/15/2021		Saline	VSP1094	Emilie Rabut									Random			56	Male	Black	19143			
+UPHS-0110	UPHS-0110	Molpath	3/15/2021		Saline	VSP1095	Emilie Rabut									Random			20	Female	Hispanic Latin-White	19149			
+UPHS-0111	UPHS-0111	Molpath	3/15/2021		Saline	VSP1096	Emilie Rabut									Random			43	Male	White	19709			
+UPHS-0112	UPHS-0112	Molpath	3/15/2021		Saline	VSP1097	Emilie Rabut									Random			43	Male	Other	19022			
+UPHS-0113	UPHS-0113	Molpath	3/15/2021		Saline	VSP1098	Emilie Rabut									Random			67	Female	White	8540			
+UPHS-0114	UPHS-0114	Molpath	3/15/2021		Saline	VSP1099	Emilie Rabut									Random			53	Male	White	19362			
+UPHS-0115	UPHS-0115	Molpath	3/15/2021		Saline	VSP1100	Emilie Rabut									Random			62	Female	White	19147			
+UPHS-0116	UPHS-0116	Molpath	3/15/2021		VTM	VSP1101	Emilie Rabut									Random			47	Male	White	19055	Unknown		
+UPHS-0117	UPHS-0117	Molpath	3/15/2021		VTM	VSP1102	Emilie Rabut									Random			46	Female	Black	8823	Unknown		
+UPHS-0118	UPHS-0118	Molpath	3/15/2021		VTM	VSP1103	Emilie Rabut									Random			73	Male	White	8512	Unknown		
+UPHS-0119	UPHS-0119	Molpath	3/15/2021		VTM	VSP1104	Emilie Rabut									Random			54	Male	White	8540	Unknown		
+UPHS-0120	UPHS-0120	Molpath	3/15/2021		VTM	VSP1105	Emilie Rabut									Random			19	Female	White	19067	Unknown		
+UPHS-0121	UPHS-0121	Molpath	3/15/2021		VTM	VSP1106	Emilie Rabut									Random			79	Male	White	8540	Unknown		
+UPHS-0122	UPHS-0122	Molpath	3/15/2021		VTM	VSP1107	Emilie Rabut									Random			5 months	Female	Other		Unknown		
+UPHS-0123	UPHS-0123	Molpath	3/15/2021		VTM	VSP1108	Emilie Rabut									Random			46	Female	White	8611	Unknown		
+UPHS-0124	UPHS-0124	Molpath	3/15/2021		VTM	VSP1109	Emilie Rabut									Random; S drop			27	Female	White	17602	Unknown		
+UPHS-0125	UPHS-0125	Molpath	3/15/2021		VTM	VSP1110	Emilie Rabut									Random; S drop			61	Female	White	17603	Unknown		
+UPHS-0126	UPHS-0126	Molpath	3/15/2021		VTM	VSP1111	Emilie Rabut									Random; S drop			72	Male	White	17603	Unknown		
+UPHS-0127	UPHS-0127	Molpath	3/15/2021		VTM	VSP1112	Emilie Rabut									Random			70	Female	White	17512	Unknown		
+UPHS-0128	UPHS-0128	Molpath	3/15/2021		VTM	VSP1113	Emilie Rabut									Random			69	Male	White	17566	Unknown		
+UPHS-0129	UPHS-0129	Molpath	3/15/2021		VTM	VSP1114	Emilie Rabut									Random			37	Male	Other	17538	Unknown		
+UPHS-0130	UPHS-0130	Molpath	3/15/2021		VTM	VSP1115	Emilie Rabut									Random			39	Male	White	17602	Unknown		
+UPHS-0131	UPHS-0131	Molpath	3/15/2021		VTM	VSP1116	Emilie Rabut									Random			29	Male	White	17603	Unknown		
+UPHS-0132	UPHS-0132	Molpath	3/15/2021		VTM	VSP1117	Emilie Rabut									Random			32	Female	White	17345	Unknown		
+UPHS-0133	UPHS-0133	Molpath	3/15/2021		VTM	VSP1118	Emilie Rabut									Random			54	Female	White	17608	Unknown		
+UPHS-0134	UPHS-0134	Molpath	3/15/2021		VTM	VSP1119	Emilie Rabut									Random			70	Male	White	17512	Unknown		
+UPHS-0135	UPHS-0135	Molpath	3/15/2021		VTM	VSP1120	Emilie Rabut									Random			55	Female	White	17602	Unknown		
+UPHS-0136	UPHS-0136	Molpath	3/15/2021		VTM	VSP1121	Emilie Rabut									Random			47	Female	Other	17602	Unknown		
+UPHS-0137	UPHS-0137	Molpath	3/15/2021		VTM	VSP1122	Emilie Rabut									Random			36	Male	White	17601	Unknown		
+UPHS-0138	UPHS-0138	Molpath	3/15/2021		VTM	VSP1123	Emilie Rabut									Random			16	Female	Black	17547	Unknown		
+UPHS-0139	UPHS-0139	Molpath	3/15/2021		VTM	VSP1124	Emilie Rabut									Random			66	Female	Other	17602	Unknown		
+UPHS-0140	UPHS-0140	Molpath	3/15/2021		Saline	VSP1125	Emilie Rabut									Random			44	Female	White	17543	Unknown		
+UPHS-0141	UPHS-0141	Molpath	3/15/2021		VTM	VSP1126	Emilie Rabut									Random			40	Female	White	17560	Unknown		
+UPHS-0142	UPHS-0142	Molpath	3/15/2021		VTM	VSP1127	Emilie Rabut									Random			12	Female	Black	17547	Unknown		
+UPHS-0143	UPHS-0143	Molpath	3/15/2021		VTM	VSP1128	Emilie Rabut									Random			75	Male	White	17601	Unknown		
+UPHS-0144	UPHS-0144	Molpath	3/15/2021		VTM	VSP1129	Emilie Rabut									Random			61	Male	Other	17602	Unknown		
+UPHS-0145	UPHS-0145	Molpath	3/15/2021		Saline	VSP1130	Emilie Rabut									Random			62	Female	White	17562	Unknown		
+UPHS-0146	UPHS-0146	Molpath	3/15/2021		VTM	VSP1131	Emilie Rabut									Random			64	Male	White	7047	Unknown		
+UPHS-0147	UPHS-0147	Molpath	3/15/2021		VTM	VSP1132	Emilie Rabut									Random			49	Male	White	17602	Unknown		
+UPHS-0148	UPHS-0148	Molpath	3/15/2021		VTM	VSP1133	Emilie Rabut									Random			35	Female	White	17512	Unknown		
+UPHS-0149	UPHS-0149	Molpath	3/15/2021		VTM	VSP1134	Emilie Rabut									Random			92	Male	White	17551	Unknown		
+UPHS-0150	UPHS-0150	Molpath	3/15/2021		VTM	VSP1135	Emilie Rabut									Random			62	Male	Other	17512	Unknown		
+UPHS-0151	UPHS-0151	Molpath	3/15/2021		VTM	VSP1136	Emilie Rabut									Random			33	Female	White	17601	Unknown		
+UPHS-0152	UPHS-0152	Molpath	3/15/2021		VTM	VSP1137	Emilie Rabut									Random			73	Female	White	17560	Unknown		
+UPHS-0153	UPHS-0153	Molpath	3/15/2021		Saline	VSP1138	Emilie Rabut									Random; Vaccine Breakthrough, S drop			46	Female	White	17522	12/24/20 & 1/14/21		
+UPHS-0154	UPHS-0154	Molpath	3/15/2021		VTM	VSP1139	Emilie Rabut									Random; S drop			58	Female	White	17601	Unknown		
+UPHS-0155	UPHS-0155	Molpath	3/15/2021		Saline	VSP1140	Emilie Rabut									Random			40	Female	White	17552	Unknown		
+UPHS-0156	UPHS-0156	Molpath	3/15/2021		Saline	VSP1141	Emilie Rabut									Random			30	Female	White	17522	Unknown		
+UPHS-0157	UPHS-0157	Molpath	3/15/2021		Saline	VSP1142	Emilie Rabut									Random			41	Female	White	17551	Unknown		
+UPHS-0158	UPHS-0158	Molpath	3/15/2021		Saline	VSP1143	Emilie Rabut									Random			24	Male	Unknown	17572	Unknown		
+UPHS-0159	UPHS-0159	Molpath	3/15/2021		Saline	VSP1144	Emilie Rabut									Random			60	Female	White	17527	Unknown		
+UPHS-0160	UPHS-0160	Molpath	3/15/2021		VTM	VSP1145	Emilie Rabut									Random			56	Male	Other	17601	Unknown		
+UPHS-0161	UPHS-0161	Molpath	3/15/2021		Saline	VSP1146	Emilie Rabut									Random			60	Female	Unknown	17582	Unknown		
+UPHS-0162	UPHS-0162	Molpath	3/15/2021		Saline	VSP1147	Emilie Rabut									Random			1	Male	White	17602	Unknown		
+UPHS-0164	UPHS-0164	Molpath	3/15/2021		Saline	VSP1148	Emilie Rabut									Random			33	Male	White	17552	Unknown		
+UPHS-0165	UPHS-0165	Molpath	3/15/2021		Saline	VSP1149	Emilie Rabut									Random			15	Male	White	17552	Unknown		
+UPHS-0166	UPHS-0166	Molpath	3/15/2021		Saline	VSP1150	Emilie Rabut									Random			40	Female	White	17536	Unknown		
+UPHS-0167	UPHS-0167	Molpath	3/15/2021		Saline	VSP1151	Emilie Rabut									Random; ORF drop, check for B.1.526			21	Female	White	17565	Unknown		
+UPHS-0168	UPHS-0168	Molpath	3/15/2021		Saline	VSP1152	Emilie Rabut									Random			56	Female	White	17603	Unknown		
+UPHS-0169	UPHS-0169	Molpath	3/15/2021		Saline	VSP1153	Emilie Rabut									Random			60	Female	White	17554	Unknown		
+UPHS-0170	UPHS-0170	Molpath	3/15/2021		VTM	VSP1154	Emilie Rabut									Random; S drop			17	Female	White	17603	Unknown		
+UPHS-0171	UPHS-0171	Molpath	3/15/2021		Saline	VSP1155	Emilie Rabut									Random			53	Female	White	17545	Unknown		
+UPHS-0172	UPHS-0172	Molpath	3/15/2021		VTM	VSP1156	Emilie Rabut									Random			57	Male	White	17603	Unknown		
+UPHS-0173	UPHS-0173	Molpath	3/15/2021		Saline	VSP1157	Emilie Rabut									Random			22	Female	White	17602	Unknown		
+UPHS-0174	UPHS-0174	Molpath	3/15/2021		Saline	VSP1158	Emilie Rabut									Random			48	Female	White	17552	Unknown		
+UPHS-0175	UPHS-0175	Molpath	3/15/2021		Saline	VSP1159	Emilie Rabut									Random			13	Female	White	17540	Unknown		
+UPHS-0176	UPHS-0176	Molpath	3/15/2021		Saline	VSP1160	Emilie Rabut									Random			55	Male	White	17368	Unknown		
+UPHS-0177	UPHS-0177	Molpath	3/15/2021		Saline	VSP1161	Emilie Rabut									Random			72	Female	White	17552	Unknown		
+UPHS-0178	UPHS-0178	Molpath	3/15/2021		VTM	VSP1162	Emilie Rabut									Random; S drop			13	Male	White	17512	Unknown		
+UPHS-0179	UPHS-0179	Molpath	3/15/2021		Saline	VSP1163	Emilie Rabut									Random			62	Female	White	17543	Unknown		
+UPHS-0180	UPHS-0180	Molpath	3/15/2021		Saline	VSP1164	Emilie Rabut									Random; S drop			26	Female	White	17601	Unknown		
+UPHS-0181	UPHS-0181	Molpath	3/15/2021		Saline	VSP1165	Emilie Rabut									Random			82	Female	White	17547	Unknown		
+UPHS-0182	UPHS-0182	Molpath	3/15/2021		Saline	VSP1166	Emilie Rabut									Random; S drop			76	Female	White	17601	Unknown		
+UPHS-0183	UPHS-0183	Molpath	3/15/2021		Saline	VSP1167	Emilie Rabut									Random			52	Female	White	17602	Unknown		
+UPHS-0184	UPHS-0184	Molpath	3/15/2021		Saline	VSP1168	Emilie Rabut									Random			39	Female	White	17543	Unknown		
+UPHS-0185	UPHS-0185	Molpath	3/15/2021		Saline	VSP1169	Emilie Rabut									Random			2	Male	White	17601	Unknown		
+UPHS-0186	UPHS-0186	Molpath	3/15/2021		Saline	VSP1170	Emilie Rabut									Random			24	Male	White	8502			
+UPHS-0187	UPHS-0187	Molpath	3/15/2021		Saline	VSP1171	Emilie Rabut									Random			34	Female	White	19363			
+UPHS-0188	UPHS-0188	Molpath	3/15/2021		VTM	VSP1172	Emilie Rabut									Random			22	Male	White	19380			
+UPHS-0189	UPHS-0189	Molpath	3/15/2021		VTM	VSP1173	Emilie Rabut									Random			50	Female	Black	19320			
+UPHS-0190	UPHS-0190	Molpath	3/15/2021		VTM	VSP1174	Emilie Rabut									Random			82	Male	White	19382			
+UPHS-0191	UPHS-0191	Molpath	3/15/2021		VTM	VSP1175	Emilie Rabut									Random			50	Male	White	19380			
+UPHS-0192	UPHS-0192	Molpath	3/15/2021		VTM	VSP1176	Emilie Rabut									Random			64	Male	White	19344			
+UPHS-0193	UPHS-0193	Molpath	3/15/2021		Saline	VSP1177	Emilie Rabut									Random			29	Male	White	19148			
+UPHS-0194	UPHS-0194	Molpath	3/15/2021		Saline	VSP1178	Emilie Rabut									Random			61	Female	White	19148			
+UPHS-0195	UPHS-0195	Molpath	3/15/2021		Saline	VSP1179	Emilie Rabut									Random			35	Female	White	19145			
+UPHS-0196	UPHS-0196	Molpath	3/15/2021		Saline	VSP1180	Emilie Rabut									Random			55	Female	White	8062			
+UPHS-0197	UPHS-0197	Molpath	3/15/2021		Saline	VSP1181	Emilie Rabut									Random			70	Female	White	19148			
+UPHS-0198	UPHS-0198	Molpath	3/15/2021		Saline	VSP1182	Emilie Rabut									Random			22	Female	Hispanic Latin White	19104			
+UPHS-0199	UPHS-0199	Molpath	3/15/2021		Saline	VSP1183	Emilie Rabut									Random			96	Female	White	19096			
+UPHS-0200	UPHS-0200	Molpath	3/15/2021		Saline	VSP1184	Emilie Rabut									Random			69	Male	White	19030			
+UPHS-0201	UPHS-0201	Molpath	3/15/2021		Saline	VSP1185	Emilie Rabut									Random			56	Female	Hispanic Latin White	19320			
+UPHS-0202	UPHS-0202	Molpath	3/15/2021		Saline	VSP1186	Emilie Rabut									Random			38	Male	White	8318			
+UPHS-0203	UPHS-0203	Molpath	3/15/2021		Saline	VSP1187	Emilie Rabut									Random			35	Male	Black	19143			
+UPHS-0204	UPHS-0204	Molpath	3/15/2021		Saline	VSP1188	Emilie Rabut									Random			61	Male	White	19311			
+UPHS-0205	UPHS-0205	Molpath	3/15/2021		Saline	VSP1189	Emilie Rabut									Random			22	Female	White	19362			
+UPHS-0206	UPHS-0206	Molpath	3/15/2021		Saline	VSP1190	Emilie Rabut									Random			87	Male	Black	19139			
+UPHS-0207	UPHS-0207	Molpath	3/15/2021		Saline	VSP1191	Emilie Rabut									Random			36	Female	Black	19142			
+UPHS-0208	UPHS-0208	Molpath	3/15/2021		Saline	VSP1192	Emilie Rabut									Random			90	Female	Black	19104			
+UPHS-0209	UPHS-0209	Molpath	3/15/2021		Saline	VSP1193	Emilie Rabut									Random			26	Female	Black	19151			
+UPHS-0210	UPHS-0210	Molpath	3/15/2021		Saline	VSP1194	Emilie Rabut									Random			59	Female	Black	19151			
+UPHS-0211	UPHS-0211	Molpath	3/15/2021		Saline	VSP1195	Emilie Rabut									Random			19	Female	White	19130			
+UPHS-0212	UPHS-0212	Molpath	3/15/2021		Saline	VSP1196	Emilie Rabut									Random			45	Female	White	19468			
+UPHS-0213	UPHS-0213	Molpath	3/15/2021		Saline	VSP1197	Emilie Rabut									Random			30	Male	Hispanic Latin White	19148			
+UPHS-0214	UPHS-0214	Molpath	3/15/2021		Saline	VSP1198	Emilie Rabut									Random			66	Female	White	8620			
+UPHS-0215	UPHS-0215	Molpath	3/15/2021		Saline	VSP1199	Emilie Rabut									Random			62	Male	White	19352			
+UPHS-0216	UPHS-0216	Molpath	3/15/2021		Saline	VSP1200	Emilie Rabut									Random			34	Female	Black	19139			
+UPHS-0217	UPHS-0217	Molpath	3/15/2021		Saline	VSP1201	Emilie Rabut									Random			43	Female	Black	19132			
+UPHS-0218	UPHS-0218	Molpath	3/15/2021		Saline	VSP1202	Emilie Rabut									Random			32	Female	Black	19132			
+UPHS-0219	UPHS-0219	Molpath	3/15/2021		Saline	VSP1203	Emilie Rabut									Random			65	Female	White	8550			
+UPHS-0220	UPHS-0220	Molpath	3/15/2021		Saline	VSP1204	Emilie Rabut									Random			57	Female	White	19148			
+UPHS-0221	UPHS-0221	Molpath	3/15/2021		Saline	VSP1205	Emilie Rabut									Random			73	Female	Black	19120			
+UPHS-0222	UPHS-0222	Molpath	3/15/2021		Saline	VSP1206	Emilie Rabut									Random			52	Female	Black	19121			
+UPHS-0225	UPHS-0225	Molpath	3/15/2021		Saline	VSP1207	Emilie Rabut									Random			51	Male	White	19083			
+UPHS-0226	UPHS-0226	Molpath	3/15/2021		Saline	VSP1208	Emilie Rabut									Random			65	Male	White	8080			
+AHT2YGAFX2-1	AHT2YGAFX2-1	seqRunControl	3/22/2021		Negative control	VSP9961	Pascha																		
+AHT2YGAFX2-2	AHT2YGAFX2-2	seqRunControl	3/22/2021		Negative control	VSP9960	Shantan																		
+H2103170703	H2103170703	Dept of Health	3/22/2021		unknown	VSP0707	Claire Newbern									Random									
+H2103150563	H2103150563	Dept of Health	3/22/2021		unknown	VSP0708	Claire Newbern									Random									
+H2103130052	H2103130052	Dept of Health	3/22/2021		unknown	VSP0709	Claire Newbern									Random									
+H2103160904	H2103160904	Dept of Health	3/22/2021		unknown	VSP0710	Claire Newbern									Random									
+H2103160769	H2103160769	Dept of Health	3/22/2021		unknown	VSP0711	Claire Newbern									Random									
+H2103180706	H2103180706	Dept of Health	3/22/2021		unknown	VSP0712	Claire Newbern									Random									
+H2103180735	H2103180735	Dept of Health	3/22/2021		unknown	VSP0713	Claire Newbern									Random									

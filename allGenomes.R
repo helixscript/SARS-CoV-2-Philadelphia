@@ -21,13 +21,13 @@ summary <- removeProblematicSamples(bind_rows(lapply(list.files('summaries/sampl
 
 
 # Identify the best data object for each subject -- typically the composite object.
-representativeSampleSummary_90 <- representativeSampleSummary(summary, 90)
-concensusSeqs90_5 <- retrieveConcensusSeqs(representativeSampleSummary_90)
-writeXStringSet(concensusSeqs90_5, file = 'summaries/highQualGenomes/genomes.fasta')
+representativeSampleSummary_95 <- representativeSampleSummary(summary, 95)
+concensusSeqs95_5 <- retrieveConcensusSeqs(representativeSampleSummary_95)
+writeXStringSet(concensusSeqs95_5, file = 'summaries/highQualGenomes/genomes.fasta')
 
 
 # Extract lineages from genome ids and write them out to an Excel file.
-lineages <- bind_rows(lapply(names(concensusSeqs90_5), function(x){
+lineages <- bind_rows(lapply(names(concensusSeqs95_5), function(x){
   x <- unlist(strsplit(x, '\\|'))
   tibble(sample = paste(x[1:4], collapse = '|'), lineage = x[5])
 }))
@@ -63,7 +63,7 @@ lineagesPlot <-
         panel.background = element_blank(), axis.line = element_line(colour = "black"),
         axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
 
-ggsave(lineagesPlot, file = 'summaries/highQualGenomes/lineagesPlot.pdf', units = 'in', width = 10, height = 5)
+ggsave(lineagesPlot, file = 'summaries/highQualGenomes/lineagesPlot.pdf', units = 'in', width = 10, height = 7)
 
 
 # Rename the refernece genome because by default it is named 'genome' which is needed for assemble.R.
@@ -80,7 +80,7 @@ names(o) <- gsub('\\|[A-Z\\.\\d]+$', '', names(o), perl = TRUE)
 Biostrings::writeXStringSet(o, 'summaries/highQualGenomes/genomes.fasta2')
 
 # 
-# system(paste0(mafftPath, ' --phylipout --namelength ', max(nchar(names(concensusSeqs90_5))), ' --thread 20 --auto --addfragments summaries/highQualGenomes/genomes.fasta2 summaries/highQualGenomes/referenceGenome.fasta > summaries/highQualGenomes/genomes.mafft'))
+# system(paste0(mafftPath, ' --phylipout --namelength ', max(nchar(names(concensusSeqs95_5))), ' --thread 20 --auto --addfragments summaries/highQualGenomes/genomes.fasta2 summaries/highQualGenomes/referenceGenome.fasta > summaries/highQualGenomes/genomes.mafft'))
 # system('raxmlHPC-PTHREADS-SSE3 -s summaries/highQualGenomes/genomes.mafft -m GTRGAMMA -T 30 -n raxmlOut -f a -x 12345 -p 12345 -N autoMRE')
 # 
 # dendr <- ggdendro::dendro_data(phylogram::read.dendrogram('RAxML_bestTree.raxmlOut'), type="rectangle")
@@ -105,7 +105,7 @@ Biostrings::writeXStringSet(o, 'summaries/highQualGenomes/genomes.fasta2')
 
 
 # Hierarchical tree.
-system(paste0(mafftPath, ' --namelength ', max(nchar(names(concensusSeqs90_5))), ' --thread 20 --auto --addfragments summaries/highQualGenomes/genomes.fasta2 summaries/highQualGenomes/referenceGenome.fasta > summaries/highQualGenomes/genomes.mafft'))
+system(paste0(mafftPath, ' --namelength ', max(nchar(names(concensusSeqs95_5))), ' --thread 20 --auto --addfragments summaries/highQualGenomes/genomes.fasta2 summaries/highQualGenomes/referenceGenome.fasta > summaries/highQualGenomes/genomes.mafft'))
 
 v <- ape::read.dna("summaries/highQualGenomes/genomes.mafft", format="fasta")
 v_phyDat <- phangorn::phyDat(v, type = "DNA", levels = NULL)
@@ -128,7 +128,7 @@ concensusSeqPhyloPlot <-
         panel.background=element_rect(fill="white"),
         panel.grid=element_blank())
 
-ggsave(concensusSeqPhyloPlot, height = 30, width = 18, units = 'in', file = 'summaries/highQualGenomes/hierarchicalPhyloPlot.pdf')
+ggsave(concensusSeqPhyloPlot, height = 35, width = 18, units = 'in', file = 'summaries/highQualGenomes/hierarchicalPhyloPlot.pdf')
 invisible(file.remove(list.files('summaries/highQualGenomes', pattern = 'mafft|referenceGenome|fasta2', full.names = TRUE)))
 
 
@@ -140,9 +140,9 @@ d <- bind_rows(lapply(list.files(file.path('summaries', 'sampleSummaries'), full
   t$percentRefReadCoverage5 <- as.numeric(sub('%', '', t$percentRefReadCoverage5))
   t$sampleDate2 <- gsub('-', '', t$sampleDate)
   t
-})) %>% filter(percentRefReadCoverage5 >= 90 & ! grepl('simulate', sampleType, ignore.case = TRUE))
+})) %>% filter(percentRefReadCoverage5 >= 95 & ! grepl('simulate', sampleType, ignore.case = TRUE))
 
-o <- representativeSampleSummary(d, minPercentRefReadCoverage5 = 90) %>% pull(exp)
+o <- representativeSampleSummary(d, minPercentRefReadCoverage5 = 95) %>% pull(exp)
 
 r <- bind_rows(lapply(o, function(e){
     f <- file.path('summaries', 'VSPdata', paste0(e, ifelse(grepl('-', e), '.experiment.RData', '.composite.RData')))

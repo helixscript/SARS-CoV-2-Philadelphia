@@ -1,87 +1,16 @@
-Thu Mar 25 20:43:49 2021
-Starting VSP0773 with 2 seq experiments.
-summaries/VSPdata/VSP0773.composite.RData exists -- skipping.
-summaries/VSPdata/VSP0773-1.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0773-2.experiment.RData exists -- skipping.
-Completed VSP0773
+Mon Mar 29 18:32:26 2021
+Starting VSP1084 with 1 seq experiments.
+Mon Mar 29 18:32:26 2021 (summaries/VSPdata/VSP1084-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP1084-1.experiment.RData --R1 /data/sequencing/Illumina-archive/SARS-CoV-2/210326_NB551353_0085_AHTMV3AFX2/VSP1084-1_S61_R1_001.fastq.gz --R2 /data/sequencing/Illumina-archive/SARS-CoV-2/210326_NB551353_0085_AHTMV3AFX2/VSP1084-1_S61_R2_001.fastq.gz
 
-Starting VSP0774 with 2 seq experiments.
-summaries/VSPdata/VSP0774.composite.RData exists -- skipping.
-summaries/VSPdata/VSP0774-1.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0774-2.experiment.RData exists -- skipping.
-Completed VSP0774
+Completed VSP1084
 
-Starting VSP0775 with 3 seq experiments.
-summaries/VSPdata/VSP0775.composite.RData exists -- skipping.
-summaries/VSPdata/VSP0775-1.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0775-2.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0775-3.experiment.RData exists -- skipping.
-Completed VSP0775
+Starting VSP1085 with 1 seq experiments.
+Mon Mar 29 18:39:33 2021 (summaries/VSPdata/VSP1085-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP1085-1.experiment.RData --R1 /data/sequencing/Illumina-archive/SARS-CoV-2/210326_NB551353_0085_AHTMV3AFX2/VSP1085-1_S60_R1_001.fastq.gz --R2 /data/sequencing/Illumina-archive/SARS-CoV-2/210326_NB551353_0085_AHTMV3AFX2/VSP1085-1_S60_R2_001.fastq.gz
 
-Starting VSP0776 with 2 seq experiments.
-summaries/VSPdata/VSP0776.composite.RData exists -- skipping.
-summaries/VSPdata/VSP0776-1.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0776-2.experiment.RData exists -- skipping.
-Completed VSP0776
+Completed VSP1085
 
-Starting VSP0777 with 2 seq experiments.
-summaries/VSPdata/VSP0777.composite.RData exists -- skipping.
-summaries/VSPdata/VSP0777-1.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0777-2.experiment.RData exists -- skipping.
-Completed VSP0777
+Starting VSP1086 with 1 seq experiments.
+Mon Mar 29 18:46:53 2021 (summaries/VSPdata/VSP1086-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP1086-1.experiment.RData --R1 /data/sequencing/Illumina-archive/SARS-CoV-2/210326_NB551353_0085_AHTMV3AFX2/VSP1086-1_S59_R1_001.fastq.gz --R2 /data/sequencing/Illumina-archive/SARS-CoV-2/210326_NB551353_0085_AHTMV3AFX2/VSP1086-1_S59_R2_001.fastq.gz
 
-Starting VSP0778 with 3 seq experiments.
-summaries/VSPdata/VSP0778.composite.RData exists -- skipping.
-summaries/VSPdata/VSP0778-1.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0778-2.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0778-3.experiment.RData exists -- skipping.
-Completed VSP0778
-
-Starting VSP0779 with 3 seq experiments.
-summaries/VSPdata/VSP0779.composite.RData exists -- skipping.
-summaries/VSPdata/VSP0779-1.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0779-2.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0779-3.experiment.RData exists -- skipping.
-Completed VSP0779
-
-Starting VSP0780 with 2 seq experiments.
-summaries/VSPdata/VSP0780.composite.RData exists -- skipping.
-summaries/VSPdata/VSP0780-1.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0780-2.experiment.RData exists -- skipping.
-Completed VSP0780
-
-Starting VSP0781 with 2 seq experiments.
-summaries/VSPdata/VSP0781.composite.RData exists -- skipping.
-summaries/VSPdata/VSP0781-1.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0781-2.experiment.RData exists -- skipping.
-Completed VSP0781
-
-Starting VSP0782 with 2 seq experiments.
-summaries/VSPdata/VSP0782.composite.RData exists -- skipping.
-summaries/VSPdata/VSP0782-1.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0782-2.experiment.RData exists -- skipping.
-Completed VSP0782
-
-Starting VSP0783 with 3 seq experiments.
-summaries/VSPdata/VSP0783.composite.RData exists -- skipping.
-summaries/VSPdata/VSP0783-1.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0783-2.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0783-3.experiment.RData exists -- skipping.
-Completed VSP0783
-
-Starting VSP0784 with 2 seq experiments.
-summaries/VSPdata/VSP0784.composite.RData exists -- skipping.
-summaries/VSPdata/VSP0784-1.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0784-2.experiment.RData exists -- skipping.
-Completed VSP0784
-
-Starting VSP9969 with 1 seq experiments.
-summaries/VSPdata/VSP9969-1.experiment.RData exists -- skipping.
-Completed VSP9969
-
-Starting VSP0454 with 2 seq experiments.
-summaries/VSPdata/VSP0454.composite.RData exists -- skipping.
-summaries/VSPdata/VSP0454-1.experiment.RData exists -- skipping.
-summaries/VSPdata/VSP0454-2.experiment.RData exists -- skipping.
-Completed VSP0454
+Completed VSP1086
 

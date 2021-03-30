@@ -7,12 +7,16 @@ options(stringsAsFactors = FALSE)
 overWriteSubjectReports <- FALSE
 CPUs <- 10
 
+sampleData <- '/data/sequencing/Illumina-archive/SARS-CoV-2/samples.tsv'
+sampleInputData <- '/data/sequencing/Illumina-archive/SARS-CoV-2/sampleInputs.tsv'
+
+
 # Read in sample data table.
-samples <- removeProblematicSamples(read.table('data/samples.tsv', sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE))
+samples <- removeProblematicSamples(read.table(sampleData, sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE))
 
 
 # Read in input data values.
-sampleInputs <- read.table('data/sampleInputs.tsv', sep= '\t', header = TRUE, stringsAsFactors = FALSE)
+sampleInputs <- read.table(sampleInputData, sep= '\t', header = TRUE, stringsAsFactors = FALSE)
 
 
 # Trim leading and trailing white space from metadata.
@@ -20,13 +24,13 @@ trimLeadingTrailingWhtSpace <- function(x) gsub('^\\s+|\\s+$', '', x)
 samples$sample_id   <- sapply(samples$sample_id, trimLeadingTrailingWhtSpace)
 samples$trial_id    <- sapply(samples$trial_id, trimLeadingTrailingWhtSpace)
 samples$patient_id  <- sapply(samples$patient_id, trimLeadingTrailingWhtSpace)
-samples$sample_date <- sapply(samples$sample_date, trimLeadingTrailingWhtSpace)
+samples$sampleCollection_date <- sapply(samples$sampleCollection_date, trimLeadingTrailingWhtSpace)
 samples$sample_type <- sapply(samples$sample_type, trimLeadingTrailingWhtSpace)
 samples$VSP         <- sapply(samples$VSP, trimLeadingTrailingWhtSpace)
 
 
 # Standardize date formatting
-samples$sample_date <- as.character(mdy(samples$sample_date))
+samples$sampleCollection_date <- as.character(mdy(samples$sampleCollection_date))
 
 
 # Create a vector of VSP ids with sequencning data.
@@ -35,7 +39,7 @@ availableVSPs <- unique(str_extract(list.files('summaries/VSPdata'), 'VSP\\d+'))
 
 # Identify potential sample duplications.
 sampleUniquenessCheck <- 
-  group_by(filter(samples, VSP %in% availableVSPs), patient_id, sample_date, sample_type) %>%
+  group_by(filter(samples, VSP %in% availableVSPs), patient_id, sampleCollection_date, sample_type) %>%
   summarise(n = n(), VSPids = paste(VSP, collapse = ', ')) %>%
   ungroup() %>%
   filter(n > 1)
@@ -105,7 +109,7 @@ invisible(parLapply(cluster, split(d, d$s), function(p){
              opt$sample_id <- d$sample_id[1]
              opt$trial_id <- d$trial_id[1]
              opt$subject <- d$patient_id[1]
-             opt$date <- d$sample_date[1]
+             opt$date <- d$sampleCollection_date[1]
              opt$sampleType = d$sample_type[1]
              opt$genomesPerMicroLiter = as.numeric(d$N1_copies_per_ul[1])
              if(! grepl('composite', f)){

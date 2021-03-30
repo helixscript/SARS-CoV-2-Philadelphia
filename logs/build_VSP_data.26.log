@@ -1,57 +1,16 @@
-Thu Mar 25 20:43:49 2021
-Starting VSP0963 with 1 seq experiments.
-summaries/VSPdata/VSP0963-1.experiment.RData exists -- skipping.
-Completed VSP0963
+Mon Mar 29 18:32:26 2021
+Starting VSP1110 with 1 seq experiments.
+Mon Mar 29 18:32:26 2021 (summaries/VSPdata/VSP1110-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP1110-1.experiment.RData --R1 /data/sequencing/Illumina-archive/SARS-CoV-2/210326_NB551353_0085_AHTMV3AFX2/VSP1110-1_S83_R1_001.fastq.gz --R2 /data/sequencing/Illumina-archive/SARS-CoV-2/210326_NB551353_0085_AHTMV3AFX2/VSP1110-1_S83_R2_001.fastq.gz
 
-Starting VSP0964 with 1 seq experiments.
-summaries/VSPdata/VSP0964-1.experiment.RData exists -- skipping.
-Completed VSP0964
+Completed VSP1110
 
-Starting VSP0965 with 1 seq experiments.
-summaries/VSPdata/VSP0965-1.experiment.RData exists -- skipping.
-Completed VSP0965
+Starting VSP1111 with 1 seq experiments.
+Mon Mar 29 18:37:22 2021 (summaries/VSPdata/VSP1111-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP1111-1.experiment.RData --R1 /data/sequencing/Illumina-archive/SARS-CoV-2/210326_NB551353_0085_AHTMV3AFX2/VSP1111-1_S82_R1_001.fastq.gz --R2 /data/sequencing/Illumina-archive/SARS-CoV-2/210326_NB551353_0085_AHTMV3AFX2/VSP1111-1_S82_R2_001.fastq.gz
 
-Starting VSP0966 with 1 seq experiments.
-summaries/VSPdata/VSP0966-1.experiment.RData exists -- skipping.
-Completed VSP0966
+Completed VSP1111
 
-Starting VSP0967 with 1 seq experiments.
-summaries/VSPdata/VSP0967-1.experiment.RData exists -- skipping.
-Completed VSP0967
+Starting VSP1112 with 1 seq experiments.
+Mon Mar 29 18:45:11 2021 (summaries/VSPdata/VSP1112-1.experiment.RData) /home/opt/R-3.4.0/bin/Rscript assemble.R --outputFile summaries/VSPdata/VSP1112-1.experiment.RData --R1 /data/sequencing/Illumina-archive/SARS-CoV-2/210326_NB551353_0085_AHTMV3AFX2/VSP1112-1_S81_R1_001.fastq.gz --R2 /data/sequencing/Illumina-archive/SARS-CoV-2/210326_NB551353_0085_AHTMV3AFX2/VSP1112-1_S81_R2_001.fastq.gz
 
-Starting VSP0968 with 1 seq experiments.
-summaries/VSPdata/VSP0968-1.experiment.RData exists -- skipping.
-Completed VSP0968
-
-Starting VSP0969 with 1 seq experiments.
-summaries/VSPdata/VSP0969-1.experiment.RData exists -- skipping.
-Completed VSP0969
-
-Starting VSP0970 with 1 seq experiments.
-summaries/VSPdata/VSP0970-1.experiment.RData exists -- skipping.
-Completed VSP0970
-
-Starting VSP0971 with 1 seq experiments.
-summaries/VSPdata/VSP0971-1.experiment.RData exists -- skipping.
-Completed VSP0971
-
-Starting VSP0972 with 1 seq experiments.
-summaries/VSPdata/VSP0972-1.experiment.RData exists -- skipping.
-Completed VSP0972
-
-Starting VSP0973 with 1 seq experiments.
-summaries/VSPdata/VSP0973-1.experiment.RData exists -- skipping.
-Completed VSP0973
-
-Starting VSP0974 with 1 seq experiments.
-summaries/VSPdata/VSP0974-1.experiment.RData exists -- skipping.
-Completed VSP0974
-
-Starting VSP0975 with 1 seq experiments.
-summaries/VSPdata/VSP0975-1.experiment.RData exists -- skipping.
-Completed VSP0975
-
-Starting VSP0976 with 1 seq experiments.
-summaries/VSPdata/VSP0976-1.experiment.RData exists -- skipping.
-Completed VSP0976
+Completed VSP1112
 

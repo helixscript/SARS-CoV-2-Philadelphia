@@ -2,7 +2,9 @@ library(tidyverse)
 library(Biostrings)
 source('lib/lib.R')
 
-samples <- removeProblematicSamples(read.table('data/samples.tsv', sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE))
+sampleData <- '/data/sequencing/Illumina-archive/SARS-CoV-2/samples.tsv'
+
+samples <- removeProblematicSamples(read.table(sampleData, sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE))
 
 invisible(lapply(list.dirs('summaries/trials'), function(x){
   x <- unlist(strsplit(x, '/'))

@@ -1,2 +1,4 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
+MPCluster2-Seq2	VSP0760	composite	NA	Swab	2021-02-01	29.94	B.1.234	99.8%	99.8%
 MPCluster2-Seq2	VSP0760-1	 single experiment	NA	Swab	2021-02-01	29.84	B.1.234	99.8%	99.8%
+MPCluster2-Seq2	VSP0760-2	 single experiment	NA	Swab	2021-02-01	29.83	B.1.234	99.8%	99.8%
