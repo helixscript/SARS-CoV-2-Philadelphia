@@ -3,29 +3,31 @@ library(tidyverse)
 library(optparse)
 library(genbankr)
 library(GenomicRanges)
-source('lib/assemble.lib.R')
 
 option_list = list(
+  make_option(c("--softwareDir"), type="character", default='/home/everett/projects/SARS-CoV-2-Philadelphia', help="path to work directory", metavar="character"),
+  make_option(c("--workDir"), type="character", default='/tmp', help="path to work directory", metavar="character"),
   make_option(c("--outputFile"), type="character", default='save.RData', help="path to output RData file", metavar="character"),
   make_option(c("--R1"), type="character", default=NULL, help="comma delimited list of R1 fastq files", metavar="character"),
   make_option(c("--R2"), type="character", default=NULL, help="comma delimited list of R2 fastq files", metavar="character"),
-  make_option(c("--refGenomeFasta"), type="character", default='data/references/USA-WA1-2020.fasta', help="reference genome FASTA path", metavar="character"),   
-  make_option(c("--refGenomeBWA"), type="character", default='data/references/USA-WA1-2020.fasta', help="path to ref genome BWA database", metavar="character"),   
-  make_option(c("--refGenomeGenBank"), type="character", default='data/references/USA-WA1-2020.gb', help="path to ref genome genBank file", metavar="character"), 
+  make_option(c("--refGenomeFasta"), type="character", default='/home/everett/projects/SARS-CoV-2-Philadelphia/data/references/USA-WA1-2020.fasta', help="reference genome FASTA path", metavar="character"),   
+  make_option(c("--refGenomeBWA"), type="character", default='/home/everett/projects/SARS-CoV-2-Philadelphia/data/references/USA-WA1-2020.fasta', help="path to ref genome BWA database", metavar="character"),   
+  make_option(c("--refGenomeGenBank"), type="character", default='/home/everett/projects/SARS-CoV-2-Philadelphia/data/references/USA-WA1-2020.gb', help="path to ref genome genBank file", metavar="character"), 
   make_option(c("--minVariantPhredScore"), type="integer", default=20, help="minimum PHRED score allowed for called varinats", metavar="character"),
-  make_option(c("--bwaPath"), type="character", default='~/ext/bwa', help="path to bwa binary", metavar="character"), 
-  make_option(c("--megahitPath"), type="character", default='~/ext/megahit/bin/megahit', help="path to megahit binary", metavar="character"), 
+  make_option(c("--bwaPath"), type="character", default='/home/everett/ext/bwa', help="path to bwa binary", metavar="character"), 
+  make_option(c("--megahitPath"), type="character", default='/home/everett/ext/megahit/bin/megahit', help="path to megahit binary", metavar="character"), 
   make_option(c("--minBWAmappingScore"), type="integer", default=30, help="minimum BWA mapping score", metavar="character"), 
   make_option(c("--minPangolinConf"), type="numeric", default=0.9, help="minimum pangolin confidence value (0-1)", metavar="character"), 
-  make_option(c("--samtoolsBin"), type="character", default='~/ext/samtools/bin', help="path to samtools bin", metavar="character"), 
-  make_option(c("--condaShellPath"), type="character", default='~/miniconda3/etc/profile.d/conda.sh', help="path to conda.sh", metavar="character"),
-  make_option(c("--bcftoolsBin"), type="character", default='~/ext/bcftools/bin',  help="path to bcftools bin", metavar="character"),
+  make_option(c("--samtoolsBin"), type="character", default='/home/everett/ext/samtools/bin', help="path to samtools bin", metavar="character"), 
+  make_option(c("--condaShellPath"), type="character", default='/home/everett/miniconda3/etc/profile.d/conda.sh', help="path to conda.sh", metavar="character"),
+  make_option(c("--bcftoolsBin"), type="character", default='/home/everett/ext/bcftools/bin',  help="path to bcftools bin", metavar="character"),
   make_option(c("--trimQualCode"), type="character", default='5',  help="Min qual trim code", metavar="character"))
 
  
 opt_parser = OptionParser(option_list=option_list)
 opt = parse_args(opt_parser)
 
+source(paste0(opt$softwareDir, '/lib/assemble.lib.R'))
 
 # Handle missing required parameters.
 if(! 'R1' %in% names(opt)) stop('--R1 must be defined.')
@@ -33,7 +35,6 @@ if(! 'R2' %in% names(opt)) stop('--R2 must be defined.')
 
 
 # Create work directory.
-opt$workDir <- tmpFile()
 if(dir.exists(opt$workDir)) stop('Error -- output directory already exists')
 dir.create(opt$workDir)
 if(! dir.exists(opt$workDir)) stop('Error -- could not create the output directory.')
@@ -156,8 +157,8 @@ system(paste0(opt$samtoolsBin, '/samtools index ', paste0(t1, '_genome.filt.sort
 
 
 # Save bam and bam index files for downstream analyses.
-system(paste0('cp ', t1, '_genome.filt.sorted.bam ', sub('.RData', '.bam', sub('VSPdata', 'VSPalignments', opt$outputFile))))
-system(paste0('cp ', t1, '_genome.filt.sorted.bam.bai ', sub('.RData', '.bam.bai', sub('VSPdata', 'VSPalignments', opt$outputFile))))
+# system(paste0('cp ', t1, '_genome.filt.sorted.bam ', sub('.RData', '.bam', sub('VSPdata', 'VSPalignments', opt$outputFile))))
+# system(paste0('cp ', t1, '_genome.filt.sorted.bam.bai ', sub('.RData', '.bam.bai', sub('VSPdata', 'VSPalignments', opt$outputFile))))
 
 
 # Determine the maximum read depth. Overlapping mates will count a position twice.

@@ -1,3 +1,5 @@
+tmpFile <- function(){ paste0('tmp.', paste0(stringi::stri_rand_strings(30, 1, '[A-Za-z0-9]'), collapse = '')) }
+
 removeProblematicSamples <- function(x){
   if('exp' %in% names(x))        x <- dplyr::filter(x, ! grepl('VSP0069', exp))
   if('Subject' %in% names(x))    x <- dplyr::filter(x, Subject != '237')
@@ -28,12 +30,18 @@ representativeSampleSummary <- function(summary, minPercentRefReadCoverage5){
 retrieveConcensusSeqs <- function(summary){
   Reduce('append', lapply(1:nrow(summary), function(x){
     x <- summary[x,]
-    f <- paste0('summaries/VSPdata/', x$exp, '.', ifelse(x$type == 'composite', 'composite', 'experiment'), '.RData')
-    if(! file.exists(f)) stop('Can not locate VSP data file -- ', f)
+    f <- paste0(softwareDir, '/summaries/VSPdata/', x$exp, '.', ifelse(x$type == 'composite', 'composite', 'experiment'), '.RData')
+    if(! file.exists(f)){
+      #stop('Can not locate VSP data file -- ', f)
+      message('Can not locate VSP data file -- ', f)
+      return(DNAStringSet())
+    }
     load(f)
     d <- DNAStringSet(opt$concensusSeq)
     
-    names(d) <- gsub('\\s+', '_', paste0(x$trial_id, '|', x$Subject, '|', x$sampleType, '|', x$sampleDate2, '|', x$lineage))
+    names(d) <- gsub('\\s+', '_', paste0(x$trial_id, '|', x$Subject, '|', x$sampleType, '|', 
+                                         x$sampleDate2, '|', stringr::str_extract(x$exp, '^VSP\\d+'), '|', 
+                                         ceiling(mean(opt$pileupData$V4)), 'x mean coverage|', as.character(opt$pangolinAssignment)))
     d
   }))
 }
