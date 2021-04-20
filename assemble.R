@@ -288,7 +288,8 @@ if(nrow(opt$variantTableMajor) > 0){
     opt$concensusSeq <- as.character(readFasta(paste0(t1, '.consensus.fasta'))@sread)
     
     # Predict pangolin lineage for genomes with >= 90% coverage.
-    if(opt$refGenomePercentCovered >= 0.90){
+    # if(opt$refGenomePercentCovered >= 0.90){
+    if(opt$refGenomePercentCovered_5reads >= 0.95){
       
       # Create a bash script which will start the requires Conda environment and run pangolin.
       p <- c('#!/bin/bash', paste0('source ', opt$condaShellPath), 'conda activate pangolin', 'pangolin -o $2 $1')

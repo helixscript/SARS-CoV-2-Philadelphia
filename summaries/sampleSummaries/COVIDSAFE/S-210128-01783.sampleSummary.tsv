@@ -1,2 +1,2 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
-S-210128-01783	VSP1056-1	 single experiment	NA	unknown	2021-03-17	6.48	B.1.434	92.1%	91.6%
+S-210128-01783	VSP1056-1	 single experiment	NA	unknown	2021-03-17	6.48	NA	92.1%	91.6%

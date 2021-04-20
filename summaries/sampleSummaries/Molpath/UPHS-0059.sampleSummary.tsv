@@ -1,2 +1,2 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
-UPHS-0059	VSP0991-1	 single experiment	NA	Saline	2021-03-08	15.90	B.1.1.7	93.2%	93.1%
+UPHS-0059	VSP0991-1	 single experiment	NA	Saline	2021-03-08	15.90	NA	93.2%	93.1%

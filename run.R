@@ -154,13 +154,13 @@ if(length(f3) > 0){
     if(length(sampleRunFiles) > 1){
       outputFile <- paste0(softwareDir, '/summaries/VSPdata/', vsp, '.composite.RData')
       
-      if(overwrite == FALSE & file.exists(outputFile)){
-           write(paste0(outputFile , ' exists -- skipping.'), file = logFile, append = TRUE)
-      } else {
+      ### if(overwrite == FALSE & file.exists(outputFile)){
+      ###     write(paste0(outputFile , ' exists -- skipping.'), file = logFile, append = TRUE)
+      ### } else {
         if(file.exists(outputFile)) file.remove(outputFile)
         
         comm <- paste0(Rscript, ' ', softwareDir, '/assemble.R --outputFile ', outputFile, ' --workDir ', file.path(workDir, tmpFile()), 
-                       '--softwareDir ', softwareDir, ' --R1 ', 
+                       ' --softwareDir ', softwareDir, ' --R1 ', 
                        paste0(sequenceDataDir, '/', sampleFiles[grepl('_R1_', sampleFiles)], collapse = ','), ' --R2 ',
                        paste0(sequenceDataDir, '/', sampleFiles[grepl('_R2_', sampleFiles)], collapse = ','))
                   
@@ -173,7 +173,7 @@ if(length(f3) > 0){
         })
         
         if(! file.exists(outputFile)) write(paste0('\n[!] (', outputFile, ') data object creation failed.'), file = logFile, append = TRUE)
-      }
+      ### }
     }
     
     invisible(mapply(function(n, x){
@@ -203,7 +203,7 @@ if(length(f3) > 0){
   }))
 
   stopCluster(cluster)
-  system(paste0('find ', softwareDir, '/summaries/logs -name build_VSP_data* | xargs grep failed > ', softwareDir, '/summaries/logs/build_VSP_data.failed'))
+  system(paste0('find ', softwareDir, '/summaries/logs -name build_VSP_data* | xargs grep failed > ', softwareDir, '/summaries/logs/VSP_data.failed'))
 }
 
 #----------------------------------------------------------------------------------------
@@ -211,12 +211,12 @@ if(length(f3) > 0){
 if(updateGenomes == FALSE)
 {
   system('ssh microb120 rm /media/lorax/data/SARS-CoV-2/working')
-  write(c('done'), file = logFile)
+  write(c('done'), file = logFile, append = TRUE)
   q()
 }
 
 
-CPUs <- 10
+CPUs <- 8
 
 
 # Read in input data values.
@@ -242,7 +242,8 @@ availableVSPs <- unique(str_extract(list.files(paste0(softwareDir, '/summaries/V
 
 
 # Find missing reports
-d <- bind_rows(lapply(availableVSPs, function(x){
+d <- unique(bind_rows(lapply(availableVSPs, function(x){
+  #if(x == 'VSP1157') browser()
   x <- subset(samples, VSP == x)
   if(nrow(x) != 1) return(tibble())
   if(! file.exists(file.path(softwareDir, 'summaries', 'trials', x$trial_id, paste0(x$patient_id, '.pdf'))) | 
@@ -251,8 +252,12 @@ d <- bind_rows(lapply(availableVSPs, function(x){
   } else {
     return(tibble())
   }
-})) 
+}))) 
 
+
+# Build subject reports.
+# The last data chunk continues to fail to create reports.
+# parLapply currently commented out -- need to repair.
 
 
 if(nrow(d) > 0) {
@@ -264,6 +269,12 @@ if(nrow(d) > 0) {
   
   if (!dir.exists(paste0(softwareDir, '/summaries/patientReportsData'))) 
     dir.create(paste0(softwareDir, '/summaries/patientReportsData'))
+  
+  # o <- tibble(patient_id = d$patient_id, trial_id = d$trial_id, 
+  #             report = file.path('summaries', 'trials', d$trial_id, paste0(d$patient_id, '.pdf')), 
+  #             exists = file.exists(report))  
+  # o <- subset(o, exists == FALSE)
+  # d <- subset(d, patient_id %in% o$patient_id)
   
   #invisible(parLapply(cluster, split(d, d$s), function(p) {
   invisible(lapply(split(d, d$s), function(p){
@@ -322,6 +333,7 @@ if(nrow(d) > 0) {
       
       names(dat) <- unlist(lapply(dat, '[[', 'seq_sample'))
       
+      #browser()
       save(dat, file = file.path(dir2, paste0(r$patient_id, '.RData')))
       
       result = tryCatch({
@@ -338,7 +350,8 @@ if(nrow(d) > 0) {
   stopCluster(cluster)
 }
 
-#--------------------------------------------------------------
+# Calcualte run statistics by collating tables created during the creation of paient reports.
+#---------------------------------------------------------------------------------------------
 
 f <- list.files(sequenceDataDir, pattern = '^VSP', recursive = TRUE, full.names = TRUE)
 d <- tibble(path = f)
@@ -371,11 +384,20 @@ s <- bind_rows(lapply(list.files(paste0(softwareDir, '/summaries/sampleSummaries
   o
 }))
 
-d$percentRefReadCoverage <- s[match(d$exp, s$exp),]$percentRefReadCoverage
+d$percent_1xCoverage <- s[match(d$exp, s$exp),]$percentRefReadCoverage
+d$percent_5xCoverage <- s[match(d$exp, s$exp),]$percentRefReadCoverage5
+
 d$lineage <- s[match(d$exp, s$exp),]$lineage
+
+n <- as.numeric(stringr::str_extract(d$percent_5xCoverage, '[\\d\\.]+'))
+n[is.na(n)] <- 0
+
+d[n < 95,]$lineage <- NA
 
 openxlsx::write.xlsx(d, file = file.path(softwareDir, 'summaries', 'seqRunSummary.xlsx'))
 
+i <- as.numeric(sub('%', '', d$percent_5xCoverage)) >= 95
+length(unique(sub('\\-\\d+[a-z]?', '', d[i,]$exp)))
 
 #--------------------------------------------------------------------------
 
@@ -437,11 +459,27 @@ d$lineage <- factor(d$lineage, levels = unique(d$lineage))
 
 colors <- grDevices::colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))(n_distinct(d$lineage)) 
 
+
+VOIs <- c("B.1.1.7", "B.1.351", "B.1.427", "B.1.429", "B.1.525", "B.1.526", "P.1", "P.2")
+
+# ---
+n <- 15
+o <- sort(table(subset(d, ! lineage %in% VOIs)$lineage), decreasing = TRUE)
+a <- c(VOIs, names(o)[1:(n-length(VOIs))])
+d$lineage <- as.character(d$lineage)
+d <- d[! d$lineage == 'NA',]
+d$lineage <- ifelse(d$lineage %in% a, d$lineage, 'Other')
+d$lineage <- factor(d$lineage, levels = c(a, 'Other'))
+colors <- c(grDevices::colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))(n), '#000000')
+
+
+# ---
+
 lineagesPlot <- 
   ggplot(d, aes(dateLabel, fill = lineage)) + 
   theme_bw() +
   geom_bar(stat = 'count') +
-  scale_fill_manual(name = 'Lineage', values = colors) +
+  scale_fill_manual(name = 'Lineage', values = colors, drop = FALSE) +
   guides(fill=guide_legend(ncol=2)) +
   labs(x = 'Sample Date', y = 'Genomes') +
   theme(axis.text=element_text(size=16), axis.title=element_text(size=16), legend.title=element_text(size=16),
@@ -455,7 +493,7 @@ ggsave(lineagesPlot, file = file.path(softwareDir, 'summaries/highQualGenomes/li
 writeXStringSet(concensusSeqs95_5, file = file.path(softwareDir, 'summaries/highQualGenomes/genomes.fasta'))
 
 
-# Rename the refernece genome because by default it is named 'genome' which is needed for assemble.R.
+# Rename the reference genome because by default it is named 'genome' which is needed for assemble.R.
 r <- Biostrings::readDNAStringSet(file.path(softwareDir, 'data/references/USA-WA1-2020.fasta'))
 names(r) <- 'USA-WA1-2020'
 Biostrings::writeXStringSet(r, file.path(softwareDir, 'summaries/highQualGenomes/referenceGenome.fasta'))
@@ -463,34 +501,11 @@ Biostrings::writeXStringSet(r, file.path(softwareDir, 'summaries/highQualGenomes
 
 # Shorten sequence ids for trees.
 o <- Biostrings::readDNAStringSet(file.path(softwareDir, 'summaries/highQualGenomes/genomes.fasta'))
+names(o) <- sapply(names(o), function(x){ paste0(unlist(strsplit(x, '\\|'))[c(1:2,5)], collapse = '|') })
 names(o) <- gsub('Saliva_-_Positive_Control', 'Saliva', names(o))
 names(o) <- gsub('PennEssentialWorkers_Dec2020', 'PennEssential', names(o))
-names(o) <- gsub('\\|[A-Z\\.\\d]+$', '', names(o), perl = TRUE)
+#names(o) <- gsub('\\|[A-Z\\.\\d]+$', '', names(o), perl = TRUE)
 Biostrings::writeXStringSet(o, file.path(softwareDir, 'summaries/highQualGenomes/genomes.fasta2'))
-
-# 
-# system(paste0(mafftPath, ' --phylipout --namelength ', max(nchar(names(concensusSeqs95_5))), ' --thread 20 --auto --addfragments summaries/highQualGenomes/genomes.fasta2 summaries/highQualGenomes/referenceGenome.fasta > summaries/highQualGenomes/genomes.mafft'))
-# system('raxmlHPC-PTHREADS-SSE3 -s summaries/highQualGenomes/genomes.mafft -m GTRGAMMA -T 30 -n raxmlOut -f a -x 12345 -p 12345 -N autoMRE')
-# 
-# dendr <- ggdendro::dendro_data(phylogram::read.dendrogram('RAxML_bestTree.raxmlOut'), type="rectangle")
-# segments <- ggdendro::segment(dendr)
-# labels <- ggdendro::label(dendr)
-# 
-# p <- ggplot() + 
-#      geom_segment(data=segments, aes(x=x, y=y, xend=xend, yend=yend)) +
-#      geom_text(data=labels, aes(x=x, y=y, label=label, hjust=0), size=3) +
-#      coord_flip() + scale_y_reverse(expand=c(0.2, 0)) + 
-#      labs(x = '', y = 'Distance') +
-#      theme(axis.line.y=element_blank(),
-#            axis.ticks.y=element_blank(),
-#            axis.text.y=element_blank(),
-#            axis.title.y=element_blank(),
-#            panel.background=element_rect(fill="white"),
-#            panel.grid=element_blank())
-# 
-# invisible(file.remove(list.files(pattern = 'raxmlOut')))
-# 
-# ggsave(p, filename = 'summaries/highQualGenomes/raxmlPhyloPlot.pdf', units = 'in', height = 15, width = 18)
 
 
 # Hierarchical tree.
@@ -510,8 +525,9 @@ labels   <- ggdendro::label(dendr)
 concensusSeqPhyloPlot <- 
   ggplot() + 
   geom_segment(data=segments, aes(x=x, y=y, xend=xend, yend=yend)) + 
-  geom_text(data=labels, aes(x=x, y=y, label=label, hjust=0), size=3) +
-  coord_flip() + scale_y_reverse(expand=c(0.2, 0)) + 
+  geom_text(data=labels, aes(x=x, y=y, label=label, hjust=0), size=4) +
+  coord_flip() + 
+  scale_y_reverse(expand=c(0.1, 0)) + 
   labs(x = '', y = 'Distance') +
   theme(axis.line.y=element_blank(),
         axis.ticks.y=element_blank(),
@@ -520,15 +536,21 @@ concensusSeqPhyloPlot <-
         panel.background=element_rect(fill="white"),
         panel.grid=element_blank())
 
-ggsave(concensusSeqPhyloPlot, height = 60, width = 12, units = 'in', limitsize = FALSE, file = file.path(softwareDir, 'summaries/highQualGenomes/hierarchicalPhyloPlot.pdf'))
+ggsave(concensusSeqPhyloPlot, height = 150, width = 50, units = 'in', limitsize = FALSE, file = file.path(softwareDir, 'summaries/highQualGenomes/hierarchicalPhyloPlot.pdf'))
 invisible(file.remove(list.files(file.path(softwareDir, 'summaries/highQualGenomes'), pattern = 'mafft|referenceGenome|fasta2', full.names = TRUE)))
+
 
 # Write out genome sequences with GISAID style ids.
 names(concensusSeqs95_5) <- genomeMetaData$genome_id
 writeXStringSet(concensusSeqs95_5, file = file.path(softwareDir, 'summaries/highQualGenomes/genomes.fasta'))
 
-# Variant tables.
 
+# Genome id check
+uniqueVSPids <- unique(sapply(names(concensusSeqs95_5), function(x){ unlist(strsplit(x, '/'))[3] }))
+message(length(uniqueVSPids), ' high quality genomes exported.')
+
+
+# Variant tables.
 d <- bind_rows(lapply(list.files(file.path(softwareDir, 'summaries', 'sampleSummaries'), full.names = TRUE, pattern = '.tsv$', recursive = TRUE), function(y){
   t <- read.table(y, sep = '\t', header = TRUE)
   t$Subject <- as.character(t$Subject)
