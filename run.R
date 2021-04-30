@@ -431,7 +431,7 @@ genomeMetaData <- bind_rows(lapply(names(concensusSeqs95_5), function(x){
          mean_coverage = as.integer(stringr::str_extract(x[6], '\\d+')),
          lineage       = x[7],
          genome_id     = paste0('h-CoV-19/USA/', x[5], '/', year(ymd(x[4]))))
-}))
+})) %>% filter(! grepl('^VSP9', lab_id))
 
 genomeMetaData$rationale <- samples[match(genomeMetaData$lab_id, samples$VSP),]$Rationale
 openxlsx::write.xlsx(genomeMetaData, file = file.path(softwareDir, 'summaries/highQualGenomes/genomeMetaData.xlsx'))
@@ -612,11 +612,11 @@ sampledLineages1 <- ggplot(d, aes(dateCut, pLineage, fill=lineage2)) +
 
 sampledLineages2 <- ggplot(dplyr::select(d, dateCut, nGenomes) %>% dplyr::distinct(), aes(dateCut, nGenomes)) +
   geom_col() +
-  scale_y_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0), trans = 'log2', breaks = c(1,4,16,64,256), labels = c(0,4,16,64,256)) +
   scale_x_discrete(expand = c(0, 0), 
                    breaks = d$dateCut[! duplicated(d$dateCut2)], 
                    labels = d$dateCut2[! duplicated(d$dateCut2)]) +
-  labs(x = '', y = 'Genomes') +
+  labs(x = '', y = expression(Log[2]~Genomes))+
   theme(axis.text = element_text(size = 12), 
         axis.text.x = element_text(angle = 45, hjust = 1),
         axis.title=element_text(size=14),

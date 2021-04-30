@@ -7,7 +7,7 @@ output: html_document
 <br>
 Total number of sequenced samples: **`r totalSequencedSamples`**  
 Sequenced samples with ≥ 95% genome coverage (≥ 5 reads per position): **`r totalSequencedSamples_highQual`**   
-Resources:  [Full tree](summaries/highQualGenomes/hierarchicalPhyloPlot.pdf) | [Sequenced lineages](summaries/highQualGenomes/lineagesPlot.pdf)  |  [Run stats](summaries/seqRunSummary.xlsx)    
+Resources:  [Full tree](summaries/highQualGenomes/hierarchicalPhyloPlot.pdf) | [Sequenced lineages](summaries/highQualGenomes/lineagesPlot.pdf)  |  [Run stats](summaries/seqRunSummary.xlsx)  |  [Code base](https://github.com/helixscript/SARS-CoV-2-Philadelphia)
 <br>  
 SARS-CoV-2 whole genome sequencing is performed on a random cohort of SARS-CoV-2 positive swab or saliva samples  
 (~10% of total positives) from the University of Pennsylvania Health System. Samples primarily originate from  
@@ -27,9 +27,9 @@ options(stringsAsFactors = FALSE)
 lineageMountainPlot
 ```
 <br>  
-SARS-CoV-2 variants of interest and variants of concern are described in detail by the Center for Disease Control ([here](https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/variant-surveillance/variant-info.html)).  
+SARS-CoV-2 variants of interest and variants of concern are described in detail by the Centers for Disease Control and Prevention  ([here](https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/variant-surveillance/variant-info.html)).  
 <br>
-Methods: samples are sequenced using the Polar Protocol and ARTIC primers, essentially as described in Everett et al. 2021.  
+Methods: samples are sequenced using the Polar Protocol and ARTIC primers, essentially as described in Everett et al. 
 Variant lineages are called using PANGO lineage.  
 <br> 
 The display below shows all samples acquired. These include randomly drawns samples, hospitalized cases, vaccine breakthroughs,  
@@ -62,17 +62,21 @@ datatable(genomeTable2, options = list(scrollX = TRUE,
 ```
 <br> 
 
-**Contributing authors**:  
+**Contributing authors**  
 John Everett, Kyle Rodino, Shantan Reddy, Pascha Hokama, Aoife M. Roche, Young Hwang,   
 Abigail Glascock, Andrew Marques, Scott Sherrill-Mix, Samantha A. Whitesides, Jevon Graham-Wooten, Ayannah S. Fitzgerald,   
 Mike Feldman, Brendan Kelly, Ronald G. Collman, and Frederic Bushman  
 <br>  
-**Funding graciously provided by**:  
+**Funding graciously provided by**  
 University of Pennsylvania Health System  
 Perelman School of Medicine  
 Dept. of Pathology and Laboratory Medicine  
 Peter Quinn Endowment  
 UPenn – Craig Carnaroli  
 Penn Center for Research on Coronaviruses and Other Emerging Pathogens  
+<br>
+**References**  
+Everett, John et al. “SARS-CoV-2 Genomic Variation in Space and Time in Hospitalized Patients in Philadelphia.”  
+mBio vol. 12,1 e03456-20. 19 Jan. 2021, doi:10.1128/mBio.03456-20
 
 
