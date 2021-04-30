@@ -181,7 +181,8 @@ seqSamples <- unname(unlist(lapply(dat, '[[', 'seq_sample')))
 base_seqSamples <- sub('\\-\\S+$', '', seqSamples)
 dat2 <- dat[!(base_seqSamples %in% seqSamples & grepl('\\-', seqSamples))]
 
-v <- varHeatMap(dat2) 
+v <- NA
+if(sum(unlist(lapply(lapply(dat2, '[[', 'variantTableMajor'), nrow))) > 0) v <- varHeatMap(dat2) 
 
 if(length(v) == 1){
     cat('\n\n*No variants found*  \n\n')
@@ -196,7 +197,6 @@ if(length(v) == 1){
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.height=12, fig.width = 10, results='asis'}
 
 varHeatMap2 <- function(x){
-  
   # Determine which samples have variant tables and bind them into a single table.
   vt <- bind_rows(lapply(x, function(j){
            if(nrow(j$variantTableMajor) == 0) return(tibble())
@@ -221,8 +221,6 @@ varHeatMap2 <- function(x){
                
                # Find the sample in the list that matches the current sample.
                if(x2$sampleName == sample){
-                 
-                    #if(mutation$POS[1] == 11291) browser()
                  
                     # Is there any data for this mutant position in the pileup and was this mutation shown in the composite grid.
                     if(mutation$POS[1] %in% x2$pileupData$V2 & mutation$s[1] %in% unique(v$data$s)){
@@ -304,7 +302,8 @@ dat2 <- lapply(dat2, function(x){
           x
          })
   
-v2 <- varHeatMap2(dat2) 
+v2 <- NA
+if(length(v) > 1) v2 <- varHeatMap2(dat2) 
 
 if(length(v2) == 1){
     cat('\n\n*No variants found*  \n\n')

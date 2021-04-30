@@ -1,5 +1,5 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
-molpath-seq1	VSP0626	composite	NA	Saline	2021-01-22	20.39	R.1	99.7%	99.1%
-molpath-seq1	VSP0626-1	 single experiment	NA	Saline	2021-01-22	21.48	R.1	99.0%	99.0%
-molpath-seq1	VSP0626-2	 single experiment	NA	Saline	2021-01-22	20.65	R.1	99.7%	99.1%
-molpath-seq1	VSP0626-3	 single experiment	NA	Saline	2021-01-22	21.80	R.1	99.0%	98.8%
+molpath-seq1	VSP0626	composite	NA	Saline	2021-01-21	20.39	R.1	99.8%	99.0%
+molpath-seq1	VSP0626-1	 single experiment	NA	Saline	2021-01-21	21.48	R.1	98.9%	98.9%
+molpath-seq1	VSP0626-2	 single experiment	NA	Saline	2021-01-21	20.65	R.1	99.8%	99.0%
+molpath-seq1	VSP0626-3	 single experiment	NA	Saline	2021-01-21	21.80	R.1	98.9%	98.8%

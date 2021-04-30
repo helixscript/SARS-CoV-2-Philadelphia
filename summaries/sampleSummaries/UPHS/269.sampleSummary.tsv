@@ -1,10 +1,10 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
-269	VSP0177	composite	NA	NP-OP	2020-05-27	4.03	NA	90.0%	79.8%
-269	VSP0166-1	 single experiment	NA	NP-OP	2020-05-22	29.84	B.1.369	99.8%	99.6%
-269	VSP0176-1	 single experiment	166000	ETA	2020-05-27	29.82	B.1.369	99.8%	99.8%
-269	VSP0177-1	 single experiment	59.7	NP-OP	2020-05-27	1.03	NA	72.7%	38.5%
-269	VSP0177-2	 single experiment	NA	NP-OP	2020-05-27	1.01	NA	31.7%	27.5%
-269	VSP0177-3	 single experiment	NA	NP-OP	2020-05-27	1.02	NA	40.8%	38.2%
-269	VSP0177-4	 single experiment	NA	NP-OP	2020-05-27	0.93	NA	38.6%	36.2%
-269	VSP0200-1	 single experiment	NA	ETA	2020-06-08	5.92	NA	84.6%	82.5%
-269	VSP0202-1	 single experiment	16300	ETA	2020-06-12	29.83	B.1.369	99.8%	99.8%
+269	VSP0177	composite	NA	NP-OP	2020-05-27	4.03	NA	90.1%	79.9%
+269	VSP0166-1	 single experiment	NA	NP-OP	2020-05-22	29.84	B.1.369	99.9%	99.7%
+269	VSP0176-1	 single experiment	166000	ETA	2020-05-27	29.82	B.1.369	99.9%	99.8%
+269	VSP0177-1	 single experiment	59.7	NP-OP	2020-05-27	1.03	NA	72.8%	38.6%
+269	VSP0177-2	 single experiment	NA	NP-OP	2020-05-27	1.01	NA	31.8%	27.6%
+269	VSP0177-3	 single experiment	NA	NP-OP	2020-05-27	1.02	NA	40.9%	38.3%
+269	VSP0177-4	 single experiment	NA	NP-OP	2020-05-27	0.93	NA	38.7%	36.3%
+269	VSP0200-1	 single experiment	NA	ETA	2020-06-08	5.92	NA	84.7%	82.6%
+269	VSP0202-1	 single experiment	16300	ETA	2020-06-12	29.83	B.1.369	99.9%	99.8%

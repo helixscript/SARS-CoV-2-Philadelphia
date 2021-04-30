@@ -1,4 +1,4 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
-100667644	VSP0623	composite	NA	Saliva	2021-01-21	29.76	B.1.1.7	99.2%	99.2%
-100667644	VSP0623-1	 single experiment	NA	Saliva	2021-01-21	29.65	B.1.1.7	99.2%	99.2%
-100667644	VSP0623-2	 single experiment	NA	Saliva	2021-01-21	15.04	B.1.1.7	99.2%	99.2%
+100667644	VSP0623	composite	NA	Saliva	2021-01-18	29.76	B.1.1.7	99.3%	99.3%
+100667644	VSP0623-1	 single experiment	NA	Saliva	2021-01-18	29.65	B.1.1.7	99.3%	99.3%
+100667644	VSP0623-2	 single experiment	NA	Saliva	2021-01-18	15.04	B.1.1.7	99.3%	99.2%

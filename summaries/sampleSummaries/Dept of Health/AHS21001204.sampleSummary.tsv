@@ -1,4 +1,4 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
-AHS21001204	VSP0637	composite	NA	VTM	2021-01-22	29.93	B.1.1.304	99.8%	99.8%
-AHS21001204	VSP0637-1	 single experiment	NA	VTM	2021-01-22	1.08	NA	36.4%	34.8%
+AHS21001204	VSP0637	composite	NA	VTM	2021-01-22	29.93	B.1.1.304	99.9%	99.9%
+AHS21001204	VSP0637-1	 single experiment	NA	VTM	2021-01-22	1.08	NA	36.5%	34.9%
 AHS21001204	VSP0637-2	 single experiment	NA	VTM	2021-01-22	29.82	B.1.1.434	99.8%	99.8%

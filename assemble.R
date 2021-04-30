@@ -10,9 +10,9 @@ option_list = list(
   make_option(c("--outputFile"), type="character", default='save.RData', help="path to output RData file", metavar="character"),
   make_option(c("--R1"), type="character", default=NULL, help="comma delimited list of R1 fastq files", metavar="character"),
   make_option(c("--R2"), type="character", default=NULL, help="comma delimited list of R2 fastq files", metavar="character"),
-  make_option(c("--refGenomeFasta"), type="character", default='/home/everett/projects/SARS-CoV-2-Philadelphia/data/references/USA-WA1-2020.fasta', help="reference genome FASTA path", metavar="character"),   
-  make_option(c("--refGenomeBWA"), type="character", default='/home/everett/projects/SARS-CoV-2-Philadelphia/data/references/USA-WA1-2020.fasta', help="path to ref genome BWA database", metavar="character"),   
-  make_option(c("--refGenomeGenBank"), type="character", default='/home/everett/projects/SARS-CoV-2-Philadelphia/data/references/USA-WA1-2020.gb', help="path to ref genome genBank file", metavar="character"), 
+  make_option(c("--refGenomeFasta"), type="character", default='/home/everett/projects/SARS-CoV-2-Philadelphia/data/references/Wuhan-Hu-1.fasta', help="reference genome FASTA path", metavar="character"),   
+  make_option(c("--refGenomeBWA"), type="character", default='/home/everett/projects/SARS-CoV-2-Philadelphia/data/references/Wuhan-Hu-1.fasta', help="path to ref genome BWA database", metavar="character"),   
+  make_option(c("--refGenomeGenBank"), type="character", default='/home/everett/projects/SARS-CoV-2-Philadelphia/data/references/Wuhan-Hu-1.gb', help="path to ref genome genBank file", metavar="character"), 
   make_option(c("--minVariantPhredScore"), type="integer", default=20, help="minimum PHRED score allowed for called varinats", metavar="character"),
   make_option(c("--bwaPath"), type="character", default='/home/everett/ext/bwa', help="path to bwa binary", metavar="character"), 
   make_option(c("--megahitPath"), type="character", default='/home/everett/ext/megahit/bin/megahit', help="path to megahit binary", metavar="character"), 
@@ -27,6 +27,14 @@ option_list = list(
 opt_parser = OptionParser(option_list=option_list)
 opt = parse_args(opt_parser)
 
+
+# Testing data
+# opt$R1 <- '/data/SARS-CoV-2/sequencing/200518_M03249_0065_000000000-J37K3/VSP0013-1m_S3_L001_R1_001.fastq.gz'
+# opt$R2 <- '/data/SARS-CoV-2/sequencing/200518_M03249_0065_000000000-J37K3/VSP0013-1m_S3_L001_R2_001.fastq.gz'
+# opt$workDir <- '/home/everett/projects/SARS-CoV-2-Philadelphia/scratch/tmp.YwyFDeMQVz0CmjV5bCsQ4e217K1qAh'
+# opt$outputFile <- '/home/everett/projects/SARS-CoV-2-Philadelphia/summaries/VSPdata/VSP0013-1m.experiment.RData'
+
+
 source(paste0(opt$softwareDir, '/lib/assemble.lib.R'))
 
 # Handle missing required parameters.
@@ -35,9 +43,9 @@ if(! 'R2' %in% names(opt)) stop('--R2 must be defined.')
 
 
 # Create work directory.
-if(dir.exists(opt$workDir)) stop('Error -- output directory already exists')
+if(dir.exists(opt$workDir)) stop('Error -- work directory already exists')
 dir.create(opt$workDir)
-if(! dir.exists(opt$workDir)) stop('Error -- could not create the output directory.')
+if(! dir.exists(opt$workDir)) stop('Error -- could not create the work directory.')
 
 
 # Create table of software and R package version numbers.
@@ -53,15 +61,6 @@ opt$pangolinAssignmentPangoLEARN_version <- NA
 opt$variantTable      <- data.frame()
 opt$variantTableMajor <- data.frame()
 opt$contigs           <- Biostrings::DNAStringSet()
-
-
-# Testing data
-#opt$R1 <- 'data/sequencing/210112_M03249_0141_000000000-JFP4J/VSP0563-2_S1_L001_R1_001.fastq.gz'
-#opt$R2 <- 'data/sequencing/210112_M03249_0141_000000000-JFP4J/VSP0563-2_S1_L001_R2_001.fastq.gz'
-
-#opt$R1 <- 'data/sequencing/Lennon/VSP0909-1_S1_L001_R1_001.fastq.gz'
-#opt$R2 <- 'data/sequencing/Lennon/VSP0909-1_S1_L001_R2_001.fastq.gz'
-#opt$trimQualCode <- '+'
 
 
 R1s <- unlist(strsplit(opt$R1, ','));  if(! all(file.exists(R1s))) stop('All the R1 files could not be found.')
@@ -341,7 +340,6 @@ if(nrow(opt$variantTableMajor) > 0){
     # JKE -- grep can return multiples?
     
     offset <- sum(opt$variantTableMajor[1:grep(x$POS, opt$variantTableMajor$POS),]$shift) 
-    #offset <- sum(opt$variantTableMajor[1:(grep(x$POS, opt$variantTableMajor$POS)-1),]$shift) 
     
     cds2 <- cds
     start(cds2) <- start(cds2) + offset 

@@ -1,0 +1,78 @@
+---
+params: 
+    lastUpdated: "x"
+title: "Penn Medicine SARS-CoV-2 Surveillance Sequencing"
+output: html_document
+---
+<br>
+Total number of sequenced samples: **`r totalSequencedSamples`**  
+Sequenced samples with ≥ 95% genome coverage (≥ 5 reads per position): **`r totalSequencedSamples_highQual`**   
+Resources:  [Full tree](summaries/highQualGenomes/hierarchicalPhyloPlot.pdf) | [Sequenced lineages](summaries/highQualGenomes/lineagesPlot.pdf)  |  [Run stats](summaries/seqRunSummary.xlsx)    
+<br>  
+SARS-CoV-2 whole genome sequencing is performed on a random cohort of SARS-CoV-2 positive swab or saliva samples  
+(~10% of total positives) from the University of Pennsylvania Health System. Samples primarily originate from  
+southeastern Pennsylvania and southwestern New Jersey. This provides an overview of the dynamics of SARS-CoV-2     
+variants in the Delaware Valley.  
+<br>
+<br>
+```{r, warning=FALSE, echo = FALSE, message = FALSE, fig.width=10, fig.height=6}
+library(DT)
+library(tidyverse)
+library(lubridate)
+library(RColorBrewer)
+library(grDevices)
+library(egg)
+options(stringsAsFactors = FALSE)
+
+lineageMountainPlot
+```
+<br>  
+SARS-CoV-2 variants of interest and variants of concern are described in detail by the Center for Disease Control ([here](https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/variant-surveillance/variant-info.html)).  
+<br>
+Methods: samples are sequenced using the Polar Protocol and ARTIC primers, essentially as described in Everett et al. 2021.  
+Variant lineages are called using PANGO lineage.  
+<br> 
+The display below shows all samples acquired. These include randomly drawns samples, hospitalized cases, vaccine breakthroughs,  
+asymptomatics and S drop outs.  The later group are selected based on a specific failure of an amplicon targeting the spike coding  
+region, which is disrupted by a mutation found in B.1.1.7.  
+<br>
+<br>
+```{r, warning=FALSE, echo = FALSE, message = FALSE, fig.width=12, fig.height=10}
+ggarrange(sampledLineages1, sampledLineages2, ncol=1)
+```
+<br>  
+<br>  
+The table below describes all completed genomes including links to sequence analysis reports which provide additional 
+analyses including variant grids and read coverage visualizations.    
+
+```{r, warning=FALSE, echo = FALSE, message = FALSE, results = 'asis'}
+cat('<br><br>\n')
+genomeTable2 <- genomeTable
+genomeTable2$Class <- ifelse(nchar(genomeTable2$Class) > 25, paste0(substr(genomeTable2$Class, 1, 25), '...'), genomeTable2$Class)
+genomeTable2$`Mutant positions` <- sub('src', "height = '30' src", genomeTable2$`Mutant positions`)
+
+names(genomeTable2) <- c('Sample', 'Date', 'Num. mutations', 'Lineage', 'Class', 'Analysis report', 'Mutant positions')
+datatable(genomeTable2, options = list(scrollX = TRUE, 
+                                       columnDefs = list( list(width = '10px', targets = c(0,2,3,5)),   
+                                                          list(width = '50px', targets = c(1)),
+                                                          list(orderable = FALSE, targets = c(5:6))),
+                            pageLength = 25), escape = FALSE, rownames = FALSE) %>%
+  DT::formatStyle(columns = c(1:6), fontSize = '80%')
+
+```
+<br> 
+
+**Contributing authors**:  
+John Everett, Kyle Rodino, Shantan Reddy, Pascha Hokama, Aoife M. Roche, Young Hwang,   
+Abigail Glascock, Andrew Marques, Scott Sherrill-Mix, Samantha A. Whitesides, Jevon Graham-Wooten, Ayannah S. Fitzgerald,   
+Mike Feldman, Brendan Kelly, Ronald G. Collman, and Frederic Bushman  
+<br>  
+**Funding graciously provided by**:  
+University of Pennsylvania Health System  
+Perelman School of Medicine  
+Dept. of Pathology and Laboratory Medicine  
+Peter Quinn Endowment  
+UPenn – Craig Carnaroli  
+Penn Center for Research on Coronaviruses and Other Emerging Pathogens  
+
+

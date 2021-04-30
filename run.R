@@ -13,6 +13,7 @@ Rscript       <- '/home/opt/R-3.4.0/bin/Rscript'
 mafftPath     <- '/home/everett/ext/mafft/bin/mafft'
 softwareDir   <- '/home/everett/projects/SARS-CoV-2-Philadelphia'
 workDir       <- file.path(softwareDir, 'scratch')
+VOIs          <- c("B.1.1.7", "B.1.351", "B.1.427", "B.1.429", "B.1.525", "B.1.526", "P.1", "P.2")
 
 remoteOutputDir <- '/data/SARS-CoV-2'
 sequenceDataDir <- '/data/SARS-CoV-2/sequencing'
@@ -24,8 +25,12 @@ VSPdataDir      <- file.path(softwareDir, 'summaries/VSPdata')
 # Check remote system for working file.
 if('working' %in% list.files(remoteOutputDir)) q()
 
+
+# Create remote working file to let users know the pipeline is running.
 system('ssh microb120 touch /media/lorax/data/SARS-CoV-2/working')
 
+
+# Internal pipepline settings.
 options(stringsAsFactors = FALSE)
 overWriteSubjectReports <- TRUE
 source(paste0(softwareDir, '/lib/lib.R'))
@@ -82,6 +87,7 @@ if(length(r) > 0){
     }
   }
 }
+
 
 # Create a list of all available sequencing data.
 f1 <- unname(sapply(list.files(sequenceDataDir, recursive = TRUE, pattern = '^VSP', full.names = TRUE), function(x){
@@ -206,8 +212,6 @@ if(length(f3) > 0){
   system(paste0('find ', softwareDir, '/summaries/logs -name build_VSP_data* | xargs grep failed > ', softwareDir, '/summaries/logs/VSP_data.failed'))
 }
 
-#----------------------------------------------------------------------------------------
-
 if(updateGenomes == FALSE)
 {
   system('ssh microb120 rm /media/lorax/data/SARS-CoV-2/working')
@@ -216,8 +220,8 @@ if(updateGenomes == FALSE)
 }
 
 
-CPUs <- 8
-
+# Prepare data for subject report creation
+# -------------------------------------------------------------------------------------------------
 
 # Read in input data values.
 sampleInputs <- read.table(sampleInputData, sep= '\t', header = TRUE, stringsAsFactors = FALSE)
@@ -232,18 +236,11 @@ samples$sampleCollection_date <- sapply(samples$sampleCollection_date, trimLeadi
 samples$sample_type <- sapply(samples$sample_type, trimLeadingTrailingWhtSpace)
 samples$VSP         <- sapply(samples$VSP, trimLeadingTrailingWhtSpace)
 
-
-# Standardize date formatting
-samples$sampleCollection_date <- as.character(mdy(samples$sampleCollection_date))
-
-
 # Create a vector of VSP ids with sequencning data.
 availableVSPs <- unique(str_extract(list.files(paste0(softwareDir, '/summaries/VSPdata')), 'VSP\\d+'))
 
-
-# Find missing reports
+# Find missing reports.
 d <- unique(bind_rows(lapply(availableVSPs, function(x){
-  #if(x == 'VSP1157') browser()
   x <- subset(samples, VSP == x)
   if(nrow(x) != 1) return(tibble())
   if(! file.exists(file.path(softwareDir, 'summaries', 'trials', x$trial_id, paste0(x$patient_id, '.pdf'))) | 
@@ -255,14 +252,14 @@ d <- unique(bind_rows(lapply(availableVSPs, function(x){
 }))) 
 
 
-# Build subject reports.
-# The last data chunk continues to fail to create reports.
-# parLapply currently commented out -- need to repair.
 
+# Build missing subject reports.
+# -------------------------------------------------------------------------------------------------
 
 if(nrow(d) > 0) {
   d <- dplyr::mutate(d, s = ntile(1:n(), CPUs))
-  
+ 
+  CPUs <- 10 
   cluster <- makeCluster(CPUs)
   clusterExport(cluster, c('samples', 'sampleInputs', 'overWriteSubjectReports', 'softwareDir',
                            'sequenceDataDir', 'VSPdataDir', 'sampleData', 'sampleInputData'))
@@ -270,14 +267,8 @@ if(nrow(d) > 0) {
   if (!dir.exists(paste0(softwareDir, '/summaries/patientReportsData'))) 
     dir.create(paste0(softwareDir, '/summaries/patientReportsData'))
   
-  # o <- tibble(patient_id = d$patient_id, trial_id = d$trial_id, 
-  #             report = file.path('summaries', 'trials', d$trial_id, paste0(d$patient_id, '.pdf')), 
-  #             exists = file.exists(report))  
-  # o <- subset(o, exists == FALSE)
-  # d <- subset(d, patient_id %in% o$patient_id)
-  
-  #invisible(parLapply(cluster, split(d, d$s), function(p) {
-  invisible(lapply(split(d, d$s), function(p){
+  invisible(parLapply(cluster, split(d, d$s), function(p) {
+  #invisible(lapply(split(d, d$s), function(p){
     library(tidyverse)
     library(Biostrings)
     library(lubridate)
@@ -333,7 +324,6 @@ if(nrow(d) > 0) {
       
       names(dat) <- unlist(lapply(dat, '[[', 'seq_sample'))
       
-      #browser()
       save(dat, file = file.path(dir2, paste0(r$patient_id, '.RData')))
       
       result = tryCatch({
@@ -349,6 +339,8 @@ if(nrow(d) > 0) {
   
   stopCluster(cluster)
 }
+
+
 
 # Calcualte run statistics by collating tables created during the creation of paient reports.
 #---------------------------------------------------------------------------------------------
@@ -384,24 +376,34 @@ s <- bind_rows(lapply(list.files(paste0(softwareDir, '/summaries/sampleSummaries
   o
 }))
 
+# Add read coverage statistics and lineages from sample summaries created with subject reports.
 d$percent_1xCoverage <- s[match(d$exp, s$exp),]$percentRefReadCoverage
 d$percent_5xCoverage <- s[match(d$exp, s$exp),]$percentRefReadCoverage5
-
 d$lineage <- s[match(d$exp, s$exp),]$lineage
 
+# Only report lineages for samples with >= 95% ref genome coverage w/ >= 5 reads per position.
 n <- as.numeric(stringr::str_extract(d$percent_5xCoverage, '[\\d\\.]+'))
 n[is.na(n)] <- 0
-
 d[n < 95,]$lineage <- NA
 
+# Write out sequencing run report.
 openxlsx::write.xlsx(d, file = file.path(softwareDir, 'summaries', 'seqRunSummary.xlsx'))
 
-i <- as.numeric(sub('%', '', d$percent_5xCoverage)) >= 95
-length(unique(sub('\\-\\d+[a-z]?', '', d[i,]$exp)))
 
-#--------------------------------------------------------------------------
+# Tally genomes for reporting. Exclude sample ids starting with VSP9 because samples 
+# in this upper range are used for controls and simulated data sets.
+d$VSP <- stringr::str_extract(d$exp, 'VSP\\d+')
+d <- d[! grepl('^VSP9', d$VSP),]
+totalSequencedSamples <- n_distinct(d$VSP)
+
+i <- as.numeric(sub('%', '', d$percent_5xCoverage)) >= 95
+totalSequencedSamples_highQual <- n_distinct(d[i,]$VSP)
+
+
 
 # Collate sample summary table and omit problematic samples and subjects.
+# -------------------------------------------------------------------------------------------------
+
 summary <- removeProblematicSamples(bind_rows(lapply(list.files(file.path(softwareDir, 'summaries', 'sampleSummaries'), full.names = TRUE, pattern = '.tsv$', recursive = TRUE), function(x){
   t <- read.table(x, sep = '\t', header = TRUE)
   t$trial_id <- samples[match(sub('\\-\\d+[a-z]?$', '', t$exp, perl = TRUE), samples$VSP), ]$trial_id
@@ -418,6 +420,7 @@ summary <- removeProblematicSamples(bind_rows(lapply(list.files(file.path(softwa
 representativeSampleSummary_95 <- representativeSampleSummary(summary, 95)
 concensusSeqs95_5 <- retrieveConcensusSeqs(representativeSampleSummary_95)
 
+
 genomeMetaData <- bind_rows(lapply(names(concensusSeqs95_5), function(x){
   x <- unlist(strsplit(x, '\\|'))
   tibble(trial         = x[1],
@@ -430,50 +433,49 @@ genomeMetaData <- bind_rows(lapply(names(concensusSeqs95_5), function(x){
          genome_id     = paste0('h-CoV-19/USA/', x[5], '/', year(ymd(x[4]))))
 }))
 
+genomeMetaData$rationale <- samples[match(genomeMetaData$lab_id, samples$VSP),]$Rationale
 openxlsx::write.xlsx(genomeMetaData, file = file.path(softwareDir, 'summaries/highQualGenomes/genomeMetaData.xlsx'))
 
 
 # Extract lineages from genome ids and write them out to an Excel file.
 lineages <- bind_rows(lapply(names(concensusSeqs95_5), function(x){
   x <- unlist(strsplit(x, '\\|'))
-  tibble(sample = paste(x[1:4], collapse = '|'), lineage = x[7])
+  tibble(sample = paste(x[1:3], collapse = '|'), VSP = x[5],  date = x[4], lineage = x[7])
 }))
 
 openxlsx::write.xlsx(lineages, file = file.path(softwareDir, 'summaries/highQualGenomes/lineages.xlsx'))
 
 
-# Create a longitudinal bar plot of identified lineages.
+
+
+# Create a longitudinal bar plot of identified lineages based on sample arrival date.
+# -------------------------------------------------------------------------------------------------
+
 d <- bind_rows(lapply(1:nrow(lineages), function(x){
-  x <- lineages[x,]
-  x$date <- unlist(str_split(x$sample, '\\|'))[4]
-  o <- ymd(x$date)
-  x$days <- as.integer(o)
-  x$dateLabel <- paste0(month(o), '/', year(o))
-  x
-}))
+       x <- lineages[x,]
+       o <- ymd(x$date)
+       x$days <- as.integer(o)
+       x$dateLabel <- paste0(month(o), '/', year(o))
+       x
+    })) %>%
+    dplyr::filter(! is.na(days)) %>%
+    dplyr::arrange(days) %>%
+    dplyr::mutate(dateLabel = factor(dateLabel, levels = unique(dateLabel)))
+  
 
-d <- d[!is.na(d$days),]
-d <- d[order(d$days),]
-d$dateLabel <- factor(d$dateLabel, levels = unique(d$dateLabel))
-d$lineage <- factor(d$lineage, levels = unique(d$lineage))
+# d <- d[!is.na(d$days),]
+# d <- d[order(d$days),]
+# d$dateLabel <- factor(d$dateLabel, levels = unique(d$dateLabel))
+# ### d$lineage <- factor(d$lineage, levels = unique(d$lineage))
 
-colors <- grDevices::colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))(n_distinct(d$lineage)) 
-
-
-VOIs <- c("B.1.1.7", "B.1.351", "B.1.427", "B.1.429", "B.1.525", "B.1.526", "P.1", "P.2")
-
-# ---
-n <- 15
+n <- 19
 o <- sort(table(subset(d, ! lineage %in% VOIs)$lineage), decreasing = TRUE)
 a <- c(VOIs, names(o)[1:(n-length(VOIs))])
 d$lineage <- as.character(d$lineage)
 d <- d[! d$lineage == 'NA',]
 d$lineage <- ifelse(d$lineage %in% a, d$lineage, 'Other')
 d$lineage <- factor(d$lineage, levels = c(a, 'Other'))
-colors <- c(grDevices::colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))(n), '#000000')
-
-
-# ---
+colors <- c(grDevices::colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))(n), 'gray80')
 
 lineagesPlot <- 
   ggplot(d, aes(dateLabel, fill = lineage)) + 
@@ -490,12 +492,149 @@ lineagesPlot <-
 ggsave(lineagesPlot, file = file.path(softwareDir, 'summaries/highQualGenomes/lineagesPlot.pdf'), units = 'in', width = 10, height = 7)
 
 
+
+# Create variant schematic images and HTML table.
+# -------------------------------------------------------------------------------------------------
+
+genomeTable <- bind_rows(lapply(split(representativeSampleSummary_95, 1:nrow(representativeSampleSummary_95)), function(x){
+  f <- file.path(softwareDir, 'summaries', 'VSPdata', paste0(x$exp, ifelse(grepl('-', x$exp), '.experiment.RData', '.composite.RData')))
+  if(file.exists(f)){
+    message('Creating schematic image for: ', f)
+    return(variantSchematic(f))
+  } else {
+    return(tibble()) 
+  }
+})) %>% dplyr::filter(! grepl('^VSP9', Sample)) %>%  dplyr::arrange(desc(Date))
+
+
+
+
+# Lineage mountain plot.
+# Calculate the lineage plot data to determine which lineages should not be considered Other.
+# -------------------------------------------------------------------------------------------------
+
+dayBreaks <- '8 days'
+
+d <- genomeMetaData[grepl('random|asymptomatic|hospitalized', 
+                          genomeMetaData$rationale, ignore.case = T),] %>%
+  dplyr::filter(lineage != 'NA') %>%
+  dplyr::filter(ymd(sample_date) >= '2021-02-28') %>%
+  dplyr::mutate(date = cut.Date(ymd(sample_date), breaks = dayBreaks)) %>%
+  dplyr::group_by(date) %>%
+  dplyr::mutate(nGenomes = n_distinct(genome_id)) %>%
+  dplyr::ungroup() %>%
+  dplyr::mutate(lineage = factor(lineage)) %>%
+  dplyr::group_by(date, lineage, .drop = FALSE) %>%
+  dplyr::summarise(pLineage = n_distinct(genome_id) / nGenomes[1]) %>%
+  dplyr::ungroup() %>%
+  tidyr::replace_na(list(pLineage = 0)) %>%
+  dplyr::arrange(desc(pLineage)) 
+
+# Find the top 8 lineages not in variant of interest list.
+o <- unique(as.character(d$lineage))
+o <- c(VOIs, o[! o %in% VOIs][1:8])
+
+colors <- c(grDevices::colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))(length(o)-1), 'gray80')
+
+lineageMountainPlot <- genomeMetaData[grepl('random|asymptomatic|hospitalized', 
+                          genomeMetaData$rationale, ignore.case = T),] %>%
+     dplyr::filter(lineage != 'NA') %>%
+     dplyr::filter(ymd(sample_date) >= '2021-02-28') %>%
+     dplyr::arrange(sample_date) %>%
+     dplyr::mutate(date = cut.Date(ymd(sample_date), breaks = dayBreaks)) %>%
+     dplyr::group_by(date) %>%
+     dplyr::mutate(nGenomes = n_distinct(genome_id)) %>%
+     dplyr::ungroup() %>%
+     dplyr::mutate(lineage = forcats::fct_other(lineage, keep = o)) %>%
+     dplyr::group_by(date, lineage, .drop = FALSE) %>%
+     dplyr::summarise(pLineage = n_distinct(genome_id) / nGenomes[1], nGenomes = nGenomes[1]) %>%
+     dplyr::ungroup() %>%
+     tidyr::replace_na(list(pLineage = 0, nGenomes = 0)) %>%
+     dplyr::mutate(date2 = ymd(as.character(date))) %>%
+     dplyr::group_by(date) %>%
+     dplyr::arrange(desc(nGenomes)) %>%
+     dplyr::mutate(date2 = paste0(months(date2), ' ', day(date2), '\n', nGenomes[1], ' genomes')) %>%
+     dplyr::ungroup() %>%
+     dplyr::arrange(date) %>%
+     dplyr::mutate(date2 = factor(as.character(date2), levels = unique(date2))) %>%
+     ggplot(aes(date2, pLineage, fill = lineage, group = lineage)) +
+       scale_fill_manual(values = colors) +
+       geom_area(color = "black", size = 0.2) +
+       scale_x_discrete(expand = c(0.01,0)) +
+       scale_y_continuous(expand = c(0.01,0), labels = scales::percent_format(accuracy = 1)) +
+       labs(x = '', y = 'Percent Sampled Lineages') +
+       guides(fill=guide_legend(title="Lineages")) +
+       theme(axis.text = element_text(size = 12), axis.text.x = element_text(angle = 0, vjust=0),
+             panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+             panel.background = element_blank(), axis.line = element_line(colour = "black"))
+
+
+
+d <- dplyr::filter(genomeMetaData, lineage != 'NA') %>% dplyr::arrange(sample_date)
+
+# Add a faux row at the start of the data frame to ensure that the date cut factor
+# begins on the first of the month.
+
+r <- d[1,]
+m <- ymd(r$sample_date)
+r$sample_date <- as.character(ymd(paste0(c(year(m), month(m), 1), collapse = '-')))
+r$lineage <- 'faux'
+
+d <- bind_rows(r, d) %>%
+     dplyr::mutate(dateCut = cut.Date(ymd(sample_date), breaks = dayBreaks)) %>%
+     dplyr::filter(lineage != 'faux') %>%
+     dplyr::group_by(dateCut) %>%
+  dplyr::mutate(nGenomes = n_distinct(genome_id)) %>%
+  dplyr::ungroup() %>%
+  dplyr::group_by(dateCut, lineage, .drop = FALSE) %>%
+  dplyr::summarise(pLineage = n_distinct(lab_id) / nGenomes[1], nGenomes = nGenomes[1]) %>%
+  dplyr::ungroup() %>%
+  tidyr::replace_na(list(pLineage = 0, nGenomes = 0, lineage = 'none')) %>%
+  dplyr::mutate(lineage2 = forcats::fct_other(lineage, keep = o)) %>%
+  dplyr::mutate(dateCut2 = paste0(month(ymd(as.character(dateCut)), label = TRUE), ' ',
+                                  paste0(year(ymd(as.character(dateCut))))))
+
+sampledLineages1 <- ggplot(d, aes(dateCut, pLineage, fill=lineage2)) +
+  scale_fill_manual(values = c(grDevices::colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))(length(o)-1), 'gray80')) +
+  geom_col() +
+  scale_y_continuous(expand = c(0, 0), labels = scales::percent_format(accuracy = 1)) +
+  scale_x_discrete(expand = c(0, 0), 
+                   breaks = d$dateCut[! duplicated(d$dateCut2)], 
+                   labels = d$dateCut2[! duplicated(d$dateCut2)]) +
+  labs(x = '', y = 'Percent Sampled Lineages') +
+  guides(fill=guide_legend(title="Lineages")) +
+  theme(axis.text = element_text(size = 12), 
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        axis.title=element_text(size=14),
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        panel.background = element_blank(), axis.line = element_line(colour = "black"))
+
+
+sampledLineages2 <- ggplot(dplyr::select(d, dateCut, nGenomes) %>% dplyr::distinct(), aes(dateCut, nGenomes)) +
+  geom_col() +
+  scale_y_continuous(expand = c(0, 0)) +
+  scale_x_discrete(expand = c(0, 0), 
+                   breaks = d$dateCut[! duplicated(d$dateCut2)], 
+                   labels = d$dateCut2[! duplicated(d$dateCut2)]) +
+  labs(x = '', y = 'Genomes') +
+  theme(axis.text = element_text(size = 12), 
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        axis.title=element_text(size=14),
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        panel.background = element_blank(), axis.line = element_line(colour = "black"))
+
+rmarkdown::render('dashboard.Rmd', output_file = 'index.html',  params = list('lastUpdated' = date()))
+
+
+
+
+# Write out high quality genome sequences.
 writeXStringSet(concensusSeqs95_5, file = file.path(softwareDir, 'summaries/highQualGenomes/genomes.fasta'))
 
 
 # Rename the reference genome because by default it is named 'genome' which is needed for assemble.R.
-r <- Biostrings::readDNAStringSet(file.path(softwareDir, 'data/references/USA-WA1-2020.fasta'))
-names(r) <- 'USA-WA1-2020'
+r <- Biostrings::readDNAStringSet(file.path(softwareDir, 'data/references/Wuhan-Hu-1.fasta'))
+names(r) <- 'Wuhan-Hu-1'
 Biostrings::writeXStringSet(r, file.path(softwareDir, 'summaries/highQualGenomes/referenceGenome.fasta'))
 
 
@@ -596,5 +735,8 @@ system(paste0('zip -9 -r ', softwareDir, '/summaries/SARS-CoV-2_reports.zip ', s
 
 system(paste0('rsync -r --del ', file.path(softwareDir, 'summaries'), 
               ' microb120:/media/lorax/data/SARS-CoV-2/'))
+
+system(paste0('scp ', file.path(softwareDir, 'index.html'), 
+              ' microb120:/media/lorax/data/SARS-CoV-2/index.html'))
 
 system('ssh microb120 rm /media/lorax/data/SARS-CoV-2/working')

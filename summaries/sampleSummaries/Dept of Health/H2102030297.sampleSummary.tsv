@@ -1,4 +1,4 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
-H2102030297	VSP0671	composite	NA	VTM or Saline	2021-02-09	29.82	B.1.2	99.8%	99.8%
+H2102030297	VSP0671	composite	NA	VTM or Saline	2021-02-09	29.82	B.1.2	99.9%	99.7%
 H2102030297	VSP0671-1	 single experiment	NA	VTM or Saline	2021-02-09	NA	NA	NA	NA
-H2102030297	VSP0671-2	 single experiment	NA	VTM or Saline	2021-02-09	29.82	B.1.2	99.8%	99.8%
+H2102030297	VSP0671-2	 single experiment	NA	VTM or Saline	2021-02-09	29.82	B.1.2	99.9%	99.7%

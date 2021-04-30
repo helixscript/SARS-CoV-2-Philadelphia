@@ -1,4 +1,4 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
-354398	VSP0583	composite	NA	Nasal swab in VTM or Saline	2021-01-08	0.54	NA	14.7%	8.8%
-354398	VSP0583-1	 single experiment	NA	Nasal swab in VTM or Saline	2021-01-08	0.39	NA	8.7%	7.5%
-354398	VSP0583-2	 single experiment	NA	Nasal swab in VTM or Saline	2021-01-08	0.50	NA	14.0%	8.8%
+354398	VSP0583	composite	NA	Nasal swab in VTM or Saline	2021-01-08	0.54	NA	14.8%	9.0%
+354398	VSP0583-1	 single experiment	NA	Nasal swab in VTM or Saline	2021-01-08	0.39	NA	8.8%	7.6%
+354398	VSP0583-2	 single experiment	NA	Nasal swab in VTM or Saline	2021-01-08	0.50	NA	14.1%	8.9%

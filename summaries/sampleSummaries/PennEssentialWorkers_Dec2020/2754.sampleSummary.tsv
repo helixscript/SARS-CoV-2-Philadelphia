@@ -1,4 +1,4 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
-2754	VSP0535	composite	NA	Saliva	2020-12-11	1.92	NA	80.6%	68.4%
-2754	VSP0535-1	 single experiment	NA	Saliva	2020-12-11	1.92	NA	80.5%	68.3%
-2754	VSP0535-2	 single experiment	NA	Saliva	2020-12-11	NA	NA	0.7%	0.0%
+2754	VSP0535	composite	NA	Saliva	2020-12-11	1.92	NA	80.7%	68.4%
+2754	VSP0535-1	 single experiment	NA	Saliva	2020-12-11	1.92	NA	80.6%	68.4%
+2754	VSP0535-2	 single experiment	NA	Saliva	2020-12-11	NA	NA	1.1%	0.1%

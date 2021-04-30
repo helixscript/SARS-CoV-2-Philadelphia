@@ -1,5 +1,5 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
-PQ-Seq6	VSP0775	composite	NA	Saliva	2021-02-01	21.73	R.1	99.6%	99.1%
+PQ-Seq6	VSP0775	composite	NA	Saliva	2021-02-01	21.73	R.1	99.6%	99.2%
 PQ-Seq6	VSP0775-1	 single experiment	NA	Saliva	2021-02-01	21.70	R.1	99.5%	99.0%
-PQ-Seq6	VSP0775-2	 single experiment	NA	Saliva	2021-02-01	6.18	NA	93.5%	83.1%
-PQ-Seq6	VSP0775-3	 single experiment	NA	Saliva	2021-02-01	21.73	R.1	99.1%	99.0%
+PQ-Seq6	VSP0775-2	 single experiment	NA	Saliva	2021-02-01	6.18	NA	93.6%	83.1%
+PQ-Seq6	VSP0775-3	 single experiment	NA	Saliva	2021-02-01	21.73	R.1	99.2%	99.0%

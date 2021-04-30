@@ -1,4 +1,4 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
-DOH1	VSP0563	composite	NA	VTM	2021-01-06	29.90	B.1.1.7	100.0%	99.8%
-DOH1	VSP0563-2	 single experiment	NA	VTM	2021-01-06	24.56	B.1.1.7	98.9%	98.2%
-DOH1	VSP0563-3	 single experiment	NA	VTM	2021-01-06	29.90	B.1.1.7	100.0%	99.8%
+DOH1	VSP0563	composite	NA	VTM	2021-01-06	29.90	B.1.1.7	100.0%	99.7%
+DOH1	VSP0563-2	 single experiment	NA	VTM	2021-01-06	24.56	B.1.1.7	98.8%	98.1%
+DOH1	VSP0563-3	 single experiment	NA	VTM	2021-01-06	29.90	B.1.1.7	100.0%	99.7%
