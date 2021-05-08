@@ -1,19 +1,17 @@
 ---
 params: 
     lastUpdated: "x"
-title: "Penn Medicine SARS-CoV-2 Surveillance Sequencing"
+title: "Penn Medicine Surveillance Sequencing<br>of SARS-CoV-2 Variants"
 output: html_document
 ---
 <br>
-Total number of sequenced samples: **`r totalSequencedSamples`**  
-Sequenced samples with ≥ 95% genome coverage (≥ 5 reads per position): **`r totalSequencedSamples_highQual`**   
-Resources:  [Full tree](summaries/highQualGenomes/hierarchicalPhyloPlot.pdf) | [Sequenced lineages](summaries/highQualGenomes/lineagesPlot.pdf)  |  [Run stats](summaries/seqRunSummary.xlsx)  |  [Code base](https://github.com/helixscript/SARS-CoV-2-Philadelphia)
+As SARS-CoV-2 grows, the virus occasionally makes mistakes copying its genetic material, and so introduces heritable changes. As the virus spreads in people, chance changes that increase replication in humans may lead to new variants that spread preferentially. It is important to track these variants in order to understand their possible influences on the effectiveness of vaccines and therapies. Researchers at Penn Medicine are carrying out systematic viral whole genome sequencing to track the nature and spread of viral variants in the Delaware Valley. Below we first show a display of recent data from a random cohort of SARS-CoV-2 positive swab or saliva samples (~10% of total positives) from the University of Pennsylvania Health System. Samples primarily originate from southeastern Pennsylvania and southwestern New Jersey, providing an overview of the dynamics in the Delaware Valley. Below that are summaries of all genomes sequenced, and reports on each genome individually.  
+  
+The output of the sequencing effort to date is:  
+ &nbsp; &nbsp;  Total number of sequenced samples: **`r totalSequencedSamples`**  
+ &nbsp; &nbsp;  Sequenced samples with ≥ 95% genome coverage (≥ 5 reads per position): **`r totalSequencedSamples_highQual`**   
+ &nbsp; &nbsp;  Resources:  [Full tree](summaries/highQualGenomes/hierarchicalPhyloPlot.pdf) | [Sequenced lineages](summaries/highQualGenomes/lineagesPlot.pdf)  |  [Run stats](summaries/seqRunSummary.xlsx)  | [Report archive (`r reportArchiveSize`)](summaries/SARS-CoV-2_reports.zip) | [Code base](https://github.com/helixscript/SARS-CoV-2-Philadelphia)
 <br>  
-SARS-CoV-2 whole genome sequencing is performed on a random cohort of SARS-CoV-2 positive swab or saliva samples  
-(~10% of total positives) from the University of Pennsylvania Health System. Samples primarily originate from  
-southeastern Pennsylvania and southwestern New Jersey. This provides an overview of the dynamics of SARS-CoV-2     
-variants in the Delaware Valley.  
-<br>
 <br>
 ```{r, warning=FALSE, echo = FALSE, message = FALSE, fig.width=10, fig.height=6}
 library(DT)
@@ -48,10 +46,10 @@ analyses including variant grids and read coverage visualizations.
 ```{r, warning=FALSE, echo = FALSE, message = FALSE, results = 'asis'}
 cat('<br><br>\n')
 genomeTable2 <- genomeTable
+names(genomeTable2) <- c('Sample', 'Date', 'Num. mutations', 'Lineage', 'Class', 'Analysis report', 'Mutant positions')
 genomeTable2$Class <- ifelse(nchar(genomeTable2$Class) > 25, paste0(substr(genomeTable2$Class, 1, 25), '...'), genomeTable2$Class)
 genomeTable2$`Mutant positions` <- sub('src', "height = '30' src", genomeTable2$`Mutant positions`)
 
-names(genomeTable2) <- c('Sample', 'Date', 'Num. mutations', 'Lineage', 'Class', 'Analysis report', 'Mutant positions')
 datatable(genomeTable2, options = list(scrollX = TRUE, 
                                        columnDefs = list( list(width = '10px', targets = c(0,2,3,5)),   
                                                           list(width = '50px', targets = c(1)),
@@ -63,9 +61,10 @@ datatable(genomeTable2, options = list(scrollX = TRUE,
 <br> 
 
 **Contributing authors**  
-John Everett, Kyle Rodino, Shantan Reddy, Pascha Hokama, Aoife M. Roche, Young Hwang,   
-Abigail Glascock, Andrew Marques, Scott Sherrill-Mix, Samantha A. Whitesides, Jevon Graham-Wooten, Ayannah S. Fitzgerald,   
-Mike Feldman, Brendan Kelly, Ronald G. Collman, and Frederic Bushman  
+John K. Everett, Kyle Rodino, Shantan Reddy, Pascha Hokama, Aoife M. Roche, Young Hwang,  
+Abigail Glascock, Andrew Marques, Scott Sherrill-Mix, Samantha A. Whiteside, Jevon Graham-Wooten,  
+Lisa Mattei, Paige Fenn, Madelyne Om, Ayannah S. Fitzgerald, Mike Feldman, Brendan Kelly,   
+Ronald G. Collman, and Frederic Bushman  
 <br>  
 **Funding graciously provided by**  
 University of Pennsylvania Health System  
@@ -74,7 +73,14 @@ Dept. of Pathology and Laboratory Medicine
 Peter Quinn Endowment  
 UPenn – Craig Carnaroli  
 Penn Center for Research on Coronaviruses and Other Emerging Pathogens  
-<br>
+<br>  
+**Media contact**  
+Sophie Kluthe  
+Senior Medical Communications Officer  
+Penn Medicine  
+sophie.kluthe@pennmedicine.upenn.edu  
+(267) 588-5939  
+<br>  
 **References**  
 Everett, John et al. “SARS-CoV-2 Genomic Variation in Space and Time in Hospitalized Patients in Philadelphia.”  
 mBio vol. 12,1 e03456-20. 19 Jan. 2021, doi:10.1128/mBio.03456-20
