@@ -1,6 +1,21 @@
 ## SARS-CoV-2-Philadelphia  
-### Retrieving runs from BaseSpace and creating demultiplexed FASTQ files  
 
+The SARS-CoV-2 sequencing and variant calling pipeline process viral samples (saliva, nasal swabs, ect.)  
+by reverse transcription of the viral RNA to make a cDNA copy, PCR amplification of genome segments,   
+Nextera library preparation, and Illumina sequencing of overlapping amplicons created with the ARTIC   
+primer set which amplifies the SARS-CoV-2 genome as 98 amplicons.  
+  
+Sequencing reads are aligned to a reference genome with BWA, alignments are filtered and processed with  
+the Samtools toolkit and variant positions are called with the bcftools toolkit. Variants are called for  
+positions where the positions are spanned by ≥ 5 reads, yield a PHRED scores ≥ 20, and more than 50% of  
+spanning reads report the same mutant base. Each processed sample yields a rich VSP (Viral SPecimen) data     
+data object contain details about the alignment to the reference genome, variant calls, PANGO lineage calls,    
+and denovo contig assemblies which are saved to the local file system. These VSP data objects are collated   
+into detailed subject reports and used for down stream analyses.    
+
+## Bushman group specific instructions 
+
+#### Downloading and processing sequencing data
 Our sequencing data is stored on microb120.med.upenn.edu at this location: /media/sequencing/Illumina.  
 This directory has write access for members of the data_manager user group and Aoife, Derin and Hriju  
 are members of this group. Data is pulled from BaseSpace every hour automatically using this script:  
@@ -49,14 +64,4 @@ To include sequencing data in our cumulative pipeline, create a new sequencing r
            
 The pipeline on microb191 will act on the new data when it runs the next hour and return the results  
 to /media/lorax/data/SARS-CoV-2/summaries.  An empty file (media/lorax/data/SARS-CoV-2/working) will  
-be seen while the pipeline is running on microb191. A run can be removed from the pipeline by simply  
-renaming the run directory starting with an X, eg.  
-
-%> mv /media/lorax/data/SARS-CoV-2/sequencing/210329_NB551353_0086_AHT7HCAFX2/   
-        /media/lorax/data/SARS-CoV-2/sequencing/X210329_NB551353_0086_AHT7HCAFX2/  
-        
-Removing the X will cause the run to be added back into the cumulative pipeline the next hour when  
-the pipeline runs again. A zip file containing all the trial reports (SARS-CoV-2_reports.zip) can be  
-found in the summaries directory and can be downloaded via  
-http://bushmanlab.org/data/SARS-CoV-2/summaries/SARS-CoV-2_reports.zip   
-Lineage plots and trees can be found in the summaries/highQualGenomes directory.
+be seen while the pipeline is running on microb191.  
