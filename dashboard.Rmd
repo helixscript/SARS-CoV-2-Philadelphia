@@ -4,16 +4,7 @@ params:
 title: "Penn Medicine Surveillance Sequencing<br>of SARS-CoV-2 Variants"
 output: html_document
 ---
-<br>
-As SARS-CoV-2 grows, the virus occasionally makes mistakes copying its genetic material, and so introduces heritable changes. As the virus spreads in people, chance changes that increase replication in humans may lead to new variants that spread preferentially. It is important to track these variants in order to understand their possible influences on the effectiveness of vaccines and therapies. Researchers at Penn Medicine are carrying out systematic viral whole genome sequencing to track the nature and spread of viral variants in the Delaware Valley. Below we first show a display of recent data from a random cohort of SARS-CoV-2 positive swab or saliva samples (~10% of total positives) from the University of Pennsylvania Health System. Samples primarily originate from southeastern Pennsylvania and southwestern New Jersey, providing an overview of the dynamics in the Delaware Valley. Below that are summaries of all genomes sequenced, and reports on each genome individually.  
-  
-The output of the sequencing effort to date is:  
- &nbsp; &nbsp;  Total number of sequenced samples: **`r totalSequencedSamples`**  
- &nbsp; &nbsp;  Sequenced samples with ≥ 95% genome coverage (≥ 5 reads per position): **`r totalSequencedSamples_highQual`**   
- &nbsp; &nbsp;  Resources:  [Full tree](summaries/highQualGenomes/hierarchicalPhyloPlot.pdf) | [Sequenced lineages](summaries/highQualGenomes/lineagesPlot.pdf)  |  [Run stats](summaries/seqRunSummary.xlsx)  | [Report archive (`r reportArchiveSize`)](summaries/SARS-CoV-2_reports.zip) | [Code base](https://github.com/helixscript/SARS-CoV-2-Philadelphia)
-<br>  
-<br>
-```{r, warning=FALSE, echo = FALSE, message = FALSE, fig.width=10, fig.height=6}
+```{r, warning=FALSE, echo = FALSE, message = FALSE}
 library(DT)
 library(tidyverse)
 library(lubridate)
@@ -21,7 +12,26 @@ library(RColorBrewer)
 library(grDevices)
 library(egg)
 options(stringsAsFactors = FALSE)
-
+ppNum <- function(n) format(n, big.mark = ",", scientific = FALSE, trim = TRUE)
+```
+<br>
+As SARS-CoV-2 grows, the virus occasionally makes mistakes copying its genetic material, and so introduces heritable changes. As the virus spreads in people, chance changes that increase replication in humans may lead to new variants that spread preferentially. It is important to track these variants in order to understand their possible influences on the effectiveness of vaccines and therapies. Researchers at Penn Medicine are carrying out systematic viral whole genome sequencing to track the nature and spread of viral variants in the Delaware Valley. Below we first show a display of recent data from a random cohort of SARS-CoV-2 positive swab or saliva samples (~10% of total positives) from the University of Pennsylvania Health System. Samples primarily originate from southeastern Pennsylvania and southwestern New Jersey, providing an overview of the dynamics in the Delaware Valley. Below that are summaries of all genomes sequenced, and reports on each genome individually.  
+  
+The output of the sequencing effort to date is:  
+Most recent sequencing run: **`r mostRecentRunDate`**  
+Total number of sequenced samples: **`r ppNum(totalSequencedSamples)`**  
+Sequenced samples with ≥ 95% genome coverage (≥ 5 reads per position): **`r ppNum(totalSequencedSamples_highQual)`**   
+Resources: 
+ [Full tree](summaries/genomes/hierarchicalPhyloPlot.pdf) | 
+ [Sequenced lineages](summaries/genomes/lineagesPlot.pdf)  | 
+ [Mutation tables](summaries/genomes/mutations.xlsx) | 
+ [Mutant positions](summaries/genomes/positionalMutationFreqTable.xlsx) | 
+ [Run stats](summaries/seqRunSummary.xlsx)  | 
+ [Report archive (`r reportArchiveSize`)](summaries/SARS-CoV-2_reports.zip) | 
+ [Code base](https://github.com/helixscript/SARS-CoV-2-Philadelphia)  
+<br>  
+<br>
+```{r, warning=FALSE, echo = FALSE, message = FALSE, fig.width=10, fig.height=6}
 lineageMountainPlot
 ```
 <br>  

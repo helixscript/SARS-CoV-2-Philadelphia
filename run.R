@@ -46,6 +46,11 @@ write(date(), file = logFile)
 samples <- removeProblematicSamples(read.table(sampleData, sep= '\t', header = TRUE, quote = '', stringsAsFactors = FALSE))
 
 
+# Create a vector of VSP ids with sequencning data.
+availableVSPs <- unique(str_extract(list.files(paste0(softwareDir, '/summaries/VSPdata')), 'VSP\\d+'))
+samples$sequenced <- samples$VSP %in% availableVSPs
+
+
 # Create a list of all available sequencing data.
 experiments <- unique(unname(sapply(list.files(sequenceDataDir, recursive = TRUE, pattern = '^VSP', full.names = TRUE), function(x){
   o <- unlist(strsplit(x, '/'))
@@ -56,6 +61,9 @@ experiments <- unique(unname(sapply(list.files(sequenceDataDir, recursive = TRUE
     return(NA)
   }
 })))
+
+
+
 
 
 # Create a list of all VSP data objects already created.
@@ -186,8 +194,6 @@ samples$sampleCollection_date <- sapply(samples$sampleCollection_date, trimLeadi
 samples$sample_type <- sapply(samples$sample_type, trimLeadingTrailingWhtSpace)
 samples$VSP         <- sapply(samples$VSP, trimLeadingTrailingWhtSpace)
 
-# Create a vector of VSP ids with sequencning data.
-availableVSPs <- unique(str_extract(list.files(paste0(softwareDir, '/summaries/VSPdata')), 'VSP\\d+'))
 
 # Find missing reports.
 d <- unique(bind_rows(lapply(availableVSPs, function(x){
@@ -317,7 +323,7 @@ summary <- removeProblematicSamples(
 #---------------------------------------------------------------------------------------------
 
 f <- list.files(sequenceDataDir, pattern = '^VSP', recursive = TRUE, full.names = TRUE)
-d <- tibble(path = f)
+d <- tibble(path = f) %>% dplyr::filter(grepl('_R1_', path))
 
 # Parse run id from data path.
 d$exp <- sapply(d$path, function(x){
@@ -351,6 +357,9 @@ d <- arrange(d, desc(days)) %>%
      select(date, run, VSP, exp, trial, subject, sampleDate, percent_1xCoverage, 
             percent_5xCoverage, lineage, rationale) 
 
+mostRecentRunDate <- as.character(max(ymd(d$date), na.rm = TRUE))
+
+if(file.exists(file.path(softwareDir, 'summaries', 'seqRunSummary.xlsx'))) file.remove(file.path(softwareDir, 'summaries', 'seqRunSummary.xlsx'))
 openxlsx::write.xlsx(d, file = file.path(softwareDir, 'summaries', 'seqRunSummary.xlsx'))
 
 
@@ -387,8 +396,24 @@ mutationTable <- bind_rows(parLapply(cluster, split(representativeSampleSummary_
  dplyr::select(opt$variantTableMajor, trial, subject, VSP, date, POS, REF, ALT, QUAL, percentAlt, reads, genes, type)
 })) %>% dplyr::arrange(desc(date, VSP))
 stopCluster(cluster)
+mutationTable[mutationTable$type == ' ',]$type <- NA
 openxlsx::write.xlsx(mutationTable, file = 'summaries/genomes/mutations.xlsx')
 
+positionalMutationFreqTable <- 
+  group_by(mutationTable, POS) %>%
+  summarize(nExperiments = n_distinct(VSP),
+            freqChange = n_distinct(VSP) / n_distinct(mutationTable$VSP),
+            freqA = sum(ALT == 'A') / n_distinct(VSP),
+            freqT = sum(ALT == 'T') / n_distinct(VSP),
+            freqC = sum(ALT == 'C') / n_distinct(VSP),
+            freqG = sum(ALT == 'G') / n_distinct(VSP),
+            freqDel = sum(grepl('del', ALT)) / n_distinct(VSP),
+            gene = genes[1],
+            mutations = paste0(unique(type), collapse = ',')) %>%
+            #mutations = ifelse(nchar(unique(type)) > 0, paste0(unique(type), collapse = ','), NA)) %>%
+  ungroup()
+openxlsx::write.xlsx(positionalMutationFreqTable, file = 'summaries/genomes/positionalMutationFreqTable.xlsx')
+            
 
 
 # Create a genome metadata table from the verbose genome FASTA headers.
@@ -482,7 +507,7 @@ stopCluster(cluster)
 # Calculate the lineage plot data first to determine which lineages should not be considered Other.
 # -------------------------------------------------------------------------------------------------
 
-dayBreaks <- '8 days'
+dayBreaks <- '10 days'
 
 d <- genomeMetaData[grepl('random|asymptomatic|hospitalized', 
                           genomeMetaData$rationale, ignore.case = T),] %>%
@@ -659,15 +684,75 @@ names(concensusSeqs95_5) <- genomeMetaData$genome_id
 writeXStringSet(concensusSeqs95_5, file = file.path(softwareDir, 'summaries/genomes/genomes.fasta'))
 
 
-
-#--------------------------------------------------------------------------
+# Render data portal, sync data, and exit.
+#--------------------------------------------------------------------------------------------------
 
 rmarkdown::render('dashboard.Rmd', output_file = 'index.html',  params = list('lastUpdated' = date()))
 
 system(paste0('rsync -r --del ', file.path(softwareDir, 'summaries'), 
               ' microb120:/media/lorax/data/SARS-CoV-2/'))
 
-#system(paste0('scp ', file.path(softwareDir, 'index.html'), 
-#              ' microb120:/media/lorax/data/SARS-CoV-2/index.html'))
+system(paste0('scp ', file.path(softwareDir, 'index.html'), 
+             ' microb120:/media/lorax/data/SARS-CoV-2/index.html'))
 
 system('ssh microb120 rm /media/lorax/data/SARS-CoV-2/working')
+
+q()
+
+
+# Dev
+#--------------------------------------------------------------------------------------------------
+
+
+# Track specific mutations that are increasing in frequency over time.
+#--------------------------------------------------------------------------------------------------
+dayBreaks <- '8 days'
+minSlopeTimePoints <- 3
+
+d <- genomeMetaData[grepl('random|asymptomatic|hospitalized', 
+                          genomeMetaData$rationale, ignore.case = T),] %>%
+  dplyr::filter(lineage != 'NA') %>%
+  dplyr::filter(ymd(sample_date) >= '2021-02-28') %>%
+  dplyr::arrange(sample_date) %>%
+  dplyr::mutate(date = cut.Date(ymd(sample_date), breaks = dayBreaks)) 
+
+cluster <- makeCluster(10)
+clusterExport(cluster, 'representativeSampleSummary_95')
+r <- bind_rows(parLapply(cluster, split(d, paste0(d$date, d$lab_id)), function(x){
+  load(subset(representativeSampleSummary_95, VSP == x$lab_id)$dataFile)
+  data.frame(date = x$date, VSP = x$lab_id[1], mutation = paste(opt$variantTableMajor$POS, opt$variantTableMajor$genes, opt$variantTableMajor$type))
+}))
+
+r2 <- bind_rows(lapply(split(r, r$date), function(x){
+  data.frame(date = x$date[1], f = table(x$mutation) / n_distinct(x$VSP)) 
+}))
+
+
+r3 <- bind_rows(lapply(split(r2, r2$f.Var1), function(x){
+  x <- dplyr::arrange(x, date)
+  if(nrow(x) >= minSlopeTimePoints){
+    m <- (x[nrow(x),]$f.Freq - x[1,]$f.Freq) / as.integer(ymd(x[nrow(x),]$date) - ymd(x[1,]$date))
+    return(tibble(mutation = x$f.Var1[1], m = m))
+  } else {
+    return(tibble())
+  }
+})) %>% arrange(desc(m))
+
+colors <- grDevices::colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))(21)
+
+ggplot(subset(r2, f.Var1 %in% r3[1:21,]$mutation), aes(date, f.Freq, group = f.Var1, color = f.Var1)) +
+  theme_bw()+
+  scale_color_manual(name = '', values = colors) +
+  geom_point(size = 2) +
+  geom_line() +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+  labs(x = 'Date', y = 'Sample frequency') +
+  guides(color = guide_legend(ncol=3)) +
+  theme(legend.position="bottom",
+        axis.text = element_text(size = 10),
+        axis.title = element_text(size = 12),
+        panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.background = element_blank(), 
+        axis.line = element_line(colour = "black"))
+
