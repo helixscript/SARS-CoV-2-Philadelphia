@@ -6,12 +6,12 @@ Nextera library preparation, and Illumina sequencing of overlapping amplicons cr
 primer set which amplifies the SARS-CoV-2 genome as 98 amplicons.  
   
 Sequencing reads are aligned to a reference genome with BWA, alignments are filtered and processed with  
-the Samtools toolkit and variant positions are called with the bcftools toolkit. Variants are called for  
-positions where the positions are spanned by ≥ 5 reads, yield PHRED scores ≥ 20, and more than 50% of  
-spanning reads report the same mutant base. Each processed sample yields a rich VSP (Viral SPecimen) data     
-data object contain details about the alignment to the reference genome, variant calls, PANGO lineage calls,    
-and denovo contig assemblies which are saved to the local file system. These VSP data objects are collated   
-into detailed subject reports and used for down stream analyses.    
+the samtools toolkit and variant positions are called with the bcftools toolkit. Variants are called for  
+positions spanned by ≥ 5 reads, yield PHRED scores ≥ 20, and more than 50% of spanning reads report the   
+same mutant base. Each processed sample yields a rich VSP (Viral SPecimen) data object contain details   
+about the alignment to the reference genome, variant calls, PANGO lineage calls, and denovo contig assemblies   
+which are saved to the local file system. These VSP data objects are collated into detailed subject reports   
+and used for downstream analyses.    
 
 ## Bushman group specific instructions 
 
