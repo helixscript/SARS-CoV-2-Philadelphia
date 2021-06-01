@@ -7,7 +7,7 @@ library(lubridate)
 library(stringr)
 library(readr)
 
-CPUs          <- 15
+CPUs          <- 25
 overwrite     <- FALSE
 Rscript       <- '/home/opt/R-3.4.0/bin/Rscript'
 mafftPath     <- '/home/everett/ext/mafft/bin/mafft'
@@ -180,6 +180,7 @@ if(length(newExperiments) > 0){
 
 # Prepare data for subject report creation.
 # -------------------------------------------------------------------------------------------------
+availableVSPs <- unique(str_extract(list.files(paste0(softwareDir, '/summaries/VSPdata')), 'VSP\\d+'))
 
 # Read in input data values.
 sampleInputs <- read.table(sampleInputData, sep= '\t', header = TRUE, stringsAsFactors = FALSE)
@@ -195,100 +196,114 @@ samples$sample_type <- sapply(samples$sample_type, trimLeadingTrailingWhtSpace)
 samples$VSP         <- sapply(samples$VSP, trimLeadingTrailingWhtSpace)
 
 
-# Find missing reports.
-d <- unique(bind_rows(lapply(availableVSPs, function(x){
-  x <- subset(samples, VSP == x)
-  if(nrow(x) != 1) return(tibble())
-  if(! file.exists(file.path(softwareDir, 'summaries', 'trials', x$trial_id, paste0(x$patient_id, '.pdf'))) | 
-     ! file.exists(file.path(softwareDir, 'summaries', 'sampleSummaries', x$trial_id, paste0(x$patient_id, '.sampleSummary.tsv')))){
-    return(select(x, patient_id, trial_id))
-  } else {
-    return(tibble())
-  }
-}))) 
+# Keep looking for missing reports and creating reports until reportsComplete == TRUE.
+# Report generation will occasionally fail silently and reports will be created on 
+# subsequent loops. 
+
+reportsComplete <- FALSE
+
+while(reportsComplete == FALSE){
+
+  # Find missing reports.
+  d <- unique(bind_rows(lapply(availableVSPs, function(x){
+    x <- subset(samples, VSP == x)
+    if(nrow(x) != 1) return(tibble())
+    if(! file.exists(file.path(softwareDir, 'summaries', 'trials', x$trial_id, paste0(x$patient_id, '.pdf'))) | 
+       ! file.exists(file.path(softwareDir, 'summaries', 'sampleSummaries', x$trial_id, paste0(x$patient_id, '.sampleSummary.tsv')))){
+      return(select(x, patient_id, trial_id))
+    } else {
+      return(tibble())
+    }
+  }))) 
 
 
 
-# Build missing subject reports.
-# -------------------------------------------------------------------------------------------------
+  # Build missing subject reports.
+  # -------------------------------------------------------------------------------------------------
 
-if(nrow(d) > 0) {
-  d <- dplyr::mutate(d, s = ntile(1:n(), CPUs))
- 
-  cluster <- makeCluster(CPUs)
-  clusterExport(cluster, c('samples', 'sampleInputs', 'overWriteSubjectReports', 'softwareDir',
-                           'sequenceDataDir', 'VSPdataDir', 'sampleData', 'sampleInputData'))
+  if(nrow(d) > 0) {
+    d <- dplyr::mutate(d, s = ntile(1:n(), CPUs))
+   
+    cluster <- makeCluster(CPUs)
+    clusterExport(cluster, c('samples', 'sampleInputs', 'overWriteSubjectReports', 'softwareDir',
+                             'sequenceDataDir', 'VSPdataDir', 'sampleData', 'sampleInputData'))
   
-  if (!dir.exists(paste0(softwareDir, '/summaries/patientReportsData'))) 
-    dir.create(paste0(softwareDir, '/summaries/patientReportsData'))
+    if (!dir.exists(paste0(softwareDir, '/summaries/patientReportsData'))) 
+      dir.create(paste0(softwareDir, '/summaries/patientReportsData'))
   
-  invisible(parLapply(cluster, split(d, d$s), function(p) {
-  #invisible(lapply(split(d, d$s), function(p){
-    library(tidyverse)
-    library(Biostrings)
-    library(lubridate)
+    invisible(parLapply(cluster, split(d, d$s), function(p) {
+    #invisible(lapply(split(d, d$s), function(p){
+      library(tidyverse)
+      library(Biostrings)
+      library(lubridate)
     
-    invisible(lapply(split(p, paste(p$patient_id, p$trial_id)), function(r) {
-      x <- subset(samples, patient_id == r$patient_id & trial_id == r$trial_id)
-      
-      dir1 <- file.path(softwareDir, 'summaries/trials', r$trial_id)
-      dir2 <- file.path(softwareDir, 'summaries/patientReportsData', r$trial_id)
-      dir3 <- file.path(softwareDir, 'summaries/sampleSummaries', r$trial_id)
-      
-      if (!dir.exists(dir1)) dir.create(dir1)
-      
-      if (overWriteSubjectReports == FALSE & file.exists(file.path(dir1, paste0(r$patient_id, '.pdf')))) return()
-      
-      files <- list.files(paste0(softwareDir, '/summaries/VSPdata'), pattern = paste0(x$VSP, collapse = '|'), full.names = TRUE)
-      
-      if (length(files) == 0) return()
-      
-      if (!dir.exists(dir2)) dir.create(dir2)
-      if (!dir.exists(dir3)) dir.create(dir3)
-      
-      dat <- lapply(files, function(f) {
-        # Here we load VSP data files where there are two types of files, analyses of individual sequencing
-        # experiments and composite analyses where multiple experiments where combined.
+      invisible(lapply(split(p, paste(p$patient_id, p$trial_id)), function(r) {
+        x <- subset(samples, patient_id == r$patient_id & trial_id == r$trial_id)
         
-        load(f)
-        opt$vsp <- stringr::str_extract(f, 'VSP\\d+')
-        opt$seq_sample <-  stringr::str_extract(f, 'VSP\\d+\\-?\\d+?[abm]?')
+        dir1 <- file.path(softwareDir, 'summaries/trials', r$trial_id)
+        dir2 <- file.path(softwareDir, 'summaries/patientReportsData', r$trial_id)
+        dir3 <- file.path(softwareDir, 'summaries/sampleSummaries', r$trial_id)
+      
+        if (!dir.exists(dir1)) dir.create(dir1)
         
-        d <- subset(samples, VSP == opt$vsp)
-        opt$sample_id <- d$sample_id[1]
-        opt$trial_id <- d$trial_id[1]
-        opt$subject <- d$patient_id[1]
-        opt$date <- d$sampleCollection_date[1]
-        opt$sampleType = d$sample_type[1]
-        opt$genomesPerMicroLiter = as.numeric(d$N1_copies_per_ul[1])
+        if (overWriteSubjectReports == FALSE & file.exists(file.path(dir1, paste0(r$patient_id, '.pdf')))) return()
+      
+        files <- list.files(paste0(softwareDir, '/summaries/VSPdata'), pattern = paste0(x$VSP, collapse = '|'), full.names = TRUE)
+      
+        if (length(files) == 0) return()
+      
+        if (!dir.exists(dir2)) dir.create(dir2)
+        if (!dir.exists(dir3)) dir.create(dir3)
+      
+        dat <- lapply(files, function(f) {
+          # Here we load VSP data files where there are two types of files, analyses of individual sequencing
+          # experiments and composite analyses where multiple experiments where combined.
         
-        if (!grepl('composite', f)) {
-          opt$inputGenomes <-
-            opt$genomesPerMicroLiter * subset(sampleInputs, Sample_Name == opt$seq_sample)$uL_Inputs
-        } else {
-          opt$inputGenomes <- NA
-        }
-        opt$concensusSeq = as.character(opt$concensusSeq)
-        return(opt)
-      })
+          load(f)
+          opt$vsp <- stringr::str_extract(f, 'VSP\\d+')
+          opt$seq_sample <-  stringr::str_extract(f, 'VSP\\d+\\-?\\d+?[abm]?')
+        
+          d <- subset(samples, VSP == opt$vsp)
+          opt$sample_id <- d$sample_id[1]
+          opt$trial_id <- d$trial_id[1]
+          opt$subject <- d$patient_id[1]
+          opt$date <- d$sampleCollection_date[1]
+          opt$sampleType = d$sample_type[1]
+          opt$genomesPerMicroLiter = as.numeric(d$N1_copies_per_ul[1])
+        
+          if (!grepl('composite', f)) {
+            opt$inputGenomes <-
+              opt$genomesPerMicroLiter * subset(sampleInputs, Sample_Name == opt$seq_sample)$uL_Inputs
+          } else {
+            opt$inputGenomes <- NA
+          }
+          opt$concensusSeq = as.character(opt$concensusSeq)
+          return(opt)
+        })
       
-      names(dat) <- unlist(lapply(dat, '[[', 'seq_sample'))
+        names(dat) <- unlist(lapply(dat, '[[', 'seq_sample'))
       
-      save(dat, file = file.path(dir2, paste0(r$patient_id, '.RData')))
+        save(dat, file = file.path(dir2, paste0(r$patient_id, '.RData')))
       
-      result = tryCatch({
-        rmarkdown::render(file.path(softwareDir, 'report.Rmd'),
-          output_file = file.path(dir1, paste0(r$patient_id, '.pdf')),
-          params = list('date'  = format(Sys.time(), "%Y-%m-%d"), 'title' = paste0('COVID-19 subject ', r$patient_id)))
-      }, error = function(e) {
-        write(paste0('[!] Failed to create subject report for ', r$patient_id, ' from the ', r$trial_id, ' trial.'),
-          file = file.path(softwareDir, 'logs/buid_subject_reports.log'), append = TRUE)
-      })
+        result = tryCatch({
+          rmarkdown::render(file.path(softwareDir, 'report.Rmd'),
+            output_file = file.path(dir1, paste0(r$patient_id, '.pdf')),
+            params = list('date'  = format(Sys.time(), "%Y-%m-%d"), 'title' = paste0('COVID-19 subject ', r$patient_id)))
+        }, error = function(e) {
+          write(paste0('[!] Failed to create subject report for ', r$patient_id, ' from the ', r$trial_id, ' trial.'),
+            file = file.path(softwareDir, 'logs/buid_subject_reports.log'), append = TRUE)
+        })
+      }))
     }))
-  }))
   
-  stopCluster(cluster)
+    stopCluster(cluster)
+  } else {
+    reportsComplete <- TRUE
+  }
+  
+  Sys.sleep(60) 
 }
+
 
 # Collate sample summaries created during patient report generation.
 summary <- removeProblematicSamples(

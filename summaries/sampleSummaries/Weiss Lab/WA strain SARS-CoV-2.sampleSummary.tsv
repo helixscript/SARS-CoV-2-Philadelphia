@@ -1,4 +1,6 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
-WA strain SARS-CoV-2	VSP1973	composite	NA	RNA	2021-04-07	29.85	A	100.0%	99.8%
+WA strain SARS-CoV-2	VSP1973	composite	NA	RNA	2021-04-07	29.96	A	100.0%	100.0%
 WA strain SARS-CoV-2	VSP1973-1	 single experiment	NA	RNA	2021-04-07	29.85	A	100.0%	99.8%
 WA strain SARS-CoV-2	VSP1973-2	 single experiment	NA	RNA	2021-04-07	29.83	A	99.8%	99.7%
+WA strain SARS-CoV-2	VSP1973-3	 single experiment	NA	RNA	2021-04-07	29.89	A	100.0%	99.9%
+WA strain SARS-CoV-2	VSP1973-4	 single experiment	NA	RNA	2021-04-07	29.85	A	99.8%	99.7%

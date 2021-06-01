@@ -1,0 +1,41 @@
+Fri May 21 12:21:45 2021
+Starting VSP2051 with 1 seq experiments.
+Fri May 21 12:21:45 2021 (/home/everett/projects/SARS-CoV-2-Philadelphia/summaries/VSPdata/VSP2051-2.experiment.RData) /home/opt/R-3.4.0/bin/Rscript /home/everett/projects/SARS-CoV-2-Philadelphia/assemble.R --outputFile /home/everett/projects/SARS-CoV-2-Philadelphia/summaries/VSPdata/VSP2051-2.experiment.RData --workDir /home/everett/projects/SARS-CoV-2-Philadelphia/scratch/tmp.GAfr66BkqN6uXqiv96pfVC3YjueSpb --R1 /data/SARS-CoV-2/sequencing/210520_NS500618_0337_AHVYTNAFX2/VSP2051-2_S60_R1_001.fastq.gz --R2 /data/SARS-CoV-2/sequencing/210520_NS500618_0337_AHVYTNAFX2/VSP2051-2_S60_R2_001.fastq.gz
+
+Completed VSP2051
+
+Starting VSP2052 with 1 seq experiments.
+Fri May 21 12:28:12 2021 (/home/everett/projects/SARS-CoV-2-Philadelphia/summaries/VSPdata/VSP2052-2.experiment.RData) /home/opt/R-3.4.0/bin/Rscript /home/everett/projects/SARS-CoV-2-Philadelphia/assemble.R --outputFile /home/everett/projects/SARS-CoV-2-Philadelphia/summaries/VSPdata/VSP2052-2.experiment.RData --workDir /home/everett/projects/SARS-CoV-2-Philadelphia/scratch/tmp.OQruZPvQAESmSVOMo9GoQZii5E75Xt --R1 /data/SARS-CoV-2/sequencing/210520_NS500618_0337_AHVYTNAFX2/VSP2052-2_S61_R1_001.fastq.gz --R2 /data/SARS-CoV-2/sequencing/210520_NS500618_0337_AHVYTNAFX2/VSP2052-2_S61_R2_001.fastq.gz
+
+Completed VSP2052
+
+Starting VSP2053 with 1 seq experiments.
+Fri May 21 12:34:40 2021 (/home/everett/projects/SARS-CoV-2-Philadelphia/summaries/VSPdata/VSP2053-2.experiment.RData) /home/opt/R-3.4.0/bin/Rscript /home/everett/projects/SARS-CoV-2-Philadelphia/assemble.R --outputFile /home/everett/projects/SARS-CoV-2-Philadelphia/summaries/VSPdata/VSP2053-2.experiment.RData --workDir /home/everett/projects/SARS-CoV-2-Philadelphia/scratch/tmp.sJS5oZtveyFTjvqJrkHqnJfzeOVsHT --R1 /data/SARS-CoV-2/sequencing/210520_NS500618_0337_AHVYTNAFX2/VSP2053-2_S62_R1_001.fastq.gz --R2 /data/SARS-CoV-2/sequencing/210520_NS500618_0337_AHVYTNAFX2/VSP2053-2_S62_R2_001.fastq.gz
+
+Completed VSP2053
+
+Starting VSP2054 with 1 seq experiments.
+Fri May 21 12:40:09 2021 (/home/everett/projects/SARS-CoV-2-Philadelphia/summaries/VSPdata/VSP2054-2.experiment.RData) /home/opt/R-3.4.0/bin/Rscript /home/everett/projects/SARS-CoV-2-Philadelphia/assemble.R --outputFile /home/everett/projects/SARS-CoV-2-Philadelphia/summaries/VSPdata/VSP2054-2.experiment.RData --workDir /home/everett/projects/SARS-CoV-2-Philadelphia/scratch/tmp.N5a07YvhtFWzqVZnBUQ7Rp0QBknucy --R1 /data/SARS-CoV-2/sequencing/210520_NS500618_0337_AHVYTNAFX2/VSP2054-2_S63_R1_001.fastq.gz --R2 /data/SARS-CoV-2/sequencing/210520_NS500618_0337_AHVYTNAFX2/VSP2054-2_S63_R2_001.fastq.gz
+
+Completed VSP2054
+
+Starting VSP2055 with 1 seq experiments.
+Fri May 21 12:46:40 2021 (/home/everett/projects/SARS-CoV-2-Philadelphia/summaries/VSPdata/VSP2055-2.experiment.RData) /home/opt/R-3.4.0/bin/Rscript /home/everett/projects/SARS-CoV-2-Philadelphia/assemble.R --outputFile /home/everett/projects/SARS-CoV-2-Philadelphia/summaries/VSPdata/VSP2055-2.experiment.RData --workDir /home/everett/projects/SARS-CoV-2-Philadelphia/scratch/tmp.Nu4HUiapWH4iEf6lcDzdZVMEvPFnl2 --R1 /data/SARS-CoV-2/sequencing/210520_NS500618_0337_AHVYTNAFX2/VSP2055-2_S64_R1_001.fastq.gz --R2 /data/SARS-CoV-2/sequencing/210520_NS500618_0337_AHVYTNAFX2/VSP2055-2_S64_R2_001.fastq.gz
+
+Completed VSP2055
+
+Starting VSP2056 with 1 seq experiments.
+Fri May 21 12:53:14 2021 (/home/everett/projects/SARS-CoV-2-Philadelphia/summaries/VSPdata/VSP2056-2.experiment.RData) /home/opt/R-3.4.0/bin/Rscript /home/everett/projects/SARS-CoV-2-Philadelphia/assemble.R --outputFile /home/everett/projects/SARS-CoV-2-Philadelphia/summaries/VSPdata/VSP2056-2.experiment.RData --workDir /home/everett/projects/SARS-CoV-2-Philadelphia/scratch/tmp.Abr24IxPEjApCp6t956ZSifACVvsif --R1 /data/SARS-CoV-2/sequencing/210520_NS500618_0337_AHVYTNAFX2/VSP2056-2_S65_R1_001.fastq.gz --R2 /data/SARS-CoV-2/sequencing/210520_NS500618_0337_AHVYTNAFX2/VSP2056-2_S65_R2_001.fastq.gz
+
+Completed VSP2056
+
+Starting VSP2057 with 1 seq experiments.
+Fri May 21 12:57:39 2021 (/home/everett/projects/SARS-CoV-2-Philadelphia/summaries/VSPdata/VSP2057-2.experiment.RData) /home/opt/R-3.4.0/bin/Rscript /home/everett/projects/SARS-CoV-2-Philadelphia/assemble.R --outputFile /home/everett/projects/SARS-CoV-2-Philadelphia/summaries/VSPdata/VSP2057-2.experiment.RData --workDir /home/everett/projects/SARS-CoV-2-Philadelphia/scratch/tmp.oy6tOlhrey0IyWtqc8XisXoNl7nFj3 --R1 /data/SARS-CoV-2/sequencing/210520_NS500618_0337_AHVYTNAFX2/VSP2057-2_S66_R1_001.fastq.gz --R2 /data/SARS-CoV-2/sequencing/210520_NS500618_0337_AHVYTNAFX2/VSP2057-2_S66_R2_001.fastq.gz
+
+Completed VSP2057
+
+Starting VSP2058 with 1 seq experiments.
+Fri May 21 13:00:14 2021 (/home/everett/projects/SARS-CoV-2-Philadelphia/summaries/VSPdata/VSP2058-2.experiment.RData) /home/opt/R-3.4.0/bin/Rscript /home/everett/projects/SARS-CoV-2-Philadelphia/assemble.R --outputFile /home/everett/projects/SARS-CoV-2-Philadelphia/summaries/VSPdata/VSP2058-2.experiment.RData --workDir /home/everett/projects/SARS-CoV-2-Philadelphia/scratch/tmp.wICxyd1p9LFr0BJ4rHccLPNB0TbJAo --R1 /data/SARS-CoV-2/sequencing/210520_NS500618_0337_AHVYTNAFX2/VSP2058-2_S67_R1_001.fastq.gz --R2 /data/SARS-CoV-2/sequencing/210520_NS500618_0337_AHVYTNAFX2/VSP2058-2_S67_R2_001.fastq.gz
+
+Completed VSP2058
+
