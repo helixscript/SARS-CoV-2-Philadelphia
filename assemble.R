@@ -5,14 +5,14 @@ library(genbankr)
 library(GenomicRanges)
 
 option_list = list(
-  make_option(c("--softwareDir"), type="character", default='/home/everett/projects/SARS-CoV-2-Philadelphia', help="path to work directory", metavar="character"),
+  make_option(c("--softwareDir"), type="character", default='/home/common/SARS-CoV-2-Philadelphia', help="path to work directory", metavar="character"),
   make_option(c("--workDir"), type="character", default='/tmp', help="path to work directory", metavar="character"),
   make_option(c("--outputFile"), type="character", default='save.RData', help="path to output RData file", metavar="character"),
   make_option(c("--R1"), type="character", default=NULL, help="comma delimited list of R1 fastq files", metavar="character"),
   make_option(c("--R2"), type="character", default=NULL, help="comma delimited list of R2 fastq files", metavar="character"),
-  make_option(c("--refGenomeFasta"), type="character", default='/home/everett/projects/SARS-CoV-2-Philadelphia/data/references/Wuhan-Hu-1.fasta', help="reference genome FASTA path", metavar="character"),   
-  make_option(c("--refGenomeBWA"), type="character", default='/home/everett/projects/SARS-CoV-2-Philadelphia/data/references/Wuhan-Hu-1.fasta', help="path to ref genome BWA database", metavar="character"),   
-  make_option(c("--refGenomeGenBank"), type="character", default='/home/everett/projects/SARS-CoV-2-Philadelphia/data/references/Wuhan-Hu-1.gb', help="path to ref genome genBank file", metavar="character"), 
+  make_option(c("--refGenomeFasta"), type="character", default='/home/common/SARS-CoV-2-Philadelphia/data/references/Wuhan-Hu-1.fasta', help="reference genome FASTA path", metavar="character"),   
+  make_option(c("--refGenomeBWA"), type="character", default='/home/common/SARS-CoV-2-Philadelphia/data/references/Wuhan-Hu-1.fasta', help="path to ref genome BWA database", metavar="character"),   
+  make_option(c("--refGenomeGenBank"), type="character", default='/home/common/SARS-CoV-2-Philadelphia/data/references/Wuhan-Hu-1.gb', help="path to ref genome genBank file", metavar="character"), 
   make_option(c("--minVariantPhredScore"), type="integer", default=20, help="minimum PHRED score allowed for called varinats", metavar="character"),
   make_option(c("--bwaPath"), type="character", default='/home/everett/ext/bwa', help="path to bwa binary", metavar="character"), 
   make_option(c("--megahitPath"), type="character", default='/home/everett/ext/megahit/bin/megahit', help="path to megahit binary", metavar="character"), 

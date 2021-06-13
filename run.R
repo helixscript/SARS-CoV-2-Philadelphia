@@ -11,7 +11,9 @@ CPUs          <- 25
 overwrite     <- FALSE
 Rscript       <- '/home/opt/R-3.4.0/bin/Rscript'
 mafftPath     <- '/home/everett/ext/mafft/bin/mafft'
-softwareDir   <- '/home/everett/projects/SARS-CoV-2-Philadelphia'
+softwareDir   <- '/home/common/SARS-CoV-2-Philadelphia'
+pangolinCondaShellPath <- '/home/everett/miniconda3/etc/profile.d/conda.sh'
+
 workDir       <- file.path(softwareDir, 'scratch')
 VOIs          <- c("B.1.1.7", "B.1.351", "B.1.427", "B.1.429", "B.1.525", "B.1.526", "P.1", "P.2")
 
@@ -94,10 +96,10 @@ if(length(newExperiments) > 0){
   
   cluster <- makeCluster(CPUs)
   clusterExport(cluster, c('Rscript', 'overwrite', 'sequenceDataDir', 'softwareDir', 'sequenceDataDir', 
-                           'VSPdataDir', 'sampleData', 'sampleInputData', 'workDir', 'tmpFile'))
+                           'VSPdataDir', 'sampleData', 'sampleInputData', 'workDir', 'tmpFile', 'pangolinCondaShellPath'))
   
-  invisible(parLapply(cluster, split(d, d$s), function(x){
-  #invisible(lapply(split(d, d$s), function(x){
+  #invisible(parLapply(cluster, split(d, d$s), function(x){
+  invisible(lapply(split(d, d$s), function(x){
   library(dplyr)
   library(stringr)
     
@@ -127,7 +129,7 @@ if(length(newExperiments) > 0){
         if(file.exists(outputFile)) file.remove(outputFile)
         
         comm <- paste0(Rscript, ' ', softwareDir, '/assemble.R --outputFile ', outputFile, ' --workDir ', file.path(workDir, tmpFile()), 
-                       ' --softwareDir ', softwareDir, ' --R1 ', 
+                       ' --softwareDir ', softwareDir, ' --condaShellPath ', pangolinCondaShellPath, ' --R1 ', 
                        paste0(sequenceDataDir, '/', sampleFiles[grepl('_R1_', sampleFiles)], collapse = ','), ' --R2 ',
                        paste0(sequenceDataDir, '/', sampleFiles[grepl('_R2_', sampleFiles)], collapse = ','))
                   
@@ -448,6 +450,11 @@ genomeMetaData$rationale <- samples[match(genomeMetaData$lab_id, samples$VSP),]$
 openxlsx::write.xlsx(genomeMetaData, file = file.path(softwareDir, 'summaries/genomes/genomeMetaData.xlsx'))
 
 
+# Create genome upload forms.
+createGisadUploadForm(genomeMetaData, 'kevin')
+createNIHUploadForm(genomeMetaData)
+
+
 # Extract lineages from genome ids and write them out to an Excel file.
 lineages <- bind_rows(lapply(names(concensusSeqs95_5), function(x){
   x <- unlist(strsplit(x, '\\|'))
@@ -522,7 +529,7 @@ stopCluster(cluster)
 # Calculate the lineage plot data first to determine which lineages should not be considered Other.
 # -------------------------------------------------------------------------------------------------
 
-dayBreaks <- '10 days'
+dayBreaks <- '15 days'
 
 d <- genomeMetaData[grepl('random|asymptomatic|hospitalized', 
                           genomeMetaData$rationale, ignore.case = T),] %>%
@@ -657,11 +664,10 @@ o <- Biostrings::readDNAStringSet(file.path(softwareDir, 'summaries/genomes/geno
 names(o) <- sapply(names(o), function(x){ paste0(unlist(strsplit(x, '\\|'))[c(1:2,5)], collapse = '|') })
 names(o) <- gsub('Saliva_-_Positive_Control', 'Saliva', names(o))
 names(o) <- gsub('PennEssentialWorkers_Dec2020', 'PennEssential', names(o))
-#names(o) <- gsub('\\|[A-Z\\.\\d]+$', '', names(o), perl = TRUE)
+
 Biostrings::writeXStringSet(o, file.path(softwareDir, 'summaries/genomes/genomes.fasta2'))
 
-
-# Hierarchical tree.
+#Hierarchical tree.
 system(paste0(mafftPath, ' --namelength ', max(nchar(names(concensusSeqs95_5))), ' --thread 20 --auto --addfragments ',
        file.path(softwareDir, 'summaries/genomes/genomes.fasta2'), ' ',
        file.path(softwareDir, 'summaries/genomes/referenceGenome.fasta'), ' > ',
@@ -671,16 +677,16 @@ v <- ape::read.dna(file.path(softwareDir, "summaries/genomes/genomes.mafft"), fo
 v_phyDat <- phangorn::phyDat(v, type = "DNA", levels = NULL)
 dna_dist <- phangorn::dist.ml(v_phyDat, model="JC69")
 
-dendr    <- ggdendro::dendro_data(hclust(dna_dist, method='average'), type="rectangle") 
+dendr    <- ggdendro::dendro_data(hclust(dna_dist, method='average'), type="rectangle")
 segments <- ggdendro::segment(dendr)
 labels   <- ggdendro::label(dendr)
 
-concensusSeqPhyloPlot <- 
-  ggplot() + 
-  geom_segment(data=segments, aes(x=x, y=y, xend=xend, yend=yend)) + 
+concensusSeqPhyloPlot <-
+  ggplot() +
+  geom_segment(data=segments, aes(x=x, y=y, xend=xend, yend=yend)) +
   geom_text(data=labels, aes(x=x, y=y, label=label, hjust=0), size=4) +
-  coord_flip() + 
-  scale_y_reverse(expand=c(0.1, 0)) + 
+  coord_flip() +
+  scale_y_reverse(expand=c(0.1, 0)) +
   labs(x = '', y = 'Distance') +
   theme(axis.line.y=element_blank(),
         axis.ticks.y=element_blank(),
@@ -690,7 +696,7 @@ concensusSeqPhyloPlot <-
         panel.grid=element_blank())
 
 ggsave(concensusSeqPhyloPlot, height = 150, width = 50, units = 'in', limitsize = FALSE, file = file.path(softwareDir, 'summaries/genomes/hierarchicalPhyloPlot.pdf'))
-invisible(file.remove(list.files(file.path(softwareDir, 'summaries/genomes'), pattern = 'mafft|referenceGenome|fasta2', full.names = TRUE)))
+#invisible(file.remove(list.files(file.path(softwareDir, 'summaries/genomes'), pattern = 'mafft|referenceGenome|fasta2', full.names = TRUE)))
 
 
 # Write out genome sequences again this time with GISAID style ids.
@@ -707,8 +713,8 @@ rmarkdown::render('dashboard.Rmd', output_file = 'index.html',  params = list('l
 system(paste0('rsync -r --del ', file.path(softwareDir, 'summaries'), 
               ' microb120:/media/lorax/data/SARS-CoV-2/'))
 
-system(paste0('scp ', file.path(softwareDir, 'index.html'), 
-             ' microb120:/media/lorax/data/SARS-CoV-2/index.html'))
+#system(paste0('scp ', file.path(softwareDir, 'index.html'), 
+#             ' microb120:/media/lorax/data/SARS-CoV-2/index.html'))
 
 system('ssh microb120 rm /media/lorax/data/SARS-CoV-2/working')
 
