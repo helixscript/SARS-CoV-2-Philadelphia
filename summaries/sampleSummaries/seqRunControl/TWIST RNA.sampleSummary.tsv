@@ -1,6 +1,9 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
-TWIST RNA	VSP3000	composite	NA	Positive control	2021-05-20	5.11	B	99.7%	98.6%
+TWIST RNA	VSP3000	composite	NA	Positive control	2021-05-20	5.11	B	99.9%	99.0%
 TWIST RNA	VSP3000-1	 single experiment	NA	Positive control	2021-05-20	4.99	B	98.2%	96.2%
+TWIST RNA	VSP3000-10	 single experiment	NA	Positive control	2021-05-20	4.85	NA	94.8%	92.1%
+TWIST RNA	VSP3000-11	 single experiment	NA	Positive control	2021-05-20	4.96	NA	97.9%	94.4%
+TWIST RNA	VSP3000-12	 single experiment	NA	Positive control	2021-05-20	4.89	B	98.0%	95.0%
 TWIST RNA	VSP3000-2	 single experiment	NA	Positive control	2021-05-20	5.07	B	99.2%	97.5%
 TWIST RNA	VSP3000-3	 single experiment	NA	Positive control	2021-05-20	5.01	NA	97.8%	94.9%
 TWIST RNA	VSP3000-4	 single experiment	NA	Positive control	2021-05-20	4.88	NA	96.1%	93.5%

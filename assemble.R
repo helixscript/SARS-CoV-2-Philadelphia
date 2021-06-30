@@ -7,12 +7,20 @@ library(GenomicRanges)
 option_list = list(
   make_option(c("--softwareDir"), type="character", default='/home/common/SARS-CoV-2-Philadelphia', help="path to work directory", metavar="character"),
   make_option(c("--workDir"), type="character", default='/tmp', help="path to work directory", metavar="character"),
+  make_option(c("--fgbioCommand"), type="character", default=NULL, help="fgbio command", metavar="character"),
+  make_option(c("--fgbioTrimPrimerCoords"), type="character", default=NULL, help="fgbio primer trimming coords BED file", metavar="character"),
   make_option(c("--outputFile"), type="character", default='save.RData', help="path to output RData file", metavar="character"),
   make_option(c("--R1"), type="character", default=NULL, help="comma delimited list of R1 fastq files", metavar="character"),
   make_option(c("--R2"), type="character", default=NULL, help="comma delimited list of R2 fastq files", metavar="character"),
+  
   make_option(c("--refGenomeFasta"), type="character", default='/home/common/SARS-CoV-2-Philadelphia/data/references/Wuhan-Hu-1.fasta', help="reference genome FASTA path", metavar="character"),   
   make_option(c("--refGenomeBWA"), type="character", default='/home/common/SARS-CoV-2-Philadelphia/data/references/Wuhan-Hu-1.fasta', help="path to ref genome BWA database", metavar="character"),   
   make_option(c("--refGenomeGenBank"), type="character", default='/home/common/SARS-CoV-2-Philadelphia/data/references/Wuhan-Hu-1.gb', help="path to ref genome genBank file", metavar="character"), 
+
+  #make_option(c("--refGenomeFasta"), type="character", default='/home/common/SARS-CoV-2-Philadelphia/data/references/NC_045512.2.fasta', help="reference genome FASTA path", metavar="character"),   
+  #make_option(c("--refGenomeBWA"), type="character", default='/home/common/SARS-CoV-2-Philadelphia/data/references/NC_045512.2.fasta', help="path to ref genome BWA database", metavar="character"),   
+  #make_option(c("--refGenomeGenBank"), type="character", default='/home/common/SARS-CoV-2-Philadelphia/data/references/NC_045512.2.gb', help="path to ref genome genBank file", metavar="character"), 
+  
   make_option(c("--minVariantPhredScore"), type="integer", default=20, help="minimum PHRED score allowed for called varinats", metavar="character"),
   make_option(c("--bwaPath"), type="character", default='/home/everett/ext/bwa', help="path to bwa binary", metavar="character"), 
   make_option(c("--megahitPath"), type="character", default='/home/everett/ext/megahit/bin/megahit', help="path to megahit binary", metavar="character"), 
@@ -21,6 +29,7 @@ option_list = list(
   make_option(c("--samtoolsBin"), type="character", default='/home/everett/ext/samtools/bin', help="path to samtools bin", metavar="character"), 
   make_option(c("--condaShellPath"), type="character", default='/home/everett/miniconda3/etc/profile.d/conda.sh', help="path to conda.sh", metavar="character"),
   make_option(c("--bcftoolsBin"), type="character", default='/home/everett/ext/bcftools/bin',  help="path to bcftools bin", metavar="character"),
+  make_option(c("--aaa"), type="character", default=NULL,  help="aaa", metavar="character"),
   make_option(c("--trimQualCode"), type="character", default='5',  help="Min qual trim code", metavar="character"))
 
  
@@ -28,11 +37,14 @@ opt_parser = OptionParser(option_list=option_list)
 opt = parse_args(opt_parser)
 
 
-# Testing data
-# opt$R1 <- '/data/SARS-CoV-2/sequencing/200518_M03249_0065_000000000-J37K3/VSP0013-1m_S3_L001_R1_001.fastq.gz'
-# opt$R2 <- '/data/SARS-CoV-2/sequencing/200518_M03249_0065_000000000-J37K3/VSP0013-1m_S3_L001_R2_001.fastq.gz'
-# opt$workDir <- '/home/everett/projects/SARS-CoV-2-Philadelphia/scratch/tmp.YwyFDeMQVz0CmjV5bCsQ4e217K1qAh'
-# opt$outputFile <- '/home/everett/projects/SARS-CoV-2-Philadelphia/summaries/VSPdata/VSP0013-1m.experiment.RData'
+#Testing data
+# opt$R1 <- '/media/lorax/data/SARS-CoV-2/sequencing/210628_Planet_random/VSP3001-1_S10_R1_001.fastq.gz'
+# opt$R2 <- '/media/lorax/data/SARS-CoV-2/sequencing/210628_Planet_random/VSP3001-1_S10_R2_001.fastq.gz'
+# opt$workDir <- '/home/common/SARS-CoV-2-Philadelphia/scratch/tmp.dev'
+# opt$outputFile <- '/home/common/SARS-CoV-2-Philadelphia/summaries/dev.RData'
+# opt$refGenomeBWA <- '/home/common/SARS-CoV-2-Philadelphia/data/references/NC_045512.2.fasta'
+# opt$fgbioCommand <- 'java -jar /home/everett/miniconda3/envs/fgbio/share/fgbio/fgbio.jar'
+# opt$fgbioTrimPrimerCoords <- '/home/common/SARS-CoV-2-Philadelphia/data/references/SARScoV2.FLEX.primer_info.tab'
 
 
 source(paste0(opt$softwareDir, '/lib/assemble.lib.R'))
@@ -56,7 +68,7 @@ opt$softwareVersionTable <- createSoftwareVersionTable()
 opt$errorCode <- 0
 opt$errorMessage <- NA
 opt$pangolinAssignment <- NA
-opt$pangolinAssignmentProbability <- NA
+opt$pangolinAssignmentConflict <- NA
 opt$pangolinAssignmentPangoLEARN_version <- NA
 opt$variantTable      <- data.frame()
 opt$variantTableMajor <- data.frame()
@@ -85,11 +97,18 @@ system(paste0(opt$bwaPath, ' mem -M ', opt$refGenomeBWA, ' ',  paste0(t1, '_R1.t
 system(paste0(opt$samtoolsBin, '/samtools view -S -b ', paste0(t1, '_genome.sam'), ' > ', paste0(t1, '_genome.bam')))
 invisible(file.remove(paste0(t1, '_genome.sam')))
 
+if('fgbioCommand' %in% names(opt) & 'fgbioTrimPrimerCoords' %in% names(opt)){
+  comm <- paste0(opt$fgbioCommand, ' TrimPrimers -i ', t1, '_genome.bam -o ', t1, '_genome.bam2 -H true -p ', opt$fgbioTrimPrimerCoords)
+  p <- c('#!/bin/bash', paste0('source ', opt$condaShellPath), 'conda activate fgbio', comm)
+  writeLines(p, file.path(opt$workDir, 'fgbio.script'))
+  system(paste0('chmod 755 ', file.path(opt$workDir, 'fgbio.script')))
+  system(file.path(opt$workDir, 'fgbio.script'))
+  system(paste0('mv ', t1, '_genome.bam2 ', t1, '_genome.bam'))
+  opt$fgbioPrimerTrimmed <- TRUE
+}
 
-# Remove read pairs with mapping qualities below the provided min score and read pairs not properly mapped.
-# system(paste0(opt$samtoolsBin, '/samtools view -q ', opt$minBWAmappingScore, ' -f 0x2 -b ', 
-#               t1, '_genome.bam > ', t1, '_genome.filt.bam'))
 
+# Remove read pairs with mapping qualities below the provided min score.
 system(paste0(opt$samtoolsBin, '/samtools view -q ', opt$minBWAmappingScore, ' -b ', t1, '_genome.bam > ', t1, '_genome.filt.bam'))
 
 
@@ -279,6 +298,11 @@ if(nrow(opt$variantTableMajor) > 0){
     })
     
     write(unlist(o[! sapply(o, is.null)]), file = paste0(t1, '.filt.vcf.copy2'))
+    
+    # Capture vcf
+    # read.table(textConnection(unlist(opt$finalVCF)), sep = '\t')
+    opt$finalVCF = o[! sapply(o, is.null)]
+    
     system(paste0('bgzip ', t1, '.filt.vcf.copy2'))
     system(paste0(opt$bcftoolsBin, '/bcftools index ', t1, '.filt.vcf.copy2.gz'))
     system(paste0('cat  ', opt$refGenomeFasta, ' | ', opt$bcftoolsBin, '/bcftools consensus ',  
@@ -299,14 +323,12 @@ if(nrow(opt$variantTableMajor) > 0){
       system(comm)
       
       if(file.exists(paste0(t1, '.consensus.pangolin/lineage_report.csv'))){
-        o <- read.csv(paste0(t1, '.consensus.pangolin/lineage_report.csv')) %>% dplyr::arrange(desc(probability)) 
+        o <- read.csv(paste0(t1, '.consensus.pangolin/lineage_report.csv')) 
       
         if(nrow(o) > 0){
-          if(as.numeric(o[1,]$probability) >= opt$minPangolinConf){
             opt$pangolinAssignment <- o[1,]$lineage
-            opt$pangolinAssignmentProbability <- o[1,]$probability
+            opt$pangolinAssignmentConflict <- o[1,]$conflict
             opt$pangolinAssignmentPangoLEARN_version <- o[1,]$pangoLEARN_version
-          }
         }
       }
     } 

@@ -48,10 +48,10 @@ tmpFile <- function(){ paste0('tmp.', paste0(stringi::stri_rand_strings(30, 1, '
 
 removeProblematicSamples <- function(x){
   if('exp' %in% names(x))        x <- dplyr::filter(x, ! grepl('VSP0069', exp))
-  if('Subject' %in% names(x))    x <- dplyr::filter(x, Subject != '237')
   if('patient_id' %in% names(x)) x <- dplyr::filter(x, patient_id != '237')
-  if('patient_id' %in% names(x)) x <- dplyr::filter(x, ! grepl('MisC', patient_id, ignore.case = TRUE))
-  if('trial_id' %in% names(x))   x <- dplyr::filter(x, ! grepl('ODoherty', trial_id, ignore.case = TRUE))
+  
+  # 'Weiss Lab', 'Cherry Lab', 'ODoherty'
+  if('trial_id' %in% names(x)) x <- subset(x, ! trial_id %in% c('CHOP_Planet',  'Lennnon_animals', 'simulated_dataset'))
   
   # Use Testing date rather than collection date where available.
   if('sampleCollection_date' %in% names(x) & 'Testing_Date' %in% names(x)){

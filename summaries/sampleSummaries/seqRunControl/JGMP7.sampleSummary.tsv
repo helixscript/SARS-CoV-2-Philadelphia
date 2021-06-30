@@ -1,4 +1,4 @@
 Subject	exp	type	genomes	sampleType	sampleDate	largestContig	lineage	percentRefReadCoverage	percentRefReadCoverage5
-JGMP7	VSP9975	composite	NA	Negative control	NA	NA	NA	2.9%	1.2%
-JGMP7	VSP9975-1	 single experiment	NA	Negative control	NA	NA	NA	0.8%	0.4%
-JGMP7	VSP9975-2	 single experiment	NA	Negative control	NA	NA	NA	2.9%	1.2%
+JGMP7	VSP9975	composite	NA	Negative control	2021-01-12	NA	NA	2.9%	1.2%
+JGMP7	VSP9975-1	 single experiment	NA	Negative control	2021-01-12	NA	NA	0.8%	0.4%
+JGMP7	VSP9975-2	 single experiment	NA	Negative control	2021-01-12	NA	NA	2.9%	1.2%

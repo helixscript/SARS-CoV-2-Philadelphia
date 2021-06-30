@@ -1,7 +1,6 @@
 library(parallel)
 library(dplyr)
 library(ggplot2)
-library(parallel)
 library(Biostrings)
 library(lubridate)
 library(stringr)
@@ -15,7 +14,8 @@ softwareDir   <- '/home/common/SARS-CoV-2-Philadelphia'
 pangolinCondaShellPath <- '/home/everett/miniconda3/etc/profile.d/conda.sh'
 
 workDir       <- file.path(softwareDir, 'scratch')
-VOIs          <- c("B.1.1.7", "B.1.351", "B.1.427", "B.1.429", "B.1.525", "B.1.526", "P.1", "P.2")
+VOIs          <- c("B.1.1.7", "B.1.351", "P.1", "B.1.427", "B.1.429", "B.1.617.2") 
+                   
 
 remoteOutputDir <- '/data/SARS-CoV-2'
 sequenceDataDir <- '/data/SARS-CoV-2/sequencing'
@@ -98,8 +98,8 @@ if(length(newExperiments) > 0){
   clusterExport(cluster, c('Rscript', 'overwrite', 'sequenceDataDir', 'softwareDir', 'sequenceDataDir', 
                            'VSPdataDir', 'sampleData', 'sampleInputData', 'workDir', 'tmpFile', 'pangolinCondaShellPath'))
   
-  #invisible(parLapply(cluster, split(d, d$s), function(x){
-  invisible(lapply(split(d, d$s), function(x){
+  invisible(parLapply(cluster, split(d, d$s), function(x){
+  #invisible(lapply(split(d, d$s), function(x){
   library(dplyr)
   library(stringr)
     
@@ -175,7 +175,6 @@ if(length(newExperiments) > 0){
 } else {
   system('ssh microb120 rm /media/lorax/data/SARS-CoV-2/working')
   write(c('done'), file = logFile, append = TRUE)
-  q()
 }
 
 
@@ -245,7 +244,7 @@ while(reportsComplete == FALSE){
         dir1 <- file.path(softwareDir, 'summaries/trials', r$trial_id)
         dir2 <- file.path(softwareDir, 'summaries/patientReportsData', r$trial_id)
         dir3 <- file.path(softwareDir, 'summaries/sampleSummaries', r$trial_id)
-      
+        
         if (!dir.exists(dir1)) dir.create(dir1)
         
         if (overWriteSubjectReports == FALSE & file.exists(file.path(dir1, paste0(r$patient_id, '.pdf')))) return()
@@ -263,7 +262,7 @@ while(reportsComplete == FALSE){
         
           load(f)
           opt$vsp <- stringr::str_extract(f, 'VSP\\d+')
-          opt$seq_sample <-  stringr::str_extract(f, 'VSP\\d+\\-?\\d+?[abm]?')
+          opt$seq_sample <-  stringr::str_extract(f, 'VSP\\d+\\-?\\d+[abm]?')
         
           d <- subset(samples, VSP == opt$vsp)
           opt$sample_id <- d$sample_id[1]
@@ -529,7 +528,8 @@ stopCluster(cluster)
 # Calculate the lineage plot data first to determine which lineages should not be considered Other.
 # -------------------------------------------------------------------------------------------------
 
-dayBreaks <- '15 days'
+dayBreaks <- '20 days'
+daysToAddToBreakMarks <- 10
 
 d <- genomeMetaData[grepl('random|asymptomatic|hospitalized', 
                           genomeMetaData$rationale, ignore.case = T),] %>%
@@ -537,6 +537,7 @@ d <- genomeMetaData[grepl('random|asymptomatic|hospitalized',
   dplyr::filter(ymd(sample_date) >= '2021-02-28') %>%
   dplyr::arrange(sample_date) %>%
   dplyr::mutate(date = cut.Date(ymd(sample_date), breaks = dayBreaks)) %>%
+  dplyr::mutate(date = factor(ymd(as.character(date)) + daysToAddToBreakMarks)) %>%
   dplyr::group_by(date) %>%
   dplyr::mutate(nGenomes = n_distinct(genome_id)) %>%
   dplyr::ungroup() %>%
@@ -547,11 +548,11 @@ d <- genomeMetaData[grepl('random|asymptomatic|hospitalized',
   tidyr::replace_na(list(pLineage = 0)) %>%
   dplyr::arrange(desc(pLineage)) 
 
-# Find the top 8 lineages not in variant of interest list.
+# Find the top 10 lineages not in variant of interest list.
 o <- unique(as.character(d$lineage))
-o <- c(VOIs, o[! o %in% VOIs][1:8])
+o <- c(VOIs, o[! o %in% VOIs][1:9])
 
-colors <- c(grDevices::colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))(length(o)-1), 'gray80')
+colors <- c(grDevices::colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))(length(o)), 'gray80')
 
 lineageMountainPlot <- genomeMetaData[grepl('random|asymptomatic|hospitalized', 
                           genomeMetaData$rationale, ignore.case = T),] %>%
@@ -559,6 +560,7 @@ lineageMountainPlot <- genomeMetaData[grepl('random|asymptomatic|hospitalized',
      dplyr::filter(ymd(sample_date) >= '2021-02-28') %>%
      dplyr::arrange(sample_date) %>%
      dplyr::mutate(date = cut.Date(ymd(sample_date), breaks = dayBreaks)) %>%
+     dplyr::mutate(date = factor(ymd(as.character(date)) + daysToAddToBreakMarks)) %>%
      dplyr::group_by(date) %>%
      dplyr::mutate(nGenomes = n_distinct(genome_id)) %>%
      dplyr::ungroup() %>%
@@ -610,7 +612,7 @@ d <- bind_rows(r, d) %>%
                                   paste0(year(ymd(as.character(dateCut))))))
 
 sampledLineages1 <- ggplot(d, aes(dateCut, pLineage, fill=lineage2)) +
-  scale_fill_manual(values = c(grDevices::colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))(length(o)-1), 'gray80')) +
+  scale_fill_manual(values = c(grDevices::colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))(length(o)), 'gray80')) +
   geom_col() +
   scale_y_continuous(expand = c(0, 0), labels = scales::percent_format(accuracy = 1)) +
   scale_x_discrete(expand = c(0, 0), 
@@ -713,8 +715,7 @@ rmarkdown::render('dashboard.Rmd', output_file = 'index.html',  params = list('l
 system(paste0('rsync -r --del ', file.path(softwareDir, 'summaries'), 
               ' microb120:/media/lorax/data/SARS-CoV-2/'))
 
-#system(paste0('scp ', file.path(softwareDir, 'index.html'), 
-#             ' microb120:/media/lorax/data/SARS-CoV-2/index.html'))
+system(paste0('scp ', file.path(softwareDir, 'index.html'), ' microb120:/media/lorax/data/SARS-CoV-2/index.html'))
 
 system('ssh microb120 rm /media/lorax/data/SARS-CoV-2/working')
 
