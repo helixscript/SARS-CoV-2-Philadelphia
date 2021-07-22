@@ -13,6 +13,14 @@ about the alignment to the reference genome, variant calls, PANGO lineage calls,
 which are saved to the local file system. These VSP data objects are collated into detailed subject reports   
 and used for downstream analyses.    
 
+## Installation  
+
+Data paths (reference genome, sequencing data, conda shell, ect.) and third party software paths 
+(bwa, samtools, bcftools, mafft) need to defined at the top of run.R and the option defaults 
+for assemble.R need to point to the correct locations on your system since the run.R relies 
+on assemble.R's defaul paramters. A global configuration file will be included in the next release.  
+
+
 ## Bushman group specific instructions 
 
 #### Downloading and processing sequencing data
