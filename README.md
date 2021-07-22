@@ -19,7 +19,7 @@ and used for downstream analyses.
 Data paths (reference genome, sequencing data, conda shell, ect.) and third party software paths 
 (bwa, samtools, bcftools, mafft) need to defined at the top of run.R and the option defaults 
 for assemble.R need to point to the correct locations on your system because run.R relies 
-on assemble.R's defaul paramters. A global configuration file will be included in the next release.  
+on assemble.R's default option settings. A global configuration file will be included in the next release.  
 
   
   
